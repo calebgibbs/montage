@@ -83,6 +83,30 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/fonts\/TradeGothicLTStd-BoldExt.otf": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/TradeGothicLTStd-BoldExt.otf",
+		"oF": 0
+		},
+	"\/fonts\/TradeGothicLTStd-BoldObl.otf": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/TradeGothicLTStd-BoldObl.otf",
+		"oF": 0
+		},
+	"\/fonts\/TradeGothicLTStd-Light.otf": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/TradeGothicLTStd-Light.otf",
+		"oF": 0
+		},
+	"\/fonts\/TradeGothicLTStd.otf": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/TradeGothicLTStd.otf",
+		"oF": 0
+		},
 	"\/index.html": {
 		"ft": 8192,
 		"oA": 2,
