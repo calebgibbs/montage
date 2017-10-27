@@ -1,0 +1,46 @@
+$line: #fff
+.nav-icon 
+	height: 70px 
+	width: 88px 
+	position: relative 
+	.span 
+		height: 6px 
+		width: 55px 
+		position: absolute 
+		top: 0 
+		bottom: 0 
+		left: 0 
+		right: 0 
+		margin: auto 
+		background: $line  
+		// border-radius: 8px 
+		transition: all 0.3s
+		&::before,&::after 
+			height: 6px 
+			width: 100% 
+			position: absolute
+			background: $line 
+			content: ""  
+			// border-radius: 8px 
+			margin: auto 
+			bottom: 0 
+			left: 0 
+			right: 0  
+			transition: all 0.3s 
+		&::after 
+			top: 25px  
+		&::before 
+			top: -25px 
+	&.active .span::after 
+		top: 0 
+		transform: rotate(45deg) 
+	&.active .span::before 
+		top: 0 
+		transform: rotate(-45deg) 
+	&.active .span 
+		background: none 
+.menu-button
+	background: none 
+	border: none 
+	cursor: pointer 
+	outline: none

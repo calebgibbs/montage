@@ -34,66 +34,166 @@ body {
 .cf:after {
   clear: both; }
 
-#top-navigation {
-  background: #424242; }
-  #top-navigation a {
+nav {
+  background: #424242;
+  display: inline-block;
+  width: 100%;
+  border-top: 1.21em solid #fff; }
+  nav a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.5em;
     padding: 1rem;
     font-weight: normal; }
-  #top-navigation li {
-    list-style-type: none;
-    display: inline-block; }
-  #top-navigation ul {
+  nav li {
+    list-style-type: none; }
+    @media screen and (min-width: 960px) {
+      nav li {
+        display: inline-block; } }
+    @media screen and (min-width: 768px) and (max-width: 979px) {
+      nav li {
+        display: inline-block; } }
+  nav ul {
+    display: inline-block;
     float: right;
-    margin-right: 3rem;
-    vertical-align: bottom;
-    margin-top: 3rem; }
+    margin-top: 4.7em;
+    margin-right: 5em; }
+  nav img {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    margin-bottom: -0.35em;
+    margin-top: -1.21em;
+    z-index: 500; }
+
+.main-menu {
+  font-size: 1.5em; }
 
 #drop-down {
-  background: rgba(66, 66, 66, 0.8);
-  width: 77%;
-  padding: 1em;
-  margin-left: 20vw;
+  background: rgba(66, 66, 66, 0.9);
+  width: 60%;
   z-index: 999;
-  display: none;
   position: absolute;
-  transition: 0.7s; }
-  #drop-down a {
-    color: #fff;
-    text-decoration: none;
-    font-family: "TradeGothicLight", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif; }
-  #drop-down li {
-    list-style-type: none; }
-  #drop-down h4 {
-    text-transform: uppercase;
-    margin-bottom: 7px; }
-    #drop-down h4 a {
-      font-family: "TradeGothicBold", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-weight: bold; }
+  transition: 0.7s;
+  left: 0;
+  margin-left: 35%;
+  top: 5.1em;
+  margin-top: 1.51em;
+  padding-bottom: 1rem; }
+  #drop-down ul {
+    float: left;
+    width: 100%; }
 
 .line1 {
+  width: 100%;
   display: block;
-  width: 99%;
-  margin: 0 auto; }
-  .line1 div {
-    width: calc( 98% / 4);
-    display: inline-block;
-    vertical-align: top; }
+  margin-top: -3.5em; }
 
 .line2 {
-  display: block;
-  width: 99%;
-  margin: 0 auto; }
+  width: 100%;
+  display: block; }
+  .line2 ul {
+    margin-top: 1px; }
+
+.nav-col {
+  vertical-align: top;
+  display: inline-block;
+  float: left;
+  margin: 0; }
+  .nav-col li {
+    display: block;
+    font-size: 1rem;
+    font-family: "TradeGothicLight", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  .nav-col h4 {
+    font-family: "TradeGothicBold", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+    font-size: 1.3rem; }
+
+.line1 {
+  position: block;
+  margin-left: 2%; }
+  .line1 div {
+    width: calc( 100% / 4); }
+
+.line2 {
+  position: block;
+  margin-left: 2%; }
   .line2 div {
-    width: calc( 98% / 4);
-    display: inline-block;
-    vertical-align: top; }
+    width: calc( 100% / 4); }
+
+li:hover > div {
+  opacity: 1;
+  visibility: visible;
+  overflow: visible; }
 
 ul {
   margin: 0;
   padding: 0; }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .main-menu {
+    display: none; }
+  .menu-button {
+    display: inline-block;
+    float: right;
+    margin-right: 2.5%; }
+  .menu-active {
+    display: block;
+    transition: 0.7s; } }
+
+@media screen and (min-width: 768px) and (max-width: 979px) {
+  .menu-button {
+    display: none; } }
+
+@media screen and (min-width: 960px) {
+  .menu-button {
+    display: none; } }
+
+.nav-icon {
+  height: 70px;
+  width: 88px;
+  position: relative; }
+  .nav-icon .span {
+    height: 6px;
+    width: 55px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: #fff;
+    transition: all 0.3s; }
+    .nav-icon .span::before, .nav-icon .span::after {
+      height: 6px;
+      width: 100%;
+      position: absolute;
+      background: #fff;
+      content: "";
+      margin: auto;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transition: all 0.3s; }
+    .nav-icon .span::after {
+      top: 25px; }
+    .nav-icon .span::before {
+      top: -25px; }
+  .nav-icon.active .span::after {
+    top: 0;
+    transform: rotate(45deg); }
+  .nav-icon.active .span::before {
+    top: 0;
+    transform: rotate(-45deg); }
+  .nav-icon.active .span {
+    background: none; }
+
+.menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none; }
 
 #page-content {
   z-index: 0;

@@ -34,6 +34,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/css\/hamburger.sass": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 2,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/hamburger.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/css\/navigation.sass": {
 		"aP": 0,
 		"bl": 0,
@@ -106,6 +119,17 @@
 		"oA": 2,
 		"oAP": "\/fonts\/TradeGothicLTStd.otf",
 		"oF": 0
+		},
+	"\/img\/logo.png": {
+		"ft": 32768,
+		"iS": 39345,
+		"oA": 0,
+		"oAP": "\/img\/logo.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
 		},
 	"\/index.html": {
 		"ft": 8192,

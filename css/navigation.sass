@@ -1,66 +1,136 @@
-#top-navigation	
-	background: $grey 
+$image-padding: 1.21em
+
+nav	
+	background: $grey  
+	display: inline-block 
+	width: 100% 
+	border-top: $image-padding solid #fff
 	a	
 		color: #fff 
 		text-decoration: none 
-		font-size: 1.5em 
+		// font-size: 1.5em 
 		padding: 1rem  
 		font-weight: normal  
 
-	li 
+	li  
 		list-style-type: none 
-		display: inline-block
+		@include desktop 
+			display: inline-block
+		@include tablet 
+			display: inline-block
 
-	ul 
+	ul  
+		display: inline-block 
 		float: right 
-		margin-right: 3rem 
-		vertical-align: bottom 
-		margin-top: 3rem 
+		margin-top: 4.7em 
+		margin-right: 5em 
+
+	img 
+		margin: 0 
+		padding: 0 
+		height: 100% 
+		margin-bottom: -0.35em  
+		margin-top: -$image-padding  
+		z-index: 500
+
+.main-menu 	
+	font-size: 1.5em  
+
+
 
 
 #drop-down 
-	background: rgba($grey, 0.8) 
-	width: 77%  
-	padding: 1em 
-	margin-left: 20vw 
+	background: rgba($grey, 0.9) 
+	// background: orange 
+	width: 60%  
 	z-index: 999  
-	display: none  
 	position: absolute 
-	transition: 0.7s
-	a	
-		color: #fff 
-		text-decoration: none 
-		font-family: $light
+	transition: 0.7s 
+	left: 0  
+	margin-left: 35%
+	top: 5.1em   
+	margin-top: 1.51em 
+	padding-bottom: 1rem 
+	// opacity: 0 
+	ul 	 
+		float: left 
+		width: 100% 
+
+.line1 
+	width: 100%  
+	display: block  
+	margin-top: -3.5em
+	
+.line2
+	width: 100% 
+	display: block 
+	// background: green 
+	ul 
+		margin-top: 1px 
+
+
+
+.nav-col 
+	vertical-align: top 
+	// width: calc( 98% / 4 )  
+	display: inline-block 
+	float: left 
+	margin: 0
 
 	li 
-		list-style-type: none 
+		display: block  
+		font-size: 1rem 
+		font-family: $light
 	h4	
-		a
-			font-family: $bold 
-			font-weight: bold
+		font-family: $bold 
+		font-weight: bold
 		text-transform: uppercase 
-		margin-bottom: 7px    
+		margin-bottom: 7px   
+		font-size: 1.3rem 
 
-.line1  
-	display: block 
-	width: 99%
-	margin: 0 auto
-	div	
-		width: calc( 98% / 4 ) 
-		display: inline-block 
-		vertical-align: top  
+.line1 
+	position: block   
+	margin-left: 2% 
+	div 
+		width: calc( 100% / 4 )
 
-.line2  
-	display: block 
-	width: 99%
-	margin: 0 auto
-	div	
-		width: calc( 98% / 4 ) 
-		display: inline-block  
-		vertical-align: top  
+.line2 
+	position: block   
+	margin-left: 2%
+	div 
+		width: calc( 100% / 4 ) 
+
+li:hover > div 
+    opacity: 1
+    visibility: visible
+    overflow: visible
+
+	    
 ul 
 	margin: 0 
 	padding: 0  
+
+@include mobile 
+	.main-menu  
+		display: none 
+
+	.menu-button 
+		display: inline-block 
+		float: right 
+		margin-right: 2.5%   
+	.menu-active 
+		display: block 
+		transition: 0.7s 
+
+@include tablet 
+	.menu-button 
+		display: none
+
+@include desktop 
+	.menu-button 
+		display: none 
+
+
 
 
 
