@@ -7,10 +7,9 @@ nav
 	border-top: $image-padding solid #fff
 	a	
 		color: #fff 
-		text-decoration: none 
-		// font-size: 1.5em 
+		text-decoration: none  
 		padding: 1rem  
-		font-weight: normal  
+		font-weight: normal   
 
 	li  
 		list-style-type: none 
@@ -36,12 +35,8 @@ nav
 .main-menu 	
 	font-size: 1.5em  
 
-
-
-
 #drop-down 
 	background: rgba($grey, 0.9) 
-	// background: orange 
 	width: 60%  
 	z-index: 999  
 	position: absolute 
@@ -51,28 +46,28 @@ nav
 	top: 5.1em   
 	margin-top: 1.51em 
 	padding-bottom: 1rem 
-	// opacity: 0 
+	opacity: 0  
+	// display: none
 	ul 	 
 		float: left 
 		width: 100% 
 
 .line1 
 	width: 100%  
-	display: block  
-	margin-top: -3.5em
+	display: block   
+	ul 
+		margin-top: 1px
 	
 .line2
 	width: 100% 
 	display: block 
-	// background: green 
 	ul 
 		margin-top: 1px 
 
 
 
 .nav-col 
-	vertical-align: top 
-	// width: calc( 98% / 4 )  
+	vertical-align: top
 	display: inline-block 
 	float: left 
 	margin: 0
@@ -104,13 +99,10 @@ li:hover > div
     opacity: 1
     visibility: visible
     overflow: visible
-
-	    
-ul 
-	margin: 0 
-	padding: 0  
+ 
 
 @include mobile 
+	$image-padding: 0.99em
 	.main-menu  
 		display: none 
 
@@ -120,7 +112,33 @@ ul
 		margin-right: 2.5%   
 	.menu-active 
 		display: block 
-		transition: 0.7s 
+		transition: 0.7s  
+	nav  
+		max-height: 130px 
+		border-top: 0.9em solid #fff
+		img 	
+			height: 130px 
+			margin: 0 
+			padding: 0 
+			margin-bottom: -0.35em  
+			margin-top: -0.99em  
+			z-index: 500  
+		ul 
+			// background: rgba($grey, 0.9) 
+			background: orange 
+			width: 60%  
+			z-index: 999  
+			position: absolute 
+			transition: 0.7s 
+			left: 0  
+			margin-left: 35%
+			top: 5.1em   
+			margin-top: 1.51em 
+			padding-bottom: 1rem 
+			
+	button 
+		margin-top: 2em 
+		float:  
 
 @include tablet 
 	.menu-button 

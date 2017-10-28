@@ -78,15 +78,17 @@ nav {
   margin-left: 35%;
   top: 5.1em;
   margin-top: 1.51em;
-  padding-bottom: 1rem; }
+  padding-bottom: 1rem;
+  opacity: 0; }
   #drop-down ul {
     float: left;
     width: 100%; }
 
 .line1 {
   width: 100%;
-  display: block;
-  margin-top: -3.5em; }
+  display: block; }
+  .line1 ul {
+    margin-top: 1px; }
 
 .line2 {
   width: 100%;
@@ -127,10 +129,6 @@ li:hover > div {
   visibility: visible;
   overflow: visible; }
 
-ul {
-  margin: 0;
-  padding: 0; }
-
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .main-menu {
     display: none; }
@@ -140,7 +138,30 @@ ul {
     margin-right: 2.5%; }
   .menu-active {
     display: block;
-    transition: 0.7s; } }
+    transition: 0.7s; }
+  nav {
+    max-height: 130px;
+    border-top: 0.9em solid #fff; }
+    nav img {
+      height: 130px;
+      margin: 0;
+      padding: 0;
+      margin-bottom: -0.35em;
+      margin-top: -0.99em;
+      z-index: 500; }
+    nav ul {
+      background: orange;
+      width: 60%;
+      z-index: 999;
+      position: absolute;
+      transition: 0.7s;
+      left: 0;
+      margin-left: 35%;
+      top: 5.1em;
+      margin-top: 1.51em;
+      padding-bottom: 1rem; }
+  button {
+    margin-top: 2em; } }
 
 @media screen and (min-width: 768px) and (max-width: 979px) {
   .menu-button {

@@ -1,12 +1,13 @@
 $(document).ready(function () {
+    $('img').on('dragstart', function(event) { event.preventDefault(); });
     $('.drop-trigger').hover(function(){
-    	$('#drop-down').css("display","block");
+    	$('#drop-down').css({'opacity':'1'});   
     }); 
     $('.menu-item').hover(function(){
-    	$('#drop-down').css("display","none");
+    	$('#drop-down').css({'opacity':'0'});
     }); 
     $('body').hover(function(){
-    	$('#drop-down').css("display","none");
+    	$('#drop-down').css({'opacity':'0'});
     }); 
 
     //mobile 
