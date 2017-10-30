@@ -1,11 +1,17 @@
-$line: #fff
+$line: #ffffff 
+$line-height: 5px 
+$line-spacing: 25px 
+$line-width: 50px 
+$corners: 3px
+
 .nav-icon 
-	height: 70px 
-	width: 88px 
-	position: relative 
+	height: 30px 
+	width: $line-width 
+	position: relative  
+	z-index: 100000 
 	.span 
-		height: 6px 
-		width: 55px 
+		height: $line-height 
+		width: $line-width
 		position: absolute 
 		top: 0 
 		bottom: 0 
@@ -13,24 +19,24 @@ $line: #fff
 		right: 0 
 		margin: auto 
 		background: $line  
-		// border-radius: 8px 
+		border-radius: $corners 
 		transition: all 0.3s
 		&::before,&::after 
-			height: 6px 
+			height: $line-height 
 			width: 100% 
 			position: absolute
 			background: $line 
 			content: ""  
-			// border-radius: 8px 
+			border-radius: $corners 
 			margin: auto 
 			bottom: 0 
 			left: 0 
 			right: 0  
 			transition: all 0.3s 
 		&::after 
-			top: 25px  
+			top: $line-spacing  
 		&::before 
-			top: -25px 
+			top: -$line-spacing 
 	&.active .span::after 
 		top: 0 
 		transform: rotate(45deg) 
@@ -43,4 +49,10 @@ $line: #fff
 	background: none 
 	border: none 
 	cursor: pointer 
-	outline: none
+	outline: none 
+
+// <button class="menu-button">
+// 	<div id="hamburger-btn" class="nav-icon cross"> 
+// 		<div class="span"></div>
+// 	</div>
+// </button>

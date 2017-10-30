@@ -34,6 +34,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/css\/foot.sass": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 2,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/foot.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/css\/hamburger.sass": {
 		"aP": 0,
 		"bl": 0,
@@ -96,6 +109,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/css\/triangles.sass": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 2,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/triangles.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/fonts\/TradeGothicLTStd-BoldExt.otf": {
 		"ft": 8192,
 		"oA": 2,
@@ -120,11 +146,322 @@
 		"oAP": "\/fonts\/TradeGothicLTStd.otf",
 		"oF": 0
 		},
+	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow.htm": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow.htm",
+		"oF": 0
+		},
+	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/0c93d085d950e3bcca89de99d08cd7ac": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/0c93d085d950e3bcca89de99d08cd7ac",
+		"oF": 0
+		},
+	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/3defcf5c58ce690b3b602598647a8b18": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/3defcf5c58ce690b3b602598647a8b18",
+		"oF": 0
+		},
+	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/6cc1d48d9f1ca3c5f266c16bcff25200": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/6cc1d48d9f1ca3c5f266c16bcff25200",
+		"oF": 0
+		},
+	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/all.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/all-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/analytics.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/analytics-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/beacon.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/beacon-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/clc.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/clc.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/clc.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/clc.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/external-editor.en.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/external-editor.en-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/full-anon.en.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/full-anon.en-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/gpt.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/gpt-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/impression.gif": {
+		"ft": 4194304,
+		"iS": 43,
+		"oA": 0,
+		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/impression.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/jquery.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/jquery.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/NqNoW.jpg": {
+		"ft": 16384,
+		"iS": 1409,
+		"oA": 0,
+		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/NqNoW.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/picture": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/picture",
+		"oF": 0
+		},
+	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/picture(1)": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/picture(1)",
+		"oF": 0
+		},
+	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/post-validation.en.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/post-validation.en-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/prettify-full.en.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/prettify-full.en-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/QTJ4w.jpg": {
+		"ft": 16384,
+		"iS": 1467,
+		"oA": 0,
+		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/QTJ4w.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/quant.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/quant-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/RtNEj.jpg": {
+		"ft": 16384,
+		"iS": 1683,
+		"oA": 0,
+		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/RtNEj.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/rules-p-c1rF4kxgLUzNc.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/rules-p-c1rF4kxgLUzNc-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/snippet-javascript.en.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/snippet-javascript.en-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/stub.en.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/stub.en-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/UIN2X.jpg": {
+		"ft": 16384,
+		"iS": 1505,
+		"oA": 0,
+		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/UIN2X.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/img\/logo.png": {
 		"ft": 32768,
 		"iS": 39345,
 		"oA": 0,
 		"oAP": "\/img\/logo.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/search.png": {
+		"ft": 32768,
+		"iS": 3187,
+		"oA": 0,
+		"oAP": "\/img\/search.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/search10.png": {
+		"ft": 32768,
+		"iS": 230,
+		"oA": 0,
+		"oAP": "\/img\/search10.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/triangles\/about.png": {
+		"ft": 32768,
+		"iS": 103390,
+		"oA": 0,
+		"oAP": "\/img\/triangles\/about.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/triangles\/portfolio.png": {
+		"ft": 32768,
+		"iS": 178876,
+		"oA": 0,
+		"oAP": "\/img\/triangles\/portfolio.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/triangles\/products.png": {
+		"ft": 32768,
+		"iS": 197974,
+		"oA": 0,
+		"oAP": "\/img\/triangles\/products.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/triangles\/statement.png": {
+		"ft": 32768,
+		"iS": 239264,
+		"oA": 0,
+		"oAP": "\/img\/triangles\/statement.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/triangles\/sustainability.png": {
+		"ft": 32768,
+		"iS": 146598,
+		"oA": 0,
+		"oAP": "\/img\/triangles\/sustainability.png",
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,

@@ -5,6 +5,7 @@ nav
 	display: inline-block 
 	width: 100% 
 	border-top: $image-padding solid #fff
+	
 	a	
 		color: #fff 
 		text-decoration: none  
@@ -30,19 +31,26 @@ nav
 		height: 100% 
 		margin-bottom: -0.35em  
 		margin-top: -$image-padding  
-		z-index: 500
+		z-index: 500 
+
+#menu 
+	display: inline-block 
+	float: right
 
 .main-menu 	
 	font-size: 1.5em  
+
+.more-items 
+	display: none 
 
 #drop-down 
 	background: rgba($grey, 0.9) 
 	width: 60%  
 	z-index: 999  
 	position: absolute 
-	transition: 0.7s 
+	transition: 0.3s 
 	left: 0  
-	margin-left: 35%
+	margin-left: 38%
 	top: 5.1em   
 	margin-top: 1.51em 
 	padding-bottom: 1rem 
@@ -52,19 +60,28 @@ nav
 		float: left 
 		width: 100% 
 
+@include desktop 
+	.show-menu 
+		opacity: 1 !important  
+		transition: 0.3s  
+
 .line1 
 	width: 100%  
-	display: block   
+	display: block  
+	margin-left: 2% 
 	ul 
 		margin-top: 1px
+	div	 
+		width: calc( 100% / 4 )    
 	
 .line2
 	width: 100% 
 	display: block 
+	margin-left: 2%
 	ul 
-		margin-top: 1px 
-
-
+		margin-top: 1px
+	div	 
+		width: calc( 100% / 4 )     
 
 .nav-col 
 	vertical-align: top
@@ -83,62 +100,63 @@ nav
 		margin-bottom: 7px   
 		font-size: 1.3rem 
 
-.line1 
-	position: block   
-	margin-left: 2% 
-	div 
-		width: calc( 100% / 4 )
-
-.line2 
-	position: block   
-	margin-left: 2%
-	div 
-		width: calc( 100% / 4 ) 
-
-li:hover > div 
-    opacity: 1
-    visibility: visible
-    overflow: visible
- 
-
 @include mobile 
-	$image-padding: 0.99em
-	.main-menu  
-		display: none 
+	// $image-padding: 
 
 	.menu-button 
 		display: inline-block 
 		float: right 
 		margin-right: 2.5%   
 	.menu-active 
-		display: block 
+		display: block !important
 		transition: 0.7s  
 	nav  
-		max-height: 130px 
-		border-top: 0.9em solid #fff
+		max-height: 100px 
+		border-top: 0.7em solid #fff
 		img 	
-			height: 130px 
+			height: 100px 
 			margin: 0 
 			padding: 0 
 			margin-bottom: -0.35em  
-			margin-top: -0.99em  
+			margin-top: -0.79em  
 			z-index: 500  
-		ul 
-			// background: rgba($grey, 0.9) 
-			background: orange 
-			width: 60%  
-			z-index: 999  
-			position: absolute 
-			transition: 0.7s 
-			left: 0  
-			margin-left: 35%
-			top: 5.1em   
-			margin-top: 1.51em 
-			padding-bottom: 1rem 
-			
 	button 
-		margin-top: 2em 
-		float:  
+		margin-top: 2.47em 
+
+	#menu 
+		background: rgba($grey, 0.9)  
+		width: 50%  
+		z-index: 999  
+		position: absolute 
+		transition: 0.7s 
+		left: 0  
+		margin-left: 50%
+		top: 5.1em   
+		margin-top: 1em 
+		padding-bottom: 0.1rem  
+		display: none  
+		padding-top: 1em
+		ul
+			float: left  
+			padding: 0 
+			margin: 0  
+
+	#drop-down 
+		opacity: 1 
+		position: relative 
+		background: none  
+		padding: 0 
+		margin: 0
+		div 
+			display: block
+
+
+
+	.more-items 
+		font-size: 0.5em 
+		vertical-align: middle 
+		padding-left: 3em  
+		display: inline-block !important
 
 @include tablet 
 	.menu-button 
