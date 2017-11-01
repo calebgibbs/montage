@@ -73,6 +73,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/css\/results.sass": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 2,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/results.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/css\/rules.sass": {
 		"aP": 0,
 		"bl": 0,
@@ -121,6 +134,12 @@
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
+		},
+	"\/design.pdf": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/design.pdf",
+		"oF": 0
 		},
 	"\/fonts\/TradeGothicLTStd-BoldExt.otf": {
 		"ft": 8192,
@@ -424,6 +443,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/triangles\/bottom.png": {
+		"ft": 32768,
+		"iS": 239264,
+		"oA": 0,
+		"oAP": "\/img\/triangles\/bottom.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/triangles\/portfolio.png": {
 		"ft": 32768,
 		"iS": 178876,
@@ -440,17 +470,6 @@
 		"iS": 197974,
 		"oA": 0,
 		"oAP": "\/img\/triangles\/products.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/triangles\/statement.png": {
-		"ft": 32768,
-		"iS": 239264,
-		"oA": 0,
-		"oAP": "\/img\/triangles\/statement.png",
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
@@ -503,6 +522,12 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"\/results.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/results.html",
+		"oF": 0
 		}
 	},
 "hooks": [

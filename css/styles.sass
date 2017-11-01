@@ -3,11 +3,34 @@
 @import navigation 
 @import hamburger 
 @import triangles 
-@import foot 
+@import foot  
+@import results
 
 #page-content  
 	z-index: 0 
 	position: absolute 
 
 body
-	overflow-x: hidden
+	overflow-x: hidden 
+
+@include tablet 
+	#navigation 
+		display: none 
+	.body 
+		display: none 
+	#footer  
+		display: none 
+	body 
+		&:before 
+			content: "The website is currently unavailable on this screen size. Please view this website on a larger device" 
+
+@include mobile 
+	#navigation 
+		display: none 
+	.body 
+		display: none 
+	#footer  
+		display: none 
+	body 
+		&:before 
+			content: "The website is currently unavailable on this screen size. Please view this website on a larger device"

@@ -238,77 +238,137 @@ nav {
   outline: none; }
 
 .portfolio {
-  margin-left: 7.9em;
-  padding-top: 1em;
-  position: relative; }
-  .portfolio img {
-    width: +35%;
-    transition: 0.3s; }
+  margin-top: 1rem;
+  margin-left: 8rem;
+  position: static; }
 
-.statment1 {
-  font-size: 5em;
-  text-transform: uppercase;
-  color: #424242;
-  margin-left: 8em;
+.statement1 {
   position: relative;
-  z-index: 400;
-  margin-top: -19rem;
-  padding-bottom: 1rem; }
-  .statment1 span {
+  margin-left: 35rem;
+  margin-top: -18rem;
+  padding: 0;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #424242; }
+  .statement1 span {
     font-family: "TradeGothicBold", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    font-size: 5.5rem; }
+    font-size: 6rem; }
+
+.about-us {
+  margin-left: 25.7rem;
+  position: static;
+  display: inline-block;
+  vertical-align: top; }
+
+.statement2 {
+  display: inline-block;
+  font-size: 3rem;
+  color: #424242;
+  position: static;
+  padding-left: 3rem; }
+
+@media screen and (max-width: 1390px) {
+  .statement2 {
+    font-size: 2rem; } }
+
+@media screen and (max-width: 1200px) {
+  .statement2 {
+    font-size: 1rem; } }
+
+@media screen and (min-width: 768px) and (max-width: 979px) {
+  .statement2 {
+    display: none; } }
 
 .products {
-  margin-top: -21em;
-  margin-left: 4em;
-  position: relative; }
-  .products img {
-    width: 30%; }
-
-.about {
-  margin-left: 27.5em;
   position: relative;
-  margin-top: -4.7em; }
-
-.statment2 {
-  margin-left: 19em;
-  font-size: 2.8rem;
-  margin-top: -8em;
-  z-index: 400;
-  color: #424242; }
+  margin-top: -28.5rem;
+  margin-left: 1rem; }
 
 .sustainability {
-  margin-left: 20.5em; }
+  margin-left: 18rem; }
 
-.statment-img {
-  margin-left: 21em;
-  margin-top: -19.5em;
-  margin-bottom: -0.38em; }
+.bottom-tri {
+  margin-left: 18.7rem;
+  margin-top: -19.5rem;
+  margin-bottom: -0.35rem;
+  display: inline-block;
+  position: static;
+  z-index: 200; }
 
 .statement3 {
-  font-size: 5.5em;
-  color: #424242;
   position: relative;
-  z-index: 400;
-  margin-top: -25rem;
-  margin-left: 10.5em;
-  margin-bottom: 0; }
+  font-size: 3rem;
+  color: #424242;
+  display: inline-block;
+  z-index: 203;
+  margin-left: -12rem;
+  vertical-align: top;
+  margin-bottom: -7rem; }
   .statement3 span {
     font-family: "TradeGothicBold", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    font-size: 5.8rem; }
-  .statement3 p {
-    margin-bottom: 0; }
-
-.tri {
-  z-index: 399; }
+    font-size: 6rem; }
 
 #footer {
   background: #424242;
-  min-height: 200px;
-  border-top: solid #177c7e 2em;
-  margin-top: -1.1rem; }
+  color: #fff;
+  border-top: solid #177c7e 2rem;
+  font-family: "TradeGothicLight", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.hf {
+  margin-top: -0.35rem; }
+
+.footer-inner {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 1.5rem; }
+  .footer-inner div {
+    width: calc( 98% / 3);
+    display: inline-block;
+    vertical-align: top; }
+
+.side-text {
+  -webkit-transform: scale(1) rotate(-90deg) translate(0px, 0px);
+  padding: 0;
+  font-size: 1.3rem;
+  font-family: "TradeGothicBold", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  max-width: 5rem; }
+
+.f-contact {
+  padding-top: 0; }
+  .f-contact p {
+    padding: 0;
+    margin-left: -1.5rem;
+    display: inline-block; }
+  .f-contact div {
+    margin-top: 2.1rem;
+    display: inline-block; }
+
+.f-middle {
+  text-align: center; }
+  .f-middle img {
+    padding-bottom: 0;
+    margin-bottom: 0; }
+  .f-middle p {
+    margin-top: -0.1rem; }
+
+.f-managers {
+  max-width: 20rem;
+  float: right; }
+  .f-managers ol {
+    list-style-type: none;
+    margin-left: -0.7rem;
+    display: inline-block;
+    padding-left: -309rem;
+    padding-left: 0; }
+  .f-managers div {
+    margin-top: 1.3rem;
+    display: inline-block;
+    padding: 0; }
+
+#results-outer {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 1.5rem; }
 
 #page-content {
   z-index: 0;
@@ -316,3 +376,23 @@ nav {
 
 body {
   overflow-x: hidden; }
+
+@media screen and (min-width: 768px) and (max-width: 979px) {
+  #navigation {
+    display: none; }
+  .body {
+    display: none; }
+  #footer {
+    display: none; }
+  body:before {
+    content: "The website is currently unavailable on this screen size. Please view this website on a larger device"; } }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  #navigation {
+    display: none; }
+  .body {
+    display: none; }
+  #footer {
+    display: none; }
+  body:before {
+    content: "The website is currently unavailable on this screen size. Please view this website on a larger device"; } }

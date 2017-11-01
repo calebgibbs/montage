@@ -24,7 +24,14 @@
 
 @mixin desktop 
 	@media screen and(min-width: 960px)
+		@content  
+
+@mixin desktop-sm 
+	@media screen and(max-width: 1390px) 
 		@content 
+@mixin desktop-xsm 
+	@media screen and (max-width: 1200px) 
+		@content
 
 $normal: "TradeGothicStd", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif 
 $light: "TradeGothicLight", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif 
