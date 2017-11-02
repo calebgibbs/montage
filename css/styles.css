@@ -241,7 +241,10 @@ nav {
 .portfolio {
   margin-top: 1rem;
   margin-left: 8rem;
-  position: static; }
+  position: static;
+  z-index: 9; }
+  .portfolio img:hover {
+    filter: blur(2px); }
 
 .statement1 {
   position: relative;
@@ -259,7 +262,10 @@ nav {
   margin-left: 25.7rem;
   position: static;
   display: inline-block;
-  vertical-align: top; }
+  vertical-align: top;
+  z-index: 9; }
+  .about-us img:hover {
+    filter: blur(2px); }
 
 .statement2 {
   display: inline-block;
@@ -283,10 +289,15 @@ nav {
 .products {
   position: relative;
   margin-top: -28.5rem;
-  margin-left: 1rem; }
+  margin-left: 1rem;
+  width: 18rem; }
+  .products img:hover {
+    filter: blur(2px); }
 
 .sustainability {
   margin-left: 18rem; }
+  .sustainability img:hover {
+    filter: blur(2px); }
 
 .bottom-tri {
   margin-left: 18.7rem;

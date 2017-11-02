@@ -207,39 +207,6 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/mi-nz-logo.png": {
-		"ft": 32768,
-		"iS": 19579,
-		"oA": 0,
-		"oAP": "\/img\/mi-nz-logo.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/search.png": {
-		"ft": 32768,
-		"iS": 3187,
-		"oA": 0,
-		"oAP": "\/img\/search.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/search10.png": {
-		"ft": 32768,
-		"iS": 230,
-		"oA": 0,
-		"oAP": "\/img\/search10.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
 	"\/img\/triangles\/about.png": {
 		"ft": 32768,
 		"iS": 103390,
