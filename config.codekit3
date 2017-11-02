@@ -7,15 +7,17 @@
 		"uuidString": "E6FDBFD2-1851-4A56-8E5E-9546C00B2525"
 		}
 	],
-"creatorBuild": "25900",
+"creatorBuild": "26097",
 "files": {
 	"\/.gitignore": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/.gitignore",
 		"oF": 0
 		},
 	"\/build\/.gitignore": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/build\/.gitignore",
@@ -69,6 +71,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/css\/navigation.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/css\/product.sass": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 2,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/product.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -136,267 +151,49 @@
 		"uL": 1
 		},
 	"\/design.pdf": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/design.pdf",
 		"oF": 0
 		},
 	"\/fonts\/TradeGothicLTStd-BoldExt.otf": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/fonts\/TradeGothicLTStd-BoldExt.otf",
 		"oF": 0
 		},
 	"\/fonts\/TradeGothicLTStd-BoldObl.otf": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/fonts\/TradeGothicLTStd-BoldObl.otf",
 		"oF": 0
 		},
 	"\/fonts\/TradeGothicLTStd-Light.otf": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/fonts\/TradeGothicLTStd-Light.otf",
 		"oF": 0
 		},
 	"\/fonts\/TradeGothicLTStd.otf": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/fonts\/TradeGothicLTStd.otf",
 		"oF": 0
 		},
-	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow.htm": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow.htm",
-		"oF": 0
-		},
-	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/0c93d085d950e3bcca89de99d08cd7ac": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/0c93d085d950e3bcca89de99d08cd7ac",
-		"oF": 0
-		},
-	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/3defcf5c58ce690b3b602598647a8b18": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/3defcf5c58ce690b3b602598647a8b18",
-		"oF": 0
-		},
-	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/6cc1d48d9f1ca3c5f266c16bcff25200": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/6cc1d48d9f1ca3c5f266c16bcff25200",
-		"oF": 0
-		},
-	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/all.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
+	"\/img\/favicon.png": {
+		"ft": 32768,
+		"iS": 908,
 		"oA": 0,
-		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/all-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/analytics.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/analytics-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/beacon.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/beacon-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/clc.min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/clc.min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/clc.min.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/clc.min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/external-editor.en.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/external-editor.en-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/full-anon.en.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/full-anon.en-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/gpt.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/gpt-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/impression.gif": {
-		"ft": 4194304,
-		"iS": 43,
-		"oA": 0,
-		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/impression.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/jquery.min.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/jquery.min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/NqNoW.jpg": {
-		"ft": 16384,
-		"iS": 1409,
-		"oA": 0,
-		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/NqNoW.jpg",
+		"oAP": "\/img\/favicon.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"q": 100
-		},
-	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/picture": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/picture",
-		"oF": 0
-		},
-	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/picture(1)": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/picture(1)",
-		"oF": 0
-		},
-	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/post-validation.en.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/post-validation.en-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/prettify-full.en.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/prettify-full.en-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/QTJ4w.jpg": {
-		"ft": 16384,
-		"iS": 1467,
-		"oA": 0,
-		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/QTJ4w.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/quant.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/quant-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/RtNEj.jpg": {
-		"ft": 16384,
-		"iS": 1683,
-		"oA": 0,
-		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/RtNEj.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/rules-p-c1rF4kxgLUzNc.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/rules-p-c1rF4kxgLUzNc-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/snippet-javascript.en.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/snippet-javascript.en-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/stub.en.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/stub.en-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/UIN2X.jpg": {
-		"ft": 16384,
-		"iS": 1505,
-		"oA": 0,
-		"oAP": "\/img\/css - How do I horizontally center a span element inside a div - Stack Overflow_files\/UIN2X.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/logo.png": {
@@ -407,6 +204,17 @@
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/mi-nz-logo.png": {
+		"ft": 32768,
+		"iS": 19579,
+		"oA": 0,
+		"oAP": "\/img\/mi-nz-logo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
@@ -454,6 +262,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/triangles\/download.png": {
+		"ft": 32768,
+		"iS": 483608,
+		"oA": 0,
+		"oAP": "\/img\/triangles\/download.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/triangles\/portfolio.png": {
 		"ft": 32768,
 		"iS": 178876,
@@ -488,6 +307,7 @@
 		"q": 100
 		},
 	"\/index.html": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/index.html",
@@ -523,7 +343,15 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"\/product.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/product.html",
+		"oF": 0
+		},
 	"\/results.html": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/results.html",
@@ -1075,6 +903,10 @@
 			"active": 0,
 			"optionString": "'expression'"
 			},
+		"function-paren-newline": {
+			"active": 0,
+			"optionString": "'multiline'"
+			},
 		"generator-star-spacing": {
 			"active": 0,
 			"optionString": "{'before': true, 'after': false}"
@@ -1139,9 +971,9 @@
 			"active": 0,
 			"optionString": "{'beforeBlockComment': true}"
 			},
-		"lines-around-directive": {
+		"lines-between-class-members": {
 			"active": 0,
-			"optionString": "{'before': 'always', 'after': 'always'}"
+			"optionString": "'always', {exceptAfterSingleLine: false}"
 			},
 		"max-depth": {
 			"active": 0,
@@ -1171,6 +1003,10 @@
 			"active": 0,
 			"optionString": "{'max': 1}"
 			},
+		"multiline-comment-style": {
+			"active": 0,
+			"optionString": "'starred-block'"
+			},
 		"multiline-ternary": {
 			"active": 0,
 			"optionString": "'always'"
@@ -1180,14 +1016,6 @@
 			"optionString": "{'newIsCap': true, 'capIsNew': true, 'newIsCapExceptions': [], 'capIsNewExceptions': ['Array', 'Boolean', 'Date', 'Error', 'Function', 'Number', 'Object', 'RegExp', 'String', 'Symbol'], 'properties': true}"
 			},
 		"new-parens": {
-			"active": 0,
-			"optionString": ""
-			},
-		"newline-after-var": {
-			"active": 0,
-			"optionString": "'always'"
-			},
-		"newline-before-return": {
 			"active": 0,
 			"optionString": ""
 			},
@@ -2291,7 +2119,8 @@
 		"createSourceMap": 0,
 		"minifyOutput": 1,
 		"outputStyle": 0,
-		"syntaxCheckerStyle": 1
+		"syntaxCheckerStyle": 1,
+		"transpilerStyle": 1
 		},
 	"languageDefaultsCSS": {
 		"autoOutputAction": 0,
@@ -2324,6 +2153,7 @@
 		"noEscapeInAttributes": 0,
 		"outputFormat": 2,
 		"outputStyle": 0,
+		"shouldRunCacheBuster": 0,
 		"useCDATA": 0,
 		"useDoubleQuotes": 0,
 		"useUnixNewlines": 0
@@ -2365,7 +2195,8 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "kit",
 		"autoOutputPathReplace2": "html",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsLESS": {
 		"allowInsecureImports": 0,
@@ -2397,13 +2228,13 @@
 		"enableFootnotes": 1,
 		"enableLabels": 1,
 		"enableSmartQuotes": 1,
-		"escapeLineBreaks": 0,
 		"maskEmailAddresses": 1,
 		"outputFormat": 0,
 		"outputStyle": 0,
 		"parseMetadata": 1,
 		"processHTML": 0,
 		"randomFootnoteNumbers": 0,
+		"shouldRunCacheBuster": 0,
 		"useCompatibilityMode": 0
 		},
 	"languageDefaultsOTHER": {
@@ -2412,7 +2243,8 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsPNG": {
 		"autoOutputAction": 0,
@@ -2432,7 +2264,8 @@
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
 		"compileDebug": 1,
-		"outputStyle": 0
+		"outputStyle": 0,
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsSASS": {
 		"autoOutputAction": 0,
@@ -2460,7 +2293,8 @@
 		"logicless": 0,
 		"outputFormat": 0,
 		"outputStyle": 1,
-		"railsCompatible": 0
+		"railsCompatible": 0,
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsSTYLUS": {
 		"autoOutputAction": 0,

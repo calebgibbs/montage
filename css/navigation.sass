@@ -26,12 +26,12 @@ nav
 		margin-right: 5em 
 
 	img 
-		margin: 0 
+		margin-left: -1em 
 		padding: 0 
 		height: 100% 
 		margin-bottom: -0.35em  
 		margin-top: -$image-padding  
-		z-index: 500 
+		z-index: 500  
 
 #menu 
 	display: inline-block 
@@ -45,8 +45,7 @@ nav
 
 #drop-down 
 	background: rgba($grey, 0.9) 
-	width: 60%  
-	z-index: 999  
+	width: 60%    
 	position: absolute 
 	transition: 0.3s 
 	left: 0  
@@ -55,7 +54,7 @@ nav
 	margin-top: 1.51em 
 	padding-bottom: 1rem 
 	opacity: 0  
-	// display: none
+	z-index: -40
 	ul 	 
 		float: left 
 		width: 100% 
@@ -63,7 +62,8 @@ nav
 @include desktop 
 	.show-menu 
 		opacity: 1 !important  
-		transition: 0.3s  
+		transition: 0.3s 
+		z-index: 99988 !important  
 
 .line1 
 	width: 100%  

@@ -1,4 +1,39 @@
 #results-outer 
 	width: 90% 
 	margin: 0 auto 
-	padding-top: 1.5rem
+	padding-top: 1.5rem  
+	padding-bottom: 3rem
+
+.result 
+	width: calc( 98% / 4 ) 
+	display: inline-block  
+	text-align: center  
+	font-size: 1.5rem
+	padding-bottom: 1rem  
+	a 
+		color: $grey 
+		text-decoration: none 
+
+.download-img 
+	text-align: center 
+	position: static 
+
+.download-text 
+	font-size: 4rem 
+	color: $grey 
+	margin-bottom: -15rem  
+	margin-left: 28rem 
+	position: relative
+
+
+@include desktop-sm  
+	.result 
+		width: calc( 98% / 3 ) 
+
+@include tablet 
+	.result 
+		width: calc( 98% / 2 ) 
+
+@include mobile 
+	.result  
+		width: 100% 
