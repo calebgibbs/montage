@@ -56,7 +56,8 @@ nav {
     display: inline-block;
     float: right;
     margin-top: 4.7em;
-    margin-right: 5em; }
+    margin-right: 5em;
+    position: static; }
   nav img {
     margin-left: -1em;
     padding: 0;
@@ -70,23 +71,23 @@ nav {
   float: right; }
 
 .main-menu {
-  font-size: 1.5em; }
+  font-size: 20pt; }
 
 .more-items {
   display: none; }
 
 #drop-down {
+  z-index: -1;
   background: rgba(66, 66, 66, 0.9);
   width: 60%;
   position: absolute;
-  transition: 0.3s;
   left: 0;
   margin-left: 38%;
   top: 5.1em;
-  margin-top: 1.51em;
+  margin-top: 1.51rem;
   padding-bottom: 1rem;
-  opacity: 0;
-  z-index: -40; }
+  overflow-x: hidden;
+  opacity: 0; }
   #drop-down ul {
     float: left;
     width: 100%; }
@@ -130,6 +131,37 @@ nav {
     text-transform: uppercase;
     margin-bottom: 7px;
     font-size: 1.3rem; }
+
+.search {
+  color: #fff;
+  position: absolute;
+  margin-top: -5rem;
+  margin-left: 7.5rem;
+  width: 23rem; }
+  .search button {
+    color: #fff;
+    background: #424242;
+    border: 0;
+    font-size: 1.5rem;
+    position: absolute;
+    outline: none;
+    cursor: pointer;
+    right: 0; }
+  .search input {
+    background: none;
+    color: #fff;
+    font-size: 15pt;
+    padding: 3px;
+    border: 0;
+    width: 20.5rem;
+    outline: none;
+    width: 0%;
+    transition: width 0.4s cubic-bezier(0, 0.795, 0, 1);
+    right: 0 !important;
+    position: absolute; }
+    .search input:focus {
+      width: 20.5rem;
+      border-bottom: 1px solid #A6A6A6; }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .menu-button {
@@ -471,7 +503,8 @@ nav {
   padding: 0;
   margin: 0;
   min-height: 50rem;
-  vertical-align: top; }
+  vertical-align: top;
+  color: #424242; }
   .product-text h3 {
     font-size: 3.3rem; }
     .product-text h3 span {
@@ -502,6 +535,22 @@ nav {
     padding: 0.1rem;
     text-align: center; }
 
+#right-image {
+  width: 100%;
+  padding-bottom: 2rem;
+  display: none; }
+
+.right-image {
+  margin-left: 50rem;
+  margin-top: -24rem;
+  display: block; }
+
+.dwn-pro {
+  margin-top: 2rem; }
+  .dwn-pro img {
+    margin-bottom: -0.35rem;
+    padding: 0; }
+
 #page-content {
   z-index: 0;
   position: absolute; }
@@ -531,3 +580,6 @@ body {
     display: none; }
   body:before {
     content: "The website is currently unavailable on this screen size. Please view this website on a larger device"; } }
+
+.site-info {
+  display: none; }

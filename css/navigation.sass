@@ -23,7 +23,8 @@ nav
 		display: inline-block 
 		float: right 
 		margin-top: 4.7em 
-		margin-right: 5em 
+		margin-right: 5em  
+		position: static
 
 	img 
 		margin-left: -1em 
@@ -38,23 +39,24 @@ nav
 	float: right
 
 .main-menu 	
-	font-size: 1.5em  
+	font-size: 20pt 
 
 .more-items 
 	display: none 
 
 #drop-down 
+	z-index: -1
 	background: rgba($grey, 0.9) 
 	width: 60%    
 	position: absolute 
-	transition: 0.3s 
+	// transition: 0.3s 
 	left: 0  
 	margin-left: 38%
 	top: 5.1em   
-	margin-top: 1.51em 
-	padding-bottom: 1rem 
-	opacity: 0  
-	z-index: -40
+	margin-top: 1.51rem 
+	padding-bottom: 1rem    
+	overflow-x: hidden 
+	opacity: 0
 	ul 	 
 		float: left 
 		width: 100% 
@@ -98,7 +100,43 @@ nav
 		font-weight: bold
 		text-transform: uppercase 
 		margin-bottom: 7px   
-		font-size: 1.3rem 
+		font-size: 1.3rem  
+ 
+.search  
+	color: #fff 
+	position: absolute 
+	margin-top: -5rem  
+	margin-left: 7.5rem  
+	width: 23rem
+	// background: orange
+	button 
+		color: #fff 
+		background: $grey 
+		border: 0 
+		font-size: 1.5rem  
+		position: absolute 
+		outline: none  
+		cursor: pointer 
+		right: 0
+		// margin-right: -20rem 
+		// float: left
+	input 
+		background: none  
+		color: #fff 
+		font-size: 15pt  
+		padding: 3px  
+		border: 0  
+		width: 20.5rem  
+		outline: none 
+		width: 0%  
+		transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000) 
+		right: 0 !important 
+		position: absolute
+		// padding-right: 60px
+		&:focus  
+			width: 20.5rem 
+			border-bottom: 1px solid $light-grey
+
 
 @include mobile 
 	// $image-padding: 
