@@ -2,10 +2,7 @@
 	margin-top: 1rem 
 	margin-left: 8rem 
 	position: static  
-	z-index: 9 
-	img 
-		&:hover  
-			filter: blur(2px) 
+	z-index: 9  
 	span 
 		position: absolute  
 		z-index: 90 
@@ -34,18 +31,15 @@
 	position: static 
 	display: inline-block 
 	vertical-align: top  
-	z-index: 9 
-	img 
-		&:hover  
-			filter: blur(2px)  
+	z-index: 9  
 	span 
 		position: absolute 
 		z-index: 90 
 		text-align: center  
 		font-size: 2.5rem 
 		float: left  
-		margin-top: -14rem 
-		margin-left: 6.5rem 
+		margin-top: -13.5rem 
+		margin-left: 7rem 
 		font-family: $light
 		color: #fff
 
@@ -69,10 +63,7 @@
 	position: relative  
 	margin-top: -28.5rem 
 	margin-left: 1rem 
-	width: 18rem 
-	img 
-		&:hover  
-			filter: blur(2px)    
+	width: 18rem    
 	span  
 		position: absolute 
 		z-index: 90 
@@ -83,10 +74,7 @@
 		color: #fff
 
 .sustainability 
-	margin-left: 18rem  
-	img 
-		&:hover  
-			filter: blur(2px)  
+	margin-left: 18rem   
 	span 
 		position: absolute  
 		z-index: 90 
@@ -118,5 +106,35 @@
 	span	
 		font-family: $bold  
 		font-size: 6rem 
-	margin-bottom: -7rem 
+	margin-bottom: -7rem   
+
+.category  
+	cursor: pointer 
+	opacity: 0 
+	transition: 0.3s !important 
+	&:hover  
+		transform: scale(1.03) 
+		// overflow: hidden  
+
+.category-in  
+	opacity: 1 !important 
+	-webkit-animation: imageload 900ms ease-in none
+	animation: imageload 900ms ease-in none 
+	transition: 0.3s !important 
+ 
+
+@keyframes imageload 
+	0% 
+		opacity: 0 
+		transform: scale(0.3) rotateY(90deg)  
+	50% 
+		transform: scale(1.03)   
+	70% 
+		opacity: 1
+	100%
+		opacity: 1
+
+@include tablet  
+	body  
+		background: orange
   

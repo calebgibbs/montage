@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".category").each(function(e){setTimeout(function(){$(".category").eq(e).addClass("category-in")},300*e)})});

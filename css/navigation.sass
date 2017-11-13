@@ -48,8 +48,7 @@ nav
 	z-index: -1
 	background: rgba($grey, 0.9) 
 	width: 60%    
-	position: absolute 
-	// transition: 0.3s 
+	position: absolute  
 	left: 0  
 	margin-left: 38%
 	top: 5.1em   
@@ -59,7 +58,9 @@ nav
 	opacity: 0
 	ul 	 
 		float: left 
-		width: 100% 
+		width: 100%  
+		padding: 0 
+		margin: 0
 
 @include desktop 
 	.show-menu 
@@ -101,6 +102,11 @@ nav
 		text-transform: uppercase 
 		margin-bottom: 7px   
 		font-size: 1.3rem  
+
+@include desktop-sm 
+	.nav-col  
+		li 
+			font-size: 0.5rem
  
 .search  
 	color: #fff 
@@ -196,11 +202,11 @@ nav
 		border-bottom: none !important  
 		margin: 0 
 		padding: 0 
-		margin-top: -4rem 
-		margin-right: 40rem   
+		margin-top: -4rem    
 		width: 40rem 
 		padding-top: 0 !important 
 		display: fixed 
+		margin-left: 0.2rem 
 		button  
 			position: relative 
 			margin: 0  
@@ -208,10 +214,11 @@ nav
 		input 
 			width: 14rem 
 			background: #fff 
-			position: relative 
+			position: relative  
 			height: 2rem 
 			background: none 
-			border-bottom: 1px solid $light-grey
+			border-bottom: 1px solid $light-grey 
+			// margin-right: -3rem
 			&:focus  
 				width: 14rem 
 				border-bottom: 1px solid #fff 
@@ -244,6 +251,11 @@ nav
 		.last-ul  
 			border-bottom: none  
 
+	.flip 
+		transform: rotateX(180deg)  
+
+
+
 	.expand-more  
 		display: none 
 
@@ -254,7 +266,8 @@ nav
 		padding-left: 3em  
 		display: inline-block !important 
 		float: right 
-		padding-right: 1rem   
+		padding-right: 1rem 
+		transition: 0.3s   
 
 	.sub-list 
 		font-size: 1.5rem 
@@ -262,14 +275,68 @@ nav
 		padding-left: 3em  
 		display: inline-block !important 
 		float: right 
-		padding-right: 4rem	
+		padding-right: 4rem	 
+		transition: 0.3s
 
 	.show  
 		display: block !important
 
 @include tablet 
 	.menu-button 
-		display: none
+		display: none 
+
+	nav  
+		border-top: 0.8rem solid #fff  
+		// height: 6rem
+		img  
+			width: 300px 
+			margin-top: -0.89rem 
+			margin-bottom: -0.39rem  
+		ul 
+			margin-top: 4rem !important
+
+	.main-menu 	
+		font-size: 17pt   
+		margin-top: -1rem !important
+
+	.search  
+	color: #fff 
+	position: absolute 
+	margin-top: -4rem  
+	margin-left: 2rem !important  
+	width: 2rem !important
+	// background: orange
+	button 
+		color: #fff 
+		background: $grey 
+		border: 0 
+		font-size: 0.5rem  
+		position: absolute 
+		outline: none  
+		cursor: pointer 
+		right: 0
+	input 
+		background: none  
+		color: #fff 
+		font-size: 10pt  
+		padding: 3px  
+		border: 0  
+		width: 20.5rem  
+		outline: none 
+		width: 0%  
+		transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000) 
+		right: 0 !important 
+		position: absolute
+		// padding-right: 60px
+		&:focus  
+			width: 15rem 
+			border-bottom: 1px solid $light-grey   
+
+	#drop-down 
+		width: 100% 
+		margin: 0 auto 
+		
+
 
 @include desktop 
 	.menu-button 
