@@ -609,6 +609,11 @@ nav {
     color: #424242;
     text-decoration: none; }
 
+.result-inner {
+  display: block;
+  margin: 5px;
+  padding: 5 px; }
+
 .download-img {
   text-align: center;
   position: static; }
