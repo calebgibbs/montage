@@ -1,23 +1,27 @@
-#results-outer 
+section 
 	width: 90% 
-	margin: 0 auto 
-	padding-top: 1.5rem  
-	padding-bottom: 3rem
+	margin: 0 auto  
+	// background: orange 
+	margin-top: 2rem
 
-.result 
-	width: calc( 98% / 4 ) 
-	display: inline-block  
-	text-align: center  
-	font-size: 1.5rem
-	padding-bottom: 1rem    
+figure 
+	width: calc(100% / 5 ) 
+	float: left  
+	padding-bottom: 1.5rem 
+	img
+		width: 98%
+		vertical-align: middle 
+		transition: 0.3s 
+		text-align: center 
+	p 
+		text-align: center  
+		font-size: 1.7rem  
+		margin: 0 auto 
+		padding-top: 1rem
 	a 
 		color: $grey 
-		text-decoration: none   
-
-.result-inner  
-	display: block 
-	margin: 5px  
-	padding: 5 px
+		text-decoration: none 
+		text-align: center
 
 .download-img 
 	text-align: center 
@@ -32,14 +36,22 @@
 
 
 @include desktop-sm  
-	.result 
+	figure 
 		width: calc( 98% / 3 )  
 
 
 @include tablet 
-	.result 
-		width: calc( 98% / 2 ) 
+	// section 
+		// margin-left: 5rem
+	figure 
+		width: calc( 100% / 4.5 )  
+		p 
+			font-size: 1rem
 
 @include mobile 
-	.result  
-		width: 100% 
+	section 
+		margin-left: 5rem
+	figure 
+		width: calc( 100% / 4 )  
+		p 
+			font-size: 1rem
