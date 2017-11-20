@@ -647,21 +647,68 @@ figure {
     figure p {
       font-size: 1rem; } }
 
-.diamond {
-  display: none; }
+.products-grid {
+  margin-top: 4rem;
+  text-align: right;
+  position: static;
+  padding-bottom: 15%; }
 
 #work-stations {
   display: inline-block;
-  vertical-align: middle; }
+  vertical-align: middle;
+  width: calc( 99% /3); }
+  #work-stations img {
+    width: 88%;
+    text-align: right; }
 
 #agile {
   display: inline-block;
-  vertical-align: middle; }
+  vertical-align: middle;
+  width: calc( 99% /3);
+  margin-right: -2.8%;
+  position: relative; }
+  #agile img {
+    width: 100%;
+    text-align: right; }
 
 #joinery {
   display: inline-block;
   vertical-align: middle;
-  left: 0; }
+  width: calc( 99% /3);
+  margin: 0 auto; }
+  #joinery img {
+    width: 90%;
+    text-align: right; }
+
+#storage {
+  text-align: left;
+  width: 30%;
+  margin-top: -29.2%;
+  margin-left: 28.2%;
+  position: relative; }
+  #storage img {
+    width: 55%; }
+
+#chairs img {
+  width: 90%; }
+
+#tables {
+  margin-top: 4%; }
+  #tables img {
+    width: 90%; }
+
+#table-chair {
+  width: 30%;
+  margin-top: -45.6%;
+  margin-left: 53.3%; }
+
+#tech {
+  width: 15%;
+  margin-left: 47.3%;
+  margin-top: -13.2%;
+  position: relative; }
+  #tech img {
+    width: 85%; }
 
 #page-content {
   z-index: 0;
