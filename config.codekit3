@@ -82,8 +82,21 @@
 		"dS": 0,
 		"ft": 2,
 		"ma": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "\/css\/product.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/css\/products-page.sass": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 2,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/products-page.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -218,6 +231,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/triangles\/agile.png": {
+		"ft": 32768,
+		"iS": 259165,
+		"oA": 0,
+		"oAP": "\/img\/triangles\/agile.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/triangles\/bottom.png": {
 		"ft": 32768,
 		"iS": 239264,
@@ -229,11 +253,33 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/triangles\/chairs.png": {
+		"ft": 32768,
+		"iS": 117055,
+		"oA": 0,
+		"oAP": "\/img\/triangles\/chairs.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/triangles\/download.png": {
 		"ft": 32768,
 		"iS": 483608,
 		"oA": 0,
 		"oAP": "\/img\/triangles\/download.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/triangles\/joinery.png": {
+		"ft": 32768,
+		"iS": 344255,
+		"oA": 0,
+		"oAP": "\/img\/triangles\/joinery.png",
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
@@ -262,6 +308,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/triangles\/storage.png": {
+		"ft": 32768,
+		"iS": 51040,
+		"oA": 0,
+		"oAP": "\/img\/triangles\/storage.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/triangles\/sustainability.png": {
 		"ft": 32768,
 		"iS": 146598,
@@ -270,6 +327,39 @@
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/triangles\/tables.png": {
+		"ft": 32768,
+		"iS": 169347,
+		"oA": 0,
+		"oAP": "\/img\/triangles\/tables.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/triangles\/tech.png": {
+		"ft": 32768,
+		"iS": 23367,
+		"oA": 0,
+		"oAP": "\/img\/triangles\/tech.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/triangles\/workstations.png": {
+		"ft": 32768,
+		"iS": 114715,
+		"oA": 0,
+		"oAP": "\/img\/triangles\/workstations.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
@@ -352,6 +442,13 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/product.html",
+		"oF": 0
+		},
+	"\/products.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/products.html",
 		"oF": 0
 		},
 	"\/results.html": {
