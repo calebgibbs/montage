@@ -1,1 +1,1 @@
-$(document).ready(function(){$(".category").each(function(e){setTimeout(function(){$(".category").eq(e).addClass("category-in")},300*e)})});
+$(document).ready(function(){$(".category").each(function(n){setTimeout(function(){$(".category").eq(n).addClass("category-in")},300*n)}),$(".diamond").each(function(n){setTimeout(function(){$(".diamond").eq(n).addClass("diamond-in")},300*n)})});

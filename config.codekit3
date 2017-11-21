@@ -23,6 +23,19 @@
 		"oAP": "\/build\/.gitignore",
 		"oF": 0
 		},
+	"\/css\/animations.sass": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 2,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/animations.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/css\/colours.sass": {
 		"aP": 0,
 		"bl": 0,
@@ -358,8 +371,8 @@
 		"oA": 0,
 		"oAP": "\/img\/triangles\/workstations.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
