@@ -1,4 +1,6 @@
 config.codekit3
 fonts/ 
 design.pdf 
+vendor/ 
+composer.lock 
 
