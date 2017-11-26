@@ -12,9 +12,157 @@
 	"\/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 2,
+		"oA": 0,
 		"oAP": "\/.gitignore",
 		"oF": 0
+		},
+	"\/app\/controllers\/ChangepwdController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/ChangepwdController.php",
+		"oF": 0
+		},
+	"\/app\/controllers\/Error404Controller.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/Error404Controller.php",
+		"oF": 0
+		},
+	"\/app\/controllers\/HomeController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/HomeController.php",
+		"oF": 0
+		},
+	"\/app\/controllers\/LoginController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/LoginController.php",
+		"oF": 0
+		},
+	"\/app\/controllers\/PageController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/PageController.php",
+		"oF": 0
+		},
+	"\/app\/controllers\/ProductController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/ProductController.php",
+		"oF": 0
+		},
+	"\/app\/controllers\/ProductsController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/ProductsController.php",
+		"oF": 0
+		},
+	"\/app\/controllers\/RegisterController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/RegisterController.php",
+		"oF": 0
+		},
+	"\/app\/controllers\/ResultsController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/ResultsController.php",
+		"oF": 0
+		},
+	"\/app\/partials\/changepwd.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/changepwd.php",
+		"oF": 0
+		},
+	"\/app\/partials\/error404.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/error404.php",
+		"oF": 0
+		},
+	"\/app\/partials\/footer.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/footer.php",
+		"oF": 0
+		},
+	"\/app\/partials\/home.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/home.php",
+		"oF": 0
+		},
+	"\/app\/partials\/login.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/login.php",
+		"oF": 0
+		},
+	"\/app\/partials\/master.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/master.php",
+		"oF": 0
+		},
+	"\/app\/partials\/nav.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/nav.php",
+		"oF": 0
+		},
+	"\/app\/partials\/product.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/product.php",
+		"oF": 0
+		},
+	"\/app\/partials\/products.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/products.php",
+		"oF": 0
+		},
+	"\/app\/partials\/register.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/register.php",
+		"oF": 0
+		},
+	"\/app\/partials\/results.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/results.php",
+		"oF": 0
+		},
+	"\/composer.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/composer-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
 		},
 	"\/composer.lock": {
 		"cB": 0,
@@ -161,7 +309,7 @@
 		"oA": 0,
 		"oAP": "\/css\/styles-min.css",
 		"oF": 0,
-		"oS": 2
+		"oS": 3
 		},
 	"\/css\/styles.sass": {
 		"aP": 0,
@@ -400,11 +548,11 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/index.html": {
+	"\/index.php": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/index.html",
+		"oA": 0,
+		"oAP": "\/index.php",
 		"oF": 0
 		},
 	"\/js\/animation-min.js": {
@@ -466,34 +614,6 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
-		},
-	"\/log-in.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/log-in.html",
-		"oF": 0
-		},
-	"\/product.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/product.html",
-		"oF": 0
-		},
-	"\/products.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/products.html",
-		"oF": 0
-		},
-	"\/results.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/results.html",
-		"oF": 0
 		},
 	"\/temp\/index.html": {
 		"cB": 0,
@@ -2658,7 +2778,7 @@
 	"externalServerAddress": "http:\/\/localhost:8888",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
-	"jsCheckerReservedNamesString": "$",
+	"jsCheckerReservedNamesString": "",
 	"jsHintFlags2": {
 		"asi": {
 			"active": 0,
@@ -2689,7 +2809,7 @@
 			"flagValue": -1
 			},
 		"curly": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"debug": {
@@ -2697,7 +2817,7 @@
 			"flagValue": -1
 			},
 		"devel": {
-			"active": 1,
+			"active": 0,
 			"flagValue": -1
 			},
 		"dojo": {
@@ -2705,7 +2825,7 @@
 			"flagValue": -1
 			},
 		"elision": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"eqeqeq": {
@@ -2737,7 +2857,7 @@
 			"flagValue": -1
 			},
 		"freeze": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"funcscope": {
@@ -2861,7 +2981,7 @@
 			"flagValue": -1
 			},
 		"notypeof": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"noyield": {
@@ -2921,7 +3041,7 @@
 			"flagValue": -1
 			},
 		"sub": {
-			"active": 1,
+			"active": 0,
 			"flagValue": -1
 			},
 		"supernew": {
@@ -2933,11 +3053,11 @@
 			"flagValue": -1
 			},
 		"undef": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"unused": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"varstmt": {
@@ -3028,7 +3148,7 @@
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
 		"createSourceMap": 0,
-		"outputStyle": 2,
+		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0
 		},
@@ -3136,7 +3256,7 @@
 		"useCompatibilityMode": 0
 		},
 	"languageDefaultsOTHER": {
-		"autoOutputAction": 2,
+		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.*",
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",

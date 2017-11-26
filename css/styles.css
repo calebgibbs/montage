@@ -898,10 +898,10 @@ figure {
   #form-box form {
     width: 60%;
     margin: 0 auto;
-    margin-top: 20%; }
+    margin-top: 10%; }
     #form-box form input {
       width: 100%;
-      margin-bottom: 10%;
+      margin-top: 10%;
       font-size: 1.3rem;
       padding: 7px;
       outline: none;
@@ -927,6 +927,31 @@ figure {
       transition: 0.3s; }
       #form-box form button:hover {
         background: #84B025; }
+  #form-box h2 {
+    text-align: center;
+    margin-top: 20%;
+    position: relative;
+    font-family: "TradeGothicLight", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #424242;
+    font-size: 2rem; }
+  #form-box p {
+    text-align: center;
+    margin-bottom: 10%; }
+
+.last-input {
+  margin-bottom: 5% !important; }
+
+.login-button {
+  margin-top: 10%;
+  margin-bottom: 20% !important; }
+  .login-button button {
+    margin-bottom: 0 !important; }
+
+.error-message {
+  margin-top: 10px;
+  display: block;
+  color: red;
+  padding-left: 7px !important; }
 
 @keyframes imageload {
   0% {
