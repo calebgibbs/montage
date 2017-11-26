@@ -11,7 +11,9 @@
 	<link rel="icon" href="img/favicon.png" type="image/x-icon" />
 	<script src="https://use.fontawesome.com/228e8d7980.js"></script>
 </head>
-<body>
+<body> 
+	<?=  isset($_SESSION['id']) ? '<a href="index.php?page=logout">Log out</a>' : '' ?> 
+
 	<?= $this->insert('nav') ?> 
 	<?= $this->section('content') ?>
 	<?= $this->insert('footer') ?>

@@ -1,5 +1,6 @@
 {
     "require": {
-        "league/plates": "^3.3"
+        "league/plates": "^3.3",
+        "ircmaxell/password-compat": "^1.0"
     }
 }

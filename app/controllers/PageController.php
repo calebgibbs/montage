@@ -11,7 +11,7 @@ abstract class  PageController{
 	abstract public function buildHTML(); 
 	public function privatePage() { 
 		if(!isset($_SESSION['id'])){ 
-			header('Location: index.php?page=login'); 
+			header('Location: index.php?page=error404'); 
 		}
 	} 
 }

@@ -37,6 +37,25 @@ switch($page){
 		$controller = new LoginController($dbc);	 
 	break; 
 
+	case 'logout':
+		unset($_SESSION['id']);
+		unset($_SESSION['first_name']);
+		unset($_SESSION['last_name']);
+		unset($_SESSION['email']);
+		unset($_SESSION['password']);
+		header('Location: index.php');
+	break;  
+
+	case 'change_password':
+		require 'app/controllers/ChangepwdController.php'; 
+		$controller = new ChangepwdController($dbc);	 
+	break; 
+
+	case 'register':
+		require 'app/controllers/RegisterController.php'; 
+		$controller = new RegisterController($dbc);	 
+	break;
+
 	default:
 		require 'app/controllers/Error404Controller.php';
 		$controller = new Error404Controller();
