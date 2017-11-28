@@ -12,14 +12,10 @@
 	<script src="https://use.fontawesome.com/228e8d7980.js"></script>
 </head>
 <body> 
-	<?=  isset($_SESSION['id']) ? '<a href="index.php?page=logout">Log out</a>' : '' ?> 
-
-	<?= $this->insert('nav') ?> 
+	<?= $this->insert('nav') ?>  
+	<?=  isset($_SESSION['id']) ? $this->insert('sitenav') : '' ?>
 	<?= $this->section('content') ?>
 	<?= $this->insert('footer') ?>
-
-	
-
 	<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script> 
 	<script type="text/javascript" src="js/menu-min.js"></script> 
 	<script type="text/javascript" src="js/animation-min.js"></script>

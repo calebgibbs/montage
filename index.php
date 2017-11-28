@@ -41,8 +41,7 @@ switch($page){
 		unset($_SESSION['id']);
 		unset($_SESSION['first_name']);
 		unset($_SESSION['last_name']);
-		unset($_SESSION['email']);
-		unset($_SESSION['password']);
+		unset($_SESSION['email']); 
 		header('Location: index.php');
 	break;  
 
@@ -54,6 +53,11 @@ switch($page){
 	case 'register':
 		require 'app/controllers/RegisterController.php'; 
 		$controller = new RegisterController($dbc);	 
+	break;
+
+	case 'add_product':
+		require 'app/controllers/AddproductController.php'; 
+		$controller = new AddproductController($dbc);	 
 	break;
 
 	default:

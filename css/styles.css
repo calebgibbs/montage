@@ -62,7 +62,7 @@ nav {
     margin-left: -1em;
     padding: 0;
     height: 100%;
-    margin-bottom: -0.35em;
+    margin-bottom: -0.2em;
     margin-top: -1.21em;
     z-index: 500; }
 
@@ -850,7 +850,7 @@ figure {
 
 #table-chair {
   width: 30%;
-  margin-top: -45.8%;
+  margin-top: -45.3%;
   margin-left: 53.3%; }
 
 #tech {
@@ -952,6 +952,56 @@ figure {
   display: block;
   color: red;
   padding-left: 7px !important; }
+
+#site-nav {
+  background: #A6A6A6;
+  height: 2rem; }
+  #site-nav ul {
+    padding: 0;
+    margin: 0; }
+  #site-nav li {
+    list-style-type: none;
+    display: inline-block; }
+
+#addp {
+  width: 80%;
+  margin: 0 auto; }
+  #addp h1 {
+    color: #424242;
+    font-family: "TradeGothicLight", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  #addp form {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 10%; }
+    #addp form input, #addp form textarea, #addp form select {
+      width: 90%;
+      display: inline-block !important;
+      margin-top: 10%;
+      font-size: 1.3rem;
+      padding: 7px;
+      border-radius: none !important;
+      outline: none;
+      border: none;
+      border-bottom: 0.1rem solid #F3F3F3;
+      transition: 0.3s;
+      background: none; }
+      #addp form input:focus, #addp form textarea:focus, #addp form select:focus {
+        border-bottom: 0.1rem solid #424242; }
+
+.form-input {
+  width: 49%;
+  display: inline-block; }
+
+.img-input {
+  width: 49%;
+  display: inline-block;
+  margin-top: 3%; }
+  .img-input input {
+    margin-top: 2% !important; }
+  .img-input label {
+    margin-top: 20px !important;
+    padding-top: 20px;
+    position: static; }
 
 @keyframes imageload {
   0% {

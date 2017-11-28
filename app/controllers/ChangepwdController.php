@@ -2,7 +2,7 @@
 class ChangepwdController extends PageController { 
 	public function __construct($dbc){ 
 		parent::__construct(); 
-		$this->privatePage();
+		$this->nonActiveAccount();
 		$this->dbc = $dbc; 
 		if (isset($_POST['update'])) {
 			$this->updatePassword();
@@ -32,7 +32,6 @@ class ChangepwdController extends PageController {
 			$id = $_SESSION['id'];
 			$sql = "UPDATE users SET password = '$hash', account_status = 'active' WHERE id = '$id'"; 
 			$this->dbc->query($sql); 
-			die(); 
 			$_SESSION['account_status'] = 'active'; 
 			header('Location: index.php?page=home');
 

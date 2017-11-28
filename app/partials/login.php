@@ -2,7 +2,8 @@
 	$this -> layout('master',[
 		'title'=>'Montage Interiors | Log in', 
 		'desc' => 'montage interiors website staff log in' 
-	]);  
+	]); 
+	$prevPage = $_SERVER['QUERY_STRING'];  
 ?>
 <div class="body"> 
 	<div id="login-outer">

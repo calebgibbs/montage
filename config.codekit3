@@ -16,6 +16,13 @@
 		"oAP": "\/.gitignore",
 		"oF": 0
 		},
+	"\/app\/controllers\/AddproductController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/AddproductController.php",
+		"oF": 0
+		},
 	"\/app\/controllers\/ChangepwdController.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -77,6 +84,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/app\/controllers\/ResultsController.php",
+		"oF": 0
+		},
+	"\/app\/partials\/addproduct.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/addproduct.php",
 		"oF": 0
 		},
 	"\/app\/partials\/changepwd.php": {
@@ -154,6 +168,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/app\/partials\/results.php",
+		"oF": 0
+		},
+	"\/app\/partials\/sitenav.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/sitenav.php",
 		"oF": 0
 		},
 	"\/composer.json": {

@@ -2,7 +2,8 @@
 	$this -> layout('master',[
 		'title'=>'Montage Interiors', 
 		'desc' => 'montage interiors description' 
-	]);  
+	]);   
+	$prevPage = $_SERVER['QUERY_STRING'];
 ?> 
 <div class="body"> 
 	<div class="portfolio">

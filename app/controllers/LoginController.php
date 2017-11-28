@@ -46,8 +46,6 @@ class LoginController extends PageController {
 		if( $result->num_rows == 1 ) {
 			$userData = $result->fetch_assoc();  
 			$passwordResult = password_verify( $_POST['pwd'], $userData['password'] ); 
-   			
-   			// die($userData['password']);
 			if($passwordResult == true) { 
 				$_SESSION['id'] = $userData['id']; 
 				$_SESSION['first_name'] = $userData['first_name'];

@@ -1,0 +1,11 @@
+<?php  
+class AddproductController extends PageController { 
+	public function __construct($dbc){ 
+		parent::__construct(); 
+		$this->dbc = $dbc; 
+		$this->privatePage();
+	}  
+	public function buildHTML(){ 
+		echo $this->plates->render('addproduct');
+	}
+}

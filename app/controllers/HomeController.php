@@ -5,6 +5,6 @@ class HomeController extends PageController {
 		$this->dbc = $dbc;
 	}  
 	public function buildHTML(){ 
-		echo $this->plates->render('home');
+		echo $this->plates->render('home'); 
 	}
 }

@@ -3,6 +3,7 @@ class RegisterController extends PageController {
 	public function __construct($dbc){ 
 		parent::__construct(); 
 		$this->dbc = $dbc; 
+		$this->privatePage();
 		if(isset($_POST['register'])){ 
 			$this->validateRegistration();
 		}
@@ -10,7 +11,6 @@ class RegisterController extends PageController {
 	public function buildHTML(){ 
 		echo $this->plates->render('register', $this->data);
 	} 
-
 	private function validateRegistration(){ 
 		$fname = $_POST['fname']; 
 		$lname = $_POST['lname'];

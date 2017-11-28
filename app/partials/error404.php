@@ -2,7 +2,8 @@
 	$this -> layout('master',[
 		'title'=>'Montage Interiors | Page not found', 
 		'desc' => 'montage interiors page not found' 
-	]);  
+	]);   
+	$prevPage = $_SERVER['QUERY_STRING'];
 ?>
 <div class="body"> 
 	<div id="login-outer" style="text-align: center">
