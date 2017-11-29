@@ -922,7 +922,6 @@ figure {
       border-radius: 0;
       background: rgba(132, 176, 37, 0.8);
       color: #fff;
-      outline: none;
       cursor: pointer;
       transition: 0.3s; }
       #form-box form button:hover {
@@ -1002,6 +1001,25 @@ figure {
     margin-top: 20px !important;
     padding-top: 20px;
     position: static; }
+
+.form-button {
+  padding-top: 5%;
+  margin: 0 auto; }
+  .form-button button {
+    width: 105%;
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: 20%;
+    border: none;
+    border-radius: 0;
+    background: rgba(132, 176, 37, 0.8);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s; }
+    .form-button button:hover {
+      background: #84B025; }
 
 @keyframes imageload {
   0% {

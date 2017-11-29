@@ -8,7 +8,7 @@ $prevPage = $_SERVER['REQUEST_URI'];
 <div class="body">  
 	<div id="addp"> 
 		<h1>Add a new product</h1>
-		<form enctype="multipart/form-data">
+		<form enctype="multipart/form-data" method="post" action="index.php?page=add_product">
 			<div class="form-input">
 				<input type="text" name="title" placeholder="Product Name">
 			</div>
@@ -20,7 +20,7 @@ $prevPage = $_SERVER['REQUEST_URI'];
 			</div> 
 			<div class="form-input"> 
 				<select>
-					<option>Select Category</option>
+					<option style="color: #A6A6A6">Select Category</option>
 					<option value="workstation">Workstation</option> 
 					<option value="storage">Storage</option>
 					<option value="tech_accesories">Tech and Accesories</option> 
@@ -73,6 +73,9 @@ $prevPage = $_SERVER['REQUEST_URI'];
 			<div class="img-input">
 				<label>Image 5</label>
 				<input type="file" name="pic" accept="image/*">
+			</div> 
+			<div class="form-button">
+				<button name="addProduct">Add Product</button>
 			</div>
 		</form>
 	</div>
