@@ -13,6 +13,8 @@ class AddproductController extends PageController {
 	} 
 
 	private function validateForm(){ 
-		$totalErrors = 0;
+		$totalErrors = 0;  
+		
+
 	}
 }

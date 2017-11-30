@@ -16,11 +16,13 @@
 			<h2>Log in</h2>
 			<form method="post" action="index.php?page=login">
 				<div>
-					<input type="email" name="email" placeholder="Email" value="<?= isset($_POST['email']) ? $_POST['email'] : '' ?>">  
+					<input type="email" name="email" class="inputText" required value="<?= isset($_POST['email']) ? $_POST['email'] : '' ?>"> 
+					<span class="floating-label">Email</span> 
 					<?=  isset($emailMessage) ? $emailMessage : '' ?>
 				</div> 
 				<div> 
-					<input class="last-input-lgi" type="password" name="pwd" placeholder="Password"> 
+					<input class="last-input-lgi inputText" type="password" name="pwd" required> 
+					<span class="floating-label">Password</span>
 					<?=  isset($passwordMessage) ? $passwordMessage : '' ?>
 				</div>
 				<div class="login-button">

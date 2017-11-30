@@ -10,17 +10,40 @@ $prevPage = $_SERVER['REQUEST_URI'];
 		<h1>Add a new product</h1>
 		<form enctype="multipart/form-data" method="post" action="index.php?page=add_product">
 			<div class="form-input">
-				<input type="text" name="title" placeholder="Product Name">
+				<input type="text" class="inputText" name="title" required/>
+ 				<span class="floating-label">Product Name</span>
 			</div>
 			<div class="form-input">
-				<input type="text" name="brand" placeholder="Product brand">
+				<input type="text" class="inputText" name="brand" required/>
+ 				<span class="floating-label">Product Brand</span>
+			</div>
+			<!-- <div>
+				<textarea name="desc" class="inputText"></textarea> 
+				<span class="floating-label"  required>Product Brand</span>
+			</div> --> 
+			<div class="form-input">
+				<input type="text" class="inputText" name="bp1" required/>
+ 				<span class="floating-label">Description bullet point 1</span>
 			</div>
 			<div class="form-input">
-				<textarea name="desc" placeholder="Product Description"></textarea>
-			</div> 
+				<input type="text" class="inputText" name="bp2" required/>
+ 				<span class="floating-label">Description bullet point 2</span>
+			</div>
+			<div class="form-input">
+				<input type="text" class="inputText" name="bp3" required/>
+ 				<span class="floating-label">Description bullet point 3</span>
+			</div>
+			<div class="form-input">
+				<input type="text" class="inputText" name="bp4" required/>
+ 				<span class="floating-label">Description bullet point 4</span>
+			</div>
+			<div class="form-input">
+				<input type="text" class="inputText" name="bp5" required/>
+ 				<span class="floating-label">Description bullet point 5</span>
+			</div>  
 			<div class="form-input"> 
 				<select>
-					<option style="color: #A6A6A6">Select Category</option>
+					<option>Select Category</option>
 					<option value="workstation">Workstation</option> 
 					<option value="storage">Storage</option>
 					<option value="tech_accesories">Tech and Accesories</option> 
@@ -32,47 +55,29 @@ $prevPage = $_SERVER['REQUEST_URI'];
 					<option value="other">Other</option>
 				</select> 
 			</div>
-			<div class="form-input">
-				<input type="text" name="bp1" placeholder="Description bullet point 1">
-			</div>
-			<div class="form-input">
-				<input type="text" name="bp2" placeholder="Description bullet point 2">
-			</div>
-			<div class="form-input">
-				<input type="text" name="bp3" placeholder="Description bullet point 3">
-			</div>
-			<div class="form-input">
-				<input type="text" name="bp4" placeholder="Description bullet point 4">
-			</div>
-			<div class="form-input">
-				<input type="text" name="bp5" placeholder="Description bullet point 5">
-			</div>
-			<div class="form-input">
-				<input type="text" name="bp6" placeholder="Description bullet point 6">
-			</div>  
 			<div class="img-input">
 				<label>Main image</label>
-				<input type="file" name="pic" accept="image/*">
+				<input type="file" name="1" accept="image/*">
 			</div>
 			<div class="img-input">
 				<label>Image 1</label>
-				<input type="file" name="pic" accept="image/*">
+				<input type="file" name="2" accept="image/*">
 			</div>
 			<div class="img-input">
 				<label>Image 2</label>
-				<input type="file" name="pic" accept="image/*">
+				<input type="file" name="3" accept="image/*">
 			</div>
 			<div class="img-input">
 				<label>Image 3</label>
-				<input type="file" name="pic" accept="image/*">
+				<input type="file" name="4" accept="image/*">
 			</div>
 			<div class="img-input">
 				<label>Image 4</label>
-				<input type="file" name="pic" accept="image/*">
+				<input type="file" name="5" accept="image/*">
 			</div>
 			<div class="img-input">
 				<label>Image 5</label>
-				<input type="file" name="pic" accept="image/*">
+				<input type="file" name="6" accept="image/*">
 			</div> 
 			<div class="form-button">
 				<button name="addProduct">Add Product</button>

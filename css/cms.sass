@@ -100,11 +100,11 @@
 		font-family: $light
 	form 	
 		width: 90% 
-		margin: 0 auto 
-		padding-bottom: 10% 
+		margin: 0 auto
+		margin-bottom: 5%  
 		input, textarea, select 
 			width: 90%  
-			display: inline-block !important
+			display: block
 			margin-top: 10%   
 			font-size: 1.3rem 
 			padding: 7px 
@@ -113,12 +113,37 @@
 			border: none 
 			border-bottom: 0.1rem solid #F3F3F3 
 			transition: 0.3s  
-			background: none
+			background: none 
 			&:focus 
 				border-bottom: 0.1rem solid $grey 
 .form-input 
-	width: 49% 
+	width: 49%  
 	display: inline-block   
+input
+  &:focus ~ .floating-label, &:not(:focus):valid ~ .floating-label
+    margin-top: -60px
+    margin-bottom: 10px
+    margin-left: 8px
+    font-size: 1rem 
+    color: $grey
+    opacity: 1
+
+.inputText
+  font-size: 14px
+  width: 200px
+  height: 35px 
+
+
+.floating-label
+  position: absolute
+  pointer-events: none
+  margin-left: 10px
+  margin-top: -35px
+  transition: 0.2s ease all 
+  display: block 
+  font-size: 1.3rem 
+  color: #767676
+
 
 .img-input 
 	width: 49% 
@@ -136,12 +161,11 @@
 	// width: 80% 
 	margin: 0 auto
 	button 
-		width: 105% 
+		width: 95% 
 		text-align: center 
 		font-size: 1.3rem 
 		margin: 0 auto 
-		padding: 10px 
-		margin-bottom: 20% 
+		padding: 10px  
 		border: none  
 		border-radius: 0
 		background: rgba($green, 0.8)  
@@ -149,7 +173,7 @@
 		cursor: pointer  
 		transition: 0.3s
 		&:hover 
-			background: $green  
+			background: $green   
 
 
 

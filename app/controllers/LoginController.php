@@ -2,6 +2,7 @@
 class LoginController extends PageController { 
 	public function __construct($dbc){ 
 		parent::__construct(); 
+		$this->loggedOut(); 
 		$this->dbc = $dbc; 
 		if (isset($_POST['login'])) {
 			$this->validateLogin();
