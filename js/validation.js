@@ -1,3 +1,1 @@
-$(document).ready(function(){ 
-	console.log('found');
-});
+document.getElementById("Ptitle").required = false;

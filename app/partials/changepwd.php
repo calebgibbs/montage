@@ -14,7 +14,7 @@
 		</div> 
 		<div id="form-box"> 
 			<h2>Welcome, <?= $_SESSION['first_name'] ?></h2> 
-			<p>Before we get started, you just need to change your password to set up your account</p>
+			<p>We just need to change your password before we get started</p>
 			<form method="post" action="index.php?page=change_password">
 				<div>
 					<input type="password" name="pwd1" class="inputText" required> 

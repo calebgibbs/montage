@@ -1,1 +1,1 @@
-$(document).ready(function(){});
+document.getElementById("Ptitle").required=!1;

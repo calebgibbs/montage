@@ -8,42 +8,70 @@ $prevPage = $_SERVER['REQUEST_URI'];
 <div class="body">  
 	<div id="addp"> 
 		<h1>Add a new product</h1>
-		<form enctype="multipart/form-data" method="post" action="index.php?page=add_product">
+		<form enctype="multipart/form-data" method="post" action="index.php?page=add_product" novalidate>
 			<div class="form-input">
-				<input type="text" class="inputText" name="title" required/>
- 				<span class="floating-label">Product Name</span>
+				<input type="text" class="inputText" name="title" required value="<?= isset($_POST['title']) ? $_POST['title'] : '' ?>"/>
+ 				<span class="floating-label">Product Name  <?=  isset($titleMessage) ? $titleMessage : '' ?></span>
 			</div>
 			<div class="form-input">
-				<input type="text" class="inputText" name="brand" required/>
- 				<span class="floating-label">Product Brand</span>
+				<input type="text" class="inputText" name="brand" required value="<?= isset($_POST['brand']) ? $_POST['brand'] : '' ?>"/>
+ 				<span class="floating-label">Product Brand  <?=  isset($brandMessage) ? $brandMessage : '' ?></span>
 			</div>
-			<!-- <div>
-				<textarea name="desc" class="inputText"></textarea> 
-				<span class="floating-label"  required>Product Brand</span>
-			</div> --> 
+			<div class="form-textarea">
+				<textarea name="desc" required id="prod-desc-ta"><?= isset($_POST['desc']) ? $_POST['desc'] : '' ?></textarea> 
+				<span class="floating-label">Product description  <?=  isset($descMessage) ? $descMessage : '' ?></span>
+			</div> 
 			<div class="form-input">
-				<input type="text" class="inputText" name="bp1" required/>
- 				<span class="floating-label">Description bullet point 1</span>
-			</div>
+				<input type="text" class="inputText" name="bp1" required value="<?= isset($_POST['bp1']) ? $_POST['bp1'] : '' ?>"/>
+ 				<span class="floating-label">Description bullet point 1  <?=  isset($desc1Message) ? $desc1Message : '' ?></span>
+			</div>			
 			<div class="form-input">
-				<input type="text" class="inputText" name="bp2" required/>
- 				<span class="floating-label">Description bullet point 2</span>
-			</div>
-			<div class="form-input">
-				<input type="text" class="inputText" name="bp3" required/>
- 				<span class="floating-label">Description bullet point 3</span>
+				<input type="text" class="inputText" name="bp2" required value="<?= isset($_POST['bp2']) ? $_POST['bp2'] : '' ?>"/>
+ 				<span class="floating-label">Description bullet point 2  <?=  isset($desc2Message) ? $desc2Message : '' ?></span>
 			</div>
 			<div class="form-input">
-				<input type="text" class="inputText" name="bp4" required/>
- 				<span class="floating-label">Description bullet point 4</span>
+				<input type="text" class="inputText" name="bp3" required value="<?= isset($_POST['bp3']) ? $_POST['bp3'] : '' ?>"/>
+ 				<span class="floating-label">Description bullet point 3  <?=  isset($desc3Message) ? $desc3Message : '' ?></span>
 			</div>
 			<div class="form-input">
-				<input type="text" class="inputText" name="bp5" required/>
- 				<span class="floating-label">Description bullet point 5</span>
+				<input type="text" class="inputText" name="bp4" required value="<?= isset($_POST['bp4']) ? $_POST['bp4'] : '' ?>"/>
+ 				<span class="floating-label">Description bullet point 4  <?=  isset($desc4Message) ? $desc4Message : '' ?></span>
+			</div>
+			<div class="form-input">
+				<input type="text" class="inputText" name="bp5" required value="<?= isset($_POST['bp5']) ? $_POST['bp5'] : '' ?>"/>
+ 				<span class="floating-label">Description bullet point 5  <?=  isset($desc5Message) ? $desc5Message : '' ?></span>
 			</div>  
 			<div class="form-input"> 
-				<select>
-					<option>Select Category</option>
+				<select name="category" <?=  isset($selectError) ? $selectError : '' ?>>
+					<?php if(isset($_POST['category'])): ?>  
+						<?php 
+							if ( $_POST['category'] == 'workstation') {
+								$valueName = "Workstation";
+							}elseif ($_POST['category'] == 'storage') {
+								$valueName = "Storage";
+							}elseif ($_POST['category'] == 'tech_accesories') {
+								$valueName = "Tech and Accesories";
+							}elseif ($_POST['category'] == 'table') {
+								$valueName = "Table";
+							}elseif ($_POST['category'] == 'screen') {
+								$valueName = "Screen";
+							}elseif ($_POST['category'] == 'agile_furniture') {
+								$valueName = "Agile furniture";
+							}elseif($_POST['category'] == 'chair'){
+								$valueName = "Chair";
+							}elseif($_POST['category'] == 'joinery_custom'){
+								$valueName = "Joinery and Custom";
+							}elseif($_POST['category'] == 'other'){
+								$valueName = "Other";
+							}else{ 
+								$valueName = "Select category";	
+							}
+						?> 
+					<option value="<?= $_POST['category'] ?>"><?= $valueName ?></option> 
+					<?php endif ?>
+					<?php if(!isset($_POST['category'])): ?>
+					<option value="0">Select Category</option>
+					<?php endif ?>
 					<option value="workstation">Workstation</option> 
 					<option value="storage">Storage</option>
 					<option value="tech_accesories">Tech and Accesories</option> 
@@ -85,3 +113,10 @@ $prevPage = $_SERVER['REQUEST_URI'];
 		</form>
 	</div>
 </div> 
+<!-- <script type="text/javascript">
+//auto expand textarea
+function adjust_textarea(h) {
+    h.style.height = "20px";
+    h.style.height = (h.scrollHeight)+"px";
+}
+</script> -->

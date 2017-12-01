@@ -65,7 +65,11 @@
 		font-size: 2rem 
 	p 
 		text-align: center 
-		margin-bottom: 10% 
+		margin-bottom: 10%  
+		width: 60% 
+		margin: 0 auto 
+		color: $light-grey 
+		font-style: italic
 
 .last-input  
 	margin-bottom: 5% !important  
@@ -83,14 +87,22 @@
 	padding-left: 7px !important 
 
 #site-nav 
-	background: $light-grey 
-	height: 2rem
+	text-align: right   
 	ul 
 		padding: 0 
+		padding-right: 5% 
 		margin: 0 
 	li 
 		list-style-type: none  
 		display: inline-block 
+		padding-right: 25px 
+		font-size: 1.3rem 
+		padding-top: 5px 
+		padding-bottom: 5px
+	a 
+		color: $grey 
+		text-decoration: none 
+		 
 
 #addp  
 	width: 80% 
@@ -102,7 +114,7 @@
 		width: 90% 
 		margin: 0 auto
 		margin-bottom: 5%  
-		input, textarea, select 
+		input 
 			width: 90%  
 			display: block
 			margin-top: 10%   
@@ -115,18 +127,66 @@
 			transition: 0.3s  
 			background: none 
 			&:focus 
-				border-bottom: 0.1rem solid $grey 
+				border-bottom: 0.1rem solid $grey   
+		select 
+			width: 95%  
+			font-size: 1.3rem  
+			border: none 
+			border-bottom: 0.1rem solid #F3F3F3
+			background: none  
+			border-radius: 0 
+			height: 35px 
+			padding: 7px
+			vertical-align: bottom
+			margin-bottom: -2.5%   
+			outline: none
+			option 
+				color: #F3F3F3
+
+.form-textarea 
+	width: 100%  
+	display: block !important
+	textarea
+		display: block  
+		margin-top: 5% 
+		font-size: 1.3rem 
+		padding: 7px 
+		border-radius: none  
+		outline: none  
+		border: none 
+		border-bottom: 0.1rem solid #F3F3F3 
+		transition: 0.1s  
+		background: none  
+		width: 95%  
+		overflow: hidden  
+		position: static
+		resize: none 
+		height: 200px !important
+		&:focus  
+			border-bottom: 0.1rem solid $grey  
+
 .form-input 
 	width: 49%  
 	display: inline-block   
+
 input
   &:focus ~ .floating-label, &:not(:focus):valid ~ .floating-label
     margin-top: -60px
     margin-bottom: 10px
-    margin-left: 8px
+    // margin-left: 8px
     font-size: 1rem 
     color: $grey
-    opacity: 1
+    opacity: 1 
+
+textarea
+  &:focus ~ .floating-label, &:not(:focus):valid ~ .floating-label
+    margin-top: -232px 
+    margin-bottom: 10px
+    font-size: 1rem 
+    color: $grey
+    opacity: 1 
+    position: absolute 
+
 
 .inputText
   font-size: 14px
@@ -175,6 +235,14 @@ input
 		&:hover 
 			background: $green   
 
+.invalid-msg 
+	color: red !important 
+	// font-style: italic 
+	&:before 
+		content: " " 
+
+.select-error 
+	background: rgba( #F06560, 0.5 ) !important
 
 
 
