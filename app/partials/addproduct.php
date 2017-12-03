@@ -7,7 +7,7 @@ $prevPage = $_SERVER['REQUEST_URI'];
 ?>
 <div class="body">  
 	<div id="addp"> 
-		<h1>Add a new product</h1>
+		<h1>Add a new product <?=  isset($h1Message) ? $h1Message : '' ?></h1>
 		<form enctype="multipart/form-data" method="post" action="index.php?page=add_product" novalidate>
 			<div class="form-input">
 				<input type="text" class="inputText" name="title" required value="<?= isset($_POST['title']) ? $_POST['title'] : '' ?>"/>
@@ -83,7 +83,7 @@ $prevPage = $_SERVER['REQUEST_URI'];
 					<option value="other">Other</option>
 				</select> 
 			</div>
-			<div class="img-input">
+			<!-- <div class="img-input">
 				<label>Main image</label>
 				<input type="file" name="1" accept="image/*">
 			</div>
@@ -106,17 +106,10 @@ $prevPage = $_SERVER['REQUEST_URI'];
 			<div class="img-input">
 				<label>Image 5</label>
 				<input type="file" name="6" accept="image/*">
-			</div> 
+			</div> --> 
 			<div class="form-button">
 				<button name="addProduct">Add Product</button>
 			</div>
 		</form>
 	</div>
 </div> 
-<!-- <script type="text/javascript">
-//auto expand textarea
-function adjust_textarea(h) {
-    h.style.height = "20px";
-    h.style.height = (h.scrollHeight)+"px";
-}
-</script> -->

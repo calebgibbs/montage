@@ -4,6 +4,7 @@
 			<li>My account</li>
 			<li>View Products</li>
 			<li><a href="index.php?page=add_product">Add Product</a></li> 
+			<li>Site Maintenance</li>
 		<?php endif; ?> 
 		<?php if($_SESSION['account_status'] == 'not_active' ): ?> 
 			<li><a href="index.php?page=change_password">Activate Account</a></li>

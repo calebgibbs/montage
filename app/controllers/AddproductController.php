@@ -83,6 +83,34 @@ class AddproductController extends PageController {
 
 	} 
 	private function processFrom(){ 
-		
+		$title = $this->dbc->real_escape_string(trim($_POST['title']));  
+		$brand = $this->dbc->real_escape_string(trim($_POST['brand']));
+		$mainDesc = $this->dbc->real_escape_string(trim($_POST['desc']));  
+		$desc1 = $this->dbc->real_escape_string(trim($_POST['bp1']));
+		$desc2 = $this->dbc->real_escape_string(trim($_POST['bp2']));
+		$desc3 = $this->dbc->real_escape_string(trim($_POST['bp3']));
+		$desc4 = $this->dbc->real_escape_string(trim($_POST['bp4']));
+		$desc5 = $this->dbc->real_escape_string(trim($_POST['bp5']));
+		$category = $_POST['category']; 
+
+		$sql = "INSERT INTO products(title, brand, main_desc, desc_1, desc_2, desc_3, desc_4, desc_5, category) 
+				VALUES ('$title', '$brand', '$mainDesc', '$desc1', '$desc2', '$desc3', '$desc4', '$desc5', '$category')"; 
+		$this->dbc->query($sql); 
+
+		if($this->dbc->affected_rows) {
+				$sql = "SELECT id FROM products WHERE title = '$title'"; 
+				$result = $this->dbc->query($sql);  
+				$productID = $result->fetch_assoc(); 
+				
+				//take prodcutId and upload the images to the image database relating to that id  
+ 				
+ 				//temp success message: (to be taken to new product page once built)  
+
+ 				$_POST = array(); 
+ 				$this->data['h1Message'] = '<span class="invalid-msg">'.$title.' was succesfully added to the database</span>'; //temp 
+
+		}else{ 
+			$this->data['h1Message'] = '<span class="invalid-msg">Sorry, something went wrong. Please try again later</span>';
+		}
 	}
 }

@@ -960,7 +960,7 @@ figure {
   text-align: right; }
   #site-nav ul {
     padding: 0;
-    padding-right: 5%;
+    padding-right: 5em;
     margin: 0; }
   #site-nav li {
     list-style-type: none;
