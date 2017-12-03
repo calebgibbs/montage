@@ -22,10 +22,30 @@ switch($page){
 		$controller = new ProductsController($dbc);	 
 	break;  
 
-	case 'product':
-		require 'app/controllers/ProductController.php'; 
-		$controller = new ProductController($dbc);	 
+	case 'contact_info':
+		require 'app/controllers/ContactInfoController.php'; 
+		$controller = new ContactInfoController($dbc);	 
+	break;  
+
+	case 'my_account':
+		require 'app/controllers/MyAccountController.php'; 
+		$controller = new MyAccountController($dbc);	 
+	break;
+
+	case 'manage_accounts':
+		require 'app/controllers/ManageAccountsController.php'; 
+		$controller = new ManageAccountsController($dbc);	 
 	break; 
+
+	case 'nav_links':
+		require 'app/controllers/NavLinksController.php'; 
+		$controller = new NavLinksController($dbc);	 
+	break; 
+
+	case 'manage_products':
+		require 'app/controllers/ManageProductsController.php'; 
+		$controller = new ManageProductsController($dbc);	 
+	break;
 
 	case 'results':
 		require 'app/controllers/ResultsController.php'; 
@@ -44,6 +64,11 @@ switch($page){
 		unset($_SESSION['email']); 
 		header('Location: index.php');
 	break;  
+
+	case 'contact_info':
+		require 'app/controllers/ChangepwdController.php'; 
+		$controller = new ChangepwdController($dbc);	 
+	break;
 
 	case 'change_password':
 		require 'app/controllers/ChangepwdController.php'; 

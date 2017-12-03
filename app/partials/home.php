@@ -15,7 +15,7 @@
 	</div>
 	<div class="about-us">
 		<img src="img/triangles/about.png" class="category about"> 
-		<span>About us</span>
+		<span>Our story</span>
 	</div> 
 	<div class="statement2 cf">
 		<span>Monage Interiors beleives <br>innovation is the key to <br>innovation</span>
@@ -33,7 +33,4 @@
 	<div class="bottom-tri">
 		<img src="img/triangles/bottom.png">
 	</div> 
-	<div class="statement3">
-		<h2><span>Black</span><br>is the new <br> black</h2>
-	</div>
 </div>

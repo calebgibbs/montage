@@ -10,12 +10,14 @@ abstract class  PageController{
 	} 
 	abstract public function buildHTML(); 
 	public function privatePage() { 
-		if(!isset($_SESSION['id']) || $_SESSION['account_status'] == 'not_active' ){ 
+		if(!isset($_SESSION['id'])){ 
 			header('Location: index.php?page=error404'); 
+		}elseif($_SESSION['account_status'] == 'not_active'){ 
+			header('Location: index.php?page=change_password');	
 		}
 	} 
 	public function nonActiveAccount(){ 
-		if ($_SESSION['account_status'] !=  'not_active') {
+		if ($_SESSION['account_status'] != 'not_active') {
 			header('Location: index.php?page=error404'); 
 		}
 	}  

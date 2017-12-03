@@ -956,6 +956,11 @@ figure {
   color: red;
   padding-left: 7px !important; }
 
+.reg-p {
+  margin-top: 5% !important;
+  margin-bottom: 5% !important;
+  width: 90% !important; }
+
 #site-nav {
   text-align: right; }
   #site-nav ul {
@@ -968,7 +973,19 @@ figure {
     padding-right: 25px;
     font-size: 1.3rem;
     padding-top: 5px;
-    padding-bottom: 5px; }
+    padding-bottom: 5px;
+    vertical-align: top; }
+    #site-nav li:hover ul {
+      display: block; }
+    #site-nav li ul {
+      text-align: left;
+      padding: 0;
+      margin: 0;
+      display: none;
+      z-index: 980977 !important;
+      position: absolute; }
+    #site-nav li li {
+      display: block; }
   #site-nav a {
     color: #424242;
     text-decoration: none; }

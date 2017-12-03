@@ -32,7 +32,7 @@
 					<?=  isset($email2Message) ? $email2Message : '' ?>
 				</div> 
 				<div> 
-					<p>Password will be the users email address for thier first log in</p>
+					<p class="reg-p">The password will be the users email address for the first time they log in</p>
 				</div>
 				<div>
 					<button name="register">Register User</button>

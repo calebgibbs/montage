@@ -107,7 +107,7 @@ class AddproductController extends PageController {
  				//temp success message: (to be taken to new product page once built)  
 
  				$_POST = array(); 
- 				$this->data['h1Message'] = '<span class="invalid-msg">'.$title.' was succesfully added to the database</span>'; //temp 
+ 				$this->data['h1Message'] = '<span><i>'.$title.' was succesfully added to the database</i></span>'; //temp 
 
 		}else{ 
 			$this->data['h1Message'] = '<span class="invalid-msg">Sorry, something went wrong. Please try again later</span>';

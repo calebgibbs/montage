@@ -30,6 +30,13 @@
 		"oAP": "\/app\/controllers\/ChangepwdController.php",
 		"oF": 0
 		},
+	"\/app\/controllers\/ContactInfoController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/ContactInfoController.php",
+		"oF": 0
+		},
 	"\/app\/controllers\/Error404Controller.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -49,6 +56,34 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/app\/controllers\/LoginController.php",
+		"oF": 0
+		},
+	"\/app\/controllers\/ManageAccountsController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/ManageAccountsController.php",
+		"oF": 0
+		},
+	"\/app\/controllers\/ManageProductsController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/ManageProductsController.php",
+		"oF": 0
+		},
+	"\/app\/controllers\/MyAccountController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/MyAccountController.php",
+		"oF": 0
+		},
+	"\/app\/controllers\/NavLinksController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/NavLinksController.php",
 		"oF": 0
 		},
 	"\/app\/controllers\/PageController.php": {
@@ -100,6 +135,13 @@
 		"oAP": "\/app\/partials\/changepwd.php",
 		"oF": 0
 		},
+	"\/app\/partials\/contactinfo.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/contactinfo.php",
+		"oF": 0
+		},
 	"\/app\/partials\/error404.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -128,6 +170,20 @@
 		"oAP": "\/app\/partials\/login.php",
 		"oF": 0
 		},
+	"\/app\/partials\/manageaccounts.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/manageaccounts.php",
+		"oF": 0
+		},
+	"\/app\/partials\/manageproducts.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/manageproducts.php",
+		"oF": 0
+		},
 	"\/app\/partials\/master.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -135,11 +191,25 @@
 		"oAP": "\/app\/partials\/master.php",
 		"oF": 0
 		},
+	"\/app\/partials\/myaccount.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/myaccount.php",
+		"oF": 0
+		},
 	"\/app\/partials\/nav.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/app\/partials\/nav.php",
+		"oF": 0
+		},
+	"\/app\/partials\/navlinks.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/navlinks.php",
 		"oF": 0
 		},
 	"\/app\/partials\/product.php": {
