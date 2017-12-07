@@ -4,7 +4,7 @@
 			<li class="settings-drop-t">Settings
 				<ul>
 					<li class="settings-drop-l"><a href="index.php?page=contact_info">Contact information</a></li>
-					<li class="settings-drop-l"><a href="index.php?page=my_account">My account</a></li>
+					<li class="settings-drop-l"><a href="index.php?page=my_account">My details</a></li>
 					<li class="settings-drop-l"><a href="index.php?page=manage_accounts">Manage accounts</a></li>
 					<li class="settings-drop-l"><a href="index.php?page=register">Register account</a></li>
 					<li class="settings-drop-l"><a href="index.php?page=nav_links">Navigation links</a></li>
@@ -20,6 +20,6 @@
 		<?php if($_SESSION['account_status'] == 'not_active' ): ?> 
 			<li><a href="index.php?page=change_password">Activate Account</a></li>
 		<?php endif; ?> 
-		<li><a href="index.php?page=logout">Log out, <?= $_SESSION['first_name']; ?></a></li>
+		<li><a href="index.php?page=logout">Log out</a></li>
 	</ul>
 </div>

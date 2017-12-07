@@ -51,11 +51,4 @@
 		</figure>
 		
 	</section> 
-
-	<div class="download-btn">
-		<div class="download-text"><h3>Download images</h3></div>
-		<div class="download-img">
-			<img src="img/triangles/download.png">
-		</div> 
-	</div> 
 </div>

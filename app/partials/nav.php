@@ -1,5 +1,5 @@
 <nav id="navigation">
-	<a href="index.php?page=home"><img src="img/logo.png"></a>  	
+	<a href="index.php?page=home"><img src="img/logo.png" alt="Montage interiors logo"></a>  	
 	<div id="menu"> 
 		<ul> 
 			<li class="search"><input type="text" name="search" id="search-feild" placeholder="Search"><button class="search-button"><i class="fa fa-search search-btn" aria-hidden="true"></i></button></li>

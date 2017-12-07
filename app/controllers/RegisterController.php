@@ -13,18 +13,12 @@ class RegisterController extends PageController {
 	} 
 	private function validateRegistration(){ 
 		$fname = $_POST['fname']; 
-		$lname = $_POST['lname'];
 		$email = $_POST['email'];
 		$email2 = $_POST['email2']; 
 		$totalErrors = 0; 
 
 		if( $fname == '' ){ 
 			$this->data['fnameMessage'] = '<span class="error-message">Please enter users first name</span>';
-			$totalErrors++;  
-		} 
-
-		if( $lname == '' ){ 
-			$this->data['lnameMessage'] = '<span class="error-message">Please enter users last name</span>';
 			$totalErrors++;  
 		} 
 		if( $email == '' ){ 
@@ -59,17 +53,19 @@ class RegisterController extends PageController {
 	} 
 
 	private function processRegistration(){ 
-		$filteredFirstName = $this->dbc->real_escape_string( ucfirst($_POST['fname']) ); 
-		$filteredLastName = $this->dbc->real_escape_string( ucfirst($_POST['lname']) );	
+		$filteredFirstName = $this->dbc->real_escape_string( ucfirst($_POST['fname']) ); 	
 		$filteredEmail = $this->dbc->real_escape_string( lcfirst($_POST['email']) );
 		$hash = password_hash($_POST['email2'], PASSWORD_BCRYPT); 
 
-		$sql = "INSERT INTO users(first_name, last_name, email, password, account_status)
-				VALUES('$filteredFirstName','$filteredLastName','$filteredEmail','$hash','not_active')"; 
-		$this->dbc->query($sql); 
+		$sql = "INSERT INTO users(first_name, email, password, account_status)
+				VALUES('$filteredFirstName','$filteredEmail','$hash','not_active')"; 
+		$this->dbc->query($sql);  
+		// echo "<pre>";
+		// print_r($sql); 
+		// echo "</pre>";
 
 		if($this->dbc->affected_rows) { 
-			header('Location: index.php?page=home');
+			header('Location: index.php?page=manage_accounts');
 			}else { 
 				die('error');
 			}   

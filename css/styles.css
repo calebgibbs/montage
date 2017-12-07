@@ -529,7 +529,8 @@ nav {
   background: #424242;
   color: #fff;
   border-top: solid #177c7e 2rem;
-  font-family: "TradeGothicLight", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "TradeGothicLight", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  vertical-align: bottom; }
 
 .hf {
   margin-top: -0.35rem; }
@@ -1122,6 +1123,58 @@ textarea:focus ~ .floating-label, textarea:not(:focus):valid ~ .floating-label {
 .select-error {
   background: rgba(240, 101, 96, 0.5) !important; }
 
+#my-account {
+  width: 80%;
+  margin: 0 auto; }
+
+.my-account-left {
+  width: calc( 98% / 2); }
+  .my-account-left form input {
+    width: 100%;
+    margin-top: 5%;
+    border: none;
+    border-bottom: 0.1rem solid #F3F3F3;
+    padding-top: 3%;
+    outline: none;
+    transition: 0.3s; }
+    .my-account-left form input:focus {
+      border-bottom: 0.1rem solid #424242; }
+  .my-account-left form button {
+    width: 15%;
+    margin-top: 2%;
+    background: rgba(132, 176, 37, 0.8);
+    color: #ffffff;
+    padding: 10px;
+    outline: none;
+    transition: 0.2s; }
+    .my-account-left form button:hover {
+      background: #84B025; }
+
+.inner {
+  width: 80%;
+  margin: 0 auto; }
+  .inner table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 0 auto; }
+  .inner th, .inner td {
+    border: 1px solid #000;
+    width: calc(100% / 3);
+    padding: 10px; }
+    .inner th button, .inner td button {
+      float: right;
+      border-radius: 2px;
+      transition: 0.2s;
+      background: rgba(132, 176, 37, 0.8);
+      color: #fff;
+      border: none;
+      padding: 8px;
+      font-style: bold; }
+      .inner th button:hover, .inner td button:hover {
+        background: #84B025; }
+  .inner tr:nth-child(even) {
+    background: #f2f2f2; }
+
 @keyframes imageload {
   0% {
     opacity: 0;
@@ -1141,7 +1194,8 @@ body {
   overflow-x: hidden; }
 
 .body {
-  z-index: 3 !important; }
+  z-index: 3 !important;
+  min-height: 62vh; }
 
 .site-info {
   display: none; }

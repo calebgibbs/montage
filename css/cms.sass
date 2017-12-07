@@ -262,7 +262,62 @@ textarea
 		content: " " 
 
 .select-error 
-	background: rgba( #F06560, 0.5 ) !important
+	background: rgba( #F06560, 0.5 ) !important  
+
+#my-account 
+	width: 80% 
+	margin: 0 auto  
+.my-account-left
+	width: calc( 98% / 2 ) 
+	form 
+		input 
+			width: 100% 
+			margin-top: 5%  
+			border: none 
+			border-bottom: 0.1rem solid #F3F3F3 
+			padding-top: 3% 
+			outline: none 
+			transition: 0.3s
+			&:focus 
+				border-bottom: 0.1rem solid $grey 
+		button 
+			width: 15% 
+			margin-top: 2% 
+			// float: right 
+			background: rgba( $green, 0.8 ) 
+			color: #ffffff 
+			padding: 10px 
+			outline: none   
+			transition: 0.2s
+			&:hover 
+				background: $green 
+
+.inner  
+	width: 80% 
+	margin: 0 auto  
+	table  
+		border-collapse: collapse 
+		width: 90%  
+		margin: 0 auto
+	th, td  
+		border: 1px solid #000 
+		width: calc(100% / 3) 
+		padding: 10px 
+		button 
+			float: right  
+			border-radius: 2px 
+			transition: 0.2s
+			background: rgba($green, 0.8) 
+			color: #fff  
+			border: none 
+			padding: 8px 
+			font-style: bold
+			&:hover 
+				background: $green
+	tr 
+		&:nth-child(even) 
+			background: #f2f2f2
+
 
 
 

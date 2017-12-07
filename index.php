@@ -60,7 +60,6 @@ switch($page){
 	case 'logout':
 		unset($_SESSION['id']);
 		unset($_SESSION['first_name']);
-		unset($_SESSION['last_name']);
 		unset($_SESSION['email']); 
 		header('Location: index.php');
 	break;  
