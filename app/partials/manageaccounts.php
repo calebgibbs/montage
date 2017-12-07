@@ -36,6 +36,7 @@ $prevPage = $_SERVER['REQUEST_URI'];
 			<tr>
 				<td><?= $user['first_name'] ?></td>
 				<td><?= $user['email'] ?></td> 
+				<td></td>
 			</tr> 
 			<?php endif ?>
 			<?php endforeach ?>

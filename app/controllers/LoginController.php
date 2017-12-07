@@ -40,11 +40,12 @@ class LoginController extends PageController {
 
 		$sql = "SELECT id, first_name, email, password, account_status 
 				FROM users 
-				WHERE email = '$filteredEmail'"; 
+				WHERE email = '$filteredEmail'";  
 
+		$result = $this->dbc->query($sql);
 		if( $result->num_rows == 1 ) {
 			$userData = $result->fetch_assoc();  
-			$passwordResult = password_verify( $_POST['pwd'], $userData['password'] ); 
+			$passwordResult = password_verify( $_POST['pwd'], $userData['password'] );
 			if($passwordResult == true) { 
 				$_SESSION['id'] = $userData['id']; 
 				$_SESSION['first_name'] = $userData['first_name']; 

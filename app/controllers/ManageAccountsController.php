@@ -26,13 +26,15 @@ class ManageAccountsController extends PageController {
 	private function resetUserPassword(){ 
 		$userId = $_POST['resetPassword']; 
 		$sql = "SELECT email FROM users WHERE id = '$userId'"; 
-		$result = $this->dbc->query($sql);
-		$result->fetch_assoc();  
-		$userName = $result['user_name'];  
-		die($email);
-		$passowrdReset = password_hash($result['email'], PASSWORD_BCRYPT); 
+		$result = $this->dbc->query($sql);  
+		// $userName = $result['user_name'];
+		$userData = $result->fetch_assoc();   
+		$_SESSION['save'] = $userData['email']; 
+		// die($_SESSION['save']);
+		$passowrdReset = password_hash($_SESSION['email'], PASSWORD_BCRYPT); 
 		$sql = "UPDATE users SET password = '$passowrdReset', account_status = 'not_active' WHERE id = '$userId'"; 
 		$this->dbc->query($sql);
+		unset($_SESSION['save']);
 
 	}
 
