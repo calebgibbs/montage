@@ -1,18 +1,18 @@
-@font-face 
-	font-family: "TradeGothicStd" 
-	src: url('../fonts/TradeGothicLTStd.otf') 
-@font-face 
-	font-family: "TradeGothicLight" 
-	src: url('../fonts/TradeGothicLTStd-Light.otf') 
-@font-face 
-	font-family: "TradeGothicBold" 
-	src: url('../fonts/TradeGothicLTStd-BoldExt.otf') 
-@font-face 
-	font-family: "TradeGothicItalic" 
-	src: url('../fonts/TradeGothicLTStd-Cn18Obl.otf') 
-@font-face 
-	font-family: "TradeGothicBI" 
-	src: url('../fonts/TradeGothicLTStd-BoldObl.otf') 
+// @font-face 
+// 	font-family: "TradeGothicStd" 
+// 	src: url('../fonts/TradeGothicLTStd.otf') 
+// @font-face 
+// 	font-family: "TradeGothicLight" 
+// 	src: url('../fonts/TradeGothicLTStd-Light.otf') 
+// @font-face 
+// 	font-family: "TradeGothicBold" 
+// 	src: url('../fonts/TradeGothicLTStd-BoldExt.otf') 
+// @font-face 
+// 	font-family: "TradeGothicItalic" 
+// 	src: url('../fonts/TradeGothicLTStd-Cn18Obl.otf') 
+// @font-face 
+// 	font-family: "TradeGothicBI" 
+// 	src: url('../fonts/TradeGothicLTStd-BoldObl.otf') 
 
 @mixin mobile 
 	@media screen and(min-width: 320px) and(max-width: 767px)
@@ -33,21 +33,21 @@
 	@media screen and (max-width: 1200px) 
 		@content
 
-$normal: "TradeGothicStd", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif 
-$light: "TradeGothicLight", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif 
-$bold: "TradeGothicBold", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif
-$italic: "TradeGothicItalic", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif
-$bold-italic: "TradeGothicBI", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif
-
+$normal: Arial, "Helvetica Neue", Helvetica, sans-serif 
+$light: Arial, "Helvetica Neue", Helvetica, sans-serif 
+$bold: Arial, "Helvetica Neue", Helvetica, sans-serif
+$italic: Arial, "Helvetica Neue", Helvetica, sans-serif
+$bold-italic: Arial, "Helvetica Neue", Helvetica, sans-serif
 html
 	margin: 0 
-	padding: 0
+	padding: 0 
+	background: $grey
 
 body 
 	margin: 0 
 	padding: 0 
-	font-family: $normal 
-
+	font-family: $normal  
+	background: #fff 
 .cf 
 	&:before, 
 	&:after 

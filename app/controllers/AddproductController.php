@@ -107,6 +107,7 @@ class AddproductController extends PageController {
  				//temp success message: (to be taken to new product page once built)  
 
  				$_POST = array(); 
+ 				header("Location: ". $_SERVER['REQUEST_URI']."#leaveAcomment" ); //temp fix
  				$this->data['h1Message'] = '<span><i>'.$title.' was succesfully added to the database</i></span>'; //temp 
 
 		}else{ 

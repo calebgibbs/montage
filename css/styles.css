@@ -1,31 +1,13 @@
-@font-face {
-  font-family: "TradeGothicStd";
-  src: url("../fonts/TradeGothicLTStd.otf"); }
-
-@font-face {
-  font-family: "TradeGothicLight";
-  src: url("../fonts/TradeGothicLTStd-Light.otf"); }
-
-@font-face {
-  font-family: "TradeGothicBold";
-  src: url("../fonts/TradeGothicLTStd-BoldExt.otf"); }
-
-@font-face {
-  font-family: "TradeGothicItalic";
-  src: url("../fonts/TradeGothicLTStd-Cn18Obl.otf"); }
-
-@font-face {
-  font-family: "TradeGothicBI";
-  src: url("../fonts/TradeGothicLTStd-BoldObl.otf"); }
-
 html {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  background: #424242; }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "TradeGothicStd", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background: #fff; }
 
 .cf:before, .cf:after {
   content: "";
@@ -38,7 +20,7 @@ nav {
   background: #424242;
   display: inline-block;
   width: 100%;
-  border-top: 1.21em solid #fff; }
+  height: 7rem; }
   nav a {
     color: #fff;
     text-decoration: none;
@@ -55,23 +37,22 @@ nav {
   nav ul {
     display: inline-block;
     float: right;
-    margin-top: 4.7em;
-    margin-right: 5em;
+    margin-top: 4em;
+    margin-right: 3em;
     position: static; }
   nav img {
     margin-left: -1em;
     padding: 0;
-    height: 100%;
-    margin-bottom: -0.2em;
-    margin-top: -1.21em;
-    z-index: 500; }
+    height: 7rem; }
 
 #menu {
   display: inline-block;
   float: right; }
 
 .main-menu {
-  font-size: 20pt; }
+  font-size: 1.5rem;
+  font-weight: normal;
+  position: static; }
 
 .more-items {
   display: none; }
@@ -126,9 +107,9 @@ nav {
   .nav-col li {
     display: block;
     font-size: 1rem;
-    font-family: "TradeGothicLight", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; }
   .nav-col h4 {
-    font-family: "TradeGothicBold", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 7px;
@@ -139,35 +120,27 @@ nav {
     font-size: 0.5rem; } }
 
 .search {
-  color: #fff;
   position: absolute;
-  margin-top: -3rem;
-  margin-left: 7.5rem;
-  width: 23rem; }
-  .search button {
-    color: #fff;
-    background: #424242;
-    border: 0;
-    font-size: 1.5rem;
-    position: absolute;
-    outline: none;
-    cursor: pointer;
-    right: 0; }
+  margin-top: -4.5rem !important;
+  float: right;
+  right: 0;
+  padding-right: 3.6rem; }
   .search input {
-    background: none;
-    color: #fff;
-    font-size: 15pt;
-    padding: 3px;
-    border: 0;
-    width: 20.5rem;
+    width: 15rem;
+    padding: 5px;
+    font-size: 1.1rem;
     outline: none;
-    width: 0%;
-    transition: width 0.4s cubic-bezier(0, 0.795, 0, 1);
-    right: 0 !important;
-    position: absolute; }
-    .search input:focus {
-      width: 20.5rem;
-      border-bottom: 1px solid #A6A6A6; }
+    border: none;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2); }
+  .search button {
+    background: none;
+    outline: none;
+    font-size: 1.5rem;
+    border: none;
+    position: absolute;
+    margin-left: -2.1rem;
+    cursor: pointer; }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .menu-button {
@@ -202,8 +175,7 @@ nav {
     margin-left: 50%;
     top: 5.1em;
     padding-bottom: 0.1rem;
-    display: none;
-    padding-top: 1em; }
+    display: none; }
     #menu ul {
       float: left;
       padding: 0;
@@ -347,6 +319,25 @@ nav {
   .search button {
     color: #ffffff !important; } }
 
+#diamond-narrow {
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-bottom: 12px solid #fff;
+  position: relative;
+  top: -8px;
+  display: inline-block !important;
+  left: -12px; }
+  #diamond-narrow:after {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 12px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top: 12px solid #fff; }
+
 .nav-icon {
   height: 30px;
   width: 50px;
@@ -409,7 +400,7 @@ nav {
     text-align: center;
     float: left;
     color: #fff;
-    font-family: "TradeGothicLight", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; }
 
 .statement1 {
   position: relative;
@@ -420,7 +411,7 @@ nav {
   text-transform: uppercase;
   color: #424242; }
   .statement1 span {
-    font-family: "TradeGothicBold", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 6rem; }
 
 .about-us {
@@ -437,7 +428,7 @@ nav {
     float: left;
     margin-top: -13.5rem;
     margin-left: 7rem;
-    font-family: "TradeGothicLight", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     color: #fff; }
 
 .statement2 {
@@ -484,7 +475,7 @@ nav {
     margin-left: -22rem;
     margin-top: 5.5rem;
     color: #fff;
-    font-family: "TradeGothicLight", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     letter-spacing: 2px; }
 
 .bottom-tri {
@@ -505,7 +496,7 @@ nav {
   vertical-align: top;
   margin-bottom: -7rem; }
   .statement3 span {
-    font-family: "TradeGothicBold", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 6rem; }
 
 .category {
@@ -529,7 +520,7 @@ nav {
   background: #424242;
   color: #fff;
   border-top: solid #177c7e 2rem;
-  font-family: "TradeGothicLight", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   vertical-align: bottom; }
 
 .hf {
@@ -548,7 +539,7 @@ nav {
   -webkit-transform: scale(1) rotate(-90deg) translate(0px, 0px);
   padding: 0;
   font-size: 1.3rem;
-  font-family: "TradeGothicBold", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   max-width: 5rem; }
 
 .f-contact {
@@ -700,7 +691,7 @@ figure {
     font-size: 3.3rem; }
     .product-text h3 span {
       font-weight: bold;
-      font-family: "TradeGothicBold", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
       font-size: 4.3rem; }
   .product-text ul {
     font-size: 1.5rem; }
@@ -931,7 +922,7 @@ figure {
     text-align: center;
     margin-top: 20%;
     position: relative;
-    font-family: "TradeGothicLight", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     color: #424242;
     font-size: 2rem; }
   #form-box p {
@@ -967,7 +958,8 @@ figure {
   #site-nav ul {
     padding: 0;
     padding-right: 5em;
-    margin: 0; }
+    margin: 0;
+    background: #fff; }
   #site-nav li {
     list-style-type: none;
     display: inline-block;
@@ -975,18 +967,22 @@ figure {
     font-size: 1.3rem;
     padding-top: 5px;
     padding-bottom: 5px;
-    vertical-align: top; }
+    vertical-align: top;
+    background: #fff !important; }
     #site-nav li:hover ul {
-      display: block; }
+      display: block;
+      background: #fff !important; }
     #site-nav li ul {
       text-align: left;
       padding: 0;
       margin: 0;
       display: none;
       z-index: 980977 !important;
-      position: absolute; }
+      position: absolute;
+      background: #fff !important; }
     #site-nav li li {
-      display: block; }
+      display: block;
+      background: #fff !important; }
   #site-nav a {
     color: #424242;
     text-decoration: none; }
@@ -996,7 +992,7 @@ figure {
   margin: 0 auto; }
   #addp h1 {
     color: #424242;
-    font-family: "TradeGothicLight", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; }
   #addp form {
     width: 90%;
     margin: 0 auto;

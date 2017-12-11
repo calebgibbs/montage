@@ -496,6 +496,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/logo1.png": {
+		"ft": 32768,
+		"iS": 25690,
+		"oA": 0,
+		"oAP": "\/img\/logo1.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/triangles\/about.png": {
 		"ft": 32768,
 		"iS": 103390,

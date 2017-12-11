@@ -1,8 +1,7 @@
 <nav id="navigation">
-	<a href="index.php?page=home"><img src="img/logo.png" alt="Montage interiors logo"></a>  	
+	<a href="index.php?page=home"><img src="img/logo1.png" alt="Montage interiors logo"></a>  	
 	<div id="menu"> 
 		<ul> 
-			<li class="search"><input type="text" name="search" id="search-feild" placeholder="Search"><button class="search-button"><i class="fa fa-search search-btn" aria-hidden="true"></i></button></li>
 			<li class="main-menu menu-item"><a href="#" class="main-menu">Our Story</a></li>
 			<li class="main-menu">
 				<a href="index.php?page=products" class="main-menu drop-trigger">Products<span class="more-items pro-arrow"><i class="fa fa-chevron-down" aria-hidden="true"></i></span></a>
@@ -125,6 +124,8 @@
 			<li class="main-menu menu-item"><a href="#" class="main-menu">Portfolio</a></li> 
 			<li class="main-menu menu-item"><a href="#" class="main-menu">Downloads</a></li>
 			<li class="main-menu menu-item contact"><a href="index.php?page=login" class="main-menu">Contact</a></li> 
+			<li class="main-menu menu-item"><a href="#">Favourites</a> <div id="diamond-narrow"></div></li>
+			<li class="search"><input type="text" name="search" id="search-feild"><button class="search-button"><i class="fa fa-search search-btn" aria-hidden="true"></i></button></li> 
 		</ul>
 	</div> 
 	<span>
