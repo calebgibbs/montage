@@ -12,13 +12,16 @@
 	<script src="https://use.fontawesome.com/228e8d7980.js"></script>
 </head>
 <body> 
-	<?= $this->insert('nav') ?>  
-	<?=  isset($_SESSION['id']) ? $this->insert('sitenav') : '' ?>
-	<?= $this->section('content') ?>
-	<!-- <?= $this->insert('footer') ?> -->
+	<?= $this->insert('favourites') ?>
+	<div id="main-page" class="pause-page">
+		<?= $this->insert('nav') ?>  
+		<?=  isset($_SESSION['id']) ? $this->insert('sitenav') : '' ?>
+		<?= $this->section('content') ?>
+		<?= $this->insert('footer') ?> 
+	</div>
 	<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script> 
 	<script type="text/javascript" src="js/menu.js"></script> 
-	<script type="text/javascript" src="js/animation-min.js"></script>
+	<script type="text/javascript" src="js/animation.js"></script>
 	<?php if($page == 'add_product' ): ?>
 	<script type="text/javascript" src="js/validation.js"></script> 
 	<?php endif; ?>

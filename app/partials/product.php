@@ -3,7 +3,6 @@
 		'title'=>'Montage Interiors | Product', 
 		'desc' => 'montage interiors products' 
 	]);   
-	$prevPage = $_SERVER['QUERY_STRING'];
 ?>
 <div class="body"> 
 	<div id="product-infos">

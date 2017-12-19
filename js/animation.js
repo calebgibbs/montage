@@ -1,13 +1,10 @@
 $(document).ready(function(){
-	$('.category').each(function(i){
-		setTimeout(function(){
-			$('.category').eq(i).addClass('category-in')
-		}, 300 * i);
+	$('.fav-tog').click(function(){
+		$('#favourites').addClass('open-fav'); 
+		$('#main-page').addClass('pause-page');
 	}); 
-
-	$('.diamond').each(function(i){
-		setTimeout(function(){
-			$('.diamond').eq(i).addClass('diamond-in')
-		}, 300 * i);
+	$('.body').click(function(){
+		$('#main-page').removeClass('pause-page');
+		$('#favourites').removeClass('open-fav');
 	});
 })

@@ -2,10 +2,11 @@
 	<a href="index.php?page=home"><img src="img/logo1.png" alt="Montage interiors logo"></a>  	
 	<div id="menu"> 
 		<ul> 
-			<li class="main-menu menu-item"><a href="#" class="main-menu"><span class="desktop-link">Our Story</span><span class="tablet-link">About</span></a></li>
+			<li class="search mobile-link"><input type="text" name="search"><button class="search-button"><i class="fa fa-search search-btn" aria-hidden="true"></i></button></li>
+			<li class="main-menu menu-item"><a href="#" class="main-menu"><span class="desktop-link">Our Story</span><span class="mobile-link">Our Story</span><span class="tablet-link">About</span></a></li>
 			<li class="main-menu">
 				<a href="index.php?page=products" class="main-menu drop-button tablet-link">Products<span class="more-items pro-arrow"><i class="fa fa-chevron-down" aria-hidden="true"></i></span></a>
-				<a href="index.php?page=products" class="main-menu drop-trigger desktop-link">Products</a>
+				<a href="index.php?page=products" class="main-menu drop-trigger desktop-link hide-mobile">Products</a>
 				<div id="drop-down">
 					<div class="line1 cf">
 						<div class="nav-col cf">
@@ -125,8 +126,9 @@
 			<li class="main-menu menu-item"><a href="#" class="main-menu">Portfolio</a></li> 
 			<li class="main-menu menu-item"><a href="#" class="main-menu">Downloads</a></li>
 			<li class="main-menu menu-item contact"><a href="index.php?page=login" class="main-menu">Contact</a></li> 
-			<li class="main-menu menu-item"><a href="#" class="fav-tog">Favourites</a> <div id="diamond-narrow"></div></li>
-			<li class="search"><input type="text" name="search" id="search-feild"><button class="search-button"><i class="fa fa-search search-btn" aria-hidden="true"></i></button></li> 
+			<li class="main-menu menu-item"><a href="#">Favourites</a> <div id="diamond-narrow"></div></li>
+			<li class="search hide-mobile hide-tablet"><input type="text" name="search"><button class="search-button"><i class="fa fa-search search-btn" aria-hidden="true"></i></button></li>
+			<li class="search hide-mobile hide-desktop"><input type="text" name="search" id="search-feild"><button class="search-button tablet-search"><i class="fa fa-search search-btn" aria-hidden="true"></i></button></li> 
 		</ul>
 	</div> 
 	<span>

@@ -149,6 +149,13 @@
 		"oAP": "\/app\/partials\/error404.php",
 		"oF": 0
 		},
+	"\/app\/partials\/favourites.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/favourites.php",
+		"oF": 0
+		},
 	"\/app\/partials\/footer.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -196,6 +203,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/app\/partials\/myaccount.php",
+		"oF": 0
+		},
+	"\/app\/partials\/nav-save.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/nav-save.php",
 		"oF": 0
 		},
 	"\/app\/partials\/nav.php": {
@@ -297,6 +311,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/css\/colours.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/css\/favourites.sass": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 2,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/favourites.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1

@@ -1,1 +1,1 @@
-$(document).ready(function(){$(".category").each(function(n){setTimeout(function(){$(".category").eq(n).addClass("category-in")},300*n)}),$(".diamond").each(function(n){setTimeout(function(){$(".diamond").eq(n).addClass("diamond-in")},300*n)})});
+$(document).ready(function(){$(".fav-tog").click(function(){$("#favourites").addClass("open-fav"),$("#main-page").addClass("pause-page")}),$(".body").click(function(){$("#main-page").removeClass("pause-page"),$("#favourites").removeClass("open-fav")})});
