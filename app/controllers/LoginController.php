@@ -38,7 +38,7 @@ class LoginController extends PageController {
 
 		$filteredEmail = $this->dbc->real_escape_string($_POST['email']); 
 
-		$sql = "SELECT id, first_name, email, password, account_status 
+		$sql = "SELECT id, first_name, email, company, password, account_type, account_status 
 				FROM users 
 				WHERE email = '$filteredEmail'";  
 
@@ -50,6 +50,8 @@ class LoginController extends PageController {
 				$_SESSION['id'] = $userData['id']; 
 				$_SESSION['first_name'] = $userData['first_name']; 
 				$_SESSION['email'] = $userData['email'];
+				$_SESSION['company'] = $userData['company'];
+				$_SESSION['account_type'] = $userData['account_type'];
 				$_SESSION['account_status'] = $userData['account_status'];  
 
 				if ($_SESSION['account_status'] == 'not_active') {

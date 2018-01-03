@@ -1,111 +1,71 @@
-$height: 50rem 
-$img-height: 51.5rem
-#product-infos 
-	width: 100% 
-	margin: 0 auto 
-
-
-.product-image 
-	min-height: 10rem 
-	display: inline-block 
-	max-width: calc( 99% / 3 )
-	min-width: calc( 99% / 3 )    
-	margin: 0 
-	min-height: $height
-	vertical-align: top  
-	overflow: hidden 
-	text-align: center 
-	// position: absolute
-	img 
-		min-width: 100% 
-		min-height: $img-height
-		max-width: 100% 
-		max-height: $img-height
-		overflow: hidden 
-		z-index: 1 
-		position: static   
-	span 
-		z-index: 2 
-		color: $grey 
-		position: relative 
+.page-padding 
+	margin: 1rem  
+	margin-top: 4rem 
+	color: $body-text 
+	h1 	
 		font-size: 3rem 
-		padding: 1rem 
-		margin-top: -52rem
-		opacity: 0 
-		transition: 0.3s 
-		height: 49.59rem   
-		i 
-			margin-top: 23.5rem 
-		&:hover  
-			opacity: 1 !important  
-			color: #fff  
-			cursor: pointer
-	&:hover  
-		span 
-			opacity: 0.5  
-.arrow-left  
-	float: left  
-  
+		margin-top: 0 
+		margin-bottom: 0 
+		margin-left: -1.5rem  
+		font-weight: 100   
+		text-transform: uppercase 
+	h2 	
+		font-size: 2.5rem 
+		margin-top: 0 
+		margin-bottom: 0  
+		font-weight: 100   
+		text-transform: uppercase
+	p 
+		font-size: 1.2rem 
+		font-weight: lighter 
 
-.arrow-right
-	float: right   
-
-
-
-.product-text 
-	min-height: 10rem 
+#left-col 
+	width: 55%  
 	display: inline-block 
-	max-width: calc( 99% / 3 )
-	min-width: calc( 99% / 3 )   
-	padding: 0  
-	margin: 0 
-	min-height: $height 
-	vertical-align: top  
-	color: $grey
-	h3 
-		font-size: 3.3rem 
-		span 
-			font-weight: bold  
-			font-family: $bold 
-			font-size: 4.3rem   
-	ul 
-		font-size: 1.5rem
+	vertical-align: top 
 
-.pro-text-inner  
-	padding-left: 2rem 
-	padding-right: 2rem
-
-.product-img-grid 
-	min-height: 10rem 
+#right-col 
+	width: 44%  
 	display: inline-block 
-	max-width: calc( 99% / 3 )
-	min-width: calc( 99% / 3 ) 
-	background: #d2ced0 
-	padding-top: 1.5rem 
-	margin: 0 
-	min-height: $height    
-	vertical-align: top  
-	float: right
-	div 
-		width: calc( 97% / 2 ) 
-		display: inline-block 
-		padding: 0.1rem 
-		text-align: center 
+	vertical-align: top 
 
-#right-image  
-	width: 100% 
-	padding-bottom: 2rem 
-	display: none
 
-.right-image 
-	margin-left: 50rem  
-	margin-top: -24rem
-	display: block   
-
-.dwn-pro 
-	margin-top: 2rem 
-	img 
-		margin-bottom: -0.35rem 
+.product-images 
+	text-align: center
+	ol 
 		padding: 0 
-		// display: none
+		margin: 0 
+		li 
+			list-style-type: none 
+			display: inline-block 
+			padding-right: 0.4rem  
+			height: 150px 
+			vertical-align: top 
+		button 
+			background: none 
+			border: none  
+			font-size: 3rem   
+			height: 100% 
 
+.img-thumb 
+	margin-top: 0.8rem 
+
+
+
+.product-list 
+	padding: 0 
+	margin: 0 
+	li 
+		list-style: square inside url('data:image/gif;base64,R0lGODlhBQAKAIABAAAAAP///yH5BAEAAAEALAAAAAAFAAoAAAIIjI+ZwKwPUQEAOw==')
+
+
+.view-more  
+	width: 0
+	height: 0
+	border-left: 10px solid transparent
+	border-right: 10px solid transparent
+	border-top: 15px solid $body-text 
+	display: inline-block   
+	float: right  
+	margin-top: -30px 
+	margin-right: 20px

@@ -26,6 +26,11 @@ switch($page){
 		$controller = new ProductsController($dbc);	 
 	break;  
 
+	case 'product':
+	 	require 'app/controllers/ProductController.php'; 
+		$controller = new ProductController($dbc);
+	break; 
+
 	case 'contact_info':
 		require 'app/controllers/ContactInfoController.php'; 
 		$controller = new ContactInfoController($dbc);	 
@@ -64,7 +69,10 @@ switch($page){
 	case 'logout':
 		unset($_SESSION['id']);
 		unset($_SESSION['first_name']);
-		unset($_SESSION['email']); 
+		unset($_SESSION['email']);
+		unset($_SESSION['company']);
+		unset($_SESSION['account_status']);
+		unset($_SESSION['account_type']); 
 		header('Location: index.php');
 	break;  
 

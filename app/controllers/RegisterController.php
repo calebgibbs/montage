@@ -54,11 +54,11 @@ class RegisterController extends PageController {
 
 	private function processRegistration(){ 
 		$filteredFirstName = $this->dbc->real_escape_string( ucfirst($_POST['fname']) ); 	
-		$filteredEmail = $this->dbc->real_escape_string( lcfirst($_POST['email']) );
+		$filteredEmail = $this->dbc->real_escape_string( lcfirst($_POST['email']) ); 
 		$hash = password_hash($_POST['email2'], PASSWORD_BCRYPT); 
 
-		$sql = "INSERT INTO users(first_name, email, password, account_status)
-				VALUES('$filteredFirstName','$filteredEmail','$hash','not_active')"; 
+		$sql = "INSERT INTO users(first_name, email, company, password, account_type, account_status)
+				VALUES('$filteredFirstName','$filteredEmail',  'Montage Interiors','$hash', 'admin', 'not_active')"; 
 		$this->dbc->query($sql);  
 		// echo "<pre>";
 		// print_r($sql); 

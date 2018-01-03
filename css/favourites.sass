@@ -8,13 +8,31 @@
 	background: #fff  
 	transition: 0.3s 
 	margin: 0 
-	padding: 0
+	padding: 0  
+#overlay  
+	min-height: 100vh 
+	max-height: 100vh 
+	position: absolute  
+	right: -30vw
+	min-width: 30vw 
+	z-index: 897655 
+	margin: 0 
+	padding: 0 
+	background: rgba(0,0,0,0.8)	
 
 .open-fav 
-	right: 0 !important 
-
+	right: 0 !important  
+.pause-page 
+	position: fixed
+	overflow-y: hidden !important  
+.darken  
+	box-shadow: 0px 0px 1px 5000px rgba(0,0,0,0.8) 
+.view  
+    display: block !important
+.remove 
+  	display: none
 .fav-title 
-	background: $light-grey 
+	background: $grey 
 	color: #fff 
 	margin: 0 
 	padding: 10px 
@@ -23,7 +41,14 @@
 		padding: 0.01rem 
 		font-size: 1.8rem 
 		font-weight: normal 
-		text-align: center   
+		text-align: center  
+	button 
+		color: #fff 
+		background: none 
+		border: none 
+		font-size: 1.8rem 
+		vertical-align: center 
+		float: right  
 
 .buttons  
 	position: absolute 
@@ -42,8 +67,71 @@
 	 	transition: 0.2s 
 	 	cursor: pointer 
 	 	&:hover 
-	 		background: $green 
+	 		background: $green  
 
-.pause-page 
-	position: relative !important
-	overflow-x: hidden !important
+#favourites  
+	form 
+		input 
+			width: 80%  
+			margin-left: 10%
+			margin-top: 10%   
+			font-size: 1.3rem 
+			padding: 7px  
+			outline: none 
+			border: none 
+			border-bottom: 0.1rem solid #F3F3F3 
+			transition: 0.3s  
+			background: none
+			&:focus 
+				border-bottom: 0.1rem solid $grey 
+	span 
+		margin-left: 11% 
+
+#login-form 
+	display: none
+	form
+		button 
+		 	border: none 
+		 	width: 82.5% 
+		 	padding: 0.8rem 
+		 	text-align: center
+		 	background: rgba( $green, 0.9 ) 
+		 	margin-top: 10px 
+		 	margin-left: 10%
+		 	font-size: 1.3rem 
+		 	color: #fff  
+		 	transition: 0.2s 
+		 	cursor: pointer 
+		 	&:hover 
+		 		background: $green  
+.link-btn 
+	background: none
+	border: none
+	color: $grey  
+	cursor: pointer 
+	outline: none 
+	font-size: 1rem 
+	text-align: center
+	margin-top: 10px
+	width: 100%
+	&:hover  
+		color: $green 
+
+#signup-form 
+	display: none 
+	form
+		button 
+		 	border: none 
+		 	width: 82.5% 
+		 	padding: 0.8rem 
+		 	text-align: center
+		 	background: rgba( $green, 0.9 ) 
+		 	margin-top: 10px 
+		 	margin-left: 10%
+		 	font-size: 1.3rem 
+		 	color: #fff  
+		 	transition: 0.2s 
+		 	cursor: pointer 
+		 	&:hover 
+		 		background: $green
+

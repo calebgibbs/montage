@@ -53,7 +53,7 @@ nav
 	margin-top: -1rem 
 	padding-bottom: 1rem    
 	overflow-x: hidden 
-	opacity: 1 !important 
+	opacity: 0
 	ul 	 
 		float: left 
 		width: 100%  
@@ -111,8 +111,15 @@ nav
 		font-weight: bold
 		text-transform: uppercase 
 		margin-bottom: 7px   
-		font-size: 1.3rem  
+		font-size: 1.3rem 
+	.show-menu 
+		opacity: 1 !important  
+		transition: 0.3s 
+		z-index: 99988 !important  
  
+.pause-page 
+	position: fixed
+	overflow: hidden !important 
  
 
 @include desktop 

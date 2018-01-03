@@ -17,7 +17,7 @@ class ManageAccountsController extends PageController {
 
 	private function getUsers(){ 
 		$currentId = $_SESSION['id'];
- 		$sql = "SELECT id, first_name, email, account_status FROM users WHERE id <> '$currentId'"; 
+ 		$sql = "SELECT id, first_name, email, company, account_type, account_status FROM users WHERE id <> '$currentId'"; 
 		$result = $this->dbc->query($sql); 
 		$allData = $result->fetch_all(MYSQLI_ASSOC);  
 		return $allData; 

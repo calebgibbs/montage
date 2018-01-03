@@ -21,24 +21,26 @@ $prevPage = $_SERVER['REQUEST_URI'];
 				<td><button href="index.php?page=my_account">Change Password</button></td>
 			</tr> 
 			<?php foreach($allUsers as $user):  ?> 
-			<?php if($user['account_status'] == 'active'): ?>
-			<tr>
-				<td><?= $user['first_name'] ?></td>
-				<td><?= $user['email'] ?></td> 
-				<td>
-					<form method="post" action="index.php?page=manage_accounts">
-						<button name="resetPassword" value="<?= $user['id'] ?>">Reset password</button>
-					</form>
-				</td>
-			</tr> 
-			<?php endif ?>
-			<?php if($user['account_status'] == 'not_active'): ?>
-			<tr>
-				<td><?= $user['first_name'] ?></td>
-				<td><?= $user['email'] ?></td> 
-				<td></td>
-			</tr> 
-			<?php endif ?>
+			<?php if($user['account_type'] == 'admin' && $user['id'] != 1): ?>	
+				<?php if($user['account_status'] == 'active'): ?>
+				<tr>
+					<td><?= $user['first_name'] ?></td>
+					<td><?= $user['email'] ?></td> 
+					<td>
+						<form method="post" action="index.php?page=manage_accounts">
+							<button name="resetPassword" value="<?= $user['id'] ?>">Reset password</button>
+						</form>
+					</td>
+				</tr> 
+				<?php endif ?>
+				<?php if($user['account_status'] == 'not_active'): ?>
+				<tr>
+					<td><?= $user['first_name'] ?></td>
+					<td><?= $user['email'] ?></td> 
+					<td></td>
+				</tr> 
+				<?php endif ?>
+				<?php endif ?>
 			<?php endforeach ?>
 		</table>
 	</div>

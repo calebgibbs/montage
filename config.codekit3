@@ -534,6 +534,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/overlay.png": {
+		"ft": 32768,
+		"iS": 5862,
+		"oA": 0,
+		"oAP": "\/img\/overlay.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/triangles\/about.png": {
 		"ft": 32768,
 		"iS": 103390,
@@ -684,6 +695,26 @@
 		"oAP": "\/index.php",
 		"oF": 0
 		},
+	"\/js\/ajax-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/ajax-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/js\/ajax.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/ajax-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"\/js\/animation-min.js": {
 		"ft": 64,
 		"ma": 0,
@@ -700,6 +731,26 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/js\/animation-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/js\/favourites-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/favourites-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/js\/favourites.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/favourites-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
