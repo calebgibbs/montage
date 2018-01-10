@@ -1,7 +1,17 @@
-.page-padding 
-	margin: 1rem  
-	margin-top: 4rem 
-	color: $body-text 
+#product-theme 
+	width: 100% 
+	min-height: 900px
+	padding: 0 
+	margin: 0  
+	padding-top: 4rem
+	padding-bottom: 2rem  
+	
+.chair 
+ 	background: url(../img/products/themes/red.png) no-repeat center right fixed
+
+#page-padding 
+	color: $body-text  
+	max-height: 900px
 	h1 	
 		font-size: 3rem 
 		margin-top: 0 
@@ -10,7 +20,7 @@
 		font-weight: 100   
 		text-transform: uppercase 
 	h2 	
-		font-size: 2.5rem 
+		font-size: 2rem 
 		margin-top: 0 
 		margin-bottom: 0  
 		font-weight: 100   
@@ -31,7 +41,8 @@
 
 
 .product-images 
-	text-align: center
+	width: 780px 
+	margin: 0 auto
 	ol 
 		padding: 0 
 		margin: 0 
@@ -41,14 +52,28 @@
 			padding-right: 0.4rem  
 			height: 150px 
 			vertical-align: top 
+			cursor: pointer 
 		button 
 			background: none 
 			border: none  
 			font-size: 3rem   
-			height: 100% 
+			height: 100%  
 
 .img-thumb 
-	margin-top: 0.8rem 
+	margin-top: 0.8rem  
+
+.large-img
+	img 
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5)
+
+.arrow-off 
+	display: none !important 
+
+.prod-features 
+	margin-top: 2rem 
+
+.prod-options 
+	margin-top: 2rem
 
 
 
@@ -56,7 +81,7 @@
 	padding: 0 
 	margin: 0 
 	li 
-		list-style: square inside url('data:image/gif;base64,R0lGODlhBQAKAIABAAAAAP///yH5BAEAAAEALAAAAAAFAAoAAAIIjI+ZwKwPUQEAOw==')
+		list-style: square inside url('data:image/gif;base64,R0lGODlhBQAKAIABAAAAAP///yH5BAEAAAEALAAAAAAFAAoAAAIIjI+ZwKwPUQEAOw==') 
 
 
 .view-more  
@@ -68,4 +93,31 @@
 	display: inline-block   
 	float: right  
 	margin-top: -30px 
-	margin-right: 20px
+	margin-right: 20px 
+
+@include mobile  	
+	#left-col 
+		width: 80% 
+		display: block  
+		// margin: 0 auto 
+		margin-left: 7% 
+		margin-right: 14% 
+	#right-col 
+		width: 90% 
+		display: block  
+		margin: 0 auto
+		vertical-align: bottom 
+		margin-top: 3rem 
+
+	.large-img 
+		img 
+			width: 670px  
+			height: 300px 
+
+	.product-images  
+		width: 680px 
+		margin-right: 0 
+		li 
+			img 
+				width: 215px  
+				height: 115px

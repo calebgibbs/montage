@@ -13,105 +13,156 @@ class AddproductController extends PageController {
 	} 
 
 	private function validateForm(){ 
-		$totalErrors = 0;  
-		$title = trim($_POST['title']); 
-		$brand = trim($_POST['brand']); 
-		$mianDesc = trim($_POST['desc']); 
-		$desc1 = trim($_POST['bp1']); 
-		$desc2 = trim($_POST['bp2']);
-		$desc3 = trim($_POST['bp3']);
-		$desc4 = trim($_POST['bp4']); 
-		$desc5 = trim($_POST['bp5']);
-		$cat = $_POST['category']; 
+		$title = $_POST['title']; 
+		$cateogry = $_POST['category'];
+		$desc = $_POST['desc'];
+		$feat1 = $_POST['feat_1']; 
+		$feat2 = $_POST['feat_2'];
+		$feat3 = $_POST['feat_3'];
+		$option1 = $_POST['opt_1'];
+		$option2 = $_POST['opt_2'];
+		$option3 = $_POST['opt_3']; 
+		$errors = 0; 
 
-		if (strlen($title) == 0 ) {
-			$this->data['titleMessage'] = '<span class="invalid-msg">This feild is required</span>';
-			$totalErrors = 0;
-		}else if( strlen($title) > 150 ){ 
-			$this->data['titleMessage'] = '<span class="invalid-msg">The title is too long</span>';
-			$totalErrors = 0;
-		} 
-		if (strlen($brand) == 0 ) {
-			$this->data['brandMessage'] = '<span class="invalid-msg">This feild is required</span>';
-			$totalErrors = 0;
-		}else if( strlen($brand) > 150 ){ 
-			$this->data['brandMessage'] = '<span class="invalid-msg">The brand name is too long</span>';
-			$totalErrors = 0;
-		} 
-		if (strlen($mianDesc) == 0 ) {
-			$this->data['descMessage'] = '<span class="invalid-msg">This feild is required</span>';
-			$totalErrors = 0;
-		}else if( strlen($mianDesc) > 1000 ){ 
-			$this->data['descMessage'] = '<span class="invalid-msg">The description is too long</span>';
-			$totalErrors = 0;
-		}
-		if (strlen($desc1) == 0 ) {
-			$this->data['desc1Message'] = '<span class="invalid-msg">This feild is required</span>';
-			$totalErrors = 0;
-		}else if( strlen($desc1) > 400 ){ 
-			$this->data['desc1Message'] = '<span class="invalid-msg">The description is too long</span>';
-			$totalErrors = 0;
-		}
-		if (strlen($desc2) == 0 ) {
-			$this->data['desc2Message'] = '<span class="invalid-msg">This feild is required</span>';
-			$totalErrors = 0;
-		}else if( strlen($desc2) > 400 ){ 
-			$this->data['desc2Message'] = '<span class="invalid-msg">The description is too long</span>';
-			$totalErrors = 0;
+		if (strlen($title) == 0) {
+			$this->data['titleMessage'] = '<span style="color: #d9534f">*This feild is required</span>'; 
+			$errors++;
 		} 
 
-		if( strlen($desc3) > 400 ){ 
-			$this->data['desc3Message'] = '<span class="invalid-msg">The description is too long</span>';
-			$totalErrors = 0;
+		if(strlen($title) > 50){ 
+			$this->data['titleMessage'] = '<span style="color: #d9534f">*Title is too long</span>'; 
+			$errors++;	
 		} 
-		if( strlen($desc4) > 400 ){ 
-			$this->data['desc3Message'] = '<span class="invalid-msg">The description is too long</span>';
-			$totalErrors = 0;
-		}
-		if( strlen($desc5) > 400 ){ 
-			$this->data['desc3Message'] = '<span class="invalid-msg">The description is too long</span>';
-			$totalErrors = 0;
+
+		if( isset($_POST['category']) && $_POST['category'] == '0' ){ 
+			$this->data['categoryError'] = 'style="background: #d9534f"';	
+			$errors++;
 		} 
-		if( isset($_POST['category']) && $_POST['category'] == '0') {
-			$this->data['selectError'] = 'class="select-error"';
-			$totalErrors = 0;
-		}  
 
-		if ($totalErrors == 0) {
-			$this->processFrom();
+		if (strlen($desc) == 0) {
+			$this->data['descMessage'] = '<span style="color: #d9534f">This feild is required</span>'; 
+			$errors++;	
+		} 
+
+		if (strlen($desc) > 1000) {
+			$this->data['descMessage'] = '<span style="color: #d9534f">*Description is too long</span>'; 
+			$errors++;	
+		} 
+
+		if (strlen($feat1) == 0) {
+			$this->data['feat1Message'] = '<span style="color: #d9534f">This feild is required</span>'; 
+			$errors++;	
+		} 
+
+		if (strlen($feat1) > 100) {
+			$this->data['feat1Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
+			$errors++;	
 		}
 
-	} 
-	private function processFrom(){ 
-		$title = $this->dbc->real_escape_string(trim($_POST['title']));  
-		$brand = $this->dbc->real_escape_string(trim($_POST['brand']));
-		$mainDesc = $this->dbc->real_escape_string(trim($_POST['desc']));  
-		$desc1 = $this->dbc->real_escape_string(trim($_POST['bp1']));
-		$desc2 = $this->dbc->real_escape_string(trim($_POST['bp2']));
-		$desc3 = $this->dbc->real_escape_string(trim($_POST['bp3']));
-		$desc4 = $this->dbc->real_escape_string(trim($_POST['bp4']));
-		$desc5 = $this->dbc->real_escape_string(trim($_POST['bp5']));
-		$category = $_POST['category']; 
+		if (strlen($feat2) == 0) {
+			$this->data['feat2Message'] = '<span style="color: #d9534f">This feild is required</span>'; 
+			$errors++;	
+		} 
 
-		$sql = "INSERT INTO products(title, brand, main_desc, desc_1, desc_2, desc_3, desc_4, desc_5, category) 
-				VALUES ('$title', '$brand', '$mainDesc', '$desc1', '$desc2', '$desc3', '$desc4', '$desc5', '$category')"; 
-		$this->dbc->query($sql); 
+		if (strlen($feat2) > 100) {
+			$this->data['feat2Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
+			$errors++;	
+		} 
+		if (strlen($feat3) == 0) {
+			$this->data['feat3Message'] = '<span style="color: #d9534f">This feild is required</span>'; 
+			$errors++;	
+		} 
 
-		if($this->dbc->affected_rows) {
-				$sql = "SELECT id FROM products WHERE title = '$title'"; 
-				$result = $this->dbc->query($sql);  
-				$productID = $result->fetch_assoc(); 
-				
-				//take prodcutId and upload the images to the image database relating to that id  
- 				
- 				//temp success message: (to be taken to new product page once built)  
-
- 				$_POST = array(); 
- 				header("Location: ". $_SERVER['REQUEST_URI']."#leaveAcomment" ); //temp fix
- 				$this->data['h1Message'] = '<span><i>'.$title.' was succesfully added to the database</i></span>'; //temp 
-
-		}else{ 
-			$this->data['h1Message'] = '<span class="invalid-msg">Sorry, something went wrong. Please try again later</span>';
+		if (strlen($feat3) > 100) {
+			$this->data['feat3Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
+			$errors++;	
 		}
+		if (strlen($_POST['feat_4']) > 100) {
+			$this->data['feat4Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
+			$errors++;	
+		}
+		if (strlen($_POST['feat_5']) > 100) {
+			$this->data['feat5Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
+			$errors++;	
+		}
+		if (strlen($_POST['feat_6']) > 100) {
+			$this->data['feat6Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
+			$errors++;	
+		} 
+		if (strlen($_POST['feat_7']) > 100) {
+			$this->data['feat7Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
+			$errors++;	
+		} 
+		if (strlen($_POST['feat_8']) > 100) {
+			$this->data['feat8Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
+			$errors++;	
+		} 
+		if (strlen($_POST['feat_9']) > 100) {
+			$this->data['feat9Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
+			$errors++;	
+		}
+		if (strlen($_POST['feat_10']) > 100) {
+			$this->data['feat10Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
+			$errors++;	
+		} 
+		if(strlen($option1) == 0){ 
+			$this->data['opt1Message'] = '<span style="color: #d9534f">*This feild is required</span>'; 
+			$errors++;	
+		} 
+		if(strlen($option1) > 100){ 
+			$this->data['opt1Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
+			$errors++;	
+		} 
+		if(strlen($option2) == 0){ 
+			$this->data['opt2Message'] = '<span style="color: #d9534f">*This feild is required</span>'; 
+			$errors++;	
+		} 
+		if(strlen($option2) > 100){ 
+			$this->data['opt2Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
+			$errors++;	
+		} 
+		if(strlen($option3) == 0){ 
+			$this->data['opt3Message'] = '<span style="color: #d9534f">*This feild is required</span>'; 
+			$errors++;	
+		} 
+		if(strlen($option3) > 100){ 
+			$this->data['opt3Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
+			$errors++;	
+		} 
+		if(strlen($_POST['opt_4']) > 100){ 
+			$this->data['opt4Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
+			$errors++;	
+		} 
+		if(strlen($_POST['opt_5']) > 100){ 
+			$this->data['opt5Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
+			$errors++;	
+		}
+		if(strlen($_POST['opt_6']) > 100){ 
+			$this->data['opt6Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
+			$errors++;	
+		}
+		if(strlen($_POST['opt_7']) > 100){ 
+			$this->data['opt7Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
+			$errors++;	
+		} 
+		if(strlen($_POST['opt_8']) > 100){ 
+			$this->data['opt8Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
+			$errors++;	
+		} 
+		if(strlen($_POST['opt_9']) > 100){ 
+			$this->data['opt9Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
+			$errors++;	
+		} 
+		if(strlen($_POST['opt_10']) > 100){ 
+			$this->data['opt10Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
+			$errors++;	
+		} 
+		if ($errors == 0) {
+			$this->ProcessProduct();
+		}
+	}  
+
+	private function ProcessProduct(){ 
+		die('processing');
 	}
-}
+} 

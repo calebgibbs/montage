@@ -10,11 +10,11 @@ $prevPage = $_SERVER['REQUEST_URI'];
 		<h1>Add a new product <?=  isset($h1Message) ? $h1Message : '' ?></h1>
 		<form enctype="multipart/form-data" method="post" action="index.php?page=add_product" novalidate>
 			<div class="form-input">
-				<input type="text" class="inputText" name="title" required />
-				<span class="floating-label">Product Title</span>
+				<input type="text" class="inputText" name="title" value="<?= isset($_POST['title']) ? $_POST['title'] : '' ?>" required />
+				<span class="floating-label">Product Title <?=  isset($titleMessage) ? $titleMessage : '' ?></span>
 			</div> 
 			<div class="form-input"> 
-				<select name="category" <?=  isset($selectError) ? $selectError : '' ?>>
+				<select name="category" <?=  isset($categoryError) ? $categoryError : '' ?>>
 					<?php if(isset($_POST['category'])): ?>  
 						<?php 
 						if ( $_POST['category'] == 'workstation') {
@@ -39,10 +39,10 @@ $prevPage = $_SERVER['REQUEST_URI'];
 							$valueName = "Select category";	
 						}
 						?> 
-					<option value="<?= $_POST['category'] ?>"><?= $valueName ?></option> 
+						<option value="<?= $_POST['category'] ?>"><?= $valueName ?></option> 
 					<?php endif ?>
 					<?php if(!isset($_POST['category'])): ?>
-					<option value="0">Select Category</option>
+						<option value="0">Select Category</option>
 					<?php endif ?>
 					<option value="workstation">Workstation</option> 
 					<option value="storage">Storage</option>
@@ -59,19 +59,111 @@ $prevPage = $_SERVER['REQUEST_URI'];
 				<textarea name="desc" required id="prod-desc-ta"><?= isset($_POST['desc']) ? $_POST['desc'] : '' ?></textarea> 
 				<span class="floating-label">Product description  <?=  isset($descMessage) ? $descMessage : '' ?></span>
 			</div> 
-			<?php for($i = 1; $i <= 10; $i++): ?> 
-			<div class="form-input">
-				<input type="text" class="inputText" name="feat_<?= $i ?>" required />
-				<span class="floating-label">Featured bullet point <?= $i ?></span>
+			<div class="form-features">
+				<div class="form-input">
+					<input type="text" class="inputText" name="feat_1" value="<?= isset($_POST['feat_1']) ? $_POST['feat_1'] : '' ?>" required />
+					<span class="floating-label">Feature 1 <?=  isset($feat1Message) ? $feat1Message : '' ?></span>
+				</div>
+
+				<div class="form-input">
+					<input type="text" class="inputText" name="feat_2" value="<?= isset($_POST['feat_2']) ? $_POST['feat_2'] : '' ?>" required />
+					<span class="floating-label">Feature 2 <?=  isset($feat2Message) ? $feat2Message : '' ?></span>
+				</div>
+
+				<div class="form-input">
+					<input type="text" class="inputText" name="feat_3" value="<?= isset($_POST['feat_3']) ? $_POST['feat_3'] : '' ?>" required />
+					<span class="floating-label">Feature 3 <?=  isset($feat3Message) ? $feat3Message : '' ?></span>
+				</div>
+
+				<div class="form-input">
+					<input type="text" class="inputText" name="feat_4" value="<?= isset($_POST['feat_4']) ? $_POST['feat_4'] : '' ?>" required />
+					<span class="floating-label">Feature 4 <?=  isset($feat4Message) ? $feat4Message : '' ?></span>
+				</div>
+
+				<div class="form-input">
+					<input type="text" class="inputText" name="feat_5" value="<?= isset($_POST['feat_5']) ? $_POST['feat_5'] : '' ?>" required />
+					<span class="floating-label">Feature 5 <?=  isset($feat5Message) ? $feat5Message : '' ?></span>
+				</div>
+
+				<div class="form-input">
+					<input type="text" class="inputText" name="feat_6" value="<?= isset($_POST['feat_6']) ? $_POST['feat_6'] : '' ?>" required />
+					<span class="floating-label">Feature 6 <?=  isset($feat6Message) ? $feat6Message : '' ?></span>
+				</div>
+
+				<div class="form-input">
+					<input type="text" class="inputText" name="feat_7" value="<?= isset($_POST['feat_7']) ? $_POST['feat_7'] : '' ?>" required />
+					<span class="floating-label">Feature 7 <?=  isset($feat7Message) ? $feat7Message : '' ?></span>
+				</div>
+
+				<div class="form-input">
+					<input type="text" class="inputText" name="feat_8" value="<?= isset($_POST['feat_8']) ? $_POST['feat_8'] : '' ?>" required />
+					<span class="floating-label">Feature 8 <?=  isset($feat8Message) ? $feat8Message : '' ?></span>
+				</div>
+
+				<div class="form-input">
+					<input type="text" class="inputText" name="feat_9" value="<?= isset($_POST['feat_9']) ? $_POST['feat_9'] : '' ?>" required />
+					<span class="floating-label">Feature 9 <?=  isset($feat9Message) ? $feat9Message : '' ?></span>
+				</div>
+
+				<div class="form-input">
+					<input type="text" class="inputText" name="feat_10" value="<?= isset($_POST['feat_10']) ? $_POST['feat_10'] : '' ?>" required />
+					<span class="floating-label">Feature 10 <?=  isset($feat10Message) ? $feat10Message : '' ?></span>
+				</div> 
+			</div> 
+			<div class="form-options">
+				<div class="form-input">
+					<input type="text" class="inputText" name="opt_1" value="<?= isset($_POST['opt_1']) ? $_POST['opt_1'] : '' ?>" required />
+					<span class="floating-label">Option 1 <?=  isset($opt1Message) ? $opt1Message : '' ?></span>
+				</div>
+
+				<div class="form-input">
+					<input type="text" class="inputText" name="opt_2" value="<?= isset($_POST['opt_2']) ? $_POST['opt_2'] : '' ?>" required />
+					<span class="floating-label">Option 2 <?=  isset($opt2Message) ? $opt2Message : '' ?></span>
+				</div>
+
+				<div class="form-input">
+					<input type="text" class="inputText" name="opt_3" value="<?= isset($_POST['opt_3']) ? $_POST['opt_3'] : '' ?>" required />
+					<span class="floating-label">Option 3 <?=  isset($opt3Message) ? $opt3Message : '' ?></span>
+				</div>
+
+				<div class="form-input">
+					<input type="text" class="inputText" name="opt_4" value="<?= isset($_POST['opt_4']) ? $_POST['opt_4'] : '' ?>" required />
+					<span class="floating-label">Option 4 <?=  isset($opt4Message) ? $opt4Message : '' ?></span>
+				</div>
+
+				<div class="form-input">
+					<input type="text" class="inputText" name="opt_5" value="<?= isset($_POST['opt_5']) ? $_POST['opt_5'] : '' ?>" required />
+					<span class="floating-label">Option 5 <?=  isset($opt5Message) ? $opt5Message : '' ?></span>
+				</div>
+
+				<div class="form-input">
+					<input type="text" class="inputText" name="opt_6" value="<?= isset($_POST['opt_6']) ? $_POST['opt_6'] : '' ?>" required />
+					<span class="floating-label">Option 6 <?=  isset($opt6Message) ? $opt6Message : '' ?></span>
+				</div>
+
+				<div class="form-input">
+					<input type="text" class="inputText" name="opt_7" value="<?= isset($_POST['opt_7']) ? $_POST['opt_7'] : '' ?>" required />
+					<span class="floating-label">Option 7 <?=  isset($opt7Message) ? $opt7Message : '' ?></span>
+				</div>
+
+				<div class="form-input">
+					<input type="text" class="inputText" name="opt_8" value="<?= isset($_POST['opt_8']) ? $_POST['opt_8'] : '' ?>" required />
+					<span class="floating-label">Option 8 <?=  isset($opt8Message) ? $opt8Message : '' ?></span>
+				</div>
+
+				<div class="form-input">
+					<input type="text" class="inputText" name="opt_9" value="<?= isset($_POST['opt_9']) ? $_POST['opt_9'] : '' ?>" required />
+					<span class="floating-label">Option 9 <?=  isset($opt9Message) ? $opt9Message : '' ?></span>
+				</div>
+
+				<div class="form-input">
+					<input type="text" class="inputText" name="opt_10" value="<?= isset($_POST['opt_10']) ? $_POST['opt_10'] : '' ?>" required />
+					<span class="floating-label">Option 10 <?=  isset($opt10Message) ? $opt10Message : '' ?></span>
+				</div> 
 			</div>
-			<?php endfor; ?>
-			<?php for($i = 1; $i <= 10; $i++): ?> 
-			<div class="form-input">
-				<input type="text" class="inputText" name="opt_<?= $i ?>" required />
-				<span class="floating-label">Option bullet point <?= $i ?></span>
+			<div>
+				<button type="submit" name="addProduct">add product</button>
 			</div>
-			<?php endfor; ?>
-			
 		</form>
 	</div>
 </div> 

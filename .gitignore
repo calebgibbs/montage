@@ -3,4 +3,6 @@ fonts/
 design.pdf 
 vendor/ 
 composer.lock 
-temp/
+temp/ 
+app/partials/imagethumbbarattempt1.php
+img/triangles(old)/

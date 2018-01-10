@@ -6,31 +6,30 @@
 	$prevPage = $_SERVER['QUERY_STRING'];
 ?> 
 <div class="body"> 
-	<div class="portfolio">
-		<img src="img/triangles/portfolio.png" alt="portfolio" class="category"> 
-		<span>Portfolio</span>
-	</div>   
-	<div class="statement1">
-		<h2><span>Creating</span><br>agile spaces</h2>
+	<div class="top">
+		<div class="portfolio">
+			<img src="img/home/portfolio.png">
+		</div> 
+		<div class="mission-statement">
+			<span><h2>Creating</h2></span> 
+			<span><h3>Agile spaces</h3></span> 
+			<span><p>Montage interiors beleive innocation is the</p></span> 
+			<span><p>key to a functional workspace.</p></span>
+		</div>
+	</div> 
+	<div class="bottom">
+		<div class="our-story">
+			<img src="img/home/ourstory.png">
+		</div> 
+		<div class="product">
+			<img src="img/home/product.png">
+		</div> 
+		<div class="sustainability">
+			<img class="susimg" src="img/home/sustainability.png">
+			<img class="dwnimg" src="img/home/downloads.png">
+		</div> 
+		<div class="downloads">
+			
+		</div>
 	</div>
-	<div class="about-us">
-		<img src="img/triangles/about.png" class="category about"> 
-		<span>Our story</span>
-	</div> 
-	<div class="statement2 cf">
-		<span>Monage Interiors beleives <br>innovation is the key to <br>innovation</span>
-	</div>
-	<div class="products">
-		<a href="results.html">
-			<img src="img/triangles/products.png" alt="products" class="category"> 
-			<span>Products</span> 
-		</a>
-	</div>  
-	<div class="sustainability">
-		<img src="img/triangles/sustainability.png" alt="sustainability" class="category"> 
-		<span>Sustainability</span>
-	</div> 
-	<div class="bottom-tri">
-		<img src="img/triangles/bottom.png">
-	</div> 
 </div>

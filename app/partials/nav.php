@@ -5,7 +5,7 @@
 			<li class="main-menu menu-item"><a href="#" class="main-menu"><span class="desktop-link">Our Story</span><span class="tablet-link">About</span></a></li>
 			<li class="main-menu">
 				<a href="index.php?page=products" class="main-menu drop-button tablet-link">Products<span class="more-items pro-arrow"><i class="fa fa-chevron-down" aria-hidden="true"></i></span></a>
-				<a href="index.php?page=products" class="main-menu drop-trigger desktop-link">Products</a>
+				<a href="index.php?page=product" class="main-menu drop-trigger desktop-link">Products</a>
 				<div id="drop-down">
 					<div class="line1 cf">
 						<div class="nav-col cf">

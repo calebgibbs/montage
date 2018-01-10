@@ -170,6 +170,13 @@
 		"oAP": "\/app\/partials\/home.php",
 		"oF": 0
 		},
+	"\/app\/partials\/imagethumbbarattempt1.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/imagethumbbarattempt1.php",
+		"oF": 0
+		},
 	"\/app\/partials\/login.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -462,39 +469,66 @@
 		"oAP": "\/design.pdf",
 		"oF": 0
 		},
-	"\/fonts\/TradeGothicLTStd-BoldExt.otf": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/fonts\/TradeGothicLTStd-BoldExt.otf",
-		"oF": 0
-		},
-	"\/fonts\/TradeGothicLTStd-BoldObl.otf": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/fonts\/TradeGothicLTStd-BoldObl.otf",
-		"oF": 0
-		},
-	"\/fonts\/TradeGothicLTStd-Light.otf": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/fonts\/TradeGothicLTStd-Light.otf",
-		"oF": 0
-		},
-	"\/fonts\/TradeGothicLTStd.otf": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/fonts\/TradeGothicLTStd.otf",
-		"oF": 0
-		},
 	"\/img\/favicon.png": {
 		"ft": 32768,
 		"iS": 908,
 		"oA": 0,
 		"oAP": "\/img\/favicon.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/home\/downloads.png": {
+		"ft": 32768,
+		"iS": 41270,
+		"oA": 0,
+		"oAP": "\/img\/home\/downloads.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/home\/ourstory.png": {
+		"ft": 32768,
+		"iS": 55637,
+		"oA": 0,
+		"oAP": "\/img\/home\/ourstory.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/home\/portfolio.png": {
+		"ft": 32768,
+		"iS": 245674,
+		"oA": 0,
+		"oAP": "\/img\/home\/portfolio.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/home\/product.png": {
+		"ft": 32768,
+		"iS": 225458,
+		"oA": 0,
+		"oAP": "\/img\/home\/product.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/home\/sustainability.png": {
+		"ft": 32768,
+		"iS": 149664,
+		"oA": 0,
+		"oAP": "\/img\/home\/sustainability.png",
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
@@ -545,143 +579,231 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/triangles\/about.png": {
+	"\/img\/products\/large\/img1.png": {
 		"ft": 32768,
-		"iS": 103390,
+		"iS": 2036,
 		"oA": 0,
-		"oAP": "\/img\/triangles\/about.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/triangles\/agile.png": {
-		"ft": 32768,
-		"iS": 259165,
-		"oA": 0,
-		"oAP": "\/img\/triangles\/agile.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/triangles\/bottom.png": {
-		"ft": 32768,
-		"iS": 239264,
-		"oA": 0,
-		"oAP": "\/img\/triangles\/bottom.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/triangles\/chairs.png": {
-		"ft": 32768,
-		"iS": 117055,
-		"oA": 0,
-		"oAP": "\/img\/triangles\/chairs.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/triangles\/download.png": {
-		"ft": 32768,
-		"iS": 483608,
-		"oA": 0,
-		"oAP": "\/img\/triangles\/download.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/triangles\/joinery.png": {
-		"ft": 32768,
-		"iS": 344255,
-		"oA": 0,
-		"oAP": "\/img\/triangles\/joinery.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/triangles\/portfolio.png": {
-		"ft": 32768,
-		"iS": 178876,
-		"oA": 0,
-		"oAP": "\/img\/triangles\/portfolio.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/triangles\/products.png": {
-		"ft": 32768,
-		"iS": 197974,
-		"oA": 0,
-		"oAP": "\/img\/triangles\/products.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/triangles\/storage.png": {
-		"ft": 32768,
-		"iS": 51040,
-		"oA": 0,
-		"oAP": "\/img\/triangles\/storage.png",
+		"oAP": "\/img\/products\/large\/img1.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/triangles\/sustainability.png": {
+	"\/img\/products\/large\/img2.png": {
+		"ft": 32768,
+		"iS": 2139,
+		"oA": 0,
+		"oAP": "\/img\/products\/large\/img2.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/products\/large\/img3.png": {
+		"ft": 32768,
+		"iS": 2484,
+		"oA": 0,
+		"oAP": "\/img\/products\/large\/img3.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/products\/themes\/chairs.png": {
+		"ft": 32768,
+		"iS": 25616,
+		"oA": 0,
+		"oAP": "\/img\/products\/themes\/chairs.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/products\/themes\/red.png": {
+		"ft": 32768,
+		"iS": 28471,
+		"oA": 0,
+		"oAP": "\/img\/products\/themes\/red.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/products\/thumbnail\/img1.png": {
+		"ft": 32768,
+		"iS": 3598,
+		"oA": 0,
+		"oAP": "\/img\/products\/thumbnail\/img1.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/products\/thumbnail\/img2.png": {
+		"ft": 32768,
+		"iS": 533,
+		"oA": 0,
+		"oAP": "\/img\/products\/thumbnail\/img2.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/products\/thumbnail\/img3.png": {
+		"ft": 32768,
+		"iS": 537,
+		"oA": 0,
+		"oAP": "\/img\/products\/thumbnail\/img3.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/triangles(old)\/about.png": {
+		"ft": 32768,
+		"iS": 103390,
+		"oA": 0,
+		"oAP": "\/img\/triangles(old)\/about.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/triangles(old)\/agile.png": {
+		"ft": 32768,
+		"iS": 259165,
+		"oA": 0,
+		"oAP": "\/img\/triangles(old)\/agile.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/triangles(old)\/bottom.png": {
+		"ft": 32768,
+		"iS": 239264,
+		"oA": 0,
+		"oAP": "\/img\/triangles(old)\/bottom.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/triangles(old)\/chairs.png": {
+		"ft": 32768,
+		"iS": 117055,
+		"oA": 0,
+		"oAP": "\/img\/triangles(old)\/chairs.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/triangles(old)\/download.png": {
+		"ft": 32768,
+		"iS": 483608,
+		"oA": 0,
+		"oAP": "\/img\/triangles(old)\/download.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/triangles(old)\/joinery.png": {
+		"ft": 32768,
+		"iS": 344255,
+		"oA": 0,
+		"oAP": "\/img\/triangles(old)\/joinery.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/triangles(old)\/portfolio.png": {
+		"ft": 32768,
+		"iS": 178876,
+		"oA": 0,
+		"oAP": "\/img\/triangles(old)\/portfolio.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/triangles(old)\/products.png": {
+		"ft": 32768,
+		"iS": 197974,
+		"oA": 0,
+		"oAP": "\/img\/triangles(old)\/products.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/triangles(old)\/storage.png": {
+		"ft": 32768,
+		"iS": 51040,
+		"oA": 0,
+		"oAP": "\/img\/triangles(old)\/storage.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/triangles(old)\/sustainability.png": {
 		"ft": 32768,
 		"iS": 146598,
 		"oA": 0,
-		"oAP": "\/img\/triangles\/sustainability.png",
+		"oAP": "\/img\/triangles(old)\/sustainability.png",
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/triangles\/tables.png": {
+	"\/img\/triangles(old)\/tables.png": {
 		"ft": 32768,
 		"iS": 169347,
 		"oA": 0,
-		"oAP": "\/img\/triangles\/tables.png",
+		"oAP": "\/img\/triangles(old)\/tables.png",
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/triangles\/tech.png": {
+	"\/img\/triangles(old)\/tech.png": {
 		"ft": 32768,
 		"iS": 23367,
 		"oA": 0,
-		"oAP": "\/img\/triangles\/tech.png",
+		"oAP": "\/img\/triangles(old)\/tech.png",
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/triangles\/workstations.png": {
+	"\/img\/triangles(old)\/workstations.png": {
 		"ft": 32768,
 		"iS": 114715,
 		"oA": 0,
-		"oAP": "\/img\/triangles\/workstations.png",
+		"oAP": "\/img\/triangles(old)\/workstations.png",
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
@@ -820,41 +942,6 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/montage.sql",
-		"oF": 0
-		},
-	"\/temp\/index.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/temp\/index.html",
-		"oF": 0
-		},
-	"\/temp\/log-in.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/temp\/log-in.html",
-		"oF": 0
-		},
-	"\/temp\/product.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/temp\/product.html",
-		"oF": 0
-		},
-	"\/temp\/products.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/temp\/products.html",
-		"oF": 0
-		},
-	"\/temp\/results.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/temp\/results.html",
 		"oF": 0
 		},
 	"\/vendor\/autoload.php": {
