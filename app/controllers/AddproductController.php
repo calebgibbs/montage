@@ -217,15 +217,5 @@ class AddproductController extends PageController {
 			}else { 
 				header('Location: index.php?page=myRecipes');	
 			}
-
-
-		 
-
-
-
-
-
-		 
-
 	}
 } 

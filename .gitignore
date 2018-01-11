@@ -5,4 +5,6 @@ vendor/
 composer.lock 
 temp/ 
 app/partials/imagethumbbarattempt1.php
-img/triangles(old)/
+img/triangles(old)/ 
+img/products/large
+img/products/thumbnail
