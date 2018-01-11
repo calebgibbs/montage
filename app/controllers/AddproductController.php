@@ -1,5 +1,7 @@
-<?php  
+<?php 
+use Intervention\Image\ImageManager; 
 class AddproductController extends PageController { 
+	private $acceptableImageTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/bmp', 'image/tiff'];
 	public function __construct($dbc){ 
 		parent::__construct(); 
 		$this->dbc = $dbc; 
@@ -20,7 +22,7 @@ class AddproductController extends PageController {
 		$feat3 = $_POST['feat_3'];
 		$option1 = $_POST['opt_1'];
 		$option2 = $_POST['opt_2'];
-		$option3 = $_POST['opt_3']; 
+		$option3 = $_POST['opt_3'];  
 		$errors = 0; 
 
 		if (strlen($title) == 0) {
@@ -156,6 +158,44 @@ class AddproductController extends PageController {
 			$this->data['opt10Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
 			$errors++;	
 		} 
+
+		if( in_array( $_FILES['image1']['error'], [1,3,4] ) ) {
+			$this->data['image1message'] = '<span style="color: #d9534f">*Image failed to upload</span>';
+			$errors++; 
+		}elseif( !in_array( $_FILES['image1']['type'], $this->acceptableImageTypes ) ) {  
+			$this->data['image1message'] = '<span style="color: #d9534f">*You must upload a valid image</span>'; 
+			$errors++;
+		}
+
+		if( in_array( $_FILES['image2']['error'], [1,3] ) ) {
+			$this->data['image2message'] = '<span style="color: #d9534f">*Image failed to upload</span>';
+			$errors++; 
+		}elseif( !in_array( $_FILES['image2']['type'], $this->acceptableImageTypes ) ) {  
+			$this->data['image2message'] = '<span style="color: #d9534f">*You must upload a valid image</span>'; 
+			$errors++;
+		}
+		if( in_array( $_FILES['image3']['error'], [1,3] ) ) {
+			$this->data['image3message'] = '<span style="color: #d9534f">*Image failed to upload</span>';
+			$errors++; 
+		}elseif( !in_array( $_FILES['image3']['type'], $this->acceptableImageTypes ) ) {  
+			$this->data['image3message'] = '<span style="color: #d9534f">*You must upload a valid image</span>'; 
+			$errors++;
+		}
+		if( in_array( $_FILES['image4']['error'], [1,3] ) ) {
+			$this->data['image4message'] = '<span style="color: #d9534f">*Image failed to upload</span>';
+			$errors++; 
+		}elseif( !in_array( $_FILES['image4']['type'], $this->acceptableImageTypes ) ) {  
+			$this->data['image4message'] = '<span style="color: #d9534f">*You must upload a valid image</span>'; 
+			$errors++;
+		}
+		if( in_array( $_FILES['image5']['error'], [1,3] ) ) {
+			$this->data['image5message'] = '<span style="color: #d9534f">*Image failed to upload</span>';
+			$errors++; 
+		}elseif( !in_array( $_FILES['image5']['type'], $this->acceptableImageTypes ) ) {  
+			$this->data['image5message'] = '<span style="color: #d9534f">*You must upload a valid image</span>'; 
+			$errors++;
+		}
+
 		if ($errors == 0) {
 			$this->ProcessProduct();
 		}
@@ -185,7 +225,7 @@ class AddproductController extends PageController {
 
 		for($i = 1; $i <= 10; $i++){ 
 			if(${'feat'.$i} != ''){ 
-				$sql = "INSERT INTO product_features(product_id, feature) VALUES('$productId', '${'feat'.$i}')"; 
+				$sql = "INSERT INTO product_features(product_id, feature, position) VALUES('$productId', '${'feat'.$i}', '$i')"; 
 				$this->dbc->query($sql);
 			}
 		} 
@@ -203,11 +243,37 @@ class AddproductController extends PageController {
 
 		for($i = 1; $i <= 10; $i++){ 
 			if(${'option'.$i} != ''){ 
-				$sql = "INSERT INTO product_options(product_id, product_option) VALUES('$productId', '${'option'.$i}')"; 
+				$sql = "INSERT INTO product_options(product_id, product_option, position) VALUES('$productId', '${'option'.$i}', '$i')"; 
 				$this->dbc->query($sql);
 			}
-		} 
+		}  
 
+		$image1 = $_FILES['image1'];
+		$image2 = $_FILES['image2'];
+		$image3 = $_FILES['image3'];
+		$image4 = $_FILES['image4'];
+		$image5 = $_FILES['image5']; 
+
+		for($i = 1; $i <= 5; $i++){ 
+			if(!in_array(${'image'.$i}['error'],[4])) {
+				$manager = new ImageManager();
+				$image = $manager->make( ${'image'.$i}['tmp_name'] );   
+
+				$fileExtension = $this->getFileExtension( $image->mime() ); 
+
+				$fileName = uniqid(); 
+
+				$image->resize(250, 150); 
+				$image->save("img/products/thumbnail/$fileName$fileExtension");  
+
+				$image->resize(770, 400); 
+				$image->save("img/products/large/$fileName$fileExtension"); 
+
+				$sql = "INSERT INTO images(product_id, image, image_position) VALUES( '$productId', '$fileName$fileExtension', '$i' )";  
+				$this->dbc->query($sql);
+			}
+		}  
+		
 		if($this->dbc->affected_rows) { 
 				//locate to new page 
 			$this->data['failMessage'] = '<h2 style="color: #d9534f"><b>Something went wrong! <br />
@@ -217,5 +283,31 @@ class AddproductController extends PageController {
 			}else { 
 				header('Location: index.php?page=myRecipes');	
 			}
+	} 
+
+	private function getFileExtension( $mimeType ) {
+
+		switch($mimeType) {
+
+			case 'image/png':
+				return '.png';
+			break;
+
+			case 'image/gif':
+				return '.gif';
+			break;
+
+			case 'image/jpeg':
+				return '.jpg';
+			break;
+
+			case 'image/bmp':
+				return '.bmp';
+			break;
+
+			case 'image/tiff':
+				return '.tif';
+			break;
+		}
 	}
 } 

@@ -161,6 +161,28 @@ $prevPage = $_SERVER['REQUEST_URI'];
 					<input type="text" class="inputText" name="opt_10" value="<?= isset($_POST['opt_10']) ? $_POST['opt_10'] : '' ?>" required />
 					<span class="floating-label">Option 10 <?=  isset($opt10Message) ? $opt10Message : '' ?></span>
 				</div> 
+			</div> 
+			<div class="form-images">
+				<div class="image-upload">
+					<span>Main Image <?=  isset($image1message) ? $image1message : '' ?></span>
+					<input type="file" name="image1" accept="image/*">
+				</div>
+				<div class="form-input image-upload">
+					<span>Image 2 <?=  isset($image2message) ? $image2message : '' ?></span>
+					<input type="file" name="image2" accept="image/*">
+				</div>
+				<div class="form-input image-upload">
+					<span>Image 3 <?=  isset($image3message) ? $image3message : '' ?></span>
+					<input type="file" name="image3" accept="image/*">
+				</div>
+				<div class="form-input image-upload">
+					<span>Image 4 <?=  isset($image4message) ? $image4message : '' ?></span>
+					<input type="file" name="image4" accept="image/*">
+				</div>
+				<div class="form-input image-upload">
+					<span>Image 5 <?=  isset($image5message) ? $image5message : '' ?></span>
+					<input type="file" name="image5" accept="image/*">
+				</div>
 			</div>
 			<div>
 				<button type="submit" name="addProduct">add product</button>
