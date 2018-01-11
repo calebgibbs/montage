@@ -276,12 +276,12 @@ class AddproductController extends PageController {
 		
 		if($this->dbc->affected_rows) { 
 				//locate to new page 
-			$this->data['failMessage'] = '<h2 style="color: #d9534f"><b>Something went wrong! <br />
-				<i>The product could not be processed at this time <br />
-				Please try again later</i></b></h2>';
+				header('Location: index.php?page=myRecipes');
 				
 			}else { 
-				header('Location: index.php?page=myRecipes');	
+				$this->data['failMessage'] = '<h2 style="color: #d9534f"><b>Something went wrong! <br />
+				<i>The product could not be processed at this time <br />
+				Please try again later</i></b></h2>'; 		
 			}
 	} 
 

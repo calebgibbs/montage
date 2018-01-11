@@ -10,13 +10,21 @@ $this -> layout('master',[
 			<div id="left-col">
 				<div class="product-images">
 					<div class="large-img">
-						<img id="dispayImg" src="img/products/large/img1.png">
+						<?php foreach( $Allimages as $image ): ?>
+						<?php if( $image['image_position'] == 1 ): ?> 
+						<img id="dispayImg" src="img/products/large/<?= $image['image'] ?>"> 
+						<?php endif ?>
+						<?php endforeach ?>
 					</div> 
 					<div class="img-thumb">
 						<ol> 
-							<li><img class="img-thumb" src="img/products/thumbnail/img1.png" onClick="ChangeImage('img/products/large/img1.png')"></li>
-							<li><img class="img-thumb" src="img/products/thumbnail/img2.png" onClick="ChangeImage('img/products/large/img2.png')"></li> 
-							<li><img class="img-thumb" src="img/products/thumbnail/img3.png" onClick="ChangeImage('img/products/large/img3.png')"></li>
+							<?php foreach( $Allimages as $image): ?> 
+								<?php for( $i = 1; $i <= 5; $i++ ): ?> 
+									<?php if( $image['image_position'] == $i ): ?>  
+										<li><img class="img-thumb" src="img/products/thumbnail/<?= $image['image'] ?>" onClick="ChangeImage('img/products/large/<?= $image['image'] ?>')"></li>
+									<?php endif ?>
+								<?php endfor ?>
+							<?php endforeach; ?>
 						</ol>
 					</div>
 				</div> 
@@ -24,32 +32,31 @@ $this -> layout('master',[
 			<div id="right-col">
 				<div class="product-text">
 					<div class="title-text">
-						<h1>Chorus</h1> 
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <div class="view-more"></div></p>
+						<h1><?= $product['title'] ?></h1> 
+						<p><?= $product['description'] ?><div class="view-more"></div></p>
 						</div> 
 						<div class="prod-features">
 							<h2>Features</h2> 
 							<ul class="product-list">
-								<li>1</li>
-								<li>2</li>
-								<li>3</li>
-								<li>4</li>
-								<li>5</li>
+								<?php foreach( $Allfeatures as $feature): ?> 
+									<?php for( $i = 1; $i <= 10; $i++ ): ?> 
+										<?php if( $feature['position'] == $i ): ?>  
+											<li><?= $feature['feature'] ?></li>
+										<?php endif ?>
+									<?php endfor ?>
+								<?php endforeach; ?>
 							</ul>
 						</div>	 
 						<div class="prod-options">
 							<h2>Options</h2> 
 							<ul class="product-list">
-								<li>1</li>
-								<li>2</li>
-								<li>3</li>
-								<li>4</li>
-								<li>5</li>
+								<?php foreach( $Alloptions as $option): ?> 
+									<?php for( $i = 1; $i <= 10; $i++ ): ?> 
+										<?php if( $option['position'] == $i ): ?>  
+											<li><?= $option['product_option'] ?></li>
+										<?php endif ?>
+									<?php endfor ?>
+								<?php endforeach; ?>
 							</ul>	
 						</div>
 					</div>
