@@ -14,7 +14,6 @@ class AddproductController extends PageController {
 
 	private function validateForm(){ 
 		$title = $_POST['title']; 
-		$cateogry = $_POST['category'];
 		$desc = $_POST['desc'];
 		$feat1 = $_POST['feat_1']; 
 		$feat2 = $_POST['feat_2'];
@@ -163,6 +162,70 @@ class AddproductController extends PageController {
 	}  
 
 	private function ProcessProduct(){ 
-		die('processing');
+		$title = $this->dbc->real_escape_string($_POST['title']);
+		$desc = $this->dbc->real_escape_string($_POST['desc']);
+		$category = $this->dbc->real_escape_string($_POST['category']);
+		$sql = "INSERT INTO products(title, description, category) VALUES('$title', '$desc', '$category')";  
+		$this->dbc->query($sql); 
+		$sql = "SELECT id FROM products WHERE title = '$title' AND description = '$desc' AND category = '$category'"; 
+		$result = $this->dbc->query($sql); $productId = $result->fetch_assoc();  
+		
+		$productId = $productId['id'];   
+
+		$feat1 = $this->dbc->real_escape_string($_POST['feat_1']); 
+		$feat2 = $this->dbc->real_escape_string($_POST['feat_2']); 
+		$feat3 = $this->dbc->real_escape_string($_POST['feat_3']);
+		$feat4 = $this->dbc->real_escape_string($_POST['feat_4']);
+		$feat5 = $this->dbc->real_escape_string($_POST['feat_5']);
+		$feat6 = $this->dbc->real_escape_string($_POST['feat_6']);
+		$feat7 = $this->dbc->real_escape_string($_POST['feat_7']);
+		$feat8 = $this->dbc->real_escape_string($_POST['feat_8']);
+		$feat9 = $this->dbc->real_escape_string($_POST['feat_9']);
+		$feat10 = $this->dbc->real_escape_string($_POST['feat_10']); 
+
+		for($i = 1; $i <= 10; $i++){ 
+			if(${'feat'.$i} != ''){ 
+				$sql = "INSERT INTO product_features(product_id, feature) VALUES('$productId', '${'feat'.$i}')"; 
+				$this->dbc->query($sql);
+			}
+		} 
+
+		$option1 = $this->dbc->real_escape_string($_POST['opt_1']);
+		$option2 = $this->dbc->real_escape_string($_POST['opt_2']);
+		$option3 = $this->dbc->real_escape_string($_POST['opt_3']);
+		$option4 = $this->dbc->real_escape_string($_POST['opt_4']);
+		$option5 = $this->dbc->real_escape_string($_POST['opt_5']);
+		$option6 = $this->dbc->real_escape_string($_POST['opt_6']);
+		$option7 = $this->dbc->real_escape_string($_POST['opt_7']);
+		$option8 = $this->dbc->real_escape_string($_POST['opt_8']);
+		$option9 = $this->dbc->real_escape_string($_POST['opt_9']);
+		$option10 = $this->dbc->real_escape_string($_POST['opt_10']); 
+
+		for($i = 1; $i <= 10; $i++){ 
+			if(${'option'.$i} != ''){ 
+				$sql = "INSERT INTO product_options(product_id, product_option) VALUES('$productId', '${'option'.$i}')"; 
+				$this->dbc->query($sql);
+			}
+		} 
+
+		if($this->dbc->affected_rows) { 
+				//locate to new page 
+			$this->data['failMessage'] = '<h2 style="color: #d9534f"><b>Something went wrong! <br />
+				<i>The product could not be processed at this time <br />
+				Please try again later</i></b></h2>';
+				
+			}else { 
+				header('Location: index.php?page=myRecipes');	
+			}
+
+
+		 
+
+
+
+
+
+		 
+
 	}
 } 

@@ -7,7 +7,8 @@ $prevPage = $_SERVER['REQUEST_URI'];
 ?>
 <div class="body">  
 	<div id="addp"> 
-		<h1>Add a new product <?=  isset($h1Message) ? $h1Message : '' ?></h1>
+		<h1>Add a new product</h1> 
+		<?=  isset($failMessage) ? $failMessage : '' ?>
 		<form enctype="multipart/form-data" method="post" action="index.php?page=add_product" novalidate>
 			<div class="form-input">
 				<input type="text" class="inputText" name="title" value="<?= isset($_POST['title']) ? $_POST['title'] : '' ?>" required />
