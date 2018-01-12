@@ -61,6 +61,7 @@ $prevPage = $_SERVER['REQUEST_URI'];
 				<span class="floating-label">Product description  <?=  isset($descMessage) ? $descMessage : '' ?></span>
 			</div> 
 			<div class="form-features">
+				<h2>Product Features</h2>
 				<div class="form-input">
 					<input type="text" class="inputText" name="feat_1" value="<?= isset($_POST['feat_1']) ? $_POST['feat_1'] : '' ?>" required />
 					<span class="floating-label">Feature 1 <?=  isset($feat1Message) ? $feat1Message : '' ?></span>
@@ -111,7 +112,8 @@ $prevPage = $_SERVER['REQUEST_URI'];
 					<span class="floating-label">Feature 10 <?=  isset($feat10Message) ? $feat10Message : '' ?></span>
 				</div> 
 			</div> 
-			<div class="form-options">
+			<div class="form-options"> 
+				<h2>Product Options</h2>
 				<div class="form-input">
 					<input type="text" class="inputText" name="opt_1" value="<?= isset($_POST['opt_1']) ? $_POST['opt_1'] : '' ?>" required />
 					<span class="floating-label">Option 1 <?=  isset($opt1Message) ? $opt1Message : '' ?></span>
@@ -162,7 +164,8 @@ $prevPage = $_SERVER['REQUEST_URI'];
 					<span class="floating-label">Option 10 <?=  isset($opt10Message) ? $opt10Message : '' ?></span>
 				</div> 
 			</div> 
-			<div class="form-images">
+			<div class="form-images"> 
+				<h2>Product Images</h2>
 				<div class="image-upload">
 					<span>Main Image <?=  isset($image1message) ? $image1message : '' ?></span>
 					<input type="file" name="image1" accept="image/*">

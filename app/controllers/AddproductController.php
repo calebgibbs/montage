@@ -276,7 +276,7 @@ class AddproductController extends PageController {
 		
 		if($this->dbc->affected_rows) { 
 				//locate to new page 
-				header('Location: index.php?page=myRecipes');
+				header('Location: index.php?page=product&productnum='.$productId);
 				
 			}else { 
 				$this->data['failMessage'] = '<h2 style="color: #d9534f"><b>Something went wrong! <br />

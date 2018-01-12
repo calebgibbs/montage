@@ -1,7 +1,8 @@
 html {
   margin: 0;
   padding: 0;
-  background: #fff; }
+  background: #fff;
+  overflow-x: hidden; }
 
 body {
   margin: 0;
@@ -613,18 +614,17 @@ figure {
 
 #product-theme {
   width: 100%;
-  min-height: 900px;
   padding: 0;
   margin: 0;
   padding-top: 4rem;
   padding-bottom: 2rem; }
 
 .chair {
-  background: url(../img/products/themes/red.png) no-repeat center right fixed; }
+  background: url(../img/products/themes/red.png) no-repeat center right;
+  background-size: 100%; }
 
 #page-padding {
-  color: #242424;
-  max-height: 900px; }
+  color: #242424; }
   #page-padding h1 {
     font-size: 3rem;
     margin-top: 0;

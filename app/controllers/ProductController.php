@@ -3,7 +3,10 @@ class ProductController extends PageController {
 	public function __construct($dbc){ 
 		parent::__construct(); 
 		$this->dbc = $dbc; 
-		$this->getProductData();
+		$this->getProductData(); 
+		if (isset($_GET['delete'])) {
+			$this->deleteProduct();
+		}
 	}  
 	public function buildHTML(){ 
 		echo $this->plates->render('product', $this->data);
@@ -32,5 +35,33 @@ class ProductController extends PageController {
 		$sql = "SELECT image, image_position FROM images WHERE product_id = '$productId'";
 		$result = $this->dbc->query($sql);
 		$this->data['Allimages'] = $result->fetch_all(MYSQLI_ASSOC);
+	} 
+
+	private function deleteProduct(){ 
+		$productId = $this->dbc->real_escape_string($_GET['productnum']);
+		if($_SESSION['account_type'] == 'admin') {
+		
+			$sql = "SELECT id, image FROM images WHERE product_id = '$productId'"; 
+			$result = $this->dbc->query($sql); 
+			if( !$result || $result->num_rows == 0 ) {
+				return;
+			}
+ 			
+ 			$images = $result->fetch_all(MYSQLI_ASSOC); 
+
+ 			foreach ($images as $image) {
+ 				$filename = $image['image']; 
+				unlink("img/products/large/$filename");
+ 				unlink("img/products/thumbnail/$filename"); 
+ 			}  
+
+ 			$sql = "DELETE FROM products WHERE id = '$productId'"; 
+ 			$this->dbc->query($sql); 
+
+ 			header('Location: index.php?page=home');
+
+		}else{ 
+			header('Location: index.php?page=product&productnum='.$productId);
+		}
 	} 
 }
