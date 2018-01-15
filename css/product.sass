@@ -27,7 +27,8 @@
 		text-transform: uppercase
 	p 
 		font-size: 1.2rem 
-		font-weight: lighter 
+		font-weight: lighter  
+		width: 95%
 
 #left-col 
 	width: 55%  
@@ -37,7 +38,9 @@
 #right-col 
 	width: 44%  
 	display: inline-block 
-	vertical-align: top 
+	vertical-align: top  
+	li 
+		width: 95%
 
 
 .product-images 
@@ -120,4 +123,28 @@
 		li 
 			img 
 				width: 215px  
-				height: 115px
+				height: 115px 
+
+@include desktop-sm  
+	.large-img   
+		// background: red
+		img  
+			width: 700px 
+			margin-left: 4.3% 
+	.img-thumb 
+		img 
+			width: 225px 
+
+	#page-padding 
+		h1 
+			font-size: 2.8rem  
+			margin-left: -1.3rem
+		h2 
+			font-size: 1.8rem  
+		p 
+			font-size: 1.1rem  
+	.product-images 
+		ol 
+			margin-left: 4.3%
+
+

@@ -94,6 +94,11 @@ switch($page){
 	case 'add_product':
 		require 'app/controllers/AddproductController.php'; 
 		$controller = new AddproductController($dbc);	 
+	break; 
+
+	case 'edit':
+		require 'app/controllers/EditProductController.php'; 
+		$controller = new EditProductController($dbc);	 
 	break;
 
 	default:

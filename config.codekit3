@@ -37,6 +37,13 @@
 		"oAP": "\/app\/controllers\/ContactInfoController.php",
 		"oF": 0
 		},
+	"\/app\/controllers\/EditProductController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/EditProductController.php",
+		"oF": 0
+		},
 	"\/app\/controllers\/Error404Controller.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -142,6 +149,13 @@
 		"oAP": "\/app\/partials\/contactinfo.php",
 		"oF": 0
 		},
+	"\/app\/partials\/editProduct.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/editProduct.php",
+		"oF": 0
+		},
 	"\/app\/partials\/error404.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -168,13 +182,6 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/app\/partials\/home.php",
-		"oF": 0
-		},
-	"\/app\/partials\/imagethumbbarattempt1.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/app\/partials\/imagethumbbarattempt1.php",
 		"oF": 0
 		},
 	"\/app\/partials\/login.php": {
@@ -210,13 +217,6 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/app\/partials\/myaccount.php",
-		"oF": 0
-		},
-	"\/app\/partials\/nav-save.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/app\/partials\/nav-save.php",
 		"oF": 0
 		},
 	"\/app\/partials\/nav.php": {
@@ -579,212 +579,58 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/products\/large\/5a580599b6420.png": {
-		"ft": 32768,
-		"iS": 114532,
-		"oA": 0,
-		"oAP": "\/img\/products\/large\/5a580599b6420.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/products\/large\/5a580599d314c.png": {
-		"ft": 32768,
-		"iS": 2136,
-		"oA": 0,
-		"oAP": "\/img\/products\/large\/5a580599d314c.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/products\/large\/5a580599e814a.png": {
-		"ft": 32768,
-		"iS": 2136,
-		"oA": 0,
-		"oAP": "\/img\/products\/large\/5a580599e814a.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/products\/large\/5a58059a0fe89.png": {
-		"ft": 32768,
-		"iS": 2136,
-		"oA": 0,
-		"oAP": "\/img\/products\/large\/5a58059a0fe89.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/products\/large\/5a58059a290cb.png": {
-		"ft": 32768,
-		"iS": 2136,
-		"oA": 0,
-		"oAP": "\/img\/products\/large\/5a58059a290cb.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/products\/large\/5a580cbbdc5d0.png": {
-		"ft": 32768,
-		"iS": 71000,
-		"oA": 0,
-		"oAP": "\/img\/products\/large\/5a580cbbdc5d0.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/products\/large\/5a580cbbf3c2b.png": {
-		"ft": 32768,
-		"iS": 75950,
-		"oA": 0,
-		"oAP": "\/img\/products\/large\/5a580cbbf3c2b.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/products\/large\/5a580cbc12214.png": {
-		"ft": 32768,
-		"iS": 79475,
-		"oA": 0,
-		"oAP": "\/img\/products\/large\/5a580cbc12214.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/products\/large\/5a580cbc4d750.png": {
+	"\/img\/products\/large\/5a5bd5c100326.png": {
 		"ft": 32768,
 		"iS": 127636,
 		"oA": 0,
-		"oAP": "\/img\/products\/large\/5a580cbc4d750.png",
+		"oAP": "\/img\/products\/large\/5a5bd5c100326.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/products\/large\/5a580cbc93fd7.png": {
+	"\/img\/products\/large\/5a5bd5c142ce8.png": {
 		"ft": 32768,
 		"iS": 101093,
 		"oA": 0,
-		"oAP": "\/img\/products\/large\/5a580cbc93fd7.png",
+		"oAP": "\/img\/products\/large\/5a5bd5c142ce8.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/products\/large\/5a580d460256e.png": {
+	"\/img\/products\/large\/5a5bd5c184cc2.png": {
 		"ft": 32768,
-		"iS": 71000,
+		"iS": 111595,
 		"oA": 0,
-		"oAP": "\/img\/products\/large\/5a580d460256e.png",
+		"oAP": "\/img\/products\/large\/5a5bd5c184cc2.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/products\/large\/5a580d4616eb7.png": {
+	"\/img\/products\/large\/5a5bd5c1ca9bb.png": {
 		"ft": 32768,
-		"iS": 75950,
+		"iS": 111595,
 		"oA": 0,
-		"oAP": "\/img\/products\/large\/5a580d4616eb7.png",
+		"oAP": "\/img\/products\/large\/5a5bd5c1ca9bb.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/products\/large\/5a580d462aa4a.png": {
+	"\/img\/products\/large\/5a5bd5c219e27.png": {
 		"ft": 32768,
-		"iS": 79475,
+		"iS": 101284,
 		"oA": 0,
-		"oAP": "\/img\/products\/large\/5a580d462aa4a.png",
+		"oAP": "\/img\/products\/large\/5a5bd5c219e27.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/products\/large\/5a580d467024b.png": {
-		"ft": 32768,
-		"iS": 127636,
-		"oA": 0,
-		"oAP": "\/img\/products\/large\/5a580d467024b.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/products\/large\/5a580d46ad26d.png": {
-		"ft": 32768,
-		"iS": 101093,
-		"oA": 0,
-		"oAP": "\/img\/products\/large\/5a580d46ad26d.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/products\/large\/img1.png": {
-		"ft": 32768,
-		"iS": 2036,
-		"oA": 0,
-		"oAP": "\/img\/products\/large\/img1.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/products\/large\/img2.png": {
-		"ft": 32768,
-		"iS": 2139,
-		"oA": 0,
-		"oAP": "\/img\/products\/large\/img2.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/products\/large\/img3.png": {
-		"ft": 32768,
-		"iS": 2484,
-		"oA": 0,
-		"oAP": "\/img\/products\/large\/img3.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/products\/themes\/chairs.png": {
-		"ft": 32768,
-		"iS": 25616,
-		"oA": 0,
-		"oAP": "\/img\/products\/themes\/chairs.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -799,344 +645,58 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/products\/thumbnail\/5a580599b6420.png": {
-		"ft": 32768,
-		"iS": 38511,
-		"oA": 0,
-		"oAP": "\/img\/products\/thumbnail\/5a580599b6420.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/products\/thumbnail\/5a580599d314c.png": {
-		"ft": 32768,
-		"iS": 520,
-		"oA": 0,
-		"oAP": "\/img\/products\/thumbnail\/5a580599d314c.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/products\/thumbnail\/5a580599e814a.png": {
-		"ft": 32768,
-		"iS": 520,
-		"oA": 0,
-		"oAP": "\/img\/products\/thumbnail\/5a580599e814a.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/products\/thumbnail\/5a58059a0fe89.png": {
-		"ft": 32768,
-		"iS": 520,
-		"oA": 0,
-		"oAP": "\/img\/products\/thumbnail\/5a58059a0fe89.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/products\/thumbnail\/5a58059a290cb.png": {
-		"ft": 32768,
-		"iS": 520,
-		"oA": 0,
-		"oAP": "\/img\/products\/thumbnail\/5a58059a290cb.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/products\/thumbnail\/5a580cbbdc5d0.png": {
-		"ft": 32768,
-		"iS": 20921,
-		"oA": 0,
-		"oAP": "\/img\/products\/thumbnail\/5a580cbbdc5d0.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/products\/thumbnail\/5a580cbbf3c2b.png": {
-		"ft": 32768,
-		"iS": 23835,
-		"oA": 0,
-		"oAP": "\/img\/products\/thumbnail\/5a580cbbf3c2b.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/products\/thumbnail\/5a580cbc12214.png": {
-		"ft": 32768,
-		"iS": 25242,
-		"oA": 0,
-		"oAP": "\/img\/products\/thumbnail\/5a580cbc12214.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/products\/thumbnail\/5a580cbc4d750.png": {
+	"\/img\/products\/thumbnail\/5a5bd5c100326.png": {
 		"ft": 32768,
 		"iS": 42295,
 		"oA": 0,
-		"oAP": "\/img\/products\/thumbnail\/5a580cbc4d750.png",
+		"oAP": "\/img\/products\/thumbnail\/5a5bd5c100326.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/products\/thumbnail\/5a580cbc93fd7.png": {
+	"\/img\/products\/thumbnail\/5a5bd5c142ce8.png": {
 		"ft": 32768,
 		"iS": 33619,
 		"oA": 0,
-		"oAP": "\/img\/products\/thumbnail\/5a580cbc93fd7.png",
+		"oAP": "\/img\/products\/thumbnail\/5a5bd5c142ce8.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/products\/thumbnail\/5a580d460256e.png": {
+	"\/img\/products\/thumbnail\/5a5bd5c184cc2.png": {
 		"ft": 32768,
-		"iS": 20921,
+		"iS": 37468,
 		"oA": 0,
-		"oAP": "\/img\/products\/thumbnail\/5a580d460256e.png",
+		"oAP": "\/img\/products\/thumbnail\/5a5bd5c184cc2.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/products\/thumbnail\/5a580d4616eb7.png": {
+	"\/img\/products\/thumbnail\/5a5bd5c1ca9bb.png": {
 		"ft": 32768,
-		"iS": 23835,
+		"iS": 37468,
 		"oA": 0,
-		"oAP": "\/img\/products\/thumbnail\/5a580d4616eb7.png",
+		"oAP": "\/img\/products\/thumbnail\/5a5bd5c1ca9bb.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/products\/thumbnail\/5a580d462aa4a.png": {
+	"\/img\/products\/thumbnail\/5a5bd5c219e27.png": {
 		"ft": 32768,
-		"iS": 25242,
+		"iS": 33679,
 		"oA": 0,
-		"oAP": "\/img\/products\/thumbnail\/5a580d462aa4a.png",
+		"oAP": "\/img\/products\/thumbnail\/5a5bd5c219e27.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/products\/thumbnail\/5a580d467024b.png": {
-		"ft": 32768,
-		"iS": 42295,
-		"oA": 0,
-		"oAP": "\/img\/products\/thumbnail\/5a580d467024b.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/products\/thumbnail\/5a580d46ad26d.png": {
-		"ft": 32768,
-		"iS": 33619,
-		"oA": 0,
-		"oAP": "\/img\/products\/thumbnail\/5a580d46ad26d.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/products\/thumbnail\/img1.png": {
-		"ft": 32768,
-		"iS": 3598,
-		"oA": 0,
-		"oAP": "\/img\/products\/thumbnail\/img1.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/products\/thumbnail\/img2.png": {
-		"ft": 32768,
-		"iS": 533,
-		"oA": 0,
-		"oAP": "\/img\/products\/thumbnail\/img2.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/products\/thumbnail\/img3.png": {
-		"ft": 32768,
-		"iS": 537,
-		"oA": 0,
-		"oAP": "\/img\/products\/thumbnail\/img3.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/triangles(old)\/about.png": {
-		"ft": 32768,
-		"iS": 103390,
-		"oA": 0,
-		"oAP": "\/img\/triangles(old)\/about.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/triangles(old)\/agile.png": {
-		"ft": 32768,
-		"iS": 259165,
-		"oA": 0,
-		"oAP": "\/img\/triangles(old)\/agile.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/triangles(old)\/bottom.png": {
-		"ft": 32768,
-		"iS": 239264,
-		"oA": 0,
-		"oAP": "\/img\/triangles(old)\/bottom.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/triangles(old)\/chairs.png": {
-		"ft": 32768,
-		"iS": 117055,
-		"oA": 0,
-		"oAP": "\/img\/triangles(old)\/chairs.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/triangles(old)\/download.png": {
-		"ft": 32768,
-		"iS": 483608,
-		"oA": 0,
-		"oAP": "\/img\/triangles(old)\/download.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/triangles(old)\/joinery.png": {
-		"ft": 32768,
-		"iS": 344255,
-		"oA": 0,
-		"oAP": "\/img\/triangles(old)\/joinery.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/triangles(old)\/portfolio.png": {
-		"ft": 32768,
-		"iS": 178876,
-		"oA": 0,
-		"oAP": "\/img\/triangles(old)\/portfolio.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/triangles(old)\/products.png": {
-		"ft": 32768,
-		"iS": 197974,
-		"oA": 0,
-		"oAP": "\/img\/triangles(old)\/products.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/triangles(old)\/storage.png": {
-		"ft": 32768,
-		"iS": 51040,
-		"oA": 0,
-		"oAP": "\/img\/triangles(old)\/storage.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/triangles(old)\/sustainability.png": {
-		"ft": 32768,
-		"iS": 146598,
-		"oA": 0,
-		"oAP": "\/img\/triangles(old)\/sustainability.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/triangles(old)\/tables.png": {
-		"ft": 32768,
-		"iS": 169347,
-		"oA": 0,
-		"oAP": "\/img\/triangles(old)\/tables.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/triangles(old)\/tech.png": {
-		"ft": 32768,
-		"iS": 23367,
-		"oA": 0,
-		"oAP": "\/img\/triangles(old)\/tech.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/triangles(old)\/workstations.png": {
-		"ft": 32768,
-		"iS": 114715,
-		"oA": 0,
-		"oAP": "\/img\/triangles(old)\/workstations.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
