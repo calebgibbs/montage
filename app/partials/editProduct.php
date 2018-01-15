@@ -10,7 +10,7 @@ $prevPage = $_SERVER['REQUEST_URI'];
 		<h1><a href="index.php?page=product&productnum=<?= $product['id'] ?>"><?= $product['title'] ?></a></h1> 
 		<h3><?= $image5['image'] ?></h3>  
 		<?=  isset($failMessage) ? $failMessage : '' ?>
-		<form enctype="multipart/form-data" method="post" action="index.php?page=add_product" novalidate>
+		<form enctype="multipart/form-data" method="post" action="index.php?page=edit&product=<?= $product['id'] ?>" novalidate>
 			<div class="form-input">
 				<input type="text" class="inputText" name="title" value="<?= isset($_POST['title']) ? $_POST['title'] : $product['title'] ?>" required />
 				<span class="floating-label">Product Title <?=  isset($titleMessage) ? $titleMessage : '' ?></span>
@@ -41,7 +41,7 @@ $prevPage = $_SERVER['REQUEST_URI'];
 							$valueName = "Select category";	
 						}
 						?> 
-						<option value="<?= $_POST['category'] ?>"><?= $valueName ?></option> 
+						<option value="<?= $product['category'] ?>"><?= $valueName ?></option> 
 					<?php endif ?>
 					<?php if(isset($_POST['category'])): ?>  
 						<?php 
@@ -217,7 +217,7 @@ $prevPage = $_SERVER['REQUEST_URI'];
 				</div>
 			</div>
 			<div>
-				<button type="submit" name="addProduct">add product</button>
+				<button type="submit" name="makeChanges">Make Changes</button>
 			</div>
 		</form>
 	</div>
