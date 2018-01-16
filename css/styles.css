@@ -372,6 +372,21 @@ nav {
     cursor: pointer; }
     .buttons button:hover {
       background: #84B025; }
+  .buttons a {
+    padding: 0.8rem;
+    text-align: center;
+    background: rgba(132, 176, 37, 0.9);
+    margin-bottom: 10px !important;
+    margin-left: 10%;
+    width: 75.5% !important;
+    font-size: 1.3rem;
+    color: #fff;
+    transition: 0.2s;
+    cursor: pointer;
+    display: block;
+    text-decoration: none; }
+    .buttons a:hover {
+      background: #84B025; }
 
 #favourites form input {
   width: 80%;
@@ -436,6 +451,11 @@ nav {
     cursor: pointer; }
     #signup-form form button:hover {
       background: #84B025; }
+
+.input-message {
+  margin-top: 10px !important;
+  color: #d9534f;
+  display: block; }
 
 .top {
   margin-top: 1rem; }

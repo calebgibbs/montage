@@ -5,17 +5,19 @@
 		</div>  
 		<div id="login-form">
 			<button class="link-btn back-btn">&#8592; Favourites</button>
-			<form id="logmein" method="post"> 
+			<form id="logmein" method="post" action="app/controllers/LoginController.php"> 
 				<div>
-					<input type="email" name="email" class="inputText" required value="<?= isset($_POST['email']) ? $_POST['email'] : '' ?>"> 
+					<input type="email" id="email" name="email" class="inputText" required"> 
 					<span class="floating-label">Email</span>
+					<span class="input-message" id="email-message"></span>
 				</div>
 				<div>
-					<input type="password" name="password" class="inputText" required value="<?= isset($_POST['email']) ? $_POST['email'] : '' ?>"> 
+					<input type="password" id="password" name="password" class="inputText" required"> 
 					<span class="floating-label">Password</span>
+					<span class="input-message" id="password-message"></span>
 				</div> 
 				<div>
-					<button>Sign in</button>
+					<button id="log-in-button" name="login">Sign in</button>
 				</div>
 			</form> 
 			<button class="link-btn" id="gtsu">Don't have an account? <i>Sign up</i></button>
@@ -50,12 +52,19 @@
 			<button class="link-btn" id="gtli" >Already have an account? <i>Log in</i></button>
 		</div>
 		<div class="buttons">
+		<?php if(!isset($_SESSION['id'])): ?>
 			<div>
-				<button id="login-trig">Log in</button>
+				<button id="login-trig">Sign in</button>
 			</div> 
 			<div>
 				<button id="signup-trig">Sign up</button>
 			</div>
+		<?php endif ?> 
+		<?php if(isset($_SESSION['id'])): ?>
+			<div>
+				<a href="index.php?page=logout">Log out</a>
+			</div>
+		<?php endif ?>
 		</div>
 	</div> 
 </div>

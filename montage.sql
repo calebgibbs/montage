@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 11, 2018 at 10:26 AM
+-- Generation Time: Jan 16, 2018 at 07:44 PM
 -- Server version: 5.7.17
 -- PHP Version: 7.1.7
 
@@ -33,6 +33,30 @@ CREATE TABLE `images` (
   `image_position` enum('1','2','3','4','5') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `images`
+--
+
+INSERT INTO `images` (`id`, `product_id`, `image`, `image_position`) VALUES
+(1, 1, '5a5bd5c100326.png', '1'),
+(2, 1, '5a5bd5c142ce8.png', '2'),
+(3, 1, '5a5bd5c184cc2.png', '3'),
+(4, 1, '5a5bd5c1ca9bb.png', '4'),
+(5, 1, '5a5bd5c219e27.png', '5');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `nav`
+--
+
+CREATE TABLE `nav` (
+  `id` int(11) NOT NULL,
+  `category` enum('workstations','storage','tech_accesories','tables','screens','agile','chairs','joinery_custom') NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `product_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 -- --------------------------------------------------------
 
 --
@@ -46,6 +70,13 @@ CREATE TABLE `products` (
   `category` enum('workstation','storage','tech_accesories','table','screen','agile_furniture','chair','joinery_custom','other') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `title`, `description`, `category`) VALUES
+(1, 'Cool Chair', 'This is the product that we are having for the new thing in the. ', 'chair');
+
 -- --------------------------------------------------------
 
 --
@@ -55,8 +86,25 @@ CREATE TABLE `products` (
 CREATE TABLE `product_features` (
   `id` int(10) NOT NULL,
   `product_id` int(10) NOT NULL,
-  `feature` varchar(100) NOT NULL
+  `feature` varchar(100) NOT NULL,
+  `position` enum('1','2','3','4','5','6','7','8','9','10') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `product_features`
+--
+
+INSERT INTO `product_features` (`id`, `product_id`, `feature`, `position`) VALUES
+(1, 1, '1', '1'),
+(2, 1, '2', '2'),
+(3, 1, '3', '3'),
+(4, 1, '4', '4'),
+(5, 1, '5', '5'),
+(6, 1, '6', '6'),
+(7, 1, '7', '7'),
+(8, 1, '8', '8'),
+(9, 1, '9', '9'),
+(10, 1, '10', '10');
 
 -- --------------------------------------------------------
 
@@ -67,8 +115,25 @@ CREATE TABLE `product_features` (
 CREATE TABLE `product_options` (
   `id` int(10) NOT NULL,
   `product_id` int(10) NOT NULL,
-  `product_option` varchar(100) NOT NULL
+  `product_option` varchar(100) NOT NULL,
+  `position` enum('1','2','3','4','5','6','7','8','9','10') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `product_options`
+--
+
+INSERT INTO `product_options` (`id`, `product_id`, `product_option`, `position`) VALUES
+(1, 1, 'one', '1'),
+(2, 1, 'two', '2'),
+(3, 1, 'three', '3'),
+(4, 1, 'four', '4'),
+(5, 1, 'five', '5'),
+(6, 1, 'six', '6'),
+(7, 1, 'seven', '7'),
+(8, 1, 'eight', '8'),
+(9, 1, 'nine9', '9'),
+(10, 1, 'ten', '10');
 
 -- --------------------------------------------------------
 
@@ -107,6 +172,13 @@ ALTER TABLE `images`
   ADD KEY `product_id` (`product_id`);
 
 --
+-- Indexes for table `nav`
+--
+ALTER TABLE `nav`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `product_id` (`product_id`);
+
+--
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
@@ -140,22 +212,27 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `images`
 --
 ALTER TABLE `images`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `nav`
+--
+ALTER TABLE `nav`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `product_features`
 --
 ALTER TABLE `product_features`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `product_options`
 --
 ALTER TABLE `product_options`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `users`
 --
@@ -170,6 +247,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `images`
   ADD CONSTRAINT `images_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `nav`
+--
+ALTER TABLE `nav`
+  ADD CONSTRAINT `nav_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `product_features`

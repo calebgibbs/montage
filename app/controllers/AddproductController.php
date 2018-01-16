@@ -174,27 +174,27 @@ class AddproductController extends PageController {
 			$this->data['image2message'] = '<span style="color: #d9534f">*You must upload a valid image</span>'; 
 			$errors++;
 		}
-		if( in_array( $_FILES['image3']['error'], [1,3] ) ) {
-			$this->data['image3message'] = '<span style="color: #d9534f">*Image failed to upload</span>';
-			$errors++; 
-		}elseif( !in_array( $_FILES['image3']['type'], $this->acceptableImageTypes ) ) {  
-			$this->data['image3message'] = '<span style="color: #d9534f">*You must upload a valid image</span>'; 
-			$errors++;
-		}
-		if( in_array( $_FILES['image4']['error'], [1,3] ) ) {
-			$this->data['image4message'] = '<span style="color: #d9534f">*Image failed to upload</span>';
-			$errors++; 
-		}elseif( !in_array( $_FILES['image4']['type'], $this->acceptableImageTypes ) ) {  
-			$this->data['image4message'] = '<span style="color: #d9534f">*You must upload a valid image</span>'; 
-			$errors++;
-		}
-		if( in_array( $_FILES['image5']['error'], [1,3] ) ) {
-			$this->data['image5message'] = '<span style="color: #d9534f">*Image failed to upload</span>';
-			$errors++; 
-		}elseif( !in_array( $_FILES['image5']['type'], $this->acceptableImageTypes ) ) {  
-			$this->data['image5message'] = '<span style="color: #d9534f">*You must upload a valid image</span>'; 
-			$errors++;
-		}
+		// if( in_array( $_FILES['image3']['error'], [1,3] ) ) {
+		// 	$this->data['image3message'] = '<span style="color: #d9534f">*Image failed to upload</span>';
+		// 	$errors++; 
+		// }elseif( !in_array( $_FILES['image3']['type'], $this->acceptableImageTypes ) ) {  
+		// 	$this->data['image3message'] = '<span style="color: #d9534f">*You must upload a valid image</span>'; 
+		// 	$errors++;
+		// }
+		// if( in_array( $_FILES['image4']['error'], [1,3] ) ) {
+		// 	$this->data['image4message'] = '<span style="color: #d9534f">*Image failed to upload</span>';
+		// 	$errors++; 
+		// }elseif( !in_array( $_FILES['image4']['type'], $this->acceptableImageTypes ) ) {  
+		// 	$this->data['image4message'] = '<span style="color: #d9534f">*You must upload a valid image</span>'; 
+		// 	$errors++;
+		// }
+		// if( in_array( $_FILES['image5']['error'], [1,3] ) ) {
+		// 	$this->data['image5message'] = '<span style="color: #d9534f">*Image failed to upload</span>';
+		// 	$errors++; 
+		// }elseif( !in_array( $_FILES['image5']['type'], $this->acceptableImageTypes ) ) {  
+		// 	$this->data['image5message'] = '<span style="color: #d9534f">*You must upload a valid image</span>'; 
+		// 	$errors++;
+		// }
 
 		if ($errors == 0) {
 			$this->ProcessProduct();

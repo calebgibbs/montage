@@ -9,7 +9,7 @@
 	<meta name="description" content="<?= $desc ?>"> 
 	<link rel="stylesheet" type="text/css" href="css/styles.css"> 
 	<link rel="icon" href="img/favicon.png" type="image/x-icon" />
-	<script src="https://use.fontawesome.com/228e8d7980.js"></script>
+	<!-- <script src="https://use.fontawesome.com/228e8d7980.js"></script> -->
 </head>
 <body> 
 	<?= $this->insert('favourites') ?>
@@ -21,11 +21,13 @@
 	<?= $this->section('content') ?>
 	<?= $this->insert('footer') ?> 
 	</div>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>  -->
 	<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script> 
 	<script type="text/javascript" src="js/menu.js"></script> 
 	<script type="text/javascript" src="js/animation.js"></script>
-	<script type="text/javascript" src="js/favourites.js"></script>
-	<script type="text/javascript" src="js/ajax.js"></script>
+	<script type="text/javascript" src="js/favourites.js"></script> 
+	<script type="text/javascript" src="js/loginValidation.js"></script>
+	<!-- <script type="text/javascript" src="js/ajax.js"></script> -->
 	<?php if($page == 'add_product' ): ?>
 	<script type="text/javascript" src="js/validation.js"></script> 
 	<?php endif; ?>

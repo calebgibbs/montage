@@ -16,6 +16,13 @@
 		"oAP": "\/.gitignore",
 		"oF": 0
 		},
+	"\/app\/ajax\/LoginValidation.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/ajax\/LoginValidation.php",
+		"oF": 0
+		},
 	"\/app\/controllers\/AddproductController.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -776,6 +783,16 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/js\/jquery-2.2.3.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/js\/loginValidation.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/loginValidation-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0

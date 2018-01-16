@@ -6,11 +6,6 @@ session_start();
 require 'vendor/autoload.php';
 require 'app/controllers/PageController.php'; 
 
-// $_SESSION['id'] = 2;
-// $_SESSION['account_status'] = 'not_active';
-// $_SESSION['email'] = 'calebgibbs@me.com'; 
-
- 
 $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 
 $dbc = new mysqli('localhost', 'root', 'password', 'montage'); 
