@@ -16,5 +16,9 @@ $(document).ready(function(){
 		$('#favourites').removeClass('open-fav');
 		$('#overlay').removeClass('open-fav');
 		$('#overlay').removeClass('darken');
-	});
+	}); 
+	$('.product-data').click(function(){
+        window.location = $(this).attr('href');
+        return false;
+    });
 })

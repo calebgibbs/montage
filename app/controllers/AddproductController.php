@@ -55,54 +55,45 @@ class AddproductController extends PageController {
 			$errors++;	
 		} 
 
-		if (strlen($feat1) > 100) {
+		if (strlen($feat1) > 300) {
 			$this->data['feat1Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
 			$errors++;	
-		}
-
-		if (strlen($feat2) == 0) {
-			$this->data['feat2Message'] = '<span style="color: #d9534f">This feild is required</span>'; 
-			$errors++;	
 		} 
 
-		if (strlen($feat2) > 100) {
+		if (strlen($feat2) > 300) {
 			$this->data['feat2Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
 			$errors++;	
-		} 
-		if (strlen($feat3) == 0) {
-			$this->data['feat3Message'] = '<span style="color: #d9534f">This feild is required</span>'; 
-			$errors++;	
-		} 
+		}  
 
-		if (strlen($feat3) > 100) {
+		if (strlen($feat3) > 300) {
 			$this->data['feat3Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
 			$errors++;	
 		}
-		if (strlen($_POST['feat_4']) > 100) {
+		if (strlen($_POST['feat_4']) > 300) {
 			$this->data['feat4Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
 			$errors++;	
 		}
-		if (strlen($_POST['feat_5']) > 100) {
+		if (strlen($_POST['feat_5']) > 300) {
 			$this->data['feat5Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
 			$errors++;	
 		}
-		if (strlen($_POST['feat_6']) > 100) {
+		if (strlen($_POST['feat_6']) > 300) {
 			$this->data['feat6Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
 			$errors++;	
 		} 
-		if (strlen($_POST['feat_7']) > 100) {
+		if (strlen($_POST['feat_7']) > 300) {
 			$this->data['feat7Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
 			$errors++;	
 		} 
-		if (strlen($_POST['feat_8']) > 100) {
+		if (strlen($_POST['feat_8']) > 300) {
 			$this->data['feat8Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
 			$errors++;	
 		} 
-		if (strlen($_POST['feat_9']) > 100) {
+		if (strlen($_POST['feat_9']) > 300) {
 			$this->data['feat9Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
 			$errors++;	
 		}
-		if (strlen($_POST['feat_10']) > 100) {
+		if (strlen($_POST['feat_10']) > 300) {
 			$this->data['feat10Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
 			$errors++;	
 		} 
@@ -110,51 +101,43 @@ class AddproductController extends PageController {
 			$this->data['opt1Message'] = '<span style="color: #d9534f">*This feild is required</span>'; 
 			$errors++;	
 		} 
-		if(strlen($option1) > 100){ 
+		if(strlen($option1) > 300){ 
 			$this->data['opt1Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
 			$errors++;	
-		} 
-		if(strlen($option2) == 0){ 
-			$this->data['opt2Message'] = '<span style="color: #d9534f">*This feild is required</span>'; 
-			$errors++;	
-		} 
-		if(strlen($option2) > 100){ 
+		}  
+		if(strlen($option2) > 300){ 
 			$this->data['opt2Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
 			$errors++;	
 		} 
-		if(strlen($option3) == 0){ 
-			$this->data['opt3Message'] = '<span style="color: #d9534f">*This feild is required</span>'; 
-			$errors++;	
-		} 
-		if(strlen($option3) > 100){ 
+		if(strlen($option3) > 300){ 
 			$this->data['opt3Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
 			$errors++;	
 		} 
-		if(strlen($_POST['opt_4']) > 100){ 
+		if(strlen($_POST['opt_4']) > 300){ 
 			$this->data['opt4Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
 			$errors++;	
 		} 
-		if(strlen($_POST['opt_5']) > 100){ 
+		if(strlen($_POST['opt_5']) > 300){ 
 			$this->data['opt5Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
 			$errors++;	
 		}
-		if(strlen($_POST['opt_6']) > 100){ 
+		if(strlen($_POST['opt_6']) > 300){ 
 			$this->data['opt6Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
 			$errors++;	
 		}
-		if(strlen($_POST['opt_7']) > 100){ 
+		if(strlen($_POST['opt_7']) > 300){ 
 			$this->data['opt7Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
 			$errors++;	
 		} 
-		if(strlen($_POST['opt_8']) > 100){ 
+		if(strlen($_POST['opt_8']) > 300){ 
 			$this->data['opt8Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
 			$errors++;	
 		} 
-		if(strlen($_POST['opt_9']) > 100){ 
+		if(strlen($_POST['opt_9']) > 300){ 
 			$this->data['opt9Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
 			$errors++;	
 		} 
-		if(strlen($_POST['opt_10']) > 100){ 
+		if(strlen($_POST['opt_10']) > 300){ 
 			$this->data['opt10Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
 			$errors++;	
 		} 
@@ -162,9 +145,6 @@ class AddproductController extends PageController {
 		if( in_array( $_FILES['image1']['error'], [1,3,4] ) ) {
 			$this->data['image1message'] = '<span style="color: #d9534f">*Image failed to upload</span>';
 			$errors++; 
-		}elseif( !in_array( $_FILES['image1']['type'], $this->acceptableImageTypes ) ) {  
-			$this->data['image1message'] = '<span style="color: #d9534f">*You must upload a valid image</span>'; 
-			$errors++;
 		}
 
 		if( in_array( $_FILES['image2']['error'], [1,3] ) ) {

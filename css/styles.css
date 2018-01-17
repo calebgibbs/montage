@@ -1190,7 +1190,8 @@ textarea:focus ~ .floating-label, textarea:not(:focus):valid ~ .floating-label {
   .inner table {
     border-collapse: collapse;
     width: 90%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    margin-bottom: 3%; }
   .inner th, .inner td {
     border: 1px solid #000;
     width: calc(100% / 3);
@@ -1208,6 +1209,12 @@ textarea:focus ~ .floating-label, textarea:not(:focus):valid ~ .floating-label {
         background: #84B025; }
   .inner tr:nth-child(even) {
     background: #f2f2f2; }
+  .inner tr:hover {
+    background: #e6e6e6;
+    cursor: pointer; }
+
+.prod-table {
+  text-align: center; }
 
 @keyframes imageload {
   0% {
