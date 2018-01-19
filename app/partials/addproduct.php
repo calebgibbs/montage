@@ -166,25 +166,13 @@ $prevPage = $_SERVER['REQUEST_URI'];
 			</div> 
 			<div class="form-images"> 
 				<h2>Product Images</h2>
-				<div class="image-upload">
-					<span>Main Image <?=  isset($image1message) ? $image1message : '' ?></span>
-					<input type="file" name="image1" accept="image/*">
-				</div>
-				<div class="form-input image-upload">
-					<span>Image 2 <?=  isset($image2message) ? $image2message : '' ?></span>
-					<input type="file" name="image2" accept="image/*">
-				</div>
-				<div class="form-input image-upload">
-					<span>Image 3 <?=  isset($image3message) ? $image3message : '' ?></span>
-					<input type="file" name="image3" accept="image/*">
-				</div>
-				<div class="form-input image-upload">
-					<span>Image 4 <?=  isset($image4message) ? $image4message : '' ?></span>
-					<input type="file" name="image4" accept="image/*">
-				</div>
-				<div class="form-input image-upload">
-					<span>Image 5 <?=  isset($image5message) ? $image5message : '' ?></span>
-					<input type="file" name="image5" accept="image/*">
+				<div class="main-image-upload">
+					<h4 class="image-title">Main Image</h4> 
+					<div class="mian-cropper"></div>	 
+					<div class="upload-btn-wrapper actionUpload"> 
+						<button class="upload-btn">Choose Image</button>
+						<input type="file" class="upload" name="image1" accept="image/*"> 
+					</div>
 				</div>
 			</div>
 			<div>

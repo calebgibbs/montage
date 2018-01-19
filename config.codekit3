@@ -336,6 +336,29 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/css\/croppie.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/croppie-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/css\/croppie.sass": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 2,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/croppie.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/css\/favourites.sass": {
 		"aP": 0,
 		"bl": 0,
@@ -1746,6 +1769,16 @@
 		"opt": 0,
 		"q": 100
 		},
+	"\/img\/products\/large\/croppie.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/img\/products\/large\/croppie-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
 	"\/img\/products\/themes\/red.png": {
 		"ft": 32768,
 		"iS": 28471,
@@ -2931,7 +2964,7 @@
 		"oA": 0,
 		"oAP": "\/js\/ajax-min-min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/js\/ajax.js": {
@@ -2941,7 +2974,7 @@
 		"oA": 0,
 		"oAP": "\/js\/ajax-min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/js\/animation-min.js": {
@@ -2951,7 +2984,7 @@
 		"oA": 0,
 		"oAP": "\/js\/animation-min-min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/js\/animation.js": {
@@ -2961,7 +2994,27 @@
 		"oA": 0,
 		"oAP": "\/js\/animation-min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/js\/croppie-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/croppie-min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/js\/croppie.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/croppie-min.js",
+		"oF": 0,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/js\/favourites-min.js": {
@@ -2971,7 +3024,7 @@
 		"oA": 0,
 		"oAP": "\/js\/favourites-min-min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/js\/favourites.js": {
@@ -2981,7 +3034,27 @@
 		"oA": 0,
 		"oAP": "\/js\/favourites-min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/js\/imageCropping-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/imageCropping-min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/js\/imageCropping.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/imageCropping-min.js",
+		"oF": 0,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/js\/jquery-2.2.3.min-min.js": {
@@ -2991,7 +3064,7 @@
 		"oA": 0,
 		"oAP": "\/js\/jquery-2.2.3.min-min-min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/js\/jquery-2.2.3.min.js": {
@@ -3001,7 +3074,7 @@
 		"oA": 0,
 		"oAP": "\/js\/jquery-2.2.3.min-min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/js\/loginValidation-min.js": {
@@ -3011,7 +3084,7 @@
 		"oA": 0,
 		"oAP": "\/js\/loginValidation-min-min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/js\/loginValidation.js": {
@@ -3021,7 +3094,7 @@
 		"oA": 0,
 		"oAP": "\/js\/loginValidation-min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/js\/menu-min.js": {
@@ -3031,7 +3104,7 @@
 		"oA": 0,
 		"oAP": "\/js\/menu-min-min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/js\/menu.js": {
@@ -3041,7 +3114,7 @@
 		"oA": 0,
 		"oAP": "\/js\/menu-min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/js\/validation-min.js": {
@@ -3051,7 +3124,7 @@
 		"oA": 0,
 		"oAP": "\/js\/validation-min-min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/js\/validation.js": {
@@ -3061,7 +3134,7 @@
 		"oA": 0,
 		"oAP": "\/js\/validation-min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/montage.sql": {
@@ -6846,7 +6919,7 @@
 		"autoOutputPathStyle": 0,
 		"createSourceMap": 0,
 		"minifyOutput": 1,
-		"syntaxCheckerStyle": 3,
+		"syntaxCheckerStyle": 0,
 		"transpilerStyle": 0
 		},
 	"languageDefaultsJSON": {

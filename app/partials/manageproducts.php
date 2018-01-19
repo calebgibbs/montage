@@ -21,7 +21,6 @@ $prevPage = $_SERVER['REQUEST_URI'];
 					<td><span><?= substr($product['description'], 0, 70) ?>...</span></td>
 					<td class="prod-table"><?= $product['category'] ?></td>
 				</tr>  
-
 				<?php $counter++; ?>
 			<?php endforeach ?>
 		</table>  

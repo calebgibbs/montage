@@ -5,7 +5,7 @@
 		</div>  
 		<div id="login-form">
 			<button class="link-btn back-btn">&#8592; Favourites</button>
-			<form id="logmein" method="post" action="app/controllers/LoginController.php"> 
+			<form id="logmein" method="post" action="LoginController.php"> 
 				<div>
 					<input type="email" id="email" name="email" class="inputText" required"> 
 					<span class="floating-label">Email</span>

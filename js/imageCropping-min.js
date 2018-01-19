@@ -1,0 +1,1 @@
+$(function(){$(".mian-cropper").croppie({viewport:{width:770,height:440},boundary:{width:800,height:500},showZoomer:!1}).croppie("bind",{url:"https://i.imgur.com/xD9rzSt.jpg",points:[77,469,280,739]})});
