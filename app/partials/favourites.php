@@ -5,7 +5,7 @@
 		</div>  
 		<div id="login-form">
 			<button class="link-btn back-btn">&#8592; Favourites</button>
-			<form id="logmein" method="post" action="LoginController.php"> 
+			<form id="logmein" method="post" action="index.php?page=login"> 
 				<div>
 					<input type="email" id="email" name="email" class="inputText" required"> 
 					<span class="floating-label">Email</span>
@@ -27,7 +27,8 @@
 			<form>
 				<div>
 					<input type="text" name="name" class="inputText" required value="<?= isset($_POST['name']) ? $_POST['name'] : '' ?>"> 
-					<span class="floating-label">Your name</span>
+					<span class="floating-label">Your name</span> 
+					<?= $_SESSION['currentPage'] ?>
 				</div>
 				<div>
 					<input type="email" name="email" class="inputText" required value="<?= isset($_POST['email']) ? $_POST['email'] : '' ?>"> 

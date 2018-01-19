@@ -34,9 +34,7 @@ if (isset($_POST['password'])) {
 		$userData = $result->fetch_assoc(); 
 		$passwordResult = password_verify( $password, $userData['password'] ); 
 		if($passwordResult == true) {
-			echo "passwordSuccess"; 
-			$_SESSION['currentPage'] = $_SERVER['REQUEST_URI']; 
-			
+			echo "passwordSuccess";  
 		}
 	}else{  
 		echo "passwordFail";

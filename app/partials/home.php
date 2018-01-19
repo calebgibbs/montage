@@ -3,7 +3,7 @@
 		'title'=>'Montage Interiors', 
 		'desc' => 'montage interiors description' 
 	]);   
-	$prevPage = $_SERVER['QUERY_STRING'];
+	$_SESSION['page'] = $_SERVER['REQUEST_URI'];
 ?> 
 <div class="body"> 
 	<div class="top">
