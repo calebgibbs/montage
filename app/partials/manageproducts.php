@@ -19,7 +19,29 @@ $prevPage = $_SERVER['REQUEST_URI'];
 				<tr class="product-data" href="index.php?page=product&productnum=<?= $product['id'] ?>">
 					<td class="prod-table"><?= $product['title'] ?></td> 
 					<td><span><?= substr($product['description'], 0, 70) ?>...</span></td>
-					<td class="prod-table"><?= $product['category'] ?></td>
+					<td class="prod-table">
+					<?php 
+						if($product['category'] == 'workstation') {
+							echo "Workstation";
+						}elseif($product['category'] == 'storage'){
+							echo "Storage";
+						}elseif ($product['category'] == 'tech_accesories') {
+							echo "Tech & Accesories";
+						}elseif($product['category'] == 'table'){ 
+							echo "Table";
+						}elseif($product['category'] == 'screen'){
+							echo "Screen";
+						}elseif($product['category'] == 'chair'){ 
+							echo "Chair";
+						}elseif ($product['category'] == 'joinery_custom') {
+							echo "Joinery & Custom";
+						}elseif ($product['category'] == 'agile_furniture') {
+							echo "Agile Furniture";
+						}elseif($product['category'] == 'other'){
+							echo "Other";
+						}
+					?>
+					</td>
 				</tr>  
 				<?php $counter++; ?>
 			<?php endforeach ?>

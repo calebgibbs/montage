@@ -5,7 +5,10 @@ $(document).ready(function(){
 		$('.buttons').removeClass('view');
 		$('.buttons').addClass('remove');
 		$('#signup-form').removeClass('view');
-		$('#signup-form').addClass('remove');
+		$('#signup-form').addClass('remove'); 
+		$('#favourite-products-all').removeClass('view');
+		$('#favourite-products-all').addClass('remove');
+		
 	}); 
 	$('#signup-trig').click(function(){
 		$('#signup-form').removeClass('remove');
@@ -14,6 +17,8 @@ $(document).ready(function(){
 		$('#login-form').addClass('remove'); 
 		$('.buttons').removeClass('view');
 		$('.buttons').addClass('remove');
+		$('#favourite-products-all').removeClass('view');
+		$('#favourite-products-all').addClass('remove');
 	});
 	$('.back-btn').click(function(){
 		$('#login-form').removeClass('view');
@@ -22,6 +27,8 @@ $(document).ready(function(){
 		$('#signup-form').addClass('remove');  
 		$('.buttons').removeClass('remove');
 		$('.buttons').addClass('view');
+		$('#favourite-products-all').removeClass('remove');
+		$('#favourite-products-all').addClass('view');
 	}); 
 	$('#gtsu').click(function(){
 		$('#login-form').removeClass('view');

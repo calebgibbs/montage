@@ -336,7 +336,7 @@ nav {
   display: none; }
 
 .fav-title {
-  background: #424242;
+  background: #a1a1a1;
   color: #fff;
   margin: 0;
   padding: 10px; }
@@ -363,7 +363,7 @@ nav {
     width: 80%;
     padding: 0.8rem;
     text-align: center;
-    background: rgba(132, 176, 37, 0.9);
+    background: rgba(23, 124, 126, 0.9);
     margin-bottom: 8px;
     margin-left: 10%;
     font-size: 1.3rem;
@@ -371,11 +371,11 @@ nav {
     transition: 0.2s;
     cursor: pointer; }
     .buttons button:hover {
-      background: #84B025; }
+      background: #177c7e; }
   .buttons a {
     padding: 0.8rem;
     text-align: center;
-    background: rgba(132, 176, 37, 0.9);
+    background: rgba(23, 124, 126, 0.9);
     margin-bottom: 10px !important;
     margin-left: 10%;
     width: 75.5% !important;
@@ -386,7 +386,7 @@ nav {
     display: block;
     text-decoration: none; }
     .buttons a:hover {
-      background: #84B025; }
+      background: #177c7e; }
 
 #favourites form input {
   width: 80%;
@@ -412,7 +412,7 @@ nav {
     width: 82.5%;
     padding: 0.8rem;
     text-align: center;
-    background: rgba(132, 176, 37, 0.9);
+    background: rgba(23, 124, 126, 0.9);
     margin-top: 10px;
     margin-left: 10%;
     font-size: 1.3rem;
@@ -420,12 +420,12 @@ nav {
     transition: 0.2s;
     cursor: pointer; }
     #login-form form button:hover {
-      background: #84B025; }
+      background: #177c7e; }
 
 .link-btn {
   background: none;
   border: none;
-  color: #424242;
+  color: #177c7e;
   cursor: pointer;
   outline: none;
   font-size: 1rem;
@@ -433,7 +433,7 @@ nav {
   margin-top: 10px;
   width: 100%; }
   .link-btn:hover {
-    color: #84B025; }
+    color: #177c7e; }
 
 #signup-form {
   display: none; }
@@ -442,7 +442,7 @@ nav {
     width: 82.5%;
     padding: 0.8rem;
     text-align: center;
-    background: rgba(132, 176, 37, 0.9);
+    background: rgba(23, 124, 126, 0.9);
     margin-top: 10px;
     margin-left: 10%;
     font-size: 1.3rem;
@@ -450,12 +450,38 @@ nav {
     transition: 0.2s;
     cursor: pointer; }
     #signup-form form button:hover {
-      background: #84B025; }
+      background: #177c7e; }
 
 .input-message {
   margin-top: 10px !important;
   color: #d9534f;
   display: block; }
+
+#favourite-products-all {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  max-height: 78vh;
+  overflow: scroll; }
+
+.fav-prod {
+  border: 1px solid #A6A6A6;
+  margin: 15px;
+  height: 150px; }
+  .fav-prod img {
+    min-height: 100%;
+    margin: 0;
+    padding: 0; }
+  .fav-prod span {
+    vertical-align: top;
+    margin-left: 0 !important;
+    font-weight: 100;
+    font-size: 1.5rem;
+    color: #A6A6A6;
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+    height: 1.5rem;
+    margin-top: 1rem; }
 
 .top {
   margin-top: 1rem; }
@@ -1165,17 +1191,11 @@ textarea:focus ~ .floating-label, textarea:not(:focus):valid ~ .floating-label {
 
 .main-image-upload {
   width: 95%;
-  height: 700px;
-  border: 0.1rem solid #F3F3F3;
-  transition: 0.3s;
+  height: 650px;
   position: relative; }
   .main-image-upload input {
     border-bottom: none !important;
     margin: 0 !important; }
-
-.mian-cropper {
-  width: 800px;
-  height: 500px; }
 
 .upload-btn-wrapper {
   position: absolute;
@@ -1186,6 +1206,13 @@ textarea:focus ~ .floating-label, textarea:not(:focus):valid ~ .floating-label {
   width: 240px;
   margin-left: 43%; }
 
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0; }
+
 .upload-btn {
   border: 2px solid grey;
   color: grey;
@@ -1194,12 +1221,11 @@ textarea:focus ~ .floating-label, textarea:not(:focus):valid ~ .floating-label {
   font-size: 20px;
   font-weight: bold; }
 
-.upload-btn-wrapper input[type=file] {
-  font-size: 100px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0; }
+.actionDone {
+  display: none; }
+
+.actionCancel {
+  display: none; }
 
 #my-account {
   width: 80%;

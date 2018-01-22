@@ -168,10 +168,13 @@ $prevPage = $_SERVER['REQUEST_URI'];
 				<h2>Product Images</h2>
 				<div class="main-image-upload">
 					<h4 class="image-title">Main Image</h4> 
-					<div class="mian-cropper"></div>	 
-					<div class="upload-btn-wrapper actionUpload"> 
-						<button class="upload-btn">Choose Image</button>
-						<input type="file" class="upload" name="image1" accept="image/*"> 
+					<div id="main-cropper"></div> 
+					<div class="upload-btn-wrapper">
+						<a class="button actionUpload">
+							<button class="upload-btn">Choose file</button>
+							<input type="file" id="upload" value="Choose Image" accept="image/*">
+						</a>
+						<button class="actionDone upload-btn noSubmit">Done</button>
 					</div>
 				</div>
 			</div>

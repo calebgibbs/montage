@@ -282,17 +282,11 @@ textarea
 	font-weight: lighter
 .main-image-upload 
 	width: 95% 
-	height: 700px 
-	border: 0.1rem solid #F3F3F3 
-	transition: 0.3s 
+	height: 650px 
 	position: relative  
 	input  
 		border-bottom: none !important  
 		margin: 0 !important  
-
-.mian-cropper 
-	width: 800px  
-	height: 500px
 
 .upload-btn-wrapper 
 	position: absolute 
@@ -301,7 +295,15 @@ textarea
 	overflow: hidden  
 	display: inline-block  
 	width: 240px 
-	margin-left: 43%
+	margin-left: 43% 
+
+.upload-btn-wrapper input[type=file]
+  font-size: 100px
+  position: absolute
+  left: 0
+  top: 0
+  opacity: 0 
+
 .upload-btn 
 	border: 2px solid grey 
 	color: grey 
@@ -309,12 +311,11 @@ textarea
 	padding: 8px 20px 
 	font-size: 20px 
 	font-weight: bold 
-.upload-btn-wrapper input[type=file]
-  font-size: 100px
-  position: absolute
-  left: 0
-  top: 0
-  opacity: 0
+.actionDone  
+	display: none 
+.actionCancel 
+	display: none
+    
 
 	
 
@@ -390,7 +391,7 @@ textarea
 
 .prod-table 
 	text-align: center
-
+  
 
 
 

@@ -124,7 +124,7 @@
 			</li> 
 			<li class="main-menu menu-item"><a href="#" class="main-menu">Portfolio</a></li> 
 			<li class="main-menu menu-item"><a href="#" class="main-menu">Downloads</a></li>
-			<li class="main-menu menu-item contact"><a href="index.php?page=login" class="main-menu">Contact</a></li> 
+			<li class="main-menu menu-item contact"><a href="#" class="main-menu">Contact</a></li> 
 			<li class="main-menu menu-item"><a href="#" class="fav-tog">Favourites</a> <div id="diamond-narrow"></div></li>
 			<li class="search"><input type="text" name="search" id="search-feild"><button class="search-button"><i class="fa fa-search search-btn" aria-hidden="true"></i></button></li> 
 		</ul>

@@ -26,7 +26,8 @@
 	<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script> 
 	<script type="text/javascript" src="js/menu.js"></script> 
 	<script type="text/javascript" src="js/animation.js"></script>
-	<script type="text/javascript" src="js/favourites.js"></script> 
+	<script type="text/javascript" src="js/favourites.js"></script>  
+	<script type="text/javascript" src="js/signupValidation.js"></script>
 	<script type="text/javascript" src="js/loginValidation.js"></script> 
 	<script type="text/javascript" src="js/croppie.js"></script>
 	<script type="text/javascript" src="js/imageCropping.js"></script>

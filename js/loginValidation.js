@@ -89,17 +89,17 @@ $(document).ready(function(){
 			}
 		}); 
 
-		$('#log-in-button').click(function(event){
+		$(document).on('click', '#log-in-button',function(e){
 			if ( ValidPassword === true && ValidEmail === true ) {
 				//prevent default and log in user with correct data 
 			} else {	
-				event.preventDefault(); 
+				e.preventDefault(); 
 				$("#password-message").empty();
 				$("#password-message").removeClass("success").addClass("error").append("Passowrd or Email is incorrect"); 
+				console.log('cannot log in with these details'); 
+				return false;
 			} 
 		});
-
-
 
 
 

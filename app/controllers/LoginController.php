@@ -14,15 +14,10 @@ class LoginController extends PageController {
 	private function login(){ 
 		$lastPage = $_SERVER['HTTP_REFERER'];
 		
+		//links to be changed 
 		if ($lastPage == 'http://localhost/~calebgibbs/montage/index.php?page=error404') {
 			$lastPage = 'http://localhost/~calebgibbs/montage/index.php';
 		}
-
-
-
-
-
-
 
 		$email = $this->dbc->real_escape_string($_POST['email']); 
 		$password = $_POST['password'];
