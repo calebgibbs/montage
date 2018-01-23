@@ -457,6 +457,11 @@ nav {
   color: #d9534f;
   display: block; }
 
+input[type=checkbox] {
+  width: 20px !important;
+  padding: 0;
+  margin: 0; }
+
 #favourite-products-all {
   width: 90%;
   margin: 0 auto;

@@ -60,9 +60,6 @@ class RegisterController extends PageController {
 		$sql = "INSERT INTO users(first_name, email, company, password, account_type, account_status)
 				VALUES('$filteredFirstName','$filteredEmail',  'Montage Interiors','$hash', 'admin', 'not_active')"; 
 		$this->dbc->query($sql);  
-		// echo "<pre>";
-		// print_r($sql); 
-		// echo "</pre>";
 
 		if($this->dbc->affected_rows) { 
 			header('Location: index.php?page=manage_accounts');

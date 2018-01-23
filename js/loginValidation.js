@@ -91,7 +91,7 @@ $(document).ready(function(){
 
 		$(document).on('click', '#log-in-button',function(e){
 			if ( ValidPassword === true && ValidEmail === true ) {
-				//prevent default and log in user with correct data 
+
 			} else {	
 				e.preventDefault(); 
 				$("#password-message").empty();

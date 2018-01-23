@@ -23,6 +23,13 @@
 		"oAP": "\/app\/ajax\/LoginValidation.php",
 		"oF": 0
 		},
+	"\/app\/ajax\/SignupValidation.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/ajax\/SignupValidation.php",
+		"oF": 0
+		},
 	"\/app\/controllers\/AddproductController.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -133,6 +140,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/app\/controllers\/ResultsController.php",
+		"oF": 0
+		},
+	"\/app\/controllers\/SignupController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/SignupController.php",
 		"oF": 0
 		},
 	"\/app\/partials\/addproduct.php": {
@@ -3109,6 +3123,16 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/js\/menu-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/js\/signupValidation-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/signupValidation-min-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0

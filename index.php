@@ -61,6 +61,11 @@ switch($page){
 		$controller = new LoginController($dbc);	 
 	break; 
 
+	case 'signup':
+		require 'app/controllers/SignupController.php'; 
+		$controller = new SignupController($dbc);	 
+	break; 
+
 	case 'logout':
 		unset($_SESSION['id']);
 		unset($_SESSION['first_name']);
