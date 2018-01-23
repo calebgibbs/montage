@@ -1,7 +1,7 @@
 <div id="overlay">
 	<div id="favourites">
 		<div class="fav-title">
-			<h4>Favourites <button id="close-fav">&#10005;</button></h4>
+			<h4><span id="fav-tab-title">Favourites</span> <button id="close-fav">&#10005;</button></h4>
 		</div>  
 		<?php if(!isset($_SESSION['id'])): ?>
 			<div id="login-form">
@@ -58,7 +58,7 @@
 						<button id="signup-button" name="signup">Sign up</button>
 					</div>
 				</form> 
-				<button class="link-btn" id="gtli" >Already have an account? <i>Log in</i></button>
+				<button class="link-btn" id="gtli" >Already have an account? <i>Sign in</i></button>
 			</div>
 		<?php endif ?> 
 		<div id="favourite-products-all">

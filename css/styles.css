@@ -488,6 +488,29 @@ input[type=checkbox] {
     height: 1.5rem;
     margin-top: 1rem; }
 
+@media screen and (max-width: 1440px) {
+  #favourites form input {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 15px !important;
+    font-size: 1rem;
+    padding: 7px;
+    outline: none;
+    border: none;
+    border-bottom: 0.1rem solid #F3F3F3;
+    transition: 0.3s;
+    background: none; }
+    #favourites form input:focus {
+      border-bottom: 0.1rem solid #424242; }
+  #favourites form p {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 150%;
+    text-align: center; }
+    #favourites form p input[type=checkbox] {
+      margin-left: 0 !important; } }
+
 .top {
   margin-top: 1rem; }
 
@@ -550,65 +573,23 @@ input[type=checkbox] {
   margin-left: -22.5rem; }
 
 #footer {
+  width: 100%;
   background: #424242;
-  color: #fff;
-  border-top: solid #177c7e 2rem;
-  font-family: "Arial Narrow", Arial, sans-serif;
-  vertical-align: bottom; }
-
-.hf {
-  margin-top: -0.35rem; }
-
-.footer-inner {
-  width: 90%;
-  margin: 0 auto;
-  padding-top: 1.5rem; }
-  .footer-inner div {
-    width: calc( 98% / 3);
-    display: inline-block;
-    vertical-align: top; }
-
-.side-text {
-  -webkit-transform: scale(1) rotate(-90deg) translate(0px, 0px);
-  padding: 0;
-  font-size: 1.3rem;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  max-width: 5rem; }
-
-.f-contact {
-  padding-top: 0; }
-  .f-contact p {
+  border-top: 1.5rem solid #177c7e;
+  text-align: center;
+  color: #feffff;
+  font-weight: 100;
+  line-height: 150%;
+  font-size: 0.9rem; }
+  #footer div {
+    padding: 5px; }
+  #footer img {
     padding: 0;
-    margin-left: -1.5rem;
-    display: inline-block; }
-  .f-contact div {
-    margin-top: 2.1rem;
-    display: inline-block; }
-
-.f-middle {
-  text-align: center; }
-  .f-middle img {
-    padding-bottom: 0;
-    margin-bottom: 0; }
-  .f-middle p {
-    margin-top: -0.1rem; }
-
-.f-managers {
-  max-width: 20rem;
-  float: right; }
-  .f-managers ol {
-    list-style-type: none;
-    margin-left: -0.7rem;
-    display: inline-block;
-    padding-left: -309rem;
-    padding-left: 0; }
-  .f-managers div {
-    margin-top: 1.3rem;
-    display: inline-block;
-    padding: 0; }
-
-.products-footer {
-  margin-top: -0.38rem; }
+    margin: 0;
+    margin-top: 10px; }
+  #footer p {
+    padding-top: 0;
+    margin-top: 0; }
 
 section {
   width: 90%;

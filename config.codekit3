@@ -44,13 +44,6 @@
 		"oAP": "\/app\/controllers\/ChangepwdController.php",
 		"oF": 0
 		},
-	"\/app\/controllers\/ContactInfoController.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/app\/controllers\/ContactInfoController.php",
-		"oF": 0
-		},
 	"\/app\/controllers\/EditProductController.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -79,32 +72,11 @@
 		"oAP": "\/app\/controllers\/LoginController.php",
 		"oF": 0
 		},
-	"\/app\/controllers\/ManageAccountsController.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/app\/controllers\/ManageAccountsController.php",
-		"oF": 0
-		},
 	"\/app\/controllers\/ManageProductsController.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/app\/controllers\/ManageProductsController.php",
-		"oF": 0
-		},
-	"\/app\/controllers\/MyAccountController.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/app\/controllers\/MyAccountController.php",
-		"oF": 0
-		},
-	"\/app\/controllers\/NavLinksController.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/app\/controllers\/NavLinksController.php",
 		"oF": 0
 		},
 	"\/app\/controllers\/PageController.php": {
@@ -163,13 +135,6 @@
 		"oAP": "\/app\/partials\/changepwd.php",
 		"oF": 0
 		},
-	"\/app\/partials\/contactinfo.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/app\/partials\/contactinfo.php",
-		"oF": 0
-		},
 	"\/app\/partials\/editProduct.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -205,13 +170,6 @@
 		"oAP": "\/app\/partials\/home.php",
 		"oF": 0
 		},
-	"\/app\/partials\/manageaccounts.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/app\/partials\/manageaccounts.php",
-		"oF": 0
-		},
 	"\/app\/partials\/manageproducts.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -226,25 +184,11 @@
 		"oAP": "\/app\/partials\/master.php",
 		"oF": 0
 		},
-	"\/app\/partials\/myaccount.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/app\/partials\/myaccount.php",
-		"oF": 0
-		},
 	"\/app\/partials\/nav.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/app\/partials\/nav.php",
-		"oF": 0
-		},
-	"\/app\/partials\/navlinks.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/app\/partials\/navlinks.php",
 		"oF": 0
 		},
 	"\/app\/partials\/product.php": {
@@ -507,6 +451,17 @@
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/footer-globe.png": {
+		"ft": 32768,
+		"iS": 2394,
+		"oA": 0,
+		"oAP": "\/img\/footer-globe.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},

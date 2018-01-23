@@ -3,11 +3,7 @@
 		<?php if($_SESSION['account_status'] == 'active' ): ?>
 			<li class="settings-drop-t">Settings
 				<ul>
-					<li class="settings-drop-l"><a href="index.php?page=contact_info">Contact Information</a></li>
-					<li class="settings-drop-l"><a href="index.php?page=my_account">My Details</a></li>
-					<li class="settings-drop-l"><a href="index.php?page=manage_accounts">Manage Accounts</a></li>
 					<li class="settings-drop-l"><a href="index.php?page=register">Register Account</a></li>
-					<li class="settings-drop-l"><a href="index.php?page=nav_links">Navigation Links</a></li>
 				</ul>
 			</li>
 			<li class="products-drop-t">Products 

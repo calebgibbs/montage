@@ -28,7 +28,7 @@ class LoginController extends PageController {
 			$passwordResult = password_verify( $password, $userData['password'] ); 
 			if($passwordResult == true){ 
 				$_SESSION['id'] = $userData['id']; 
-				$_SESSION['name'] = $userData['first_name']; 
+				$_SESSION['first_name'] = $userData['first_name']; 
 				$_SESSION['email'] = $userData['email'];
 				$_SESSION['company'] = $userData['company'];
 				$_SESSION['account_type'] = $userData['account_type'];
