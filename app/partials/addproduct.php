@@ -166,16 +166,25 @@ $prevPage = $_SERVER['REQUEST_URI'];
 			</div> 
 			<div class="form-images"> 
 				<h2>Product Images</h2>
-				<div class="main-image-upload">
-					<h4 class="image-title">Main Image</h4> 
-					<div id="main-cropper"></div> 
-					<div class="upload-btn-wrapper">
-						<a class="button actionUpload">
-							<button class="upload-btn">Choose file</button>
-							<input type="file" id="upload" value="Choose Image" accept="image/*">
-						</a>
-						<button class="actionDone upload-btn noSubmit">Done</button>
-					</div>
+				<div class="image-container">
+					<label>Main Image <?=  isset($img1Message) ? $img1Message : '' ?></label>
+					<input type="file" name="image1" accept="image/*">
+				</div>	
+				<div class="image-container">
+					<label>Image 2 <?=  isset($img2Message) ? $img2Message : '' ?></label>
+					<input type="file" name="image2" accept="image/*">
+				</div>
+				<div class="image-container">
+					<label>Image 3 <?=  isset($img3Message) ? $img3Message : '' ?></label>
+					<input type="file" name="image3" accept="image/*">
+				</div>
+				<div class="image-container">
+					<label>Image 4 <?=  isset($img4Message) ? $img4Message : '' ?></label>
+					<input type="file" name="image4" accept="image/*">
+				</div> 
+				<div class="image-container">
+					<label>Image 5 <?=  isset($img5Message) ? $img5Message : '' ?></label>
+					<input type="file" name="image5" accept="image/*">
 				</div>
 			</div>
 			<div>

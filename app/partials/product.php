@@ -11,7 +11,28 @@ $this -> layout('master',[
 		<span><a href="<?= $_SERVER['REQUEST_URI'] ?>&delete ">Delete</a></span> 
 		<span><a href="index.php?page=edit&product=<?= $_GET['productnum'] ?>">Edit</a></span> 
 	<?php endif ?> 
-	<div id="product-theme" class="chair">
+	<div id="product-theme" class="
+	<?php if( $product['category'] == 'workstation' ){
+		echo "workstation";
+	}elseif($product['category'] == 'storage'){
+		echo "storage";	
+	}elseif($product['category'] == 'tech_accesories'){
+		echo "tech";	
+	}elseif($product['category'] == 'table'){
+		echo "table";	
+	}elseif($product['category'] == 'screen'){
+		echo "screen";	
+	}elseif($product['category'] == 'agile_furniture'){
+		echo "agile";	
+	}elseif($product['category'] == 'chair'){
+		echo "chair";	
+	}elseif($product['category'] == 'joinery_custom'){
+		echo "custom";	
+	} ?>">
+		
+
+
+
 		<div id="page-padding">
 			<div id="left-col">
 				<div class="product-images">
@@ -63,8 +84,7 @@ $this -> layout('master',[
 									<?php endif ?>
 								<?php endfor ?>
 							<?php endforeach; ?>
-						</ul> 
-						<?= $product['category'] ?> 	
+						</ul> 	
 					</div>
 				</div>
 			</div>

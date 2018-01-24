@@ -59,21 +59,21 @@ nav {
 
 #drop-down {
   z-index: -1;
-  background: rgba(66, 66, 66, 0.9);
-  width: 65%;
+  background: #424242;
   position: absolute;
-  left: 0;
-  margin-left: 30%;
-  top: 5.1em;
+  top: 8rem;
   margin-top: -1rem;
   padding-bottom: 1rem;
   overflow-x: hidden;
+  padding: 0;
   opacity: 0; }
-  #drop-down ul {
-    float: left;
-    width: 100%;
-    padding: 0;
-    margin: 0; }
+  #drop-down li {
+    display: block;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; }
+  #drop-down a {
+    text-transform: uppercase;
+    font-weight: 100; }
 
 #diamond-narrow {
   width: 0;
@@ -153,7 +153,7 @@ nav {
       height: 7rem; }
   .search {
     position: absolute;
-    margin-top: -4.5rem !important;
+    margin-top: -3rem;
     float: right;
     right: 0;
     padding-right: 3.6rem; }
@@ -175,81 +175,9 @@ nav {
       cursor: pointer;
       color: #fff; } }
 
-@media screen and (min-width: 768px) and (max-width: 979px) {
-  .desktop-link {
-    display: none; }
-  nav {
-    height: 4rem; }
-    nav img {
-      height: 4rem; }
-    nav a {
-      padding: 0.3rem; }
-    nav ul {
-      margin-top: 1.3rem;
-      float: right !important;
-      margin-right: 0;
-      padding-right: 1.5rem;
-      position: relative !important; }
-  .menu-button {
-    display: none; }
-  #diamond-narrow {
-    display: none;
-    border: none; }
-    #diamond-narrow:after {
-      border: none; }
-  .main-menu {
-    font-size: 1.2rem !important;
-    font-weight: normal;
-    position: static; }
-  .hide {
-    display: none; }
+@media screen and (min-width: 960px) and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
   .search {
-    color: #fff; }
-    .search button {
-      color: #fff;
-      background: none;
-      border: none;
-      font-size: 1rem;
-      outline: none; }
-    .search input {
-      width: 0;
-      outline: none;
-      border: none;
-      opacity: 0;
-      transition: width 0.4s cubic-bezier(0, 0.795, 0, 1); }
-      .search input:focus {
-        opacity: 1;
-        width: 7.5rem;
-        background: rgba(255, 255, 255, 0.2);
-        font-size: 1.1rem;
-        padding: 3px;
-        color: #fff;
-        margin-right: -1.6rem; }
-  .show-menu {
-    opacity: 1 !important;
-    transition: 0.3s;
-    z-index: 99988 !important; }
-  #drop-down {
-    z-index: -1;
-    background: rgba(66, 66, 66, 0.9);
-    width: 95%;
-    position: absolute;
-    left: 0;
-    margin-left: 2.5%;
-    top: 5.1em;
-    margin-top: -2.1rem;
-    padding-bottom: 1rem;
-    overflow-x: hidden;
-    opacity: 1 !important; }
-    #drop-down ul {
-      float: left;
-      width: 100%;
-      padding: 0;
-      margin: 0; }
-      #drop-down ul h4 {
-        font-size: 1rem; }
-  .sub-list {
-    display: none; } }
+    margin-top: -4.5rem; } }
 
 .nav-icon {
   height: 30px;
@@ -590,6 +518,8 @@ input[type=checkbox] {
   #footer p {
     padding-top: 0;
     margin-top: 0; }
+  #footer span {
+    font-size: 0.7rem; }
 
 section {
   width: 90%;
@@ -652,7 +582,15 @@ figure {
   padding-bottom: 2rem; }
 
 .chair {
-  background: url(../img/products/themes/red.png) no-repeat center right;
+  background: url(../img/products/themes/chairs.png) no-repeat center right;
+  background-size: 100%; }
+
+.workstation {
+  background: url(../img/products/themes/workstation.png) no-repeat center right;
+  background-size: 100%; }
+
+.screen {
+  background: url(../img/products/themes/workstation.png) no-repeat center right;
   background-size: 100%; }
 
 #page-padding {
@@ -1175,43 +1113,14 @@ textarea:focus ~ .floating-label, textarea:not(:focus):valid ~ .floating-label {
   text-align: center;
   font-weight: lighter; }
 
-.main-image-upload {
-  width: 95%;
-  height: 650px;
-  position: relative; }
-  .main-image-upload input {
-    border-bottom: none !important;
-    margin: 0 !important; }
+.form-images {
+  width: 96.5%; }
 
-.upload-btn-wrapper {
-  position: absolute;
-  bottom: 0;
-  padding-bottom: 20px;
-  overflow: hidden;
-  display: inline-block;
-  width: 240px;
-  margin-left: 43%; }
-
-.upload-btn-wrapper input[type=file] {
-  font-size: 100px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0; }
-
-.upload-btn {
-  border: 2px solid grey;
-  color: grey;
-  background: #fff;
-  padding: 8px 20px;
-  font-size: 20px;
-  font-weight: bold; }
-
-.actionDone {
-  display: none; }
-
-.actionCancel {
-  display: none; }
+.image-container {
+  width: calc( 98% /5);
+  display: inline-block; }
+  .image-container label {
+    text-align: center; }
 
 #my-account {
   width: 80%;

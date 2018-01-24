@@ -12,6 +12,7 @@
 					<li class="products-drop-l"><a href="index.php?page=add_product">Add Product</a></li>
 				</ul>
 			</li>
+			<li><a href="index.php?page=help">Help</a></li>
 		<?php endif; ?> 
 		<?php if($_SESSION['account_status'] == 'not_active' ): ?> 
 			<li><a href="index.php?page=change_password">Activate Account</a></li>

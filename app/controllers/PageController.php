@@ -22,7 +22,7 @@ abstract class  PageController{
 		if ($_SESSION['account_status'] != 'not_active') {
 			header('Location: index.php?page=error404'); 
 		}
-	}  
+	}   
 	public function loggedOut(){ 
 		if (isset($_SESSION['id'])) {
 			header('Location: index.php');
