@@ -28,10 +28,14 @@ nav
 	img 
 		margin-left: -1em 
 		padding: 0 
-
+.mobileSearch 
+	display: none
 #menu 
 	display: inline-block 
-	float: right
+	float: right 
+.mobile-nav 
+	display: inline-block
+
 
 .main-menu 	
 	font-size: 1.5rem 
@@ -77,46 +81,7 @@ nav
     width: 0
     height: 0
     border: 10px solid transparent
-    border-top: 12px solid #fff
-
-.line1 
-	width: 100%  
-	display: block  
-	margin-left: 2% 
-	ul 
-		margin-top: 1px
-	div	 
-		width: calc( 100% / 4 )    
-	
-.line2
-	width: 100% 
-	display: block 
-	margin-left: 2%
-	ul 
-		margin-top: 1px
-	div	 
-		width: calc( 100% / 4 )     
-
-.nav-col 
-	vertical-align: top
-	display: inline-block 
-	float: left 
-	margin: 0
-
-	li 
-		display: block  
-		font-size: 1rem 
-		font-weight: 100 
-		padding-top: 2px
-	h4	
-		font-weight: bold
-		text-transform: uppercase 
-		margin-bottom: 7px   
-		font-size: 1.3rem 
-	.show-menu 
-		opacity: 1 !important  
-		transition: 0.3s 
-		z-index: 99988 !important  
+    border-top: 12px solid #fff      
  
 .pause-page 
 	position: fixed
@@ -167,90 +132,65 @@ nav
    		.search 
    			margin-top: -4.5rem
 
+@include mobile 
+	nav 
+		background: none 
+		img 
+			height: 55px 
+	#menu  
+		display: none 
+		position: absolute  
+		width: 100%  
+		margin: 0 auto
+		background: none !important
+		perspective: 1000px
+		ul 
+			padding: 0 
+			margin: 0  
+			width: 100% 
+			li 
+				background: $grey 
+				padding: 10px   
+				margin-top: 5px 
+				text-align: center
+				opacity: 0 
+				@for $i from 1 through 7
+					&:nth-child(#{$i})
+						animation: 
+							name: mobileMenu
+							duration: 100ms * $i 
+							timing-function: ease-in-out 
+							fill-mode: forwards 
+	.menu-active 
+		display: block !important
+	.desktopSearch 
+		display: none 
+	.mobile-nav 
+		background: $grey 
+		width: 100% 
+		height: 55px 
+	.menu-button 
+		float: right 
+		margin-right: 2% 
+		margin-top: 3% 
+	.mobileSearch 
+		display: block 
+		input 
+			width: 90% 
+			padding: 5px 
+			font-size: 1rem 
+			outline: none
+			border: none 
+			color: #fff 
+			background: rgba( #fff, 0.2 )   
+		button 
+			background: none 
+			border: none 
+			outline: none 
+			color: #fff 
+			font-size: 1rem 
+			margin-left: -2rem 
 
-
-// @include tablet 
-// 	.desktop-link 
-// 		display: none
-// 	nav 
-// 		height: 4rem 
-// 		img 
-// 			height: 4rem  
-// 		a  
-// 			padding: 0.3rem 
-// 		ul  
-// 			margin-top: 1.3rem 
-// 			float: right !important 
-// 			margin-right: 0 
-// 			padding-right: 1.5rem 
-// 			position: relative !important
-	
-// 	.menu-button 
-// 		display: none   
-	
-// 	#diamond-narrow 
-// 		display: none  
-// 		border: none 
-// 		&:after 
-// 			border: none
-	
-// 	.main-menu 	
-// 		font-size: 1.2rem !important
-// 		font-weight: normal   
-// 		position: static   
-
-// 	.hide 
-// 		display: none
-	
-// 	.search 
-// 		color: #fff 
-// 		button 
-// 			color: #fff 
-// 			background: none  
-// 			border: none 
-// 			font-size: 1rem
-// 			outline: none
-// 		input  
-// 			width: 0 
-// 			outline: none 
-// 			border: none 
-// 			opacity: 0
-// 			transition: width 0.4s cubic-bezier(0, 0.795, 0, 1) 
-// 			&:focus 
-// 				opacity: 1 
-// 				width: 7.5rem 
-// 				background: rgba( #ffffff, 0.2 ) 
-// 				font-size: 1.1rem 
-// 				padding: 3px 
-// 				color: #fff 
-// 				margin-right: -1.6rem 
-// 	.show-menu 
-// 		opacity: 1 !important  
-// 		transition: 0.3s 
-// 		z-index: 99988 !important  
-
-// 	#drop-down 
-// 		z-index: -1
-// 		background: rgba($grey, 0.9) 
-// 		width: 95%    
-// 		position: absolute  
-// 		left: 0  
-// 		margin-left: 2.5%
-// 		top: 5.1em   
-// 		margin-top: -2.1rem 
-// 		padding-bottom: 1rem    
-// 		overflow-x: hidden 
-// 		opacity: 1 !important 
-// 		ul 	 
-// 			float: left 
-// 			width: 100%  
-// 			padding: 0 
-// 			margin: 0 
-// 			h4 
-// 				font-size: 1rem 
-// 				// text-transform: none 
-// 	.sub-list 
-// 		display: none
 
 	
 	

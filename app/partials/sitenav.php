@@ -17,6 +17,5 @@
 		<?php if($_SESSION['account_status'] == 'not_active' ): ?> 
 			<li><a href="index.php?page=change_password">Activate Account</a></li>
 		<?php endif; ?> 
-		<li><a href="index.php?page=logout">Log out</a></li>
 	</ul>
 </div>

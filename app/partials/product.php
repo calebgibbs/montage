@@ -21,13 +21,13 @@ $this -> layout('master',[
 	}elseif($product['category'] == 'table'){
 		echo "table";	
 	}elseif($product['category'] == 'screen'){
-		echo "screen";	
+		echo "workstation";	
 	}elseif($product['category'] == 'agile_furniture'){
 		echo "agile";	
 	}elseif($product['category'] == 'chair'){
 		echo "chair";	
 	}elseif($product['category'] == 'joinery_custom'){
-		echo "custom";	
+		echo "joinery";	
 	} ?>">
 		
 

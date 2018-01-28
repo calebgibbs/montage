@@ -26,6 +26,11 @@ switch($page){
 		$controller = new ProductController($dbc);
 	break;   
 
+	case 'search':
+	 	require 'app/controllers/SearchController.php'; 
+		$controller = new SearchController($dbc);
+	break; 
+
 	case 'manage_accounts':
 		require 'app/controllers/ManageAccountsController.php'; 
 		$controller = new ManageAccountsController($dbc);	 

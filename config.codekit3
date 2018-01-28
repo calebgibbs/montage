@@ -121,6 +121,13 @@
 		"oAP": "\/app\/controllers\/ResultsController.php",
 		"oF": 0
 		},
+	"\/app\/controllers\/SearchController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/SearchController.php",
+		"oF": 0
+		},
 	"\/app\/controllers\/SignupController.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -231,6 +238,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/app\/partials\/results.php",
+		"oF": 0
+		},
+	"\/app\/partials\/search.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/search.php",
 		"oF": 0
 		},
 	"\/app\/partials\/sitenav.php": {
@@ -1778,6 +1792,28 @@
 		"sC": 0,
 		"tS": 0
 		},
+	"\/img\/products\/themes\/accesories.png": {
+		"ft": 32768,
+		"iS": 38425,
+		"oA": 0,
+		"oAP": "\/img\/products\/themes\/accesories.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/products\/themes\/agile.png": {
+		"ft": 32768,
+		"iS": 31034,
+		"oA": 0,
+		"oAP": "\/img\/products\/themes\/agile.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/products\/themes\/chairs.png": {
 		"ft": 32768,
 		"iS": 28471,
@@ -1786,6 +1822,39 @@
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/products\/themes\/joinery.png": {
+		"ft": 32768,
+		"iS": 38757,
+		"oA": 0,
+		"oAP": "\/img\/products\/themes\/joinery.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/products\/themes\/storage.png": {
+		"ft": 32768,
+		"iS": 32006,
+		"oA": 0,
+		"oAP": "\/img\/products\/themes\/storage.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/products\/themes\/tables.png": {
+		"ft": 32768,
+		"iS": 39379,
+		"oA": 0,
+		"oAP": "\/img\/products\/themes\/tables.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
@@ -3162,6 +3231,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/montage.sql",
+		"oF": 0
+		},
+	"\/ProductColours.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/ProductColours.txt",
 		"oF": 0
 		},
 	"\/vendor\/autoload.php": {
