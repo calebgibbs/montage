@@ -121,6 +121,13 @@
 		"oAP": "\/app\/controllers\/ResultsController.php",
 		"oF": 0
 		},
+	"\/app\/controllers\/SearchController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/SearchController.php",
+		"oF": 0
+		},
 	"\/app\/controllers\/SignupController.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -238,13 +245,6 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/app\/partials\/results.php",
-		"oF": 0
-		},
-	"\/app\/partials\/search.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/app\/partials\/search.php",
 		"oF": 0
 		},
 	"\/app\/partials\/sitenav.php": {
