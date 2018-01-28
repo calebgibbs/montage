@@ -37,6 +37,20 @@
 		"oAP": "\/app\/controllers\/AddproductController.php",
 		"oF": 0
 		},
+	"\/app\/controllers\/AgileFurnitureController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/AgileFurnitureController.php",
+		"oF": 0
+		},
+	"\/app\/controllers\/ChairsController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/ChairsController.php",
+		"oF": 0
+		},
 	"\/app\/controllers\/ChangepwdController.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -70,6 +84,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/app\/controllers\/HomeController.php",
+		"oF": 0
+		},
+	"\/app\/controllers\/JoineryAndCustomController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/JoineryAndCustomController.php",
 		"oF": 0
 		},
 	"\/app\/controllers\/LoginController.php": {
@@ -133,6 +154,34 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/app\/controllers\/SignupController.php",
+		"oF": 0
+		},
+	"\/app\/controllers\/StorageController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/StorageController.php",
+		"oF": 0
+		},
+	"\/app\/controllers\/TablesController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/TablesController.php",
+		"oF": 0
+		},
+	"\/app\/controllers\/TechAndAccesoriesController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/TechAndAccesoriesController.php",
+		"oF": 0
+		},
+	"\/app\/controllers\/WorkstationsScreensController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/WorkstationsScreensController.php",
 		"oF": 0
 		},
 	"\/app\/partials\/addproduct.php": {
@@ -1742,36 +1791,6 @@
 		"opt": 0,
 		"q": 100
 		},
-	"\/img\/products\/large\/5a67b9250c43a.jpg": {
-		"ft": 16384,
-		"iS": 27288,
-		"oA": 0,
-		"oAP": "\/img\/products\/large\/5a67b9250c43a.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/img\/products\/large\/5a67b92517a2b.jpg": {
-		"ft": 16384,
-		"iS": 21730,
-		"oA": 0,
-		"oAP": "\/img\/products\/large\/5a67b92517a2b.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/img\/products\/large\/5a67b925209d2.jpg": {
-		"ft": 16384,
-		"iS": 27288,
-		"oA": 0,
-		"oAP": "\/img\/products\/large\/5a67b925209d2.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
 	"\/img\/products\/large\/croppie.js": {
 		"ft": 64,
 		"ma": 0,
@@ -3014,36 +3033,6 @@
 		"iS": 5170,
 		"oA": 0,
 		"oAP": "\/img\/products\/thumbnail\/5a5efb445a4eb.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/img\/products\/thumbnail\/5a67b9250c43a.jpg": {
-		"ft": 16384,
-		"iS": 6409,
-		"oA": 0,
-		"oAP": "\/img\/products\/thumbnail\/5a67b9250c43a.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/img\/products\/thumbnail\/5a67b92517a2b.jpg": {
-		"ft": 16384,
-		"iS": 6563,
-		"oA": 0,
-		"oAP": "\/img\/products\/thumbnail\/5a67b92517a2b.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/img\/products\/thumbnail\/5a67b925209d2.jpg": {
-		"ft": 16384,
-		"iS": 6409,
-		"oA": 0,
-		"oAP": "\/img\/products\/thumbnail\/5a67b925209d2.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,

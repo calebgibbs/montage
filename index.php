@@ -29,7 +29,42 @@ switch($page){
 	case 'search':
 	 	require 'app/controllers/SearchController.php'; 
 		$controller = new SearchController($dbc);
+	break;
+
+	case 'workstations_screens':
+	 	require 'app/controllers/WorkstationsScreensController.php'; 
+		$controller = new WorkstationsScreensController($dbc);
 	break; 
+
+	case 'storage':
+	 	require 'app/controllers/StorageController.php'; 
+		$controller = new StorageController($dbc);
+	break;
+
+	case 'agile_furniture':
+	 	require 'app/controllers/AgileFurnitureController.php'; 
+		$controller = new AgileFurnitureController($dbc);
+	break; 
+
+	case 'chairs':
+	 	require 'app/controllers/ChairsController.php'; 
+		$controller = new ChairsController($dbc);
+	break;  
+
+	case 'tech_accesories':
+	 	require 'app/controllers/TechAndAccesoriesController.php'; 
+		$controller = new TechAndAccesoriesController($dbc);
+	break; 
+
+	case 'tables':
+	 	require 'app/controllers/TablesController.php'; 
+		$controller = new TablesController($dbc);
+	break; 
+
+	case 'joinery_custom':
+	 	require 'app/controllers/JoineryAndCustomController.php'; 
+		$controller = new JoineryAndCustomController($dbc);
+	break;
 
 	case 'manage_accounts':
 		require 'app/controllers/ManageAccountsController.php'; 

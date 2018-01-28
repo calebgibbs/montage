@@ -18,13 +18,14 @@
 			<li class="main-menu">
 				<a href="index.php?page=products" class="main-menu drop-trigger desktop-link">Products</a>
 				<ul id="drop-down">
-					<li><a class="drop-item" href="#">Workstations</a></li> 
-					<li><a class="drop-item" href="#">Screens</a></li>
-					<li><a class="drop-item" href="#">Storage</a></li>
-					<li><a class="drop-item" href="#">Agile Furniture</a></li>
-					<li><a class="drop-item" href="#">Tech &amp; Accesories</a></li>
-					<li><a class="drop-item" href="#">Tables</a></li> 
-					<li><a class="drop-item" href="#">Joinery &amp; Custom</a></li>
+					<li><a class="drop-item" href="index.php?page=workstations_screens">Workstations</a></li> 
+					<li><a class="drop-item" href="index.php?page=workstations_screens">Screens</a></li>
+					<li><a class="drop-item" href="index.php?page=storage">Storage</a></li>
+					<li><a class="drop-item" href="index.php?page=agile_furniture">Agile Furniture</a></li>
+					<li><a class="drop-item" href="index.php?page=chairs">Chairs</a></li>
+					<li><a class="drop-item" href="index.php?page=tech_accesories">Tech &amp; Accesories</a></li>
+					<li><a class="drop-item" href="index.php?page=tables">Tables</a></li> 
+					<li><a class="drop-item" href="index.php?page=joinery_custom">Joinery &amp; Custom</a></li>
 				</ul>
 
 			</li> 

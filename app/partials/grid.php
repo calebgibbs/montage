@@ -9,8 +9,13 @@ $this -> layout('master',[
 		<div id="search-heading" class="<?= $class ?>"><h2><?= $title ?></h2></div> 
 		<div id="boxes">	 
 			<?php if( $results == 'No results' ): ?>  
-				<h3 class="noResults">No results for "<?= $title ?>"</h3>
-			<?php endif ?>
+				<?php if($class == 'search-title'): ?> 
+					<h3 class="noResults">No results for "<?= $title ?>"</h3>
+				<?php endif ?> 
+				<?php if($class != 'search-title'): ?> 
+					<h3 class="noResults">There are no products in this Category</h3>
+				<?php endif ?>
+			<?php endif ?> 
 			<?php if( $results != 'No results' ): ?> 
 				<?php foreach( $results as $result ): ?> 
 					<?php if( $result['image_position'] == 1 ): ?>
