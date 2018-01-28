@@ -20,5 +20,9 @@ $(document).ready(function(){
 	$('.product-data').click(function(){
         window.location = $(this).attr('href');
         return false;
+    }); 
+    $('.box-outer').click(function(){
+        window.location = $(this).attr('href');
+        return false;
     });
 })

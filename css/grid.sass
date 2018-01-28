@@ -1,0 +1,80 @@
+#grid-page-outer 
+	width: 90% 
+	margin: 0 auto 
+
+#search-heading 
+	width: 100% 
+	height: 3rem   
+	h2
+		text-transform: uppercase  
+		color: #fff 
+		line-height: 100% 
+		font-size: 2.5rem 
+		font-weight: lighter 
+		vertical-align: middle  
+		padding-top: 0.2%
+		padding-left: 0.2%
+//colours  
+.search-title 
+	background: $light-grey  
+.workstations-title 
+	background: rgba(#639E9F, 0.73) 
+.screens-title 
+	background: rgba(#639E9F, 0.73)  
+.storage-title
+	background: rgba(#709820, 0.65) 
+.agile-title 
+	background: rgba(#2B5A18, 0.5) 
+.chair-title 
+	background: rgba(#951E12, 0.65) 
+.tech-title
+	background: rgba(#A74925, 0.65)  
+.tables-title
+	background: rgba(#38477A, 0.65) 
+.joinery-title  
+	background: rgba(#571032, 0.65)   
+
+#boxes 
+	margin-top: 2rem 
+
+.box-outer 
+	display: inline-block 
+	width: calc( 99% / 4 ) 
+	margin-bottom: 2rem   
+	cursor: pointer
+.box-inner  
+	width: 98% 
+	margin: 0 auto 
+	text-align: center 
+	img 
+		width: 350px 
+		height: 200px
+	h5 
+		font-size: 1.5rem  
+		margin: 0 
+		margin-top: 10px 
+		font-weight: 100 
+		color: $body-text 
+.noResults 
+	color: grey 
+	font-style: italic 
+	font-size: 2rem  
+
+@include desktop-sm  
+	.box-outer  
+		width: calc( 99% / 3 ) 
+@include tablet   
+	#grid-page-outer  
+		width: 95%  
+		margin: 0 auto 
+	.box-outer 
+		width: calc( 99% / 2 )   
+@include mobile  
+	#grid-page-outer 
+		width: 100% 
+	.box-outer 
+		width: 100%  
+		margin-bottom: 1rem
+
+
+

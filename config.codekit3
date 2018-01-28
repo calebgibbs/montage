@@ -121,13 +121,6 @@
 		"oAP": "\/app\/controllers\/ResultsController.php",
 		"oF": 0
 		},
-	"\/app\/controllers\/SearchController.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/app\/controllers\/SearchController.php",
-		"oF": 0
-		},
 	"\/app\/controllers\/SignupController.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -175,6 +168,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/app\/partials\/footer.php",
+		"oF": 0
+		},
+	"\/app\/partials\/grid.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/grid.php",
 		"oF": 0
 		},
 	"\/app\/partials\/help.php": {
@@ -308,29 +308,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/css\/croppie.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/css\/croppie-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"\/css\/croppie.sass": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 2,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/css\/croppie.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
 	"\/css\/favourites.sass": {
 		"aP": 0,
 		"bl": 0,
@@ -353,6 +330,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/css\/foot.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/css\/grid.sass": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 2,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/grid.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
