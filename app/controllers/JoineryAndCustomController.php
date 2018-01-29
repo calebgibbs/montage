@@ -15,7 +15,7 @@ class JoineryAndCustomController extends PageController {
 			$lastPage = 'index.php';
 		}  
 
-		$this->data['title'] = 'Joinery + Custom Furniture'; 
+		$this->data['title'] = 'Joinery &#43; Custom Furniture'; 
 		$this->data['class'] = 'joinery-title'; 
 
 		$sql = "SELECT p.id, p.title AS score_title, p.category, 

@@ -16,7 +16,7 @@ class TechAndAccesoriesController extends PageController {
 		}  
 
 		$this->data['title'] = 'Tech & Accesories'; 
-		$this->data['class'] = 'storage-title'; 
+		$this->data['class'] = 'tech-title'; 
 
 		$sql = "SELECT p.id, p.title AS score_title, p.category, 
 				i.product_id, i.image, i.image_position 
