@@ -603,6 +603,34 @@ input[type=checkbox] {
     #favourites form p input[type=checkbox] {
       margin-left: 0 !important; } }
 
+@media screen and (max-width: 1333px) {
+  #favourites {
+    min-height: 100vh;
+    max-height: 100vh;
+    position: absolute;
+    right: -50vw;
+    display: none;
+    min-width: 50vw;
+    z-index: 897656;
+    background: #fff;
+    transition: 0.3s;
+    margin: 0;
+    padding: 0; } }
+
+@media screen and (min-width: 768px) and (max-width: 979px) {
+  #favourites {
+    min-height: 100vh;
+    max-height: 100vh;
+    position: absolute;
+    right: -70vw;
+    display: none;
+    min-width: 70vw;
+    z-index: 897656;
+    background: #fff;
+    transition: 0.3s;
+    margin: 0;
+    padding: 0; } }
+
 .top {
   margin-top: 1rem; }
 
@@ -663,6 +691,63 @@ input[type=checkbox] {
 
 .dwnimg {
   margin-left: -22.5rem; }
+
+.sustainability-page {
+  background: url(../img/sustainability/background.png) no-repeat center right;
+    background-background-size: 100%; }
+
+.sustainability-grid {
+  margin-top: 5rem;
+  margin-left: 25rem; }
+
+.top-img {
+  display: inline-block;
+  margin-left: 5rem; }
+
+.bottom-img {
+  display: inline-block;
+  margin-left: 20rem; }
+
+.tri1 {
+  vertical-align: top; }
+
+.material img {
+  position: relative;
+  margin-left: -6rem;
+  margin-top: -2rem; }
+
+.smart img {
+  margin-left: -19rem; }
+
+.tri2 {
+  vertical-align: top;
+  position: relative;
+  margin-left: -14.3rem;
+  margin-top: 0.3rem; }
+
+.recycle {
+  margin-top: 0.5rem; }
+
+.sus-text {
+  position: relative;
+  margin-top: -25rem;
+  margin-left: 10rem; }
+  .sus-text h1 {
+    font-size: 3rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    color: #404040; }
+  .sus-text h2 {
+    font-size: 2.15rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-top: 0;
+    color: #7f7f7f; }
+  .sus-text p {
+    font-size: 1.6rem;
+    color: #737373;
+    margin-top: 1.5rem; }
 
 #footer {
   width: 100%;

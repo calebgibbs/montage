@@ -16,6 +16,11 @@ switch($page){
 		$controller = new HomeController($dbc);	 
 	break; 
 
+	case 'sustainability':
+		require 'app/controllers/SustainabilityController.php'; 
+		$controller = new SustainabilityController($dbc);	 
+	break;
+
 	case 'products':
 		require 'app/controllers/ProductsController.php'; 
 		$controller = new ProductsController($dbc);	 

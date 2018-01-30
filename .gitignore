@@ -3,4 +3,5 @@ vendor/
 composer.lock 
 img/products/large
 img/products/thumbnail 
-ProductColours.txt
+ProductColours.txt 
+img/sustainability

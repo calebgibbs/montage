@@ -223,7 +223,33 @@ input[type=checkbox]
 				line-height: 150% 
 				text-align: center
 				input[type=checkbox]  
-					margin-left: 0 !important
+					margin-left: 0 !important 
+@include navigation-desktop-sm 
+	#favourites
+		min-height: 100vh 
+		max-height: 100vh 
+		position: absolute  
+		right: -50vw
+		display: none
+		min-width: 50vw 
+		z-index: 897656 
+		background: #fff  
+		transition: 0.3s 
+		margin: 0 
+		padding: 0   
+@include tablet 
+	#favourites
+		min-height: 100vh 
+		max-height: 100vh 
+		position: absolute  
+		right: -70vw
+		display: none
+		min-width: 70vw 
+		z-index: 897656 
+		background: #fff  
+		transition: 0.3s 
+		margin: 0 
+		padding: 0
 
 
 

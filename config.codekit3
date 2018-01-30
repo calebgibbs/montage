@@ -163,6 +163,13 @@
 		"oAP": "\/app\/controllers\/StorageController.php",
 		"oF": 0
 		},
+	"\/app\/controllers\/SustainabilityController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/SustainabilityController.php",
+		"oF": 0
+		},
 	"\/app\/controllers\/TablesController.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -301,6 +308,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/app\/partials\/sitenav.php",
+		"oF": 0
+		},
+	"\/app\/partials\/sustainability.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/sustainability.php",
 		"oF": 0
 		},
 	"\/composer.json": {
@@ -493,6 +507,19 @@
 		"ma": 0,
 		"oA": 0,
 		"oAP": "\/css\/styles.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/css\/sustainability.sass": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 2,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/sustainability.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -3192,6 +3219,72 @@
 		"opt": 0,
 		"q": 100
 		},
+	"\/img\/sustainability\/background.png": {
+		"ft": 32768,
+		"iS": 595428,
+		"oA": 0,
+		"oAP": "\/img\/sustainability\/background.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/sustainability\/material.png": {
+		"ft": 32768,
+		"iS": 110914,
+		"oA": 0,
+		"oAP": "\/img\/sustainability\/material.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/sustainability\/recycle.png": {
+		"ft": 32768,
+		"iS": 115018,
+		"oA": 0,
+		"oAP": "\/img\/sustainability\/recycle.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/sustainability\/smart.png": {
+		"ft": 32768,
+		"iS": 217264,
+		"oA": 0,
+		"oAP": "\/img\/sustainability\/smart.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/sustainability\/tri1.png": {
+		"ft": 32768,
+		"iS": 7260,
+		"oA": 0,
+		"oAP": "\/img\/sustainability\/tri1.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/sustainability\/tri2.png": {
+		"ft": 32768,
+		"iS": 17835,
+		"oA": 0,
+		"oAP": "\/img\/sustainability\/tri2.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"\/index.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -3219,26 +3312,6 @@
 		"sC": 0,
 		"tS": 0
 		},
-	"\/js\/croppie-min.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/js\/croppie-min-min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
-	"\/js\/croppie.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/js\/croppie-min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
 	"\/js\/favourites-min.js": {
 		"ft": 64,
 		"ma": 0,
@@ -3255,26 +3328,6 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/js\/favourites-min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
-	"\/js\/imageCropping-min.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/js\/imageCropping-min-min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
-	"\/js\/imageCropping.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/js\/imageCropping-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
