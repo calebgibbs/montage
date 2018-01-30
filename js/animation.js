@@ -31,5 +31,18 @@ $(document).ready(function(){
     }); 
     $('.openSearch').click(function(){
     	$('.search').toggleClass('showSearch-d-sm'); 
+    }); 
+    $('.closeModal').click(function(){
+    	$('.modal').removeClass('openModal'); 
+    	$('#sus-page').removeClass('bgModal');
+    });
+    $('#sus-page').click(function(){
+    	$('.modal').removeClass('openModal'); 
+    	$('#sus-page').removeClass('bgModal');
+    }); 
+    $('.material').click(function(){
+    	$('#material-modal').addClass('openModal'); 
+    	$('#sus-page').addClass('bgModal');  
+    	console.log('should work')
     });
 })

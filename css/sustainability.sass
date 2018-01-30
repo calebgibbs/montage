@@ -14,15 +14,23 @@
 .tri1 
 	vertical-align: top 
 .material 
-	// vertical-align: middle
 	img 
 		position: relative
 		margin-left: -6rem 
-		margin-top: -2rem 
+		margin-top: -2rem  
+		transition: 0.3s 
+	&:hover  
+		cursor: pointer
+		img		
+			transform: scale(1.03) 
 .smart 
 	img 
-		margin-left: -19rem 
-
+		margin-left: -19rem
+		transition: 0.3s  
+	&:hover  
+		cursor: pointer
+		img		
+			transform: scale(1.03) 
 .tri2 
 	vertical-align: top  
 	position: relative 
@@ -30,7 +38,12 @@
 	margin-top: 0.3rem
 .recycle 
 	margin-top: 0.5rem 
-
+	img 
+		transition: 0.3s
+	&:hover  
+		cursor: pointer
+		img		
+			transform: scale(1.03)  
 .sus-text 
 	h1 
 		font-size: 3rem 
@@ -50,4 +63,83 @@
 		margin-top: 1.5rem 
 	position: relative  
 	margin-top: -25rem 
-	margin-left: 10rem
+	margin-left: 10rem 
+.modal 
+	z-index: -1 
+	opacity: 0  
+	background: #fff 
+	width: 80%
+	margin-left: 10% 
+	position: relative 
+	height: 80vh 
+	margin-top: -30% 
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5)  
+	overflow: hidden
+	button 
+		float: right 
+		background: none  
+		border: none 
+		font-size: 2rem 
+		margin-right: 0.4rem
+		margin-top: 0.2rem 
+.modal-inner 
+	display: block 
+	z-index: inherit 
+	padding: 1rem 
+.modal-heading 
+	text-align: center 
+	h4  
+		margin-top: 0.2rem 
+		text-transform: uppercase 
+		font-size: 2rem 
+		color: #676767 
+		font-weight: 100  
+.modal-text 
+	display: inline-block 
+	article 
+		color: #676767  
+		p 
+			width: 70%
+.openModal 
+	z-index: 9998 !important  
+	opacity: 1 !important 
+.bgModal 
+	opacity: 0.5 
+	&:hover  
+		img 
+			transform: scale(1) 	
+@include desktop-sm 
+	.sustainability-page  
+		height: 95vh 
+		margin-top: -4rem
+		margin-bottom: 1rem
+	.sustainability-grid  
+		margin-left: 10rem  
+		position: relative  
+	.tri1  
+		margin-left: 0 
+		margin-bottom: -1rem 
+	.bottom-img  
+		margin-left: 15rem
+		display: inline-block 
+	.tri2 
+		vertical-align: top  
+		position: relative 
+		margin-left: -14.3rem   
+		margin-top: 0.3rem 
+	.sus-text   
+		margin-top: -25rem 
+		margin-left: 5rem	
+
+
+
+
+
+
+
+
+
+
+
+
+

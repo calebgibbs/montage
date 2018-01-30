@@ -1,0 +1,74 @@
+.contact-page
+	background: url(../img/contact/background.png) no-repeat center right 
+ 	background-size: 100%
+.page-outer
+	width: 90% 
+	margin: 0 auto 
+
+#contact-left 
+	margin-top: 2rem
+	display: inline-block 
+	vertical-align: top 
+	width: 59.8%  
+	h2 
+		font-size: 2rem 
+		text-transform: uppercase  
+		font-weight: 100 
+		color: #585858
+#contact-right 
+	margin-top: 2rem
+	display: inline-block 
+	vertical-align: top 
+	width: 39.8%  
+	float: right
+	h2 
+		font-size: 2rem
+		text-transform: uppercase  
+		font-weight: 100 
+		color: #585858 
+	ul 
+		font-weight: 100  
+		list-style-type: none 
+		padding: 0 
+		margin: 0  
+		li  
+			margin-bottom: 0.5rem 
+			color: #5f5f5f 
+			font-size: 1rem
+			&:before  
+				content: '\2666 \0020' 
+				color: $turquoise 
+				font-size: 1.5rem  
+
+#map  
+	background: #fff 
+	padding: 1rem 
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5) 
+	width: 450px  
+	margin: 0 auto 
+	margin-top: 2rem
+	iframe 
+		// margin: 0 auto 
+		width: 450px 
+		height: 400px 
+
+.showroom 
+	margin-top: 1rem !important
+	width: 450px 
+	margin: 0 auto
+
+
+@include tablet
+	.page-outer  
+		width: 90% 
+		margin: 0 auto 
+	#contact-left 
+		display: block 
+	#contact-right 
+		display: block   
+@include mobile 
+	width: 100% 
+	#contact-left 
+		display: block 
+	#contact-right  
+		display: block

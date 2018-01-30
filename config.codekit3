@@ -58,6 +58,20 @@
 		"oAP": "\/app\/controllers\/ChangepwdController.php",
 		"oF": 0
 		},
+	"\/app\/controllers\/ContactController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/ContactController.php",
+		"oF": 0
+		},
+	"\/app\/controllers\/DownloadsController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/DownloadsController.php",
+		"oF": 0
+		},
 	"\/app\/controllers\/EditProductController.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -203,6 +217,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/app\/partials\/changepwd.php",
+		"oF": 0
+		},
+	"\/app\/partials\/contact.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/contact.php",
 		"oF": 0
 		},
 	"\/app\/partials\/editProduct.php": {
@@ -367,6 +388,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/css\/colours.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/css\/contact.sass": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 2,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/contact.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -536,6 +570,28 @@
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
+		},
+	"\/img\/contact\/background.png": {
+		"ft": 32768,
+		"iS": 341879,
+		"oA": 0,
+		"oAP": "\/img\/contact\/background.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/contact\/nz.png": {
+		"ft": 32768,
+		"iS": 44919,
+		"oA": 0,
+		"oAP": "\/img\/contact\/nz.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
 		},
 	"\/img\/favicon.png": {
 		"ft": 32768,
@@ -3235,6 +3291,17 @@
 		"iS": 110914,
 		"oA": 0,
 		"oAP": "\/img\/sustainability\/material.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/sustainability\/modal.png": {
+		"ft": 32768,
+		"iS": 29866,
+		"oA": 0,
+		"oAP": "\/img\/sustainability\/modal.png",
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,

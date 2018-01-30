@@ -84,6 +84,16 @@ switch($page){
 	case 'results':
 		require 'app/controllers/ResultsController.php'; 
 		$controller = new ResultsController($dbc);	 
+	break; 
+
+	case 'downloads':
+		require 'app/controllers/DownloadsController.php'; 
+		$controller = new DownloadsController($dbc);	 
+	break; 
+
+	case 'contact':
+		require 'app/controllers/ContactController.php'; 
+		$controller = new ContactController($dbc);	 
 	break;
 
 	case 'login':
