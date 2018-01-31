@@ -121,6 +121,13 @@
 		"oAP": "\/app\/controllers\/ManageProductsController.php",
 		"oF": 0
 		},
+	"\/app\/controllers\/OurStoryController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/OurStoryController.php",
+		"oF": 0
+		},
 	"\/app\/controllers\/PageController.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -294,6 +301,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/app\/partials\/nav.php",
+		"oF": 0
+		},
+	"\/app\/partials\/our_story.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/our_story.php",
 		"oF": 0
 		},
 	"\/app\/partials\/product.php": {
@@ -3273,6 +3287,72 @@
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
+		"q": 100
+		},
+	"\/img\/story\/background.png": {
+		"ft": 32768,
+		"iS": 272606,
+		"oA": 0,
+		"oAP": "\/img\/story\/background.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/story\/experience.png": {
+		"ft": 32768,
+		"iS": 138026,
+		"oA": 0,
+		"oAP": "\/img\/story\/experience.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/story\/history.png": {
+		"ft": 32768,
+		"iS": 161521,
+		"oA": 0,
+		"oAP": "\/img\/story\/history.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/story\/journey.png": {
+		"ft": 32768,
+		"iS": 291256,
+		"oA": 0,
+		"oAP": "\/img\/story\/journey.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/story\/tri1.png": {
+		"ft": 32768,
+		"iS": 6376,
+		"oA": 0,
+		"oAP": "\/img\/story\/tri1.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/story\/tri2.png": {
+		"ft": 32768,
+		"iS": 21955,
+		"oA": 0,
+		"oAP": "\/img\/story\/tri2.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/sustainability\/background.png": {
