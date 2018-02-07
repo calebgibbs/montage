@@ -13,7 +13,6 @@ class AddproductController extends PageController {
 	public function buildHTML(){ 
 		echo $this->plates->render('addproduct', $this->data);
 	} 
-
 	private function validateForm(){ 
 		$title = $_POST['title']; 
 		$desc = $_POST['desc'];
@@ -24,47 +23,38 @@ class AddproductController extends PageController {
 		$option2 = $_POST['opt_2'];
 		$option3 = $_POST['opt_3'];  
 		$errors = 0; 
-
 		if (strlen($title) == 0) {
 			$this->data['titleMessage'] = '<span style="color: #d9534f">*This feild is required</span>'; 
 			$errors++;
 		} 
-
 		if(strlen($title) > 50){ 
 			$this->data['titleMessage'] = '<span style="color: #d9534f">*Title is too long</span>'; 
 			$errors++;	
 		} 
-
 		if( isset($_POST['category']) && $_POST['category'] == '0' ){ 
 			$this->data['categoryError'] = 'style="background: #d9534f"';	
 			$errors++;
 		} 
-
 		if (strlen($desc) == 0) {
 			$this->data['descMessage'] = '<span style="color: #d9534f">This feild is required</span>'; 
 			$errors++;	
 		} 
-
 		if (strlen($desc) > 1000) {
 			$this->data['descMessage'] = '<span style="color: #d9534f">*Description is too long</span>'; 
 			$errors++;	
 		} 
-
 		if (strlen($feat1) == 0) {
 			$this->data['feat1Message'] = '<span style="color: #d9534f">This feild is required</span>'; 
 			$errors++;	
 		} 
-
 		if (strlen($feat1) > 300) {
 			$this->data['feat1Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
 			$errors++;	
-		} 
-
+		}
 		if (strlen($feat2) > 300) {
 			$this->data['feat2Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
 			$errors++;	
-		}  
-
+		} 
 		if (strlen($feat3) > 300) {
 			$this->data['feat3Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
 			$errors++;	
@@ -104,11 +94,15 @@ class AddproductController extends PageController {
 		if(strlen($option1) > 300){ 
 			$this->data['opt1Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
 			$errors++;	
-		}  
+		} 
+		if(strlen($option2) == 0){ 
+			$this->data['opt2Message'] = '<span style="color: #d9534f">*This feild is required</span>'; 
+			$errors++;	
+		} 
 		if(strlen($option2) > 300){ 
 			$this->data['opt2Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
 			$errors++;	
-		} 
+		}  
 		if(strlen($option3) > 300){ 
 			$this->data['opt3Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
 			$errors++;	
@@ -141,12 +135,13 @@ class AddproductController extends PageController {
 			$this->data['opt10Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
 			$errors++;	
 		} 
-
 		if( in_array( $_FILES['image1']['error'], [1,3,4] ) ) {
 			$this->data['image1message'] = '<span style="color: #d9534f">*Image failed to upload</span>';
 			$errors++; 
+		}elseif( !in_array( $_FILES['image1']['type'], $this->acceptableImageTypes ) ) {  
+			$this->data['image1message'] = '<span style="color: #d9534f">*You must upload a valid image</span>'; 
+			$errors++;
 		}
-
 		if( in_array( $_FILES['image2']['error'], [1,3] ) ) {
 			$this->data['image2message'] = '<span style="color: #d9534f">*Image failed to upload</span>';
 			$errors++; 
@@ -154,33 +149,31 @@ class AddproductController extends PageController {
 			$this->data['image2message'] = '<span style="color: #d9534f">*You must upload a valid image</span>'; 
 			$errors++;
 		}
-		// if( in_array( $_FILES['image3']['error'], [1,3] ) ) {
-		// 	$this->data['image3message'] = '<span style="color: #d9534f">*Image failed to upload</span>';
-		// 	$errors++; 
-		// }elseif( !in_array( $_FILES['image3']['type'], $this->acceptableImageTypes ) ) {  
-		// 	$this->data['image3message'] = '<span style="color: #d9534f">*You must upload a valid image</span>'; 
-		// 	$errors++;
-		// }
-		// if( in_array( $_FILES['image4']['error'], [1,3] ) ) {
-		// 	$this->data['image4message'] = '<span style="color: #d9534f">*Image failed to upload</span>';
-		// 	$errors++; 
-		// }elseif( !in_array( $_FILES['image4']['type'], $this->acceptableImageTypes ) ) {  
-		// 	$this->data['image4message'] = '<span style="color: #d9534f">*You must upload a valid image</span>'; 
-		// 	$errors++;
-		// }
-		// if( in_array( $_FILES['image5']['error'], [1,3] ) ) {
-		// 	$this->data['image5message'] = '<span style="color: #d9534f">*Image failed to upload</span>';
-		// 	$errors++; 
-		// }elseif( !in_array( $_FILES['image5']['type'], $this->acceptableImageTypes ) ) {  
-		// 	$this->data['image5message'] = '<span style="color: #d9534f">*You must upload a valid image</span>'; 
-		// 	$errors++;
-		// }
-
+		if( in_array( $_FILES['image3']['error'], [1,3] ) ) {
+			$this->data['image3message'] = '<span style="color: #d9534f">*Image failed to upload</span>';
+			$errors++; 
+		}elseif( !in_array( $_FILES['image3']['type'], $this->acceptableImageTypes ) ) {  
+			$this->data['image3message'] = '<span style="color: #d9534f">*You must upload a valid image</span>'; 
+			$errors++;
+		}
+		if( in_array( $_FILES['image4']['error'], [1,3] ) ) {
+			$this->data['image4message'] = '<span style="color: #d9534f">*Image failed to upload</span>';
+			$errors++; 
+		}elseif( !in_array( $_FILES['image4']['type'], $this->acceptableImageTypes ) ) {  
+			$this->data['image4message'] = '<span style="color: #d9534f">*You must upload a valid image</span>'; 
+			$errors++;
+		}
+		if( in_array( $_FILES['image5']['error'], [1,3] ) ) {
+			$this->data['image5message'] = '<span style="color: #d9534f">*Image failed to upload</span>';
+			$errors++; 
+		}elseif( !in_array( $_FILES['image5']['type'], $this->acceptableImageTypes ) ) {  
+			$this->data['image5message'] = '<span style="color: #d9534f">*You must upload a valid image</span>'; 
+			$errors++;
+		}
 		if ($errors == 0) {
 			$this->ProcessProduct();
 		}
 	}  
-
 	private function ProcessProduct(){ 
 		$title = $this->dbc->real_escape_string($_POST['title']);
 		$desc = $this->dbc->real_escape_string($_POST['desc']);
@@ -191,7 +184,6 @@ class AddproductController extends PageController {
 		$result = $this->dbc->query($sql); $productId = $result->fetch_assoc();  
 		
 		$productId = $productId['id'];   
-
 		$feat1 = $this->dbc->real_escape_string($_POST['feat_1']); 
 		$feat2 = $this->dbc->real_escape_string($_POST['feat_2']); 
 		$feat3 = $this->dbc->real_escape_string($_POST['feat_3']);
@@ -202,14 +194,12 @@ class AddproductController extends PageController {
 		$feat8 = $this->dbc->real_escape_string($_POST['feat_8']);
 		$feat9 = $this->dbc->real_escape_string($_POST['feat_9']);
 		$feat10 = $this->dbc->real_escape_string($_POST['feat_10']); 
-
 		for($i = 1; $i <= 10; $i++){ 
 			if(${'feat'.$i} != ''){ 
 				$sql = "INSERT INTO product_features(product_id, feature, position) VALUES('$productId', '${'feat'.$i}', '$i')"; 
 				$this->dbc->query($sql);
 			}
 		} 
-
 		$option1 = $this->dbc->real_escape_string($_POST['opt_1']);
 		$option2 = $this->dbc->real_escape_string($_POST['opt_2']);
 		$option3 = $this->dbc->real_escape_string($_POST['opt_3']);
@@ -220,35 +210,27 @@ class AddproductController extends PageController {
 		$option8 = $this->dbc->real_escape_string($_POST['opt_8']);
 		$option9 = $this->dbc->real_escape_string($_POST['opt_9']);
 		$option10 = $this->dbc->real_escape_string($_POST['opt_10']); 
-
 		for($i = 1; $i <= 10; $i++){ 
 			if(${'option'.$i} != ''){ 
 				$sql = "INSERT INTO product_options(product_id, product_option, position) VALUES('$productId', '${'option'.$i}', '$i')"; 
 				$this->dbc->query($sql);
 			}
 		}  
-
 		$image1 = $_FILES['image1'];
 		$image2 = $_FILES['image2'];
 		$image3 = $_FILES['image3'];
 		$image4 = $_FILES['image4'];
 		$image5 = $_FILES['image5']; 
-
 		for($i = 1; $i <= 5; $i++){ 
 			if(!in_array(${'image'.$i}['error'],[4])) {
 				$manager = new ImageManager();
 				$image = $manager->make( ${'image'.$i}['tmp_name'] );   
-
 				$fileExtension = $this->getFileExtension( $image->mime() ); 
-
 				$fileName = uniqid(); 
-
 				$image->resize(250, 150); 
 				$image->save("img/products/thumbnail/$fileName$fileExtension");  
-
 				$image->resize(770, 400); 
 				$image->save("img/products/large/$fileName$fileExtension"); 
-
 				$sql = "INSERT INTO images(product_id, image, image_position) VALUES( '$productId', '$fileName$fileExtension', '$i' )";  
 				$this->dbc->query($sql);
 			}
@@ -264,30 +246,23 @@ class AddproductController extends PageController {
 				Please try again later</i></b></h2>'; 		
 			}
 	} 
-
 	private function getFileExtension( $mimeType ) {
-
 		switch($mimeType) {
-
 			case 'image/png':
 				return '.png';
 			break;
-
 			case 'image/gif':
 				return '.gif';
 			break;
-
 			case 'image/jpeg':
 				return '.jpg';
 			break;
-
 			case 'image/bmp':
 				return '.bmp';
 			break;
-
 			case 'image/tiff':
 				return '.tif';
 			break;
 		}
 	}
-} 
+}

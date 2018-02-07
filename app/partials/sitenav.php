@@ -18,4 +18,4 @@
 			<li><a href="index.php?page=change_password">Activate Account</a></li>
 		<?php endif; ?> 
 	</ul>
-</div>
+</div> 

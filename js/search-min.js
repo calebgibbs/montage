@@ -1,0 +1,1 @@
+function search(){var e=document.getElementById("search-feild").value;console.log(e)}

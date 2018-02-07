@@ -15,17 +15,18 @@
 	<?= $this->insert('favourites') ?>
 	<?= $this->insert('nav') ?> 
 	<?php if($_SESSION['account_type'] == 'admin'): ?>
-	<?= $this->insert('sitenav') ?> 
+		<?= $this->insert('sitenav') ?> 
 	<?php endif; ?>
 	<div id="main-page">  
-	<?= $this->section('content') ?>
-	<?= $this->insert('footer') ?> 
+		<?= $this->section('content') ?>
+		<?= $this->insert('footer') ?> 
 	</div>
 	<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>  
 	<script type="text/javascript" src="js/menu.js"></script> 
 	<script type="text/javascript" src="js/animation.js"></script>
 	<script type="text/javascript" src="js/favourites.js"></script>  
 	<script type="text/javascript" src="js/signupValidation-min.js"></script>
-	<script type="text/javascript" src="js/loginValidation-min.js"></script> 
+	<script type="text/javascript" src="js/loginValidation-min.js"></script>  
+	<script type="text/javascript" src="js/search.js"></script>
 </body>
-</html>
+</html> 

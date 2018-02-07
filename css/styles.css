@@ -395,7 +395,7 @@ nav {
     position: absolute;
     right: -100vw;
     display: none;
-    min-width: 100vw;
+    min-width: 100vw !important;
     z-index: 897656;
     background: #fff;
     transition: 0.3s;
@@ -1176,6 +1176,8 @@ figure {
 
 .img-thumb {
   margin-top: 0.8rem; }
+  .img-thumb img {
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5); }
 
 .large-img img {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5); }
@@ -1316,7 +1318,7 @@ figure {
 
 .storage-dia {
   text-align: left;
-  margin-left: 58.59rem;
+  margin-left: 28.59rem;
   margin-top: -23rem; }
   .storage-dia img {
     transition: 0.3s; }
@@ -1330,8 +1332,9 @@ figure {
       opacity: 1; }
 
 .chair-dia {
+  position: relative;
   text-align: left;
-  margin-left: 84.4rem;
+  margin-left: 54.4rem;
   margin-top: -41rem; }
   .chair-dia img {
     transition: 0.3s; }
@@ -1346,7 +1349,7 @@ figure {
 
 .table-dia {
   text-align: left;
-  margin-left: 84.4rem;
+  margin-left: 54.4rem;
   margin-top: 2rem; }
   .table-dia img {
     transition: 0.3s; }
@@ -1360,7 +1363,7 @@ figure {
 
 .tech-dia {
   text-align: left;
-  margin-left: 76.3rem;
+  margin-left: 46.3rem;
   margin-top: -11.9rem; }
   .tech-dia img {
     transition: 0.3s; }
@@ -1524,7 +1527,7 @@ figure {
       #addp form input:focus {
         border-bottom: 0.1rem solid #424242; }
     #addp form select {
-      width: 95%;
+      width: 100%;
       font-size: 1.3rem;
       border: none;
       border-bottom: 0.1rem solid #F3F3F3;
@@ -1534,6 +1537,7 @@ figure {
       padding: 7px;
       vertical-align: bottom;
       margin-bottom: -2.5%;
+      margin-top: 7.5%;
       outline: none; }
       #addp form select option {
         color: #F3F3F3; }
@@ -1559,6 +1563,13 @@ figure {
     height: 200px !important; }
     .form-textarea textarea:focus {
       border-bottom: 0.1rem solid #424242; }
+
+.f-prod-title {
+  width: 100%;
+  display: block !important; }
+  .f-prod-title input {
+    display: block;
+    width: 198% !important; }
 
 .form-input {
   width: 49%;

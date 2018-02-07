@@ -46,10 +46,11 @@ $this -> layout('master',[
 					<div class="img-thumb">
 						<ol> 
 							<?php foreach( $Allimages as $image): ?> 
-								<?php for( $i = 1; $i <= 5; $i++ ): ?> 
+								<?php for( $i = 1; $i <= 3; $i++ ): ?> 
 									<?php if( $image['image_position'] == $i ): ?>  
 										<li><img class="img-thumb" src="img/products/thumbnail/<?= $image['image'] ?>" onClick="ChangeImage('img/products/large/<?= $image['image'] ?>')"></li>
 									<?php endif ?>
+								
 								<?php endfor ?>
 							<?php endforeach; ?>
 						</ol>

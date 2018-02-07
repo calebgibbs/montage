@@ -11,7 +11,7 @@
 		<ul> 	
 			<li class="mobileSearch">
 				<form  method="post" action="index.php?page=search">
-					<input type="text" name="searchResult" id="search-feild-mobile"><button class="search-button"><i class="fa fa-search search-btn" aria-hidden="true"></i></button> 
+					<input type="text" name="s" id="search-feild-mobile"><button class="search-button"><i class="fa fa-search search-btn" aria-hidden="true"></i></button> 
 				</form>	
 			</li>
 			<li class="main-menu menu-item"><a href="index.php?page=our_story" class="main-menu"><span class="desktop-link">Our Story</span></a></li>
@@ -37,10 +37,10 @@
 				<button class="openSearch"><i class="fa fa-search search-btn" aria-hidden="true"></i></button> 
 			</li>
 			<li class="search desktopSearch"> 
-				<form  method="post" action="index.php?page=search">
-					<input type="text" name="searchResult" id="search-feild"><button class="search-button"><i class="fa fa-search search-btn" aria-hidden="true"></i></button> 
+				<form id="desktopSearchBar" action="index.php?page=search" method="post">
+					<input type="text" name="s"><button class="search-button"><i class="fa fa-search search-btn" aria-hidden="true"></i></button> 
 				</form>
 			</li> 	
 		</ul>
 	</div> 
-</nav>
+</nav>  
