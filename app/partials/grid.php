@@ -10,7 +10,7 @@ $this -> layout('master',[
 		<div id="boxes">	 
 			<?php if( $results == 'No results' ): ?>  
 				<?php if($class == 'search-title'): ?> 
-					<h3 class="noResults">No results for "<?= $title ?>"</h3>
+					<h3 class="noResults">No results for '<?= $title ?>'</h3>
 				<?php endif ?> 
 				<?php if($class != 'search-title'): ?> 
 					<h3 class="noResults">There are no products in this Category</h3>
@@ -19,19 +19,24 @@ $this -> layout('master',[
 			<?php if( $results != 'No results' ): ?> 
 				<?php foreach( $results as $result ): ?> 
 					<?php if( $result['image_position'] == 1 ): ?>
-						<div class="box-outer" href="index.php?page=product&productnum=<?= $result['id'] ?>">
-							<div class="box-inner">
-								<div class="box-img">
-									<img src="img/products/thumbnail/<?= $result['image'] ?>"> 
-								</div> 
-								<div class="box-title">
-									<h5><?= $result['score_title'] ?></h5>
+						<?php if($_GET['page'] == 'portfolios'): ?>
+							<div class="box-outer" href="index.php?page=portfolio&num=<?= $result['id'] ?>">
+							<?php endif ?>	
+							<?php if($_GET['page'] != 'portfolios'): ?>
+								<div class="box-outer" href="index.php?page=product&productnum=<?= $result['id'] ?>">
+								<?php endif ?>
+								<div class="box-inner">
+									<div class="box-img">
+										<img src="img/products/thumbnail/<?= $result['image'] ?>"> 
+									</div> 
+									<div class="box-title">
+										<h5><?= $result['score_title'] ?></h5>
+									</div>
 								</div>
-							</div>
-						</div>		
-					<?php endif ?>
-				<?php endforeach ?>
-			<?php endif ?>
+							</div>		
+						<?php endif ?>
+					<?php endforeach ?>
+				<?php endif ?>
+			</div>
 		</div>
 	</div>
-</div>

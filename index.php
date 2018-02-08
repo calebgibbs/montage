@@ -34,7 +34,17 @@ switch($page){
 	case 'product':
 	 	require 'app/controllers/ProductController.php'; 
 		$controller = new ProductController($dbc);
-	break;   
+	break;  
+
+	case 'portfolio':
+	 	require 'app/controllers/PortfolioController.php'; 
+		$controller = new PortfolioController($dbc);
+	break;  
+
+	case 'portfolios':
+	 	require 'app/controllers/PortfoliosController.php'; 
+		$controller = new PortfoliosController($dbc);
+	break;  
 
 	case 'search':
 	 	require 'app/controllers/SearchController.php'; 

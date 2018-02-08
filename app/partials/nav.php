@@ -28,7 +28,7 @@
 					<li><a class="drop-item" href="index.php?page=joinery_custom">Joinery &amp; Custom</a></li>
 				</ul>
 			</li> 
-			<li class="main-menu menu-item"><a href="#" class="main-menu">Portfolio</a></li> 
+			<li class="main-menu menu-item"><a href="index.php?page=portfolios" class="main-menu">Portfolio</a></li> 
 			<li class="main-menu menu-item tabletBreak"></li> 	
 			<li class="main-menu menu-item hide-sm"><a href="index.php?page=downloads" class="main-menu">Downloads</a></li>
 			<li class="main-menu menu-item contact"><a href="index.php?page=contact" class="main-menu">Contact</a></li> 

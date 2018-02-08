@@ -1,6 +1,11 @@
 <?php 
-$title = $product['title']; 
-$description = $product['description']; 
+if($_GET['page'] == 'product'){ 
+	$title = $product['title']; 
+	$description = $product['description']; 
+}else{ 
+	$title = $port['title']; 
+	$description = $port['description'];
+}
 $this -> layout('master',[
 	'title'=>'Montage Interiors | '.$title, 
 	'desc' => $description 
@@ -29,40 +34,46 @@ $this -> layout('master',[
 	}elseif($product['category'] == 'joinery_custom'){
 		echo "joinery";	
 	} ?>">
-		
-
-
-
-		<div id="page-padding">
-			<div id="left-col">
-				<div class="product-images">
-					<div class="large-img">
-						<?php foreach( $Allimages as $image ): ?>
-							<?php if( $image['image_position'] == 1 ): ?> 
-								<img id="dispayImg" src="img/products/large/<?= $image['image'] ?>"> 
-							<?php endif ?>
-						<?php endforeach ?>
-					</div> 
-					<div class="img-thumb">
-						<ol> 
-							<?php foreach( $Allimages as $image): ?> 
-								<?php for( $i = 1; $i <= 3; $i++ ): ?> 
-									<?php if( $image['image_position'] == $i ): ?>  
-										<li><img class="img-thumb" src="img/products/thumbnail/<?= $image['image'] ?>" onClick="ChangeImage('img/products/large/<?= $image['image'] ?>')"></li>
-									<?php endif ?>
-								
-								<?php endfor ?>
-							<?php endforeach; ?>
-						</ol>
-					</div>
+	<div id="page-padding">
+		<div id="left-col">
+			<div class="product-images">
+				<div class="large-img">
+					<?php foreach( $Allimages as $image ): ?>
+						<?php if( $image['image_position'] == 1 ): ?> 
+							<img id="dispayImg" src="img/products/large/<?= $image['image'] ?>"> 
+						<?php endif ?>
+					<?php endforeach ?>
 				</div> 
+				<div class="img-thumb">
+					<ol> 
+						<?php foreach( $Allimages as $image): ?> 
+							<?php for( $i = 1; $i <= 3; $i++ ): ?> 
+								<?php if( $image['image_position'] == $i ): ?>  
+									<li><img class="img-thumb" src="img/products/thumbnail/<?= $image['image'] ?>" onClick="ChangeImage('img/products/large/<?= $image['image'] ?>')"></li>
+								<?php endif ?>
+								
+							<?php endfor ?>
+						<?php endforeach; ?>
+					</ol>
+				</div>
 			</div> 
-			<div id="right-col">
-				<div class="product-text">
+		</div> 
+		<div id="right-col">
+			<div class="product-text">
+				<?php if($_GET['page'] == 'product'): ?>
 					<div class="title-text">
 						<h1><?= $product['title'] ?></h1> 
 						<p><?= $product['description'] ?></p>
-					</div> 
+					</div>  
+				<?php endif ?>
+
+				<?php if($_GET['page'] == 'portfolio'): ?>
+					<div class="title-text">
+						<h1><?= $port['title'] ?></h1> 
+						<p><?= $port['description'] ?></p>
+					</div>  
+				<?php endif ?>
+				<?php if($_GET['page'] == 'product'): ?>
 					<div class="prod-features">
 						<h2>Features</h2> 
 						<ul class="product-list">
@@ -86,11 +97,12 @@ $this -> layout('master',[
 								<?php endfor ?>
 							<?php endforeach; ?>
 						</ul> 	
-					</div>
-				</div>
+					</div> 
+				<?php endif ?>
 			</div>
 		</div>
 	</div>
+</div>
 </div>  
 <script type="text/javascript">
 	function ChangeImage(a) {

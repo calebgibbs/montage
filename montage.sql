@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 17, 2018 at 08:44 PM
+-- Generation Time: Feb 08, 2018 at 12:06 AM
 -- Server version: 5.7.17
 -- PHP Version: 7.1.7
 
@@ -23,150 +23,44 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `images`
+-- Table structure for table `portfolios`
 --
 
-CREATE TABLE `images` (
-  `id` int(11) NOT NULL,
-  `product_id` int(10) NOT NULL,
-  `image` varchar(50) NOT NULL,
-  `image_position` enum('1','2','3','4','5') DEFAULT NULL
+CREATE TABLE `portfolios` (
+  `id` int(10) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `description` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `images`
+-- Dumping data for table `portfolios`
 --
 
-INSERT INTO `images` (`id`, `product_id`, `image`, `image_position`) VALUES
-(6, 2, '5a5e64f2b3fa3.jpg', '1'),
-(7, 2, '5a5e64f2cfe5d.jpg', '2'),
-(8, 2, '5a5e64f2eb0aa.jpg', '3'),
-(9, 3, '5a5e65aa75f65.jpg', '1'),
-(10, 3, '5a5e65aa913d1.jpg', '2'),
-(11, 4, '5a5e66392523b.jpg', '1'),
-(12, 4, '5a5e66393f7d8.jpg', '2'),
-(13, 4, '5a5e66395bf94.jpg', '3'),
-(14, 4, '5a5e663978091.jpg', '4'),
-(15, 5, '5a5e66e0acfee.jpg', '1'),
-(16, 5, '5a5e66e0c8905.jpg', '2'),
-(17, 5, '5a5e66e0e3522.jpg', '3'),
-(18, 5, '5a5e66e109360.jpg', '4'),
-(19, 5, '5a5e66e124972.jpg', '5'),
-(20, 6, '5a5e676f88f0e.jpg', '1'),
-(21, 6, '5a5e676fab3f9.jpg', '2'),
-(22, 6, '5a5e676fce11b.jpg', '3'),
-(23, 6, '5a5e676fe2749.jpg', '4'),
-(27, 8, '5a5e6862ea40f.jpg', '1'),
-(28, 8, '5a5e68631ac66.jpg', '2'),
-(29, 8, '5a5e68632e5e0.jpg', '3'),
-(30, 9, '5a5e68cd2d20a.jpg', '1'),
-(31, 9, '5a5e68cd47199.jpg', '2'),
-(32, 9, '5a5e68cd60985.jpg', '3'),
-(33, 9, '5a5e68cd6fee9.jpg', '4'),
-(34, 10, '5a5e693d7b91b.jpg', '1'),
-(35, 10, '5a5e693d969e9.jpg', '2'),
-(36, 10, '5a5e693da4d02.jpg', '3'),
-(37, 11, '5a5e69c4bfb19.jpg', '1'),
-(38, 11, '5a5e69c4daa48.jpg', '2'),
-(39, 11, '5a5e69c5003df.jpg', '3'),
-(40, 11, '5a5e69c519bb4.jpg', '4'),
-(41, 11, '5a5e69c527c46.jpg', '5'),
-(42, 12, '5a5e6a31f1d33.jpg', '1'),
-(43, 12, '5a5e6a321903c.jpg', '2'),
-(44, 12, '5a5e6a3234a6d.jpg', '3'),
-(45, 12, '5a5e6a32428ed.jpg', '4'),
-(46, 13, '5a5e6a9c1cb86.jpg', '1'),
-(47, 13, '5a5e6a9c36c36.jpg', '2'),
-(48, 13, '5a5e6a9c44ee5.jpg', '3'),
-(49, 14, '5a5e6af57b692.jpg', '1'),
-(50, 14, '5a5e6af595faa.jpg', '2'),
-(51, 14, '5a5e6af5b1609.jpg', '3'),
-(52, 14, '5a5e6af5ccd94.jpg', '4'),
-(53, 14, '5a5e6af5dad0f.jpg', '5'),
-(54, 15, '5a5e6b49a9a14.jpg', '1'),
-(55, 15, '5a5e6b49c50ae.jpg', '2'),
-(56, 15, '5a5e6b49d437d.jpg', '3'),
-(67, 17, '5a5e6bceaf016.jpg', '1'),
-(68, 17, '5a5e6bcec9b3c.jpg', '2'),
-(69, 17, '5a5e6bcee5484.jpg', '3'),
-(70, 17, '5a5e6bcf0bdda.jpg', '4'),
-(71, 17, '5a5e6bcf19daf.jpg', '5'),
-(72, 19, '5a5e6c24c0b75.jpg', '1'),
-(73, 19, '5a5e6c24db245.jpg', '2'),
-(74, 19, '5a5e6c24e9927.jpg', '3'),
-(95, 24, '5a5e6dba33ce1.jpg', '1'),
-(96, 24, '5a5e6dba4eacf.jpg', '2'),
-(97, 24, '5a5e6dba6813f.jpg', '3'),
-(98, 24, '5a5e6dba819e4.jpg', '4'),
-(99, 24, '5a5e6dba8fe69.jpg', '5'),
-(100, 25, '5a5e6e33327c7.jpg', '1'),
-(101, 25, '5a5e6e334dc2c.jpg', '2'),
-(102, 25, '5a5e6e3368a72.jpg', '3'),
-(103, 25, '5a5e6e33833e2.jpg', '4'),
-(104, 25, '5a5e6e339d20b.jpg', '5'),
-(105, 26, '5a5e6e7a3dbbf.jpg', '1'),
-(106, 26, '5a5e6e7a58c92.jpg', '2'),
-(107, 26, '5a5e6e7a67248.jpg', '3'),
-(108, 27, '5a5e6efc66e0b.jpg', '1'),
-(109, 27, '5a5e6efc80515.jpg', '2'),
-(110, 27, '5a5e6efc8e797.jpg', '3'),
-(111, 28, '5a5e6f46f2f5e.jpg', '1'),
-(112, 28, '5a5e6f4719796.jpg', '2'),
-(113, 28, '5a5e6f4734b53.jpg', '3'),
-(114, 28, '5a5e6f474faac.jpg', '4'),
-(115, 28, '5a5e6f475de10.jpg', '5'),
-(116, 29, '5a5e70a29b7fd.jpg', '1'),
-(117, 29, '5a5e70a2b6944.jpg', '2'),
-(118, 29, '5a5e70a2d3ba4.jpg', '3'),
-(119, 29, '5a5e70a305673.jpg', '4'),
-(120, 30, '5a5e7105622ab.jpg', '1'),
-(121, 30, '5a5e71057f737.jpg', '2'),
-(122, 30, '5a5e71059b4a8.jpg', '3'),
-(123, 31, '5a5e73238c385.jpg', '1'),
-(124, 31, '5a5e7323a8b9b.jpg', '2'),
-(125, 31, '5a5e7323c6ede.jpg', '3'),
-(131, 34, '5a5e74769f266.jpg', '1'),
-(132, 34, '5a5e7476c05ee.jpg', '2'),
-(133, 35, '5a5e75598c493.jpg', '1'),
-(134, 35, '5a5e755996970.jpg', '2'),
-(135, 35, '5a5e7559a062c.jpg', '3'),
-(136, 36, '5a5e760802fc8.jpg', '1'),
-(137, 36, '5a5e76081cf6a.jpg', '2'),
-(138, 36, '5a5e760836815.jpg', '3'),
-(139, 36, '5a5e760845132.jpg', '4'),
-(140, 37, '5a5e772b3a905.jpg', '1'),
-(141, 37, '5a5e772b57c01.jpg', '2'),
-(142, 37, '5a5e772b73190.jpg', '3'),
-(143, 38, '5a5e77ed235ac.jpg', '1'),
-(144, 38, '5a5e77ed4c38e.jpg', '2'),
-(145, 39, '5a5e790b8119a.jpg', '1'),
-(146, 39, '5a5e790bae0e4.jpg', '2'),
-(147, 40, '5a5e7a5747d2a.jpg', '1'),
-(148, 40, '5a5e7a576395c.jpg', '2'),
-(149, 40, '5a5e7a57860b1.jpg', '3'),
-(150, 41, '5a5e7bf64f124.jpg', '1'),
-(151, 41, '5a5e7bf66b664.jpg', '2'),
-(152, 42, '5a5ef8e47edc3.jpg', '1'),
-(153, 42, '5a5ef8e4a2ed1.jpg', '2'),
-(154, 43, '5a5efa45ef5ba.jpg', '1'),
-(155, 43, '5a5efa461bcfe.jpg', '2'),
-(156, 43, '5a5efa463782b.jpg', '3'),
-(157, 44, '5a5efb442df74.jpg', '1'),
-(158, 44, '5a5efb444b837.jpg', '2'),
-(159, 44, '5a5efb445a4eb.jpg', '3');
+INSERT INTO `portfolios` (`id`, `title`, `description`) VALUES
+(1, 'Public Trust', 'Public Trust currently 43 branches throughout NZ and Montage Interiors have successfully supplied furniture to them all in the last 18 years. We have recently refitted their Corporate Office in Wellington consisting of over 100 workstations, mobiles, screens, storage, meeting chairs, low seating and ergo chairs all chosen from Public Trust exclusive furniture catalogue.');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `nav`
+-- Table structure for table `portfolio_images`
 --
 
-CREATE TABLE `nav` (
-  `id` int(11) NOT NULL,
-  `category` enum('workstations','storage','tech_accesories','tables','screens','agile','chairs','joinery_custom') NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `product_id` int(11) NOT NULL
+CREATE TABLE `portfolio_images` (
+  `id` int(10) NOT NULL,
+  `portfolio_id` int(10) NOT NULL,
+  `image` varchar(50) NOT NULL,
+  `image_position` enum('1','2','3','4','5') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `portfolio_images`
+--
+
+INSERT INTO `portfolio_images` (`id`, `portfolio_id`, `image`, `image_position`) VALUES
+(1, 1, '5a5e66392523b.jpg', '1'),
+(2, 1, '5a5e66393f7d8.jpg', '2'),
+(3, 1, '5a5e66395bf94.jpg', '3'),
+(4, 1, '5a5e663978091.jpg', '4');
 
 -- --------------------------------------------------------
 
@@ -178,48 +72,49 @@ CREATE TABLE `products` (
   `id` int(10) NOT NULL,
   `title` varchar(50) NOT NULL,
   `description` varchar(1000) NOT NULL,
-  `category` enum('workstation','storage','tech_accesories','table','screen','agile_furniture','chair','joinery_custom','other') NOT NULL
+  `category` enum('workstation','storage','tech_accesories','table','screen','agile_furniture','chair','joinery_custom','other') NOT NULL,
+  `supplier` enum('montage') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `title`, `description`, `category`) VALUES
-(2, 'Motion Shell', 'Motion Shell work pods provide a very high level of acoustic and visual privacy, allowing workers to complete focused individual tasks in a comfortable enclosed environment.', 'agile_furniture'),
-(3, 'Motion Team', 'This shared workspace is ideal for teams of up to 4 to cluster, providing a focussed zone for individual work with the ability to easily collaborate with the people nearby. Motion Team is designed to create a defined zone for individuals who collaborate regularly throughout the day.', 'agile_furniture'),
-(4, 'Motion Wave', 'Motion Wave work pods provide a good touch down space for individual tasks. They are very space efficient, providing a small amount of acoustic and visual privacy for workers.', 'agile_furniture'),
-(5, 'Motion Zip', 'Motion Zip work pods provide a high level of acoustic and visual privacy, allowing workers to complete focused individual tasks in a comfortable environment.', 'agile_furniture'),
-(6, 'Motion Expo', 'Motion Expo is ideal for workplace presentations, providing 2 defined tiers for workers to gather around. The screens provide some acoustic privacy and help to define the area for its use. The bar leaner height desks provide space for laptops or notebooks as required.', 'agile_furniture'),
-(8, 'Motion Ring ', 'Motion Ring provides a great private space for standing meetings. The large 2 way acoustic screens keep the meeting private, while blocking out distracting workplace sounds from the outside.', 'agile_furniture'),
-(9, 'Motion Link', 'Motion Link phone booths provide workers with a private acoustic space to make phone/video calls. A standing height table top provides space for laptops or notebooks if necessary. Motion Link is designed to keep noise from the outside out, while also enclosing the user to prevent them from distracting others in the workplace.', 'agile_furniture'),
-(10, 'Motion Meeting', 'Motion Meeting is a 4 seater booth which provides a high level of privacy for users. This enclosed setting is ideal for anything from focussed brainstorming sessions to client meet and greets.', 'agile_furniture'),
-(11, 'Motion Arc', 'Motion Arc provides space for groups of people to collaborate together, and comes with the option of additional privacy screens to enclose the space and provide a high level of privacy for workers.', 'agile_furniture'),
-(12, 'Motion Arc Walls ', 'Motion Arc provides space for a group of people to collaborate together with the option of additional screens to enclose the space and provide a high level of privacy for workers.', 'agile_furniture'),
-(13, 'Motion Canopy', 'Motion Canopy seating can be arranged to create meeting spaces or be used as quite spaces to complete short individual tasks. The large acoustic panels and roof provide a very good level of privacy in the busy work environment.', 'agile_furniture'),
-(14, 'Motion Cape', 'Motion Cape seating can be arranged to create meeting spaces or be used as quite spaces to complete short individual tasks. The large acoustic panels provide a good level of privacy in the busy work environment.', 'agile_furniture'),
-(15, 'Motion Disk', 'Motion Disc 6 is perfect for open spaces, providing comfortable individual seating spaces in a 360 degree range.', 'agile_furniture'),
-(17, 'Motion Fin', 'Motion Fin seating can be arranged to create open meeting areas or be used as spaces to complete short individual tasks. The low back creates an open welcoming environment for workers to relax as well.', 'agile_furniture'),
-(19, 'Motion Free Chair ', 'The Free Chair is a stylish addition to any breakout, meeting, or low-intensity work zone. With 360 degrees of rotation, the seating always returns to it\'s original position when vacated. Upholstered in Motion Felt, with polished alloy base.', 'agile_furniture'),
-(24, 'Motion Grandstand ', 'Motion Grandstand provides tiered seating for anything from quick meetings and presentations to relaxation. Available in the full Motion Felt range, the Grandstand modules can provide visual interest to any space.', 'agile_furniture'),
-(25, 'Motion Loop', 'The Motion Loop range allows for endless layout possibilities to suit any environment. Creating waiting room areas or collaborative zones is easy with simple loop forms.', 'agile_furniture'),
-(26, 'Motion Otto', 'Motion Otto is the smallest member of the MotionOffice family. Castors on the base provide a mobile option to create clusters or add seating to any desired area.', 'agile_furniture'),
-(27, 'Motion Sync', 'The Motion Sync chair features a generously sized mesh backrest to ergonomically support your back, and moulded seat foam with your colour choice of Motion Felt seat cover. A super smooth seat slide adjusts for all users, large and small, and the synchro tilt mechanism moves the seat in harmony with the back recline. The stylish black nylon star base is equipped with heavy duty 60mm castors.', 'agile_furniture'),
-(28, 'Motion Wing', 'Motion Wing seating can be arranged to create meeting spaces or be used as quite spaces to complete short individual tasks. The acoustic wings provide acoustic privacy with a more unique bold aesthetic.', 'agile_furniture'),
-(29, 'Eightby4', 'Eight by 4 is a highly customisable ottoman that is easy to rearrange into an agile workspace solution.', 'agile_furniture'),
-(30, 'Halo', 'The Halo ottoman is available in 3 varying diameters. Its simple soft aesthetic makes it an inviting secondary seating option.', 'agile_furniture'),
-(31, 'Star ', 'The Star is a fun group work solution that promotes communication, learning and creativity. Star can be rearranged into many different formations to suit the space.', 'agile_furniture'),
-(34, 'Sterm ', 'Stem comes in small, medium and large sizes making it suitable for a range of different workspaces. The Stem is a fun group work solution that promotes communication, learning and creativity.', 'agile_furniture'),
-(35, 'Gumball ', 'Ergonomically shaped and enveloping armchair, especially suitable for recreational settings. Available in several variants may be produced in lacquered material or in version with light. The special edition is filled with thousands of coloured balls that come through the translucent and soft surface available.', 'agile_furniture'),
-(36, 'Profile Side Screen', 'The Profile E-Panel slide on side screen is quick and easy to use. It can be used as a privacy screen, an acoustic barrier and a pin board all rolled into one. Setup your desk with privacy or divide one are into two and transform your space with colour coordinated side screens for your desk areas.', 'screen'),
-(37, 'Biro II', 'A contemporary style for work or home, the Brio II chair offers a range of adjustability options for superior comfort.', 'chair'),
-(38, 'Challenger', 'The Buro Challenger Chair is an impressive chair for any modern office or boardroom. Featuring European styling and design its state of the art synchro mechanism and superior comfort will satisfy.', 'chair'),
-(39, 'Mentor', 'The Buro Mentor offers the latest in contemporary and ergonomic design. The Mentor is a stand out candidate for any board room, office or home office environment. Featuring a complete range of ergonomic features, easy to use synchronised seating adjustments and outstanding comfort.', 'chair'),
-(40, 'Metro', 'A stylish mesh back chair offering a modern look for your office with a polished aluminium base and fully adjustable ergonomic features.\r\nThe Buro Metro chair is supported by the following internationally recognised standards:\r\n-AFRDI Level 6 - Severe Commercial Certificationâ€™\r\n-Global GreenTag', 'chair'),
-(41, 'Metro II 24/7', 'Following on from the hugely successful Buro Metro Chair comes the new Buro Metro II 24/7, designed for Multi-Shift operations. Featuring the latest technologies in ergonomics and the sophistication of contemporary fine mesh & elastic knit seat upholstery.', 'chair'),
-(42, 'Merto II HB', 'Following on from the hugely successful Buro Metro Chair is the new Buro Metro II High Back our newest member of the Metro II family. Featuring the latest technologies in ergonomics the Metro II HB includes a contoured & supportive high back with built in adjustable lumbar support for ultimate back comfort. Featuring the Metro II sophistication of a contemporary fine mesh & elastic knit seat upholstery.', 'chair'),
-(43, 'Roma II', 'The Roma 2 lever chairâ€™s exceptionally comfortable seat and supportive back (available in both highback and midback options) more than\r\nmatch its modern good looks. Its many seat and back position adjustments enable the user the ultimate office seating experience.', 'chair'),
-(44, 'Roma III', 'The Roma 3 lever chairâ€™s exceptionally comfortable seat and supportive back (available in both highback and midback options) more than match its modern good looks. Its many seat and back position adjustments enable the user the ultimate office seating experience. Supported by the following internationally recognised standards:\r\n-â€˜AFRDI Level 6 - Severe Commercial Certificationâ€™\r\n-Global GreenTag ', 'chair');
+INSERT INTO `products` (`id`, `title`, `description`, `category`, `supplier`) VALUES
+(2, 'Motion Shell', 'Motion Shell work pods provide a very high level of acoustic and visual privacy, allowing workers to complete focused individual tasks in a comfortable enclosed environment.', 'agile_furniture', NULL),
+(3, 'Motion Team', 'This shared workspace is ideal for teams of up to 4 to cluster, providing a focussed zone for individual work with the ability to easily collaborate with the people nearby. Motion Team is designed to create a defined zone for individuals who collaborate regularly throughout the day.', 'agile_furniture', NULL),
+(4, 'Motion Wave', 'Motion Wave work pods provide a good touch down space for individual tasks. They are very space efficient, providing a small amount of acoustic and visual privacy for workers.', 'agile_furniture', NULL),
+(5, 'Motion Zip', 'Motion Zip work pods provide a high level of acoustic and visual privacy, allowing workers to complete focused individual tasks in a comfortable environment.', 'agile_furniture', NULL),
+(6, 'Motion Expo', 'Motion Expo is ideal for workplace presentations, providing 2 defined tiers for workers to gather around. The screens provide some acoustic privacy and help to define the area for its use. The bar leaner height desks provide space for laptops or notebooks as required.', 'agile_furniture', NULL),
+(8, 'Motion Ring ', 'Motion Ring provides a great private space for standing meetings. The large 2 way acoustic screens keep the meeting private, while blocking out distracting workplace sounds from the outside.', 'agile_furniture', NULL),
+(9, 'Motion Link', 'Motion Link phone booths provide workers with a private acoustic space to make phone/video calls. A standing height table top provides space for laptops or notebooks if necessary. Motion Link is designed to keep noise from the outside out, while also enclosing the user to prevent them from distracting others in the workplace.', 'agile_furniture', NULL),
+(10, 'Motion Meeting', 'Motion Meeting is a 4 seater booth which provides a high level of privacy for users. This enclosed setting is ideal for anything from focussed brainstorming sessions to client meet and greets.', 'agile_furniture', NULL),
+(11, 'Motion Arc', 'Motion Arc provides space for groups of people to collaborate together, and comes with the option of additional privacy screens to enclose the space and provide a high level of privacy for workers.', 'agile_furniture', NULL),
+(12, 'Motion Arc Walls ', 'Motion Arc provides space for a group of people to collaborate together with the option of additional screens to enclose the space and provide a high level of privacy for workers.', 'agile_furniture', NULL),
+(13, 'Motion Canopy', 'Motion Canopy seating can be arranged to create meeting spaces or be used as quite spaces to complete short individual tasks. The large acoustic panels and roof provide a very good level of privacy in the busy work environment.', 'agile_furniture', NULL),
+(14, 'Motion Cape', 'Motion Cape seating can be arranged to create meeting spaces or be used as quite spaces to complete short individual tasks. The large acoustic panels provide a good level of privacy in the busy work environment.', 'agile_furniture', NULL),
+(15, 'Motion Disk', 'Motion Disc 6 is perfect for open spaces, providing comfortable individual seating spaces in a 360 degree range.', 'agile_furniture', NULL),
+(17, 'Motion Fin', 'Motion Fin seating can be arranged to create open meeting areas or be used as spaces to complete short individual tasks. The low back creates an open welcoming environment for workers to relax as well.', 'agile_furniture', NULL),
+(19, 'Motion Free Chair ', 'The Free Chair is a stylish addition to any breakout, meeting, or low-intensity work zone. With 360 degrees of rotation, the seating always returns to it\'s original position when vacated. Upholstered in Motion Felt, with polished alloy base.', 'agile_furniture', NULL),
+(24, 'Motion Grandstand ', 'Motion Grandstand provides tiered seating for anything from quick meetings and presentations to relaxation. Available in the full Motion Felt range, the Grandstand modules can provide visual interest to any space.', 'agile_furniture', NULL),
+(25, 'Motion Loop', 'The Motion Loop range allows for endless layout possibilities to suit any environment. Creating waiting room areas or collaborative zones is easy with simple loop forms.', 'agile_furniture', NULL),
+(26, 'Motion Otto', 'Motion Otto is the smallest member of the MotionOffice family. Castors on the base provide a mobile option to create clusters or add seating to any desired area.', 'agile_furniture', NULL),
+(27, 'Motion Sync', 'The Motion Sync chair features a generously sized mesh backrest to ergonomically support your back, and moulded seat foam with your colour choice of Motion Felt seat cover. A super smooth seat slide adjusts for all users, large and small, and the synchro tilt mechanism moves the seat in harmony with the back recline. The stylish black nylon star base is equipped with heavy duty 60mm castors.', 'agile_furniture', NULL),
+(28, 'Motion Wing', 'Motion Wing seating can be arranged to create meeting spaces or be used as quite spaces to complete short individual tasks. The acoustic wings provide acoustic privacy with a more unique bold aesthetic.', 'agile_furniture', NULL),
+(29, 'Eightby4', 'Eight by 4 is a highly customisable ottoman that is easy to rearrange into an agile workspace solution.', 'agile_furniture', NULL),
+(30, 'Halo', 'The Halo ottoman is available in 3 varying diameters. Its simple soft aesthetic makes it an inviting secondary seating option.', 'agile_furniture', NULL),
+(31, 'Star ', 'The Star is a fun group work solution that promotes communication, learning and creativity. Star can be rearranged into many different formations to suit the space.', 'agile_furniture', NULL),
+(34, 'Sterm ', 'Stem comes in small, medium and large sizes making it suitable for a range of different workspaces. The Stem is a fun group work solution that promotes communication, learning and creativity.', 'agile_furniture', NULL),
+(35, 'Gumball ', 'Ergonomically shaped and enveloping armchair, especially suitable for recreational settings. Available in several variants may be produced in lacquered material or in version with light. The special edition is filled with thousands of coloured balls that come through the translucent and soft surface available.', 'agile_furniture', NULL),
+(36, 'Profile Side Screen', 'The Profile E-Panel slide on side screen is quick and easy to use. It can be used as a privacy screen, an acoustic barrier and a pin board all rolled into one. Setup your desk with privacy or divide one are into two and transform your space with colour coordinated side screens for your desk areas.', 'screen', NULL),
+(37, 'Biro II', 'A contemporary style for work or home, the Brio II chair offers a range of adjustability options for superior comfort.', 'chair', NULL),
+(38, 'Challenger', 'The Buro Challenger Chair is an impressive chair for any modern office or boardroom. Featuring European styling and design its state of the art synchro mechanism and superior comfort will satisfy.', 'chair', NULL),
+(39, 'Mentor', 'The Buro Mentor offers the latest in contemporary and ergonomic design. The Mentor is a stand out candidate for any board room, office or home office environment. Featuring a complete range of ergonomic features, easy to use synchronised seating adjustments and outstanding comfort.', 'chair', NULL),
+(40, 'Metro', 'A stylish mesh back chair offering a modern look for your office with a polished aluminium base and fully adjustable ergonomic features.\r\nThe Buro Metro chair is supported by the following internationally recognised standards:\r\n-AFRDI Level 6 - Severe Commercial Certificationâ€™\r\n-Global GreenTag', 'chair', NULL),
+(41, 'Metro II 24/7', 'Following on from the hugely successful Buro Metro Chair comes the new Buro Metro II 24/7, designed for Multi-Shift operations. Featuring the latest technologies in ergonomics and the sophistication of contemporary fine mesh & elastic knit seat upholstery.', 'chair', NULL),
+(42, 'Merto II HB', 'Following on from the hugely successful Buro Metro Chair is the new Buro Metro II High Back our newest member of the Metro II family. Featuring the latest technologies in ergonomics the Metro II HB includes a contoured & supportive high back with built in adjustable lumbar support for ultimate back comfort. Featuring the Metro II sophistication of a contemporary fine mesh & elastic knit seat upholstery.', 'chair', NULL),
+(43, 'Roma II', 'The Roma 2 lever chairâ€™s exceptionally comfortable seat and supportive back (available in both highback and midback options) more than\r\nmatch its modern good looks. Its many seat and back position adjustments enable the user the ultimate office seating experience.', 'chair', NULL),
+(44, 'Roma III', 'The Roma 3 lever chairâ€™s exceptionally comfortable seat and supportive back (available in both highback and midback options) more than match its modern good looks. Its many seat and back position adjustments enable the user the ultimate office seating experience. Supported by the following internationally recognised standards:\r\n-â€˜AFRDI Level 6 - Severe Commercial Certificationâ€™\r\n-Global GreenTag ', 'chair', NULL);
 
 -- --------------------------------------------------------
 
@@ -363,6 +258,154 @@ INSERT INTO `product_features` (`id`, `product_id`, `feature`, `position`) VALUE
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `product_images`
+--
+
+CREATE TABLE `product_images` (
+  `id` int(11) NOT NULL,
+  `product_id` int(10) NOT NULL,
+  `image` varchar(50) NOT NULL,
+  `image_position` enum('1','2','3','4','5') DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `product_images`
+--
+
+INSERT INTO `product_images` (`id`, `product_id`, `image`, `image_position`) VALUES
+(6, 2, '5a5e64f2b3fa3.jpg', '1'),
+(7, 2, '5a5e64f2cfe5d.jpg', '2'),
+(8, 2, '5a5e64f2eb0aa.jpg', '3'),
+(9, 3, '5a5e65aa75f65.jpg', '1'),
+(10, 3, '5a5e65aa913d1.jpg', '2'),
+(11, 4, '5a5e66392523b.jpg', '1'),
+(12, 4, '5a5e66393f7d8.jpg', '2'),
+(13, 4, '5a5e66395bf94.jpg', '3'),
+(14, 4, '5a5e663978091.jpg', '4'),
+(15, 5, '5a5e66e0acfee.jpg', '1'),
+(16, 5, '5a5e66e0c8905.jpg', '2'),
+(17, 5, '5a5e66e0e3522.jpg', '3'),
+(18, 5, '5a5e66e109360.jpg', '4'),
+(19, 5, '5a5e66e124972.jpg', '5'),
+(20, 6, '5a5e676f88f0e.jpg', '1'),
+(21, 6, '5a5e676fab3f9.jpg', '2'),
+(22, 6, '5a5e676fce11b.jpg', '3'),
+(23, 6, '5a5e676fe2749.jpg', '4'),
+(27, 8, '5a5e6862ea40f.jpg', '1'),
+(28, 8, '5a5e68631ac66.jpg', '2'),
+(29, 8, '5a5e68632e5e0.jpg', '3'),
+(30, 9, '5a5e68cd2d20a.jpg', '1'),
+(31, 9, '5a5e68cd47199.jpg', '2'),
+(32, 9, '5a5e68cd60985.jpg', '3'),
+(33, 9, '5a5e68cd6fee9.jpg', '4'),
+(34, 10, '5a5e693d7b91b.jpg', '1'),
+(35, 10, '5a5e693d969e9.jpg', '2'),
+(36, 10, '5a5e693da4d02.jpg', '3'),
+(37, 11, '5a5e69c4bfb19.jpg', '1'),
+(38, 11, '5a5e69c4daa48.jpg', '2'),
+(39, 11, '5a5e69c5003df.jpg', '3'),
+(40, 11, '5a5e69c519bb4.jpg', '4'),
+(41, 11, '5a5e69c527c46.jpg', '5'),
+(42, 12, '5a5e6a31f1d33.jpg', '1'),
+(43, 12, '5a5e6a321903c.jpg', '2'),
+(44, 12, '5a5e6a3234a6d.jpg', '3'),
+(45, 12, '5a5e6a32428ed.jpg', '4'),
+(46, 13, '5a5e6a9c1cb86.jpg', '1'),
+(47, 13, '5a5e6a9c36c36.jpg', '2'),
+(48, 13, '5a5e6a9c44ee5.jpg', '3'),
+(49, 14, '5a5e6af57b692.jpg', '1'),
+(50, 14, '5a5e6af595faa.jpg', '2'),
+(51, 14, '5a5e6af5b1609.jpg', '3'),
+(52, 14, '5a5e6af5ccd94.jpg', '4'),
+(53, 14, '5a5e6af5dad0f.jpg', '5'),
+(54, 15, '5a5e6b49a9a14.jpg', '1'),
+(55, 15, '5a5e6b49c50ae.jpg', '2'),
+(56, 15, '5a5e6b49d437d.jpg', '3'),
+(67, 17, '5a5e6bceaf016.jpg', '1'),
+(68, 17, '5a5e6bcec9b3c.jpg', '2'),
+(69, 17, '5a5e6bcee5484.jpg', '3'),
+(70, 17, '5a5e6bcf0bdda.jpg', '4'),
+(71, 17, '5a5e6bcf19daf.jpg', '5'),
+(72, 19, '5a5e6c24c0b75.jpg', '1'),
+(73, 19, '5a5e6c24db245.jpg', '2'),
+(74, 19, '5a5e6c24e9927.jpg', '3'),
+(95, 24, '5a5e6dba33ce1.jpg', '1'),
+(96, 24, '5a5e6dba4eacf.jpg', '2'),
+(97, 24, '5a5e6dba6813f.jpg', '3'),
+(98, 24, '5a5e6dba819e4.jpg', '4'),
+(99, 24, '5a5e6dba8fe69.jpg', '5'),
+(100, 25, '5a5e6e33327c7.jpg', '1'),
+(101, 25, '5a5e6e334dc2c.jpg', '2'),
+(102, 25, '5a5e6e3368a72.jpg', '3'),
+(103, 25, '5a5e6e33833e2.jpg', '4'),
+(104, 25, '5a5e6e339d20b.jpg', '5'),
+(105, 26, '5a5e6e7a3dbbf.jpg', '1'),
+(106, 26, '5a5e6e7a58c92.jpg', '2'),
+(107, 26, '5a5e6e7a67248.jpg', '3'),
+(108, 27, '5a5e6efc66e0b.jpg', '1'),
+(109, 27, '5a5e6efc80515.jpg', '2'),
+(110, 27, '5a5e6efc8e797.jpg', '3'),
+(111, 28, '5a5e6f46f2f5e.jpg', '1'),
+(112, 28, '5a5e6f4719796.jpg', '2'),
+(113, 28, '5a5e6f4734b53.jpg', '3'),
+(114, 28, '5a5e6f474faac.jpg', '4'),
+(115, 28, '5a5e6f475de10.jpg', '5'),
+(116, 29, '5a5e70a29b7fd.jpg', '1'),
+(117, 29, '5a5e70a2b6944.jpg', '2'),
+(118, 29, '5a5e70a2d3ba4.jpg', '3'),
+(119, 29, '5a5e70a305673.jpg', '4'),
+(120, 30, '5a5e7105622ab.jpg', '1'),
+(121, 30, '5a5e71057f737.jpg', '2'),
+(122, 30, '5a5e71059b4a8.jpg', '3'),
+(123, 31, '5a5e73238c385.jpg', '1'),
+(124, 31, '5a5e7323a8b9b.jpg', '2'),
+(125, 31, '5a5e7323c6ede.jpg', '3'),
+(131, 34, '5a5e74769f266.jpg', '1'),
+(132, 34, '5a5e7476c05ee.jpg', '2'),
+(133, 35, '5a5e75598c493.jpg', '1'),
+(134, 35, '5a5e755996970.jpg', '2'),
+(135, 35, '5a5e7559a062c.jpg', '3'),
+(136, 36, '5a5e760802fc8.jpg', '1'),
+(137, 36, '5a5e76081cf6a.jpg', '2'),
+(138, 36, '5a5e760836815.jpg', '3'),
+(139, 36, '5a5e760845132.jpg', '4'),
+(140, 37, '5a5e772b3a905.jpg', '1'),
+(141, 37, '5a5e772b57c01.jpg', '2'),
+(142, 37, '5a5e772b73190.jpg', '3'),
+(143, 38, '5a5e77ed235ac.jpg', '1'),
+(144, 38, '5a5e77ed4c38e.jpg', '2'),
+(145, 39, '5a5e790b8119a.jpg', '1'),
+(146, 39, '5a5e790bae0e4.jpg', '2'),
+(147, 40, '5a5e7a5747d2a.jpg', '1'),
+(148, 40, '5a5e7a576395c.jpg', '2'),
+(149, 40, '5a5e7a57860b1.jpg', '3'),
+(150, 41, '5a5e7bf64f124.jpg', '1'),
+(151, 41, '5a5e7bf66b664.jpg', '2'),
+(152, 42, '5a5ef8e47edc3.jpg', '1'),
+(153, 42, '5a5ef8e4a2ed1.jpg', '2'),
+(154, 43, '5a5efa45ef5ba.jpg', '1'),
+(155, 43, '5a5efa461bcfe.jpg', '2'),
+(156, 43, '5a5efa463782b.jpg', '3'),
+(157, 44, '5a5efb442df74.jpg', '1'),
+(158, 44, '5a5efb444b837.jpg', '2'),
+(159, 44, '5a5efb445a4eb.jpg', '3');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `product_links`
+--
+
+CREATE TABLE `product_links` (
+  `id` int(11) DEFAULT NULL,
+  `product_id` int(200) NOT NULL,
+  `href` varchar(200) NOT NULL,
+  `link_text` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `product_options`
 --
 
@@ -484,35 +527,34 @@ CREATE TABLE `users` (
   `company` varchar(80) NOT NULL,
   `password` varchar(60) NOT NULL,
   `account_type` enum('user','admin') NOT NULL DEFAULT 'user',
-  `account_status` enum('not_active','active') NOT NULL DEFAULT 'not_active'
+  `account_status` enum('not_active','active') NOT NULL DEFAULT 'not_active',
+  `email_list` enum('yes','no') NOT NULL DEFAULT 'no'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `first_name`, `email`, `company`, `password`, `account_type`, `account_status`) VALUES
-(1, 'Caleb Gibbs', 'calebgibbs@me.com', 'CG Development', '$2y$10$Y3nMFkAzMY7GSTNdDm6vMOcH4ZVC0PmI2DHulJO6ZmOcKGVXs18XS', 'admin', 'active'),
-(4, 'Test', 'test@123.com', '', '$2y$10$K7bJx.RSwwBWseqsbPJAdePfoev5dOVAdiSCwZcvtmoH0kJ63A3Iy', 'user', 'active'),
-(5, 'Bella', 'bella@me.com', 'Montage Interiors', '$2y$10$ENzvRpdMsYwZr3BKZeicleHhDzVOFmddfjdInOPywvgi1mA0hbsxm', 'admin', 'active');
+INSERT INTO `users` (`id`, `first_name`, `email`, `company`, `password`, `account_type`, `account_status`, `email_list`) VALUES
+(1, 'Caleb Gibbs', 'calebgibbs@me.com', 'CG Development', '$2y$10$Y3nMFkAzMY7GSTNdDm6vMOcH4ZVC0PmI2DHulJO6ZmOcKGVXs18XS', 'admin', 'active', 'no');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `images`
+-- Indexes for table `portfolios`
 --
-ALTER TABLE `images`
+ALTER TABLE `portfolios`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `product_id` (`product_id`);
+  ADD KEY `id` (`id`);
 
 --
--- Indexes for table `nav`
+-- Indexes for table `portfolio_images`
 --
-ALTER TABLE `nav`
+ALTER TABLE `portfolio_images`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `product_id` (`product_id`);
+  ADD KEY `portfolio_id` (`portfolio_id`);
 
 --
 -- Indexes for table `products`
@@ -525,6 +567,19 @@ ALTER TABLE `products`
 --
 ALTER TABLE `product_features`
   ADD PRIMARY KEY (`id`),
+  ADD KEY `product_id` (`product_id`);
+
+--
+-- Indexes for table `product_images`
+--
+ALTER TABLE `product_images`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `product_id` (`product_id`);
+
+--
+-- Indexes for table `product_links`
+--
+ALTER TABLE `product_links`
   ADD KEY `product_id` (`product_id`);
 
 --
@@ -545,56 +600,67 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `images`
+-- AUTO_INCREMENT for table `portfolios`
 --
-ALTER TABLE `images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=160;
+ALTER TABLE `portfolios`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `nav`
+-- AUTO_INCREMENT for table `portfolio_images`
 --
-ALTER TABLE `nav`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `portfolio_images`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 --
 -- AUTO_INCREMENT for table `product_features`
 --
 ALTER TABLE `product_features`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=148;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=157;
+--
+-- AUTO_INCREMENT for table `product_images`
+--
+ALTER TABLE `product_images`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=165;
 --
 -- AUTO_INCREMENT for table `product_options`
 --
 ALTER TABLE `product_options`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=116;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=121;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `images`
+-- Constraints for table `portfolio_images`
 --
-ALTER TABLE `images`
-  ADD CONSTRAINT `images_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `nav`
---
-ALTER TABLE `nav`
-  ADD CONSTRAINT `nav_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `portfolio_images`
+  ADD CONSTRAINT `portfolio_images_ibfk_1` FOREIGN KEY (`portfolio_id`) REFERENCES `portfolios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `product_features`
 --
 ALTER TABLE `product_features`
   ADD CONSTRAINT `product_features_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `product_images`
+--
+ALTER TABLE `product_images`
+  ADD CONSTRAINT `product_images_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `product_links`
+--
+ALTER TABLE `product_links`
+  ADD CONSTRAINT `product_links_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `product_options`

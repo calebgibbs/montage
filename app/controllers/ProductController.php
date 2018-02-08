@@ -32,7 +32,7 @@ class ProductController extends PageController {
 		$this->data['Alloptions'] = $result->fetch_all(MYSQLI_ASSOC); 
 
 		//get images  
-		$sql = "SELECT image, image_position FROM images WHERE product_id = '$productId'";
+		$sql = "SELECT image, image_position FROM product_images WHERE product_id = '$productId'";
 		$result = $this->dbc->query($sql);
 		$this->data['Allimages'] = $result->fetch_all(MYSQLI_ASSOC);
 	} 

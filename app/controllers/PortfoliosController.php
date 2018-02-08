@@ -1,5 +1,5 @@
 <?php  
-class ChairsController extends PageController { 
+class PortfoliosController extends PageController { 
 	public function __construct($dbc){ 
 		parent::__construct(); 
 		$this->dbc = $dbc; 
@@ -15,24 +15,24 @@ class ChairsController extends PageController {
 			$lastPage = 'index.php';
 		}  
 
-		$this->data['title'] = 'Chairs'; 
-		$this->data['class'] = 'tech-title'; 
+		$this->data['title'] = 'Portfolio'; 
+		$this->data['class'] = 'downloads-title'; 
 
-		$sql = "SELECT p.id, p.title AS score_title, p.category, 
-				i.product_id, i.image, i.image_position 
-				FROM products AS p 
-				JOIN product_images AS i 
-				ON p.id = i.product_id
-				WHERE 
-				category = 'chair'
-				AND image_position = '1'"; 
-
+		$sql = "SELECT p.id, p.title AS score_title, 
+				i.portfolio_id, i.image, i.image_position 
+				FROM portfolios AS p 
+				JOIN portfolio_images AS i 
+				ON p.id = i.portfolio_id
+				WHERE image_position = '1'"; 
+				// die($sql);
 		$result = $this->dbc->query($sql); 
 
 		if (!$result || $result->num_rows == 0) {
-			$this->data['results'] = "No results";
+			$this->data['results'] = "No portfolios";
 		}else{
 			$this->data['results'] = $result->fetch_all(MYSQLI_ASSOC);
-		} 		
+		} 
+
+		
 	}
 }

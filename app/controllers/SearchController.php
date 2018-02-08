@@ -31,7 +31,7 @@ class SearchController extends PageController {
 		$sql = "SELECT p.id, p.title AS score_title, p.category AS score_category,
 				i.product_id, i.image, i.image_position 
 				FROM products AS p 
-				JOIN images AS i 
+				JOIN product_images AS i 
 				ON p.id = i.product_id
 				WHERE 
 				p.title LIKE '%$search%' 
