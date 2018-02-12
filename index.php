@@ -146,6 +146,11 @@ switch($page){
 		$controller = new AddproductController($dbc);	 
 	break;  
 
+	case 'add_portfolio':
+		require 'app/controllers/AddPortfolioController.php'; 
+		$controller = new AddPortfolioController($dbc);	 
+	break; 
+
 	case 'help':
 		require 'app/controllers/HelpController.php'; 
 		$controller = new HelpController($dbc);	 

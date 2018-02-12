@@ -36,6 +36,7 @@ $this -> layout('master',[
 	} ?>">
 	<div id="page-padding">
 		<div id="left-col">
+			<?php if($_GET['page'] == 'product'): ?>
 			<div class="product-images">
 				<div class="large-img">
 					<?php foreach( $Allimages as $image ): ?>
@@ -57,6 +58,30 @@ $this -> layout('master',[
 					</ol>
 				</div>
 			</div> 
+			<?php endif ?>
+			<?php if($_GET['page'] == 'portfolio'): ?>
+			<div class="product-images">
+				<div class="large-img">
+					<?php foreach( $Allimages as $image ): ?>
+						<?php if( $image['image_position'] == 1 ): ?> 
+							<img id="dispayImg" src="img/portfolio/large/<?= $image['image'] ?>"> 
+						<?php endif ?>
+					<?php endforeach ?>
+				</div> 
+				<div class="img-thumb">
+					<ol> 
+						<?php foreach( $Allimages as $image): ?> 
+							<?php for( $i = 1; $i <= 3; $i++ ): ?> 
+								<?php if( $image['image_position'] == $i ): ?>  
+									<li><img class="img-thumb" src="img/portfolio/thumbnail/<?= $image['image'] ?>" onClick="ChangeImage('img/portfolio/large/<?= $image['image'] ?>')"></li>
+								<?php endif ?>
+								
+							<?php endfor ?>
+						<?php endforeach; ?>
+					</ol>
+				</div>
+			</div> 
+			<?php endif ?>
 		</div> 
 		<div id="right-col">
 			<div class="product-text">

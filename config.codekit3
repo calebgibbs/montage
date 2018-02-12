@@ -30,6 +30,13 @@
 		"oAP": "\/app\/ajax\/SignupValidation.php",
 		"oF": 0
 		},
+	"\/app\/controllers\/AddPortfolioController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/AddPortfolioController.php",
+		"oF": 0
+		},
 	"\/app\/controllers\/AddproductController.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -135,6 +142,20 @@
 		"oAP": "\/app\/controllers\/PageController.php",
 		"oF": 0
 		},
+	"\/app\/controllers\/PortfolioController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/PortfolioController.php",
+		"oF": 0
+		},
+	"\/app\/controllers\/PortfoliosController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/PortfoliosController.php",
+		"oF": 0
+		},
 	"\/app\/controllers\/ProductController.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -210,6 +231,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/app\/controllers\/WorkstationsScreensController.php",
+		"oF": 0
+		},
+	"\/app\/partials\/addportfolio.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/addportfolio.php",
 		"oF": 0
 		},
 	"\/app\/partials\/addproduct.php": {
@@ -3584,13 +3612,6 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/montage.sql",
-		"oF": 0
-		},
-	"\/ProductColours.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/ProductColours.txt",
 		"oF": 0
 		},
 	"\/vendor\/autoload.php": {

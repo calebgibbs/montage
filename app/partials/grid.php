@@ -27,7 +27,12 @@ $this -> layout('master',[
 								<?php endif ?>
 								<div class="box-inner">
 									<div class="box-img">
-										<img src="img/products/thumbnail/<?= $result['image'] ?>"> 
+										<?php if($_GET['page'] != 'portfolios'): ?>
+											<img src="img/products/thumbnail/<?= $result['image'] ?>"> 
+										<?php endif ?> 
+										<?php if($_GET['page'] == 'portfolios'): ?>
+											<img src="img/portfolio/thumbnail/<?= $result['image'] ?>"> 
+										<?php endif ?>
 									</div> 
 									<div class="box-title">
 										<h5><?= $result['score_title'] ?></h5>
