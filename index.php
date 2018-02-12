@@ -8,7 +8,9 @@ require 'app/controllers/PageController.php';
 
 $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 
-$dbc = new mysqli('localhost', 'root', 'password', 'montage'); 
+$dbc = new mysqli('localhost', 'root', 'password', 'montage');  
+
+$fav = []; 
 
 switch($page){ 
 	case 'home':
