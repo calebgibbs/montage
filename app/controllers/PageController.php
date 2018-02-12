@@ -27,5 +27,5 @@ abstract class  PageController{
 		if (isset($_SESSION['id'])) {
 			header('Location: index.php');
 		}
-	}
+	} 
 } 

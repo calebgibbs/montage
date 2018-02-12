@@ -1,3 +1,19 @@
+<?php
+$fav = [];
+
+if(isset($_SESSION['id'])){ 
+	$dbc = new mysqli('localhost', 'root', 'password', 'montage'); 
+	$id = $_SESSION['id'];
+	$sql = "SELECT product_id FROM favourites WHERE user_id = '$id'"; 
+	$result = $dbc->query($sql);  
+	if (!$result || $result->num_rows == 0) { 
+		$favoutitesEmpty = "No favourites";
+	}else{ 
+		$products = $result->fetch_all(MYSQLI_ASSOC);  
+		$fav = array_column($products, 'product_id'); 
+	} 
+} 
+?>
 <div id="overlay">
 	<div id="favourites">
 		<div class="fav-title">
@@ -62,12 +78,27 @@
 			</div>
 		<?php endif ?> 
 		<div id="favourite-products-all">
-		<?php for( $i = 0; $i < 2; $i++ ): ?> 
-			<div class="fav-prod">
-				<img src="http://placehold.it/200x150"> 
-				<span class="product title">Title</span>
-			</div>
-		<?php endfor ?>
+			<?php if(!empty($fav)): ?>
+				<?php foreach($fav as $favourite): ?> 
+					<?php 
+					$sql = "SELECT image FROM product_images WHERE product_id = '$favourite' AND image_position = '1'"; 
+					$result = $dbc->query($sql); 
+					$image = $result->fetch_all(MYSQLI_ASSOC); 
+					?>
+					<div class="fav-prod" href="index.php?page=product&productnum=<?= $favourite ?>">
+						<img src="img/products/thumbnail/<?= $image[0]['image'] ?>" width="200px" height="150px"> 
+						<?php 
+						$sql = "SELECT title FROM products WHERE id = '$favourite'"; 
+						$result = $dbc->query($sql); 
+						$title = $result->fetch_all(MYSQLI_ASSOC); 
+						?>
+						<span class="product title"><?= $title[0]['title'] ?></span>
+					</div> 
+				<?php endforeach ?>  
+			<?php endif ?> 
+			<?php if(empty($fav)): ?> 
+				<span>Your favourites is empty</span>
+			<?php endif ?>
 		</div>
 		<div class="buttons">
 			<?php if(!isset($_SESSION['id'])): ?>
@@ -85,4 +116,4 @@
 			<?php endif ?>
 		</div>
 	</div> 
-</div>
+</div> 

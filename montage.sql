@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 08, 2018 at 12:06 AM
+-- Generation Time: Feb 12, 2018 at 10:05 AM
 -- Server version: 5.7.17
 -- PHP Version: 7.1.7
 
@@ -23,12 +23,33 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `favourites`
+--
+
+CREATE TABLE `favourites` (
+  `id` int(10) NOT NULL,
+  `user_id` int(10) NOT NULL,
+  `product_id` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `favourites`
+--
+
+INSERT INTO `favourites` (`id`, `user_id`, `product_id`) VALUES
+(1, 1, 35),
+(4, 1, 14),
+(5, 2, 11);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `portfolios`
 --
 
 CREATE TABLE `portfolios` (
   `id` int(10) NOT NULL,
-  `title` varchar(100) NOT NULL,
+  `title` varchar(150) NOT NULL,
   `description` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -37,7 +58,18 @@ CREATE TABLE `portfolios` (
 --
 
 INSERT INTO `portfolios` (`id`, `title`, `description`) VALUES
-(1, 'Public Trust', 'Public Trust currently 43 branches throughout NZ and Montage Interiors have successfully supplied furniture to them all in the last 18 years. We have recently refitted their Corporate Office in Wellington consisting of over 100 workstations, mobiles, screens, storage, meeting chairs, low seating and ergo chairs all chosen from Public Trust exclusive furniture catalogue.');
+(15, 'Russell McVeagh', 'Client: Russell McVeagh Lawyers Architect: Rory Hocking Date: May 08\r\n\r\nProject: Refurbishment of Staff room &amp; Kitchen Level 24 Supply &amp; installation of Large boardroom table Level 25 Solution: Kitchen refurbishment involved installing a new stainless steel bench top, a custom made bar leaner with Incognito base. Also supplied were two Formica, powdercoated bar leaners, with 12 Jessica stools to match. Custom made Tawa Veneer boardtable measuring 7400 x 2508 (at widest point)'),
+(16, 'Land Information New Zealand', 'Client: Land Information New Zealand Architect: Catalyst Consulting Date: December 08 \r\n\r\nProject: Refurbish vacant workspace and cafe Solution: Montage Interiors used Madison user adjustable corner workstations and low Axis screens to provide spacious working environment. The cafe ha informal low seating with a splash of colour form the ottomans. The tables are mobile to allow an effortless reconfiguration for functions. The minimalist colour scheme was chosen to enhance what was a more shaded corner section in the buildings interiors.'),
+(17, 'Southern Cross Hospital', 'Client: Southern Cross Hospital Architect: Warren and Mahoney Main contractor: Mainzeal\r\n\r\nDate:20/10/2009 to 30/04/2010\r\n\r\nProject: Southern Cross Hospital redevelopment ,90 Hanson street, Wellington, new\r\n\r\nDetails of job: manufacture of joinery to theatres, scrub in rooms, patient bed rooms staff kitchen, reception and admin areas'),
+(18, 'Ministry of Justice', 'Client: Ministry Of Justice\r\n\r\nArchitect: Creative Spaces\r\n\r\nMain Contractor: Fletcher Construction\r\n\r\nDate: September 07\r\n\r\nProject: Tribunals AMP Building\r\n\r\nSolution: Supply and installation of joinery to court rooms, reception and office areas.'),
+(19, 'Waitangi Tribunal', 'Client: Waitangi Tribunal\r\n\r\nArchitect: Gaze Commercial\r\n\r\nDate: September 2004\r\n\r\nProject: Fujitsu Tower 141 The Terrace\r\n\r\nSolution: Supply of Joinery and furniture including Reception Units, Credenza?s, Kitchens and specialised joinery items to 5 Floors.'),
+(20, 'The Correspondence School', 'Client: The Correspondence School Architect: CGM Date: November 08 and on going Project: Refurbishment of 4 (out of 6) wings in Wellington and one site in Christchurch\r\n\r\nSolution: Fit out 240+ Madison technically adjustable workstations and 8 Madison user adjustable workstations. Design, build and supply personal storage credenzas. Supply and installation of CPU holders and monitor arms. Supply tilting tables and meeting room furniture. Supply low seating and lunge suites for common areas.'),
+(21, 'Custom filing cabinets', 'Montage Interiors can manufacture filing cabinets to our clients specific requirements\r\n\r\n- Low pressure laminates\r\n\r\n- Timber veneer\r\n\r\n-  Custom sizing\r\n\r\n-  Drop files\r\n\r\n-  Slide out shelves\r\n\r\n-  Option of lockable'),
+(22, 'Victoria University Hostel', 'In February 2013 Montage delivered and placed 30 x 2 seater sofas and 24 x 3 seater sofaâ€™s in Victoria Universityâ€™s Boulcott Streetâ€™s Student Hostels.\r\n\r\nMontage Interiors Account Manager Derek Joy worked with Dave Lowe of Interact Architect and Kirstyn McKeefry of Wareham Cameron + Co on the development of sofaâ€™s that would stand up to the ultimate high use environment of a Student Hostel.'),
+(23, 'Berkley Dallard', 'August 2011-February 2013\r\n\r\n5 towers\r\n210 apartments (kitchen, wardrobe and storage shelving refurbishment)\r\nMay 2013 - July 2014\r\n\r\n1 building\r\n130 kitchen, shelving and vanity units: supply and installation'),
+(24, 'Rabobank', 'Montage Interiors Company Director and Account Managerworked with Architect Joey Grooves over a 13 year period on the furniture fit outs of Rabobanks nationwide branches. Montage Interiors also manufactured and installed many reception counters, staff kitchens and a variety of joinery items. Architect Joey Grooves selected the furniture and finishes from Montage Interiors range following consultation with the client.'),
+(25, 'Public Trust', 'Public Trust currently 43 branches throughout NZ and Montage Interiors have successfully supplied furniture to them all in the last 18 years. We have recently refitted their Corporate Office in Wellington consisting of over 100 workstations, mobiles, screens, storage, meeting chairs, low seating and ergo chairs all chosen from Public Trust exclusive furniture catalogue.'),
+(26, 'Trade Me', 'Montage Interiors in conjunction with HMA Architects transitioned Trademe from sitting desks to the fantastic Pillar sit to stand desking.\r\n\r\nAs bold and innovative employers, Trademe have opted for every one of their 400+ head office employees to have a Montage Interiors sit to stand Pillar desk with a funky mobile.');
 
 -- --------------------------------------------------------
 
@@ -57,10 +89,49 @@ CREATE TABLE `portfolio_images` (
 --
 
 INSERT INTO `portfolio_images` (`id`, `portfolio_id`, `image`, `image_position`) VALUES
-(1, 1, '5a5e66392523b.jpg', '1'),
-(2, 1, '5a5e66393f7d8.jpg', '2'),
-(3, 1, '5a5e66395bf94.jpg', '3'),
-(4, 1, '5a5e663978091.jpg', '4');
+(6, 15, '5a80d6efb4db7.png', '1'),
+(7, 15, '5a80d6efe1c53.png', '2'),
+(8, 15, '5a80d6f01a74e.png', '3'),
+(9, 15, '5a80d6f045ddc.png', '4'),
+(10, 16, '5a80da2145b99.png', '1'),
+(11, 16, '5a80da216ff5e.png', '2'),
+(12, 16, '5a80da219a2bf.png', '3'),
+(13, 16, '5a80da21c3f33.png', '4'),
+(14, 17, '5a80dc8c3e3c4.png', '1'),
+(15, 17, '5a80dc8c66a7c.png', '2'),
+(16, 18, '5a80dd1b33d87.png', '1'),
+(17, 18, '5a80dd1b5f5b1.png', '2'),
+(18, 19, '5a80ddf5c45a6.png', '1'),
+(19, 19, '5a80ddf5f176c.png', '2'),
+(20, 19, '5a80ddf629969.png', '3'),
+(21, 19, '5a80ddf654887.png', '4'),
+(22, 20, '5a80deaadfe04.png', '1'),
+(23, 20, '5a80deab13548.png', '2'),
+(24, 20, '5a80deab3a572.png', '3'),
+(25, 20, '5a80deab5ef69.png', '4'),
+(26, 21, '5a80df8e1f49f.png', '1'),
+(27, 21, '5a80df8e377d9.png', '2'),
+(28, 21, '5a80df8e4d57e.png', '3'),
+(29, 21, '5a80df8e62efe.png', '4'),
+(30, 22, '5a80e04692454.png', '1'),
+(31, 22, '5a80e046be8d9.png', '2'),
+(32, 22, '5a80e046e78d3.png', '3'),
+(33, 23, '5a81337a5ac98.png', '1'),
+(34, 23, '5a81337a82327.png', '2'),
+(35, 23, '5a81337aad664.png', '3'),
+(36, 24, '5a8134323d9fc.png', '1'),
+(37, 24, '5a8134326ce77.png', '2'),
+(38, 24, '5a81343298647.png', '3'),
+(39, 25, '5a8135346b05a.png', '1'),
+(40, 25, '5a8135348c9c6.png', '2'),
+(41, 25, '5a813534ad2fb.png', '3'),
+(42, 25, '5a813534c6a98.png', '4'),
+(43, 25, '5a813534e4316.png', '5'),
+(44, 26, '5a8135c35e668.jpg', '1'),
+(45, 26, '5a8135c3738a8.jpg', '2'),
+(46, 26, '5a8135c384719.jpg', '3'),
+(47, 26, '5a8135c393f10.jpg', '4'),
+(48, 26, '5a8135c3a2a33.jpg', '5');
 
 -- --------------------------------------------------------
 
@@ -536,11 +607,20 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `first_name`, `email`, `company`, `password`, `account_type`, `account_status`, `email_list`) VALUES
-(1, 'Caleb Gibbs', 'calebgibbs@me.com', 'CG Development', '$2y$10$Y3nMFkAzMY7GSTNdDm6vMOcH4ZVC0PmI2DHulJO6ZmOcKGVXs18XS', 'admin', 'active', 'no');
+(1, 'Caleb Gibbs', 'calebgibbs@me.com', 'CG Development', '$2y$10$Y3nMFkAzMY7GSTNdDm6vMOcH4ZVC0PmI2DHulJO6ZmOcKGVXs18XS', 'admin', 'active', 'no'),
+(2, 'Bella Gibbs', 'bella@me.com', 'Dog & co', '$2y$10$5qIHFnz0kasg41LnSGBsqecZFGuRvOUDGsq4vQH.vDApNBNeVxr6W', 'user', 'active', 'yes');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `favourites`
+--
+ALTER TABLE `favourites`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `product_id` (`product_id`);
 
 --
 -- Indexes for table `portfolios`
@@ -600,15 +680,20 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `favourites`
+--
+ALTER TABLE `favourites`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
 -- AUTO_INCREMENT for table `portfolios`
 --
 ALTER TABLE `portfolios`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 --
 -- AUTO_INCREMENT for table `portfolio_images`
 --
 ALTER TABLE `portfolio_images`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 --
 -- AUTO_INCREMENT for table `products`
 --
@@ -633,10 +718,17 @@ ALTER TABLE `product_options`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `favourites`
+--
+ALTER TABLE `favourites`
+  ADD CONSTRAINT `favourites_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `favourites_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `portfolio_images`
