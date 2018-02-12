@@ -29,6 +29,10 @@ $(document).ready(function(){
         window.location = $(this).attr('href');
         return false;
     }); 
+    $('.homeLink').click(function(){
+        window.location = $(this).attr('href');
+        return false;
+    });
     $('.openSearch').click(function(){
     	$('.search').toggleClass('showSearch-d-sm'); 
     }); 

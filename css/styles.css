@@ -631,6 +631,11 @@ input[type=checkbox] {
     margin: 0;
     padding: 0; } }
 
+.homebg {
+  background: url(../img/home/background.png) no-repeat center right;
+    background-background-size: 100%;
+    background-height: 60vh; }
+
 .top {
   margin-top: 1rem; }
 
@@ -691,6 +696,12 @@ input[type=checkbox] {
 
 .dwnimg {
   margin-left: -22.5rem; }
+
+.homeLink {
+  transition: 0.3s; }
+  .homeLink:hover {
+    cursor: pointer;
+    transform: scale(1.02); }
 
 .sustainability-page {
   background: url(../img/sustainability/background.png) no-repeat center right;

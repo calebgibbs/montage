@@ -5,10 +5,10 @@
 	]);   
 	$_SESSION['page'] = $_SERVER['REQUEST_URI'];
 ?> 
-<div class="body"> 
+<div class="body homebg"> 
 	<div class="top">
 		<div class="portfolio">
-			<img src="img/home/portfolio.png">
+			<img class="homeLink" src="img/home/portfolio.png" href="index.php?page=portfolios">
 		</div> 
 		<div class="mission-statement">
 			<span><h2>Creating</h2></span> 
@@ -19,14 +19,14 @@
 	</div> 
 	<div class="bottom">
 		<div class="our-story">
-			<img src="img/home/ourstory.png">
+			<img class="homeLink" src="img/home/ourstory.png" href="index.php?page=our_story">
 		</div> 
 		<div class="product">
-			<img src="img/home/product.png">
+			<img class="homeLink" src="img/home/product.png" href="index.php?page=products">
 		</div> 
 		<div class="sustainability">
-			<img class="susimg" src="img/home/sustainability.png">
-			<img class="dwnimg" src="img/home/downloads.png">
+			<img class="susimg homeLink" src="img/home/sustainability.png" href="index.php?page=sustainability">
+			<img class="dwnimg homeLink" src="img/home/downloads.png" href="index.php?page=downloads">
 		</div> 
 		<div class="downloads">
 			
