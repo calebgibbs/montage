@@ -85,19 +85,21 @@ if(isset($_SESSION['id'])){
 					$result = $dbc->query($sql); 
 					$image = $result->fetch_all(MYSQLI_ASSOC); 
 					?>
-					<div class="fav-prod" href="index.php?page=product&productnum=<?= $favourite ?>">
+					<div class="fav-prod">
+						<a href="index.php?page=product&productnum=<?= $favourite ?>">
 						<img src="img/products/thumbnail/<?= $image[0]['image'] ?>" width="200px" height="150px"> 
+						</a>
 						<?php 
 						$sql = "SELECT title FROM products WHERE id = '$favourite'"; 
 						$result = $dbc->query($sql); 
 						$title = $result->fetch_all(MYSQLI_ASSOC); 
 						?>
-						<span class="product title"><?= $title[0]['title'] ?></span>
+						<h5 class="product-title"><span><?= $title[0]['title'] ?></span><button class="favDel" id="<?= $favourite ?>:<?= $_SESSION['id'] ?>">&#10005;</button></h5>
 					</div> 
 				<?php endforeach ?>  
 			<?php endif ?> 
 			<?php if(empty($fav)): ?> 
-				<span>Your favourites is empty</span>
+				<div class="favempty">Your favourites is currently empty</div>
 			<?php endif ?>
 		</div>
 		<div class="buttons">

@@ -43,7 +43,14 @@
 .view  
     display: block !important
 .remove 
-  	display: none
+  	display: none 
+.favempty 
+	width: 100% 
+	text-align: center  
+	font-size: 1.8rem 
+	font-style: italic 
+	color: $light-grey 
+	margin-top: 3rem
 .fav-title 
 	background: #a1a1a1 
 	color: #fff 
@@ -186,14 +193,15 @@ input[type=checkbox]
 	height: 150px 
 	&:hover  
 		cursor: pointer 
-
+	a 
+		text-decoration: none
 	img 
 		min-height: 100%
 		margin: 0 
 		padding: 0 
-	span 
+	h5 
 		vertical-align: top 
-		margin-left: 0 !important 
+		margin-left: 0
 		font-weight: 100 
 		font-size: 1.5rem 
 		color: $light-grey 
@@ -201,9 +209,20 @@ input[type=checkbox]
 		padding-top: 1rem
 		height: 1.5rem  
 		margin-top: 1rem 
+		display: inline-block 
+		margin: 0 
+		padding: 0 
+		span 
+			float: left  
+			display: inline-block
+		button 
+			float: right 
+			display: inline-block
 
-@include desktop-sm   
+@include desktop-sm  
 	#favourites  
+		right: -40vw 
+		min-width: 40vw
 		form 
 			input 
 				width: 80%  

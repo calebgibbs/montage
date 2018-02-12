@@ -33,10 +33,6 @@ $(document).ready(function(){
         window.location = $(this).attr('href');
         return false;
     }); 
-     $('.fav-prod').click(function(){
-        window.location = $(this).attr('href');
-        return false;
-    });
     $('.openSearch').click(function(){
     	$('.search').toggleClass('showSearch-d-sm'); 
     }); 
