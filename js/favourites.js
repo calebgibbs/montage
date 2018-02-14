@@ -50,30 +50,4 @@ $(document).ready(function(){
 		$('#signup-form').addClass('remove');
 		$('#fav-tab-title').text("Sign in");
 	}); 
-
-	$('.favDel').click(function(){
-		var ids = $(this).attr('id'); 
-		
-		userId = ids.split(':').pop();  
-
-		productId = ids.split(':').shift();
-
-		var dataForServer = {
-			product:productId, 
-			user:userId
-		}
-		$.ajax({
-			type:'post', 
-			url:'app/ajax/Favourites.php',
-			data: dataForServer, 
-			success:function(dataFromServer){ 
-				if( dataFromServer === 'Success'){ 
-					$('#favourite-products-all').load(document.URL +  ' #favourite-products-all'); 
-					return;
-				}	
-			}
-		}); 
-		return;
-	}); 
-
 });	

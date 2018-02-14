@@ -66,6 +66,7 @@ require 'app/controllers/FavouritesController.php';
 		<?php endif ?> 
 		<div id="favourite-products-all">
 			<?php if(!empty($fav)): ?>
+				<form method="post">
 				<?php foreach($fav as $favourite): ?> 
 					<?php 
 					$sql = "SELECT image FROM product_images WHERE product_id = '$favourite' AND image_position = '1'"; 
@@ -81,17 +82,13 @@ require 'app/controllers/FavouritesController.php';
 						$result = $dbc->query($sql); 
 						$title = $result->fetch_all(MYSQLI_ASSOC); 
 						?>
-						<h5 class="product-title"><span><?= $title[0]['title'] ?></span><button class="favDel" id="<?= $favourite ?>:<?= $_SESSION['id'] ?>">&#10005;</button></h5>
+						<h5 class="product-title"><span><?= $title[0]['title'] ?></span><button class="favDel" name="delfav" value="<?= $favourite ?>">&#10005;</button></h5>
 					</div> 
-				<?php endforeach ?>  
+				<?php endforeach ?> 
+				</form>
 			<?php endif ?> 
 			<?php if(empty($fav)): ?> 
-				<?php if(isset($_COOKIE['favourites'])): ?> 
-					<div class="favempty">cookie</div>
-				<?php endif ?> 
-				<?php if(!isset($_COOKIE['favourites'])): ?> 
-					<div class="favempty">no cookie</div>
-				<?php endif ?>
+				<div class="favempty">Your favourites is currently empty</div>
 			<?php endif ?>
 		</div>
 		<div class="buttons">
@@ -100,7 +97,7 @@ require 'app/controllers/FavouritesController.php';
 					<button id="login-trig">Sign in</button>
 				</div> 
 				<div>
-					<button id="signup-trig">Sign up</button>
+					<button id="signup-trig">Sign up</button> 
 				</div>
 			<?php endif ?> 
 			<?php if(isset($_SESSION['id'])): ?>

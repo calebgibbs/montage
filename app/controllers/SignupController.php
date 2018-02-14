@@ -51,14 +51,22 @@ class SignupController extends PageController {
 			$_SESSION['account_type'] = 'user';
 			$_SESSION['account_status'] = 'active';	 
 
-			$fav = unserialize($_COOKIE['favourites']); 
+			//get cookie data 
+
+			$cookie = isset($_COOKIE['favourites']) ? $_COOKIE['favourites'] : "";
+			$cookie = stripslashes($cookie);
+			$fav = json_decode($cookie, true);
+			if (!$fav) {
+				$fav = array();
+			}
+			$_SESSION['favourites'] = json_encode($fav);  
 
 			foreach ($fav as $id) {
 				$sql = "INSERT INTO favourites(user_id, product_id) VALUES ('$userId', '$id')"; 
 				$this->dbc->query($sql);
 			}  
 
-			setcookie('favourites', '', time() - 1); 
+			setcookie("favourites", '', time() - (86400 * 30), '/'); 
 
 			header('Location: '.$lastPage);	
 		}

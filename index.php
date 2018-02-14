@@ -5,12 +5,14 @@ session_start();
 
 require 'vendor/autoload.php';
 require 'app/controllers/PageController.php'; 
+// require 'app/controllers/FavouritesController.php'; 
 
 $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 
 require 'config.inc.php';  
-$dbc = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);  
+$dbc = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);   
 
+ 
 
 switch($page){ 
 	case 'home':

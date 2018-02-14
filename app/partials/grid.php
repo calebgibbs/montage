@@ -37,6 +37,18 @@ $this -> layout('master',[
 												}else{ 
 													echo "&loz;";
 												}
+											}else{ 
+												$current = $result['id'];
+												$favourites = json_decode($_COOKIE['favourites']);  
+												if (!empty($favourites)) {
+													if (in_array($current, $favourites)) {
+														echo "&diams;";
+													}else{ 
+														echo "&loz;";
+													}
+												}else{ 
+													echo "&loz;";	
+												}	
 											}
 											?>
 										</button>
@@ -63,4 +75,4 @@ $this -> layout('master',[
 				</form> 
 			<?php endif ?>
 		</div>
-	</div>
+	</div> 
