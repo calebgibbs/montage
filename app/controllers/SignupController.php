@@ -51,6 +51,15 @@ class SignupController extends PageController {
 			$_SESSION['account_type'] = 'user';
 			$_SESSION['account_status'] = 'active';	 
 
+			$fav = unserialize($_COOKIE['favourites']); 
+
+			foreach ($fav as $id) {
+				$sql = "INSERT INTO favourites(user_id, product_id) VALUES ('$userId', '$id')"; 
+				$this->dbc->query($sql);
+			}  
+
+			setcookie('favourites', '', time() - 1); 
+
 			header('Location: '.$lastPage);	
 		}
 

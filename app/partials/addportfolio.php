@@ -28,8 +28,9 @@ $prevPage = $_SERVER['REQUEST_URI'];
 				<?php endfor ?>
 			</div>
 			<div>
-				<button class="addButton" type="submit" name="addPort">Add to portfolio</button>
-			</div> 
+				<button class="addButton" type="submit" name="addPort">Add to portfolio</button> 
+			</div>   
+			
 		</form>
 	</div>
 </div> 

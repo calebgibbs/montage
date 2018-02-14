@@ -1,18 +1,5 @@
 <?php
-$fav = [];
-
-if(isset($_SESSION['id'])){ 
-	$dbc = new mysqli('localhost', 'root', 'password', 'montage'); 
-	$id = $_SESSION['id'];
-	$sql = "SELECT product_id FROM favourites WHERE user_id = '$id'"; 
-	$result = $dbc->query($sql);  
-	if (!$result || $result->num_rows == 0) { 
-		$favoutitesEmpty = "No favourites";
-	}else{ 
-		$products = $result->fetch_all(MYSQLI_ASSOC);  
-		$fav = array_column($products, 'product_id'); 
-	} 
-} 
+require 'app/controllers/FavouritesController.php';  
 ?>
 <div id="overlay">
 	<div id="favourites">
@@ -85,7 +72,7 @@ if(isset($_SESSION['id'])){
 					$result = $dbc->query($sql); 
 					$image = $result->fetch_all(MYSQLI_ASSOC); 
 					?>
-					<div class="fav-prod">
+					<div id="<?= $favourite ?>:<?= $_SESSION['id'] ?>:box" class="fav-prod">
 						<a href="index.php?page=product&productnum=<?= $favourite ?>">
 						<img src="img/products/thumbnail/<?= $image[0]['image'] ?>" width="200px" height="150px"> 
 						</a>
@@ -99,7 +86,12 @@ if(isset($_SESSION['id'])){
 				<?php endforeach ?>  
 			<?php endif ?> 
 			<?php if(empty($fav)): ?> 
-				<div class="favempty">Your favourites is currently empty</div>
+				<?php if(isset($_COOKIE['favourites'])): ?> 
+					<div class="favempty">cookie</div>
+				<?php endif ?> 
+				<?php if(!isset($_COOKIE['favourites'])): ?> 
+					<div class="favempty">no cookie</div>
+				<?php endif ?>
 			<?php endif ?>
 		</div>
 		<div class="buttons">
@@ -118,4 +110,4 @@ if(isset($_SESSION['id'])){
 			<?php endif ?>
 		</div>
 	</div> 
-</div> 
+</div>  

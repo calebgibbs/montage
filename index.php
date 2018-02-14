@@ -8,8 +8,8 @@ require 'app/controllers/PageController.php';
 
 $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 
-$dbc = new mysqli('localhost', 'root', 'password', 'montage');  
-  
+require 'config.inc.php';  
+$dbc = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);  
 
 
 switch($page){ 
@@ -130,6 +130,7 @@ switch($page){
 		unset($_SESSION['company']);
 		unset($_SESSION['account_status']);
 		unset($_SESSION['account_type']); 
+		unset($_SESSION['favourites']); 
 		header('Location: index.php');
 	break;  
 
@@ -168,4 +169,5 @@ switch($page){
 		$controller = new Error404Controller();
 	break;
 } 
-$controller -> buildHTML(); 
+$controller -> buildHTML();   
+

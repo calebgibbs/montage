@@ -31,5 +31,5 @@
 		<div class="downloads">
 			
 		</div>
-	</div>
+	</div> 
 </div> 

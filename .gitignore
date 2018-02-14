@@ -1,3 +1,4 @@
+config.inc.php
 config.codekit3
 vendor/ 
 composer.lock 

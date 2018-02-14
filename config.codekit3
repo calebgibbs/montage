@@ -100,6 +100,13 @@
 		"oAP": "\/app\/controllers\/Error404Controller.php",
 		"oF": 0
 		},
+	"\/app\/controllers\/FavouritesController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/FavouritesController.php",
+		"oF": 0
+		},
 	"\/app\/controllers\/HelpController.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -400,6 +407,13 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/composer.lock",
+		"oF": 0
+		},
+	"\/config.inc.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/config.inc.php",
 		"oF": 0
 		},
 	"\/css\/animations.sass": {
@@ -4457,6 +4471,16 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/js\/favourites-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/js\/fontawesome-all.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/fontawesome-all-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
