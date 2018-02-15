@@ -31,7 +31,7 @@ $this -> layout('master',[
 											<?php 
 											if (isset($_SESSION['favourites'])) {
 												$current = $result['id'];
-												$favourites = json_decode($_SESSION['favourites']);  
+												$favourites = json_decode($_SESSION['favourites'], true);  
 												if (in_array($current, $favourites)) {
 													echo "&diams;";
 												}else{ 
@@ -39,7 +39,7 @@ $this -> layout('master',[
 												}
 											}else{ 
 												$current = $result['id'];
-												$favourites = json_decode($_COOKIE['favourites']);  
+												$favourites = json_decode($_COOKIE['favourites'], true);  
 												if (!empty($favourites)) {
 													if (in_array($current, $favourites)) {
 														echo "&diams;";

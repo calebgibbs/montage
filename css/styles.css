@@ -113,6 +113,23 @@ nav {
   position: fixed;
   overflow: hidden !important; }
 
+.circleCounter {
+  width: 1rem;
+  height: 1rem;
+  font-size: 0.8rem;
+  color: #177c7e;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  position: relative;
+  margin-left: -1.89rem;
+  margin-top: -0.5rem !important; }
+  .circleCounter p {
+    width: 1rem;
+    display: table-cell;
+      display-vertical-align: middle;
+      display-text-align: center; }
+
 @media screen and (min-width: 960px) {
   .tablet-link {
     display: none; }
@@ -552,6 +569,44 @@ nav {
     #signup-form form button:hover {
       background: #177c7e; }
 
+#account-form {
+  display: none; }
+  #account-form form button {
+    border: none;
+    width: 20%;
+    padding: 10px;
+    text-align: center;
+    background: rgba(66, 139, 202, 0.9);
+    margin-top: 10px;
+    margin-left: 70%;
+    font-size: 1rem;
+    color: #fff;
+    transition: 0.2s;
+    cursor: pointer;
+    border-radius: 5px; }
+    #account-form form button:hover {
+      background: #428bca; }
+
+#pwordUpdate {
+  display: none !important; }
+
+#updatePwordTrig {
+  margin-top: 2rem !important;
+  border: none;
+  width: 82.5%;
+  padding: 0.8rem;
+  text-align: center;
+  background: rgba(66, 139, 202, 0.9);
+  margin-top: 10px;
+  margin-left: 10%;
+  font-size: 1.3rem;
+  color: #fff;
+  transition: 0.2s;
+  cursor: pointer;
+  border-radius: 5px; }
+  #updatePwordTrig:hover {
+    background: #428bca; }
+
 .input-message {
   margin-top: 10px !important;
   color: #d9534f;
@@ -575,6 +630,8 @@ input[type=checkbox] {
   height: 150px; }
   .fav-prod:hover {
     cursor: pointer; }
+    .fav-prod:hover button {
+      opacity: 1; }
   .fav-prod a {
     text-decoration: none; }
   .fav-prod img {
@@ -597,9 +654,15 @@ input[type=checkbox] {
     .fav-prod h5 span {
       float: left;
       display: inline-block; }
-    .fav-prod h5 button {
-      float: right;
-      display: inline-block; }
+
+.favDel {
+  float: right !important;
+  margin: 0.3rem;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  opacity: 0;
+  transition: 0.2s; }
 
 @media screen and (max-width: 1440px) {
   #favourites {

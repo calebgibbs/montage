@@ -30,6 +30,13 @@
 		"oAP": "\/app\/ajax\/SignupValidation.php",
 		"oF": 0
 		},
+	"\/app\/controllers\/AccountController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/AccountController.php",
+		"oF": 0
+		},
 	"\/app\/controllers\/AddPortfolioController.php": {
 		"cB": 0,
 		"ft": 8192,

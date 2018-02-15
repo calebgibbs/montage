@@ -1,3 +1,20 @@
+<?php 
+if(isset($_SESSION['favourites'])){
+	$fav = json_decode($_SESSION['favourites'], true);  
+	$fav = array_reverse($fav);
+	if (!$fav) {
+		$fav = array();
+	}
+}else{ 
+	$cookie = isset($_COOKIE['favourites']) ? $_COOKIE['favourites'] : "";
+	$cookie = stripslashes($cookie);
+	$fav = json_decode($cookie, true);
+	if (!$fav) {
+		$fav = array();
+	}
+} 
+$favTotal = count($fav); 
+?>
 <nav id="navigation">
 	<div class="mobile-nav">
 		<a href="index.php?page=home"><img src="img/logo1.png" alt="Montage interiors logo"></a> 
@@ -32,7 +49,7 @@
 			<li class="main-menu menu-item tabletBreak"></li> 	
 			<li class="main-menu menu-item hide-sm"><a href="index.php?page=downloads" class="main-menu">Downloads</a></li>
 			<li class="main-menu menu-item contact"><a href="index.php?page=contact" class="main-menu">Contact</a></li> 
-			<li class="main-menu menu-item favourites-nav"><a href="#" class="fav-tog">Favourites</a><span class="hide-sm"><div id="diamond-narrow"></div></span></li> 
+			<li class="main-menu menu-item favourites-nav"><a href="#" class="fav-tog">Favourites</a><span class="hide-sm"><div id="diamond-narrow"></div></span><?php if($favTotal != 0): ?><div class="circleCounter"><p><?= $favTotal ?></p></div><?php endif ?></li> 
 			<li class="main-menu menu-item tabletSearch">
 				<button class="openSearch"><i class="fa fa-search search-btn" aria-hidden="true"></i></button> 
 			</li>

@@ -20,8 +20,23 @@ $(document).ready(function(){
 		$('#favourite-products-all').removeClass('view');
 		$('#favourite-products-all').addClass('remove'); 
 		$('#fav-tab-title').text("Sign up");
+	}); 
+	$('#account-trig').click(function(){
+		$('#account-form').removeClass('remove');
+		$('#account-form').addClass('view');
+		$('#signup-form').removeClass('view');
+		$('#signup-form').addClass('remove');
+		$('#login-form').removeClass('view');
+		$('#login-form').addClass('remove'); 
+		$('.buttons').removeClass('view');
+		$('.buttons').addClass('remove');
+		$('#favourite-products-all').removeClass('view');
+		$('#favourite-products-all').addClass('remove'); 
+		$('#fav-tab-title').text("My Details");
 	});
 	$('.back-btn').click(function(){
+		$('#account-form').removeClass('view');
+		$('#account-form').addClass('remove');
 		$('#login-form').removeClass('view');
 		$('#login-form').addClass('remove');
 		$('#signup-form').removeClass('view');
@@ -49,5 +64,11 @@ $(document).ready(function(){
 		$('#signup-form').removeClass('view');
 		$('#signup-form').addClass('remove');
 		$('#fav-tab-title').text("Sign in");
-	}); 
+	});  
+	$('#updatePwordTrig').click(function(){
+		$('##updatePwordTrig').addClass('remove'); 
+		$('#updatePwordTrig').removeClass('view');
+		$('#pwordUpdate').removeClass('remove');
+		$('#pwordUpdate').addClass('view'); 
+	});
 });	

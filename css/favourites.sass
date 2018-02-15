@@ -168,7 +168,44 @@
 		 	transition: 0.2s 
 		 	cursor: pointer 
 		 	&:hover 
-		 		background: $turquoise 
+		 		background: $turquoise  
+#account-form 
+	display: none 
+	form
+		button 
+		 	border: none 
+		 	width: 20% 
+		 	padding: 10px 
+		 	text-align: center
+		 	background: rgba( #428bca, 0.9 ) 
+		 	margin-top: 10px 
+		 	margin-left: 70%
+		 	font-size: 1rem 
+		 	color: #fff  
+		 	transition: 0.2s 
+		 	cursor: pointer 
+		 	border-radius: 5px 
+		 	&:hover 
+		 		background: #428bca 
+#pwordUpdate 
+	display: none !important 
+
+#updatePwordTrig 
+	margin-top: 2rem !important
+	border: none 
+	width: 82.5% 
+	padding: 0.8rem 
+	text-align: center
+	background: rgba( #428bca, 0.9 ) 
+	margin-top: 10px 
+	margin-left: 10%
+	font-size: 1.3rem 
+	color: #fff  
+	transition: 0.2s 
+	cursor: pointer  
+	border-radius: 5px 
+	&:hover 
+		background: #428bca 	
 
 .input-message 
 	margin-top: 10px !important 
@@ -192,7 +229,9 @@ input[type=checkbox]
 	margin: 15px 
 	height: 150px 
 	&:hover  
-		cursor: pointer 
+		cursor: pointer  
+		button 
+			opacity: 1
 	a 
 		text-decoration: none
 	img 
@@ -214,10 +253,16 @@ input[type=checkbox]
 		padding: 0 
 		span 
 			float: left  
-			display: inline-block
-		button 
-			float: right 
-			display: inline-block
+			display: inline-block  
+
+.favDel 
+	float: right !important 
+	margin: 0.3rem 
+	border: none  
+	background: none 
+	font-size: 1rem 
+	opacity: 0 
+	transition: 0.2s
 
 @include desktop-sm  
 	#favourites  

@@ -6,13 +6,30 @@ class AddproductController extends PageController {
 		parent::__construct(); 
 		$this->dbc = $dbc; 
 		$this->privatePage(); 
+		$this->getSelects();
 		if(isset($_POST['addProduct'])){ 
 			$this->validateForm();
-		}
+		} 
 	}  
 	public function buildHTML(){ 
 		echo $this->plates->render('addproduct', $this->data);
 	} 
+	
+	private function getSelects(){ 
+		//get suppliers 
+		$sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'"; 
+		$result = $this->dbc->query($sql);  
+		$result = $result->fetch_all(MYSQLI_ASSOC);
+		if ($result) {
+			die($result['SUBSTRING(COLUMN_TYPE,5)']);
+			$string_parts = explode(",",$result[0]);
+			echo "<pre>";
+			print_r($result);
+			die();
+		}
+	}
+
+
 	private function validateForm(){ 
 		$title = $_POST['title']; 
 		$desc = $_POST['desc'];

@@ -1,10 +1,18 @@
 <?php 
 
-require '../config.inc.php';  
-$dbc = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);  
-
+require '../config.inc.php';    
+$dbc = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME); 
 if(isset($_SESSION['favourites'])){
+	//get eamil status
+	$dbc = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);  
+	$user = $_SESSION['id'];
+	$sql = "SELECT email_list FROM users WHERE id = '$user'"; 
+	$result = $dbc->query($sql); 
+	$result = $result->fetch_assoc();
+	$emailStatus = $result['email_list'];
+	//get favourites 
 	$fav = json_decode($_SESSION['favourites'], true);  
+	$fav = array_reverse($fav);
 	$fav = array_reverse($fav);
 }else{ 
 	$cookie = isset($_COOKIE['favourites']) ? $_COOKIE['favourites'] : "";
@@ -18,6 +26,10 @@ if(isset($_SESSION['favourites'])){
 
 if(isset($_POST['addfav'])){ 
 	addToFavourites();   
+} 
+
+if(isset($_POST['delfav'])){
+	deleteFavouriteItem();
 }
 
 function addToFavourites(){ 
@@ -28,6 +40,17 @@ function addToFavourites(){
 		$dbc = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME); 
 
 		$current = json_decode($_SESSION['favourites'], true);  
+
+		if (!$current) {
+			$current = array(); 
+		} 
+
+			
+		if (in_array($value, $current)) {
+			$_POST = array(); 
+			header('Location: '.$lastPage); 
+			return;
+		}
 
 		array_push($current, $value); 
 
@@ -58,9 +81,8 @@ function addToFavourites(){
 
 		if(in_array($value, $savedCookieItems)){
  			$_POST = array(); 
-			die('added already');
 			header('Location: '.$lastPage);	 
-
+			return;
 		}else{
 			array_push($savedCookieItems, $value); 
 			$json = json_encode($savedCookieItems, true);	
@@ -75,9 +97,10 @@ function addToFavourites(){
 
 }   
 
-if (isset($_POST['delfav'])) {
+function deleteFavouriteItem(){
 	$value = $_POST['delfav'];
 	$lastPage = $_SERVER['HTTP_REFERER'];
+	
 	if (isset($_SESSION['favourites'])) {
 		$dbc = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 		$user = $_SESSION['id'];
@@ -91,7 +114,20 @@ if (isset($_POST['delfav'])) {
 		unset($favourites[$inArray]); 
 
 		$_SESSION['favourites'] = json_encode($favourites); 
+	}elseif(isset($_COOKIE['favourites'])){ 
+		$cookie = isset($_COOKIE['favourites']) ? $_COOKIE['favourites'] : "";
+		$cookie = stripslashes($cookie);
+		$savedCookieItems = json_decode($cookie, true); 
+
+		$inArray = array_search($value, $savedCookieItems); 
+
+		unset($savedCookieItems[$inArray]); 
+
+		$json = json_encode($savedCookieItems, true); 
+		setcookie("favourites", $json, time() + (86400 * 30), '/'); 
+		$_COOKIE['favourites'] = $json;
 	} 
+	
 	$_POST = array(); 
 	header('Location: '.$lastPage);
 }
