@@ -10,7 +10,7 @@ $prevPage = $_SERVER['REQUEST_URI'];
 		<h1>Add a new product</h1> 
 		<?=  isset($failMessage) ? $failMessage : '' ?>
 		<form enctype="multipart/form-data" method="post" action="index.php?page=add_product" novalidate>
-			<div class="form-input">
+			<div >
 				<input type="text" class="inputText" name="title" value="<?= isset($_POST['title']) ? $_POST['title'] : '' ?>" required />
 				<span class="floating-label">Product Title <?=  isset($titleMessage) ? $titleMessage : '' ?></span>
 			</div> 
@@ -55,6 +55,19 @@ $prevPage = $_SERVER['REQUEST_URI'];
 					<option value="joinery_custom">Joinery and Custom</option> 
 					<option value="other">Other</option>
 				</select> 
+			</div> 
+			<div class="form-input">
+				<select name="supplier" <?=  isset($supplierError) ? $supplierError : '' ?>>
+					<?php if(isset($_POST['supplier'])): ?>
+					<option value="<?= $_POST['supplier'] ?>"><?= ucfirst($_POST['supplier']) ?></option>
+					<?php endif ?>
+					<?php if(!isset($_POST['supplier'])): ?>
+					<option value="0">Select supplier</option> 
+					<?php endif ?>
+					<?php foreach($suppliers as $value): ?> 
+						<option value="<?= $value ?>"><?= ucfirst($value) ?></option>
+					<?php endforeach ?>
+				</select>
 			</div>
 			<div class="form-textarea">
 				<textarea name="desc" required id="prod-desc-ta"><?= isset($_POST['desc']) ? $_POST['desc'] : '' ?></textarea> 
@@ -164,16 +177,61 @@ $prevPage = $_SERVER['REQUEST_URI'];
 					<span class="floating-label">Option 10 <?=  isset($opt10Message) ? $opt10Message : '' ?></span>
 				</div> 
 			</div> 
+			<div>
+				<h2>More options</h2> 
+				<div class="form-input">
+					<input type="text" class="inputText" name="opt_text_1" value="<?= isset($_POST['opt_text_1']) ? $_POST['opt_text_1'] : '' ?>" required />
+					<span class="floating-label">Option 1 <?=  isset($optText1) ? $optText1 : '' ?></span>
+				</div> 
+				<div class="form-input">
+					<input type="text" class="inputText" name="opt_link_1" value="<?= isset($_POST['opt_link_1']) ? $_POST['opt_link_1'] : '' ?>" required />
+					<span class="floating-label">Option 1 link <?=  isset($optLink1) ? $optLink1 : '' ?></span>
+				</div>
+				<div class="form-input">
+					<input type="text" class="inputText" name="opt_text_2" value="<?= isset($_POST['opt_text_2']) ? $_POST['opt_text_2'] : '' ?>" required />
+					<span class="floating-label">Option 2 <?=  isset($optText2) ? $optText2 : '' ?></span>
+				</div> 
+				<div class="form-input">
+					<input type="text" class="inputText" name="opt_link_2" value="<?= isset($_POST['opt_link_2']) ? $_POST['opt_link_2'] : '' ?>" required />
+					<span class="floating-label">Option 2 link <?=  isset($optLink2) ? $optLink2 : '' ?></span>
+				</div> 
+				<div class="form-input">
+					<input type="text" class="inputText" name="opt_text_3" value="<?= isset($_POST['opt_text_3']) ? $_POST['opt_text_3'] : '' ?>" required />
+					<span class="floating-label">Option 3 <?=  isset($optText3) ? $optText3 : '' ?></span>
+				</div> 
+				<div class="form-input">
+					<input type="text" class="inputText" name="opt_link_3" value="<?= isset($_POST['opt_link_3']) ? $_POST['opt_link_3'] : '' ?>" required />
+					<span class="floating-label">Option 3 link <?=  isset($optLink3) ? $optLink3 : '' ?></span>
+				</div> 
+				<div class="form-input">
+					<input type="text" class="inputText" name="opt_text_4" value="<?= isset($_POST['opt_text_4']) ? $_POST['opt_text_4'] : '' ?>" required />
+					<span class="floating-label">Option 4 <?=  isset($optText4) ? $optText4 : '' ?></span>
+				</div> 
+				<div class="form-input">
+					<input type="text" class="inputText" name="opt_link_4" value="<?= isset($_POST['opt_link_4']) ? $_POST['opt_link_4'] : '' ?>" required />
+					<span class="floating-label">Option 4 link <?=  isset($optLink4) ? $optLink4 : '' ?></span>
+				</div>
+				<div class="form-input">
+					<input type="text" class="inputText" name="opt_text_5" value="<?= isset($_POST['opt_text_5']) ? $_POST['opt_text_5'] : '' ?>" required />
+					<span class="floating-label">Option 5 <?=  isset($optText5) ? $optText5 : '' ?></span>
+				</div> 
+				<div class="form-input">
+					<input type="text" class="inputText" name="opt_link_5" value="<?= isset($_POST['opt_link_5']) ? $_POST['opt_link_5'] : '' ?>" required />
+					<span class="floating-label">Option 5 link <?=  isset($optLink5) ? $optLink5 : '' ?></span>
+				</div>
+			</div>
+			
 			<div id="form-images">
 				<h2>Images</h2>
 				<?php for($i=1;$i<=5;$i++):?> 
 					<div id="img<?= $i ?>" class="img-input">
+						<label>Image <?= $i ?> <?=  isset(${"imgMsg".$i}) ? ${"imgMsg".$i} : '' ?></label>
 						<input type="file" name="image<?= $i ?>" accept="image/*">
 					</div>
 				<?php endfor ?>
 			</div>
 			<div>
-				<button class="addButton" type="submit" name="addPort">Add Product</button>
+				<button class="addButton" type="submit" name="addProduct">Add Product</button>
 			</div>
 		</form>
 	</div>

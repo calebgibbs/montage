@@ -19,266 +19,261 @@ class AddproductController extends PageController {
 		//get suppliers 
 		$sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'"; 
 		$result = $this->dbc->query($sql);  
-		$result = $result->fetch_all(MYSQLI_ASSOC);
 		if ($result) {
-			die($result['SUBSTRING(COLUMN_TYPE,5)']);
-			$string_parts = explode(",",$result[0]);
-			echo "<pre>";
-			print_r($result);
-			die();
+			$result = $result->fetch_assoc(); 
+			$result = $result['SUBSTRING(COLUMN_TYPE,5)']; 
+			$result = str_replace("(","",$result); 
+			$result = str_replace(")","",$result);
+			$result = str_replace("'","",$result); 
+			$info = explode(',', $result); 
+			$this->data['suppliers'] = $info;
 		}
 	}
-
-
 	private function validateForm(){ 
-		$title = $_POST['title']; 
-		$desc = $_POST['desc'];
-		$feat1 = $_POST['feat_1']; 
-		$feat2 = $_POST['feat_2'];
-		$feat3 = $_POST['feat_3'];
-		$option1 = $_POST['opt_1'];
-		$option2 = $_POST['opt_2'];
-		$option3 = $_POST['opt_3'];  
-		$errors = 0; 
-		if (strlen($title) == 0) {
-			$this->data['titleMessage'] = '<span style="color: #d9534f">*This feild is required</span>'; 
-			$errors++;
-		} 
-		if(strlen($title) > 50){ 
-			$this->data['titleMessage'] = '<span style="color: #d9534f">*Title is too long</span>'; 
-			$errors++;	
-		} 
-		if( isset($_POST['category']) && $_POST['category'] == '0' ){ 
-			$this->data['categoryError'] = 'style="background: #d9534f"';	
-			$errors++;
-		} 
-		if (strlen($desc) == 0) {
-			$this->data['descMessage'] = '<span style="color: #d9534f">This feild is required</span>'; 
-			$errors++;	
-		} 
-		if (strlen($desc) > 1000) {
-			$this->data['descMessage'] = '<span style="color: #d9534f">*Description is too long</span>'; 
-			$errors++;	
-		} 
-		if (strlen($feat1) == 0) {
-			$this->data['feat1Message'] = '<span style="color: #d9534f">This feild is required</span>'; 
-			$errors++;	
-		} 
-		if (strlen($feat1) > 300) {
-			$this->data['feat1Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
-			$errors++;	
-		}
-		if (strlen($feat2) > 300) {
-			$this->data['feat2Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
-			$errors++;	
-		} 
-		if (strlen($feat3) > 300) {
-			$this->data['feat3Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
-			$errors++;	
-		}
-		if (strlen($_POST['feat_4']) > 300) {
-			$this->data['feat4Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
-			$errors++;	
-		}
-		if (strlen($_POST['feat_5']) > 300) {
-			$this->data['feat5Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
-			$errors++;	
-		}
-		if (strlen($_POST['feat_6']) > 300) {
-			$this->data['feat6Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
-			$errors++;	
-		} 
-		if (strlen($_POST['feat_7']) > 300) {
-			$this->data['feat7Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
-			$errors++;	
-		} 
-		if (strlen($_POST['feat_8']) > 300) {
-			$this->data['feat8Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
-			$errors++;	
-		} 
-		if (strlen($_POST['feat_9']) > 300) {
-			$this->data['feat9Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
-			$errors++;	
-		}
-		if (strlen($_POST['feat_10']) > 300) {
-			$this->data['feat10Message'] = '<span style="color: #d9534f">*Feature is too long</span>'; 
-			$errors++;	
-		} 
-		if(strlen($option1) == 0){ 
-			$this->data['opt1Message'] = '<span style="color: #d9534f">*This feild is required</span>'; 
-			$errors++;	
-		} 
-		if(strlen($option1) > 300){ 
-			$this->data['opt1Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
-			$errors++;	
-		} 
-		if(strlen($option2) == 0){ 
-			$this->data['opt2Message'] = '<span style="color: #d9534f">*This feild is required</span>'; 
-			$errors++;	
-		} 
-		if(strlen($option2) > 300){ 
-			$this->data['opt2Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
-			$errors++;	
+		$title = trim($_POST['title']); 
+		$category = strtolower($_POST['category']);
+		$supplier = strtolower($_POST['supplier']); 
+		$description = trim($_POST['desc']); 
+		for($i=1;$i<=10;$i++){
+			$value = "feat_".$i; 
+			${'feat'.$i} = trim($_POST[$value]); 
 		}  
-		if(strlen($option3) > 300){ 
-			$this->data['opt3Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
-			$errors++;	
+		for($i=1;$i<=10;$i++){
+			$value = "opt_".$i; 
+			${'opt'.$i} = trim($_POST[$value]); 
+		}  
+		for($i=1;$i<=5;$i++){
+			$value = "opt_text_".$i; 
+			${'optT'.$i} = trim($_POST[$value]); 
 		} 
-		if(strlen($_POST['opt_4']) > 300){ 
-			$this->data['opt4Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
-			$errors++;	
-		} 
-		if(strlen($_POST['opt_5']) > 300){ 
-			$this->data['opt5Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
-			$errors++;	
+		for($i=1;$i<=5;$i++){
+			$value = "opt_link_".$i; 
+			${'optL'.$i} = trim($_POST[$value]); 
 		}
-		if(strlen($_POST['opt_6']) > 300){ 
-			$this->data['opt6Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
-			$errors++;	
-		}
-		if(strlen($_POST['opt_7']) > 300){ 
-			$this->data['opt7Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
-			$errors++;	
-		} 
-		if(strlen($_POST['opt_8']) > 300){ 
-			$this->data['opt8Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
-			$errors++;	
-		} 
-		if(strlen($_POST['opt_9']) > 300){ 
-			$this->data['opt9Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
-			$errors++;	
-		} 
-		if(strlen($_POST['opt_10']) > 300){ 
-			$this->data['opt10Message'] = '<span style="color: #d9534f">*Option is too long</span>'; 
-			$errors++;	
-		} 
-		if( in_array( $_FILES['image1']['error'], [1,3,4] ) ) {
-			$this->data['image1message'] = '<span style="color: #d9534f">*Image failed to upload</span>';
+		for($i=1;$i<=5;$i++){
+			$value = "image".$i; 
+			${'img'.$i} = $_FILES[$value]; 
+		}  
+		$errors = 0; 
+
+		if (strlen($title) === 0) {
 			$errors++; 
-		}elseif( !in_array( $_FILES['image1']['type'], $this->acceptableImageTypes ) ) {  
-			$this->data['image1message'] = '<span style="color: #d9534f">*You must upload a valid image</span>'; 
-			$errors++;
-		}
-		if( in_array( $_FILES['image2']['error'], [1,3] ) ) {
-			$this->data['image2message'] = '<span style="color: #d9534f">*Image failed to upload</span>';
+			$this->data['titleMessage'] = '<span style="color: #d9534f">*This feild is required</span>'; 
+		}elseif(strlen($title) > 50){ 
 			$errors++; 
-		}elseif( !in_array( $_FILES['image2']['type'], $this->acceptableImageTypes ) ) {  
-			$this->data['image2message'] = '<span style="color: #d9534f">*You must upload a valid image</span>'; 
+			$this->data['titleMessage'] = '<span style="color: #d9534f">*Title is too long</span>';	
+		} 
+
+		if ($category == '0') {
 			$errors++;
-		}
-		if( in_array( $_FILES['image3']['error'], [1,3] ) ) {
-			$this->data['image3message'] = '<span style="color: #d9534f">*Image failed to upload</span>';
+			$this->data['categoryError'] = 'style="background: #d9534f"';
+		} 
+
+		if ($supplier == '0') {
+			$errors++;
+			$this->data['supplierError'] = 'style="background: #d9534f"';
+		} 
+
+		if (strlen($description) === 0) {
 			$errors++; 
-		}elseif( !in_array( $_FILES['image3']['type'], $this->acceptableImageTypes ) ) {  
-			$this->data['image3message'] = '<span style="color: #d9534f">*You must upload a valid image</span>'; 
-			$errors++;
-		}
-		if( in_array( $_FILES['image4']['error'], [1,3] ) ) {
-			$this->data['image4message'] = '<span style="color: #d9534f">*Image failed to upload</span>';
+			$this->data['descMessage'] = '<span style="color: #d9534f">*This feild is required</span>';
+		}elseif(strlen($description) > 1000){ 
 			$errors++; 
-		}elseif( !in_array( $_FILES['image4']['type'], $this->acceptableImageTypes ) ) {  
-			$this->data['image4message'] = '<span style="color: #d9534f">*You must upload a valid image</span>'; 
-			$errors++;
-		}
-		if( in_array( $_FILES['image5']['error'], [1,3] ) ) {
-			$this->data['image5message'] = '<span style="color: #d9534f">*Image failed to upload</span>';
+			$this->data['descMessage'] = '<span style="color: #d9534f">*Description is too long</span>';
+		} 
+
+		if (strlen($feat1) === 0) {
 			$errors++; 
-		}elseif( !in_array( $_FILES['image5']['type'], $this->acceptableImageTypes ) ) {  
-			$this->data['image5message'] = '<span style="color: #d9534f">*You must upload a valid image</span>'; 
+			$this->data['feat1Message'] = '<span style="color: #d9534f">*This feild is required</span>';
+		}elseif(strlen($feat1) > 300){ 
+			$errors++; 
+			$this->data['feat1Message'] = '<span style="color: #d9534f">*Feature is too long</span>';
+		} 
+
+		for($i=2;$i<=10;$i++){ 
+			$message = "feat".$i."Message"; 
+			$feat = ${'feat'.$i};
+			if (strlen($feat) > 300) {
+				$errors++; 
+				$this->data[$message] = '<span style="color: #d9534f">*Feature is too long</span>';	
+			}
+		} 
+
+		if (strlen($opt1) === 0) {
+			$errors++; 
+			$this->data['opt1Message'] = '<span style="color: #d9534f">*This feild is too long</span>';	
+		}elseif(strlen($opt1) > 300){
+			$errors++; 
+			$this->data['opt1Message'] = '<span style="color: #d9534f">*Option is too long</span>';
+		} 
+
+		for($i=2;$i<=10;$i++){ 
+			$message = "opt".$i."Message"; 
+			$opt = ${'opt'.$i}; 
+			if (strlen($opt) > 300) {
+				$errors++; 
+				$this->data[$message] = '<span style="color: #d9534f">*Option is too long</span>';
+			}
+		} 
+
+		for($i=1;$i<=5;$i++){
+			$text = ${'optT'.$i}; 
+			$link = ${'optL'.$i}; 
+			$linkM = "optLink".$i;
+			$textM = "optText".$i; 
+			if (strlen($text) != 0) { 
+				if (strlen($link) === 0) {
+					$errors++; 
+					$this->data[$linkM] = '<span style="color: #d9534f">*This feild is required</span>';
+				}
+			}elseif (strlen($link) != 0) {
+				if (strlen($text) === 0) {
+					$errors++;
+					$this->data[$textM] = '<span style="color: #d9534f">*This feild is required</span>';
+				}
+			} 
+			if (strlen($text) > 100) {
+				$errors++; 
+				$this->data[$textM] = '<span style="color: #d9534f">*Option text is too long</span>';
+			} 
+			if (strlen($link) > 200) {
+				$errors++; 
+				$this->data[$linkM] = '<span style="color: #d9534f">*Option link is too long</span>';
+			}
+		} 
+
+		if (in_array($img1['error'], [4])) {
 			$errors++;
-		}
-		if ($errors == 0) {
+			$this->data['imgMsg1'] = '<span style="color: #d9534f">*You must upload an image</span>';
+		} 
+
+		for($i=1;$i<=5;$i++){ 
+			$img = "image".$i;
+			$img = "img".$i;
+			$msg = "imgMsg".$i;
+			if (in_array($_FILES[$img]['error'], [4])) {
+				if (in_array($_FILES[$img]['error'], [1,3])) {
+					$errors++; 
+					$this->data[$msg] = '<span style="color: #d9534f">*Image failed to upload</span>';
+				}elseif (!in_array($_FILES[$img]['type'], $this->acceptableImageTypes)) {
+					$errors++; 
+					$this->data[$msg] = '<span style="color: #d9534f">*You must upload a valid image</span>';
+				}
+			}
+		} 
+
+		if ($errors === 0) {
 			$this->ProcessProduct();
-		}
+		} 
+
+		
 	}  
 	private function ProcessProduct(){ 
-		$title = $this->dbc->real_escape_string($_POST['title']);
-		$desc = $this->dbc->real_escape_string($_POST['desc']);
-		$category = $this->dbc->real_escape_string($_POST['category']);
-		$sql = "INSERT INTO products(title, description, category) VALUES('$title', '$desc', '$category')";  
-		$this->dbc->query($sql); 
-		$sql = "SELECT id FROM products WHERE title = '$title' AND description = '$desc' AND category = '$category'"; 
-		$result = $this->dbc->query($sql); $productId = $result->fetch_assoc();  
+		$title = trim($_POST['title']); 
+		$category = strtolower($_POST['category']);
+		$supplier = strtolower($_POST['supplier']); 
+		$description = trim($_POST['desc']); 
+		for($i=1;$i<=10;$i++){
+			$value = "feat_".$i; 
+			${'feat'.$i} = trim($_POST[$value]); 
+		}  
+		for($i=1;$i<=10;$i++){
+			$value = "opt_".$i; 
+			${'opt'.$i} = trim($_POST[$value]); 
+		}  
+		for($i=1;$i<=5;$i++){
+			$value = "opt_text_".$i; 
+			${'optT'.$i} = trim($_POST[$value]); 
+		} 
+		for($i=1;$i<=5;$i++){
+			$value = "opt_link_".$i; 
+			${'optL'.$i} = trim($_POST[$value]); 
+		}
 		
-		$productId = $productId['id'];   
-		$feat1 = $this->dbc->real_escape_string($_POST['feat_1']); 
-		$feat2 = $this->dbc->real_escape_string($_POST['feat_2']); 
-		$feat3 = $this->dbc->real_escape_string($_POST['feat_3']);
-		$feat4 = $this->dbc->real_escape_string($_POST['feat_4']);
-		$feat5 = $this->dbc->real_escape_string($_POST['feat_5']);
-		$feat6 = $this->dbc->real_escape_string($_POST['feat_6']);
-		$feat7 = $this->dbc->real_escape_string($_POST['feat_7']);
-		$feat8 = $this->dbc->real_escape_string($_POST['feat_8']);
-		$feat9 = $this->dbc->real_escape_string($_POST['feat_9']);
-		$feat10 = $this->dbc->real_escape_string($_POST['feat_10']); 
-		for($i = 1; $i <= 10; $i++){ 
-			if(${'feat'.$i} != ''){ 
-				$sql = "INSERT INTO product_features(product_id, feature, position) VALUES('$productId', '${'feat'.$i}', '$i')"; 
+		$sql = "INSERT INTO products(title, description, category, supplier) 
+				VALUES('$title', '$description', '$category', '$supplier')"; 
+		$this->dbc->query($sql); 
+		$sql = "SELECT id FROM products WHERE title = '$title'
+				AND description = '$description'
+				AND category = '$category'
+				AND supplier = '$supplier'";
+		$result = $this->dbc->query($sql);	 
+		$prodId = $result->fetch_assoc();  
+		$prodId = $prodId['id']; 
+
+		//insert features 
+		for($i=1;$i<=10;$i++){ 
+			$feat = ${'feat'.$i}; 
+			if (strlen($feat) != 0) {
+				$sql = "INSERT INTO product_features(product_id, feature, position)
+						VALUES('$prodId', '$feat', '$i')"; 
 				$this->dbc->query($sql);
 			}
 		} 
-		$option1 = $this->dbc->real_escape_string($_POST['opt_1']);
-		$option2 = $this->dbc->real_escape_string($_POST['opt_2']);
-		$option3 = $this->dbc->real_escape_string($_POST['opt_3']);
-		$option4 = $this->dbc->real_escape_string($_POST['opt_4']);
-		$option5 = $this->dbc->real_escape_string($_POST['opt_5']);
-		$option6 = $this->dbc->real_escape_string($_POST['opt_6']);
-		$option7 = $this->dbc->real_escape_string($_POST['opt_7']);
-		$option8 = $this->dbc->real_escape_string($_POST['opt_8']);
-		$option9 = $this->dbc->real_escape_string($_POST['opt_9']);
-		$option10 = $this->dbc->real_escape_string($_POST['opt_10']); 
-		for($i = 1; $i <= 10; $i++){ 
-			if(${'option'.$i} != ''){ 
-				$sql = "INSERT INTO product_options(product_id, product_option, position) VALUES('$productId', '${'option'.$i}', '$i')"; 
+
+		//insert options 
+		for($i=1;$i<=10;$i++){ 
+			$opt = ${'opt'.$i}; 
+			if (strlen($opt) != 0) {
+				$sql = "INSERT INTO product_options(product_id, product_option, position)
+						VALUES('$prodId', '$opt', '$i')"; 
 				$this->dbc->query($sql);
 			}
-		}  
-		$image1 = $_FILES['image1'];
-		$image2 = $_FILES['image2'];
-		$image3 = $_FILES['image3'];
-		$image4 = $_FILES['image4'];
-		$image5 = $_FILES['image5']; 
-		for($i = 1; $i <= 5; $i++){ 
-			if(!in_array(${'image'.$i}['error'],[4])) {
+		} 
+
+		//insert links 
+		for($i=1;$i<=5;$i++){
+			$text = ${'optT'.$i};
+			$link = ${'optL'.$i}; 
+			if (strlen($link) != 0) {
+				$sql = "INSERT INTO product_links(product_id, href, link_text, position)
+						VALUES('$prodId', '$link', '$link', '$i')"; 
+				$this->dbc->query($sql);
+			}
+		} 
+
+		//insert images 
+		for($i=1;$i<=5;$i++){ 
+			$img = "image".$i;
+			if (!in_array($_FILES[$img]['error'], [4])) {
 				$manager = new ImageManager();
-				$image = $manager->make( ${'image'.$i}['tmp_name'] );   
+				$image = $manager->make( $_FILES[$img]['tmp_name'] );   
 				$fileExtension = $this->getFileExtension( $image->mime() ); 
 				$fileName = uniqid(); 
 				$image->resize(250, 150); 
 				$image->save("img/products/thumbnail/$fileName$fileExtension");  
 				$image->resize(770, 400); 
 				$image->save("img/products/large/$fileName$fileExtension"); 
-				$sql = "INSERT INTO product_images(product_id, image, image_position) VALUES( '$productId', '$fileName$fileExtension', '$i' )";  
+				$sql = "INSERT INTO product_images(product_id, image, image_position) 
+						VALUES( '$prodId', '$fileName$fileExtension', '$i' )";  
 				$this->dbc->query($sql);
 			}
-		}  
-		
+		} 
+
 		if($this->dbc->affected_rows) { 
-				//locate to new page 
-				header('Location: index.php?page=product&productnum='.$productId);
-				
-			}else { 
-				$this->data['failMessage'] = '<h2 style="color: #d9534f"><b>Something went wrong! <br />
-				<i>The product could not be processed at this time <br />
-				Please try again later</i></b></h2>'; 		
-			}
+			header('Location: index.php?page=product&productnum='.$prodId);	
+		}else { 
+			$this->data['failMessage'] = '<h2 style="color: #d9534f"><b>Something went wrong! <br />
+			<i>The product could not be processed at this time <br />
+			Please try again later</i></b></h2>'; 		
+		}
 	} 
 	private function getFileExtension( $mimeType ) {
 		switch($mimeType) {
 			case 'image/png':
-				return '.png';
+			return '.png';
 			break;
 			case 'image/gif':
-				return '.gif';
+			return '.gif';
 			break;
 			case 'image/jpeg':
-				return '.jpg';
+			return '.jpg';
 			break;
 			case 'image/bmp':
-				return '.bmp';
+			return '.bmp';
 			break;
 			case 'image/tiff':
-				return '.tif';
+			return '.tif';
 			break;
 		}
 	}

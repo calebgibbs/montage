@@ -688,7 +688,13 @@ input[type=checkbox] {
       line-height: 150%;
       text-align: center; }
       #favourites form p input[type=checkbox] {
-        margin-left: 0 !important; } }
+        margin-left: 0 !important; }
+  #favourite-products-all {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    max-height: 74.5vh;
+    overflow: scroll; } }
 
 @media screen and (max-width: 1333px) {
   #favourites {

@@ -13,8 +13,6 @@ $this -> layout('master',[
 ?>
 <div class="body"> 
 	<?php if($_SESSION['account_type'] == 'admin'): ?>
-		<span><a href="<?= $_SERVER['REQUEST_URI'] ?>&delete ">Delete</a></span> 
-		<span><a href="index.php?page=edit&product=<?= $_GET['productnum'] ?>">Edit</a></span> 
 	<?php endif ?> 
 	<div id="product-theme" class="
 	<?php if( $product['category'] == 'workstation' ){

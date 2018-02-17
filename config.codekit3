@@ -3038,6 +3038,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"\/img\/products\/large\/5a8838516a34a.png": {
+		"ft": 32768,
+		"iS": 33286,
+		"oA": 0,
+		"oAP": "\/img\/products\/large\/5a8838516a34a.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/products\/large\/croppie.js": {
 		"ft": 64,
 		"ma": 0,
@@ -4283,6 +4294,17 @@
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
+		"q": 100
+		},
+	"\/img\/products\/thumbnail\/5a8838516a34a.png": {
+		"ft": 32768,
+		"iS": 5855,
+		"oA": 0,
+		"oAP": "\/img\/products\/thumbnail\/5a8838516a34a.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/story\/background.png": {
