@@ -6,14 +6,17 @@ if(isset($_SESSION['favourites'])){
 	//get eamil status
 	$dbc = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);  
 	$user = $_SESSION['id'];
-	$sql = "SELECT email_list FROM users WHERE id = '$user'"; 
+	$sql = "SELECT first_name, email, company, email_list FROM users WHERE id = '$user'"; 
 	$result = $dbc->query($sql); 
 	$result = $result->fetch_assoc();
+	$name = $result['first_name']; 
+	$email = $result['email']; 
+	$company = $result['company'];
 	$emailStatus = $result['email_list'];
 	//get favourites 
 	$fav = json_decode($_SESSION['favourites'], true);  
 	$fav = array_reverse($fav);
-	$fav = array_reverse($fav);
+	$fav = array_reverse($fav); 
 }else{ 
 	$cookie = isset($_COOKIE['favourites']) ? $_COOKIE['favourites'] : "";
 	$cookie = stripslashes($cookie);

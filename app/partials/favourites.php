@@ -1,5 +1,5 @@
 <?php
-require 'app/controllers/FavouritesController.php';  
+require 'app/controllers/FavouritesController.php';   
 ?>
 <div id="overlay">
 	<div id="favourites">
@@ -69,52 +69,73 @@ require 'app/controllers/FavouritesController.php';
 				<button class="link-btn back-btn">&#8592; Favourites</button>
 				<form method="post">
 					<div>
-						<input id="MAname" type="text" name="name" class="inputText" value="<?= $_SESSION['first_name'] ?>" required> 
-						<span class="floating-label">Your name</span> 
-						<span class="input-message" id="su-name-message"></span> 
-						<button type="sumbit" name="updateName">Update</button>
+						<input id="MAname" type="text" name="name" class="inputText" value="<?= $name ?>" required> 
+						<span class="floating-label">Your name</span>  
+						<span class="input-message" id="MAaccountMsg"></span>
+						<button id="nameUpdate" value="<?= $_SESSION['id'] ?>" type="sumbit" name="updateName">Update</button>
 					</div>
 				</form>
 				<form method="post">
 					<div>
-						<input id="MAemail" type="email" name="email" class="inputText" value="<?= $_SESSION['email'] ?>" required> 
+						<input id="MAemail" type="email" name="email" class="inputText" value="<?= $email ?>" required> 
 						<span class="floating-label">Your email</span>
-						<span class="input-message" id="su-email-message"></span> 
-						<button type="sumbit" name="updateEmail">Update</button>
+						<span class="input-message" id="MAemailMsg"></span> 
+						<button id="emailUpdate" value="<?= $_SESSION['id'] ?>" type="sumbit" name="updateEmail">Update</button>
 					</div> 
 				</form>
 				<form method="post">
 					<div>
-						<input id="MAcompany" type="text" name="company" class="inputText" value="<?= $_SESSION['company'] ?>" required> 
+						<input id="MAcompany" type="text" name="company" class="inputText" value="<?= $company ?>" required> 
 						<span class="floating-label">Your company</span>
-						<span class="input-message" id="su-company-message"></span>
-						<button type="sumbit" name="updateCompany">Update</button>
+						<span class="input-message" id="MAcompanyMsg"></span>
+						<button id="companyUpdate" value="<?= $_SESSION['id'] ?>" type="sumbit" name="updateCompany">Update</button>
+					</div>
+				</form> 
+
+				<button id="changePwdTrig" value="<?= $_SESSION['id'] ?>">Change Password</button>
+				<?php if($emailStatus === 'yes'): ?>
+					<div>
+						<button id="elistUn" value="<?= $_SESSION['id'] ?>">Unsubscribe from mailing list</button>
+					</div> 
+				<?php endif ?> 
+				<?php if($emailStatus != 'yes'): ?>
+					<div>
+						<button id="elistSub" value="<?= $_SESSION['id'] ?>">Subscribe to mailing list</button>
+					</div> 
+				<?php endif ?> 
+				<div>
+					<button id="delAccount" value="<?= $_SESSION['id'] ?>">Delete Account</button> 
+					<div id="delPinput">
+						<form>
+							<input id="DelaccPwd" type="password" name="company" class="inputText"" required> 
+							<span class="floating-label">Confirm with password</span> 
+							<button id="delConfirm" value="<?= $_SESSION['id'] ?>" type="sumbit" name="updateCompany">Delete</button>	
+						</form>
+					</div>
+				</div>
+				
+			</div>  
+			<div id="changePasswords">
+				<button class="link-btn to-details">&#8592; My Details</button> 
+				<form method="post">
+					<div>
+						<input id="MAcurrentPwd" type="password" class="inputText" required> 
+						<span class="floating-label">Current Password</span>
+						<span class="input-message" id="MAcurrentpwdMsg"></span>
+					</div>
+					<div>
+						<input id="MAnewPwd" type="password" class="inputText" required> 
+						<span class="floating-label">New Password</span>
+						<span class="input-message" id="MAnewpwdMsg"></span>
+					</div>
+					<div>
+						<input id="MArepeatPwd" type="password" class="inputText" required> 
+						<span class="floating-label">Repeat Password</span>
+						<span class="input-message" id="MArepeatpwdMsg"></span> 
+						<button id="pwdUpdate" type="sumbit" value="<?= $_SESSION['id'] ?>">Update</button>
 					</div>
 				</form>
-				<form method="post">
-					<div> 
-						<p><input type="checkbox" value="yes" name="email_list" id="checkbox" <?php if($emailStatus === 'yes'){ echo "checked"; } ?>> I'd like to be contacted with the latest details from Montage</p> 
-						<button tyoe="sumbit" name="updateElist">Update</button>
-					</div> 
-				</form> 
-				<div>
-					<button id="updatePwordTrig">Update Password</button>
-				</div>
-				<div id="pwordUpdate">
-					<form>	
-						<div>
-							<input id="SUpwd1" type="password" name="password" class="inputText" required> 
-							<span class="floating-label">Password</span>
-							<span class="input-message" id="su-pass1-message"></span>
-						</div>
-						<div>
-							<input id="SUpwd2" type="password" name="password2" class="inputText" required> 
-							<span class="floating-label">Repeat password</span>
-							<span class="input-message" id="su-pass2-message"></span>
-						</div>
-					</form>
-				</div>
-			</div> 
+			</div>
 		<?php endif ?>
 		<div id="favourite-products-all">
 			<?php if(!empty($fav)): ?>

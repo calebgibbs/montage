@@ -4,8 +4,7 @@ date_default_timezone_set('Pacific/Auckland');
 session_start();
 
 require 'vendor/autoload.php';
-require 'app/controllers/PageController.php'; 
-// require 'app/controllers/FavouritesController.php'; 
+require 'app/controllers/PageController.php';   
 
 $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 

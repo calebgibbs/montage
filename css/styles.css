@@ -439,7 +439,8 @@ nav {
   overflow-y: hidden !important; }
 
 .view {
-  display: block !important; }
+  display: block !important;
+  opacity: 1 !important; }
 
 .remove {
   display: none; }
@@ -577,7 +578,7 @@ nav {
     padding: 10px;
     text-align: center;
     background: rgba(66, 139, 202, 0.9);
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: 70%;
     font-size: 1rem;
     color: #fff;
@@ -587,25 +588,85 @@ nav {
     #account-form form button:hover {
       background: #428bca; }
 
-#pwordUpdate {
-  display: none !important; }
-
-#updatePwordTrig {
-  margin-top: 2rem !important;
+#changePwdTrig {
+  background: none;
   border: none;
-  width: 82.5%;
-  padding: 0.8rem;
-  text-align: center;
-  background: rgba(66, 139, 202, 0.9);
-  margin-top: 10px;
-  margin-left: 10%;
   font-size: 1.3rem;
-  color: #fff;
-  transition: 0.2s;
-  cursor: pointer;
-  border-radius: 5px; }
-  #updatePwordTrig:hover {
-    background: #428bca; }
+  color: #A6A6A6;
+  width: 100%;
+  margin-top: 20px;
+  transition: 0.3s; }
+  #changePwdTrig:hover {
+    color: #428bca;
+    cursor: pointer; }
+
+#elistSub {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  color: #A6A6A6;
+  width: 100%;
+  margin-top: 20px;
+  transition: 0.3s; }
+  #elistSub:hover {
+    color: #428bca;
+    cursor: pointer; }
+
+#elistUn {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  color: #A6A6A6;
+  width: 100%;
+  margin-top: 20px;
+  transition: 0.3s; }
+  #elistUn:hover {
+    color: #428bca;
+    cursor: pointer; }
+
+#delAccount {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  color: #A6A6A6;
+  transition: 0.3s;
+  width: 100%;
+  margin-top: 20px;
+  outline: none; }
+  #delAccount:hover {
+    color: #d9534f;
+    cursor: pointer; }
+
+#delConfirm {
+  opacity: 0;
+  transition: 0.3s;
+  background: rgba(217, 83, 79, 0.9) !important; }
+  #delConfirm:hover {
+    background: #d9534f !important; }
+
+#delPinput {
+  display: none; }
+
+.error {
+  color: #d9534f !important; }
+
+#changePasswords {
+  display: none; }
+  #changePasswords form button {
+    border: none;
+    width: 20%;
+    padding: 10px;
+    text-align: center;
+    background: rgba(66, 139, 202, 0.9);
+    margin-top: 20px;
+    margin-left: 70%;
+    font-size: 1rem;
+    color: #fff;
+    transition: 0.2s;
+    cursor: pointer;
+    border-radius: 5px; }
+    #changePasswords form button:hover {
+      background: #428bca; }
 
 .input-message {
   margin-top: 10px !important;
@@ -1972,6 +2033,12 @@ textarea:focus ~ .floating-label, textarea:not(:focus):valid ~ .floating-label {
   .addButton:hover {
     background: #177c7e;
     cursor: pointer; }
+
+.inputError {
+  border-bottom: 0.1rem solid #d9534f !important; }
+
+.inputSuccess {
+  border-bottom: 0.1rem solid #5cb85c !important; }
 
 @keyframes imageload {
   0% {

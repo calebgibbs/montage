@@ -16,6 +16,13 @@
 		"oAP": "\/.gitignore",
 		"oF": 0
 		},
+	"\/app\/ajax\/AccountController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/ajax\/AccountController.php",
+		"oF": 0
+		},
 	"\/app\/ajax\/LoginValidation.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -4456,6 +4463,16 @@
 		"oA": 0,
 		"oAP": "\/index.php",
 		"oF": 0
+		},
+	"\/js\/account.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/account-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
 		},
 	"\/js\/animation-min.js": {
 		"ft": 64,

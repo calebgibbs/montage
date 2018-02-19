@@ -64,11 +64,18 @@ $(document).ready(function(){
 		$('#signup-form').removeClass('view');
 		$('#signup-form').addClass('remove');
 		$('#fav-tab-title').text("Sign in");
-	});  
-	$('#updatePwordTrig').click(function(){
-		$('##updatePwordTrig').addClass('remove'); 
-		$('#updatePwordTrig').removeClass('view');
-		$('#pwordUpdate').removeClass('remove');
-		$('#pwordUpdate').addClass('view'); 
+	});   
+	$('#changePwdTrig').click(function(){
+		$('#account-form').removeClass('view');
+		$('#account-form').addClass('remove');
+		$('#changePasswords').removeClass('remove'); 
+		$('#changePasswords').addClass('view'); 
+
+	}); 
+	$('.to-details').click(function(){
+		$('#account-form').removeClass('remove');
+		$('#account-form').addClass('view');
+		$('#changePasswords').removeClass('view'); 
+		$('#changePasswords').addClass('remove');
 	});
 });	
