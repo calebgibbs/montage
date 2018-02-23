@@ -3,9 +3,8 @@
 		'title'=>'Montage Interiors', 
 		'desc' => 'montage interiors description' 
 	]);   
-	$_SESSION['page'] = $_SERVER['REQUEST_URI'];
 ?> 
-<div class="body homebg"> 
+<div class="body homebg desktopHome"> 
 	<div class="top">
 		<div class="portfolio">
 			<img class="homeLink" src="img/home/portfolio.png" href="index.php?page=portfolios">
@@ -32,4 +31,40 @@
 			
 		</div>
 	</div> 
-</div> 
+</div>  
+<div class="mobileHome">
+	<div>
+		<h3 class="mobileHtitle">Product</h3> 
+		<img src="img/home/product-mobile.png">
+	</div> 
+	<div>
+		<h3 class="mobileHtitle">Portfolio</h3> 
+		<img src="img/home/portfolio-mobile.png">
+	</div> 
+	<div>
+		<h3 class="mobileHtitle">Sustainability</h3>
+		<img src="img/home/sustainability-mobile.png">
+	</div> 
+	<div>
+		<h3 class="mobileHtitle">Downloads</h3>
+		<img src="img/home/downloads-mobile.png">
+	</div> 
+	<div>
+		<h3 class="mobileHtitle">Our Story</h3>
+		<img src="img/home/ourstory-mobile.png">
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

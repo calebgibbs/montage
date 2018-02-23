@@ -28,6 +28,9 @@
 		color: #989898 
 		font-weight: 100   
 
+.mobileHome 
+	display: none 
+
 .portfolio  
 	display: inline-block   
 	margin-left: 3rem
@@ -66,5 +69,25 @@
 	transition: 0.3s 
 	&:hover  
 		cursor: pointer
-		transform: scale(1.02)
+		transform: scale(1.02) 
+
+@include mobile  
+	.desktopHome  
+		display: none !important  
+	.mobileHome 
+		display: block !important  
+		img 
+			width: 82% 
+			margin-left: 9% 
+			margin-bottom: 0.2rem
+	.mobileHtitle 
+		width: 80%  
+		margin: 0 auto
+		padding: 10px  
+		color: #fff 
+		text-align: center 
+		font-weight: 100 
+		font-size: 1.3rem 
+		background: $turquoise 
+		margin-bottom: 0.2rem 
 

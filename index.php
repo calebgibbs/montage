@@ -155,6 +155,11 @@ switch($page){
 		$controller = new AddPortfolioController($dbc);	 
 	break; 
 
+	case 'settings': 
+		require 'app/controllers/SettingsController.php'; 
+		$controller = new SettingsController($dbc); 
+	break; 
+
 	case 'help':
 		require 'app/controllers/HelpController.php'; 
 		$controller = new HelpController($dbc);	 

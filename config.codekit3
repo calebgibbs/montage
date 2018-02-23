@@ -212,6 +212,13 @@
 		"oAP": "\/app\/controllers\/SearchController.php",
 		"oF": 0
 		},
+	"\/app\/controllers\/SettingsController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/SettingsController.php",
+		"oF": 0
+		},
 	"\/app\/controllers\/SignupController.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -385,6 +392,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/app\/partials\/results.php",
+		"oF": 0
+		},
+	"\/app\/partials\/settings.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/settings.php",
 		"oF": 0
 		},
 	"\/app\/partials\/sitenav.php": {
@@ -696,6 +710,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/home\/downloads-mobile.png": {
+		"ft": 32768,
+		"iS": 18789,
+		"oA": 0,
+		"oAP": "\/img\/home\/downloads-mobile.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/home\/downloads.png": {
 		"ft": 32768,
 		"iS": 41270,
@@ -707,11 +732,33 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/home\/ourstory-mobile.png": {
+		"ft": 32768,
+		"iS": 47963,
+		"oA": 0,
+		"oAP": "\/img\/home\/ourstory-mobile.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/home\/ourstory.png": {
 		"ft": 32768,
 		"iS": 55637,
 		"oA": 0,
 		"oAP": "\/img\/home\/ourstory.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/home\/portfolio-mobile.png": {
+		"ft": 32768,
+		"iS": 47810,
+		"oA": 0,
+		"oAP": "\/img\/home\/portfolio-mobile.png",
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
@@ -729,11 +776,33 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/home\/product-mobile.png": {
+		"ft": 32768,
+		"iS": 13568,
+		"oA": 0,
+		"oAP": "\/img\/home\/product-mobile.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/home\/product.png": {
 		"ft": 32768,
 		"iS": 225458,
 		"oA": 0,
 		"oAP": "\/img\/home\/product.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/home\/sustainability-mobile.png": {
+		"ft": 32768,
+		"iS": 50869,
+		"oA": 0,
+		"oAP": "\/img\/home\/sustainability-mobile.png",
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
@@ -4463,6 +4532,16 @@
 		"oA": 0,
 		"oAP": "\/index.php",
 		"oF": 0
+		},
+	"\/js\/account-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/account-min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
 		},
 	"\/js\/account.js": {
 		"ft": 64,

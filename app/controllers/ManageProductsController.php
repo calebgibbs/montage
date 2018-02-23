@@ -13,9 +13,6 @@ class ManageProductsController extends PageController {
 	private function getAllProducts(){ 
 		$sql = "SELECT id, title, description, category FROM products"; 
 		$result = $this->dbc->query($sql); 
-		$this->data['allProducts'] = $result->fetch_all(MYSQLI_ASSOC); 
-		// echo "<pre>"; 
-		// print_r($data['allProducts'])
-		// echo "</pre>";  
+		$this->data['allProducts'] = $result->fetch_all(MYSQLI_ASSOC);  
  	}
 }

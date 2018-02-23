@@ -817,6 +817,9 @@ input[type=checkbox] {
     color: #989898;
     font-weight: 100; }
 
+.mobileHome {
+  display: none; }
+
 .portfolio {
   display: inline-block;
   margin-left: 3rem; }
@@ -856,6 +859,26 @@ input[type=checkbox] {
   .homeLink:hover {
     cursor: pointer;
     transform: scale(1.02); }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .desktopHome {
+    display: none !important; }
+  .mobileHome {
+    display: block !important; }
+    .mobileHome img {
+      width: 82%;
+      margin-left: 9%;
+      margin-bottom: 0.2rem; }
+  .mobileHtitle {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    font-weight: 100;
+    font-size: 1.3rem;
+    background: #177c7e;
+    margin-bottom: 0.2rem; } }
 
 .sustainability-page {
   background: url(../img/sustainability/background.png) no-repeat center right;
@@ -1646,7 +1669,7 @@ figure {
   .table-dia {
     text-align: left;
     margin-left: 54.4rem;
-    margin-top: 2rem; }
+    margin-top: 1.65rem; }
     .table-dia img {
       width: 381px;
       transition: 0.3s; }
@@ -2004,13 +2027,13 @@ textarea:focus ~ .floating-label, textarea:not(:focus):valid ~ .floating-label {
       float: right;
       border-radius: 2px;
       transition: 0.2s;
-      background: rgba(132, 176, 37, 0.8);
+      background: rgba(66, 139, 202, 0.8);
       color: #fff;
       border: none;
       padding: 8px;
       font-style: bold; }
       .inner th button:hover, .inner td button:hover {
-        background: #84B025; }
+        background: #428bca; }
   .inner tr:nth-child(even) {
     background: #f2f2f2; }
   .inner tr:hover {
@@ -2039,6 +2062,21 @@ textarea:focus ~ .floating-label, textarea:not(:focus):valid ~ .floating-label {
 
 .inputSuccess {
   border-bottom: 0.1rem solid #5cb85c !important; }
+
+#addAdminBtn {
+  border: none;
+  padding: 10px;
+  text-align: center;
+  background: rgba(66, 139, 202, 0.9);
+  margin-left: 85%;
+  font-size: 1rem;
+  color: #fff;
+  transition: 0.2s;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 30px; }
+  #addAdminBtn:hover {
+    background: #428bca; }
 
 @keyframes imageload {
   0% {

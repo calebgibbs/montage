@@ -48,5 +48,5 @@ $(document).ready(function(){
     	$('#material-modal').addClass('openModal'); 
     	$('#sus-page').addClass('bgModal');  
     	console.log('should work')
-    });
+    }); 
 })
