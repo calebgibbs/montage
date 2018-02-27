@@ -38,7 +38,7 @@ class SearchController extends PageController {
 				OR p.description LIKE '%$search%' 
 				OR p.category LIKE '%$search%' 
 				AND i.image_position = 1
-				ORDER BY score_title ASC";  
+				ORDER BY score_title ASC";   
 		$result = $this->dbc->query($sql); 
 
 		if (!$result || $result->num_rows == 0) {

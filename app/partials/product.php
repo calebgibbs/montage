@@ -13,6 +13,7 @@ $this -> layout('master',[
 ?>
 <div class="body"> 
 	<?php if($_SESSION['account_type'] == 'admin'): ?>
+		<a href="index.php?page=edit&product=<?= $_GET['productnum'] ?>">Edit</a>
 	<?php endif ?> 
 	<div id="product-theme" class="
 	<?php if( $product['category'] == 'workstation' ){
@@ -36,6 +37,7 @@ $this -> layout('master',[
 		<div id="left-col">
 			<?php if($_GET['page'] == 'product'): ?>
 			<div class="product-images">
+				<h1 class="prod-m-title"><?= $product['title'] ?></h1> 
 				<div class="large-img">
 					<?php foreach( $Allimages as $image ): ?>
 						<?php if( $image['image_position'] == 1 ): ?> 
@@ -85,14 +87,17 @@ $this -> layout('master',[
 			<div class="product-text">
 				<?php if($_GET['page'] == 'product'): ?>
 					<div class="title-text">
-						<h1><?= $product['title'] ?></h1> 
+						<h1 class="prod-d-title"><?= $product['title'] ?></h1>  
+						<?php if($_SESSION['account_type'] == 'admin'): ?> 
+						<p>Supplier: <?= ucfirst($product['supplier']) ?></p>
+						<?php endif ?>
 						<p><?= $product['description'] ?></p>
 					</div>  
 				<?php endif ?>
 
 				<?php if($_GET['page'] == 'portfolio'): ?>
 					<div class="title-text">
-						<h1><?= $port['title'] ?></h1> 
+						<h1 class="prod-d-title"><?= $port['title'] ?></h1> 
 						<p><?= $port['description'] ?></p>
 					</div>  
 				<?php endif ?>

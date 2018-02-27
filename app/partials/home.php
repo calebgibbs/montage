@@ -13,7 +13,7 @@
 			<span><h2>Creating</h2></span> 
 			<span><h3>Agile spaces</h3></span> 
 			<span><p>Montage interiors beleive innovation is the</p></span> 
-			<span><p>key to a functional workspace.</p></span>
+			<span><p>key to a functional workspace.</p></span> 
 		</div>
 	</div> 
 	<div class="bottom">
@@ -33,23 +33,23 @@
 	</div> 
 </div>  
 <div class="mobileHome">
-	<div>
+	<div class="mobile-H-link" href="index.php?page=products">
 		<h3 class="mobileHtitle">Product</h3> 
 		<img src="img/home/product-mobile.png">
 	</div> 
-	<div>
+	<div class="mobile-H-link" href="index.php?page=portfolios">
 		<h3 class="mobileHtitle">Portfolio</h3> 
 		<img src="img/home/portfolio-mobile.png">
 	</div> 
-	<div>
+	<div class="mobile-H-link" href="index.php?page=sustainability">
 		<h3 class="mobileHtitle">Sustainability</h3>
 		<img src="img/home/sustainability-mobile.png">
 	</div> 
-	<div>
+	<div class="mobile-H-link" href="index.php?page=downloads">
 		<h3 class="mobileHtitle">Downloads</h3>
 		<img src="img/home/downloads-mobile.png">
 	</div> 
-	<div>
+	<div class="mobile-H-link" href="index.php?page=our_story">
 		<h3 class="mobileHtitle">Our Story</h3>
 		<img src="img/home/ourstory-mobile.png">
 	</div>

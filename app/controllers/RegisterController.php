@@ -62,9 +62,9 @@ class RegisterController extends PageController {
 		$this->dbc->query($sql);  
 
 		if($this->dbc->affected_rows) { 
-			header('Location: index.php?page=manage_accounts');
+			header('Location: index.php?page=settings');
 			}else { 
-				die('error');
+				header('Location: index.php?page=error404');
 			}   
 
 	}

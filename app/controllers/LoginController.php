@@ -17,7 +17,8 @@ class LoginController extends PageController {
 		//links to be changed 
 		if ($lastPage == 'http://localhost/~calebgibbs/montage/index.php?page=error404') {
 			$lastPage = 'http://localhost/~calebgibbs/montage/index.php';
-		}
+		} 
+
 
 		$email = $this->dbc->real_escape_string($_POST['email']); 
 		$password = $_POST['password'];
@@ -34,12 +35,19 @@ class LoginController extends PageController {
 				$_SESSION['account_type'] = $userData['account_type'];
 				$_SESSION['account_status'] = $userData['account_status']; 
 
+				if(isset($_POST['keepMeLoggedIn'])){
+					$id = $_SESSION['id'];
+					$key = uniqid(); 
+					setcookie("key", $key, time() + (86400 * 30), '/'); 
+					$sql = "UPDATE users SET browser_key = '$key' WHERE id = '$id'"; 
+					$this->dbc->query($sql);
+				}
 				
 				$cookie = isset($_COOKIE['favourites']) ? $_COOKIE['favourites'] : "";
 				$cookie = stripslashes($cookie);
 				$cookie = json_decode($cookie, true);
 				if (!$cookie) {
-					$cookie = array();
+					$cookie = array(); 
 				}
 
 				$userId = $_SESSION['id'];
@@ -78,5 +86,5 @@ class LoginController extends PageController {
 				}
 			}
 		}
-	} 
+	}  
 }

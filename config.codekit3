@@ -580,19 +580,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/css\/results.sass": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 2,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/results.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
 	"\/css\/rules.sass": {
 		"aP": 0,
 		"bl": 0,
@@ -4460,6 +4447,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/sustainability\/material-mobile.png": {
+		"ft": 32768,
+		"iS": 48192,
+		"oA": 0,
+		"oAP": "\/img\/sustainability\/material-mobile.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/sustainability\/material.png": {
 		"ft": 32768,
 		"iS": 110914,
@@ -4482,11 +4480,33 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/sustainability\/recycle-mobile.png": {
+		"ft": 32768,
+		"iS": 45717,
+		"oA": 0,
+		"oAP": "\/img\/sustainability\/recycle-mobile.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/sustainability\/recycle.png": {
 		"ft": 32768,
 		"iS": 115018,
 		"oA": 0,
 		"oAP": "\/img\/sustainability\/recycle.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/sustainability\/smart-mobile.png": {
+		"ft": 32768,
+		"iS": 49284,
+		"oA": 0,
+		"oAP": "\/img\/sustainability\/smart-mobile.png",
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,

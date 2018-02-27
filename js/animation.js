@@ -32,21 +32,36 @@ $(document).ready(function(){
     $('.homeLink').click(function(){
         window.location = $(this).attr('href');
         return false;
+    });  
+    $('.mobile-H-link').click(function(){
+        window.location = $(this).attr('href');
+        return false;
     }); 
+    $('.port-link').click(function(){
+        window.location = $(this).attr('href');
+        return false;
+    }); 
+    $('.mobile-prod-box').click(function(){
+        window.location = $(this).attr('href');
+        return false;
+    });  
     $('.openSearch').click(function(){
     	$('.search').toggleClass('showSearch-d-sm'); 
     }); 
     $('.closeModal').click(function(){
-    	$('.modal').removeClass('openModal'); 
-    	$('#sus-page').removeClass('bgModal');
+    	$('.modal').removeClass('openM'); 
+    	$('#sus-page').removeClass('bgM');
     });
-    $('#sus-page').click(function(){
-    	$('.modal').removeClass('openModal'); 
-    	$('#sus-page').removeClass('bgModal');
-    }); 
-    $('.material').click(function(){
-    	$('#material-modal').addClass('openModal'); 
-    	$('#sus-page').addClass('bgModal');  
-    	console.log('should work')
+    $('.material').on('click', function(){
+    	$('#material-modal').addClass('openM'); 
+    	$('#sus-page').addClass('bgM');  
+    });
+    $('.smart').on('click', function(){
+        $('#smart-modal').addClass('openM'); 
+        $('#sus-page').addClass('bgM');  
+    });
+    $('.recycle').on('click', function(){
+        $('#recycle-modal').addClass('openM'); 
+        $('#sus-page').addClass('bgM');  
     }); 
 })

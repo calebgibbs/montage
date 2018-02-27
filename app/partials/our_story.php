@@ -6,7 +6,7 @@ $this -> layout('master',[
 $_SESSION['page'] = $_SERVER['REQUEST_URI'];
 ?> 
 <div class="body story-page"> 
-	<div id="sus-page">
+	<div id="sus-page" class="sus-D-grid">
 		<div class="sustainability-grid">
 			<div class="tri1 top-img">
 				<img src="img/story/tri1.png">
@@ -37,6 +37,25 @@ $_SESSION['page'] = $_SERVER['REQUEST_URI'];
 			   furniture solutions
 			</p>
 		</div> 
+	</div> 
+	<div class="sus-M-grid">
+		<div class="sus-m-padding">
+			<h1>Our Story</h1>
+		</div>  
+		<div class="mobile-grid-sus">
+			<div>
+				<h3>Experience</h3> 
+				<img src="img/sustainability/material-mobile.png">
+			</div>
+			<div>
+				<h3>Journey Ahead</h3> 
+				<img src="img/sustainability/smart-mobile.png">
+			</div>
+			<div>
+				<h3>History</h3> 
+				<img src="img/sustainability/recycle-mobile.png">
+			</div>
+		</div>
 	</div>
 	<div id="modals"> 
 		<div id="material-modal" class="modal">

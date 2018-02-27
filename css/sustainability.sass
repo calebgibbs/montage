@@ -12,7 +12,12 @@
 	margin-left: 5rem 
 .bottom-img 
 	display: inline-block 
-	margin-left: 20rem
+	margin-left: 20rem 
+.sus-M-grid 
+	display: none 
+
+// #smart-modal 
+// 	margin-top: -2rem
 
 .tri1 
 	vertical-align: top 
@@ -103,10 +108,10 @@
 		color: #676767  
 		p 
 			width: 70%
-.openModal 
+.openM 
 	z-index: 9998 !important  
 	opacity: 1 !important 
-.bgModal 
+.bgM 
 	opacity: 0.5 
 	&:hover  
 		img 
@@ -132,7 +137,50 @@
 		margin-top: 0.3rem 
 	.sus-text   
 		margin-top: -25rem 
-		margin-left: 5rem	
+		margin-left: 5rem
+@include mobile 
+	.sus-D-grid 
+		display: none 
+	.sus-M-grid 
+		display: block 
+		margin-top: 2rem 
+		position: static 
+	.sustainability-page  
+		background: none 
+	.story-page  
+		background: none	
+	.sus-m-padding 
+		margin: 1rem 
+		// margin-top: 4rem !important 
+		h1 	
+			width: 95% 
+			padding: 6px  
+			font-weight: 100 
+			text-transform: uppercase  
+			color: #fff 
+			background: $grey  
+			text-align: center 
+			margin: 0 auto 
+			letter-spacing: 2px 
+	.mobile-grid-sus  
+		h3 
+			width: 90% 
+			color: #fff 
+			background: $turquoise 
+			margn: 0 auto 
+			text-align: center 
+			font-weight: lighter 
+			margin: 0 auto 
+			padding: 5px 
+			font-size: 1.3rem  
+		img 
+			width: 88% 
+			margin-left: 7% 
+			margin-top: 2% 
+	#modals 	
+		display: none
+
+
 
 
 

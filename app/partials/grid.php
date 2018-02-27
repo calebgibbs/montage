@@ -10,7 +10,7 @@ $this -> layout('master',[
 		<div id="boxes">	 
 			<?php if($_GET['page'] != 'portfolios'): ?>
 				<form method="post"> 
-				<?php endif ?>	
+			<?php endif ?>	
 				<?php if( $results == 'No results' ): ?>  
 					<?php if($class == 'search-title'): ?> 
 						<h3 class="noResults">No results for '<?= $title ?>'</h3>
@@ -24,7 +24,7 @@ $this -> layout('master',[
 						<?php if( $result['image_position'] == 1 ): ?>
 							<?php if($_GET['page'] == 'portfolios'): ?>	
 								<div class="box-outer port-link" href="index.php?page=portfolio&num=<?= $result['id'] ?>">
-							<?php endif ?>	
+								<?php endif ?>	
 								<?php if($_GET['page'] != 'portfolios'): ?>
 									<div class="box-outer"> 
 										<button class="a-f-b" name="addfav" value="<?= $result['id'] ?>">
@@ -53,7 +53,12 @@ $this -> layout('master',[
 											?>
 										</button>
 									<?php endif ?>
-									<div class="box-inner" >
+									<?php if($_GET['page'] != 'portfolios'): ?>
+									<div class="box-inner" href="index.php?page=product&productnum=<?= $result['id'] ?>">
+									<?php endif ?>	 
+									<?php if($_GET['page'] == 'portfolios'): ?>
+									<div class="box-inner-port">
+									<?php endif ?>
 										<div class="box-img">
 											<?php if($_GET['page'] != 'portfolios'): ?>
 												<img src="img/products/thumbnail/<?= $result['image'] ?>"> 

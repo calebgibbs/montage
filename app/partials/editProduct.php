@@ -31,6 +31,7 @@ foreach( $images as $image ){
 ?> 
 <div class="body">  
 	<div id="addp"> 
+		<h1><?= isset($_POST['title']) ? $_POST['title'] : $product['title'] ?></h1>
 		<form enctype="multipart/form-data" method="post" action="index.php?page=edit&product=<?= $_GET['product'] ?>" novalidate>
 			<div >
 				<input type="text" class="inputText" name="title" value="<?= isset($_POST['title']) ? $_POST['title'] : $product['title'] ?>" required />

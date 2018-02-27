@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 12, 2018 at 10:05 AM
+-- Generation Time: Feb 27, 2018 at 12:22 AM
 -- Server version: 5.7.17
 -- PHP Version: 7.1.7
 
@@ -37,9 +37,18 @@ CREATE TABLE `favourites` (
 --
 
 INSERT INTO `favourites` (`id`, `user_id`, `product_id`) VALUES
-(1, 1, 35),
-(4, 1, 14),
-(5, 2, 11);
+(4, 1, 5),
+(5, 1, 4),
+(10, 1, 2),
+(12, 1, 29),
+(23, 1, 42),
+(24, 1, 41),
+(25, 1, 11),
+(26, 1, 12),
+(27, 1, 3),
+(28, 1, 6),
+(29, 1, 10),
+(30, 1, 8);
 
 -- --------------------------------------------------------
 
@@ -144,7 +153,7 @@ CREATE TABLE `products` (
   `title` varchar(50) NOT NULL,
   `description` varchar(1000) NOT NULL,
   `category` enum('workstation','storage','tech_accesories','table','screen','agile_furniture','chair','joinery_custom','other') NOT NULL,
-  `supplier` enum('montage') DEFAULT NULL
+  `supplier` enum('buro','darwell','eden','europlan','harrows','issa','knights','konfurb','montage','motion','profile','titian','welwood','other') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -185,7 +194,8 @@ INSERT INTO `products` (`id`, `title`, `description`, `category`, `supplier`) VA
 (41, 'Metro II 24/7', 'Following on from the hugely successful Buro Metro Chair comes the new Buro Metro II 24/7, designed for Multi-Shift operations. Featuring the latest technologies in ergonomics and the sophistication of contemporary fine mesh & elastic knit seat upholstery.', 'chair', NULL),
 (42, 'Merto II HB', 'Following on from the hugely successful Buro Metro Chair is the new Buro Metro II High Back our newest member of the Metro II family. Featuring the latest technologies in ergonomics the Metro II HB includes a contoured & supportive high back with built in adjustable lumbar support for ultimate back comfort. Featuring the Metro II sophistication of a contemporary fine mesh & elastic knit seat upholstery.', 'chair', NULL),
 (43, 'Roma II', 'The Roma 2 lever chairâ€™s exceptionally comfortable seat and supportive back (available in both highback and midback options) more than\r\nmatch its modern good looks. Its many seat and back position adjustments enable the user the ultimate office seating experience.', 'chair', NULL),
-(44, 'Roma III', 'The Roma 3 lever chairâ€™s exceptionally comfortable seat and supportive back (available in both highback and midback options) more than match its modern good looks. Its many seat and back position adjustments enable the user the ultimate office seating experience. Supported by the following internationally recognised standards:\r\n-â€˜AFRDI Level 6 - Severe Commercial Certificationâ€™\r\n-Global GreenTag ', 'chair', NULL);
+(44, 'Roma III', 'The Roma 3 lever chairâ€™s exceptionally comfortable seat and supportive back (available in both highback and midback options) more than match its modern good looks. Its many seat and back position adjustments enable the user the ultimate office seating experience. Supported by the following internationally recognised standards:\r\n-â€˜AFRDI Level 6 - Severe Commercial Certificationâ€™\r\n-Global GreenTag ', 'chair', NULL),
+(48, 'New titleljkhkjh', 'hello this is the tiel', 'workstation', 'eden');
 
 -- --------------------------------------------------------
 
@@ -324,7 +334,8 @@ INSERT INTO `product_features` (`id`, `product_id`, `feature`, `position`) VALUE
 (144, 44, 'Independently adjustable back rest angle â€“ free floating or ', '4'),
 (145, 44, 'Polyurethane moulded foam', '5'),
 (146, 44, 'D1nylon base', '6'),
-(147, 44, '60mm twin wheel castors', '7');
+(147, 44, '60mm twin wheel castors', '7'),
+(158, 48, 'qwdff', '1');
 
 -- --------------------------------------------------------
 
@@ -459,7 +470,8 @@ INSERT INTO `product_images` (`id`, `product_id`, `image`, `image_position`) VAL
 (156, 43, '5a5efa463782b.jpg', '3'),
 (157, 44, '5a5efb442df74.jpg', '1'),
 (158, 44, '5a5efb444b837.jpg', '2'),
-(159, 44, '5a5efb445a4eb.jpg', '3');
+(159, 44, '5a5efb445a4eb.jpg', '3'),
+(160, 48, '5a8838516a34a.png', '1');
 
 -- --------------------------------------------------------
 
@@ -468,11 +480,19 @@ INSERT INTO `product_images` (`id`, `product_id`, `image`, `image_position`) VAL
 --
 
 CREATE TABLE `product_links` (
-  `id` int(11) DEFAULT NULL,
+  `id` int(11) NOT NULL,
   `product_id` int(200) NOT NULL,
   `href` varchar(200) NOT NULL,
-  `link_text` varchar(100) NOT NULL
+  `link_text` varchar(100) NOT NULL,
+  `position` enum('1','2','3','4','5') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `product_links`
+--
+
+INSERT INTO `product_links` (`id`, `product_id`, `href`, `link_text`, `position`) VALUES
+(1, 48, 'ssfgf', 'ssfgf', '1');
 
 -- --------------------------------------------------------
 
@@ -583,7 +603,8 @@ INSERT INTO `product_options` (`id`, `product_id`, `product_option`, `position`)
 (112, 44, 'Polished aluminium base', '4'),
 (113, 44, 'Soft PU castors', '5'),
 (114, 44, 'Small Seat 480W x 470Dmm', '6'),
-(115, 44, 'Customer specified fabric', '7');
+(115, 44, 'Customer specified fabric', '7'),
+(116, 48, 'sdgddvg', '1');
 
 -- --------------------------------------------------------
 
@@ -607,8 +628,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `first_name`, `email`, `company`, `password`, `account_type`, `account_status`, `email_list`) VALUES
-(1, 'Caleb Gibbs', 'calebgibbs@me.com', 'CG Development', '$2y$10$Y3nMFkAzMY7GSTNdDm6vMOcH4ZVC0PmI2DHulJO6ZmOcKGVXs18XS', 'admin', 'active', 'no'),
-(2, 'Bella Gibbs', 'bella@me.com', 'Dog & co', '$2y$10$5qIHFnz0kasg41LnSGBsqecZFGuRvOUDGsq4vQH.vDApNBNeVxr6W', 'user', 'active', 'yes');
+(1, 'Caleb Gibbs ', 'calebgibbs@me.com', 'CG Development', '$2y$10$58O5d7coczLkbhgGny6B/Ot3FczpVFYKg4PvjbA9sCIXWacnTAMR6', 'admin', 'active', 'yes'),
+(12, 'Matt McLaughlin', 'matt@montagenz.co.nz', 'Montage Interiors', '$2y$10$W8I.5abez98gcEZgmOBHo.4QLqNAM095HmfNU6wBT.z0AucN65aiG', 'admin', 'active', 'no'),
+(13, 'Nynke Louise', 'nynke@montagenz.co.nz', 'Montage Interiors', '$2y$10$iZ12O.9eGD0cgOpH4cuujupX0W1llcrh.qdgWClKggar/dD4s7tg2', 'admin', 'active', 'yes'),
+(14, 'Euan gray', 'euangray99@gmail.com', 'Montage Interiors', '$2y$10$9h7wlio91GIV3X7R38VkJ.2N.6tZeskTj/krJIHynN1m6ID7h4ZFG', 'admin', 'active', 'no');
 
 --
 -- Indexes for dumped tables
@@ -660,6 +683,7 @@ ALTER TABLE `product_images`
 -- Indexes for table `product_links`
 --
 ALTER TABLE `product_links`
+  ADD UNIQUE KEY `id` (`id`),
   ADD KEY `product_id` (`product_id`);
 
 --
@@ -683,7 +707,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `favourites`
 --
 ALTER TABLE `favourites`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT for table `portfolios`
 --
@@ -698,27 +722,32 @@ ALTER TABLE `portfolio_images`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 --
 -- AUTO_INCREMENT for table `product_features`
 --
 ALTER TABLE `product_features`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=157;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
 --
 -- AUTO_INCREMENT for table `product_images`
 --
 ALTER TABLE `product_images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=165;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=161;
+--
+-- AUTO_INCREMENT for table `product_links`
+--
+ALTER TABLE `product_links`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `product_options`
 --
 ALTER TABLE `product_options`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=121;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=117;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- Constraints for dumped tables
 --

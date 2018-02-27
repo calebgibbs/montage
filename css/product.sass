@@ -58,9 +58,11 @@
 #right-col 
 	width: 44%  
 	display: inline-block 
-	vertical-align: top  
+	vertical-align: top   
+	line-height: 160%
 	li 
-		width: 95%
+		width: 95%  
+
 
 
 .product-images 
@@ -106,7 +108,8 @@
 	padding: 0 
 	margin: 0 
 	li 
-		list-style: square inside url('data:image/gif;base64,R0lGODlhBQAKAIABAAAAAP///yH5BAEAAAEALAAAAAAFAAoAAAIIjI+ZwKwPUQEAOw==') 
+		list-style: square inside url('data:image/gif;base64,R0lGODlhBQAKAIABAAAAAP///yH5BAEAAAEALAAAAAAFAAoAAAIIjI+ZwKwPUQEAOw==')  
+
 
 
 .view-more  
@@ -118,34 +121,73 @@
 	display: inline-block   
 	float: right  
 	margin-top: -30px 
-	margin-right: 20px 
+	margin-right: 20px  
+
+.prod-m-title 
+	display: none
 
 @include mobile  	
+	.workstation 
+	 	background: none
+	.storage 
+	 	background: none 
+	.tech 
+	 	background: none
+	.table
+		background: none
+	.agile 
+		background: none	
+	.chair 
+	 	background: none 
+	.joinery 
+		background: none
 	#left-col 
-		width: 80% 
+		width: 90% 
 		display: block  
-		// margin: 0 auto 
-		margin-left: 7% 
-		margin-right: 14% 
+		margin: 0 auto 
+		text-align: center
+	#right-col 
+		width: 90% 
+		display: block  
+		margin: 0 auto
+		vertical-align: bottom 
+		margin-top: 3rem  
+	.prod-m-title 
+		display: block  
+		width: 100% 
+		margin-top: -2rem !important 
+		margin-bottom: 0.5rem 
+		padding-bottom: 1rem
+	.prod-d-title 
+		display: none
+
+	.large-img 
+		img 
+			width: 325px !important 
+
+
+	.product-images  
+		width: 680px 
+		margin-right: 0 
+		li 
+			img
+				display: none 
+
+@media screen and (max-width: 400px) 
+	#left-col 
+		width: 90% 
+		display: block  
+		margin: 0 auto 
+		text-align: left
 	#right-col 
 		width: 90% 
 		display: block  
 		margin: 0 auto
 		vertical-align: bottom 
 		margin-top: 3rem 
-
-	.large-img 
-		img 
-			width: 670px  
-			height: 300px 
-
-	.product-images  
-		width: 680px 
-		margin-right: 0 
-		li 
-			img 
-				width: 215px  
-				height: 115px 
+	.product-images
+		ol 
+			display: none
 
 @include desktop-sm  
 	.large-img   
@@ -167,6 +209,31 @@
 			font-size: 1.1rem  
 	.product-images 
 		ol 
-			margin-left: 4.3%
+			margin-left: 4.3% 
+
+@include tablet 
+	#left-col 
+		display: block 
+	#right-col 
+		display: block  
+		padding-left: 3rem 
+		width: 100% 
+		padding-top: 2rem 
+		p 
+			width: 80%
+	.workstation 
+	 	background: none
+	.storage 
+	 	background: none 
+	.tech 
+	 	background: none
+	.table
+		background: none
+	.agile 
+		background: none	
+	.chair 
+	 	background: none 
+	.joinery 
+		background: none
 
 

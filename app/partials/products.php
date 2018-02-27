@@ -6,7 +6,7 @@ $this -> layout('master',[
 $prevPage = $_SERVER['QUERY_STRING']; 
 ?>
 <div class="body">  
-	<div class="products-grid">
+	<div class="products-grid pro-grid-desktop">
 		<div class="productsP-title">
 			<h1 class="productsh1">Products</h1> 
 			<h3 class="productsh3">For truely adpatable spaces</h3>
@@ -38,6 +38,36 @@ $prevPage = $_SERVER['QUERY_STRING'];
 		<div class="tech-dia diamond" href="index.php?page=tech_accesories">
 			<img src="img/products/categories/tech.png" alt="Tech and accesories"> 
 			<img src="img/products/categories/techMask.png">
+		</div>
+	</div> 
+	<div class="pro-grid-mobile">
+		<div class="productsP-title">
+			<h1 class="productsh1">Products</h1> 
+			<h3 class="productsh3">For truely adpatable spaces</h3>
+		</div> 
+		<div class="mobile-prod-box" href="index.php?page=workstations_screens">
+			<h3>Workstations</h3>
+		</div> 
+		<div class="mobile-prod-box" href="index.php?page=workstations_screens">
+			<h3>Screens</h3>
+		</div>
+		<div class="mobile-prod-box" href="index.php?page=storage">
+			<h3>Storage</h3>
+		</div>
+		<div class="mobile-prod-box" href="index.php?page=agile_furniture">
+			<h3>Agile Furniture</h3>
+		</div>
+		<div class="mobile-prod-box" href="index.php?page=chairs">
+			<h3>Chairs</h3>
+		</div> 
+		<div class="mobile-prod-box" href="index.php?page=tech_accesories">
+			<h3>Tech &amp; Accesories</h3>
+		</div> 
+		<div class="mobile-prod-box" href="index.php?page=tables">
+			<h3>Tables</h3>
+		</div> 
+		<div class="mobile-prod-box" href="index.php?page=joinery_custom">
+			<h3>Joinery &amp; Custom</h3>
 		</div>
 	</div>
 </div>

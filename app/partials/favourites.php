@@ -19,7 +19,10 @@ require 'app/controllers/FavouritesController.php';
 						<input type="password" id="password" name="password" class="inputText" required> 
 						<span class="floating-label">Password</span>
 						<span class="input-message" id="password-message"></span>
-					</div> 
+					</div>  
+					<div>
+						<input type="checkbox" name="keepMeLoggedIn">Keep me logged in
+					</div>
 					<div>
 						<button id="log-in-button" name="login">Sign in</button>
 					</div>

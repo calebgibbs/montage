@@ -1,8 +1,13 @@
 <?php  
 date_default_timezone_set('Pacific/Auckland'); 
 
-session_start();
+session_start(); 
 
+if(!isset($_SESSION['id'])){ 	
+	if (isset($_COOKIE['key'])) {
+		require 'app/controllers/autologin.php';
+	}
+}
 require 'vendor/autoload.php';
 require 'app/controllers/PageController.php';   
 
@@ -87,12 +92,7 @@ switch($page){
 	case 'joinery_custom':
 	 	require 'app/controllers/JoineryAndCustomController.php'; 
 		$controller = new JoineryAndCustomController($dbc);
-	break;
-
-	case 'manage_accounts':
-		require 'app/controllers/ManageAccountsController.php'; 
-		$controller = new ManageAccountsController($dbc);	 
-	break;  
+	break; 
 
 	case 'manage_products':
 		require 'app/controllers/ManageProductsController.php'; 
@@ -132,7 +132,8 @@ switch($page){
 		unset($_SESSION['account_status']);
 		unset($_SESSION['account_type']); 
 		unset($_SESSION['favourites']); 
-		header('Location: index.php');
+		setcookie("key", '', time() - (86400 * 30), '/'); 
+		header('Location: index.php'); 
 	break;  
 
 	case 'change_password':

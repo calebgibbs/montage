@@ -22,7 +22,9 @@
 .diamond  
 	cursor: pointer 
 
-@include desktop 
+@include desktop  
+	.pro-grid-mobile 
+		display: none
 	.workstations-dia 
 		display: inline-block 
 		vertical-align: middle 
@@ -257,7 +259,44 @@
 				transform: scale(1.02) 
 				&:nth-of-type(2) 
 					opacity: 1 
+@include mobile 
+	.pro-grid-mobile 
+		display: block 
+		h1	
+			font-size: 2rem 
+			margin: 0  
+		h3 
+			font-size: 1.3rem 
+	.mobile-prod-box  
+		display: block
+		width: 100%
+		h3 
+			width: 90% 
+			color: #fff 
+			padding: 10px 
+			background: $turquoise 
+			text-align: center 
+			font-weight: lighter 
+			margin: 0 auto 
+			margin-bottom: 10px
+	.pro-grid-desktop
+		display: none 
 
+@include tablet   
+	.pro-grid-desktop
+		display: none 
+	.mobile-prod-box  
+		display: inline-block !important
+		width: 49%
+		h3 
+			width: 90% 
+			color: #fff 
+			padding: 10px 
+			background: $turquoise 
+			text-align: center 
+			font-weight: lighter 
+			margin: 0 auto 
+			margin-bottom: 10px
 
 
 

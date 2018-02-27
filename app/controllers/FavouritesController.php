@@ -15,7 +15,6 @@ if(isset($_SESSION['favourites'])){
 	$emailStatus = $result['email_list'];
 	//get favourites 
 	$fav = json_decode($_SESSION['favourites'], true);  
-	$fav = array_reverse($fav);
 	$fav = array_reverse($fav); 
 }else{ 
 	$cookie = isset($_COOKIE['favourites']) ? $_COOKIE['favourites'] : "";

@@ -34,7 +34,7 @@
 		li  
 			margin-bottom: 0.5rem 
 			color: #5f5f5f 
-			font-size: 1rem
+			font-size: 1.3rem
 			&:before  
 				content: '\2666 \0020' 
 				color: $turquoise 
@@ -47,8 +47,7 @@
 	width: 450px  
 	margin: 0 auto 
 	margin-top: 2rem
-	iframe 
-		// margin: 0 auto 
+	iframe  
 		width: 450px 
 		height: 400px 
 
@@ -60,15 +59,25 @@
 
 @include tablet
 	.page-outer  
-		width: 90% 
+		width: 90%
 		margin: 0 auto 
 	#contact-left 
 		display: block 
 	#contact-right 
 		display: block   
+
 @include mobile 
-	width: 100% 
 	#contact-left 
-		display: block 
-	#contact-right  
-		display: block
+		display: none 
+	#contact-right 
+		display: block !important 
+		float: left 
+		width: 90% 
+		iframe  
+			width: 350px 
+			height: 300px 
+	.showroom 
+		margin-bottom: 4rem 
+		display: block !important 
+		
+		
