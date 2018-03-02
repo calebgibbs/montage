@@ -13,7 +13,7 @@ require 'app/controllers/PageController.php';
 
 $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 
-require 'config.inc.php';  
+require_once 'config.inc.php';  
 $dbc = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);   
 
  

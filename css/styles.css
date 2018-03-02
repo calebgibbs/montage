@@ -17,6 +17,9 @@ body {
 .cf:after {
   clear: both; }
 
+.mobile-f-counter {
+  display: none; }
+
 nav {
   background: #424242;
   display: inline-block;
@@ -174,6 +177,10 @@ nav {
     margin-top: -4.5rem; } }
 
 @media screen and (max-width: 1333px) {
+  .mobile-f-counter {
+    display: inline-block; }
+  .circleCounter {
+    display: none; }
   .hide-sm {
     display: none; }
   .tabletSearch {
@@ -249,6 +256,10 @@ nav {
     margin-left: -51.9%; } }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
+  .mobile-f-counter {
+    display: inline-block; }
+  .circleCounter {
+    display: none; }
   nav {
     background: none; }
     nav img {
@@ -348,7 +359,9 @@ nav {
 
 @media screen and (min-width: 768px) and (max-width: 979px) {
   #site-nav {
-    display: none; } }
+    display: none; }
+  .mobile-f-counter {
+    display: inline-block; } }
 
 .nav-icon {
   height: 30px;
@@ -795,6 +808,12 @@ input[type=checkbox] {
   background: url(../img/home/background.png) no-repeat center right;
     background-background-size: 100%;
     background-padding-bottom: 3rem !important; }
+
+@media screen and (max-width: 1440px) {
+  .homebg {
+    background: url(../img/home/background-sm.png) no-repeat center right;
+      background-background-size: 100%;
+      background-padding-bottom: 3rem !important; } }
 
 .top {
   margin-top: 1rem; }

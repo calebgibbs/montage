@@ -1,5 +1,8 @@
 $image-padding: 1.21em
 
+.mobile-f-counter 
+	display: none
+
 nav	
 	background: $grey  
 	display: inline-block 
@@ -155,6 +158,10 @@ nav
 
 
 @include navigation-desktop-sm 
+	.mobile-f-counter 
+		display: inline-block 
+	.circleCounter 
+		display: none
 	.hide-sm  
 		display: none 
 	.tabletSearch 
@@ -246,6 +253,10 @@ nav
 
 
 @include mobile 
+	.mobile-f-counter 
+		display: inline-block 
+	.circleCounter 
+		display: none
 	nav 
 		background: none 
 		img 
@@ -311,7 +322,9 @@ nav
 		display: none 
 @include tablet 
 	#site-nav 
-		display: none
+		display: none 
+	.mobile-f-counter 
+		display: inline-block
 
 
 	

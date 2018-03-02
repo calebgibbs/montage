@@ -49,7 +49,7 @@ $favTotal = count($fav);
 			<li class="main-menu menu-item tabletBreak"></li> 	
 			<li class="main-menu menu-item hide-sm"><a href="index.php?page=downloads" class="main-menu">Downloads</a></li>
 			<li class="main-menu menu-item contact"><a href="index.php?page=contact" class="main-menu">Contact</a></li> 
-			<li class="main-menu menu-item favourites-nav"><a href="#" class="fav-tog">Favourites</a><span class="hide-sm"><div id="diamond-narrow"></div></span><?php if($favTotal != 0): ?><div class="circleCounter"><p><?= $favTotal ?></p></div><?php endif ?></li> 
+			<li class="main-menu menu-item favourites-nav"><a href="#" class="fav-tog">Favourites <span class="mobile-f-counter"><?php if($favTotal != 0): ?>(<?= $favTotal ?>)<?php endif ?></span></a><span class="hide-sm"><div id="diamond-narrow"></div></span><?php if($favTotal != 0): ?><div class="circleCounter"><p><?= $favTotal ?></p></div><?php endif ?></li>  
 			<li class="main-menu menu-item tabletSearch">
 				<button class="openSearch"><i class="fa fa-search search-btn" aria-hidden="true"></i></button> 
 			</li>

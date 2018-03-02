@@ -28,7 +28,7 @@ class SearchController extends PageController {
 		$search = $this->dbc->real_escape_string(trim($_GET['s'])); 
 		$this->data['title'] = ucfirst($search); 
 		$this->data['class'] = 'search-title';  
-		$sql = "SELECT p.id, p.title AS score_title, p.category AS score_category,
+		$sql = "SELECT p.id, p.supplier, p.title AS score_title, p.category AS score_category
 				i.product_id, i.image, i.image_position 
 				FROM products AS p 
 				JOIN product_images AS i 
@@ -36,9 +36,10 @@ class SearchController extends PageController {
 				WHERE 
 				p.title LIKE '%$search%' 
 				OR p.description LIKE '%$search%' 
-				OR p.category LIKE '%$search%' 
+				OR p.category LIKE '%$search%'  
 				AND i.image_position = 1
-				ORDER BY score_title ASC";   
+				ORDER BY score_title ASC";    
+		die($sql);
 		$result = $this->dbc->query($sql); 
 
 		if (!$result || $result->num_rows == 0) {

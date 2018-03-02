@@ -65,6 +65,13 @@
 		"oAP": "\/app\/controllers\/AgileFurnitureController.php",
 		"oF": 0
 		},
+	"\/app\/controllers\/autologin.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/autologin.php",
+		"oF": 0
+		},
 	"\/app\/controllers\/ChairsController.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -680,6 +687,17 @@
 		"iS": 2394,
 		"oA": 0,
 		"oAP": "\/img\/footer-globe.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/home\/background-sm.png": {
+		"ft": 32768,
+		"iS": 24823,
+		"oA": 0,
+		"oAP": "\/img\/home\/background-sm.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
