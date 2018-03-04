@@ -1,6 +1,6 @@
 <?php  
 
-require '../../config.inc.php';  
+require '../../../config.inc.php';  
 $dbc = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
 if(isset($_POST['email'])){ 

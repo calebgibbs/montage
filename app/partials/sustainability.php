@@ -1,7 +1,7 @@
 <?php 
 $this -> layout('master',[
-	'title'=>'Montage Interiors', 
-	'desc' => 'montage interiors description' 
+	'title'=>'Montage Interiors | Sustainability', 
+	'desc' => 'montage interiors description sustainability page' 
 ]);   
 $_SESSION['page'] = $_SERVER['REQUEST_URI'];
 ?> 

@@ -43,18 +43,44 @@ $this -> layout('master',[
 								<img id="dispayImg" src="img/portfolio/large/<?= $image['image'] ?>"> 
 							<?php endif ?>
 						<?php endforeach ?>
-					</div> 
+					</div>
 					<div class="slider-container">
-						<button class="next">Next</button> 
-						<button class="prev">Prev</button> 
+						<button class="prev slider-btn" alt="Previous"><</button> 
+						<button class="next slider-btn" alt="Next">></button> 
 						<div class="slider">
 							<div class="thumbs">
-								<?php $imgC = 1 ?> 
+								<?php $imgC = 0 ?>
 								<?php foreach($Allimages as $image ): ?> 
-								<div class="imgSlide_<?= $imgC ?>">
-									<img src="img/portfolio/thumbnail/<?= $image['image'] ?>" onClick="ChangeImage('img/portfolio/large/<?= $image['image'] ?>')">
-								</div> 
 								<?php $imgC++ ?>
+								<div class="imgSlide_<?= $imgC ?>">
+									<img <?php if($image['image_position'] == 1): ?> id="imgSize" <?php endif ?> src="img/portfolio/thumbnail/<?= $image['image'] ?>" onClick="ChangeImage('img/portfolio/large/<?= $image['image'] ?>')">
+								</div> 
+								<?php endforeach ?>
+							</div>	
+						</div>
+					</div>
+				</div> 
+			<?php endif ?>
+			<?php if($_GET['page'] == 'product'): ?>
+				<div class="product-images">
+					<div class="large-img">
+						<?php foreach( $Allimages as $image ): ?>
+							<?php if( $image['image_position'] == 1 ): ?> 
+								<img id="dispayImg" src="img/products/large/<?= $image['image'] ?>"> 
+							<?php endif ?>
+						<?php endforeach ?>
+					</div>
+					<div class="slider-container">
+						<button class="prev slider-btn" alt="Previous"><</button> 
+						<button class="next slider-btn" alt="Next">></button> 
+						<div class="slider">
+							<div class="thumbs">
+								<?php $imgC = 0 ?>
+								<?php foreach($Allimages as $image ): ?> 
+								<?php $imgC++ ?>
+								<div class="imgSlide_<?= $imgC ?>">
+									<img <?php if($image['image_position'] == 1): ?> id="imgSize" <?php endif ?> src="img/products/thumbnail/<?= $image['image'] ?>" onClick="ChangeImage('img/products/large/<?= $image['image'] ?>')">
+								</div> 
 								<?php endforeach ?>
 							</div>	
 						</div>
@@ -104,7 +130,21 @@ $this -> layout('master',[
 								<?php endfor ?>
 							<?php endforeach; ?>
 						</ul> 	
+					</div>  
+					<?php if($links != 'noLinks'): ?>
+					<div class="prod-options">
+						<h2>Suggested options</h2> 
+						<ul class="product-list">
+							<?php foreach( $links as $link): ?> 
+								<?php for( $i = 1; $i <= 5; $i++ ): ?> 
+									<?php if( $link['position'] == $i ): ?>  
+										<li><a class="prod-link" href="<?= $link['href'] ?>" target="_blank"><?= $link['link_text'] ?></a></li>
+									<?php endif ?>
+								<?php endfor ?>
+							<?php endforeach; ?>
+						</ul> 	
 					</div> 
+					<?php endif ?>
 				<?php endif ?>
 			</div>
 		</div>
@@ -118,11 +158,18 @@ $this -> layout('master',[
 </script> 
 <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
 <script type="text/javascript">
-$(function(){
-	var elemCount = <?= $imgC ?>; 
+$(function(){ 
+	var img = document.getElementById('imgSize');
+	var imgW = img.clientWidth; 
+	// console.log(imgW);
+	var elemCount = <?= $imgC - 2?>; 
 	var current = 1; 
-	var elemWidth = 250; 
+	var elemWidth = imgW + 11.200; 
 	var move = 0;  
+	if(<?= $imgC ?> <= 3){ 
+		$('.slider-btn').css('display','none');
+	}
+
 	$('.next').click(function(){
 		if( current < elemCount){ 
 			$('.slider .thumbs').toggleClass('move'); 

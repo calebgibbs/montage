@@ -1,6 +1,6 @@
 <?php 
 
-require '../config.inc.php';    
+require_once '../config.inc.php';    
 $dbc = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME); 
 if(isset($_SESSION['favourites'])){
 	//get eamil status

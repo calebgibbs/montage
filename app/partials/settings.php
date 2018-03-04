@@ -1,7 +1,7 @@
 <?php 
 $this -> layout('master',[
-	'title'=>'Montage Interiors', 
-	'desc' => 'website settings page' 
+	'title'=>'Montage Interiors | Settings', 
+	'desc' => 'website settings page settings' 
 ]);   
 ?> 
 <div class="body"> 

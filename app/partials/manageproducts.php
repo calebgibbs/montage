@@ -1,7 +1,7 @@
 <?php 
 $this -> layout('master',[
 	'title'=>'Montage Interiors | Products', 
-	'desc' => 'montage interiors website staff log in' 
+	'desc' => 'montage interiors Product range' 
 ]);  
 $prevPage = $_SERVER['REQUEST_URI']; 
 ?> 

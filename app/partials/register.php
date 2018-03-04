@@ -1,7 +1,7 @@
 <?php 
 	$this -> layout('master',[
 		'title'=>'Montage Interiors | Register', 
-		'desc' => 'montage interiors website staff log in' 
+		'desc' => 'montage interiors add an admin account' 
 	]);  
 	$prevPage = $_SERVER['QUERY_STRING'];
 ?>

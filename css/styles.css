@@ -1433,7 +1433,7 @@ input[type=checkbox] {
 .img-thumb {
   margin-top: 0.8rem; }
   .img-thumb img {
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5); }
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5); }
 
 .slider-container {
   width: 790px;
@@ -1444,14 +1444,15 @@ input[type=checkbox] {
   width: 780px;
   height: 180px;
   position: absolute;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-top: 0.8rem; }
 
 .slider .thumbs {
   position: relative;
-  width: calc(1250px + 2rem);
+  width: 1550px;
   height: 180px;
   counter-reset: subsection;
-  transition: transfrom 2s; }
+  transition: transform 0.7s; }
   .slider .thumbs div {
     width: 250px;
     height: 180px;
@@ -1460,13 +1461,28 @@ input[type=checkbox] {
     float: left;
     transition: all 2s; }
     .slider .thumbs div img {
-      box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5); }
+      width: 250px; }
+
+.slider-btn {
+  color: #000;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  outline: none;
+  cursor: pointer; }
+
+.prev {
+  margin-left: -3rem;
+  top: 30%;
+  position: absolute; }
+
+.next {
+  left: calc( 100% - 0.5rem);
+  position: absolute;
+  top: 30%; }
 
 .large-img img {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5); }
-
-.arrow-off {
-  display: none !important; }
 
 .prod-features {
   margin-top: 2rem; }
@@ -1493,6 +1509,9 @@ input[type=checkbox] {
 
 .prod-m-title {
   display: none; }
+
+.prod-link {
+  color: #242424; }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .workstation {
@@ -1555,8 +1574,40 @@ input[type=checkbox] {
   .large-img img {
     width: 700px;
     margin-left: 4.3%; }
-  .img-thumb img {
-    width: 225px; }
+  .slider-container {
+    width: 790px;
+    height: 180px;
+    position: absolute; }
+  .slider {
+    width: 710px;
+    height: 180px;
+    position: absolute;
+    overflow: hidden;
+    margin-top: 0.8rem;
+    margin-left: 4.3%; }
+  .slider .thumbs {
+    position: relative;
+    width: 1550px;
+    height: 180px;
+    counter-reset: subsection;
+    transition: transform 0.7s; }
+    .slider .thumbs div {
+      width: 226px;
+      height: 180px;
+      margin-right: 0.7rem;
+      position: relative;
+      float: left;
+      transition: all 2s; }
+      .slider .thumbs div img {
+        width: 226px; }
+  .prev {
+    margin-left: -0.3rem;
+    top: 30%;
+    position: absolute; }
+  .next {
+    left: calc( 100% - 3rem);
+    position: absolute;
+    top: 30%; }
   #page-padding h1 {
     font-size: 2.8rem;
     margin-left: -1.3rem; }

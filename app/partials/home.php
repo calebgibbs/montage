@@ -1,7 +1,7 @@
 <?php 
 	$this -> layout('master',[
 		'title'=>'Montage Interiors', 
-		'desc' => 'montage interiors description' 
+		'desc' => 'montage Interiors Home page' 
 	]);   
 ?> 
 <div class="body homebg desktopHome"> 

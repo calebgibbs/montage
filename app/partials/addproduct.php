@@ -1,9 +1,8 @@
 <?php 
 $this -> layout('master',[
-	'title'=>'Montage Interiors | Change Password', 
-	'desc' => 'montage interiors website staff log in' 
+	'title'=>'Montage Interiors | Add product', 
+	'desc' => 'montage interiors add product' 
 ]);  
-$prevPage = $_SERVER['REQUEST_URI']; 
 ?>
 <div class="body">  
 	<div id="addp"> 

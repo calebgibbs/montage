@@ -1,7 +1,7 @@
 <?php 
 $this -> layout('master',[
-	'title'=>'Montage Interiors | Change Password', 
-	'desc' => 'montage interiors website staff log in' 
+	'title'=>'Montage Interiors | Edit Product', 
+	'desc' => 'montage interiors edit product' 
 ]);  
 $fCount = 1;
 foreach ($features as $feat) {

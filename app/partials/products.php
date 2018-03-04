@@ -1,7 +1,7 @@
 <?php 
 $this -> layout('master',[
 	'title'=>'Montage Interiors | Products', 
-	'desc' => 'montage interiors products' 
+	'desc' => 'montage interiors product range' 
 ]);  
 $prevPage = $_SERVER['QUERY_STRING']; 
 ?>

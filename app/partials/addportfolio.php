@@ -1,9 +1,8 @@
 <?php 
 $this -> layout('master',[
 	'title'=>'Montage Interiors | Add Portfolio', 
-	'desc' => 'montage interiors website staff log in' 
+	'desc' => 'Montage Interiors add to portfolio' 
 ]);  
-$prevPage = $_SERVER['REQUEST_URI']; 
 ?>
 <div class="body">  
 	<div id="addp"> 

@@ -3,6 +3,10 @@ $this -> layout('master',[
 	'title'=>'Montage Interiors | '.$title, 
 	'desc' => 'This is the generic description'
 ]);   
+
+if($_GET['page'] == 'portfolios'){ 
+	$results = array_reverse($results);
+} 
 ?> 
 <div class="body">
 	<div id="grid-page-outer">
