@@ -22,13 +22,18 @@
 		<?= $this->section('content') ?>
 		<?= $this->insert('footer') ?> 
 	</div>
+	<?php if( $_GET['page'] != 'portfolio'): ?>
 	<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>  
+	<?php endif ?> 
 	<script type="text/javascript" src="js/menu.js"></script> 
 	<script type="text/javascript" src="js/animation.js"></script>
 	<script type="text/javascript" src="js/favourites.js"></script>  
 	<script type="text/javascript" src="js/signupValidation-min.js"></script>
 	<script type="text/javascript" src="js/loginValidation-min.js"></script>  
-	<script type="text/javascript" src="js/search.js"></script> 
+	<script type="text/javascript" src="js/search.js"></script>  
+	<?php if( $_GET['page'] == 'product' || $_GET['page'] == 'portfolio'): ?>
+	<script type="text/javascript" src="js/slider.js"></script>
+	<?php endif ?>  
 	<?php if(isset($_SESSION['id'])): ?> 
 	<script type="text/javascript" src="js/account.js"></script> 
 	<?php endif ?>

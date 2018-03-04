@@ -4741,6 +4741,16 @@
 		"sC": 0,
 		"tS": 0
 		},
+	"\/js\/slider.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/slider-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
 	"\/montage.sql": {
 		"cB": 0,
 		"ft": 8192,

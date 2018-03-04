@@ -77,17 +77,39 @@
 			padding-right: 0.4rem  
 			height: 150px 
 			vertical-align: top 
-			cursor: pointer 
-		button 
-			background: none 
-			border: none  
-			font-size: 3rem   
-			height: 100%  
+			cursor: pointer
 
 .img-thumb 
 	margin-top: 0.8rem 
 	img 
-		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5)
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5)   
+
+.slider-container 
+	width: 790px 
+	height: 180px 
+	position: absolute   
+
+.slider 
+	width: 780px 
+	height: 180px  
+	position: absolute  
+	overflow: hidden 
+
+.slider .thumbs  
+	position: relative 
+	width: calc(1250px + 2rem)
+	height: 180px 
+	counter-reset: subsection 
+	transition: transfrom 2s 
+	div 
+		width: 250px
+		height: 180px 
+		margin-right: 0.7rem
+		position: relative 
+		float: left 
+		transition: all 2s; 
+		img 
+			box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.5)
 
 .large-img
 	img 

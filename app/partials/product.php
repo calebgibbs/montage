@@ -35,52 +35,31 @@ $this -> layout('master',[
 	} ?>">
 	<div id="page-padding">
 		<div id="left-col">
-			<?php if($_GET['page'] == 'product'): ?>
-			<div class="product-images">
-				<h1 class="prod-m-title"><?= $product['title'] ?></h1> 
-				<div class="large-img">
-					<?php foreach( $Allimages as $image ): ?>
-						<?php if( $image['image_position'] == 1 ): ?> 
-							<img id="dispayImg" src="img/products/large/<?= $image['image'] ?>"> 
-						<?php endif ?>
-					<?php endforeach ?>
-				</div> 
-				<div class="img-thumb">
-					<ol> 
-						<?php foreach( $Allimages as $image): ?> 
-							<?php for( $i = 1; $i <= 3; $i++ ): ?> 
-								<?php if( $image['image_position'] == $i ): ?>  
-									<li><img class="img-thumb" src="img/products/thumbnail/<?= $image['image'] ?>" onClick="ChangeImage('img/products/large/<?= $image['image'] ?>')"></li>
-								<?php endif ?>
-								
-							<?php endfor ?>
-						<?php endforeach; ?>
-					</ol>
-				</div>
-			</div> 
-			<?php endif ?>
 			<?php if($_GET['page'] == 'portfolio'): ?>
-			<div class="product-images">
-				<div class="large-img">
-					<?php foreach( $Allimages as $image ): ?>
-						<?php if( $image['image_position'] == 1 ): ?> 
-							<img id="dispayImg" src="img/portfolio/large/<?= $image['image'] ?>"> 
-						<?php endif ?>
-					<?php endforeach ?>
+				<div class="product-images">
+					<div class="large-img">
+						<?php foreach( $Allimages as $image ): ?>
+							<?php if( $image['image_position'] == 1 ): ?> 
+								<img id="dispayImg" src="img/portfolio/large/<?= $image['image'] ?>"> 
+							<?php endif ?>
+						<?php endforeach ?>
+					</div> 
+					<div class="slider-container">
+						<button class="next">Next</button> 
+						<button class="prev">Prev</button> 
+						<div class="slider">
+							<div class="thumbs">
+								<?php $imgC = 1 ?> 
+								<?php foreach($Allimages as $image ): ?> 
+								<div class="imgSlide_<?= $imgC ?>">
+									<img src="img/portfolio/thumbnail/<?= $image['image'] ?>" onClick="ChangeImage('img/portfolio/large/<?= $image['image'] ?>')">
+								</div> 
+								<?php $imgC++ ?>
+								<?php endforeach ?>
+							</div>	
+						</div>
+					</div>
 				</div> 
-				<div class="img-thumb">
-					<ol> 
-						<?php foreach( $Allimages as $image): ?> 
-							<?php for( $i = 1; $i <= 3; $i++ ): ?> 
-								<?php if( $image['image_position'] == $i ): ?>  
-									<li><img class="img-thumb" src="img/portfolio/thumbnail/<?= $image['image'] ?>" onClick="ChangeImage('img/portfolio/large/<?= $image['image'] ?>')"></li>
-								<?php endif ?>
-								
-							<?php endfor ?>
-						<?php endforeach; ?>
-					</ol>
-				</div>
-			</div> 
 			<?php endif ?>
 		</div> 
 		<div id="right-col">
@@ -89,7 +68,7 @@ $this -> layout('master',[
 					<div class="title-text">
 						<h1 class="prod-d-title"><?= $product['title'] ?></h1>  
 						<?php if($_SESSION['account_type'] == 'admin'): ?> 
-						<p>Supplier: <?= ucfirst($product['supplier']) ?></p>
+							<p>Supplier: <?= ucfirst($product['supplier']) ?></p>
 						<?php endif ?>
 						<p><?= $product['description'] ?></p>
 					</div>  
@@ -136,4 +115,33 @@ $this -> layout('master',[
 	function ChangeImage(a) {
 		document.getElementById("dispayImg").src = a;
 	}	
+</script> 
+<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	var elemCount = <?= $imgC ?>; 
+	var current = 1; 
+	var elemWidth = 250; 
+	var move = 0;  
+	$('.next').click(function(){
+		if( current < elemCount){ 
+			$('.slider .thumbs').toggleClass('move'); 
+			move += elemWidth;  
+			$('.slider .thumbs').css('transform', 'translateX(-'+move+'px)'); 
+			current++;
+		}else{ 
+			move = 0; 
+			current = 1;  
+			$('.slider .thumbs').css('transform', 'translateX('+move+'px)');
+		}
+	}); 
+	$('.prev').click(function(){
+		if( current > 0){
+			$('.slider .thumbs').toggleClass('move'); 
+			move -= elemWidth; 
+			current--;  
+			$('.slider .thumbs').css('transform', 'translateX(-'+move+'px)');
+		}
+	});
+});
 </script>
