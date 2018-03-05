@@ -8,8 +8,10 @@
 
 @mixin desktop 
 	@media screen and(min-width: 960px)
-		@content  
-
+		@content   
+@mixin desktop-20 
+	@media screen and(max-width: 1680px)
+		@content
 @mixin desktop-sm 
 	@media screen and(max-width: 1440px) 
 		@content 

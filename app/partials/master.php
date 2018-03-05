@@ -9,7 +9,7 @@
 	<meta name="description" content="<?= $desc ?>"> 
 	<link rel="stylesheet" type="text/css" href="css/styles.css"> 
 	<link rel="icon" href="img/favicon.png" type="image/x-icon" />
-	<script src="https://use.fontawesome.com/228e8d7980.js"></script> 
+	<!-- <script src="https://use.fontawesome.com/228e8d7980.js"></script>  -->
 </head>
 <body> 
 	<?= $this->insert('favourites') ?>
