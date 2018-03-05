@@ -1361,7 +1361,8 @@ input[type=checkbox] {
   padding: 0;
   margin: 0;
   padding-top: 4rem;
-  padding-bottom: 2rem; }
+  padding-bottom: 2rem;
+  min-height: 65vh; }
 
 .workstation {
   background: url(../img/products/themes/workstation.png) no-repeat center right;
@@ -1517,6 +1518,9 @@ input[type=checkbox] {
 
 .prod-m-title {
   display: none; }
+
+.prod-d-title {
+  line-height: 110%; }
 
 .prod-link {
   color: #242424; }
@@ -1786,6 +1790,9 @@ input[type=checkbox] {
         opacity: 1; } }
 
 @media screen and (max-width: 1440px) {
+  .pro-grid-desktop {
+    background: url(../img/products/categories/bg-sm.png) no-repeat center right;
+      background-background-size: 100%; }
   .workstations-dia {
     display: inline-block;
     vertical-align: middle; }
@@ -2291,6 +2298,36 @@ textarea:focus ~ .floating-label, textarea:not(:focus):valid ~ .floating-label {
   transition: 0.3s; }
   .addButton:hover {
     background: #177c7e;
+    cursor: pointer; }
+
+.delButton {
+  width: 100%;
+  border-radius: 0;
+  background: rgba(217, 83, 79, 0.9);
+  padding: 10px;
+  color: #fff;
+  border: none;
+  font-size: 1.3rem;
+  margin-top: 2%;
+  transition: 0.3s;
+  focus: none; }
+  .delButton:hover {
+    background: #d9534f;
+    cursor: pointer; }
+
+.delButton2 {
+  width: 49.7%;
+  border-radius: 0;
+  background: rgba(217, 83, 79, 0.9);
+  padding: 10px;
+  color: #fff;
+  border: none;
+  font-size: 1.3rem;
+  margin-top: 2%;
+  transition: 0.3s;
+  display: none; }
+  .delButton2:hover {
+    background: #d9534f;
     cursor: pointer; }
 
 .inputError {

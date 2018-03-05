@@ -63,5 +63,13 @@ $(document).ready(function(){
     $('.recycle').on('click', function(){
         $('#recycle-modal').addClass('openM'); 
         $('#sus-page').addClass('bgM');  
+    });  
+    $(document).on('click','#delPrompt',function(e){
+        e.preventDefault(); 
+        $('.delButton2').css('display','inline-block');
     }); 
+     $(document).on('click','#noDel',function(e){
+        e.preventDefault(); 
+        $('.delButton2').css('display','none');
+    });
 })

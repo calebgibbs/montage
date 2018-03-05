@@ -1820,6 +1820,28 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/products\/categories\/bg-sm.png": {
+		"ft": 32768,
+		"iS": 30103,
+		"oA": 0,
+		"oAP": "\/img\/products\/categories\/bg-sm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/products\/categories\/bg.png": {
+		"ft": 32768,
+		"iS": 18360,
+		"oA": 0,
+		"oAP": "\/img\/products\/categories\/bg.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/products\/categories\/chairs.png": {
 		"ft": 32768,
 		"iS": 82176,

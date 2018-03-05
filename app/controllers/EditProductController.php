@@ -9,6 +9,9 @@ class EditProductController extends PageController {
 		$this->getData();  
 		if(isset($_POST['makeChanges'])){
 			$this->validate();
+		} 
+		if(isset($_POST['yesDel'])){
+			$this->deleteProduct();
 		}
 	}  
 	public function buildHTML(){ 
@@ -228,6 +231,9 @@ class EditProductController extends PageController {
 			}
 		}  
 		
+	} 
+	private function deleteProduct(){ 
+		die('deleting product');
 	}
 
  

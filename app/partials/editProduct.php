@@ -286,6 +286,11 @@ foreach( $images as $image ){
 			<div>
 				<button class="addButton" type="submit" name="makeChanges">Save Changes</button>
 			</div>
+			<div>
+				<button id="delPrompt" class="delButton" type="submit" name="delete1">Delete Product</button>
+				<button id="yesDel" class="delButton2" name="yesDel">Yes</button>
+				<button id="noDel" class="delButton2" name="noDel">No</button>
+			</div>
 		</form>
 	</div>
 </div> 
