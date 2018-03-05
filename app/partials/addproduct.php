@@ -228,6 +228,34 @@ $this -> layout('master',[
 						<input type="file" name="image<?= $i ?>" accept="image/*">
 					</div>
 				<?php endfor ?>
+			</div> 
+			<div id="form-downloads">
+				<div class="form-input">
+					<input type="text" class="inputText" name="download_title_1" value="<?= isset($_POST['download_title_1']) ? $_POST['download_title_1'] : '' ?>" required> 
+					<span class="floating-label">Download Title<?=  isset($DtitleMsg1) ? $DtitleMsg1 : '' ?></span>
+				</div>
+				<div class="form-input">
+					<input type="text" class="inputText" name="download_link_1" value="<?= isset($_POST['download_link_1']) ? $_POST['download_link_1'] : '' ?>" required> 
+					<span class="floating-label">Download Link<?=  isset($DlinkMsg1) ? $DlinkMsg1 : '' ?></span>
+				</div>	
+
+				<div class="form-input">
+					<input type="text" class="inputText" name="download_title_2" value="<?= isset($_POST['download_title_2']) ? $_POST['download_title_2'] : '' ?>" required> 
+					<span class="floating-label">Download Title<?=  isset($DtitleMsg2) ? $DtitleMsg2 : '' ?></span>
+				</div>
+				<div class="form-input">
+					<input type="text" class="inputText" name="download_link_2" value="<?= isset($_POST['download_link_2']) ? $_POST['download_link_2'] : '' ?>" required> 
+					<span class="floating-label">Download Link<?=  isset($DlinkMsg2) ? $DlinkMsg2 : '' ?></span>
+				</div>	 
+
+				<div class="form-input">
+					<input type="text" class="inputText" name="download_title_3" value="<?= isset($_POST['download_title_3']) ? $_POST['download_title_3'] : '' ?>" required> 
+					<span class="floating-label">Download Title<?=  isset($DtitleMsg3) ? $DtitleMsg3 : '' ?></span>
+				</div>
+				<div class="form-input">
+					<input type="text" class="inputText" name="download_link_3" value="<?= isset($_POST['download_link_3']) ? $_POST['download_link_3'] : '' ?>" required> 
+					<span class="floating-label">Download Link<?=  isset($DlinkMsg3) ? $DlinkMsg3 : '' ?></span>
+				</div>	
 			</div>
 			<div>
 				<button class="addButton" type="submit" name="addProduct">Add Product</button>

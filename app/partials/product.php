@@ -161,7 +161,6 @@ $this -> layout('master',[
 $(function(){ 
 	var img = document.getElementById('imgSize');
 	var imgW = img.clientWidth; 
-	// console.log(imgW);
 	var elemCount = <?= $imgC - 2?>; 
 	var current = 1; 
 	var elemWidth = imgW + 11.200; 

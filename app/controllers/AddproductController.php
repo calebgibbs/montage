@@ -53,7 +53,13 @@ class AddproductController extends PageController {
 		for($i=1;$i<=5;$i++){
 			$value = "image".$i; 
 			${'img'.$i} = $_FILES[$value]; 
-		}  
+		}   
+		for($i=1;$i<=3;$i++){ 
+			$TitleVal = 'download_title_'.$i; 
+			${'Dtitle'.$i} = trim($_POST[$TitleVal]); 
+			$LinkVal = 'download_link_'.$i; 
+			${'Dlink'.$i} = trim($_POST[$LinkVal]);  
+		}
 		$errors = 0; 
 
 		if (strlen($title) === 0) {
@@ -162,6 +168,33 @@ class AddproductController extends PageController {
 			}
 		} 
 
+		for($i=1;$i<=3;$i++){ 
+			$title = ${'Dtitle'.$i};   
+			$link = ${'Dlink'.$i}; 
+			$Tmsg = 'DtitleMsg'.$i;
+			$Lmsg = 'DlinkMsg'.$i; 
+			if(strlen($title) != 0){ 
+				if(strlen($link) === 0){ 
+					$errors++; 
+					$this->data[$Lmsg] = '<span style="color: #d9534f">*This feild is required</span>'; 		
+				}
+			}elseif(strlen($link) != 0){ 
+				if(strlen($title) === 0){ 
+					$errors++; 
+					$this->data[$Tmsg] = '<span style="color: #d9534f">*This feild is required</span>'; 
+				}
+			} 
+
+			if(strlen($title) > 50){ 
+				$errors++; 
+				$this->data[$Tmsg] = '<span style="color: #d9534f">*Title is too long</span>';
+			} 
+			if(strlen($link) > 200){ 
+				$errors++; 
+				$this->data[$Lmsg] = '<span style="color: #d9534f">*Link is too long</span>';
+			}
+		} 
+
 		if ($errors === 0) {
 			$this->ProcessProduct();
 		} 
@@ -188,6 +221,12 @@ class AddproductController extends PageController {
 		for($i=1;$i<=5;$i++){
 			$value = "opt_link_".$i; 
 			${'optL'.$i} = trim($_POST[$value]); 
+		} 
+		for($i=1;$i<=3;$i++){ 
+			$TitleVal = 'download_title_'.$i; 
+			${'Dtitle'.$i} = trim($_POST[$TitleVal]); 
+			$LinkVal = 'download_link_'.$i; 
+			${'Dlink'.$i} = trim($_POST[$LinkVal]);	
 		}
 		
 		$sql = "INSERT INTO products(title, description, category, supplier) 
@@ -248,7 +287,14 @@ class AddproductController extends PageController {
 						VALUES( '$prodId', '$fileName$fileExtension', '$i' )";  
 				$this->dbc->query($sql);
 			}
-		} 
+		}  
+		//insert downloads 
+		for($i=1;$i<=3;$i++){
+			$link = ${'Dlink'.$i};
+			$title = ${'Dtitle'.$i};
+			$sql = "INSERT INTO downloads(product_id, download_link, title) VALUES('$prodId','$link','$title')";
+			$this->dbc->query($sql);
+		}
 
 		if($this->dbc->affected_rows) { 
 			header('Location: index.php?page=product&productnum='.$prodId);	
