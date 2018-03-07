@@ -1,5 +1,7 @@
 <?php  
+use Intervention\Image\ImageManager; 
 class EditProductController extends PageController { 
+	private $acceptableImageTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/bmp', 'image/tiff'];
 	public function __construct($dbc){ 
 		parent::__construct(); 
 		$this->dbc = $dbc;  
@@ -40,17 +42,21 @@ class EditProductController extends PageController {
 		//get links 
 		$sql = "SELECT id, href, link_text FROM product_links WHERE product_id = '$id'"; 
 		$result = $this->dbc->query($sql); 
-		$this->data['links'] = $result->fetch_all(MYSQLI_ASSOC);  
+		$this->data['links'] = $result->fetch_all(MYSQLI_ASSOC);   
+		//get downloads  
+		$sql = "SELECT download_link, title FROM downloads WHERE product_id = '$id'"; 
+		$result = $this->dbc->query($sql); 
+		$this->data['downloads'] = $result->fetch_all(MYSQLI_ASSOC);
 		//get images  
 		$sql = "SELECT id, image, image_position FROM product_images WHERE product_id  = '$id'"; 
 		$result = $this->dbc->query($sql); 
 		$this->data['images'] = $result->fetch_all(MYSQLI_ASSOC); 
 		//get selects 
-		$sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'"; 
+		$sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage9_dtat' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'"; 
 		$result = $this->dbc->query($sql);  
 		if ($result) {
 			$result = $result->fetch_assoc(); 
-			$result = $result['SUBSTRING(COLUMN_TYPE,5)']; 
+			$result = $result['SUBSTRING(COLUMN_TYPE,5)'];  
 			$result = str_replace("(","",$result); 
 			$result = str_replace(")","",$result);
 			$result = str_replace("'","",$result); 
@@ -60,124 +66,82 @@ class EditProductController extends PageController {
 	}  
 
 	private function validate(){ 
-
-		$title = trim($_POST['title']); 
-		$category = strtolower($_POST['category']);
-		$supplier = strtolower($_POST['supplier']); 
-		$description = trim($_POST['desc']); 
-		for($i=1;$i<=10;$i++){
-			$value = "feat_".$i; 
-			${'feat'.$i} = trim($_POST[$value]); 
-		}  
-		for($i=1;$i<=10;$i++){
-			$value = "opt_".$i; 
-			${'opt'.$i} = trim($_POST[$value]); 
-		}  
-		for($i=1;$i<=5;$i++){
-			$value = "opt_text_".$i; 
-			${'optT'.$i} = trim($_POST[$value]); 
-		} 
-		for($i=1;$i<=5;$i++){
-			$value = "opt_link_".$i; 
-			${'optL'.$i} = trim($_POST[$value]); 
+		$errors = 0;  
+		//title  
+		$title = trim($_POST['title']);  
+		if(strlen($title) === 0){ 
+			$errors++; 
+			$this->data['titleMessage'] = '<span style="color: #d9534f">*This feild is required</span>';
+		}elseif(strlen($title) > 50){
+			$errors++; 
+			$this->data['titleMessage'] = '<span style="color: #d9534f">*Title mus be less then 50 characters</span>';
 		}
-		for($i=1;$i<=5;$i++){
-			$value = "image".$i; 
-			${'img'.$i} = $_FILES[$value]; 
-		}  
-		$errors = 0; 
-
-		if (strlen($title) === 0) {
+		//description  
+		$desc = trim($_POST['desc']);
+		if(strlen($desc) === 0){ 
 			$errors++; 
-			$this->data['titleMessage'] = '<span style="color: #d9534f">*This feild is required</span>'; 
-		}elseif(strlen($title) > 50){ 
+			$this->data['descMessage'] = '<span style="color: #d9534f">*This feild is required</span>';	
+		}elseif(strlen($desc) > 1000){ 
 			$errors++; 
-			$this->data['titleMessage'] = '<span style="color: #d9534f">*Title is too long</span>';	
+			$this->data['descMessage'] = '<span style="color: #d9534f">*Description must be less than 1000 characters</span>';
 		} 
-
-		if ($category == '0') {
-			$errors++;
-			$this->data['categoryError'] = 'style="background: #d9534f"';
-		} 
-
-		if ($supplier == '0') {
-			$errors++;
-			$this->data['supplierError'] = 'style="background: #d9534f"';
-		} 
-
-		if (strlen($description) === 0) {
+		//features  
+		if(strlen(trim($_POST['feat_1'])) === 0){ 
 			$errors++; 
-			$this->data['descMessage'] = '<span style="color: #d9534f">*This feild is required</span>';
-		}elseif(strlen($description) > 1000){ 
-			$errors++; 
-			$this->data['descMessage'] = '<span style="color: #d9534f">*Description is too long</span>';
+			$this->data['feat1Message'] = '<span style="color: #d9534f">*This feild is required</span>'; 
 		} 
-
-		if (strlen($feat1) === 0) {
-			$errors++; 
-			$this->data['feat1Message'] = '<span style="color: #d9534f">*This feild is required</span>';
-		}elseif(strlen($feat1) > 300){ 
-			$errors++; 
-			$this->data['feat1Message'] = '<span style="color: #d9534f">*Feature is too long</span>';
-		} 
-
-		for($i=2;$i<=10;$i++){ 
-			$message = "feat".$i."Message"; 
-			$feat = ${'feat'.$i};
-			if (strlen($feat) > 300) {
-				$errors++; 
-				$this->data[$message] = '<span style="color: #d9534f">*Feature is too long</span>';	
+		for($i=1;$i<=10;$i++){
+			$feat = 'feat_'.$i;  
+			$msg = 'feat'.$i.'Message';  
+			if(strlen(trim($_POST[$feat])) > 300){ 
+				$errors++;
+				$this->data[$msg] = '<span style="color: #d9534f">*Feature must be less than 300 characters</span>';
 			}
 		} 
-
-		if (strlen($opt1) === 0) {
-			$errors++; 
-			$this->data['opt1Message'] = '<span style="color: #d9534f">*This feild is too long</span>';	
-		}elseif(strlen($opt1) > 300){
-			$errors++; 
-			$this->data['opt1Message'] = '<span style="color: #d9534f">*Option is too long</span>';
+		//options  
+		if(strlen(trim($_POST['opt_1'])) === 0){ 
+			$errors++;  
+			$this->data['opt1Message'] = '<span style="color: #d9534f">*This feild is required</span>';
 		} 
-
-		for($i=2;$i<=10;$i++){ 
-			$message = "opt".$i."Message"; 
-			$opt = ${'opt'.$i}; 
-			if (strlen($opt) > 300) {
+		for($i=1;$i<=10;$i++){ 
+			$opt = 'opt_'.$i; 
+			$msg = 'opt'.$i.'Message'; 
+			if(strlen(trim($_POST[$opt])) > 300){ 
 				$errors++; 
-				$this->data[$message] = '<span style="color: #d9534f">*Option is too long</span>';
+				$this->data[$msg] = '<span style="color: #d9534f">*Option must be less than 300 characters</span>'; 
 			}
 		} 
-
-		for($i=1;$i<=5;$i++){
-			$text = ${'optT'.$i}; 
-			$link = ${'optL'.$i}; 
-			$linkM = "optLink".$i;
-			$textM = "optText".$i; 
-			if (strlen($text) != 0) { 
-				if (strlen($link) === 0) {
-					$errors++; 
-					$this->data[$linkM] = '<span style="color: #d9534f">*This feild is required</span>';
-				}
-			}elseif (strlen($link) != 0) {
-				if (strlen($text) === 0) {
-					$errors++;
-					$this->data[$textM] = '<span style="color: #d9534f">*This feild is required</span>';
-				}
-			} 
-			if (strlen($text) > 100) {
-				$errors++; 
-				$this->data[$textM] = '<span style="color: #d9534f">*Option text is too long</span>';
-			} 
-			if (strlen($link) > 200) {
-				$errors++; 
-				$this->data[$linkM] = '<span style="color: #d9534f">*Option link is too long</span>';
-			}
-		} 
-
+		//links  
 		for($i=1;$i<=5;$i++){ 
-			$img = "image".$i;
-			$img = "img".$i;
+			$text = 'opt_text_'.$i; 
+			$textMsg = 'optText'.$i;  
+			$link = 'opt_link_'.$i; 
+			$linkMsg = 'optLink'.$i; 
+			if(strlen(trim($_POST[$text])) != 0){ 
+				if(strlen(trim($_POST[$link])) === 0){ 
+					$errors++; 
+					$this->data[$linkMsg] = '<span style="color: #d9534f">*This feild is required</span>';
+				}
+			}elseif(strlen(trim($_POST[$link])) != 0){ 
+				if(strlen(trim($_POST[$text])) === 0){
+					$errors++; 
+					$this->data[$textMsg] = '<span style="color: #d9534f">*This feild is required</span>';
+				}
+			} 
+			if(strlen(trim($_POST[$text])) > 100) {
+				$errors++; 
+				$this->data[$textMsg] = '<span style="color: #d9534f">*Text is too long</span>';
+			} 
+			if(strlen(trim($_POST[$link])) > 200){ 
+				$errors++; 
+				$this->data[$linkMsg] = '<span style="color: #d9534f">*Link is too long</span>';
+			} 
+		} 
+		//images  
+		for($i=1;$i<=5;$i++){ 
+			$img = "image".$i;  
 			$msg = "imgMsg".$i;
-			if (in_array($_FILES[$img]['error'], [4])) {
+			if (!in_array($_FILES[$img]['error'], [4])) {
 				if (in_array($_FILES[$img]['error'], [1,3])) {
 					$errors++; 
 					$this->data[$msg] = '<span style="color: #d9534f">*Image failed to upload</span>';
@@ -187,54 +151,233 @@ class EditProductController extends PageController {
 				}
 			}
 		} 
-
-		if ($errors === 0) {
-			$this->update();
-		} 
-	} 
-
-	private function update(){ 
-		$title = trim($_POST['title']); 
-		$category = strtolower($_POST['category']);
-		$supplier = strtolower($_POST['supplier']); 
-		$description = trim($_POST['desc']); 
-		for($i=1;$i<=10;$i++){
-			$value = "feat_".$i; 
-			${'feat'.$i} = trim($_POST[$value]); 
-			$value = "opt_".$i; 
-			${'opt'.$i} = trim($_POST[$value]); 
-		}    
-		for($i=1;$i<=5;$i++){
-			$value = "opt_text_".$i; 
-			${'optT'.$i} = trim($_POST[$value]); 
-			$value = "opt_link_".$i; 
-			${'optL'.$i} = trim($_POST[$value]);
-			$value = "image".$i; 
-			${'img'.$i} = $_FILES[$value]; 
-		}   
-		$id = $_GET['product']; 
-		$sql = "UPDATE products SET title = '$title', category = '$category', supplier = '$supplier', 	description = '$description' WHERE id = '$id'";	 
-		$this->dbc->query($sql); 
-		//update option and features 
-		for($i=1;$i<=10;$i++){
-			if(${'feat'.$i} != ''){ 
-				$sql = "UPDATE product_features SET feature = '${'feat'.$i}', position = '$i' WHERE product_id = '$id'"; 
-				$this->dbc->query($sql);
+		//downloads  
+		for($i=1;$i<=3;$i++){ 
+			$title = 'download_title_'.$i;   
+			$link = 'download_link_'.$i;
+			$Tmsg = 'DtitleMsg'.$i;
+			$Lmsg = 'DlinkMsg'.$i; 
+			if(strlen(trim($_POST[$title])) != 0){ 
+				if(strlen(trim($_POST[$link])) === 0){ 
+					$errors++; 
+					$this->data[$Lmsg] = '<span style="color: #d9534f">*This feild is required</span>'; 		
+				}
+			}elseif(strlen(trim($_POST[$link])) != 0){ 
+				if(strlen(trim($_POST[$title])) === 0){ 
+					$errors++; 
+					$this->data[$Tmsg] = '<span style="color: #d9534f">*This feild is required</span>'; 
+				}
 			} 
-			if(${'opt'.$i} != ''){
-				$sql = "UPDATE product_options SET product_option = '${'opt'.$i}', position = '$i' WHERE product_id = 'id'";  
+
+			if(strlen(trim($_POST[$title])) > 50){ 
+				$errors++; 
+				$this->data[$Tmsg] = '<span style="color: #d9534f">*Title is too long</span>';
+			} 
+			if(strlen(trim($_POST[$link])) > 200){ 
+				$errors++; 
+				$this->data[$Lmsg] = '<span style="color: #d9534f">*Link is too long</span>';
 			}
 		} 
-		for($i=1;$i<=5;$i++){  
-			if (${'optT'.$i} != '') {
-				$sql  = "UPDATE";
-			}
-		}  
-		
+
+		if($errors === 0){ 
+			$this->update();
+		}
 	} 
+
+	private function update(){ 	
+		$id = $_GET['product']; 
+		//title, description, category, supplier  
+		$title = trim($_POST['title']);  
+		$desc = trim($_POST['desc']); 
+		$cat = strtolower($_POST['category']);
+		$sup = $_POST['supplier']; 
+		$sql = "UPDATE products SET title = '$title', description = '$desc', category = '$cat', supplier = '$sup' WHERE id = '$id'"; 
+		$this->dbc->query($sql);  
+		//features 
+		for($i=1;$i<=10;$i++){ 
+			$feat = 'feat_'.$i; $feat = trim($_POST[$feat]); 
+			$feat = $this->dbc->real_escape_string($feat); 
+			$sql = "SELECT feature FROM product_features WHERE position = '$i' AND product_id = '$id'"; 
+			$result = $this->dbc->query($sql); 
+			if (!$result || $result->num_rows == 0) {
+				if (strlen($feat) != 0) {
+					$sql = "INSERT INTO product_features(product_id, feature, position) VALUES('$id','$feat','$i')"; 
+					$this->dbc->query($sql);
+				} 
+			}else{ 
+				$result = $result->fetch_assoc(); $result = $result['feature'];  
+				if ($feat != $result) {
+					if (strlen($feat) === 0) {
+						$sql = "DELETE FROM product_features WHERE product_id = '$id' AND position = '$i'"; 
+						$this->dbc->query($sql);	
+					}else{ 
+						$sql = "UPDATE product_features SET feature = '$feat' WHERE position = '$i' AND product_id = '$id'"; 
+						$this->dbc->query($sql);
+					}
+				}
+			} 
+		} 
+		//options  
+		for($i=1;$i<=10;$i++){ 
+			$opt = 'opt_'.$i; 
+			$opt = $this->dbc->real_escape_string(trim($_POST[$opt])); 
+			$sql = "SELECT product_option FROM product_options WHERE position = '$i' AND product_id = '$id'"; 
+			$result = $this->dbc->query($sql); 
+			if(!result || $result->num_rows == 0){ 
+				if(strlen($opt) != 0){ 
+					$sql = "INSERT INTO product_options(product_id, product_option, position) VALUES('$id', '$opt', '$i')"; 
+					$this->dbc->query($sql);
+				}
+			}else{ 
+				$result = $result->fetch_assoc(); $result = $result['product_option'];  
+				if($opt != $result){ 
+					if (strlen($opt) === 0) {
+						$sql = "DELETE FROM product_options WHERE product_id = '$id' AND position = '$i'"; 
+						$this->dbc->query($sql); 
+					}else{ 
+						$sql = "UPDATE product_options SET product_option = '$opt' WHERE position = '$i' AND product_id = '$id'"; 
+						$this->dbc->query($sql);
+					}
+				}
+			}
+		} 
+		//more options 
+		for($i=1;$i<=5;$i++){ 
+			$text = 'opt_text_'.$i; $text = $this->dbc->real_escape_string(trim($_POST[$text])); 
+			$link = 'opt_link_'.$i; $link = $this->dbc->real_escape_string(trim($_POST[$link])); 
+			$sql = "SELECT href, link_text FROM product_links WHERE position = '$i' AND product_id = '$id'";  
+			$result = $this->dbc->query($sql); 
+			if(!$result || $result->num_rows == 0){ 
+				if (strlen($text) != 0 && strlen($link) != 0) {
+					$sql = "INSERT INTO product_links(product_id, href, link_text, position) VALUES('$id', '$link', '$text', '$i')"; 
+					$this->dbc->query($sql);
+				}
+			}else{ 
+				$result = $result->fetch_assoc(); 
+				$DBlink = $result['href']; 
+				$DBtext = $result['link_text']; 
+				if($text != $DBtext || $link != $DBlink){ 
+					if(strlen($text) === 0 && strlen($link) === 0){ 
+						$sql = "DELETE FROM product_links WHERE product_id = '$id' AND position = '$i'"; 
+						$this->dbc->query($sql); 
+					}else{ 
+						$sql = "UPDATE product_links SET href = '$link', link_text = '$text' WHERE position = '$i' AND product_id = '$id'"; 
+						$this->dbc->query($sql);
+					}
+				} 
+			}
+		} 
+		//downloads  
+		for($i=1;$i<=3;$i++){ 
+			$title = 'download_title_'.$i; $title = $this->dbc->real_escape_string(trim($_POST[$title])); 
+			$link = 'download_link_'.$i; $link =$this->dbc->real_escape_string(trim($_POST[$link])); 
+			$sql = "SELECT title, download_link FROM downloads WHERE product_id = '$id' AND position = '$i'"; 
+			$result = $this->dbc->query($sql); 
+			if(!$result || $result->num_rows == 0){ 
+				if(strlen($title) != 0 && strlen($link) != 0){ 
+					$sql = "INSERT INTO downloads(product_id, download_link, title, position) VALUES('$id','$link', '$title', '$i')"; 
+					$this->dbc->query($sql); 
+				}	
+			}else{ 
+				$result = $result->fetch_assoc(); 
+				$DBtitle = $result['title']; 
+				$DBlink = $result['download_link']; 
+				if($DBtitle != $title || $DBlink != link){ 
+					if(strlen($title) === 0 && strlen($link) === 0){
+						$sql = "DELETE FROM downloads WHERE product_id = '$id' AND position = '$i'"; 
+						$this->dbc->query($sql);
+					}else{ 
+						$sql = "UPDATE downloads SET title = '$title', download_link = '$link' WHERE product_id = '$id' AND position = '$i'"; 
+						$this->dbc->query($sql);
+					}
+				}
+			}  
+		} 
+		//images  
+		for($i=1;$i<=5;$i++){ 
+			$sql = "SELECT image FROM product_images WHERE product_id = '$id' AND image_position = '$i'"; 
+			$result = $this->dbc->query($sql); 
+			$del = 'delImg'.$i; $del = $_POST[$del];  
+			if(!$result || $result->num_rows == 0){ 
+				//uploading a new image 
+			}else{  
+				$result = $result->fetch_assoc();
+				$img = $result['image']; 
+				//replacing image  
+				$file = 'image'.$i; 
+				if(!in_array($_FILES[$file]['error'], [4])){ 
+					$current = $img;
+					unlink("img/products/large/$current"); 
+					unlink("img/products/thumbnail/$current");
+					$manager = new ImageManager();
+					$image = $manager->make( $_FILES[$file]['tmp_name'] );   
+					$fileExtension = $this->getFileExtension( $image->mime() ); 
+					$fileName = uniqid(); 
+					$image->resize(250, 150); 
+					$image->save("img/products/thumbnail/$fileName$fileExtension");  
+					$image->resize(770, 400); 
+					$image->save("img/products/large/$fileName$fileExtension"); 
+					$sql = "UPDATE product_images SET image = '$fileName$fileExtension' WHERE product_id = '$id' AND image_position = '$i'"; 
+					$this->dbc->query($sql);
+				}
+			}
+			if(isset($del)){  
+				unlink("img/products/large/$img"); 
+				unlink("img/products/thumbnail/$img"); 
+				$sql = "DELETE FROM product_images WHERE product_id = '$id' AND image_position = '$i'"; 
+				$this->dbc->query($sql);
+				$next = $i++; 
+				$sql = "SELECT image FROM product_images WHERE product_id = '$id' AND image_position = '$next'"; 
+				$result = $this->dbc->query($sql); 
+				if($result || $result->num_rows != 0){  
+					$sql = "UPDATE product_images SET image_position = '$i' WHERE product_id = '$id' AND image_position = '$next'"; 
+					$this->dbc->query($sql);
+				}
+			}
+		} 
+		header('Location: index.php?page=product&productnum='.$id);
+	} 
+
 	private function deleteProduct(){ 
-		die('deleting product');
+		$id = $_GET['product'];
+		//get and del images from files   
+		for($i=1;$i<=5;$i++){ 
+			$sql = "SELECT id, image FROM product_images WHERE product_id = '$id' AND image_position = '$i'"; 
+			$result = $this->dbc->query($sql); 
+			if($result->num_rows == 1){ 
+				$result = $result->fetch_assoc();
+				$imgId = $result['id']; 
+				$image = $result['image']; 
+				unlink("img/products/large/$image"); 
+				unlink("img/products/thumbnail/$image"); 
+				$sql = "DELETE FROM product_images WHERE id = '$imgId'"; 
+				$this->dbc->query($sql);
+			}
+		} 
+		$sql = "DELETE FROM products WHERE id = '$id'"; 
+		$this->dbc->query($sql); 
+		header('Location: index.php?page=manage_products'); 
+
+	} 
+	private function getFileExtension( $mimeType ) {
+		switch($mimeType) {
+			case 'image/png':
+			return '.png';
+			break;
+			case 'image/gif':
+			return '.gif';
+			break;
+			case 'image/jpeg':
+			return '.jpg';
+			break;
+			case 'image/bmp':
+			return '.bmp';
+			break;
+			case 'image/tiff':
+			return '.tif';
+			break;
+		}
 	}
 
- 
+
 }

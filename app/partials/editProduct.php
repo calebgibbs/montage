@@ -26,6 +26,12 @@ $iCount = 1;
 foreach( $images as $image ){
 	${'img'.$iCount} = $image['image']; 
 	$iCount++;
+} 
+$dCount = 1; 
+foreach($downloads as $download) {
+	${'Dlink'.$dCount} = $download['download_link']; 
+	${'Dtitle'.$dCount} = $download['title']; 
+	$dCount++;
 }
 
 ?> 
@@ -106,13 +112,13 @@ foreach( $images as $image ){
 			<div class="form-input">
 				<select name="supplier" <?=  isset($supplierError) ? $supplierError : '' ?>>
 					<?php if(isset($product['supplier'])): ?>
-					<option value="<?= $product['supplier'] ?>"><?= ucfirst($product['supplier']) ?></option>
+						<option value="<?= $product['supplier'] ?>"><?= ucfirst($product['supplier']) ?></option>
 					<?php endif ?>
 					<?php if(isset($_POST['supplier'])): ?>
-					<option value="<?= $_POST['supplier'] ?>"><?= ucfirst($_POST['supplier']) ?></option>
+						<option value="<?= $_POST['supplier'] ?>"><?= ucfirst($_POST['supplier']) ?></option>
 					<?php endif ?> 
 					<?php if(!isset($_POST['supplier'])): ?>
-					<option value="0">Select supplier</option> 
+						<option value="0">Select supplier</option> 
 					<?php endif ?>
 					<?php foreach($suppliers as $value): ?> 
 						<option value="<?= $value ?>"><?= ucfirst($value) ?></option>
@@ -121,7 +127,7 @@ foreach( $images as $image ){
 			</div>
 			<div class="form-textarea">
 				<textarea name="desc" required id="prod-desc-ta"><?= isset($_POST['desc']) ? $_POST['desc'] : $product['description'] ?></textarea> 
-				<span class="floating-label">Product description  <?=  isset($descMessage) ? $descMessage : $product[''] ?></span>
+				<span class="floating-label">Product description  <?=  isset($descMessage) ? $descMessage : '' ?></span>
 			</div> 
 			<div class="form-features">
 				<h2>Product Features</h2>
@@ -228,7 +234,7 @@ foreach( $images as $image ){
 				</div> 
 			</div> 
 			<div>
-				<h2>More options</h2> 
+				<h2>Suggested options</h2> 
 				<div class="form-input">
 					<input type="text" class="inputText" name="opt_text_1" value="<?= isset($_POST['opt_text_1']) ? $_POST['opt_text_1'] : $linkT1 ?>" required />
 					<span class="floating-label">Option 1 <?=  isset($optText1) ? $optText1 : '' ?></span>
@@ -270,19 +276,69 @@ foreach( $images as $image ){
 					<span class="floating-label">Option 5 link <?=  isset($optLink5) ? $optLink5 : '' ?></span>
 				</div>
 			</div>
-			
+	
+			<div id="form-downloads">
+				<div class="form-input">
+					<input type="text" class="inputText" name="download_title_1" value="<?= isset($_POST['download_title_1']) ? $_POST['download_title_1'] : $Dtitle1 ?>" required> 
+					<span class="floating-label">Download Title<?=  isset($DtitleMsg1) ? $DtitleMsg1 : '' ?></span>
+				</div>
+				<div class="form-input">
+					<input type="text" class="inputText" name="download_link_1" value="<?= isset($_POST['download_link_1']) ? $_POST['download_link_1'] : $Dlink1 ?>" required> 
+					<span class="floating-label">Download Link<?=  isset($DlinkMsg1) ? $DlinkMsg1 : '' ?></span>
+				</div>	
+
+				<div class="form-input">
+					<input type="text" class="inputText" name="download_title_2" value="<?= isset($_POST['download_title_2']) ? $_POST['download_title_2'] : $Dtitle2 ?>" required> 
+					<span class="floating-label">Download Title<?=  isset($DtitleMsg2) ? $DtitleMsg2 : '' ?></span>
+				</div>
+				<div class="form-input">
+					<input type="text" class="inputText" name="download_link_2" value="<?= isset($_POST['download_link_2']) ? $_POST['download_link_2'] : $Dlink2 ?>" required> 
+					<span class="floating-label">Download Link<?=  isset($DlinkMsg2) ? $DlinkMsg2 : '' ?></span>
+				</div>	 
+
+				<div class="form-input">
+					<input type="text" class="inputText" name="download_title_3" value="<?= isset($_POST['download_title_3']) ? $_POST['download_title_3'] : $Dtitle3 ?>" required> 
+					<span class="floating-label">Download Title<?=  isset($DtitleMsg3) ? $DtitleMsg3 : '' ?></span>
+				</div>
+				<div class="form-input">
+					<input type="text" class="inputText" name="download_link_3" value="<?= isset($_POST['download_link_3']) ? $_POST['download_link_3'] : $Dlink3 ?>" required> 
+					<span class="floating-label">Download Link<?=  isset($DlinkMsg3) ? $DlinkMsg3 : '' ?></span>
+				</div>	
+			</div> 
 			<div id="form-images">
 				<h2>Images</h2>
-				<?php for($i=1;$i<=5;$i++):?> 
-					<?php if(isset(${img.$i})): ?> 
-						<img src="img/products/thumbnail/<?= ${'img'.$i} ?>">
-					<?php endif ?> 
-					<div id="img<?= $i ?>" class="img-input">
-						<label>Image <?= $i ?> <?=  isset(${"imgMsg".$i}) ? ${"imgMsg".$i} : '' ?></label>
-						<input type="file" name="image<?= $i ?>" accept="image/*">
+				<?php for($i=1;$i<=5;$i++):?>
+					<div class="edit_img" id="img<?= $i ?>"> 
+						<?php if($i == 1 ): ?>
+							<label>Main Image <?=  isset(${"imgMsg".$i}) ? ${"imgMsg".$i} : '' ?></label> 
+						<?php endif ?>
+						<?php if($i != 1 ): ?>
+							<label>Image <?= $i ?> <?=  isset(${"imgMsg".$i}) ? ${"imgMsg".$i} : '' ?></label> 
+						<?php endif ?>
+						<?php if(isset(${img.$i})): ?> 
+							<img src="img/products/thumbnail/<?= ${'img'.$i} ?>"> 
+							<?php if($i != 1 ): ?>
+								<span class="img_del"><input type="checkbox" name="delImg<?= $i ?>" style="display: inline-block;"> Delete image <?= $i ?></span> 
+							<?php endif ?>
+						<?php endif ?>  
+						<?php if(!isset(${img.$i})): ?>  
+							<img src="img/products/thumbnail/no_img.png">
+							<span class="img_del" style="opacity: 0"><input type="checkbox" style="display: inline-block;"> img</span>
+						<?php endif ?>
+						<div class="fileUpload">
+							<label for="upload<?= $i ?>" class="fileUploadLabel">
+								<?php if(isset(${img.$i})): ?>  
+									Change Image
+								<?php endif ?> 
+								<?php if(!isset(${img.$i})): ?>  
+									Upload Image
+								<?php endif ?>
+							</label> 
+							<input class="FileUploadInput" id="upload<?= $i ?>" type="file" name="image<?= $i ?>" accept="image/*">
+						</div> 
 					</div>
 				<?php endfor ?>
-			</div>
+			</div> 
 			<div>
 				<button class="addButton" type="submit" name="makeChanges">Save Changes</button>
 			</div>

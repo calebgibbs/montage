@@ -421,8 +421,134 @@ textarea
 	border-radius: 5px  
 	margin-bottom: 30px 
 	&:hover 
-		background: #428bca  
+		background: #428bca   
 
+.edit_img  
+	width: 48% 
+	display: inline-block 
+	text-align: center 
+	border: 0.1rem solid rgba($light-grey, 0.5) 
+	margin-bottom: 10px 
+	padding: 10px 
+	transition: 0.2s  
+	vertical-align: bottom
+	&:first-of-type 
+		width: 98% 
+		display: block  
+		img 
+			height: 250px
+	img 
+		border: 1px dashed $light-grey  
+	input 
+		border-bottom: none !important  
+		margin: 0 !important 
+	label  
+		vertical-align: top 
+		display: block 
+		text-align: left 
+		font-size: 1.1rem 
+
+.img_del 	 
+	display: block	 
+	vertical-align: bottom 
+	text-align: right !important
+	margin-bottom: -2rem  
+	label 
+		text-align: right !important
+.FileUploadInput 
+	display: none !important 
+.fileUploadLabel
+	font-weight: 100 
+	border: 0.1rem solid rgba($light-grey, 0.5) 
+	padding: 10px  
+	width: 120px 
+	color: $light-grey  
+	text-align: center 
+	transition: 0.3s
+	&:hover  
+		cursor: pointer 
+		border: 0.1rem solid $light-grey 
+		color: $grey 
+	display: inline-block 
+
+@include desktop-sm 
+	.edit_img  
+		width: 47% 
+		display: inline-block 
+		text-align: center 
+		border: 0.1rem solid rgba($light-grey, 0.5) 
+		margin-bottom: 10px 
+		padding: 10px 
+		transition: 0.2s  
+		vertical-align: bottom
+		&:first-of-type 
+			width: 97% 
+			display: block  
+			img 
+				height: 250px
+		img 
+			border: 1px dashed $light-grey  
+			margin-bottom: 20px 
+		input 
+			border-bottom: none !important  
+			margin: 0 !important 
+		label  
+			vertical-align: top 
+			display: block 
+			text-align: left 
+			font-size: 1.1rem 
+
+.img_del 	 
+	display: block	 
+	vertical-align: bottom 
+	text-align: right !important
+	margin-bottom: -2rem  
+	label 
+		text-align: right !important
+.FileUploadInput 
+	display: none !important 
+.fileUploadLabel
+	font-weight: 100 
+	border: 0.1rem solid rgba($light-grey, 0.5) 
+	padding: 10px  
+	width: 120px 
+	color: $light-grey  
+	text-align: center 
+	transition: 0.3s
+	&:hover  
+		cursor: pointer 
+		border: 0.1rem solid $light-grey 
+		color: $grey 
+	display: inline-block 
+
+.add-img 
+	width: 47% 
+	display: inline-block   
+	border: 0.1rem solid rgba($light-grey, 0.5);  
+	margin-bottom: 1% 
+	padding: 10px
+	input 
+		margin: 0 !important 
+		border-bottom: none !important 
+	&:first-of-type 
+		display: block 
+		width: 97% 
+
+//help page  
+
+article 
+	width: 50% 
+	margin: 0 auto 
+	margin-bottom: 2rem 
+	h1	
+		font-size: 2rem 
+		font-weight: lighter 
+	h2 
+		font-size: 1.5rem 
+		font-weight: lighter 
+	p 
+		font-weight: 100 
+		font-size: 1.05rem 
   	
 
 

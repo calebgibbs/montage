@@ -17,11 +17,12 @@ class AddproductController extends PageController {
 	
 	private function getSelects(){ 
 		//get suppliers 
+		// $sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage9_dtat' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'";  
 		$sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'"; 
 		$result = $this->dbc->query($sql);  
 		if ($result) {
 			$result = $result->fetch_assoc(); 
-			$result = $result['SUBSTRING(COLUMN_TYPE,5)']; 
+			$result = $result['SUBSTRING(COLUMN_TYPE,5)'];  
 			$result = str_replace("(","",$result); 
 			$result = str_replace(")","",$result);
 			$result = str_replace("'","",$result); 
@@ -107,7 +108,7 @@ class AddproductController extends PageController {
 
 		if (strlen($opt1) === 0) {
 			$errors++; 
-			$this->data['opt1Message'] = '<span style="color: #d9534f">*This feild is too long</span>';	
+			$this->data['opt1Message'] = '<span style="color: #d9534f">*This feild is required</span>';	
 		}elseif(strlen($opt1) > 300){
 			$errors++; 
 			$this->data['opt1Message'] = '<span style="color: #d9534f">*Option is too long</span>';
@@ -154,10 +155,9 @@ class AddproductController extends PageController {
 		} 
 
 		for($i=1;$i<=5;$i++){ 
-			$img = "image".$i;
-			$img = "img".$i;
+			$img = "image".$i;  
 			$msg = "imgMsg".$i;
-			if (in_array($_FILES[$img]['error'], [4])) {
+			if (!in_array($_FILES[$img]['error'], [4])) {
 				if (in_array($_FILES[$img]['error'], [1,3])) {
 					$errors++; 
 					$this->data[$msg] = '<span style="color: #d9534f">*Image failed to upload</span>';
@@ -292,16 +292,14 @@ class AddproductController extends PageController {
 		for($i=1;$i<=3;$i++){
 			$link = ${'Dlink'.$i};
 			$title = ${'Dtitle'.$i};
-			$sql = "INSERT INTO downloads(product_id, download_link, title) VALUES('$prodId','$link','$title')";
-			$this->dbc->query($sql);
+			if(strlen($link) != 0 && strlen($title) != 0){ 
+				$sql = "INSERT INTO downloads(product_id, download_link, title, position) VALUES('$prodId','$link','$title', '$i')";
+				$this->dbc->query($sql);
+			}
 		}
 
 		if($this->dbc->affected_rows) { 
 			header('Location: index.php?page=product&productnum='.$prodId);	
-		}else { 
-			$this->data['failMessage'] = '<h2 style="color: #d9534f"><b>Something went wrong! <br />
-			<i>The product could not be processed at this time <br />
-			Please try again later</i></b></h2>'; 		
 		}
 	} 
 	private function getFileExtension( $mimeType ) {

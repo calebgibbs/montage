@@ -58,10 +58,10 @@ $this -> layout('master',[
 			<div class="form-input">
 				<select name="supplier" <?=  isset($supplierError) ? $supplierError : '' ?>>
 					<?php if(isset($_POST['supplier'])): ?>
-					<option value="<?= $_POST['supplier'] ?>"><?= ucfirst($_POST['supplier']) ?></option>
+						<option value="<?= $_POST['supplier'] ?>"><?= ucfirst($_POST['supplier']) ?></option>
 					<?php endif ?>
 					<?php if(!isset($_POST['supplier'])): ?>
-					<option value="0">Select supplier</option> 
+						<option value="0">Select supplier</option> 
 					<?php endif ?>
 					<?php foreach($suppliers as $value): ?> 
 						<option value="<?= $value ?>"><?= ucfirst($value) ?></option>
@@ -177,7 +177,7 @@ $this -> layout('master',[
 				</div> 
 			</div> 
 			<div>
-				<h2>More options</h2> 
+				<h2>Suggested options</h2> 
 				<div class="form-input">
 					<input type="text" class="inputText" name="opt_text_1" value="<?= isset($_POST['opt_text_1']) ? $_POST['opt_text_1'] : '' ?>" required />
 					<span class="floating-label">Option 1 <?=  isset($optText1) ? $optText1 : '' ?></span>
@@ -218,16 +218,6 @@ $this -> layout('master',[
 					<input type="text" class="inputText" name="opt_link_5" value="<?= isset($_POST['opt_link_5']) ? $_POST['opt_link_5'] : '' ?>" required />
 					<span class="floating-label">Option 5 link <?=  isset($optLink5) ? $optLink5 : '' ?></span>
 				</div>
-			</div>
-			
-			<div id="form-images">
-				<h2>Images</h2>
-				<?php for($i=1;$i<=5;$i++):?> 
-					<div id="img<?= $i ?>" class="img-input">
-						<label>Image <?= $i ?> <?=  isset(${"imgMsg".$i}) ? ${"imgMsg".$i} : '' ?></label>
-						<input type="file" name="image<?= $i ?>" accept="image/*">
-					</div>
-				<?php endfor ?>
 			</div> 
 			<div id="form-downloads">
 				<div class="form-input">
@@ -256,6 +246,20 @@ $this -> layout('master',[
 					<input type="text" class="inputText" name="download_link_3" value="<?= isset($_POST['download_link_3']) ? $_POST['download_link_3'] : '' ?>" required> 
 					<span class="floating-label">Download Link<?=  isset($DlinkMsg3) ? $DlinkMsg3 : '' ?></span>
 				</div>	
+			</div> 
+			<div id="form-images">
+				<h2>Images</h2>
+				<?php for($i=1;$i<=5;$i++):?> 
+					<div id="img<?= $i ?>" class="add-img">
+						<?php if($i != 1): ?>
+						<label>Image <?= $i ?> <?=  isset(${"imgMsg".$i}) ? ${"imgMsg".$i} : '' ?></label>
+						<?php endif ?> 
+						<?php if($i == 1): ?> 
+						<label>Main Image <?=  isset(${"imgMsg".$i}) ? ${"imgMsg".$i} : '' ?></label>
+						<?php endif?>
+						<input type="file" name="image<?= $i ?>" accept="image/*">
+					</div>
+				<?php endfor ?>
 			</div>
 			<div>
 				<button class="addButton" type="submit" name="addProduct">Add Product</button>
