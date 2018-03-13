@@ -9,7 +9,7 @@
 	<meta name="description" content="<?= $desc ?>"> 
 	<link rel="stylesheet" type="text/css" href="css/styles.css"> 
 	<link rel="icon" href="img/favicon.png" type="image/x-icon" />
-	<!-- <script src="https://use.fontawesome.com/228e8d7980.js"></script>  -->
+	<script src="https://use.fontawesome.com/228e8d7980.js"></script> 
 </head>
 <body> 
 	<?= $this->insert('favourites') ?>
@@ -30,6 +30,9 @@
 	<script type="text/javascript" src="js/search-min.js"></script> 
 	<?php if(isset($_SESSION['id'])): ?> 
 	<script type="text/javascript" src="js/account.js"></script> 
+	<?php endif ?> 
+	<?php if($_SESSION['account_type'] == 'admin'): ?> 
+	<script type="text/javascript" src="js/admin.js"></script> 
 	<?php endif ?>
 </body>
 </html> 

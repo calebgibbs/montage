@@ -279,10 +279,9 @@ class AddproductController extends PageController {
 				$image = $manager->make( $_FILES[$img]['tmp_name'] );   
 				$fileExtension = $this->getFileExtension( $image->mime() ); 
 				$fileName = uniqid(); 
+				$image->save("img/products/large/$fileName$fileExtension", 60);
 				$image->resize(250, 150); 
-				$image->save("img/products/thumbnail/$fileName$fileExtension");  
-				$image->resize(770, 400); 
-				$image->save("img/products/large/$fileName$fileExtension"); 
+				$image->save("img/products/thumbnail/$fileName$fileExtension", 60);   
 				$sql = "INSERT INTO product_images(product_id, image, image_position) 
 						VALUES( '$prodId', '$fileName$fileExtension', '$i' )";  
 				$this->dbc->query($sql);

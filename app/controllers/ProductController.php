@@ -36,14 +36,30 @@ class ProductController extends PageController {
 		$result = $this->dbc->query($sql);
 		$this->data['Allimages'] = $result->fetch_all(MYSQLI_ASSOC);
 
-		//get images 
+		//get links 
 		$sql = "SELECT href, link_text, position FROM product_links WHERE product_id = '$productId'"; 
 		$result = $this->dbc->query($sql); 
 		if(!$result || $result->num_rows == 0){ 
 			$this->data['links'] = 'noLinks';
 		}else{ 
 			$this->data['links'] = $result->fetch_all(MYSQLI_ASSOC);
-		} 
+		}  
+		//get dim
+		$sql = "SELECT dimension_type, dimension, position FROM product_dimensions WHERE product_id = '$productId'"; 
+		$result = $this->dbc->query($sql); 
+		if(!$result || $result->num_rows == 0){ 
+			$this->data['dim'] = 'noDim';
+		}else{ 
+			$this->data['dim'] = $result->fetch_all(MYSQLI_ASSOC);
+		}
+		//get downloads
+		$sql = "SELECT download_link, title, position FROM downloads WHERE product_id = '$productId'"; 
+		$result = $this->dbc->query($sql); 
+		if(!$result || $result->num_rows == 0){ 
+			$this->data['downloads'] = 'noDwn'; 
+		}else{ 
+			$this->data['downloads'] = $result->fetch_all(MYSQLI_ASSOC);	
+		}
 
 		
 	} 

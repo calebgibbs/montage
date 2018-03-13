@@ -12,7 +12,10 @@ nav
 		text-decoration: none  
 		padding: 1rem  
 		font-weight: lighter   
-
+		transition: 0.2s  
+		&:hover 
+			color: $light-grey 
+			cursor: pointer 
 	li  
 		list-style-type: none 
 		@include desktop 
@@ -28,7 +31,9 @@ nav
 		position: static
 	img 
 		margin-left: -1em 
-		padding: 0 
+		padding: 0  
+.colour 
+	color: $light-grey
 .mobileSearch 
 	display: none 
 .tabletSearch 
@@ -59,16 +64,19 @@ nav
 	top: 8rem   
 	margin-top: -1rem 
 	padding-bottom: 1rem    
-	overflow-x: hidden
 	padding: 0   
-	opacity: 0 
+	opacity: 0  
 	li 
 		display: block  
 		padding-top: 0.5rem 
 		padding-bottom: 0.5rem
 	a 
 		text-transform: uppercase 
-		font-weight: 100
+		font-weight: 100 
+
+//for ie  
+_:-ms-lang(x), #drop-down
+	margin-left: -6.5rem
 
 #diamond-narrow
   width: 0
@@ -78,8 +86,10 @@ nav
   position: relative
   top: -8px 
   display: inline-block !important 
-  left: -12px
+  left: -12px 
+  transition: 0.2s
   &:after
+    transition: 0.2s
     content: ''
     position: absolute
     left: -10px
@@ -87,7 +97,12 @@ nav
     width: 0
     height: 0
     border: 10px solid transparent
-    border-top: 12px solid #fff      
+    border-top: 12px solid #fff  
+
+.dia-colour 
+	border-bottom: 12px solid $light-grey !important 
+	&:after
+		border-top: 12px solid $light-grey !important     
  
 .pause-page 
 	position: fixed
@@ -128,7 +143,7 @@ nav
 	nav 
 		height: 7rem  
 		img 
-			height: 7rem  
+			height: 7rem 
 	.search   
 		position: absolute 
 		margin-top: -3rem 

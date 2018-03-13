@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#emailTest").keyup(function(){var s=$(this).val(),e={Testemail:s};$.ajax({type:"post",url:"app/ajax/AccountController.php",data:e,success:function(s){"success"===s?($(".regAdmin").css("display","none"),$(".updateUser").css("display","block")):($(".regAdmin").css("display","block"),$(".updateUser").css("display","none"))}})})});

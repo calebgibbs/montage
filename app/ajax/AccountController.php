@@ -121,6 +121,44 @@ if(isset($_POST['delId'])){
 		echo "success";
 	}else{ 
 		echo "fail";
-	} 
-	
+	} 	
+} 
+
+if(isset($_POST['Testemail'])){ 	
+	$email = $dbc->real_escape_string(trim($_POST['Testemail'])); 
+	$sql = "SELECT email, account_type FROM users WHERE email = '$email'"; 
+	$result = $dbc->query($sql); 
+	if ($result->num_rows == 1) {
+		$result = $result->fetch_assoc(); 
+		$priv = $result['account_type'];  
+		if ($priv === 'user') {
+			echo "success";
+		}
+	}
+} 
+
+if(isset($_POST['resEmail'])){ 
+	$email = $dbc->real_escape_string(trim($_POST['resEmail'])); 
+	$sql = "SELECT email FROM users WHERE email = '$email'"; 
+	$result = $dbc->query($sql); 
+	if($result->num_rows == 1){ 
+		echo 'success';
+	}
+} 
+if(isset($_POST['passwordReset'])){
+	//get email 
+	$email = $dbc->real_escape_string(trim($_POST['passwordReset'])); 
+	$key = uniqid();  
+	$key = $dbc->real_escape_string($key);
+	$sql = "UPDATE users SET browser_key  = '$key' WHERE email = '$email'"; 
+	$dbc->query($sql); 
+	$link = 'http://montagenz.com/index.php?page=reset&k='.$key; 
+	$message = 'To reset you password please click this link: '.$link;  
+	//send email 
+	$to = $email; 
+	$subject = "Montage Interiors password reset";   
+	$from = 'noreply@montagenz.com';
+	$headers = 'From: ' . $from ; 
+	mail($to, $subject, $message, $headers);  
+	echo 'sent';
 }

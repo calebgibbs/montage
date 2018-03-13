@@ -66,8 +66,7 @@ class EditProductController extends PageController {
 	}  
 
 	private function validate(){ 
-		$errors = 0;  
-		//title  
+		$errors = 0;    
 		$title = trim($_POST['title']);  
 		if(strlen($title) === 0){ 
 			$errors++; 

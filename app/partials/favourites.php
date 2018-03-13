@@ -28,6 +28,7 @@ require 'app/controllers/FavouritesController.php';
 					</div>
 				</form> 
 				<button class="link-btn" id="gtsu">Don't have an account? <i>Sign up</i></button>
+				<button class="link-btn" id="gtcp">Forget your password? </button>
 			</div>
 			<div id="signup-form">
 				<button class="link-btn back-btn">&#8592; Favourites</button>
@@ -65,6 +66,26 @@ require 'app/controllers/FavouritesController.php';
 					</div>
 				</form> 
 				<button class="link-btn" id="gtli" >Already have an account? <i>Sign in</i></button>
+			</div> 
+			<div id="passwordReset">
+				<button class="link-btn back-btn">&#8592; Favourites</button> 
+				<form>
+					<div class="reset-form">
+						<div>
+							<input type="email" name="emailReset" id="emailReset" required> 
+							<span class="floating-label">Your email</span>
+							<span class="input-message" id="reset-email-message"></span>
+						</div> 
+						<div>
+							<button id="change-p-btn" name="reset">Reset password</button>
+						</div>
+					</div>
+				</form>  
+				<button class="link-btn" id="gtsi">&#8592; Back</button> 
+				<div class="reset-success">
+					<span>Thank you</span> 
+					<span>A password reset link has been sent to your email.</span>
+				</div>
 			</div>
 		<?php endif ?>  
 		<?php if(isset($_SESSION['id'])): ?> 

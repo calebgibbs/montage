@@ -58,6 +58,13 @@
 		"oAP": "\/app\/controllers\/AddproductController.php",
 		"oF": 0
 		},
+	"\/app\/controllers\/AdminController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/AdminController.php",
+		"oF": 0
+		},
 	"\/app\/controllers\/AgileFurnitureController.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -198,11 +205,11 @@
 		"oAP": "\/app\/controllers\/ProductsController.php",
 		"oF": 0
 		},
-	"\/app\/controllers\/RegisterController.php": {
+	"\/app\/controllers\/ResetController.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/app\/controllers\/RegisterController.php",
+		"oAP": "\/app\/controllers\/ResetController.php",
 		"oF": 0
 		},
 	"\/app\/controllers\/ResultsController.php": {
@@ -392,6 +399,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/app\/partials\/register.php",
+		"oF": 0
+		},
+	"\/app\/partials\/reset.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/reset.php",
 		"oF": 0
 		},
 	"\/app\/partials\/settings.php": {
@@ -699,23 +713,12 @@
 		},
 	"\/img\/home\/background.png": {
 		"ft": 32768,
-		"iS": 21309,
+		"iS": 29657,
 		"oA": 0,
 		"oAP": "\/img\/home\/background.png",
 		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/home\/downloads-mobile.png": {
-		"ft": 32768,
-		"iS": 18789,
-		"oA": 0,
-		"oAP": "\/img\/home\/downloads-mobile.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
+		"oIPL": 0,
+		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
@@ -730,14 +733,47 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/home\/ourstory-mobile.png": {
+	"\/img\/home\/mobile-ourstory.png": {
 		"ft": 32768,
-		"iS": 47963,
+		"iS": 54552,
 		"oA": 0,
-		"oAP": "\/img\/home\/ourstory-mobile.png",
+		"oAP": "\/img\/home\/mobile-ourstory.png",
 		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/home\/mobile-portfolio.png": {
+		"ft": 32768,
+		"iS": 260919,
+		"oA": 0,
+		"oAP": "\/img\/home\/mobile-portfolio.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/home\/mobile-products.png": {
+		"ft": 32768,
+		"iS": 156537,
+		"oA": 0,
+		"oAP": "\/img\/home\/mobile-products.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/home\/mobile-sustainability.png": {
+		"ft": 32768,
+		"iS": 247371,
+		"oA": 0,
+		"oAP": "\/img\/home\/mobile-sustainability.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
@@ -746,17 +782,6 @@
 		"iS": 55637,
 		"oA": 0,
 		"oAP": "\/img\/home\/ourstory.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/home\/portfolio-mobile.png": {
-		"ft": 32768,
-		"iS": 47810,
-		"oA": 0,
-		"oAP": "\/img\/home\/portfolio-mobile.png",
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
@@ -774,36 +799,14 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/home\/product-mobile.png": {
-		"ft": 32768,
-		"iS": 13568,
-		"oA": 0,
-		"oAP": "\/img\/home\/product-mobile.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
 	"\/img\/home\/product.png": {
 		"ft": 32768,
-		"iS": 225458,
+		"iS": 326123,
 		"oA": 0,
 		"oAP": "\/img\/home\/product.png",
 		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/home\/sustainability-mobile.png": {
-		"ft": 32768,
-		"iS": 50869,
-		"oA": 0,
-		"oAP": "\/img\/home\/sustainability-mobile.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
+		"oIPL": 0,
+		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
@@ -831,31 +834,20 @@
 		},
 	"\/img\/logo.png": {
 		"ft": 32768,
-		"iS": 39345,
-		"oA": 0,
-		"oAP": "\/img\/logo.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/logo1.png": {
-		"ft": 32768,
 		"iS": 25690,
 		"oA": 0,
-		"oAP": "\/img\/logo1.png",
+		"oAP": "\/img\/logo.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/overlay.png": {
+	"\/img\/logo1.png": {
 		"ft": 32768,
-		"iS": 5862,
+		"iS": 19325,
 		"oA": 0,
-		"oAP": "\/img\/overlay.png",
+		"oAP": "\/img\/logo1.png",
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
@@ -3179,44 +3171,36 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/products\/large\/5aa05aeec5083.jpg": {
+	"\/img\/products\/large\/5aa0becf0a72f.jpg": {
 		"ft": 16384,
-		"iS": 25735,
+		"iS": 67248,
 		"oA": 0,
-		"oAP": "\/img\/products\/large\/5aa05aeec5083.jpg",
+		"oAP": "\/img\/products\/large\/5aa0becf0a72f.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/img\/products\/large\/5aa05aeed4e8f.jpg": {
-		"ft": 16384,
-		"iS": 17814,
+	"\/img\/products\/large\/5aa0c019ebacc.png": {
+		"ft": 32768,
+		"iS": 1422086,
 		"oA": 0,
-		"oAP": "\/img\/products\/large\/5aa05aeed4e8f.jpg",
+		"oAP": "\/img\/products\/large\/5aa0c019ebacc.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
-	"\/img\/products\/large\/5aa05aeee1e92.jpg": {
-		"ft": 16384,
-		"iS": 27884,
+	"\/img\/products\/large\/5aa0c01b8fa7e.png": {
+		"ft": 32768,
+		"iS": 1422086,
 		"oA": 0,
-		"oAP": "\/img\/products\/large\/5aa05aeee1e92.jpg",
+		"oAP": "\/img\/products\/large\/5aa0c01b8fa7e.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"q": 100
-		},
-	"\/img\/products\/large\/5aa05aef0589a.jpg": {
-		"ft": 16384,
-		"iS": 23431,
-		"oA": 0,
-		"oAP": "\/img\/products\/large\/5aa05aef0589a.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/products\/themes\/accesories.png": {
@@ -4490,44 +4474,36 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/products\/thumbnail\/5aa05aeec5083.jpg": {
+	"\/img\/products\/thumbnail\/5aa0becf0a72f.jpg": {
 		"ft": 16384,
-		"iS": 7290,
+		"iS": 67248,
 		"oA": 0,
-		"oAP": "\/img\/products\/thumbnail\/5aa05aeec5083.jpg",
+		"oAP": "\/img\/products\/thumbnail\/5aa0becf0a72f.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/img\/products\/thumbnail\/5aa05aeed4e8f.jpg": {
-		"ft": 16384,
-		"iS": 4075,
+	"\/img\/products\/thumbnail\/5aa0c019ebacc.png": {
+		"ft": 32768,
+		"iS": 1422086,
 		"oA": 0,
-		"oAP": "\/img\/products\/thumbnail\/5aa05aeed4e8f.jpg",
+		"oAP": "\/img\/products\/thumbnail\/5aa0c019ebacc.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
-	"\/img\/products\/thumbnail\/5aa05aeee1e92.jpg": {
-		"ft": 16384,
-		"iS": 7145,
+	"\/img\/products\/thumbnail\/5aa0c01b8fa7e.png": {
+		"ft": 32768,
+		"iS": 1422086,
 		"oA": 0,
-		"oAP": "\/img\/products\/thumbnail\/5aa05aeee1e92.jpg",
+		"oAP": "\/img\/products\/thumbnail\/5aa0c01b8fa7e.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"q": 100
-		},
-	"\/img\/products\/thumbnail\/5aa05aef0589a.jpg": {
-		"ft": 16384,
-		"iS": 5556,
-		"oA": 0,
-		"oAP": "\/img\/products\/thumbnail\/5aa05aef0589a.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/img\/products\/thumbnail\/no_img.png": {
@@ -4740,6 +4716,26 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/js\/account-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/js\/admin-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/admin-min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/js\/admin.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/admin-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0

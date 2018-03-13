@@ -55,6 +55,7 @@
 	width: 55%  
 	display: inline-block 
 	vertical-align: top 
+	min-height: 70vh !important
 
 #right-col 
 	width: 44%  
@@ -78,7 +79,24 @@
 			padding-right: 0.4rem  
 			height: 150px 
 			vertical-align: top 
-			cursor: pointer
+			cursor: pointer 
+
+.large-img 
+	img 
+		width: 770px 
+		height: 450px 
+	button 
+		position: relative !important 
+		margin-bottom: -2.5rem !important 
+		background: none 
+		border: none 
+		opacity: 0 
+		font-size: 2rem 
+		color: $light-grey 
+		transition: 0.2s 
+	&:hover 
+		button 
+			opacity: 1
 
 .img-thumb 
 	margin-top: 0.8rem 
@@ -95,7 +113,7 @@
 	height: 180px  
 	position: absolute  
 	overflow: hidden 
-	margin-top: 0.8rem
+	margin-top: 0.8rem 
 
 .slider .thumbs  
 	position: relative 
@@ -111,7 +129,8 @@
 		float: left 
 		transition: all 2s; 
 		img  
-			width: 250px 
+			width: 250px  
+			cursor: pointer
 .slider-btn 
 	color: #000 
 	background: none 
@@ -166,7 +185,17 @@
 	line-height: 110%
 
 .prod-link 
-	color: $body-text
+	color: $body-text 
+
+#under-img 
+	width: 770px 
+	margin: 0 auto 
+	position: relative 
+	margin-top: 200px 
+	div	
+		display: inline-block 
+		&:nth-of-type(2) 
+			float: right
 
 @include mobile  	
 	.workstation 
@@ -237,6 +266,7 @@
 		img  
 			width: 700px 
 			margin-left: 4.3% 
+			max-height: 400px 
 	.slider-container 
 		width: 790px 
 		height: 180px 

@@ -1,7 +1,15 @@
-<?php  
+<?php   
 date_default_timezone_set('Pacific/Auckland'); 
 
-session_start(); 
+session_start();  
+
+if(isset($_SESSION['id'])){ 
+	if ($_SESSION['id'] == 1) {
+		error_reporting(E_ALL);
+		ini_set('display_errors', TRUE);
+		ini_set('display_startup_errors', TRUE);
+	}
+}
 
 if(!isset($_SESSION['id'])){ 	
 	if (isset($_COOKIE['key'])) {
@@ -13,168 +21,174 @@ require 'app/controllers/PageController.php';
 
 $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 
-require_once 'config.inc.php';  
+require_once '../config.inc.php';  
 $dbc = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);   
 
- 
+
 
 switch($page){ 
 	case 'home':
-		require 'app/controllers/HomeController.php'; 
-		$controller = new HomeController($dbc);	 
+	require 'app/controllers/HomeController.php'; 
+	$controller = new HomeController($dbc);	 
 	break; 
 
 	case 'sustainability':
-		require 'app/controllers/SustainabilityController.php'; 
-		$controller = new SustainabilityController($dbc);	 
+	require 'app/controllers/SustainabilityController.php'; 
+	$controller = new SustainabilityController($dbc);	 
 	break; 
 
 	case 'our_story':
-		require 'app/controllers/OurStoryController.php'; 
-		$controller = new OurStoryController($dbc);	 
+	require 'app/controllers/OurStoryController.php'; 
+	$controller = new OurStoryController($dbc);	 
 	break;
 
 	case 'products':
-		require 'app/controllers/ProductsController.php'; 
-		$controller = new ProductsController($dbc);	 
+	require 'app/controllers/ProductsController.php'; 
+	$controller = new ProductsController($dbc);	 
 	break;  
 
 	case 'product':
-	 	require 'app/controllers/ProductController.php'; 
-		$controller = new ProductController($dbc);
+	require 'app/controllers/ProductController.php'; 
+	$controller = new ProductController($dbc);
 	break;  
 
 	case 'portfolio':
-	 	require 'app/controllers/PortfolioController.php'; 
-		$controller = new PortfolioController($dbc);
+	require 'app/controllers/PortfolioController.php'; 
+	$controller = new PortfolioController($dbc);
 	break;  
 
 	case 'portfolios':
-	 	require 'app/controllers/PortfoliosController.php'; 
-		$controller = new PortfoliosController($dbc);
+	require 'app/controllers/PortfoliosController.php'; 
+	$controller = new PortfoliosController($dbc);
 	break;  
 
 	case 'search':
-	 	require 'app/controllers/SearchController.php'; 
-		$controller = new SearchController($dbc);
+	require 'app/controllers/SearchController.php'; 
+	$controller = new SearchController($dbc);
 	break;
 
 	case 'workstations_screens':
-	 	require 'app/controllers/WorkstationsScreensController.php'; 
-		$controller = new WorkstationsScreensController($dbc);
+	require 'app/controllers/WorkstationsScreensController.php'; 
+	$controller = new WorkstationsScreensController($dbc);
 	break; 
 
 	case 'storage':
-	 	require 'app/controllers/StorageController.php'; 
-		$controller = new StorageController($dbc);
+	require 'app/controllers/StorageController.php'; 
+	$controller = new StorageController($dbc);
 	break;
 
 	case 'agile_furniture':
-	 	require 'app/controllers/AgileFurnitureController.php'; 
-		$controller = new AgileFurnitureController($dbc);
+	require 'app/controllers/AgileFurnitureController.php'; 
+	$controller = new AgileFurnitureController($dbc);
 	break; 
 
 	case 'chairs':
-	 	require 'app/controllers/ChairsController.php'; 
-		$controller = new ChairsController($dbc);
+	require 'app/controllers/ChairsController.php'; 
+	$controller = new ChairsController($dbc);
 	break;  
 
 	case 'tech_accesories':
-	 	require 'app/controllers/TechAndAccesoriesController.php'; 
-		$controller = new TechAndAccesoriesController($dbc);
+	require 'app/controllers/TechAndAccesoriesController.php'; 
+	$controller = new TechAndAccesoriesController($dbc);
 	break; 
 
 	case 'tables':
-	 	require 'app/controllers/TablesController.php'; 
-		$controller = new TablesController($dbc);
+	require 'app/controllers/TablesController.php'; 
+	$controller = new TablesController($dbc);
 	break; 
 
 	case 'joinery_custom':
-	 	require 'app/controllers/JoineryAndCustomController.php'; 
-		$controller = new JoineryAndCustomController($dbc);
+	require 'app/controllers/JoineryAndCustomController.php'; 
+	$controller = new JoineryAndCustomController($dbc);
 	break; 
 
 	case 'manage_products':
-		require 'app/controllers/ManageProductsController.php'; 
-		$controller = new ManageProductsController($dbc);	 
+	require 'app/controllers/ManageProductsController.php'; 
+	$controller = new ManageProductsController($dbc);	 
 	break;
 
 	case 'results':
-		require 'app/controllers/ResultsController.php'; 
-		$controller = new ResultsController($dbc);	 
+	require 'app/controllers/ResultsController.php'; 
+	$controller = new ResultsController($dbc);	 
 	break; 
 
 	case 'downloads':
-		require 'app/controllers/DownloadsController.php'; 
-		$controller = new DownloadsController($dbc);	 
+	require 'app/controllers/DownloadsController.php'; 
+	$controller = new DownloadsController($dbc);	 
 	break; 
 
 	case 'contact':
-		require 'app/controllers/ContactController.php'; 
-		$controller = new ContactController($dbc);	 
+	require 'app/controllers/ContactController.php'; 
+	$controller = new ContactController($dbc);	 
 	break;
 
 	case 'login':
-		require 'app/controllers/LoginController.php'; 
-		$controller = new LoginController($dbc);	 
+	require 'app/controllers/LoginController.php'; 
+	$controller = new LoginController($dbc);	 
 	break; 
 
 	case 'signup':
-		require 'app/controllers/SignupController.php'; 
-		$controller = new SignupController($dbc);	 
+	require 'app/controllers/SignupController.php'; 
+	$controller = new SignupController($dbc);	 
 	break; 
 
 	case 'logout':
-		unset($_SESSION['id']);
-		unset($_SESSION['first_name']);
-		unset($_SESSION['email']);
-		unset($_SESSION['company']);
-		unset($_SESSION['account_status']);
-		unset($_SESSION['account_type']); 
-		unset($_SESSION['favourites']); 
-		setcookie("key", '', time() - (86400 * 30), '/'); 
-		header('Location: index.php'); 
+	unset($_SESSION['id']);
+	unset($_SESSION['first_name']);
+	unset($_SESSION['email']);
+	unset($_SESSION['company']);
+	unset($_SESSION['account_status']);
+	unset($_SESSION['account_type']); 
+	unset($_SESSION['favourites']); 
+	setcookie("key", '', time() - (86400 * 30), '/'); 
+	header('Location: index.php'); 
 	break;  
 
 	case 'change_password':
-		require 'app/controllers/ChangepwdController.php'; 
-		$controller = new ChangepwdController($dbc);	 
+	require 'app/controllers/ChangepwdController.php'; 
+	$controller = new ChangepwdController($dbc);	 
 	break; 
 
 	case 'register':
-		require 'app/controllers/RegisterController.php'; 
-		$controller = new RegisterController($dbc);	 
+	require 'app/controllers/AdminController.php'; 
+	$controller = new AdminController($dbc);	 
 	break;
 
 	case 'add_product':
-		require 'app/controllers/AddproductController.php'; 
-		$controller = new AddproductController($dbc);	 
+	require 'app/controllers/AddproductController.php'; 
+	$controller = new AddproductController($dbc);	 
 	break;  
 
 	case 'add_portfolio':
-		require 'app/controllers/AddPortfolioController.php'; 
-		$controller = new AddPortfolioController($dbc);	 
+	require 'app/controllers/AddPortfolioController.php'; 
+	$controller = new AddPortfolioController($dbc);	 
 	break; 
 
 	case 'settings': 
-		require 'app/controllers/SettingsController.php'; 
-		$controller = new SettingsController($dbc); 
+	require 'app/controllers/SettingsController.php'; 
+	$controller = new SettingsController($dbc); 
 	break; 
 
+	case 'reset': 
+	require 'app/controllers/ResetController.php'; 
+	$controller = new ResetController($dbc); 
+	break;
+
 	case 'help':
-		require 'app/controllers/HelpController.php'; 
-		$controller = new HelpController($dbc);	 
+	require 'app/controllers/HelpController.php'; 
+	$controller = new HelpController($dbc);	 
 	break;
 
 	case 'edit':
-		require 'app/controllers/EditProductController.php'; 
-		$controller = new EditProductController($dbc);	 
+	require 'app/controllers/EditProductController.php'; 
+	$controller = new EditProductController($dbc);	 
 	break;
 
 	default:
-		require 'app/controllers/Error404Controller.php';
-		$controller = new Error404Controller();
+	require 'app/controllers/Error404Controller.php';
+	$controller = new Error404Controller();
 	break;
 } 
 $controller -> buildHTML();   
+
 

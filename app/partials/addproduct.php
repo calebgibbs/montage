@@ -219,7 +219,22 @@ $this -> layout('master',[
 					<span class="floating-label">Option 5 link <?=  isset($optLink5) ? $optLink5 : '' ?></span>
 				</div>
 			</div> 
+			<div>
+				<h2>Dimensions</h2> 
+				<?php for($i=1;$i<=3;$i++): ?> 
+				<?php $type = 'dt'.$i; $value = 'dv'.$i; ?>  
+				<div class="form-input">	
+					<input type="text" class="inputText" name="dt<?= $i ?>" value="<?= isset($_POST[$type]) ? $_POST[$type] : '' ?>" required /> 
+					<span class="floating-label">Dimension type</span>
+				</div> 
+				<div class="form-input">
+					<input type="text" class="inputText" name="dv<?= $i ?>" value="<?= isset($_POST[$value]) ? $_POST[$value] : '' ?>" required /> 
+					<span class="floating-label">Dimension value</span>
+				</div>
+				<?php endfor ?>
+			</div> 
 			<div id="form-downloads">
+				<h2>Downloads</h2>
 				<div class="form-input">
 					<input type="text" class="inputText" name="download_title_1" value="<?= isset($_POST['download_title_1']) ? $_POST['download_title_1'] : '' ?>" required> 
 					<span class="floating-label">Download Title<?=  isset($DtitleMsg1) ? $DtitleMsg1 : '' ?></span>

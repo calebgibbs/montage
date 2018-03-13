@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	var validEmail = false;  
 	var validPassword = false; 
-
+	var Pemail = false;  
 	$('#email').blur(function(){
 		var emailValue = $(this).val(); 
 
@@ -43,9 +43,7 @@ $(document).ready(function(){
 				}
 			}
 		});
-
 	}); 
-
 	$('#password').blur(function(){
 		var passwordValue = $(this).val();  
 		$("#password-message").empty();
@@ -100,30 +98,50 @@ $(document).ready(function(){
 				return false;
 			} 
 		});
-
-
-
-
-	});
+	}); 
+	$('#emailReset').keyup(function(){ 
+		var resEmail = $(this).val(); 
+		var dataForServer = { 
+			resEmail:resEmail
+		}  
+		$.ajax({
+			type:'post', 
+			url:'app/ajax/AccountController.php',
+			data: dataForServer, 
+			success:function(dataFromServer){
+				if(dataFromServer === 'success'){ 
+					return Pemail = true;	
+				}else{ 
+					return Pemail = false;
+				} 
+			}
+		});
+	}); 
+	$(document).on('click','#change-p-btn',function(e){
+		e.preventDefault();
+		if(Pemail === true){ 
+			$('#reset-email-message').empty(); 
+			var email = $('#emailReset').val(); 
+			var dataForServer = {
+				passwordReset:email
+			}
+			$.ajax({
+				type:'post', 
+				url:'app/ajax/AccountController.php',
+				data: dataForServer, 
+				success:function(dataFromServer){
+					if(dataFromServer == 'sent'){
+						$('#reset-email-message').empty(); 
+						$('.reset-form').addClass('is-sent');  
+						$('#change-p-btn').empty().append('sent'); 
+						$('.reset-success').addClass('reset-success-show');
+						return Pemail = false;
+					} 
+				}
+			});
+		}else{ 
+			$('#reset-email-message').empty(); 
+			$('#reset-email-message').addClass('error').append('This email address is not in our databse');
+		}
+	})
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

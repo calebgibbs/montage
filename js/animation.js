@@ -71,5 +71,12 @@ $(document).ready(function(){
      $(document).on('click','#noDel',function(e){
         e.preventDefault(); 
         $('.delButton2').css('display','none');
+    }); 
+    $('.tri').each(function(i){ 
+        setTimeout(function(){
+            $('.tri').eq(i).addClass('show');
+        }, 350 * i);
+        $('.dwnimg').removeClass('show');
     });
+    
 })

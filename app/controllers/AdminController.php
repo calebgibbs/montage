@@ -1,11 +1,14 @@
 <?php  
-class RegisterController extends PageController { 
+class AdminController extends PageController { 
 	public function __construct($dbc){ 
 		parent::__construct(); 
 		$this->dbc = $dbc; 
 		$this->privatePage();
 		if(isset($_POST['register'])){ 
 			$this->validateRegistration();
+		} 
+		if(isset($_POST['updateUser'])){ 
+			$this->updateUser();
 		}
 	}  
 	public function buildHTML(){ 
@@ -67,5 +70,11 @@ class RegisterController extends PageController {
 				header('Location: index.php?page=error404');
 			}   
 
+	} 
+	private function updateUser(){ 
+		$email = $this->dbc->real_escape_string(trim($_POST['email'])); 
+		$sql = "UPDATE users SET account_type = 'admin' WHERE email = '$email'"; 
+		$this->dbc->query($sql); 
+		header('Location: index.php?page=settings');
 	}
 }

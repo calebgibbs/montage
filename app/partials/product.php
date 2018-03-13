@@ -9,7 +9,8 @@ if($_GET['page'] == 'product'){
 $this -> layout('master',[
 	'title'=>'Montage Interiors | '.$title, 
 	'desc' => $description 
-]);   
+]); 
+
 ?>
 <div class="body"> 
 	<?php if($_SESSION['account_type'] == 'admin'): ?>
@@ -64,6 +65,9 @@ $this -> layout('master',[
 			<?php if($_GET['page'] == 'product'): ?>
 				<div class="product-images">
 					<div class="large-img">
+						<form method="post">
+							<button class="a-f-b" name="addfav" value="<?= $_GET['productnum'] ?>">Favourite</button>
+						</form>
 						<?php foreach( $Allimages as $image ): ?>
 							<?php if( $image['image_position'] == 1 ): ?> 
 								<img id="dispayImg" src="img/products/large/<?= $image['image'] ?>"> 
@@ -85,6 +89,18 @@ $this -> layout('master',[
 							</div>	
 						</div>
 					</div>
+				</div> 
+				<div id="under-img">
+					<?php if( $dim != 'noDim' ): ?>
+					<div class="page-dimensions">
+						<h2>Dimensions</h2>
+					</div> 
+					<?php endif ?>
+					<?php if( $downloads != 'noDwn' ): ?>
+					<div class="page-downloads">
+						<h2>Downloads</h2>
+					</div>
+					<?php endif ?>
 				</div> 
 			<?php endif ?>
 		</div> 

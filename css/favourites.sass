@@ -1,3 +1,23 @@
+.reset-form.is-sent  
+	animation: launch 1.5s ease-in-out  
+	opacity:  0  
+.reset-form 
+	background: #fff  
+	position: static
+.reset-success 
+	text-align: center  
+	margin-top: -9rem 
+	position: relative 
+	display: none
+	span
+		font-size: 1.5rem  
+		color: $light-grey 
+		display: block  	
+		&:nth-of-type(2) 
+			font-size: 1rem 
+			margin-top: 10px 
+.reset-success-show  
+	display: block !important
 #favourites  
 	min-height: 100vh 
 	max-height: 100vh 
@@ -51,7 +71,7 @@
 	font-size: 1.8rem 
 	font-style: italic 
 	color: $light-grey 
-	margin-top: 3rem
+	margin-top: 3rem 
 .fav-title 
 	background: #a1a1a1 
 	color: #fff 
@@ -110,7 +130,7 @@
 		input 
 			width: 80%  
 			margin-left: 10%
-			margin-top: 10%   
+			margin-top: 1.5rem   
 			font-size: 1.3rem 
 			padding: 7px  
 			outline: none 
@@ -169,7 +189,10 @@
 		 	transition: 0.2s 
 		 	cursor: pointer 
 		 	&:hover 
-		 		background: $turquoise  
+		 		background: $turquoise   
+#passwordReset 
+	display: none  
+
 #account-form 
 	display: none 
 	form
@@ -279,7 +302,7 @@ input[type=checkbox]
 	margin: 0 auto 
 	margin-top: 20px  
 	max-height: 78vh  
-	overflow: scroll 
+	overflow-y: auto   
 
 .fav-prod 
 	border: 1px solid $light-grey
@@ -319,7 +342,22 @@ input[type=checkbox]
 	background: none 
 	font-size: 1rem 
 	opacity: 0 
-	transition: 0.2s
+	transition: 0.2s  
+
+#passwordReset 
+	form 
+		button  
+			width: 82.3% 
+			font-size: 1.3rem 
+			color: #fff  
+			background: rgba($turquoise, 0.9) 
+			padding: 10px 
+			margin-left: 10%   
+			transition: 0.3s 
+			margin-top: 1rem 
+			margin-bottom: 0.5rem
+			&:hover  
+				background: $turquoise
 
 @include desktop-sm  
 	#favourites  

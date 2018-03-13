@@ -35,7 +35,9 @@
 		font-weight: 100   
 
 .mobileHome 
-	display: none 
+	display: none  
+	img 
+		transition: all 0.4s 
 
 .portfolio  
 	display: inline-block   
@@ -78,13 +80,20 @@
 .dwnimg 
 	margin-left: -22.5rem  
 	z-index: 300000
-	position: relative
+	position: relative 
+
+.tri  
+	opacity: 0
 
 .homeLink 
-	transition: 0.2s 
+	transition: 0.3s
 	&:hover  
 		cursor: pointer
 		transform: scale(1.02) 
+
+.show 
+	-webkit-animation: imageload 900ms ease-in forwards
+	animation: imageload 900ms ease-in forwards
 
 @include mobile  
 	.desktopHome  

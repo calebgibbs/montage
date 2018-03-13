@@ -43,6 +43,6 @@ $this -> layout('master',[
 					<td class="prod-table"><?= $email['email'] ?></td>
 				</tr>  
 			<?php endforeach ?> 
-		</table> 
+		</table>  
 	</div> 
 </div> 
