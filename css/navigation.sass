@@ -167,9 +167,15 @@ _:-ms-lang(x), #drop-down
 			margin-left: -2.1rem  
 			cursor: pointer 
 			color: #fff  
+	//for firefox 
+	@-moz-document url-prefix()
+  		.search 
+   			margin-top: -4.5rem
+   			
 	@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) //for chrome and opera 
    		.search 
-   			margin-top: -4.5rem
+   			margin-top: -4.5rem 
+
 
 
 @include navigation-desktop-sm 
@@ -339,7 +345,7 @@ _:-ms-lang(x), #drop-down
 	#site-nav 
 		display: none 
 	.mobile-f-counter 
-		display: inline-block
+		display: inline-block 
 
 
 	
