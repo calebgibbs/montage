@@ -2007,16 +2007,6 @@
 		"opt": 0,
 		"q": 100
 		},
-	"\/img\/products\/large\/5a5e65aa75f65.jpg": {
-		"ft": 16384,
-		"iS": 24729,
-		"oA": 0,
-		"oAP": "\/img\/products\/large\/5a5e65aa75f65.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
 	"\/img\/products\/large\/5a5e66392523b.jpg": {
 		"ft": 16384,
 		"iS": 26625,
@@ -3203,6 +3193,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/products\/large\/5aa9b0c1e58c8.png": {
+		"ft": 32768,
+		"iS": 617094,
+		"oA": 0,
+		"oAP": "\/img\/products\/large\/5aa9b0c1e58c8.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/products\/themes\/accesories.png": {
 		"ft": 32768,
 		"iS": 38425,
@@ -3305,16 +3306,6 @@
 		"iS": 6266,
 		"oA": 0,
 		"oAP": "\/img\/products\/thumbnail\/5a5e64f2eb0aa.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/img\/products\/thumbnail\/5a5e65aa75f65.jpg": {
-		"ft": 16384,
-		"iS": 6171,
-		"oA": 0,
-		"oAP": "\/img\/products\/thumbnail\/5a5e65aa75f65.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -4506,6 +4497,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/products\/thumbnail\/5aa9b0c1e58c8.png": {
+		"ft": 32768,
+		"iS": 32969,
+		"oA": 0,
+		"oAP": "\/img\/products\/thumbnail\/5aa9b0c1e58c8.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/products\/thumbnail\/no_img.png": {
 		"ft": 32768,
 		"iS": 3624,
@@ -4886,6 +4888,26 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/js\/signupValidation-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/js\/validation-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/validation-min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/js\/validation.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/validation-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0

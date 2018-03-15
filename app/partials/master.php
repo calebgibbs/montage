@@ -32,7 +32,8 @@
 	<script type="text/javascript" src="js/account.js"></script> 
 	<?php endif ?> 
 	<?php if($_SESSION['account_type'] == 'admin'): ?> 
-	<script type="text/javascript" src="js/admin.js"></script> 
+	<script type="text/javascript" src="js/admin.js"></script>
+	<script type="text/javascript" src="js/validation-min.js"></script> 
 	<?php endif ?>
 </body>
 </html> 

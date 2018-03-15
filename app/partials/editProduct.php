@@ -7,12 +7,22 @@ $fCount = 1;
 foreach ($features as $feat) {
 	${'feat'.$fCount} = $feat['feature']; 
 	$fCount++;
-} 
+}  
+for($i=1;$i<=10;$i++){ 
+	if(!isset(${'feat'.$i})){ 
+		${'feat'.$i} = '';
+	}
+}
 
 $oCount = 1;
 foreach ($options as $option) {
 	${'opt'.$oCount} = $option['product_option']; 
 	$oCount++;
+} 
+for($i=1;$i<=10;$i++){ 
+	if(!isset(${'opt'.$i})){ 
+		${'opt'.$i} = '';
+	}
 } 
 
 $lCount = 1; 
@@ -20,7 +30,15 @@ foreach( $links as $link ){
 	${'linkT'.$lCount} = $link['link_text'];
 	${'linkH'.$lCount} = $link['href']; 
 	$lCount++;
-} 
+}  
+for($i=1;$i<=5;$i++){ 
+	if(!isset(${'linkT'.$i})){ 
+		${'linkT'.$i} = '';
+	} 
+	if(!isset(${'linkH'.$i})){ 
+		${'linkH'.$i} = '';
+	}
+}
 
 $iCount = 1; 
 foreach( $images as $image ){
@@ -32,7 +50,17 @@ foreach($downloads as $download) {
 	${'Dlink'.$dCount} = $download['download_link']; 
 	${'Dtitle'.$dCount} = $download['title']; 
 	$dCount++;
+} 
+for($i=1;$i<=3;$i++){ 
+	if(!isset(${'Dlink'.$i})){
+		${'Dlink'.$i} = '';
+	} 
+	if(!isset(${'Dtitle'.$i})){ 
+		${'Dtitle'.$i} = '';
+	}
 }
+
+$cat2 = $product['category2'];
 
 ?> 
 <div class="body">  
@@ -44,7 +72,7 @@ foreach($downloads as $download) {
 				<span class="floating-label">Product Title <?=  isset($titleMessage) ? $titleMessage : '' ?></span>
 			</div> 
 			<div class="form-input"> 
-				<select name="category" <?=  isset($categoryError) ? $categoryError : '' ?>>
+				<select name="category" id="cat1" <?=  isset($categoryError) ? $categoryError : '' ?>>
 					<?php if($product['category']): ?>  
 						<?php 
 						if ( $product['category'] == 'workstation') {
@@ -111,9 +139,11 @@ foreach($downloads as $download) {
 			
 			<div class="form-input">
 				<select name="supplier" <?=  isset($supplierError) ? $supplierError : '' ?>>
-					<?php if(isset($product['supplier'])): ?>
-						<option value="<?= $product['supplier'] ?>"><?= ucfirst($product['supplier']) ?></option>
-					<?php endif ?>
+					<?php foreach($suppliers as $value): ?> 
+						<?php if($product['supplier'] == $value): ?>
+							<option value="<?= $value ?>"><?= ucfirst($value) ?></option> 
+						<?php endif ?>
+					<?php endforeach ?>
 					<?php if(isset($_POST['supplier'])): ?>
 						<option value="<?= $_POST['supplier'] ?>"><?= ucfirst($_POST['supplier']) ?></option>
 					<?php endif ?> 
@@ -123,6 +153,217 @@ foreach($downloads as $download) {
 					<?php foreach($suppliers as $value): ?> 
 						<option value="<?= $value ?>"><?= ucfirst($value) ?></option>
 					<?php endforeach ?>
+				</select>
+			</div> 
+			<div class="subCat agileSel">
+				<select name="cat1" <?=  isset($subCategoryError) ? $subCategoryError : '' ?>>
+					<?php if($cat2): ?> 
+						<?php 
+						if($cat2 == 'team_collab'){ 
+							$sub1 = 'Team Collaborative';
+						}elseif($cat2 == 'break_f'){ 
+							$sub1 = 'Breakout Furniture';
+						}elseif($cat2 == 'focus_f'){ 
+							$sub1 = 'Focus Furniture';
+						}elseif($cat2 == 'none'){ 
+							$sub1 = 'Other';
+						}else {
+							$sub1 = 'Please select a category';	
+						}
+						?> 
+						<option value="<?= $cat2 ?>"><?= $sub1 ?></option>	
+					<?php endif ?>
+					<?php if( isset($_POST['cat2']) ): ?> 
+						<?php 
+						if($_POST['cat1'] == 'team_collab'){ 
+							$sub1 = 'Team Collaborative';
+						}elseif($_POST['cat1'] == 'break_f'){ 
+							$sub1 = 'Breakout Furniture';
+						}elseif($_POST['cat1'] == 'focus_f'){ 
+							$sub1 = 'Focus Furniture';
+						}elseif($_POST['cat1'] == 'none'){ 
+							$sub1 = 'Other';
+						}else {
+							$sub1 = 'Please select a category';	
+						}
+						?> 
+						<option value="<?= $_POST['cat1'] ?>"><?= $sub1 ?></option> 
+					<?php endif ?>
+					<option value="1">Agile furniture Subcategory</option> 
+					<option value="team_collab">Team Collaborative</option> 
+					<option value="break_f">Breakout Furniture</option> 
+					<option value="focus_f">Focus Furniture</option> 
+					<option value="none">Other</option>
+				</select>
+			</div>
+			<div class="subCat joinerySel">
+				<select name="cat2" <?=  isset($subCategoryError) ? $subCategoryError : '' ?>> 
+					<?php if($cat2): ?> 
+						<?php 
+						if($cat2 === 'joinery'){ 
+							$sub2 = 'Joinery';
+						}elseif($cat2 === 'custom'){ 
+							$sub2 = 'Custom Furniture';
+						}elseif($cat2 === 'none'){ 
+							$sub2 = 'Other';
+						}else{ 
+							$sub2 = 'Please select a category';	
+						}
+						?> 
+						<option value="<?= $cat2 ?>"><?= $sub2 ?></option>
+					<?php endif ?>
+					<?php if(isset($_POST['cat2'])): ?> 
+						<?php 
+						if($_POST['cat2'] === 'joinery'){ 
+							$sub2 = 'Joinery';
+						}elseif($_POST['cat2'] === 'custom'){ 
+							$sub2 = 'Custom Furniture';
+						}elseif($_POST['cat2'] === 'none'){ 
+							$sub2 = 'Other';
+						}else{ 
+							$sub2 = 'Please select a category';	
+						}
+						?> 
+						<option value="<?= $_POST['cat2'] ?>"><?= $sub2 ?></option>
+					<?php endif ?>
+					<option value="2">Joinery and Custom category</option> 
+					<option value="joinery">Joinery</option> 
+					<option value="custom">Custom Furniture</option> 
+					<option value="none">Other</option>
+				</select>
+			</div> 
+			<div class="subCat seatingCat">
+				<select name="cat3" <?=  isset($subCategoryError) ? $subCategoryError : '' ?>>
+					<?php if($cat2): ?> 
+						<?php 
+						if($cat2 === 'soft_s'){ 
+							$sub3 = 'Soft Seating';
+						}elseif($cat2 === 'task_s'){ 
+							$sub3 = 'Task Seating';	
+						}elseif ($cat2 === 'vis_hos') {
+							$sub3 = 'Visitor & Hospitality';
+						}elseif ($cat2 === 'stools') {
+							$sub3 = 'Stools';
+						}elseif($cat2 === 'meeting_room'){ 
+							$sub3 = 'Meeting Room';	
+						}elseif($cat2 === 'none'){ 
+							$sub3 = 'Other';
+						}else{ 
+							$sub3 = 'Please select a category';	
+						}
+						?>
+						<option value="<?= $cat2 ?>"><?= $sub3 ?></option>
+					<?php endif ?>
+					<?php if(isset($_POST['cat3'])): ?> 
+						<?php 
+						if($_POST['cat3'] === 'soft_s'){ 
+							$sub3 = 'Soft Seating';
+						}elseif($_POST['cat3'] === 'task_s'){ 
+							$sub3 = 'Task Seating';	
+						}elseif ($_POST['cat3'] === 'vis_hos') {
+							$sub3 = 'Visitor & Hospitality';
+						}elseif ($_POST['cat3'] === 'stools') {
+							$sub3 = 'Stools';
+						}elseif($_POST['cat3'] === 'meeting_room'){ 
+							$sub3 = 'Meeting Room';	
+						}elseif($_POST['cat3'] === 'none'){ 
+							$sub3 = 'Other';
+						}else{ 
+							$sub3 = 'Please select a category';	
+						}
+						?> 
+						<option value="<?= $_POST['cat3'] ?>"><?= $sub3 ?></option>
+					<?php endif ?>
+					<option value="3">Seating category</option> 
+					<option value="soft_s">Soft Seating</option> 
+					<option value="task_s">Task Seating</option> 
+					<option value="vis_hos">Visitor &amp; Hospitality</option> 
+					<option value="stools">Stools</option> 
+					<option value="meeting_room">Meeting Room</option> 
+					<option value="none">Other</option>
+				</select>
+			</div> 
+			<div class="subCat tablesCat">
+				<select name="cat4" <?=  isset($subCategoryError) ? $subCategoryError : '' ?>> 
+					<?php if($cat2): ?> 
+						<?php 
+						if($cat2 === 'meeting_break'){ 
+							$sub4 = 'Meeting & Breakout';
+						}elseif($cat2 === 'coffee_t'){ 
+							$sub4 = 'Coffee Tables';
+						}elseif($cat2 === 'leaner') {
+							$sub4 = 'Leaners';
+						}elseif($cat2 === 'none'){ 
+							$sub4 = 'Other';
+						}
+						?>
+						<option value="<?= $cat2 ?>"><?= $sub4 ?></option>
+					<?php endif ?>
+					<?php if(isset($_POST['cat4'])): ?> 
+						<?php 
+						if($_POST['cat4'] === 'meeting_break'){ 
+							$sub4 = 'Meeting & Breakout';
+						}elseif($_POST['cat4'] === 'coffee_t'){ 
+							$sub4 = 'Coffee Tables';
+						}elseif($_POST['cat4'] === 'leaner') {
+							$sub4 = 'Leaners';
+						}elseif($_POST['cat4'] === 'none'){ 
+							$sub4 = 'Other';
+						}else{ 
+							$sub4 = 'Please select a category';
+						}
+						?> 
+						<option value="<?= $_POST['cat4'] ?>"><?= $sub4 ?></option>
+					<?php endif ?>
+					<option value="4">Tables category</option> 
+					<option value="meeting_break">Meeting &amp; Breakout</option> 
+					<option value="coffee_t">Coffee Tables</option> 
+					<option value="leaner">Leaners</option>
+					<option value="none">Other</option>	
+				</select>
+			</div> 
+			<div class="subCat techCat">
+				<select name="cat5" <?=  isset($subCategoryError) ? $subCategoryError : '' ?>> 
+					<?php if($cat2): ?> 
+						<?php
+						if($cat2 === 'screen_workstation'){
+							$sub5 = 'Screen & Workstations';
+						}elseif($cat2 === 'technology'){ 
+							$sub5 = 'Technology';
+						}elseif ($cat2 === 'mot_arm') {
+							$sub5 = 'Monitor Arm';
+						}elseif ($cat2 === 'miscellaneous') {
+							$sub5 = 'Miscellaneous';
+						}elseif($cat2 === 'none'){ 
+							$sub5 = 'Other';
+						} 
+						?> 
+						<option value="<?= $cat2 ?>"><?= $sub5 ?></option>
+					<?php endif ?>
+					<?php if(isset($_POST['cat5'])): ?>
+						<?php  
+						if($_POST['cat5'] === 'screen_workstation'){
+							$sub5 = 'Screen & Workstations';
+						}elseif($_POST['cat5'] === 'technology'){ 
+							$sub5 = 'Technology';
+						}elseif ($_POST['cat5'] === 'mot_arm') {
+							$sub5 = 'Monitor Arm';
+						}elseif ($_POST['cat5'] === 'miscellaneous') {
+							$sub5 = 'Miscellaneous';
+						}elseif($_POST['cat5'] === 'none'){ 
+							$sub5 = 'Other';
+						}else {
+							$sub5 = 'Please select a category';
+						}
+						?> 
+						<option value="<?= $_POST['cat5'] ?>"><?= $sub5 ?></option>
+					<?php endif ?>
+					<option value="5">Tech and Accesories category</option> 
+					<option value="screen_workstation">Screen &amp; Workstations</option> 
+					<option value="technology">Technology</option> 
+					<option value="mot_arm">Monitor Arms</option> 
+					<option value="miscellaneous">Miscellaneous</option> 
+					<option value="none">Other</option>
 				</select>
 			</div>
 			<div class="form-textarea">
@@ -276,8 +517,9 @@ foreach($downloads as $download) {
 					<span class="floating-label">Option 5 link <?=  isset($optLink5) ? $optLink5 : '' ?></span>
 				</div>
 			</div>
-	
+
 			<div id="form-downloads">
+				<h2>Downloads</h2>
 				<div class="form-input">
 					<input type="text" class="inputText" name="download_title_1" value="<?= isset($_POST['download_title_1']) ? $_POST['download_title_1'] : $Dtitle1 ?>" required> 
 					<span class="floating-label">Download Title<?=  isset($DtitleMsg1) ? $DtitleMsg1 : '' ?></span>
@@ -315,22 +557,22 @@ foreach($downloads as $download) {
 						<?php if($i != 1 ): ?>
 							<label>Image <?= $i ?> <?=  isset(${"imgMsg".$i}) ? ${"imgMsg".$i} : '' ?></label> 
 						<?php endif ?>
-						<?php if(isset(${img.$i})): ?> 
+						<?php if(isset(${'img'.$i})): ?> 
 							<img src="img/products/thumbnail/<?= ${'img'.$i} ?>"> 
 							<?php if($i != 1 ): ?>
 								<span class="img_del"><input type="checkbox" name="delImg<?= $i ?>" style="display: inline-block;"> Delete image <?= $i ?></span> 
 							<?php endif ?>
 						<?php endif ?>  
-						<?php if(!isset(${img.$i})): ?>  
+						<?php if(!isset(${'img'.$i})): ?>  
 							<img src="img/products/thumbnail/no_img.png">
 							<span class="img_del" style="opacity: 0"><input type="checkbox" style="display: inline-block;"> img</span>
 						<?php endif ?>
 						<div class="fileUpload">
 							<label for="upload<?= $i ?>" class="fileUploadLabel">
-								<?php if(isset(${img.$i})): ?>  
+								<?php if(isset(${'img'.$i})): ?>  
 									Change Image
 								<?php endif ?> 
-								<?php if(!isset(${img.$i})): ?>  
+								<?php if(!isset(${'img'.$i})): ?>  
 									Upload Image
 								<?php endif ?>
 							</label> 

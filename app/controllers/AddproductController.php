@@ -17,8 +17,8 @@ class AddproductController extends PageController {
 	
 	private function getSelects(){ 
 		//get suppliers 
-		// $sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage9_dtat' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'";  
-		$sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'"; 
+		$sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage9_dtat' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'";  
+		// $sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'"; 
 		$result = $this->dbc->query($sql);  
 		if ($result) {
 			$result = $result->fetch_assoc(); 
@@ -74,7 +74,32 @@ class AddproductController extends PageController {
 		if ($category == '0') {
 			$errors++;
 			$this->data['categoryError'] = 'style="background: #d9534f"';
-		} 
+		}elseif($category == 'agile_furniture'){
+			if($_POST['cat1'] == '1'){ 
+				$errors++;
+				$this->data['subCategoryError'] = 'style="background: #d9534f"';
+			}
+		}elseif($category == 'joinery_custom'){ 
+			if($_POST['cat2'] == '2'){ 
+				$errors++;
+				$this->data['subCategoryError'] = 'style="background: #d9534f"';
+			}
+		}elseif($category == 'chair'){ 
+			if($_POST['cat3'] == '3'){ 
+				$errors++;
+				$this->data['subCategoryError'] = 'style="background: #d9534f"';
+			}	
+		}elseif($category == 'table'){ 
+			if($_POST['cat4'] == '4'){ 
+				$errors++;
+				$this->data['subCategoryError'] = 'style="background: #d9534f"';
+			}	
+		}elseif ($category == 'tech_accesories') {
+			if($_POST['cat5'] == '5'){ 
+				$errors++;
+				$this->data['subCategoryError'] = 'style="background: #d9534f"';
+			}	
+		}	 
 
 		if ($supplier == '0') {
 			$errors++;
@@ -228,9 +253,33 @@ class AddproductController extends PageController {
 			$LinkVal = 'download_link_'.$i; 
 			${'Dlink'.$i} = trim($_POST[$LinkVal]);	
 		}
-		
-		$sql = "INSERT INTO products(title, description, category, supplier) 
-				VALUES('$title', '$description', '$category', '$supplier')"; 
+		 
+		if($category == 'agile_furniture'){
+			if($_POST['cat1'] != '1'){ 
+				$cat2 = $this->dbc->real_escape_string($_POST['cat1']);   	
+			}
+		}elseif($category == 'joinery_custom'){ 
+			if($_POST['cat2'] != '2'){ 
+				$cat2 = $this->dbc->real_escape_string($_POST['cat2']);
+			}
+		}elseif($category == 'chair'){ 
+			if($_POST['cat3'] != '3'){ 
+				$cat2 = $this->dbc->real_escape_string($_POST['cat3']);
+			}	
+		}elseif($category == 'table'){ 
+			if($_POST['cat4'] != '4'){ 
+				$cat2 = $this->dbc->real_escape_string($_POST['cat4']);
+			}	
+		}elseif ($category == 'tech_accesories') {
+			if($_POST['cat5'] != '5'){ 
+				$cat2 = $this->dbc->real_escape_string($_POST['cat5']);
+			}	
+		}else{ 
+			$cat2 = 'none';
+		}
+
+		$sql = "INSERT INTO products(title, description, category, category2, supplier) 
+				VALUES('$title', '$description', '$category', '$cat2', '$supplier')";  
 		$this->dbc->query($sql); 
 		$sql = "SELECT id FROM products WHERE title = '$title'
 				AND description = '$description'
