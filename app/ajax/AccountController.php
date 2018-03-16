@@ -161,4 +161,19 @@ if(isset($_POST['passwordReset'])){
 	$headers = 'From: ' . $from ; 
 	mail($to, $subject, $message, $headers);  
 	echo 'sent';
+} 
+if(isset($_POST['Helppwd'])){ 
+	$id = $_POST['Helpid']; 
+	$pwd = $dbc->real_escape_string($_POST['Helppwd']);
+	$sql = "SELECT password FROM users WHERE id = '$id'"; 
+	$result = $dbc->query($sql); 
+	if($result->num_rows != 0){ 
+		$result = $result->fetch_assoc(); 
+		$passwordVerify = password_verify( $pwd, $result['password'] ); 
+		if($passwordVerify === true){ 
+			echo 'montage19:fk6]HUK*m3';
+		}else{ 
+			echo "wrongPwd";
+		}
+	}
 }

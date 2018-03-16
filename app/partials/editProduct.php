@@ -88,7 +88,7 @@ $cat2 = $product['category2'];
 						}elseif ($product['category'] == 'agile_furniture') {
 							$valueName = "Agile furniture";
 						}elseif($product['category'] == 'chair'){
-							$valueName = "Chair";
+							$valueName = "Seating";
 						}elseif($product['category'] == 'joinery_custom'){
 							$valueName = "Joinery and Custom";
 						}elseif($product['category'] == 'other'){
@@ -114,7 +114,7 @@ $cat2 = $product['category2'];
 						}elseif ($_POST['category'] == 'agile_furniture') {
 							$valueName = "Agile furniture";
 						}elseif($_POST['category'] == 'chair'){
-							$valueName = "Chair";
+							$valueName = "Seating";
 						}elseif($_POST['category'] == 'joinery_custom'){
 							$valueName = "Joinery and Custom";
 						}elseif($_POST['category'] == 'other'){
@@ -131,7 +131,7 @@ $cat2 = $product['category2'];
 					<option value="table">Table</option> 
 					<option value="screen">Screen</option> 
 					<option value="agile_furniture">Agile furniture</option>
-					<option value="chair">Chair</option> 
+					<option value="chair">Seating</option> 
 					<option value="joinery_custom">Joinery and Custom</option> 
 					<option value="other">Other</option>
 				</select> 

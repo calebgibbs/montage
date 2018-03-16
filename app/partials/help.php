@@ -14,7 +14,21 @@
 		<h2>Suggested Options</h2> 
 		<p>To add a  suggested option to the product; you need to add the word(s) you wish to become hyperlinked in the option on the left-hand side of the form and you must add the hyperlink under the option link opposite on the left hand side of the form. </p> 
 		<h2>Downloads</h2> 
-		<p>Downloads are not yet ready - this will be changed soon. We will be able to add the downloads to the product later.</p> 
+		<p>To add a download to a product we are using an external service called <a href="https://sabercathost.com/" target="_blank">SaberCat</a></p> 
+		<p><a href="https://sabercathost.com/" target="_blank">SaberCat</a> will allow us to upload and store files that we want to be downloaded and generate a download link which we will then include when uploading the product. To use <a href="https://sabercathost.com/" target="_blank">SaberCat</a>; go to their website <a href="https://sabercathost.com/" target="_blank">here</a> and go to ‘your files’ in the navigation.</p>  
+		<p>
+			<button id="pwdPrompt">Get Login details for SaberCat</button> 
+			<span id="getPwd">Please enter your password: <input type="password" id="getLG" placeholder="Password"><button value="<?= $_SESSION['id'] ?>" id="helpPwdSb">Submit</button><span id="HelpErMsg"></span></span> 
+			<span>
+				<ul id="lgDetails">
+					<li id="saberU">Username: </li> 
+					<li id="saberP">Password: </li>
+				</ul>
+			</span>
+		</p> 
+		<p>From this page you can upload a new file. Once the upload is complete it will generate a download link. Copy this link.</p> 
+		<p>If you need to get the download link of a file you have already uploaded you can click on the the file you need the link for and this will bring up the file info. The link is under URL option.</p> 
+		<p>Once you have the download link take it to the product page on our website and copy the link into ‘download link’ input on the add product page and then name the file to the left of that.</p>
 		<h2>Images</h2> 
 		<p>You can upload a maximum of 5 images and a minimum of 1 image to a product.</p> 
 		<p>images will save in a 770 x 400px dimension so you will need to upload an image of this size or larger to avoid pixilation.</p> 

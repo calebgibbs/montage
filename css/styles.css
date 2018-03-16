@@ -1195,6 +1195,18 @@ _:-ms-lang(x), #drop-down {
     #under-img div:nth-of-type(2) {
       float: right; }
 
+.dimensionTable {
+  font-size: 1.1rem; }
+  .dimensionTable tr td:first-of-type {
+    padding-right: 2rem; }
+
+.downloads_list {
+  margin: 0;
+  padding: 0; }
+  .downloads_list a {
+    color: #242424;
+    font-size: 1.1rem; }
+
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .workstation {
     background: none; }
@@ -2402,6 +2414,15 @@ article {
   article p {
     font-weight: 100;
     font-size: 1.05rem; }
+
+#getPwd {
+  display: none; }
+
+#lgDetails {
+  display: none; }
+
+#HelpErMsg {
+  color: #d9534f; }
 
 @keyframes imageload {
   0% {

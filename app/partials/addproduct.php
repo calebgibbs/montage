@@ -359,11 +359,11 @@ $this -> layout('master',[
 				<?php $type = 'dt'.$i; $value = 'dv'.$i; ?>  
 				<div class="form-input">	
 					<input type="text" class="inputText" name="dt<?= $i ?>" value="<?= isset($_POST[$type]) ? $_POST[$type] : '' ?>" required /> 
-					<span class="floating-label">Dimension type</span>
+					<span class="floating-label">Dimension type <?=  isset(${'typeMsg'.$i}) ? ${'typeMsg'.$i} : '' ?></span>
 				</div> 
 				<div class="form-input">
 					<input type="text" class="inputText" name="dv<?= $i ?>" value="<?= isset($_POST[$value]) ? $_POST[$value] : '' ?>" required /> 
-					<span class="floating-label">Dimension value</span>
+					<span class="floating-label">Dimension value <?=  isset(${'valueMsg'.$i}) ? ${'valueMsg'.$i} : '' ?></span>
 				</div>
 				<?php endfor ?>
 			</div> 

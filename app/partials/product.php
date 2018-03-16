@@ -93,12 +93,25 @@ $this -> layout('master',[
 				<div id="under-img">
 					<?php if( $dim != 'noDim' ): ?>
 					<div class="page-dimensions">
-						<h2>Dimensions</h2>
+						<h2>Dimensions</h2> 
+						<table class="dimensionTable">
+					<?php foreach($dim as $dim_i): ?> 
+						<tr>
+							<td><?= $dim_i['dimension_type'] ?></td> 
+							<td><?= $dim_i['dimension'] ?></td>
+						</tr>
+					<?php endforeach ?> 
+						</table>
 					</div> 
 					<?php endif ?>
 					<?php if( $downloads != 'noDwn' ): ?>
 					<div class="page-downloads">
-						<h2>Downloads</h2>
+						<h2>Downloads</h2> 
+						<ul class="downloads_list">
+					<?php foreach($downloads as $dwn): ?> 
+						<a href="<?= $dwn['download_link'] ?>"><?= $dwn['title'] ?></a>
+					<?php endforeach ?>
+						</ul>
 					</div>
 					<?php endif ?>
 				</div> 

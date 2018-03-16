@@ -17,8 +17,8 @@ class AddproductController extends PageController {
 	
 	private function getSelects(){ 
 		//get suppliers 
-		$sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage9_dtat' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'";  
-		// $sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'"; 
+		// $sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage9_dtat' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'";  
+		$sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'"; 
 		$result = $this->dbc->query($sql);  
 		if ($result) {
 			$result = $result->fetch_assoc(); 
@@ -191,7 +191,32 @@ class AddproductController extends PageController {
 					$this->data[$msg] = '<span style="color: #d9534f">*You must upload a valid image</span>';
 				}
 			}
-		} 
+		}  
+
+		//dimensions 
+		for($i=1;$i<=3;$i++){ 
+			$type = 'dt'.$i; $type = $_POST[$type]; $typeMsg = 'typeMsg'.$i; 
+			$value = 'dv'.$i; $value = $_POST[$value]; $valueMsg = 'valueMsg'.$i;
+			if(strlen($type) != 0){ 
+				if(strlen($value) === 0){
+					$errors++; 
+					$this->data[$valueMsg] = '<span style="color: #d9534f">*You must define the dimension value</span>';
+				}
+			}elseif(strlen($value) != 0){ 
+				if(strlen($type) === 0){ 
+					$errors++; 
+					$this->data[$typeMsg] = '<span style="color: #d9534f">*You must define the dimension type</span>';
+				}
+			} 
+			if(strlen($type) > 50){ 
+				$errors++; 
+				$this->data[$typeMsg] = '<span style="color: #d9534f">*Type name must be less than 50 characters</span>';
+			} 
+			if(strlen($value) > 20){ 
+				$errors++; 
+				$this->data[$valueMsg] = '<span style="color: #d9534f">*The value must be less than 20 characters</span>';
+			}  
+		}
 
 		for($i=1;$i<=3;$i++){ 
 			$title = ${'Dtitle'.$i};   
@@ -208,7 +233,7 @@ class AddproductController extends PageController {
 					$errors++; 
 					$this->data[$Tmsg] = '<span style="color: #d9534f">*This feild is required</span>'; 
 				}
-			} 
+			}
 
 			if(strlen($title) > 50){ 
 				$errors++; 
@@ -335,7 +360,19 @@ class AddproductController extends PageController {
 						VALUES( '$prodId', '$fileName$fileExtension', '$i' )";  
 				$this->dbc->query($sql);
 			}
-		}  
+		} 
+		//insert dimensions 
+		for($i=1;$i<=3;$i++){ 
+			$type = 'dt'.$i; $type = $this->dbc->real_escape_string($_POST[$type]);
+			$value = 'dv'.$i; $value = $this->dbc->real_escape_string($_POST[$value]);
+			if(strlen($type) != 0){ 
+				$sql = "INSERT INTO product_dimensions(product_id, dimension_type, dimension, position)
+						VALUES('$prodId', '$type', '$value', '$i')"; 
+				$this->dbc->query($sql); 
+			}	
+		} 
+
+
 		//insert downloads 
 		for($i=1;$i<=3;$i++){
 			$link = ${'Dlink'.$i};
