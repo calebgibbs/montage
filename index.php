@@ -115,7 +115,17 @@ switch($page){
 	case 'joinery_custom':
 	require 'app/controllers/JoineryAndCustomController.php'; 
 	$controller = new JoineryAndCustomController($dbc);
+	break;  
+
+	case 'joinery':
+	require 'app/controllers/JoineryController.php'; 
+	$controller = new JoineryController($dbc);
 	break; 
+
+	case 'custom':
+	require 'app/controllers/CustomController.php'; 
+	$controller = new CustomController($dbc);
+	break;
 
 	case 'manage_products':
 	require 'app/controllers/ManageProductsController.php'; 

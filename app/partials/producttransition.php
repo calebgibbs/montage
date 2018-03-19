@@ -20,10 +20,10 @@ $this -> layout('master',[
 <?php endif ?>	
 <?php if($_GET['page'] == 'joinery_custom'): ?> 
 	<h1>Joinery and Custom Furniture</h1> 
-	<div class="jc-cat subcat_link">
+	<div class="jc-cat subcat_link" href="index.php?page=joinery">
 		<img src="http://placehold.it/400x600">
 	</div>
-	<div class="jc-cat subcat_link">
+	<div class="jc-cat subcat_link" href="index.php?page=custom">
 		<img src="http://placehold.it/400x600">
 	</div>
 <?php endif ?> 
