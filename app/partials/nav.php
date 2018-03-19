@@ -39,7 +39,7 @@ $favTotal = count($fav);
 					<li><a class="drop-item" href="index.php?page=workstations_screens">Screens</a></li>
 					<li><a class="drop-item" href="index.php?page=storage">Storage</a></li>
 					<li><a class="drop-item" href="index.php?page=agile_furniture">Agile Furniture</a></li>
-					<li><a class="drop-item" href="index.php?page=chairs">Seating</a></li>
+					<li><a class="drop-item" href="index.php?page=seating">Seating</a></li>
 					<li><a class="drop-item" href="index.php?page=tech_accesories">Tech &amp; Accesories</a></li>
 					<li><a class="drop-item" href="index.php?page=tables">Tables</a></li> 
 					<li><a class="drop-item" href="index.php?page=joinery_custom">Joinery &amp; Custom</a></li>

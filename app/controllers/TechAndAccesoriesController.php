@@ -6,7 +6,7 @@ class TechAndAccesoriesController extends PageController {
 		$this->results();  
 	}  
 	public function buildHTML(){ 
-		echo $this->plates->render('grid', $this->data); 
+		echo $this->plates->render('producttransition', $this->data); 
 	} 
 	private function results(){ 
 		$lastPage = $_SERVER['HTTP_REFERER'];

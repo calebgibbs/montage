@@ -538,7 +538,114 @@
 			text-align: center 
 			font-weight: lighter 
 			margin: 0 auto 
-			margin-bottom: 10px
+			margin-bottom: 10px  
+
+
+//transition pages  
+
+.grid-padding  
+	width: 80% 
+	margin: 0 auto  
+
+.agile-cat 
+	width: calc(98% / 3) 
+	display: inline-block 
+	text-align: center 
+	img
+		box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52)  
+		transition: 0.3s   
+		&:hover 
+			transform: scale(1.01) 
+			cursor: pointer 
+.jc-cat 
+	width: calc(98% / 2) 
+	display: inline-block 
+	text-align: center 
+	img
+		box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52)  
+		transition: 0.3s   
+		&:hover 
+			transform: scale(1.01) 
+			cursor: pointer 
+.seat-cat1 
+	width: calc(98% / 3) 
+	display: inline-block 
+	text-align: center 
+	img
+		box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52)  
+		transition: 0.3s   
+		&:hover 
+			transform: scale(1.01) 
+			cursor: pointer
+.seat-cat2 
+	width: calc(98% / 2) 
+	display: inline-block 
+	text-align: center 
+	padding-top: 3.5rem 
+	padding-bottom: 2rem 
+	img
+		box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52)  
+		transition: 0.3s   
+		&:hover 
+			transform: scale(1.01) 
+			cursor: pointer
+.table-cat 
+	width: calc(98% / 3) 
+	display: inline-block 
+	text-align: center 
+	img
+		box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52)  
+		transition: 0.3s   
+		&:hover 
+			transform: scale(1.01) 
+			cursor: pointer
+.tech-cat 
+	width: calc(98% / 2) 
+	display: inline-block 
+	text-align: center 
+	img
+		box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52)  
+		transition: 0.3s   
+		&:hover 
+			transform: scale(1.01) 
+			cursor: pointer
+
+@include desktop-sm 
+	.agile-cat 
+		img 
+			width: 300px 
+			height: 500px 
+	.jc-cat 
+		img 
+			width: 300px 
+			height: 500px 
+	.seat-cat1, .seat-cat2, .table-cat 
+		img 
+			width: 300px 
+			height: 500px
+@include tablet 
+	.agile-cat, .table-cat 
+		img 
+			width: 200px 
+			height: 400px
+	.jc-cat 
+		img 
+			width: 200px 
+			height: 400px
+	.seat-cat1, .seat-cat2 
+		img 
+			width: 300px 
+			height: 500px 
+@include mobile 
+	.agile-cat, .table-cat 
+		width: 100% 
+		padding-bottom: 1rem
+	.jc-cat 
+		width: 100% 
+		padding-bottom: 1rem
+	.seat-cat1, .seat-cat2  
+		width: 100% 
+		padding-bottom: 1rem	
 
 
 

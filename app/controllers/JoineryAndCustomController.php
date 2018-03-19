@@ -6,7 +6,7 @@ class JoineryAndCustomController extends PageController {
 		$this->results();  
 	}  
 	public function buildHTML(){ 
-		echo $this->plates->render('grid', $this->data); 
+		echo $this->plates->render('producttransition', $this->data); 
 	} 
 	private function results(){ 
 		$lastPage = $_SERVER['HTTP_REFERER'];
@@ -34,7 +34,5 @@ class JoineryAndCustomController extends PageController {
 		}else{
 			$this->data['results'] = $result->fetch_all(MYSQLI_ASSOC);
 		} 
-
-		
 	}
 }

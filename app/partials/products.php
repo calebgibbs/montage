@@ -27,8 +27,8 @@ $prevPage = $_SERVER['QUERY_STRING'];
 			<img src="img/products/categories/storage.png" alt="Screens"> 
 			<img src="img/products/categories/storageMask.png">
 		</div> 
-		<div class="chair-dia diamond" href="index.php?page=chairs">
-			<img src="img/products/categories/chairs.png" alt="Chairs"> 
+		<div class="chair-dia diamond" href="index.php?page=seating">
+			<img src="img/products/categories/chairs.png" alt="Seating"> 
 			<img src="img/products/categories/chairsMask.png">
 		</div> 
 		<div class="table-dia diamond" href="index.php?page=tables">

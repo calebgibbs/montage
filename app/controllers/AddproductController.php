@@ -17,8 +17,8 @@ class AddproductController extends PageController {
 	
 	private function getSelects(){ 
 		//get suppliers 
-		// $sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage9_dtat' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'";  
-		$sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'"; 
+		$sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage9_dtat' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'";  
+		// $sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'"; 
 		$result = $this->dbc->query($sql);  
 		if ($result) {
 			$result = $result->fetch_assoc(); 
@@ -278,7 +278,7 @@ class AddproductController extends PageController {
 			$LinkVal = 'download_link_'.$i; 
 			${'Dlink'.$i} = trim($_POST[$LinkVal]);	
 		}
-		 
+		
 		if($category == 'agile_furniture'){
 			if($_POST['cat1'] != '1'){ 
 				$cat2 = $this->dbc->real_escape_string($_POST['cat1']);   	
@@ -304,22 +304,22 @@ class AddproductController extends PageController {
 		}
 
 		$sql = "INSERT INTO products(title, description, category, category2, supplier) 
-				VALUES('$title', '$description', '$category', '$cat2', '$supplier')";  
+		VALUES('$title', '$description', '$category', '$cat2', '$supplier')";  
 		$this->dbc->query($sql); 
 		$sql = "SELECT id FROM products WHERE title = '$title'
-				AND description = '$description'
-				AND category = '$category'
-				AND supplier = '$supplier'";
+		AND description = '$description'
+		AND category = '$category'
+		AND supplier = '$supplier'";
 		$result = $this->dbc->query($sql);	 
 		$prodId = $result->fetch_assoc();  
-		$prodId = $prodId['id']; 
+		$prodId = $prodId['id'];  
 
 		//insert features 
 		for($i=1;$i<=10;$i++){ 
 			$feat = ${'feat'.$i}; 
 			if (strlen($feat) != 0) {
 				$sql = "INSERT INTO product_features(product_id, feature, position)
-						VALUES('$prodId', '$feat', '$i')"; 
+				VALUES('$prodId', '$feat', '$i')"; 
 				$this->dbc->query($sql);
 			}
 		} 
@@ -329,7 +329,7 @@ class AddproductController extends PageController {
 			$opt = ${'opt'.$i}; 
 			if (strlen($opt) != 0) {
 				$sql = "INSERT INTO product_options(product_id, product_option, position)
-						VALUES('$prodId', '$opt', '$i')"; 
+				VALUES('$prodId', '$opt', '$i')"; 
 				$this->dbc->query($sql);
 			}
 		} 
@@ -340,7 +340,7 @@ class AddproductController extends PageController {
 			$link = ${'optL'.$i}; 
 			if (strlen($link) != 0) {
 				$sql = "INSERT INTO product_links(product_id, href, link_text, position)
-						VALUES('$prodId', '$link', '$link', '$i')"; 
+				VALUES('$prodId', '$link', '$link', '$i')"; 
 				$this->dbc->query($sql);
 			}
 		} 
@@ -357,7 +357,7 @@ class AddproductController extends PageController {
 				$image->resize(250, 150); 
 				$image->save("img/products/thumbnail/$fileName$fileExtension", 60);   
 				$sql = "INSERT INTO product_images(product_id, image, image_position) 
-						VALUES( '$prodId', '$fileName$fileExtension', '$i' )";  
+				VALUES( '$prodId', '$fileName$fileExtension', '$i' )";  
 				$this->dbc->query($sql);
 			}
 		} 
@@ -367,7 +367,7 @@ class AddproductController extends PageController {
 			$value = 'dv'.$i; $value = $this->dbc->real_escape_string($_POST[$value]);
 			if(strlen($type) != 0){ 
 				$sql = "INSERT INTO product_dimensions(product_id, dimension_type, dimension, position)
-						VALUES('$prodId', '$type', '$value', '$i')"; 
+				VALUES('$prodId', '$type', '$value', '$i')"; 
 				$this->dbc->query($sql); 
 			}	
 		} 

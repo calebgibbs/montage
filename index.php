@@ -82,7 +82,7 @@ switch($page){
 	$controller = new AgileFurnitureController($dbc);
 	break; 
 
-	case 'chairs':
+	case 'seating':
 	require 'app/controllers/ChairsController.php'; 
 	$controller = new ChairsController($dbc);
 	break;  
