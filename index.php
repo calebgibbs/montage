@@ -100,7 +100,32 @@ switch($page){
 	case 'seating':
 	require 'app/controllers/ChairsController.php'; 
 	$controller = new ChairsController($dbc);
-	break;  
+	break; 
+
+	case 'soft':
+	require 'app/controllers/SoftController.php'; 
+	$controller = new SoftController($dbc);
+	break;
+
+	case 'task':
+	require 'app/controllers/TaskController.php'; 
+	$controller = new TaskController($dbc);
+	break; 
+
+	case 'visitor_hospitality':
+	require 'app/controllers/VisitorHospController.php'; 
+	$controller = new VisitorHospController($dbc);
+	break; 
+
+	case 'stools':
+	require 'app/controllers/StoolController.php'; 
+	$controller = new StoolController($dbc);
+	break; 
+
+	case 'meeting_room':
+	require 'app/controllers/MeetingRoomController.php'; 
+	$controller = new MeetingRoomController($dbc);
+	break;
 
 	case 'tech_accesories':
 	require 'app/controllers/TechAndAccesoriesController.php'; 
