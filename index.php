@@ -80,7 +80,22 @@ switch($page){
 	case 'agile_furniture':
 	require 'app/controllers/AgileFurnitureController.php'; 
 	$controller = new AgileFurnitureController($dbc);
+	break;  
+
+	case 'team_collab': 
+	require 'app/controllers/TeamCollabController.php'; 
+	$controller = new TeamCollabController($dbc); 
 	break; 
+
+	case 'breakout': 
+	require 'app/controllers/BreakoutController.php'; 
+	$controller = new BreakoutController($dbc); 
+	break;
+
+	case 'focus': 
+	require 'app/controllers/FocusController.php'; 
+	$controller = new FocusController($dbc); 
+	break;
 
 	case 'seating':
 	require 'app/controllers/ChairsController.php'; 

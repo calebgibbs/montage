@@ -32,7 +32,11 @@ $(document).ready(function(){
     $('.homeLink').click(function(){
         window.location = $(this).attr('href');
         return false;
-    });  
+    }); 
+    $('.subcat_link').click(function(){
+        window.location = $(this).attr('href');
+        return false;
+    }); 
     $('.mobile-H-link').click(function(){
         window.location = $(this).attr('href');
         return false;

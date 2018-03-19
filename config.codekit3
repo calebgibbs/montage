@@ -261,6 +261,13 @@
 		"oAP": "\/app\/controllers\/TablesController.php",
 		"oF": 0
 		},
+	"\/app\/controllers\/TeamCollabController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/TeamCollabController.php",
+		"oF": 0
+		},
 	"\/app\/controllers\/TechAndAccesoriesController.php": {
 		"cB": 0,
 		"ft": 8192,
