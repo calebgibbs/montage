@@ -1,5 +1,5 @@
 <?php  
-class MeetingRoomController extends PageController { 
+class CoffeeTablesController extends PageController { 
 	public function __construct($dbc){ 
 		parent::__construct(); 
 		$this->dbc = $dbc; 
@@ -15,18 +15,18 @@ class MeetingRoomController extends PageController {
 			$lastPage = 'index.php';
 		}  
 
-		$this->data['title'] = 'Meeting Room'; 
-		$this->data['class'] = 'tech-title'; 
-
+		$this->data['title'] = 'Coffee Tables'; 
+		$this->data['class'] = 'tables-title'; 
+  
 		$sql = "SELECT p.id, p.title AS score_title, p.category, p.category2, 
 				i.product_id, i.image, i.image_position 
 				FROM products AS p 
 				JOIN product_images AS i 
 				ON p.id = i.product_id
 				WHERE 
-				category = 'chair' 
-				AND category2 = 'meeting_room' 
-				AND image_position = '1'"; 
+				category = 'table' 
+				AND category2 = 'coffee_t' 
+				AND image_position = '1'";
 
 		$result = $this->dbc->query($sql); 
 
@@ -34,6 +34,8 @@ class MeetingRoomController extends PageController {
 			$this->data['results'] = "No results";
 		}else{
 			$this->data['results'] = $result->fetch_all(MYSQLI_ASSOC);
-		} 		
+		} 
+
+		
 	}
 }

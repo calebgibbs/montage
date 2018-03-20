@@ -132,10 +132,45 @@ switch($page){
 	$controller = new TechAndAccesoriesController($dbc);
 	break; 
 
+	case 'screen_workstation':
+	require 'app/controllers/ScreenWorkstationController.php'; 
+	$controller = new ScreenWorkstationController($dbc);
+	break; 
+
+	case 'tech':
+	require 'app/controllers/TechController.php'; 
+	$controller = new TechController($dbc);
+	break;  
+
+	case 'monitor_arms':
+	require 'app/controllers/MonitorController.php'; 
+	$controller = new MonitorController($dbc);
+	break; 
+
+	case 'miscellaneous':
+	require 'app/controllers/MiscellaneousController.php'; 
+	$controller = new MiscellaneousController($dbc);
+	break;
+
 	case 'tables':
 	require 'app/controllers/TablesController.php'; 
 	$controller = new TablesController($dbc);
 	break; 
+
+	case 'meeting_breakout':
+	require 'app/controllers/MeetingBreakoutController.php'; 
+	$controller = new MeetingBreakoutController($dbc);
+	break;  
+
+	case 'coffeeTables':
+	require 'app/controllers/CoffeeTablesController.php'; 
+	$controller = new CoffeeTablesController($dbc);
+	break; 
+
+	case 'leaners':
+	require 'app/controllers/LeanersController.php'; 
+	$controller = new LeanersController($dbc);
+	break;
 
 	case 'joinery_custom':
 	require 'app/controllers/JoineryAndCustomController.php'; 

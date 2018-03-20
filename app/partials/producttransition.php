@@ -47,28 +47,28 @@ $this -> layout('master',[
 <?php endif ?>  
 <?php if($_GET['page'] == 'tables'): ?> 
 	<h1>Tables</h1> 
-	<div class="table-cat subcat_link">
+	<div class="table-cat subcat_link" href="index.php?page=meeting_breakout">
 		<img src="http://placehold.it/400x600">
 	</div>
-	<div class="table-cat subcat_link">
+	<div class="table-cat subcat_link" href="index.php?page=coffeeTables">
 		<img src="http://placehold.it/400x600">
 	</div>
-	<div class="table-cat subcat_link">
+	<div class="table-cat subcat_link" href="index.php?page=leaners">
 		<img src="http://placehold.it/400x600">
 	</div>
 <?php endif ?> 
 <?php if($_GET['page'] == 'tech_accesories'): ?> 
 	<h1>Tech and Accesories</h1> 
-	<div class="tech-cat subcat_link">
+	<div class="tech-cat subcat_link" href="index.php?page=screen_workstation">
 		<img src="http://placehold.it/400x600">
 	</div>
-	<div class="tech-cat subcat_link">
+	<div class="tech-cat subcat_link" href="index.php?page=tech">
 		<img src="http://placehold.it/400x600">
 	</div>
-	<div class="tech-cat subcat_link">
+	<div class="tech-cat subcat_link" href="index.php?page=monitor_arms">
 		<img src="http://placehold.it/400x600">
 	</div>
-	<div class="tech-cat subcat_link">
+	<div class="tech-cat subcat_link" href="index.php?page=miscellaneous">
 		<img src="http://placehold.it/400x600">
 	</div>
 <?php endif ?>
