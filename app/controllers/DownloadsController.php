@@ -20,8 +20,10 @@ class DownloadsController extends PageController {
 
 		$sql = "SELECT p.id, p.title AS score_title, p.category, 
 				i.product_id, i.image, i.image_position 
+				d.product_id 
 				FROM products AS p 
 				JOIN images AS i 
+				JOIN downloads AS 
 				ON p.id = i.product_id
 				WHERE 
 				category = 'storage'

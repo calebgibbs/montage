@@ -835,6 +835,9 @@ _:-ms-lang(x), #drop-down {
 .downloads-title {
   background: #177c7e; }
 
+.tran-p {
+  margin-bottom: 2rem; }
+
 #boxes {
   margin-top: 2rem; }
 
@@ -1052,6 +1055,10 @@ _:-ms-lang(x), #drop-down {
     font-size: 1.2rem;
     font-weight: lighter;
     width: 95%; }
+
+.port-title {
+  margin-left: 0 !important;
+  padding-left: 7%; }
 
 #left-col {
   width: 55%;
@@ -2138,6 +2145,9 @@ _:-ms-lang(x), #drop-down {
   display: none; }
 
 .techCat {
+  display: none; }
+
+.storageCat {
   display: none; }
 
 .showSel {

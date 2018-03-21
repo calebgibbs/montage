@@ -79,6 +79,13 @@
 		"oAP": "\/app\/controllers\/autologin.php",
 		"oF": 0
 		},
+	"\/app\/controllers\/BreakoutController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/BreakoutController.php",
+		"oF": 0
+		},
 	"\/app\/controllers\/ChairsController.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -93,6 +100,13 @@
 		"oAP": "\/app\/controllers\/ChangepwdController.php",
 		"oF": 0
 		},
+	"\/app\/controllers\/CoffeeTablesController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/CoffeeTablesController.php",
+		"oF": 0
+		},
 	"\/app\/controllers\/ContactController.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -100,11 +114,25 @@
 		"oAP": "\/app\/controllers\/ContactController.php",
 		"oF": 0
 		},
+	"\/app\/controllers\/CustomController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/CustomController.php",
+		"oF": 0
+		},
 	"\/app\/controllers\/DownloadsController.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/app\/controllers\/DownloadsController.php",
+		"oF": 0
+		},
+	"\/app\/controllers\/EditPortfolioController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/EditPortfolioController.php",
 		"oF": 0
 		},
 	"\/app\/controllers\/EditProductController.php": {
@@ -128,6 +156,13 @@
 		"oAP": "\/app\/controllers\/FavouritesController.php",
 		"oF": 0
 		},
+	"\/app\/controllers\/FocusController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/FocusController.php",
+		"oF": 0
+		},
 	"\/app\/controllers\/HelpController.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -149,6 +184,20 @@
 		"oAP": "\/app\/controllers\/JoineryAndCustomController.php",
 		"oF": 0
 		},
+	"\/app\/controllers\/JoineryController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/JoineryController.php",
+		"oF": 0
+		},
+	"\/app\/controllers\/LeanersController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/LeanersController.php",
+		"oF": 0
+		},
 	"\/app\/controllers\/LoginController.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -161,6 +210,34 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/app\/controllers\/ManageProductsController.php",
+		"oF": 0
+		},
+	"\/app\/controllers\/MeetingBreakoutController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/MeetingBreakoutController.php",
+		"oF": 0
+		},
+	"\/app\/controllers\/MeetingRoomController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/MeetingRoomController.php",
+		"oF": 0
+		},
+	"\/app\/controllers\/MiscellaneousController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/MiscellaneousController.php",
+		"oF": 0
+		},
+	"\/app\/controllers\/MonitorController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/MonitorController.php",
 		"oF": 0
 		},
 	"\/app\/controllers\/OurStoryController.php": {
@@ -219,6 +296,13 @@
 		"oAP": "\/app\/controllers\/ResultsController.php",
 		"oF": 0
 		},
+	"\/app\/controllers\/ScreenWorkstationController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/ScreenWorkstationController.php",
+		"oF": 0
+		},
 	"\/app\/controllers\/SearchController.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -238,6 +322,20 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/app\/controllers\/SignupController.php",
+		"oF": 0
+		},
+	"\/app\/controllers\/SoftController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/SoftController.php",
+		"oF": 0
+		},
+	"\/app\/controllers\/StoolController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/StoolController.php",
 		"oF": 0
 		},
 	"\/app\/controllers\/StorageController.php": {
@@ -261,6 +359,13 @@
 		"oAP": "\/app\/controllers\/TablesController.php",
 		"oF": 0
 		},
+	"\/app\/controllers\/TaskController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/TaskController.php",
+		"oF": 0
+		},
 	"\/app\/controllers\/TeamCollabController.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -273,6 +378,20 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/app\/controllers\/TechAndAccesoriesController.php",
+		"oF": 0
+		},
+	"\/app\/controllers\/TechController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/TechController.php",
+		"oF": 0
+		},
+	"\/app\/controllers\/VisitorHospController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/controllers\/VisitorHospController.php",
 		"oF": 0
 		},
 	"\/app\/controllers\/WorkstationsScreensController.php": {
@@ -308,6 +427,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/app\/partials\/contact.php",
+		"oF": 0
+		},
+	"\/app\/partials\/editport.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/editport.php",
 		"oF": 0
 		},
 	"\/app\/partials\/editProduct.php": {
@@ -385,6 +511,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/app\/partials\/our_story.php",
+		"oF": 0
+		},
+	"\/app\/partials\/portfolio.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/app\/partials\/portfolio.php",
 		"oF": 0
 		},
 	"\/app\/partials\/product.php": {
@@ -1859,6 +1992,16 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/products\/categories\/breakout.jpg": {
+		"ft": 16384,
+		"iS": 297428,
+		"oA": 0,
+		"oAP": "\/img\/products\/categories\/breakout.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/img\/products\/categories\/chairs.png": {
 		"ft": 32768,
 		"iS": 82176,
@@ -1881,6 +2024,36 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/products\/categories\/coffee.jpg": {
+		"ft": 16384,
+		"iS": 148630,
+		"oA": 0,
+		"oAP": "\/img\/products\/categories\/coffee.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/products\/categories\/custom.jpg": {
+		"ft": 16384,
+		"iS": 211364,
+		"oA": 0,
+		"oAP": "\/img\/products\/categories\/custom.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/products\/categories\/focus.jpg": {
+		"ft": 16384,
+		"iS": 202715,
+		"oA": 0,
+		"oAP": "\/img\/products\/categories\/focus.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/img\/products\/categories\/joinery.png": {
 		"ft": 32768,
 		"iS": 157567,
@@ -1901,6 +2074,96 @@
 		"oIPL": 1,
 		"opt": 1,
 		"oT": 1,
+		"q": 100
+		},
+	"\/img\/products\/categories\/joinerysub.jpg": {
+		"ft": 16384,
+		"iS": 206564,
+		"oA": 0,
+		"oAP": "\/img\/products\/categories\/joinerysub.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/products\/categories\/leaner.jpg": {
+		"ft": 16384,
+		"iS": 127839,
+		"oA": 0,
+		"oAP": "\/img\/products\/categories\/leaner.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/products\/categories\/meetingb.jpg": {
+		"ft": 16384,
+		"iS": 145488,
+		"oA": 0,
+		"oAP": "\/img\/products\/categories\/meetingb.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/products\/categories\/meetingroom.jpg": {
+		"ft": 16384,
+		"iS": 179072,
+		"oA": 0,
+		"oAP": "\/img\/products\/categories\/meetingroom.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/products\/categories\/misc.jpg": {
+		"ft": 16384,
+		"iS": 67397,
+		"oA": 0,
+		"oAP": "\/img\/products\/categories\/misc.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/products\/categories\/monitora.jpg": {
+		"ft": 16384,
+		"iS": 84383,
+		"oA": 0,
+		"oAP": "\/img\/products\/categories\/monitora.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/products\/categories\/screen.jpg": {
+		"ft": 16384,
+		"iS": 85491,
+		"oA": 0,
+		"oAP": "\/img\/products\/categories\/screen.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/products\/categories\/soft.jpg": {
+		"ft": 16384,
+		"iS": 123808,
+		"oA": 0,
+		"oAP": "\/img\/products\/categories\/soft.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/products\/categories\/stools.jpg": {
+		"ft": 16384,
+		"iS": 134622,
+		"oA": 0,
+		"oAP": "\/img\/products\/categories\/stools.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"q": 100
 		},
 	"\/img\/products\/categories\/storage.png": {
@@ -1947,6 +2210,36 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/products\/categories\/task.jpg": {
+		"ft": 16384,
+		"iS": 261908,
+		"oA": 0,
+		"oAP": "\/img\/products\/categories\/task.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/products\/categories\/teamcollab.jpg": {
+		"ft": 16384,
+		"iS": 180899,
+		"oA": 0,
+		"oAP": "\/img\/products\/categories\/teamcollab.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/products\/categories\/tech.jpg": {
+		"ft": 16384,
+		"iS": 75132,
+		"oA": 0,
+		"oAP": "\/img\/products\/categories\/tech.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/img\/products\/categories\/tech.png": {
 		"ft": 32768,
 		"iS": 10529,
@@ -1967,6 +2260,16 @@
 		"oIPL": 1,
 		"opt": 1,
 		"oT": 1,
+		"q": 100
+		},
+	"\/img\/products\/categories\/vishos.jpg": {
+		"ft": 16384,
+		"iS": 127704,
+		"oA": 0,
+		"oAP": "\/img\/products\/categories\/vishos.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"q": 100
 		},
 	"\/img\/products\/categories\/workstations.png": {

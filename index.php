@@ -269,6 +269,11 @@ switch($page){
 	$controller = new EditProductController($dbc);	 
 	break;
 
+	case 'edit_port':
+	require 'app/controllers/EditPortfolioController.php'; 
+	$controller = new EditPortfolioController($dbc);	 
+	break;
+
 	default:
 	require 'app/controllers/Error404Controller.php';
 	$controller = new Error404Controller();

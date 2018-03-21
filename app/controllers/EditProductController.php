@@ -7,6 +7,9 @@ class EditProductController extends PageController {
 		$this->dbc = $dbc;  
 		if ($_SESSION['account_type'] != 'admin') {
 			header('Location: index.php?page=404');
+		} 
+		if(!isset($_GET['product']))  ,{ 
+			header('Location: index.php?page=404');
 		}
 		$this->getData();  
 		if(isset($_POST['makeChanges'])){

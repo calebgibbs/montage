@@ -7,69 +7,69 @@ $this -> layout('master',[
 <div class="body">
 <div class="grid-padding">
 <?php if( $_GET['page'] == 'agile_furniture' ): ?> 
-	<h1>Agile Furniture</h1> 
+	<div id="search-heading" class="agile-title tran-p"><h2>Agile Furniture</h2></div>  
 	<div class="agile-cat subcat_link" href="index.php?page=team_collab">
-		<img alt="Team Collaborative" src="http://placehold.it/400x600">
+		<img alt="Team Collaborative" src="img/products/categories/teamcollab.jpg">
 	</div>
 	<div class="agile-cat subcat_link" href="index.php?page=breakout">
-		<img src="http://placehold.it/400x600">
+		<img alt="breakout furniture" src="img/products/categories/breakout.jpg">
 	</div>
 	<div class="agile-cat subcat_link" href="index.php?page=focus">
-		<img src="http://placehold.it/400x600">
+		<img src="img/products/categories/focus.jpg">
 	</div>
 <?php endif ?>	
 <?php if($_GET['page'] == 'joinery_custom'): ?> 
-	<h1>Joinery and Custom Furniture</h1> 
+	<div id="search-heading" class="joinery-title tran-p"><h2>Joinery + Custom</h2></div>
 	<div class="jc-cat subcat_link" href="index.php?page=joinery">
-		<img src="http://placehold.it/400x600">
+		<img src="img/products/categories/custom.jpg"> 
 	</div>
 	<div class="jc-cat subcat_link" href="index.php?page=custom">
-		<img src="http://placehold.it/400x600">
+		<img src="img/products/categories/joinerysub.jpg">
 	</div>
 <?php endif ?> 
 <?php if($_GET['page'] == 'seating'): ?> 
-	<h1>Seating</h1> 
+	<div id="search-heading" class="chair-title tran-p"><h2>Seating</h2></div>
 	<div class="seat-cat1 subcat_link" href="index.php?page=soft">
-		<img src="http://placehold.it/400x600">
+		<img src="img/products/categories/soft.jpg">
 	</div>
 	<div class="seat-cat1 subcat_link" href="index.php?page=task"> 
-		<img src="http://placehold.it/400x600">
+		<img src="img/products/categories/task.jpg">
 	</div>
 	<div class="seat-cat1 subcat_link" href="index.php?page=visitor_hospitality">
-		<img src="http://placehold.it/400x600">
+		<img src="img/products/categories/vishos.jpg">
 	</div>
 	<div class="seat-cat2 subcat_link" href="index.php?page=stools">
-		<img src="http://placehold.it/400x600">
+		<img src="img/products/categories/stools.jpg">
 	</div>
 	<div class="seat-cat2 subcat_link" href="index.php?page=meeting_room">
-		<img src="http://placehold.it/400x600">
+		<img src="img/products/categories/meetingroom.jpg">
 	</div>
 <?php endif ?>  
 <?php if($_GET['page'] == 'tables'): ?> 
-	<h1>Tables</h1> 
+	<div id="search-heading" class="tables-title tran-p"><h2>Tables</h2></div> 
 	<div class="table-cat subcat_link" href="index.php?page=meeting_breakout">
-		<img src="http://placehold.it/400x600">
+		<img src="img/products/categories/meetingb.jpg">
 	</div>
 	<div class="table-cat subcat_link" href="index.php?page=coffeeTables">
-		<img src="http://placehold.it/400x600">
+		<img src="img/products/categories/coffee.jpg">
 	</div>
 	<div class="table-cat subcat_link" href="index.php?page=leaners">
-		<img src="http://placehold.it/400x600">
+		<img src="img/products/categories/leaner.jpg">
 	</div>
 <?php endif ?> 
 <?php if($_GET['page'] == 'tech_accesories'): ?> 
-	<h1>Tech and Accesories</h1> 
+	<div id="search-heading" class="tech-title tran-p"><h2>Tech &amp; Accesories</h2></div> 
 	<div class="tech-cat subcat_link" href="index.php?page=screen_workstation">
-		<img src="http://placehold.it/400x600">
+		<img src="img/products/categories/screen.jpg">
 	</div>
 	<div class="tech-cat subcat_link" href="index.php?page=tech">
-		<img src="http://placehold.it/400x600">
+		<img src="img/products/categories/tech.jpg">
 	</div>
 	<div class="tech-cat subcat_link" href="index.php?page=monitor_arms">
-		<img src="http://placehold.it/400x600">
+		<img src="img/products/categories/monitora.jpg">
 	</div>
 	<div class="tech-cat subcat_link" href="index.php?page=miscellaneous">
-		<img src="http://placehold.it/400x600">
+		<img src="img/products/categories/misc.jpg">
 	</div>
 <?php endif ?>
 </div>

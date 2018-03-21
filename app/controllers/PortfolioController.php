@@ -6,11 +6,11 @@ class PortfolioController extends PageController {
 		$this->getData();
 	}  
 	public function buildHTML(){ 
-		echo $this->plates->render('product', $this->data);
+		echo $this->plates->render('portfolio', $this->data);
 	}  
 	private function getData(){ 
 		$pageId = $this->dbc->real_escape_string($_GET['num']);  
-		$sql = "SELECT id, title, description FROM portfolios WHERE id = '$pageId'"; 
+		$sql = "SELECT * FROM portfolios WHERE id = '$pageId'"; 
 		$result = $this->dbc->query($sql);
 		if( !$result || $result->num_rows == 0) { 
 			header('Location: index.php?page=404');

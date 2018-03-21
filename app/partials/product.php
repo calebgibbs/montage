@@ -36,32 +36,6 @@ $this -> layout('master',[
 	} ?>">
 	<div id="page-padding">
 		<div id="left-col">
-			<?php if($_GET['page'] == 'portfolio'): ?>
-				<div class="product-images">
-					<div class="large-img">
-						<?php foreach( $Allimages as $image ): ?>
-							<?php if( $image['image_position'] == 1 ): ?> 
-								<img id="dispayImg" src="img/portfolio/large/<?= $image['image'] ?>"> 
-							<?php endif ?>
-						<?php endforeach ?>
-					</div>
-					<div class="slider-container">
-						<button class="prev slider-btn" alt="Previous"><</button> 
-						<button class="next slider-btn" alt="Next">></button> 
-						<div class="slider">
-							<div class="thumbs">
-								<?php $imgC = 0 ?>
-								<?php foreach($Allimages as $image ): ?> 
-								<?php $imgC++ ?>
-								<div class="imgSlide_<?= $imgC ?>">
-									<img <?php if($image['image_position'] == 1): ?> id="imgSize" <?php endif ?> src="img/portfolio/thumbnail/<?= $image['image'] ?>" onClick="ChangeImage('img/portfolio/large/<?= $image['image'] ?>')">
-								</div> 
-								<?php endforeach ?>
-							</div>	
-						</div>
-					</div>
-				</div> 
-			<?php endif ?>
 			<?php if($_GET['page'] == 'product'): ?>
 				<div class="product-images">
 					<div class="large-img">
@@ -126,13 +100,6 @@ $this -> layout('master',[
 							<p>Supplier: <?= ucfirst($product['supplier']) ?></p>
 						<?php endif ?>
 						<p><?= $product['description'] ?></p>
-					</div>  
-				<?php endif ?>
-
-				<?php if($_GET['page'] == 'portfolio'): ?>
-					<div class="title-text">
-						<h1 class="prod-d-title"><?= $port['title'] ?></h1> 
-						<p><?= $port['description'] ?></p>
 					</div>  
 				<?php endif ?>
 				<?php if($_GET['page'] == 'product'): ?>

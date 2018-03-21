@@ -17,8 +17,8 @@ class AddproductController extends PageController {
 	
 	private function getSelects(){ 
 		//get suppliers 
-		$sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage9_dtat' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'";  
-		// $sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'"; 
+		// $sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage9_dtat' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'";  
+		$sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'"; 
 		$result = $this->dbc->query($sql);  
 		if ($result) {
 			$result = $result->fetch_assoc(); 
@@ -96,6 +96,11 @@ class AddproductController extends PageController {
 			}	
 		}elseif ($category == 'tech_accesories') {
 			if($_POST['cat5'] == '5'){ 
+				$errors++;
+				$this->data['subCategoryError'] = 'style="background: #d9534f"';
+			}	
+		}elseif($category == 'storage'){
+			if($_POST['cat6'] == '6'){ 
 				$errors++;
 				$this->data['subCategoryError'] = 'style="background: #d9534f"';
 			}	
@@ -298,6 +303,10 @@ class AddproductController extends PageController {
 		}elseif ($category == 'tech_accesories') {
 			if($_POST['cat5'] != '5'){ 
 				$cat2 = $this->dbc->real_escape_string($_POST['cat5']);
+			}	
+		}elseif($category == 'storage'){
+			if($_POST['cat5'] != '6'){ 
+				$cat2 = $this->dbc->real_escape_string($_POST['cat6']);
 			}	
 		}else{ 
 			$cat2 = 'none';
