@@ -1,7 +1,13 @@
 $(document).ready(function () {
     $('img').on('dragstart', function(event) { event.preventDefault(); });
     
-    $('.drop-trigger').hover(function(){
+    $('.wrk').hover(function(){ 
+        $('.scrn').toggleClass('colour');   
+    });
+    $('.scrn').hover(function(){ 
+        $('.wrk').toggleClass('colour');  
+    }); 
+     $('.drop-trigger').hover(function(){
         $('#drop-down').addClass('show-menu'); 
         $('.drop-trigger').addClass('colour');   
     }); 

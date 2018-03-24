@@ -71,6 +71,18 @@ $this -> layout('master',[
 	<div class="tech-cat subcat_link" href="index.php?page=miscellaneous">
 		<img src="img/products/categories/misc.jpg">
 	</div>
+<?php endif ?> 
+<?php if($_GET['page'] == 'storage'): ?> 
+	<div id="search-heading" class="storage-title tran-p"><h2>Storage</h2></div> 
+	<div class="table-cat subcat_link" href="index.php?page=bespoke">
+		<img src="img/products/categories/bespoke.jpg">
+	</div>
+	<div class="table-cat subcat_link" href="index.php?page=personal">
+		<img src="img/products/categories/personal.jpg">
+	</div>
+	<div class="table-cat subcat_link" href="index.php?page=team">
+		<img src="img/products/categories/team.jpg">
+	</div>	
 <?php endif ?>
 </div>
 </div>

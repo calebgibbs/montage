@@ -215,7 +215,7 @@ $this -> layout('master',[
 						}elseif($_POST['cat6'] === 'none'){ 
 							$sub6 = 'Other';
 						}else {
-							$sub5 = 'Please select a category';
+							$sub6 = 'Please select a category';
 						}
 					?> 
 					<option value="<?= $_POST['cat6'] ?>"><?= $sub6 ?></option>

@@ -8,7 +8,7 @@ class EditProductController extends PageController {
 		if ($_SESSION['account_type'] != 'admin') {
 			header('Location: index.php?page=404');
 		} 
-		if(!isset($_GET['product']))  ,{ 
+		if(!isset($_GET['product'])){ 
 			header('Location: index.php?page=404');
 		}
 		$this->getData();  
@@ -55,8 +55,8 @@ class EditProductController extends PageController {
 		$result = $this->dbc->query($sql); 
 		$this->data['images'] = $result->fetch_all(MYSQLI_ASSOC); 
 		//get selects 
-		$sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage9_dtat' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'";
-		// $sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'"; 
+		// $sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage9_dtat' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'";
+		$sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'"; 
 		$result = $this->dbc->query($sql);  
 		if ($result) {
 			$result = $result->fetch_assoc(); 
@@ -214,6 +214,10 @@ class EditProductController extends PageController {
 			if($_POST['cat5'] != '5'){ 
 				$cat2 = $this->dbc->real_escape_string($_POST['cat5']);
 			}	
+		}elseif($cat == 'storage'){
+			if($_POST['cat6'] != '6'){ 
+				$cat2 = $this->dbc->real_escape_string($_POST['cat6']);
+			}	
 		}else{ 
 			$cat2 = 'none';
 		} 
@@ -308,7 +312,7 @@ class EditProductController extends PageController {
 				$result = $result->fetch_assoc(); 
 				$DBtitle = $result['title']; 
 				$DBlink = $result['download_link']; 
-				if($DBtitle != $title || $DBlink != link){ 
+				if($DBtitle != $title || $DBlink != $link){ 
 					if(strlen($title) === 0 && strlen($link) === 0){
 						$sql = "DELETE FROM downloads WHERE product_id = '$id' AND position = '$i'"; 
 						$this->dbc->query($sql);
@@ -320,50 +324,70 @@ class EditProductController extends PageController {
 			}  
 		} 
 		//images  
-		// for($i=1;$i<=5;$i++){ 
-		// 	$sql = "SELECT image FROM product_images WHERE product_id = '$id' AND image_position = '$i'"; 
-		// 	$result = $this->dbc->query($sql);  
-		// 	$del = 'delImg'.$i;
-		// 	if(isset($_POST[$del])){ 
-		// 		$del = $_POST[$del];
-		// 	}  
-		// 	if(!$result || $result->num_rows == 0){ 
-		// 		//uploading a new image 
-		// 	}else{  
-		// 		$result = $result->fetch_assoc();
-		// 		$img = $result['image']; 
-		// 		//replacing image  
-		// 		$file = 'image'.$i; 
-		// 		if(!in_array($_FILES[$file]['error'], [4])){ 
-		// 			$current = $img;
-		// 			unlink("img/products/large/$current"); 
-		// 			unlink("img/products/thumbnail/$current");
-		// 			$manager = new ImageManager();
-		// 			$image = $manager->make( $_FILES[$file]['tmp_name'] );   
-		// 			$fileExtension = $this->getFileExtension( $image->mime() ); 
-		// 			$fileName = uniqid(); 
-		// 			$image->resize(250, 150); 
-		// 			$image->save("img/products/thumbnail/$fileName$fileExtension");  
-		// 			$image->resize(770, 400); 
-		// 			$image->save("img/products/large/$fileName$fileExtension"); 
-		// 			$sql = "UPDATE product_images SET image = '$fileName$fileExtension' WHERE product_id = '$id' AND image_position = '$i'"; 
-		// 			$this->dbc->query($sql);
-		// 		}
-		// 	}
-		// 	if(isset($del)){  
-		// 		unlink("img/products/large/$img"); 
-		// 		unlink("img/products/thumbnail/$img"); 
-		// 		$sql = "DELETE FROM product_images WHERE product_id = '$id' AND image_position = '$i'"; 
-		// 		$this->dbc->query($sql);
-		// 		$next = $i++; 
-		// 		$sql = "SELECT image FROM product_images WHERE product_id = '$id' AND image_position = '$next'"; 
-		// 		$result = $this->dbc->query($sql); 
-		// 		if($result || $result->num_rows != 0){  
-		// 			$sql = "UPDATE product_images SET image_position = '$i' WHERE product_id = '$id' AND image_position = '$next'"; 
-		// 			$this->dbc->query($sql);
-		// 		}
-		// 	}
-		// } 
+		for($i=1;$i<=5;$i++){ 
+			$img = 'image'.$i; 
+			$del = 'delImg'.$i; 
+			if(!in_array($_FILES[$img]['error'], [4])){ 
+				$sql = "SELECT image FROM product_images WHERE product_id = '$id' AND image_position = '$i'"; 
+				$result = $this->dbc->query($sql); 
+				if($result->num_rows == 1){ 
+					$image = $result->fetch_assoc(); $image = $image['image']; 
+					//remove current image 
+					unlink("img/products/large/$image");
+					unlink("img/products/thumbnail/$image"); 
+					//add new image  
+					$manager = new ImageManager(); 
+					$image = $manager->make( $_FILES[$img]['tmp_name'] );
+					$fileExtension = $this->getFileExtension( $image->mime() ); 
+					$fileName = uniqid(); 
+					$image->save("img/products/large/$fileName$fileExtension", 60); 
+					$image->resize(250, 150); 
+					$image->save("img/products/thumbnail/$fileName$fileExtension", 60); 
+					//update in databse
+					$sql = "UPDATE product_images SET image = '$fileName$fileExtension' WHERE product_id = '$id' AND image_position = '$i'";  
+					$this->dbc->query($sql); 
+				}else{  
+					$manager = new ImageManager();  
+					$image = $manager->make( $_FILES[$img]['tmp_name'] ); 
+					$fileExtension = $this->getFileExtension( $image->mime() ); 
+					$fileName = uniqid(); 
+					$image->save("img/products/large/$fileName$fileExtension", 60); 
+					$image->resize(250, 150); 
+					$image->save("img/products/thumbnail/$fileName$fileExtension", 60); 
+					$sql = "INSERT INTO product_images(product_id, image, image_position) VALUES('$id','$fileName$fileExtension','$i')";  
+					$this->dbc->query($sql);
+				}
+			}  
+			if(isset($_POST[$del])){ 
+				//get current image count  
+				$sql = "SELECT image FROM product_images WHERE product_id = '$id'"; 
+				$allImages = $this->dbc->query($sql); 
+				if($allImages->num_rows != 0){ 
+					$allImg = $allImages->fetch_all(MYSQLI_ASSOC); 
+					$feilds = count($allImg);
+				}
+				//delete current image 
+				$sql = "SELECT image FROM product_images WHERE product_id = '$id' AND image_position = '$i'";  
+				$result = $this->dbc->query($sql); 
+				if($result->num_rows == 1){ 
+					$image = $result->fetch_assoc(); $image = $image['image']; 
+					unlink("img/products/large/$image"); 
+					unlink("img/products/thumbnail/$image"); 
+					$sql = "DELETE FROM product_images WHERE image = '$image' AND image_position = '$i'"; 
+					$this->dbc->query($sql);
+				} 
+				//check how many feilds there are and then that becomes the max  
+				if($i < $feilds){ 
+					for($j=$i;$j<$feilds;$j++){ 
+						$current = $j; 
+						$next = $current+1; 
+						$sql = "UPDATE product_images SET image_position = '$j' WHERE product_id = '$id' AND image_position = '$next'"; 
+						$this->dbc->query($sql);
+					}
+				}
+			}
+		}
+
 		header('Location: index.php?page=product&productnum='.$id);
 	} 
 

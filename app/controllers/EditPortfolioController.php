@@ -50,7 +50,7 @@ class EditPortfolioController extends PageController {
 			$this->data['clientMessage'] = '<span style="color: #d9534f">*Client name is too long</span>'; 
 			$errors++; 	 
 		} 
-		if(strlen($_POST['date']) > 25){ 
+		if(strlen($_POST['date']) > 70){ 
 			$this->data['dateMessage'] = '<span style="color: #d9534f">*The date is too long</span>'; 
 			$errors++;
 		}
@@ -103,9 +103,9 @@ class EditPortfolioController extends PageController {
 			$sql .= "client = 'N/A',";	
 		} 
 		if(strlen($date) != 0){
-			$sql .= "date = '$client',";
+			$sql .= "date = '$date',";
 		}else{ 
-			$sql .= "date = '$client',";
+			$sql .= "date = 'N/A',";
 		} 
 		if(strlen($arc) != 0){ 
 			$sql .= "architect = '$arc',";
@@ -118,12 +118,91 @@ class EditPortfolioController extends PageController {
 			$sql .= "contractor = 'N/A',";	
 		} 
 		$sql .= "description = '$desc' WHERE id = '$id'"; 
-		$this->dbc->query($sql); 
+		$this->dbc->query($sql);  
+		for($i=1;$i<=5;$i++){ 
+			$img = 'image'.$i; 
+			$del = 'delImg'.$i; 
+			if(!in_array($_FILES[$img]['error'], [4])){
+				$sql = "SELECT image FROM portfolio_images WHERE portfolio_id = '$id' AND image_position = '$i'"; 
+				$result = $this->dbc->query($sql); 
+				if($result->num_rows == 1){ 
+					//remove current images 
+					$image = $result->fetch_assoc(); $image = $image['image'];
+					unlink("img/portfolio/large/$image"); 
+					unlink("img/portfolio/thumbnail/$image");	
+					//add new image 
+					$manager = new ImageManager(); 
+					$image = $manager->make( $_FILES[$img]['tmp_name'] );
+					$fileExtension = $this->getFileExtension( $image->mime() ); 
+					$fileName = uniqid(); 
+					$image->save("img/portfolio/large/$fileName$fileExtension", 60); 
+					$image->resize(250, 150); 
+					$image->save("img/portfolio/thumbnail/$fileName$fileExtension", 60); 
+					$sql = "UPDATE portfolio_images SET image = '$fileName$fileExtension' WHERE portfolio_id = '$id' AND image_position = '$i'";  
+					$this->dbc->query($sql); 
+				}else{ 
+					//add new image
+					$manager = new ImageManager(); 
+					$image = $manager->make( $_FILES[$img]['tmp_name'] ); 
+					$fileExtension = $this->getFileExtension( $image->mime() ); 
+					$fileName = uniqid(); 
+					$image->save("img/portfolio/large/$fileName$fileExtension", 60); 
+					$image->resize(250, 150); 
+					$image->save("img/portfolio/thumbnail/$fileName$fileExtension", 60); 
+					$sql = "INSERT INTO portfolio_images(portfolio_id, image, image_position)
+						VALUES('$id','$fileName$fileExtension', '$i')"; 
+					$this->dbc->query($sql);
+				} 
+			} 
+			if(isset($_POST[$del])){ 
+				//get image count
+				$sql = "SELECT image FROM portfolio_images WHERE portfolio_id = '$id'"; 
+				$allImages = $this->dbc->query($sql); 
+				if($allImages->num_rows != 0){ 
+					$allImg = $allImages->fetch_all(MYSQLI_ASSOC); 
+					$feilds = count($allImg); 
+				}  
+				//get current image name 
+				$sql = "SELECT image FROM portfolio_images WHERE portfolio_id = '$id' AND image_position = '$i'"; 
+				$result = $this->dbc->query($sql); 
+				if($result->num_rows == 1){ 
+					$image = $result->fetch_assoc(); $image = $image['image']; 
+					unlink("img/portfolio/large/$image"); 
+					unlink("img/portfolio/thumbnail/$image"); 
+					$sql = "DELETE FROM portfolio_images WHERE image = '$image' AND image_position = '$i'"; 
+					$this->dbc->query($sql);
+				} 
+				//check how many images there are and then that becomes the max
+				if($i < $feilds){ 
+				
+					for($j=$i;$j<$feilds;$j++){ 
+						$current = $j; 
+						$next = $current+1; 
+						$sql = "UPDATE portfolio_images SET image_position = '$j' WHERE portfolio_id AND image_position = '$next'";
+						$this->dbc->query($sql); 
+						echo "Changed image ".$next."to ".$j."<br>";  
+					}  
+				}  
+			}
+		}
 		header('Location: index.php?page=portfolio&num='.$id);
 	} 			
 
 	private function delete(){ 
-		die('deleting');
+		$id = $_GET['port']; 
+		$sql = "SELECT image FROM portfolio_images WHERE portfolio_id = '$id'"; 
+		$results = $this->dbc->query($sql);  
+		if($results->num_rows != 0){ 
+			$images = $results->fetch_all(MYSQLI_ASSOC); 
+			foreach($images as $image){ 
+				$img = $image['image'];
+				unlink("img/portfolio/large/$img"); 
+				unlink("img/portfolio/thumbnail/$img"); 
+			}
+			$sql = "DELETE FROM portfolios WHERE id = '$id'"; 
+			$this->dbc->query($sql); 
+			header('Location: index.php?page=portfolios');
+		}
 	} 
 	private function getFileExtension( $mimeType ) {
 		switch($mimeType) {

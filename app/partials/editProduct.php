@@ -365,6 +365,47 @@ $cat2 = $product['category2'];
 					<option value="miscellaneous">Miscellaneous</option> 
 					<option value="none">Other</option>
 				</select>
+			</div> 
+			<div class="subCat storageCat">
+				<select name="cat6" <?=  isset($subCategoryError) ? $subCategoryError : '' ?>>
+					<?php if(isset($cat2)): ?> 
+						<?php 
+						if($cat2 === 'bespoke_s'){
+							$sub6 = 'Bespoke Storage';
+						}elseif($cat2 === 'personal_s'){ 
+							$sub6 = 'Personal Storage';
+						}elseif ($cat2 === 'team_s') {
+							$sub6 = 'Team Storage';
+						}elseif($cat2 === 'none'){ 
+							$sub6 = 'Other';
+						}else {
+							$sub6 = 'Please select a category';
+						}
+						?>
+					<option value="<?= $cat2 ?>"><?= $sub6 ?></option>
+					<?php endif ?>
+					<?php if(isset($_POST['cat6'])): ?>
+						<?php  
+						if($_POST['cat6'] === 'bespoke_s'){
+							$sub6 = 'Bespoke Storage';
+						}elseif($_POST['cat6'] === 'personal_s'){ 
+							$sub6 = 'Personal Storage';
+						}elseif ($_POST['cat6'] === 'team_s') {
+							$sub6 = 'Team Storage';
+						}elseif($_POST['cat6'] === 'none'){ 
+							$sub6 = 'Other';
+						}else {
+							$sub6 = 'Please select a category';
+						}
+						?> 
+						<option value="<?= $_POST['cat6'] ?>"><?= $sub6 ?></option>
+					<?php endif ?>
+					<option value="6">Storage category</option> 
+					<option value="bespoke_s">Bespoke Storage</option>
+					<option vlaue="personal_s">Personal Storage</option>
+					<option value="team_s">Team Storage</option>
+					<option value="none">Other</option>
+				</select>	
 			</div>
 			<div class="form-textarea">
 				<textarea name="desc" required id="prod-desc-ta"><?= isset($_POST['desc']) ? $_POST['desc'] : $product['description'] ?></textarea> 

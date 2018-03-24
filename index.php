@@ -75,6 +75,21 @@ switch($page){
 	case 'storage':
 	require 'app/controllers/StorageController.php'; 
 	$controller = new StorageController($dbc);
+	break; 
+
+	case 'bespoke':
+	require 'app/controllers/BespokeController.php'; 
+	$controller = new BespokeController($dbc);
+	break; 
+
+	case 'personal':
+	require 'app/controllers/PersonalController.php'; 
+	$controller = new PersonalController($dbc);
+	break; 
+
+	case 'team':
+	require 'app/controllers/TeamController.php'; 
+	$controller = new TeamController($dbc);
 	break;
 
 	case 'agile_furniture':

@@ -47,7 +47,7 @@ foreach( $images as $image ){
 			</div> 
 			<div class="form-textarea">
 				<textarea name="desc" required id="prod-desc-ta"><?= isset($_POST['desc']) ? $_POST['desc'] : $port['description'] ?></textarea> 
-				<span class="floating-label">Product description  <?=  isset($descMessage) ? $descMessage : '' ?></span>
+				<span class="floating-label">Project Description  <?=  isset($descMessage) ? $descMessage : '' ?></span>
 			</div>
 			<div id="form-images">
 				<h2>Images</h2>
