@@ -37,7 +37,6 @@
 		font-size: 3rem 
 		margin-top: 0 
 		margin-bottom: 0 
-		margin-left: -1.5rem  
 		font-weight: 100   
 		text-transform: uppercase 
 	h2 	
@@ -322,14 +321,25 @@
 	#page-padding 
 		h1 
 			font-size: 2.8rem  
-			margin-left: -1.3rem
 		h2 
 			font-size: 1.8rem  
 		p 
-			font-size: 1.1rem  
+			font-size: 1.1rem    
 	.product-images 
 		ol 
 			margin-left: 4.3% 
+@include navigation-desktop-sm 
+	#page-padding 
+		h1 
+			font-size: 2.8rem  
+		h2 
+			font-size: 1.8rem  
+		p 
+			font-size: 1.1rem 	
+			// width: 85% 
+	#right-col 
+		width: 35% 
+		float: right
 
 @include tablet 
 	#left-col 
