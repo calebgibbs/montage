@@ -829,7 +829,13 @@ _:-ms-lang(x), #drop-down {
   .sus-text h2 {
     font-size: 1.55rem; }
   .sus-text p {
-    font-size: 1.15rem; } }
+    font-size: 1.15rem; }
+  #smart-modal {
+    margin-top: -32.71rem !important; }
+  #recycle-modal {
+    margin-top: -32.71rem !important; }
+  #material-modal {
+    margin-top: -23.2rem !important; } }
 
 #footer {
   width: 100%;
