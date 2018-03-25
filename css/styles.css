@@ -1991,6 +1991,22 @@ _:-ms-lang(x), #drop-down {
       .tech-dia:hover img:nth-of-type(2) {
         opacity: 1; } }
 
+@media screen and (max-width: 1248px) {
+  .pro-grid-desktop {
+    display: none; }
+  .mobile-prod-box {
+    display: inline-block !important;
+    width: 49%; }
+    .mobile-prod-box h3 {
+      width: 90%;
+      color: #fff;
+      padding: 10px;
+      background: #177c7e;
+      text-align: center;
+      font-weight: lighter;
+      margin: 0 auto;
+      margin-bottom: 10px; } }
+
 .grid-padding {
   width: 80%;
   margin: 0 auto; }
