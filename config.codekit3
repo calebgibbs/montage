@@ -4208,12 +4208,34 @@
 		},
 	"\/img\/sustainability\/material.png": {
 		"ft": 32768,
-		"iS": 110914,
+		"iS": 119722,
 		"oA": 0,
 		"oAP": "\/img\/sustainability\/material.png",
 		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/sustainability\/material1.png": {
+		"ft": 32768,
+		"iS": 110914,
+		"oA": 0,
+		"oAP": "\/img\/sustainability\/material1.png",
+		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/sustainability\/modal-smart.png": {
+		"ft": 32768,
+		"iS": 36648,
+		"oA": 0,
+		"oAP": "\/img\/sustainability\/modal-smart.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
@@ -4263,9 +4285,20 @@
 		},
 	"\/img\/sustainability\/smart.png": {
 		"ft": 32768,
-		"iS": 217264,
+		"iS": 229899,
 		"oA": 0,
 		"oAP": "\/img\/sustainability\/smart.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/sustainability\/smart1.png": {
+		"ft": 32768,
+		"iS": 217264,
+		"oA": 0,
+		"oAP": "\/img\/sustainability\/smart1.png",
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,

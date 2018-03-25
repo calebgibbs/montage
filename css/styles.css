@@ -731,6 +731,12 @@ _:-ms-lang(x), #drop-down {
   .bgM:hover img {
     transform: scale(1); }
 
+#smart-modal {
+  margin-top: -47rem !important; }
+
+#recycle-modal {
+  margin-top: -47.5rem !important; }
+
 @media screen and (max-width: 1440px) {
   .sustainability-page {
     height: 95vh;

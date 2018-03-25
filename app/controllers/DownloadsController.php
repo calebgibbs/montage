@@ -18,17 +18,12 @@ class DownloadsController extends PageController {
 		$this->data['title'] = 'Downloads'; 
 		$this->data['class'] = 'downloads-title'; 
 
-		$sql = "SELECT p.id, p.title AS score_title, p.category, 
-				i.product_id, i.image, i.image_position 
-				d.product_id 
+		$sql = "SELECT p.id, p.title, 
+					i.product_id, i.image, i.image_position, 
+					d.poduct_id, d.title 
 				FROM products AS p 
-				JOIN images AS i 
-				JOIN downloads AS 
-				ON p.id = i.product_id
-				WHERE 
-				category = 'storage'
-				AND image_position = '1'"; 
-
+				JOIN downloads AS d ON d.product_id = p.id";
+		die($sql);
 		$result = $this->dbc->query($sql); 
 
 		if (!$result || $result->num_rows == 0) {
