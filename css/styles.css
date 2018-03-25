@@ -778,7 +778,8 @@ _:-ms-lang(x), #drop-down {
   .story-page {
     background: none; }
   .sus-m-padding {
-    margin: 1rem; }
+    margin: 1rem;
+    margin-top: 4rem !important; }
     .sus-m-padding h1 {
       width: 95%;
       padding: 6px;
@@ -803,7 +804,18 @@ _:-ms-lang(x), #drop-down {
     width: 88%;
     margin-left: 7%;
     margin-top: 2%; }
+  .sustainability-page {
+    height: auto; }
   #modals {
+    display: none; }
+  .mobile-art article {
+    width: 90%;
+    margin: 0 auto; }
+  .m-material-art {
+    display: none; }
+  .m-smart-art {
+    display: none; }
+  .m-recycle-art {
     display: none; } }
 
 @media screen and (max-width: 1333px) {

@@ -68,6 +68,21 @@ $(document).ready(function(){
         $('#recycle-modal').addClass('openM'); 
         $('#sus-page').addClass('bgM');  
     });  
+    $('.m-material-art-trig').click(function(){
+        $('.m-material-art').slideToggle();
+        $('.m-smart-art').slideUp();
+        $('.m-recycle-art').slideUp();
+    });
+    $('.m-smart-art-trig').click(function(){
+        $('.m-smart-art').slideToggle();
+        $('.m-material-art').slideUp();
+        $('.m-recycle-art').slideUp();
+    }); 
+    $('.m-recycle-art-trig').click(function(){
+        $('.m-recycle-art').slideToggle();
+        $('.m-material-art').slideUp();
+        $('.m-smart-art').slideUp();
+    });
     $(document).on('click','#delPrompt',function(e){
         e.preventDefault(); 
         $('.delButton2').css('display','inline-block');
