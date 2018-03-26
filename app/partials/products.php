@@ -46,28 +46,32 @@ $prevPage = $_SERVER['QUERY_STRING'];
 			<h3 class="productsh3">For truely adpatable spaces</h3>
 		</div> 
 		<div class="mobile-prod-box" href="index.php?page=workstations_screens">
-			<h3>Workstations</h3>
+			<h3>Workstations + Screens</h3> 
+			<img src="img/temp/workstations-mobile.png">
 		</div> 
-		<div class="mobile-prod-box" href="index.php?page=workstations_screens">
-			<h3>Screens</h3>
-		</div>
 		<div class="mobile-prod-box" href="index.php?page=storage">
-			<h3>Storage</h3>
+			<h3>Storage</h3> 
+			<img src="img/temp/storage-mobile.png">
 		</div>
 		<div class="mobile-prod-box" href="index.php?page=agile_furniture">
-			<h3>Agile Furniture</h3>
+			<h3>Agile Furniture</h3> 
+			<img src="img/temp/agile-mobile.png">
 		</div>
-		<div class="mobile-prod-box" href="index.php?page=chairs">
-			<h3>Chairs</h3>
+		<div class="mobile-prod-box" href="index.php?page=seating">
+			<h3>Seating</h3> 
+			<img src="img/temp/seating-mobile.png">
 		</div> 
 		<div class="mobile-prod-box" href="index.php?page=tech_accesories">
-			<h3>Tech &amp; Accesories</h3>
+			<h3>Tech &amp; Accesories</h3> 
+			<img src="img/temp/tech-mobile.png">
 		</div> 
 		<div class="mobile-prod-box" href="index.php?page=tables">
-			<h3>Tables</h3>
+			<h3>Tables</h3> 
+			<img src="img/temp/tables-mobile.png">
 		</div> 
 		<div class="mobile-prod-box" href="index.php?page=joinery_custom">
-			<h3>Joinery &amp; Custom</h3>
+			<h3>Joinery &amp; Custom</h3> 
+			<img src="img/temp/joinery-mobile.png">
 		</div>
 	</div>
 </div>
