@@ -67,6 +67,18 @@ $(document).ready(function(){
     $('.recycle').on('click', function(){
         $('#recycle-modal').addClass('openM'); 
         $('#sus-page').addClass('bgM');  
+    });
+    $('.experience').on('click', function(){
+        $('#experience-modal').addClass('openM'); 
+        $('#sus-page').addClass('bgM');  
+    });
+    $('.journey').on('click', function(){
+        $('#journey-modal').addClass('openM'); 
+        $('#sus-page').addClass('bgM');  
+    });
+    $('.history').on('click', function(){
+        $('#history-modal').addClass('openM'); 
+        $('#sus-page').addClass('bgM');  
     });  
     $('.m-material-art-trig').click(function(){
         $('.m-material-art').slideToggle();

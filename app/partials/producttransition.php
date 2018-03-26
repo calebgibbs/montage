@@ -29,19 +29,19 @@ $this -> layout('master',[
 <?php endif ?> 
 <?php if($_GET['page'] == 'seating'): ?> 
 	<div id="search-heading" class="chair-title tran-p"><h2>Seating</h2></div>
-	<div class="seat-cat1 subcat_link" href="index.php?page=soft">
+	<div class="seat-cat subcat_link" href="index.php?page=soft">
 		<img src="img/products/categories/soft.jpg">
 	</div>
-	<div class="seat-cat1 subcat_link" href="index.php?page=task"> 
+	<div class="seat-cat subcat_link" href="index.php?page=task"> 
 		<img src="img/products/categories/task.jpg">
 	</div>
-	<div class="seat-cat1 subcat_link" href="index.php?page=visitor_hospitality">
+	<div class="seat-cat subcat_link" href="index.php?page=visitor_hospitality">
 		<img src="img/products/categories/vishos.jpg">
 	</div>
-	<div class="seat-cat2 subcat_link" href="index.php?page=stools">
+	<div class="seat-cat subcat_link" href="index.php?page=stools">
 		<img src="img/products/categories/stools.jpg">
 	</div>
-	<div class="seat-cat2 subcat_link" href="index.php?page=meeting_room">
+	<div class="seat-cat subcat_link" href="index.php?page=meeting_room">
 		<img src="img/products/categories/meetingroom.jpg">
 	</div>
 <?php endif ?>  

@@ -34,7 +34,33 @@
 	&:hover  
 		cursor: pointer
 		img		
+			transform: scale(1.03)  
+.experience 
+	img 
+		position: relative
+		margin-left: -6rem 
+		margin-top: -2rem  
+		transition: 0.3s 
+	&:hover  
+		cursor: pointer
+		img		
 			transform: scale(1.03) 
+.journey 
+	img 
+		margin-left: -19rem
+		transition: 0.3s  
+	&:hover  
+		cursor: pointer
+		img		
+			transform: scale(1.03)  
+.history 
+	margin-top: 0.5rem 
+	img 
+		transition: 0.3s
+	&:hover  
+		cursor: pointer
+		img		
+			transform: scale(1.03)  
 .tri2 
 	vertical-align: top  
 	position: relative 
@@ -78,7 +104,10 @@
 	height: 80vh 
 	margin-top: -30% 
 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5)  
-	overflow: hidden
+	overflow: hidden 
+	position: absolute 
+	top: 0 
+	margin-top: 10rem
 	button 
 		float: right 
 		background: none  
@@ -112,10 +141,14 @@
 	&:hover  
 		img 
 			transform: scale(1)  
-#smart-modal 
-	margin-top: -47rem !important 
-#recycle-modal 
-	margin-top: -47.5rem !important   	
+// #smart-modal 
+// 	margin-top: -47rem !important 
+// #recycle-modal 
+// 	margin-top: -47.5rem !important   
+// #journey-modal 
+// 	margin-top: -49rem !important  
+// #history-modal 
+// 	margin-top: -49.5rem !important  
 @include desktop-sm 
 	.sustainability-page  
 		height: 95vh 
@@ -138,12 +171,12 @@
 	.sus-text   
 		margin-top: -25rem 
 		margin-left: 5rem 
-	#smart-modal 
-		margin-top: -38.6rem !important 
-	#recycle-modal 
-		margin-top: -37.9rem !important 
-	#material-modal 
-		margin-top: -29.9rem !important
+	// #smart-modal 
+	// 	margin-top: -38.6rem !important 
+	// #recycle-modal 
+	// 	margin-top: -37.9rem !important 
+	// #material-modal 
+	// 	margin-top: -29.9rem !important
 @include mobile 
 	.sus-D-grid 
 		display: none 
@@ -213,6 +246,18 @@
 		padding-right: 2.5rem
 		img 
 			width: 408px 
+	.experience 
+		padding-right: 10px
+		img 
+			width: 455px 
+	.journey 
+		img 
+			widh: 577px 
+	.history 
+		margin-left: 11.5rem
+		padding-right: 2.5rem
+		img 
+			width: 408px 
 	.tri1 
 		margin-top: 3rem
 		img 
@@ -227,12 +272,18 @@
 			font-size: 1.55rem 
 		p 
 			font-size: 1.15rem
-	#smart-modal 
-		margin-top: -32.71rem !important 
-	#recycle-modal 
-		margin-top: -32.71rem !important 
-	#material-modal 
-		margin-top: -23.2rem !important
+	// #smart-modal 
+	// 	margin-top: -32.71rem !important 
+	// #recycle-modal 
+	// 	margin-top: -32.71rem !important 
+	// #material-modal 
+	// 	margin-top: -23.2rem !important
+	// #experience-modal 
+	// 	margin-top: -30rem !important 
+	// #journey-modal 
+	// 	margin-top: -49rem !important 
+	// #history-modal 
+	// 	margin-top: -23.2rem !important
 
 
 

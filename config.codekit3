@@ -1044,16 +1044,6 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/products\/categories\/bespoke.jpg": {
-		"ft": 16384,
-		"iS": 284654,
-		"oA": 0,
-		"oAP": "\/img\/products\/categories\/bespoke.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
 	"\/img\/products\/categories\/bg-sm.png": {
 		"ft": 32768,
 		"iS": 30103,
@@ -1074,16 +1064,6 @@
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
-		"q": 100
-		},
-	"\/img\/products\/categories\/breakout.jpg": {
-		"ft": 16384,
-		"iS": 297428,
-		"oA": 0,
-		"oAP": "\/img\/products\/categories\/breakout.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
 		"q": 100
 		},
 	"\/img\/products\/categories\/chairs.png": {
@@ -1108,36 +1088,6 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/products\/categories\/coffee.jpg": {
-		"ft": 16384,
-		"iS": 148630,
-		"oA": 0,
-		"oAP": "\/img\/products\/categories\/coffee.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/img\/products\/categories\/custom.jpg": {
-		"ft": 16384,
-		"iS": 211364,
-		"oA": 0,
-		"oAP": "\/img\/products\/categories\/custom.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/img\/products\/categories\/focus.jpg": {
-		"ft": 16384,
-		"iS": 202715,
-		"oA": 0,
-		"oAP": "\/img\/products\/categories\/focus.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
 	"\/img\/products\/categories\/joinery.png": {
 		"ft": 32768,
 		"iS": 157567,
@@ -1158,106 +1108,6 @@
 		"oIPL": 1,
 		"opt": 1,
 		"oT": 1,
-		"q": 100
-		},
-	"\/img\/products\/categories\/joinerysub.jpg": {
-		"ft": 16384,
-		"iS": 206564,
-		"oA": 0,
-		"oAP": "\/img\/products\/categories\/joinerysub.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/img\/products\/categories\/leaner.jpg": {
-		"ft": 16384,
-		"iS": 127839,
-		"oA": 0,
-		"oAP": "\/img\/products\/categories\/leaner.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/img\/products\/categories\/meetingb.jpg": {
-		"ft": 16384,
-		"iS": 145488,
-		"oA": 0,
-		"oAP": "\/img\/products\/categories\/meetingb.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/img\/products\/categories\/meetingroom.jpg": {
-		"ft": 16384,
-		"iS": 179072,
-		"oA": 0,
-		"oAP": "\/img\/products\/categories\/meetingroom.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/img\/products\/categories\/misc.jpg": {
-		"ft": 16384,
-		"iS": 67397,
-		"oA": 0,
-		"oAP": "\/img\/products\/categories\/misc.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/img\/products\/categories\/monitora.jpg": {
-		"ft": 16384,
-		"iS": 84383,
-		"oA": 0,
-		"oAP": "\/img\/products\/categories\/monitora.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/img\/products\/categories\/personal.jpg": {
-		"ft": 16384,
-		"iS": 201564,
-		"oA": 0,
-		"oAP": "\/img\/products\/categories\/personal.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/img\/products\/categories\/screen.jpg": {
-		"ft": 16384,
-		"iS": 85491,
-		"oA": 0,
-		"oAP": "\/img\/products\/categories\/screen.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/img\/products\/categories\/soft.jpg": {
-		"ft": 16384,
-		"iS": 123808,
-		"oA": 0,
-		"oAP": "\/img\/products\/categories\/soft.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/img\/products\/categories\/stools.jpg": {
-		"ft": 16384,
-		"iS": 134622,
-		"oA": 0,
-		"oAP": "\/img\/products\/categories\/stools.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
 		"q": 100
 		},
 	"\/img\/products\/categories\/storage.png": {
@@ -1304,46 +1154,6 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/products\/categories\/task.jpg": {
-		"ft": 16384,
-		"iS": 261908,
-		"oA": 0,
-		"oAP": "\/img\/products\/categories\/task.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/img\/products\/categories\/team.jpg": {
-		"ft": 16384,
-		"iS": 79959,
-		"oA": 0,
-		"oAP": "\/img\/products\/categories\/team.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/img\/products\/categories\/teamcollab.jpg": {
-		"ft": 16384,
-		"iS": 180899,
-		"oA": 0,
-		"oAP": "\/img\/products\/categories\/teamcollab.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/img\/products\/categories\/tech.jpg": {
-		"ft": 16384,
-		"iS": 75132,
-		"oA": 0,
-		"oAP": "\/img\/products\/categories\/tech.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
 	"\/img\/products\/categories\/tech.png": {
 		"ft": 32768,
 		"iS": 10529,
@@ -1364,16 +1174,6 @@
 		"oIPL": 1,
 		"opt": 1,
 		"oT": 1,
-		"q": 100
-		},
-	"\/img\/products\/categories\/vishos.jpg": {
-		"ft": 16384,
-		"iS": 127704,
-		"oA": 0,
-		"oAP": "\/img\/products\/categories\/vishos.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
 		"q": 100
 		},
 	"\/img\/products\/categories\/workstations.png": {

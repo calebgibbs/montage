@@ -60,7 +60,31 @@ $this -> layout('master',[
 			<div class="product-images">
 				<div class="large-img">
 					<form method="post">
-						<button class="a-f-b" name="addfav" value="<?= $_GET['productnum'] ?>">Favourite</button>
+						<button class="a-f-b" name="addfav" value="<?= $_GET['productnum'] ?>"><?php 
+						if(isset($_SESSION['favourites'])){ 
+							$current = $_GET['productnum'];  
+							$favourites = json_decode($_SESSION['favourites'], true); 
+							if(in_array($current, $favourites)){ 
+								echo "&diams;";
+							}else{ 
+								echo "&loz;";
+							}
+						}else{ 
+							$current = $_GET['productnum'];  
+							$favourites = json_decode($_COOKIE['favourites'], true);  
+							if(!empty($favourites)){ 
+								if(in_array($current, $favourites)){ 
+									echo "&diams;";
+								}else{ 
+									echo "&loz;";
+								}
+							}else{ 
+								echo "&loz;";
+							}
+
+						}
+						?></button> 
+
 					</form>
 					<?php foreach( $Allimages as $image ): ?>
 						<?php if( $image['image_position'] == 1 ): ?> 
