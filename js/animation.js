@@ -94,12 +94,27 @@ $(document).ready(function(){
         $('.m-recycle-art').slideToggle();
         $('.m-material-art').slideUp();
         $('.m-smart-art').slideUp();
+    }); 
+    $('.mobile-culture-art-trig').click(function(){
+        $('.mobile-culture-art').slideToggle();
+        $('.mobile-journey-art').slideUp();
+         $('.mobile-history-art').slideUp();
+    }); 
+    $('.mobile-journey-art-trig').click(function(){
+        $('.mobile-journey-art').slideToggle();
+        $('.mobile-culture-art').slideUp(); 
+        $('.mobile-history-art').slideUp(); 
+    }); 
+    $('.mobile-history-art-trig').click(function(){
+        $('.mobile-history-art').slideToggle();
+        $('.mobile-culture-art').slideUp(); 
+        $('.mobile-journey-art').slideUp(); 
     });
     $(document).on('click','#delPrompt',function(e){
         e.preventDefault(); 
         $('.delButton2').css('display','inline-block');
     }); 
-     $(document).on('click','#noDel',function(e){
+    $(document).on('click','#noDel',function(e){
         e.preventDefault(); 
         $('.delButton2').css('display','none');
     }); 
