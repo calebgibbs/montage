@@ -46,6 +46,10 @@ class EditProductController extends PageController {
 		$sql = "SELECT id, href, link_text FROM product_links WHERE product_id = '$id'"; 
 		$result = $this->dbc->query($sql); 
 		$this->data['links'] = $result->fetch_all(MYSQLI_ASSOC);   
+		//get dimensions 
+		$sql = "SELECT dimension_type, dimension FROM product_dimensions WHERE product_id = '$id'"; 
+		$results = $this->dbc->query($sql);  
+		$this->data['dimensions'] = $results->fetch_all(MYSQLI_ASSOC);
 		//get downloads  
 		$sql = "SELECT download_link, title FROM downloads WHERE product_id = '$id'"; 
 		$result = $this->dbc->query($sql); 
@@ -153,6 +157,30 @@ class EditProductController extends PageController {
 					$this->data[$msg] = '<span style="color: #d9534f">*You must upload a valid image</span>';
 				}
 			}
+		} 
+		//dimensions 
+		for($i=1;$i<=3;$i++){ 
+			$type = 'dt'.$i; $type = $_POST[$type]; $typeMsg = 'typeMsg'.$i; 
+			$value = 'dv'.$i; $value = $_POST[$value]; $valueMsg = 'valueMsg'.$i;
+			if(strlen($type) != 0){ 
+				if(strlen($value) === 0){
+					$errors++; 
+					$this->data[$valueMsg] = '<span style="color: #d9534f">*You must define the dimension value</span>';
+				}
+			}elseif(strlen($value) != 0){ 
+				if(strlen($type) === 0){ 
+					$errors++; 
+					$this->data[$typeMsg] = '<span style="color: #d9534f">*You must define the dimension type</span>';
+				}
+			} 
+			if(strlen($type) > 50){ 
+				$errors++; 
+				$this->data[$typeMsg] = '<span style="color: #d9534f">*Type name must be less than 50 characters</span>';
+			} 
+			if(strlen($value) > 20){ 
+				$errors++; 
+				$this->data[$valueMsg] = '<span style="color: #d9534f">*The value must be less than 20 characters</span>';
+			}  
 		} 
 		//downloads  
 		for($i=1;$i<=3;$i++){ 
@@ -296,7 +324,24 @@ class EditProductController extends PageController {
 					}
 				} 
 			}
-		} 
+		}  
+		//dimentions 
+		for($i=1;$i<=3;$i++){ 
+			$type = 'dt'.$i; $type = $this->dbc->real_escape_string(trim($_POST[$type]));
+			$value = 'dv'.$i; $value = $this->dbc->real_escape_string(trim($_POST[$value])); 
+			$sql = "SELECT id,dimension, dimension_type FROM product_dimensions WHERE product_id = '$id' AND position = '$i'";  
+			$result = $this->dbc->query($sql);
+			if($result->num_rows == 1){ 
+				$result = $result->fetch_assoc(); $row_id = $result['id'];
+				$sql = "UPDATE product_dimensions SET dimension = '$value', dimension_type = '$type' 
+						WHERE id = '$row_id'"; 
+				$this->dbc->query($sql);
+ 			}else{ 
+ 				$sql = "INSERT INTO product_dimensions(product_id, dimension_type, dimension, position)
+ 						VALUES('$id', '$type', '$value', '$i')"; 
+ 				$this->dbc->query($sql);
+ 			}
+		}
 		//downloads  
 		for($i=1;$i<=3;$i++){ 
 			$title = 'download_title_'.$i; $title = $this->dbc->real_escape_string(trim($_POST[$title])); 

@@ -58,6 +58,21 @@ for($i=1;$i<=3;$i++){
 	if(!isset(${'Dtitle'.$i})){ 
 		${'Dtitle'.$i} = '';
 	}
+} 
+
+$diCount = 1; 
+foreach($dimensions as $dim){ 
+	${'dType'.$diCount} = $dim['dimension_type'];
+	${'dValue'.$diCount} = $dim['dimension']; 
+	$diCount++;
+} 
+for($i=1;$i<=3;$i++){ 
+	if(!isset(${'dType'.$i})){
+		${'dType'.$i} = '';
+	} 
+	if(!isset(${'dValue'.$i})){
+		${'dValue'.$i} = '';
+	}
 }
 
 $cat2 = $product['category2'];
@@ -558,7 +573,20 @@ $cat2 = $product['category2'];
 					<span class="floating-label">Option 5 link <?=  isset($optLink5) ? $optLink5 : '' ?></span>
 				</div>
 			</div>
-
+			<div id="form-downloads"> 
+				<h2>Dimensions</h2> 
+				<?php for($i=1;$i<=3;$i++): ?> 
+				<?php $type = 'dt'.$i; $value = 'dv'.$i; $dType = ${'dType'.$i}; $dValue = ${'dValue'.$i};?>  
+				<div class="form-input">	
+					<input type="text" class="inputText" name="dt<?= $i ?>" value="<?= isset($_POST[$type]) ? $_POST[$type] : $dType ?>" required /> 
+					<span class="floating-label">Dimension type <?=  isset(${'typeMsg'.$i}) ? ${'typeMsg'.$i} : '' ?></span>
+				</div> 
+				<div class="form-input">
+					<input type="text" class="inputText" name="dv<?= $i ?>" value="<?= isset($_POST[$value]) ? $_POST[$value] : $dValue ?>" required /> 
+					<span class="floating-label">Dimension value <?=  isset(${'valueMsg'.$i}) ? ${'valueMsg'.$i} : '' ?></span>
+				</div>
+				<?php endfor ?>
+			</div>
 			<div id="form-downloads">
 				<h2>Downloads</h2>
 				<div class="form-input">
