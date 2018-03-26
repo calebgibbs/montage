@@ -45,7 +45,7 @@ $_SESSION['page'] = $_SERVER['REQUEST_URI'];
 		<div class="mobile-grid-sus">
 			<div class="mobile-culture-art-trig">
 				<h3>Culture</h3> 
-				<img src="img/sustainability/material-mobile.png">
+				<img src="img/story/experience-mobile">
 			</div> 
 			<div class="mobile-art mobile-culture-art">
 				<article>
@@ -57,7 +57,7 @@ $_SESSION['page'] = $_SERVER['REQUEST_URI'];
 			</div>
 			<div class="mobile-journey-art-trig">
 				<h3>Journey Ahead</h3> 
-				<img src="img/sustainability/smart-mobile.png">
+				<img src="img/story/journey-mobile">
 			</div> 
 			<div class="mobile-art mobile-journey-art">
 				<article>
@@ -69,7 +69,7 @@ $_SESSION['page'] = $_SERVER['REQUEST_URI'];
 			</div>
 			<div class="mobile-history-art-trig">
 				<h3>History</h3> 
-				<img src="img/sustainability/recycle-mobile.png">
+				<img src="img/story/history-mobile">
 			</div> 
 			<div class="mobile-art mobile-history-art">
 				<article>
@@ -86,7 +86,7 @@ $_SESSION['page'] = $_SERVER['REQUEST_URI'];
 			<button class="closeModal">&#10005;</button>
 			<div class="modal-inner">
 				<div class="modal-heading">
-					<img src="img/sustainability/modal.png"> 
+					<img src="img/story/experience-modal.png"> 
 					<h4>Culture</h4> 		
 				</div> 
 				<div class="modal-text">
@@ -105,7 +105,7 @@ $_SESSION['page'] = $_SERVER['REQUEST_URI'];
 			<button class="closeModal">&#10005;</button>
 			<div class="modal-inner">
 				<div class="modal-heading">
-					<img src="img/sustainability/modal.png"> 
+					<img src="img/story/journey-modal.png"> 
 					<h4>Journey Ahead</h4> 		
 				</div> 
 				<div class="modal-text">
@@ -124,7 +124,7 @@ $_SESSION['page'] = $_SERVER['REQUEST_URI'];
 			<button class="closeModal">&#10005;</button>
 			<div class="modal-inner">
 				<div class="modal-heading">
-					<img src="img/sustainability/modal.png"> 
+					<img src="img/story/history-modal.png"> 
 					<h4>History</h4> 		
 				</div> 
 				<div class="modal-text">
