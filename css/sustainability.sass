@@ -98,13 +98,13 @@
 	z-index: -1 
 	opacity: 0  
 	background: #fff 
-	width: 80%
-	margin-left: 10% 
+	width: 60%
+	margin-left: 20% 
 	position: relative 
-	height: 80vh 
-	margin-top: -30% 
+	height: 60vh 
+	// margin-top: -30% 
 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5)  
-	overflow: hidden 
+	overflow-x: scroll 
 	position: absolute 
 	top: 0 
 	margin-top: 10rem
@@ -118,7 +118,7 @@
 .modal-inner 
 	display: block 
 	z-index: inherit 
-	padding: 1rem 
+	padding: 1rem  
 .modal-heading 
 	text-align: center 
 	h4  
@@ -128,11 +128,12 @@
 		color: #676767 
 		font-weight: 100  
 .modal-text 
-	display: inline-block 
+	display: inline-block   
 	article 
-		color: #676767  
+		color: #676767 
+		width: 100%  
 		p 
-			width: 70%
+			width: 95% 
 .openM 
 	z-index: 9998 !important  
 	opacity: 1 !important 
@@ -141,14 +142,6 @@
 	&:hover  
 		img 
 			transform: scale(1)  
-// #smart-modal 
-// 	margin-top: -47rem !important 
-// #recycle-modal 
-// 	margin-top: -47.5rem !important   
-// #journey-modal 
-// 	margin-top: -49rem !important  
-// #history-modal 
-// 	margin-top: -49.5rem !important  
 @include desktop-sm 
 	.sustainability-page  
 		height: 95vh 
@@ -171,12 +164,6 @@
 	.sus-text   
 		margin-top: -25rem 
 		margin-left: 5rem 
-	// #smart-modal 
-	// 	margin-top: -38.6rem !important 
-	// #recycle-modal 
-	// 	margin-top: -37.9rem !important 
-	// #material-modal 
-	// 	margin-top: -29.9rem !important
 @include mobile 
 	.sus-D-grid 
 		display: none 
@@ -232,8 +219,6 @@
 		display: none
 
 @include navigation-desktop-sm 
-	.sustainability-grid 
-		// background: orange
 	.material 
 		padding-right: 10px
 		img 
@@ -272,18 +257,6 @@
 			font-size: 1.55rem 
 		p 
 			font-size: 1.15rem
-	// #smart-modal 
-	// 	margin-top: -32.71rem !important 
-	// #recycle-modal 
-	// 	margin-top: -32.71rem !important 
-	// #material-modal 
-	// 	margin-top: -23.2rem !important
-	// #experience-modal 
-	// 	margin-top: -30rem !important 
-	// #journey-modal 
-	// 	margin-top: -49rem !important 
-	// #history-modal 
-	// 	margin-top: -23.2rem !important
 
 
 
