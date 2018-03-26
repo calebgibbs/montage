@@ -1120,6 +1120,15 @@ _:-ms-lang(x), #drop-down {
   background: url(../img/products/themes/joinery.png) no-repeat center right;
     background-background-size: 100%; }
 
+.t-m-heading {
+  display: none; }
+
+.page-dimensions-m-t {
+  display: none; }
+
+.mobile-thumbs {
+  display: none; }
+
 #page-padding {
   color: #242424; }
   #page-padding h1 {
@@ -1298,6 +1307,40 @@ _:-ms-lang(x), #drop-down {
     font-size: 1.1rem; }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
+  .slider-container {
+    display: none; }
+  .edit-btn {
+    display: none; }
+  #left-col {
+    display: block;
+    width: 100%; }
+  #right-col {
+    width: 100% !important;
+    padding: 0  !important;
+    float: none !important;
+    margin-top: -12rem !important; }
+    #right-col h1 {
+      display: none; }
+    #right-col p {
+      width: 95%;
+      margin: 0 auto; }
+  #dispayImg {
+    width: 350px !important;
+    height: auto;
+    margin: 0; }
+  .mobile-thumbs {
+    display: block;
+    margin-top: 1rem; }
+  .mobile-img {
+    width: 49%;
+    display: inline-block;
+    text-align: center; }
+    .mobile-img img {
+      width: 150px;
+      height: auto; }
+  .product-images {
+    width: 350px;
+    margin: 0 auto; }
   .workstation {
     background: none; }
   .storage {
@@ -1312,32 +1355,38 @@ _:-ms-lang(x), #drop-down {
     background: none; }
   .joinery {
     background: none; }
-  #left-col {
-    width: 90%;
+  #product-theme {
+    height: auto !important; }
+  .t-m-heading {
     display: block;
     margin: 0 auto;
-    text-align: center; }
-  #right-col {
-    width: 90%;
-    display: block;
-    margin: 0 auto;
-    vertical-align: bottom;
-    margin-top: 3rem; }
-  .prod-m-title {
-    display: block;
-    width: 100%;
-    margin-top: -2rem !important;
-    margin-bottom: 0.5rem;
-    padding-bottom: 1rem; }
-  .prod-d-title {
+    margin-bottom: 1.5rem; }
+    .t-m-heading h1 {
+      color: #fff;
+      margin-left: 0; }
+  .supplier-name {
     display: none; }
-  .large-img img {
-    width: 325px !important; }
-  .product-images {
-    width: 680px;
-    margin-right: 0; }
-    .product-images li img {
-      display: none; } }
+  .page-dimensions {
+    display: none !important; }
+  .prod-features {
+    padding-top: 2rem;
+    width: 95%;
+    margin: 0 auto; }
+  .prod-options {
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 2rem; }
+  .supplier-name {
+    display: none; }
+  .page-dimensions {
+    display: none !important; }
+  .page-dimensions-m-t {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 2rem; }
+  .page-downloads {
+    display: none; } }
 
 @media screen and (max-width: 400px) {
   #left-col {
@@ -1414,15 +1463,20 @@ _:-ms-lang(x), #drop-down {
     float: right; } }
 
 @media screen and (min-width: 768px) and (max-width: 1105px) {
+  .edit-btn {
+    display: none; }
   #left-col {
-    display: block; }
+    display: block;
+    width: 100%; }
   #right-col {
     display: block;
     padding-left: 3rem;
-    width: 100%;
-    padding-top: 2rem; }
-    #right-col p {
-      width: 80%; }
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 2rem;
+    float: none; }
+    #right-col h1 {
+      display: none; }
   .workstation {
     background: none; }
   .storage {
@@ -1436,7 +1490,37 @@ _:-ms-lang(x), #drop-down {
   .chair {
     background: none; }
   .joinery {
-    background: none; } }
+    background: none; }
+  #product-theme {
+    height: auto !important; }
+  .t-m-heading {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 1.5rem; }
+    .t-m-heading h1 {
+      color: #fff;
+      margin-left: 0; }
+  .prod-features {
+    width: 45%;
+    display: inline-block;
+    vertical-align: top; }
+  .prod-options {
+    width: 45%;
+    display: inline-block;
+    vertical-align: top; }
+  .supplier-name {
+    display: none; }
+  .page-dimensions {
+    display: none !important; }
+  .page-dimensions-m-t {
+    display: block;
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 2rem; }
+  .page-downloads {
+    display: none; } }
 
 .products-grid {
   margin-top: 4rem;
