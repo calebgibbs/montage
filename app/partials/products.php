@@ -7,10 +7,10 @@ $prevPage = $_SERVER['QUERY_STRING'];
 ?>
 <div class="body">  
 	<div class="products-grid pro-grid-desktop">
-		<div class="productsP-title">
+		<!-- <div class="productsP-title">
 			<h1 class="productsh1">Products</h1> 
 			<h3 class="productsh3">For truely adpatable spaces</h3>
-		</div>
+		</div> -->
 		<div class="workstations-dia diamond" href="index.php?page=workstations_screens">
 			<img src="img/products/categories/workstations.png" alt="Workstations and screens">
 			<img class="mask" src="img/products/categories/workstationsMask.png">

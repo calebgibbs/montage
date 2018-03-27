@@ -846,6 +846,66 @@ _:-ms-lang(x), #drop-down {
   .m-os {
     margin-top: -2.5rem !important; } }
 
+@media screen and (min-width: 768px) and (max-width: 1105px) {
+  .sus-D-grid {
+    display: none; }
+  .sus-M-grid {
+    display: block;
+    margin-top: 2rem;
+    position: static; }
+  .sustainability-page {
+    background: none; }
+  .story-page {
+    background: none; }
+  .sus-m-padding {
+    margin: 1rem;
+    margin-top: 4rem !important; }
+    .sus-m-padding h1 {
+      width: 95%;
+      padding: 6px;
+      font-weight: 100;
+      text-transform: uppercase;
+      color: #fff;
+      background: #424242;
+      text-align: center;
+      margin: 0 auto;
+      letter-spacing: 2px; }
+  .mobile-grid-sus h3 {
+    width: 90%;
+    color: #fff;
+    background: #177c7e;
+    margn: 0 auto;
+    text-align: center;
+    font-weight: lighter;
+    margin: 0 auto;
+    padding: 5px;
+    font-size: 1.3rem; }
+  .mobile-grid-sus img {
+    width: 88%;
+    margin-left: 7%;
+    margin-top: 2%; }
+  .sustainability-page {
+    height: auto; }
+  #modals {
+    display: none; }
+  .mobile-art article {
+    width: 90%;
+    margin: 0 auto; }
+  .m-material-art {
+    display: none; }
+  .m-smart-art {
+    display: none; }
+  .m-recycle-art {
+    display: none; }
+  .mobile-culture-art {
+    display: none; }
+  .mobile-journey-art {
+    display: none; }
+  .mobile-history-art {
+    display: none; }
+  .m-os {
+    margin-top: -2.5rem !important; } }
+
 @media screen and (max-width: 1333px) {
   .material {
     padding-right: 10px; }
@@ -881,6 +941,110 @@ _:-ms-lang(x), #drop-down {
     font-size: 1.55rem; }
   .sus-text p {
     font-size: 1.15rem; } }
+
+@media screen and (max-width: 1667px) {
+  .material {
+    padding-right: 10px; }
+    .material img {
+      width: 455px; }
+  .smart img {
+    widh: 577px; }
+  .recycle {
+    margin-left: 11.5rem;
+    padding-right: 2.5rem; }
+    .recycle img {
+      width: 408px; }
+  .experience {
+    padding-right: 10px; }
+    .experience img {
+      width: 455px; }
+  .journey img {
+    widh: 577px; }
+  .history {
+    margin-left: 11.5rem;
+    padding-right: 2.5rem; }
+    .history img {
+      width: 408px; }
+  .tri1 {
+    margin-top: 3rem; }
+    .tri1 img {
+      width: 177px; }
+  .tri2 img {
+    width: 178px; }
+  .sus-text h1 {
+    font-size: 2.4rem; }
+  .sus-text h2 {
+    font-size: 1.55rem; }
+  .sus-text p {
+    font-size: 1.15rem; } }
+
+@media screen and (max-width: 1667px) {
+  .sustainability-grid {
+    margin-left: 14.8rem; } }
+
+@media screen and (max-width: 1334px) {
+  .sustainability-grid {
+    margin-left: 6rem; } }
+
+@media screen and (max-width: 1193px) {
+  .sus-D-grid {
+    display: none; }
+  .sus-M-grid {
+    display: block;
+    margin-top: 2rem;
+    position: static; }
+  .sustainability-page {
+    background: none; }
+  .story-page {
+    background: none; }
+  .sus-m-padding {
+    margin: 1rem;
+    margin-top: 4rem !important; }
+    .sus-m-padding h1 {
+      width: 95%;
+      padding: 6px;
+      font-weight: 100;
+      text-transform: uppercase;
+      color: #fff;
+      background: #424242;
+      text-align: center;
+      margin: 0 auto;
+      letter-spacing: 2px; }
+  .mobile-grid-sus h3 {
+    width: 90%;
+    color: #fff;
+    background: #177c7e;
+    margn: 0 auto;
+    text-align: center;
+    font-weight: lighter;
+    margin: 0 auto;
+    padding: 5px;
+    font-size: 1.3rem; }
+  .mobile-grid-sus img {
+    width: 88%;
+    margin-left: 7%;
+    margin-top: 2%; }
+  .sustainability-page {
+    height: auto; }
+  #modals {
+    display: none; }
+  .mobile-art article {
+    width: 90%;
+    margin: 0 auto; }
+  .m-material-art {
+    display: none; }
+  .m-smart-art {
+    display: none; }
+  .m-recycle-art {
+    display: none; }
+  .mobile-culture-art {
+    display: none; }
+  .mobile-journey-art {
+    display: none; }
+  .mobile-history-art {
+    display: none; }
+  .m-os {
+    margin-top: -2.5rem !important; } }
 
 #footer {
   width: 100%;
@@ -1661,10 +1825,10 @@ _:-ms-lang(x), #drop-down {
     display: none; } }
 
 .products-grid {
-  margin-top: 4rem;
   text-align: right;
   position: static;
-  padding-bottom: 4%; }
+  padding-bottom: 4%;
+  margin-top: 2.5rem; }
 
 .productsP-title {
   text-align: left; }

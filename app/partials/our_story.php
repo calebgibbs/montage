@@ -22,7 +22,7 @@ $_SESSION['page'] = $_SERVER['REQUEST_URI'];
 					<img src="img/story/history.png">
 				</div> 
 				<div class="tri2 bottom-img">
-					<img src="img/story/tri2">
+					<img src="img/story/tri2.png">
 				</div> 
 			</div>
 		</div> 
