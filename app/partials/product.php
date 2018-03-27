@@ -1,14 +1,19 @@
 <?php 
+$prodDesc = "";
+foreach($desc as $d){ 
+	$prodDesc .= $d;
+	$prodDesc .= ' ';  
+}
+
 if($_GET['page'] == 'product'){ 
-	$title = $product['title']; 
-	$description = $product['description']; 
+	$title = $product['title'];  
 }else{ 
 	$title = $port['title']; 
 	$description = $port['description'];
 }
 $this -> layout('master',[
 	'title'=>'Montage Interiors | '.$title, 
-	'desc' => $description 
+	'desc' => $prodDesc 
 ]); 
 
 ?>
@@ -151,7 +156,9 @@ $this -> layout('master',[
 					<?php if($_SESSION['account_type'] == 'admin'): ?> 
 						<p class="supplier-name">Supplier: <?= ucfirst($product['supplier']) ?></p>
 					<?php endif ?>
-					<p><?= $product['description'] ?></p>
+					<?php foreach($desc as $d): ?> 
+						<p><?= $d ?></p>
+					<?php endforeach ?>
 				</div>  
 			<?php endif ?>
 			<?php if($_GET['page'] == 'product'): ?>

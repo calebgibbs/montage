@@ -307,7 +307,7 @@ class AddproductController extends PageController {
 		}
 		$sql = "INSERT INTO products(title, description, category, category2, supplier) 
 		VALUES('$title', '$description', '$category', '$cat2', '$supplier')";  
-		die($sql);
+		// die($sql);
 		$this->dbc->query($sql); 
 		$sql = "SELECT id FROM products WHERE title = '$title'
 		AND description = '$description'

@@ -14,13 +14,28 @@ class ProductController extends PageController {
 
 	private function getProductData(){
 		$productId = $this->dbc->real_escape_string( $_GET['productnum'] ); 
-		$sql = "SELECT title, description, category, supplier FROM products WHERE id = '$productId'";
+		$sql = "SELECT title, category, supplier FROM products WHERE id = '$productId'";
 		$result = $this->dbc->query($sql);  
 		if( !$result || $result->num_rows == 0) { 
 			header('Location: index.php?page=404');
 		}else {  
 			$this->data['product'] = $result->fetch_assoc();
-		} 
+		}  
+		//get description 
+		$sql = "SELECT description FROM products WHERE id ='$productId'"; 
+		$result = $this->dbc->query($sql); 
+		if($result->num_rows == 1){ 
+			$desc = $result->fetch_assoc();  
+			$desc = $desc['description'];
+			$arr = explode("\n", $desc); 
+			$drescription = array();
+			foreach($arr as $d){ 
+				if(strlen(trim($d)) != 0){ 
+					array_push($drescription, $d);
+				}
+			}  
+			$this->data['desc'] = $drescription;
+		}
 		//get product features
 		$sql = "SELECT feature, position FROM product_features WHERE product_id = '$productId'"; 
 		$result = $this->dbc->query($sql);
