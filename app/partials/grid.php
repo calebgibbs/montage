@@ -67,10 +67,10 @@ if($_GET['page'] == 'portfolios'){
 													<?php endif ?>
 													<div class="box-img">
 														<?php if($_GET['page'] != 'portfolios'): ?>
-															<img src="img/products/thumbnail/<?= $result['image'] ?>"> 
+															<img src="img/products/large/<?= $result['image'] ?>"> 
 														<?php endif ?> 
 														<?php if($_GET['page'] == 'portfolios'): ?>
-															<img src="img/portfolio/thumbnail/<?= $result['image'] ?>"> 
+															<img src="img/portfolio/large/<?= $result['image'] ?>"> 
 														<?php endif ?>
 													</div> 
 													<div class="box-title">
@@ -123,10 +123,10 @@ if($_GET['page'] == 'portfolios'){
 															<?php endif ?>
 															<div class="box-img">
 																<?php if($_GET['page'] != 'portfolios'): ?>
-																	<img src="img/products/thumbnail/<?= $result['image'] ?>"> 
+																	<img src="img/products/large/<?= $result['image'] ?>"> 
 																<?php endif ?> 
 																<?php if($_GET['page'] == 'portfolios'): ?>
-																	<img src="img/portfolio/thumbnail/<?= $result['image'] ?>"> 
+																	<img src="img/portfolio/large/<?= $result['image'] ?>"> 
 																<?php endif ?>
 															</div> 
 															<div class="box-title">
@@ -181,10 +181,10 @@ if($_GET['page'] == 'portfolios'){
 															<?php endif ?>
 															<div class="box-img">
 																<?php if($_GET['page'] != 'portfolios'): ?>
-																	<img src="img/products/thumbnail/<?= $result['image'] ?>"> 
+																	<img src="img/products/large/<?= $result['image'] ?>"> 
 																<?php endif ?> 
 																<?php if($_GET['page'] == 'portfolios'): ?>
-																	<img src="img/portfolio/thumbnail/<?= $result['image'] ?>"> 
+																	<img src="img/portfolio/large/<?= $result['image'] ?>"> 
 																<?php endif ?>
 															</div> 
 															<div class="box-title">

@@ -12,8 +12,8 @@
 		<div class="mission-statement">
 			<span><h2>Creating</h2></span> 
 			<span><h3>Agile spaces</h3></span> 
-			<span><p>Montage interiors believe innovation is the</p></span> 
-			<span><p>key to a functional workspace.</p></span> 
+			<span><p>experts in commercial</p></span> 
+			<span><p>furniture and joinery</p></span> 
 		</div>
 	</div> 
 	<div class="bottom">

@@ -7,7 +7,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: aktiv-grotesk-light, sans-serif;
   background: #fff; }
 
 .cf:before, .cf:after {
@@ -77,7 +77,7 @@ nav {
   font-size: 1.5rem;
   font-weight: normal;
   position: static;
-  font-family: "Arial Narrow", Arial, sans-serif; }
+  font-family: aktiv-grotesk-light, sans-serif; }
 
 .more-items {
   display: none; }
@@ -468,7 +468,8 @@ _:-ms-lang(x), #drop-down {
     font-size: 1.8rem;
     margin: 3px 0 0 0;
     color: #989898;
-    font-weight: 100; }
+    font-weight: 100;
+    margin-left: 5.5rem; }
 
 .mobileHome {
   display: none; }
@@ -1159,7 +1160,9 @@ _:-ms-lang(x), #drop-down {
     margin: 0;
     margin-top: 10px;
     font-weight: 100;
-    color: #242424; }
+    color: #242424;
+    text-transform: lowercase;
+    weight: 100; }
 
 .box-img {
   positon: relative !important; }
@@ -2494,7 +2497,8 @@ _:-ms-lang(x), #drop-down {
   text-align: center; }
   .seat-cat img {
     box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52);
-    transition: 0.3s; }
+    transition: 0.3s;
+    margin-bottom: 2rem; }
     .seat-cat img:hover {
       transform: scale(1.01);
       cursor: pointer; }
@@ -2516,7 +2520,8 @@ _:-ms-lang(x), #drop-down {
   text-align: center; }
   .tech-cat img {
     box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52);
-    transition: 0.3s; }
+    transition: 0.3s;
+    margin-bottom: 2rem; }
     .tech-cat img:hover {
       transform: scale(1.01);
       cursor: pointer; }
@@ -2630,7 +2635,7 @@ _:-ms-lang(x), #drop-down {
     text-align: center;
     margin-top: 20%;
     position: relative;
-    font-family: "Arial Narrow", Arial, sans-serif;
+    font-family: aktiv-grotesk-light, sans-serif;
     color: #424242;
     font-size: 2rem; }
   #form-box p {
@@ -2704,7 +2709,7 @@ _:-ms-lang(x), #drop-down {
   margin: 0 auto; }
   #addp h1 {
     color: #424242;
-    font-family: "Arial Narrow", Arial, sans-serif; }
+    font-family: aktiv-grotesk-light, sans-serif; }
   #addp form {
     width: 90%;
     margin: 0 auto;
