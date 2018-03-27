@@ -18,7 +18,7 @@ class LeanersController extends PageController {
 		$this->data['title'] = 'Leaners'; 
 		$this->data['class'] = 'tables-title'; 
   
-		$sql = "SELECT p.id, p.title AS score_title, p.category, p.category2, 
+		$sql = "SELECT p.id, p.title AS score_title, p.category, p.category2, p.supplier,
 				i.product_id, i.image, i.image_position 
 				FROM products AS p 
 				JOIN product_images AS i 

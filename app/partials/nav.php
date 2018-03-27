@@ -31,6 +31,7 @@ $favTotal = count($fav);
 					<input type="text" name="s" id="search-feild-mobile"><button class="search-button"><i class="fa fa-search search-btn" aria-hidden="true"></i></button> 
 				</form>	
 			</li>
+			<li class="main-menu menu-item"><a href="index.php" class="main-menu"><span class="desktop-link"><i class="fa fa-home"></i></span></a></li>
 			<li class="main-menu menu-item"><a href="index.php?page=our_story" class="main-menu"><span class="desktop-link">Our Story</span></a></li>
 			<li class="main-menu">
 				<a href="index.php?page=products" class="main-menu drop-trigger desktop-link">Products</a>

@@ -222,7 +222,7 @@ $this -> layout('master',[
 					<?php endif ?>
 					<option value="6">Storage category</option> 
 					<option value="bespoke_s">Bespoke Storage</option>
-					<option vlaue="personal_s">Personal Storage</option>
+					<option value="personal_s">Personal Storage</option>
 					<option value="team_s">Team Storage</option>
 					<option value="none">Other</option>
 				</select>	

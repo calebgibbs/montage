@@ -18,7 +18,7 @@ class BreakoutController extends PageController {
 		$this->data['title'] = 'Breakout Furniture'; 
 		$this->data['class'] = 'agile-title'; 
 		
-		$sql = "SELECT p.id, p.title AS score_title, p.category, p.category2, 
+		$sql = "SELECT p.id, p.title AS score_title, p.category, p.category2, p.supplier, 
 				i.product_id, i.image, i.image_position 
 				FROM products AS p 
 				JOIN product_images AS i 

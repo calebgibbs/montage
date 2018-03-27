@@ -18,7 +18,7 @@ class MiscellaneousController extends PageController {
 		$this->data['title'] = 'Miscellaneous'; 
 		$this->data['class'] = 'tech-title'; 
   
-		$sql = "SELECT p.id, p.title AS score_title, p.category, p.category2, 
+		$sql = "SELECT p.id, p.title AS score_title, p.category, p.category2, p.supplier,
 				i.product_id, i.image, i.image_position 
 				FROM products AS p 
 				JOIN product_images AS i 

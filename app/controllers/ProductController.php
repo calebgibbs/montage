@@ -24,13 +24,20 @@ class ProductController extends PageController {
 		//get product features
 		$sql = "SELECT feature, position FROM product_features WHERE product_id = '$productId'"; 
 		$result = $this->dbc->query($sql);
-		$this->data['Allfeatures'] = $result->fetch_all(MYSQLI_ASSOC); 
+		if(!$result || $result->num_rows == 0){ 
+			$this->data['Allfeatures'] = 'noFeatures';
+		}else{ 
+			$this->data['Allfeatures'] = $result->fetch_all(MYSQLI_ASSOC);
+		} 
 
 		//get prodcut options 
 		$sql = "SELECT product_option, position FROM product_options WHERE product_id = '$productId'"; 
-		$result = $this->dbc->query($sql);
-		$this->data['Alloptions'] = $result->fetch_all(MYSQLI_ASSOC); 
-
+		$result = $this->dbc->query($sql); 
+		if(!$result || $result->num_rows == 0){ 
+			$this->data['Alloptions'] = 'noOptions';
+		}else{ 
+			$this->data['Alloptions'] = $result->fetch_all(MYSQLI_ASSOC);
+		}
 		//get images  
 		$sql = "SELECT image, image_position FROM product_images WHERE product_id = '$productId'";
 		$result = $this->dbc->query($sql);

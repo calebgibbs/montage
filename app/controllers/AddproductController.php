@@ -17,8 +17,8 @@ class AddproductController extends PageController {
 	
 	private function getSelects(){ 
 		//get suppliers 
-		// $sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage9_dtat' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'";  
-		$sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'"; 
+		$sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage9_dtat' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'";  
+		// $sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'"; 
 		$result = $this->dbc->query($sql);  
 		if ($result) {
 			$result = $result->fetch_assoc(); 
@@ -119,10 +119,7 @@ class AddproductController extends PageController {
 			$this->data['descMessage'] = '<span style="color: #d9534f">*Description is too long</span>';
 		} 
 
-		if (strlen($feat1) === 0) {
-			$errors++; 
-			$this->data['feat1Message'] = '<span style="color: #d9534f">*This feild is required</span>';
-		}elseif(strlen($feat1) > 300){ 
+		if(strlen($feat1) > 300){ 
 			$errors++; 
 			$this->data['feat1Message'] = '<span style="color: #d9534f">*Feature is too long</span>';
 		} 
@@ -136,10 +133,7 @@ class AddproductController extends PageController {
 			}
 		} 
 
-		if (strlen($opt1) === 0) {
-			$errors++; 
-			$this->data['opt1Message'] = '<span style="color: #d9534f">*This feild is required</span>';	
-		}elseif(strlen($opt1) > 300){
+		if(strlen($opt1) > 300){
 			$errors++; 
 			$this->data['opt1Message'] = '<span style="color: #d9534f">*Option is too long</span>';
 		} 
@@ -311,9 +305,9 @@ class AddproductController extends PageController {
 		}else{ 
 			$cat2 = 'none';
 		}
-
 		$sql = "INSERT INTO products(title, description, category, category2, supplier) 
 		VALUES('$title', '$description', '$category', '$cat2', '$supplier')";  
+		die($sql);
 		$this->dbc->query($sql); 
 		$sql = "SELECT id FROM products WHERE title = '$title'
 		AND description = '$description'

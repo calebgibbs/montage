@@ -18,7 +18,7 @@ class TeamCollabController extends PageController {
 		$this->data['title'] = 'Team Collaborative'; 
 		$this->data['class'] = 'agile-title'; 
 		
-		$sql = "SELECT p.id, p.title AS score_title, p.category, p.category2, 
+		$sql = "SELECT p.id, p.title AS score_title, p.category, p.category2, p.supplier, 
 				i.product_id, i.image, i.image_position 
 				FROM products AS p 
 				JOIN product_images AS i 

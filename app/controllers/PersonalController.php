@@ -18,7 +18,7 @@ class PersonalController extends PageController {
 		$this->data['title'] = 'Personal Storage'; 
 		$this->data['class'] = 'storage-title'; 
   
-		$sql = "SELECT p.id, p.title AS score_title, p.category, p.category2, 
+		$sql = "SELECT p.id, p.title AS score_title, p.category, p.category2, p.supplier, 
 				i.product_id, i.image, i.image_position 
 				FROM products AS p 
 				JOIN product_images AS i 
@@ -27,7 +27,6 @@ class PersonalController extends PageController {
 				category = 'storage' 
 				AND category2 = 'personal_s' 
 				AND image_position = '1'";
-
 		$result = $this->dbc->query($sql); 
 
 		if (!$result || $result->num_rows == 0) {
@@ -35,7 +34,5 @@ class PersonalController extends PageController {
 		}else{
 			$this->data['results'] = $result->fetch_all(MYSQLI_ASSOC);
 		} 
-
-		
 	}
 }

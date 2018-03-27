@@ -92,11 +92,7 @@ class EditProductController extends PageController {
 			$errors++; 
 			$this->data['descMessage'] = '<span style="color: #d9534f">*Description must be less than 1000 characters</span>';
 		} 
-		//features  
-		if(strlen(trim($_POST['feat_1'])) === 0){ 
-			$errors++; 
-			$this->data['feat1Message'] = '<span style="color: #d9534f">*This feild is required</span>'; 
-		} 
+		//features   
 		for($i=1;$i<=10;$i++){
 			$feat = 'feat_'.$i;  
 			$msg = 'feat'.$i.'Message';  
@@ -106,10 +102,6 @@ class EditProductController extends PageController {
 			}
 		} 
 		//options  
-		if(strlen(trim($_POST['opt_1'])) === 0){ 
-			$errors++;  
-			$this->data['opt1Message'] = '<span style="color: #d9534f">*This feild is required</span>';
-		} 
 		for($i=1;$i<=10;$i++){ 
 			$opt = 'opt_'.$i; 
 			$msg = 'opt'.$i.'Message'; 

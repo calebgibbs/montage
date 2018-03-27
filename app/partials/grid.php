@@ -14,7 +14,7 @@ if($_GET['page'] == 'portfolios'){
 		<div id="boxes">	 
 			<?php if($_GET['page'] != 'portfolios'): ?>
 				<form method="post"> 
-			<?php endif ?>	
+				<?php endif ?>	
 				<?php if( $results == 'No results' ): ?>  
 					<?php if($class == 'search-title'): ?> 
 						<h3 class="noResults">No results for '<?= $title ?>'</h3>
@@ -24,64 +24,180 @@ if($_GET['page'] == 'portfolios'){
 					<?php endif ?>
 				<?php endif ?> 
 				<?php if( $results != 'No results' ): ?> 
-					<?php foreach( $results as $result ): ?> 
-						<?php if( $result['image_position'] == 1 ): ?>
-							<?php if($_GET['page'] == 'portfolios'): ?>	
-								<div class="box-outer port-link" href="index.php?page=portfolio&num=<?= $result['id'] ?>">
-								<?php endif ?>	
-								<?php if($_GET['page'] != 'portfolios'): ?>
-									<div class="box-outer"> 
-										<button class="a-f-b" name="addfav" value="<?= $result['id'] ?>">
-											<?php 
-											if (isset($_SESSION['favourites'])) {
-												$current = $result['id'];
-												$favourites = json_decode($_SESSION['favourites'], true);  
-												if (in_array($current, $favourites)) {
-													echo "&diams;";
-												}else{ 
-													echo "&loz;";
-												}
-											}else{ 
-												$current = $result['id'];
-												$favourites = json_decode($_COOKIE['favourites'], true);  
-												if (!empty($favourites)) {
-													if (in_array($current, $favourites)) {
-														echo "&diams;";
+					<?php if($_GET['page'] != 'portfolios'): ?>
+						<?php foreach( $results as $result ): ?> 
+							<?php if($result['supplier'] == 'montage'): ?>
+								<?php if( $result['image_position'] == 1 ): ?>
+									<?php if($_GET['page'] == 'portfolios'): ?>	
+										<div class="box-outer port-link" href="index.php?page=portfolio&num=<?= $result['id'] ?>">
+										<?php endif ?>	
+										<?php if($_GET['page'] != 'portfolios'): ?>
+											<div class="box-outer"> 
+												<button class="a-f-b" name="addfav" value="<?= $result['id'] ?>">
+													<?php 
+													if (isset($_SESSION['favourites'])) {
+														$current = $result['id'];
+														$favourites = json_decode($_SESSION['favourites'], true);  
+														if (in_array($current, $favourites)) {
+															echo "&diams;";
+														}else{ 
+															echo "&loz;";
+														}
 													}else{ 
-														echo "&loz;";
+														$current = $result['id'];
+														$favourites = json_decode($_COOKIE['favourites'], true);  
+														if (!empty($favourites)) {
+															if (in_array($current, $favourites)) {
+																echo "&diams;";
+															}else{ 
+																echo "&loz;";
+															}
+														}else{ 
+															echo "&loz;";	
+														}	
 													}
-												}else{ 
-													echo "&loz;";	
-												}	
-											}
-											?>
-										</button>
-									<?php endif ?>
-									<?php if($_GET['page'] != 'portfolios'): ?>
-									<div class="box-inner" href="index.php?page=product&productnum=<?= $result['id'] ?>">
-									<?php endif ?>	 
-									<?php if($_GET['page'] == 'portfolios'): ?>
-									<div class="box-inner-port">
-									<?php endif ?>
-										<div class="box-img">
-											<?php if($_GET['page'] != 'portfolios'): ?>
-												<img src="img/products/thumbnail/<?= $result['image'] ?>"> 
-											<?php endif ?> 
-											<?php if($_GET['page'] == 'portfolios'): ?>
-												<img src="img/portfolio/thumbnail/<?= $result['image'] ?>"> 
+													?>
+												</button>
 											<?php endif ?>
-										</div> 
-										<div class="box-title">
-											<h5><?= $result['score_title'] ?></h5>
-										</div>
-									</div>
-								</div>		
-							<?php endif ?>
-						<?php endforeach ?>
-					<?php endif ?>
-				</div> 
-				<?php if($_GET['page'] != 'portfolios'): ?>
-				</form> 
-			<?php endif ?>
-		</div>
-	</div> 
+											<?php if($_GET['page'] != 'portfolios'): ?>
+												<div class="box-inner" href="index.php?page=product&productnum=<?= $result['id'] ?>">
+												<?php endif ?>	 
+												<?php if($_GET['page'] == 'portfolios'): ?>
+													<div class="box-inner-port">
+													<?php endif ?>
+													<div class="box-img">
+														<?php if($_GET['page'] != 'portfolios'): ?>
+															<img src="img/products/thumbnail/<?= $result['image'] ?>"> 
+														<?php endif ?> 
+														<?php if($_GET['page'] == 'portfolios'): ?>
+															<img src="img/portfolio/thumbnail/<?= $result['image'] ?>"> 
+														<?php endif ?>
+													</div> 
+													<div class="box-title">
+														<h5><?= $result['score_title'] ?></h5>
+													</div>
+												</div>
+											</div>		
+										<?php endif ?> 
+									<?php endif ?>
+								<?php endforeach ?>
+								<?php foreach( $results as $result ): ?> 
+									<?php if($result['supplier'] != 'montage'): ?>
+										<?php if( $result['image_position'] == 1 ): ?>
+											<?php if($_GET['page'] == 'portfolios'): ?>	
+												<div class="box-outer port-link" href="index.php?page=portfolio&num=<?= $result['id'] ?>">
+												<?php endif ?>	
+												<?php if($_GET['page'] != 'portfolios'): ?>
+													<div class="box-outer"> 
+														<button class="a-f-b" name="addfav" value="<?= $result['id'] ?>">
+															<?php 
+															if (isset($_SESSION['favourites'])) {
+																$current = $result['id'];
+																$favourites = json_decode($_SESSION['favourites'], true);  
+																if (in_array($current, $favourites)) {
+																	echo "&diams;";
+																}else{ 
+																	echo "&loz;";
+																}
+															}else{ 
+																$current = $result['id'];
+																$favourites = json_decode($_COOKIE['favourites'], true);  
+																if (!empty($favourites)) {
+																	if (in_array($current, $favourites)) {
+																		echo "&diams;";
+																	}else{ 
+																		echo "&loz;";
+																	}
+																}else{ 
+																	echo "&loz;";	
+																}	
+															}
+															?>
+														</button>
+													<?php endif ?>
+													<?php if($_GET['page'] != 'portfolios'): ?>
+														<div class="box-inner" href="index.php?page=product&productnum=<?= $result['id'] ?>">
+														<?php endif ?>	 
+														<?php if($_GET['page'] == 'portfolios'): ?>
+															<div class="box-inner-port">
+															<?php endif ?>
+															<div class="box-img">
+																<?php if($_GET['page'] != 'portfolios'): ?>
+																	<img src="img/products/thumbnail/<?= $result['image'] ?>"> 
+																<?php endif ?> 
+																<?php if($_GET['page'] == 'portfolios'): ?>
+																	<img src="img/portfolio/thumbnail/<?= $result['image'] ?>"> 
+																<?php endif ?>
+															</div> 
+															<div class="box-title">
+																<h5><?= $result['score_title'] ?></h5>
+															</div>
+														</div>
+													</div>		
+												<?php endif ?> 
+											<?php endif ?>
+										<?php endforeach ?> 
+									<?php endif ?>
+								<?php endif ?> 
+								<?php if($_GET['page'] == 'portfolios'): ?>  
+									<?php foreach( $results as $result ): ?> 
+										<?php if( $result['image_position'] == 1 ): ?>
+											<?php if($_GET['page'] == 'portfolios'): ?>	
+												<div class="box-outer port-link" href="index.php?page=portfolio&num=<?= $result['id'] ?>">
+												<?php endif ?>	
+												<?php if($_GET['page'] != 'portfolios'): ?>
+													<div class="box-outer"> 
+														<button class="a-f-b" name="addfav" value="<?= $result['id'] ?>">
+															<?php 
+															if (isset($_SESSION['favourites'])) {
+																$current = $result['id'];
+																$favourites = json_decode($_SESSION['favourites'], true);  
+																if (in_array($current, $favourites)) {
+																	echo "&diams;";
+																}else{ 
+																	echo "&loz;";
+																}
+															}else{ 
+																$current = $result['id'];
+																$favourites = json_decode($_COOKIE['favourites'], true);  
+																if (!empty($favourites)) {
+																	if (in_array($current, $favourites)) {
+																		echo "&diams;";
+																	}else{ 
+																		echo "&loz;";
+																	}
+																}else{ 
+																	echo "&loz;";	
+																}	
+															}
+															?>
+														</button>
+													<?php endif ?>
+													<?php if($_GET['page'] != 'portfolios'): ?>
+														<div class="box-inner" href="index.php?page=product&productnum=<?= $result['id'] ?>">
+														<?php endif ?>	 
+														<?php if($_GET['page'] == 'portfolios'): ?>
+															<div class="box-inner-port">
+															<?php endif ?>
+															<div class="box-img">
+																<?php if($_GET['page'] != 'portfolios'): ?>
+																	<img src="img/products/thumbnail/<?= $result['image'] ?>"> 
+																<?php endif ?> 
+																<?php if($_GET['page'] == 'portfolios'): ?>
+																	<img src="img/portfolio/thumbnail/<?= $result['image'] ?>"> 
+																<?php endif ?>
+															</div> 
+															<div class="box-title">
+																<h5><?= $result['score_title'] ?></h5>
+															</div>
+														</div>
+													</div>		
+												<?php endif ?> 
+											<?php endforeach ?>
+										<?php endif ?>
+									</div> 
+									<?php if($_GET['page'] != 'portfolios'): ?>
+									</form> 
+								<?php endif ?>
+							</div>
+						</div> 

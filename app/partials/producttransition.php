@@ -21,10 +21,10 @@ $this -> layout('master',[
 <?php if($_GET['page'] == 'joinery_custom'): ?> 
 	<div id="search-heading" class="joinery-title tran-p"><h2>Joinery + Custom</h2></div>
 	<div class="jc-cat subcat_link" href="index.php?page=joinery">
-		<img src="img/products/categories/custom.jpg"> 
+		<img src="img/products/categories/joinerysub.jpg"> 
 	</div>
 	<div class="jc-cat subcat_link" href="index.php?page=custom">
-		<img src="img/products/categories/joinerysub.jpg">
+		<img src="img/products/categories/custom.jpg">
 	</div>
 <?php endif ?> 
 <?php if($_GET['page'] == 'seating'): ?> 

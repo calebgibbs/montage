@@ -155,6 +155,7 @@ $this -> layout('master',[
 				</div>  
 			<?php endif ?>
 			<?php if($_GET['page'] == 'product'): ?>
+			<?php if($Allfeatures != 'noFeatures'): ?>	
 				<div class="prod-features">
 					<h2>Features</h2> 
 					<ul class="product-list">
@@ -167,6 +168,8 @@ $this -> layout('master',[
 						<?php endforeach; ?>
 					</ul>
 				</div>	 
+			<?php endif ?>
+			<?php if($Alloptions != 'noOptions'): ?>
 				<div class="prod-options">
 					<h2>Options</h2> 
 					<ul class="product-list">
@@ -179,6 +182,7 @@ $this -> layout('master',[
 						<?php endforeach; ?>
 					</ul> 	
 				</div>  
+			<?php endif ?>
 				<?php if($links != 'noLinks'): ?>
 					<div class="prod-options">
 						<h2>Suggested options</h2> 
@@ -218,37 +222,37 @@ $this -> layout('master',[
 	}	
 </script> 
 <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+<?php $imgC = $imgC / 2 ?>
 <script type="text/javascript">
-	$(function(){ 
-		var img = document.getElementById('imgSize');
-		var imgW = img.clientWidth; 
-		var elemCount = <?= $imgC - 2?>; 
-		var current = 1; 
-		var elemWidth = imgW + 11.200; 
-		var move = 0;  
-		if(<?= $imgC ?> <= 3){ 
-			$('.slider-btn').css('display','none');
+$(function(){ 
+	var img = document.getElementById('imgSize');
+	var imgW = img.clientWidth; 
+	var elemCount = <?= $imgC / 2?>; 
+	var current = 1; 
+	var elemWidth = imgW + 11.200; 
+	var move = 0;  
+	if(<?= $imgC ?> <= 3){ 
+		$('.slider-btn').css('display','none');
+	}
+	$('.next').click(function(){
+		if( current < elemCount){ 
+			$('.slider .thumbs').toggleClass('move'); 
+			move += elemWidth;  
+			$('.slider .thumbs').css('transform', 'translateX(-'+move+'px)'); 
+			current++;
+		}else{ 
+			move = 0; 
+			current = 1;  
+			$('.slider .thumbs').css('transform', 'translateX('+move+'px)');
 		}
-
-		$('.next').click(function(){
-			if( current < elemCount){ 
-				$('.slider .thumbs').toggleClass('move'); 
-				move += elemWidth;  
-				$('.slider .thumbs').css('transform', 'translateX(-'+move+'px)'); 
-				current++;
-			}else{ 
-				move = 0; 
-				current = 1;  
-				$('.slider .thumbs').css('transform', 'translateX('+move+'px)');
-			}
-		}); 
-		$('.prev').click(function(){
-			if( current > 0){
-				$('.slider .thumbs').toggleClass('move'); 
-				move -= elemWidth; 
-				current--;  
-				$('.slider .thumbs').css('transform', 'translateX(-'+move+'px)');
-			}
-		});
+	}); 
+	$('.prev').click(function(){
+		if( current > 0){
+			$('.slider .thumbs').toggleClass('move'); 
+			move -= elemWidth; 
+			current--;  
+			$('.slider .thumbs').css('transform', 'translateX(-'+move+'px)');
+		}
 	});
-</script>  
+});
+</script> 

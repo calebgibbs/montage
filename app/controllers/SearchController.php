@@ -28,7 +28,7 @@ class SearchController extends PageController {
 		$search = $this->dbc->real_escape_string(trim($_GET['s'])); 
 		$this->data['title'] = ucfirst($search); 
 		$this->data['class'] = 'search-title';  
-		$sql = "SELECT p.id, p.title AS score_title, p.category AS score_category,
+		$sql = "SELECT p.id, p.title AS score_title, p.category AS score_category, p.supplier,
 				i.product_id, i.image, i.image_position 
 				FROM products AS p 
 				JOIN product_images AS i 
