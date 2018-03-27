@@ -10,7 +10,7 @@ $_SESSION['page'] = $_SERVER['REQUEST_URI'];
 		<div id="search-heading" class="downloads-title"><h2>Contact</h2></div>
 		<div id="contact-left">
 			<h2>Nation Wide Coverage</h2>
-			<img src="http://placehold.it/800x650">	
+			<img src="img/contact/map.png">	
 		</div> 
 		<div id="contact-right">
 			<h2>Account Managers</h2>   
@@ -54,7 +54,7 @@ $_SESSION['page'] = $_SERVER['REQUEST_URI'];
 		</div> 
 		<div id="contact-device">
 			<h2>Nation Wide Coverage</h2>
-			<img src="http://placehold.it/800x650">	
+			<img src="img/contact/map.png">	
 		</div>
 	</div>  
 

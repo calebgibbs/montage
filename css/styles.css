@@ -1482,22 +1482,23 @@ _:-ms-lang(x), #drop-down {
       vertical-align: top;
       cursor: pointer; }
 
-.large-img img {
-  width: 770px;
-  height: 450px; }
-
-.large-img button {
-  position: relative !important;
-  margin-bottom: -2.5rem !important;
-  background: none;
-  border: none;
-  opacity: 0;
-  font-size: 2rem;
-  color: #A6A6A6;
-  transition: 0.2s; }
-
-.large-img:hover button {
-  opacity: 1; }
+.large-img {
+  text-align: center;
+  background: #fff; }
+  .large-img img {
+    max-width: 770px;
+    height: 450px; }
+  .large-img button {
+    position: relative !important;
+    margin-bottom: -2.5rem !important;
+    background: none;
+    border: none;
+    opacity: 0;
+    font-size: 2rem;
+    color: #A6A6A6;
+    transition: 0.2s; }
+  .large-img:hover button {
+    opacity: 1; }
 
 .img-thumb {
   margin-top: 0.8rem; }

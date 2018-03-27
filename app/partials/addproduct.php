@@ -18,7 +18,7 @@ $this -> layout('master',[
 					<?php if(isset($_POST['category'])): ?>  
 						<?php 
 						if ( $_POST['category'] == 'workstation') {
-							$valueName = "Workstation";
+							$valueName = "Workstation + Screens";
 						}elseif ($_POST['category'] == 'storage') {
 							$valueName = "Storage";
 						}elseif ($_POST['category'] == 'tech_accesories') {
@@ -26,7 +26,7 @@ $this -> layout('master',[
 						}elseif ($_POST['category'] == 'table') {
 							$valueName = "Table";
 						}elseif ($_POST['category'] == 'screen') {
-							$valueName = "Screen";
+							$valueName = "Workstation + Screens";
 						}elseif ($_POST['category'] == 'agile_furniture') {
 							$valueName = "Agile furniture";
 						}elseif($_POST['category'] == 'chair'){
@@ -44,11 +44,10 @@ $this -> layout('master',[
 					<?php if(!isset($_POST['category'])): ?>
 						<option value="0">Select Category</option>
 					<?php endif ?>
-					<option value="workstation">Workstation</option> 
+					<option value="workstation">Workstation + Screens</option> 
 					<option value="storage">Storage</option>
 					<option value="tech_accesories" id="tech-sel">Tech and Accesories</option> 
-					<option value="table" id="table-sel">Table</option> 
-					<option value="screen">Screen</option> 
+					<option value="table" id="table-sel">Table</option>  
 					<option value="agile_furniture" id="agile-sel">Agile furniture</option>
 					<option value="chair" id="seating-sel">Seating</option> 
 					<option value="joinery_custom" id="joinery-sel">Joinery and Custom</option> 

@@ -91,7 +91,7 @@ $cat2 = $product['category2'];
 					<?php if($product['category']): ?>  
 						<?php 
 						if ( $product['category'] == 'workstation') {
-							$valueName = "Workstation";
+							$valueName = "Workstation + Screens";
 						}elseif ($product['category'] == 'storage') {
 							$valueName = "Storage";
 						}elseif ($product['category'] == 'tech_accesories') {
@@ -99,7 +99,7 @@ $cat2 = $product['category2'];
 						}elseif ($product['category'] == 'table') {
 							$valueName = "Table";
 						}elseif ($product['category'] == 'screen') {
-							$valueName = "Screen";
+							$valueName = "Workstation + Screens";
 						}elseif ($product['category'] == 'agile_furniture') {
 							$valueName = "Agile furniture";
 						}elseif($product['category'] == 'chair'){
@@ -117,7 +117,7 @@ $cat2 = $product['category2'];
 					<?php if(isset($_POST['category'])): ?>  
 						<?php 
 						if ( $_POST['category'] == 'workstation') {
-							$valueName = "Workstation";
+							$valueName = "Workstation + Screens";
 						}elseif ($_POST['category'] == 'storage') {
 							$valueName = "Storage";
 						}elseif ($_POST['category'] == 'tech_accesories') {
@@ -125,7 +125,7 @@ $cat2 = $product['category2'];
 						}elseif ($_POST['category'] == 'table') {
 							$valueName = "Table";
 						}elseif ($_POST['category'] == 'screen') {
-							$valueName = "Screen";
+							$valueName = "Workstation + Screens";
 						}elseif ($_POST['category'] == 'agile_furniture') {
 							$valueName = "Agile furniture";
 						}elseif($_POST['category'] == 'chair'){
@@ -140,11 +140,10 @@ $cat2 = $product['category2'];
 						?> 
 						<option value="<?= $_POST['category'] ?>"><?= $valueName ?></option> 
 					<?php endif ?>
-					<option value="workstation">Workstation</option> 
+					<option value="workstation">Workstation + Screens</option> 
 					<option value="storage">Storage</option>
 					<option value="tech_accesories">Tech and Accesories</option> 
 					<option value="table">Table</option> 
-					<option value="screen">Screen</option> 
 					<option value="agile_furniture">Agile furniture</option>
 					<option value="chair">Seating</option> 
 					<option value="joinery_custom">Joinery and Custom</option> 
