@@ -343,7 +343,7 @@ class AddproductController extends PageController {
 			$link = ${'optL'.$i}; 
 			if (strlen($link) != 0) {
 				$sql = "INSERT INTO product_links(product_id, href, link_text, position)
-				VALUES('$prodId', '$link', '$link', '$i')"; 
+				VALUES('$prodId', '$link', '$text', '$i')"; 
 				$this->dbc->query($sql);
 			}
 		} 

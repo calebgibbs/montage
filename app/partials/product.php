@@ -106,7 +106,7 @@ $this -> layout('master',[
 							<?php foreach($Allimages as $image ): ?> 
 								<?php $imgC++ ?>
 								<div class="imgSlide_<?= $imgC ?>">
-									<img <?php if($image['image_position'] == 1): ?> id="imgSize" <?php endif ?> src="img/products/thumbnail/<?= $image['image'] ?>" onClick="ChangeImage('img/products/large/<?= $image['image'] ?>')">
+									<img <?php if($image['image_position'] == 1): ?> id="imgSize" <?php endif ?> src="img/products/large/<?= $image['image'] ?>" onClick="ChangeImage('img/products/large/<?= $image['image'] ?>')">
 								</div> 
 							<?php endforeach ?>
 						</div>	

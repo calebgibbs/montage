@@ -3,7 +3,6 @@ $this -> layout('master',[
 	'title'=>'Montage Interiors | Products', 
 	'desc' => 'montage interiors product range' 
 ]);  
-$prevPage = $_SERVER['QUERY_STRING']; 
 ?>
 <div class="body">  
 	<div class="products-grid pro-grid-desktop">

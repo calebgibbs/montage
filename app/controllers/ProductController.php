@@ -72,7 +72,21 @@ class ProductController extends PageController {
 		if(!$result || $result->num_rows == 0){ 
 			$this->data['dim'] = 'noDim';
 		}else{ 
-			$this->data['dim'] = $result->fetch_all(MYSQLI_ASSOC);
+			$dim = $result->fetch_all(MYSQLI_ASSOC); 
+			$newdim = array();
+			foreach($dim as $d){ 
+				if(strlen(trim($d['dimension_type'])) != 0){ 
+					array_push($newdim, $d);
+				}else{ 
+					// echo "empty <br>";
+				}
+			}  
+			if(!empty($newdim)){ 
+				$this->data['dim'] = $newdim;
+
+			}else{ 
+				$this->data['dim'] = 'noDim';
+			}
 		}
 		//get downloads
 		$sql = "SELECT download_link, title, position FROM downloads WHERE product_id = '$productId'"; 
