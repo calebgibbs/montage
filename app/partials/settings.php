@@ -44,5 +44,35 @@ $this -> layout('master',[
 				</tr>  
 			<?php endforeach ?> 
 		</table>  
+		<div>
+			<h3>Contact Page Managers</h3> 
+			<table id="contact-managers-tb">
+				<tr>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Phone</th> 
+					<th>Options</th>
+				</tr> 
+				<?php foreach($managers as $manager): ?> 
+					<tr>
+						<form method="post" action="index.php?page=settings">
+							<td><?= $manager['name'] ?></td>
+							<td><?= $manager['email'] ?></td>
+							<td><?= $manager['phone'] ?></td> 
+							<td>
+								<button name="removeManager" value="<?= $manager['id'] ?>">Remove</button>
+								<button class="edit-manager" value="<?= $manager['id'] ?>" name="editManager">Edit</button>
+							</td> 
+						</tr> 
+						<tr class="edit-row" id="edit<?= $manager['id'] ?>">
+							<td><input type="text" name="name" value="<?= $manager['name'] ?>"></td> 
+							<td><input type="email" name="email" value="<?= $manager['email'] ?>"></td> 
+							<td><input type="tel" name="phone" value="<?= $manager['phone'] ?>"></td> 
+							<td><button name="saveMan" class="save-btn" type="submit" value="<?= $manager['id'] ?>">Save</button></td>
+						</tr> 
+					</form>
+				<?php endforeach ?>
+			</table>
+		</div> 
 	</div> 
 </div> 

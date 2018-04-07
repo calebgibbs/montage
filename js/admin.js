@@ -53,5 +53,10 @@ $(document).ready(function(){
 			}
 		});	
 		}
+	}); 
+	$('.edit-manager').click(function(e){
+		e.preventDefault(); 
+		var row = $(this).val(); 
+		$('#edit' + row).slideToggle(); 
 	});
 });

@@ -1268,6 +1268,18 @@ _:-ms-lang(x), #drop-down {
     padding-right: 1.5rem;
     padding-bottom: 0.5rem; }
 
+.linked-in a {
+  color: #242424 !important;
+  font-size: 0.9rem;
+  font-weight: 100;
+  text-decoration: none; }
+  .linked-in a i {
+    font-size: 1.1rem;
+    background: #2b73ad;
+    padding: 2px 4px 2px 4px;
+    border-radius: 2px;
+    color: #fff; }
+
 .c-name {
   font-weight: bold; }
 
@@ -2953,6 +2965,22 @@ textarea:focus ~ .floating-label, textarea:not(:focus):valid ~ .floating-label {
   .inner tr:hover {
     background: #e6e6e6;
     cursor: pointer; }
+
+#contact-managers-tb th, #contact-managers-tb td {
+  width: calc(100% / 4); }
+  #contact-managers-tb th button:nth-of-type(1), #contact-managers-tb td button:nth-of-type(1) {
+    margin-left: 10px;
+    background: rgba(217, 83, 79, 0.9); }
+    #contact-managers-tb th button:nth-of-type(1):hover, #contact-managers-tb td button:nth-of-type(1):hover {
+      background: #d9534f; }
+
+.save-btn {
+  background: rgba(66, 139, 202, 0.8) !important; }
+  .save-btn:hover {
+    background: #428bca !important; }
+
+.edit-row {
+  display: none; }
 
 .prod-table {
   text-align: center; }

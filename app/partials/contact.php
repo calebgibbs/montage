@@ -47,7 +47,10 @@ $_SESSION['page'] = $_SERVER['REQUEST_URI'];
 				<tr>
 					<td class="contact-ph">027 591 9959</td>
 				</tr>
-			</table>
+			</table> 
+			<div class="linked-in">
+				<a href="https://www.linkedin.com/company/montage-interiors-nz/ " target="_blank"><i class="fa fa-linkedin"></i> Find us on LinkedIn</a>
+			</div>
 			<div id="map" class="cf">
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2253.7139645056213!2d174.82701322233012!3d-41.137282905752535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38afd5a9f9430b%3A0x84a79497ce7b8722!2sMontage+Interiors!5e0!3m2!1sen!2snz!4v1517353751682" frameborder="0" style="border:0" allowfullscreen></iframe>	
 			</div> 
