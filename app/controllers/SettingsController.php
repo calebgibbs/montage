@@ -18,6 +18,9 @@ class SettingsController extends PageController {
 		} 
 		if(isset($_POST['saveMan'])){ 
 			$this->updateMan();
+		} 
+		if(isset($_POST['add-man'])){ 
+			$this->addMan();
 		}
 	}  
 	public function buildHTML(){ 
@@ -55,7 +58,10 @@ class SettingsController extends PageController {
 		}
 	} 
 	private function removeManager(){ 
-		echo "remove";
+		$id = $_POST['removeManager'];
+		$sql = "DELETE FROM `managers` WHERE `managers`.`id` = '$id'"; 
+		$this->dbc->query($sql); 
+		header('Location: index.php?page=settings');
 	}  
 	private function updateMan(){ 
 		$id = $_POST['saveMan']; 
@@ -65,5 +71,25 @@ class SettingsController extends PageController {
 		$sql = "UPDATE managers SET name = '$name', email = '$email', phone = '$phone' WHERE id = '$id'"; 
 		$this->dbc->query($sql); 
 		header('Location: index.php?page=settings');
+	} 
+	private function addMan(){ 
+		$name = $this->dbc->real_escape_string(trim($_POST['add-name']));
+		$email = $this->dbc->real_escape_string(trim($_POST['add-email'])); 
+		$phone = $this->dbc->real_escape_string(trim($_POST['add-phone']));  
+		$errors = 0;  
+		if(strlen($name) == 0){ 
+			$errors++;
+		} 
+		if(strlen($email) == 0){ 
+			$errors++;
+		} 
+		if(strlen($phone) == 0){ 
+			$errors++;
+		} 
+		if($errors === 0){ 
+			$sql = "INSERT INTO managers(name, email, phone) VALUES('$name','$email','$phone')"; 
+			$this->dbc->query($sql); 
+			header('Location: index.php?page=settings');
+		} 
 	}
 }

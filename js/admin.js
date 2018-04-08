@@ -58,5 +58,8 @@ $(document).ready(function(){
 		e.preventDefault(); 
 		var row = $(this).val(); 
 		$('#edit' + row).slideToggle(); 
+	});  
+	$('.add-man-btn-prompt').click(function(){ 
+		$('.add-man-row').slideToggle();
 	});
 });

@@ -60,7 +60,7 @@ $this -> layout('master',[
 							<td><?= $manager['email'] ?></td>
 							<td><?= $manager['phone'] ?></td> 
 							<td>
-								<button name="removeManager" value="<?= $manager['id'] ?>">Remove</button>
+								<button class="remove-man-btn" name="removeManager" value="<?= $manager['id'] ?>">Remove</button>
 								<button class="edit-manager" value="<?= $manager['id'] ?>" name="editManager">Edit</button>
 							</td> 
 						</tr> 
@@ -70,9 +70,16 @@ $this -> layout('master',[
 							<td><input type="tel" name="phone" value="<?= $manager['phone'] ?>"></td> 
 							<td><button name="saveMan" class="save-btn" type="submit" value="<?= $manager['id'] ?>">Save</button></td>
 						</tr> 
-					</form>
-				<?php endforeach ?>
-			</table>
+					<?php endforeach ?> 
+					<tr class="add-man-row">
+						<td><input placeholder="Name" type="text" name="add-name"></td> 
+						<td><input placeholder="Email" type="email" name="add-email"></td> 
+						<td><input placeholder="Phone" type="tel" name="add-phone"></td> 
+						<td><button class="add-man-btn" name="add-man">Add</button></td>
+					</tr>
+				</form>
+			</table> 
+			<button id="addAdminBtn" class="add-man-btn-prompt" name="addAdmin">Add a Manager</button>
 		</div> 
 	</div> 
 </div> 
