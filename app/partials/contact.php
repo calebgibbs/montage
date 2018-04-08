@@ -13,41 +13,19 @@ $_SESSION['page'] = $_SERVER['REQUEST_URI'];
 			<img src="img/contact/map.png">	
 		</div> 
 		<div id="contact-right">
-			<h2>Account Managers</h2>   
+			<h2>Account Managers</h2>    
 			<table class="managers">
+				<?php foreach($managers as $manager): ?> 
 				<tr>
-					<td class="c-name">Dave</td> 
-					<td>dave@montage.co.nz</td> 
-					<td>027 440 3683</td>
+					<td class="c-name"><?= $manager['name'] ?></td> 
+					<td><?= $manager['email'] ?></td>
+					<td><?= $manager['phone'] ?></td>
 				</tr> 
 				<tr>
-					<td class="contact-ph">027 440 3683</td>
-				</tr>  
-				<tr>
-					<td class="c-name">Derek</td>
-					<td>derek@montagenz.co.nz</td>  
-					<td>027 496 8372</td>
-				</tr> 
-				<tr>
-					<td class="contact-ph">027 496 8372</td>
+					<td class="contact-ph"><?= $manager['phone'] ?></td>
 				</tr>
-				<tr>
-					<td class="c-name">Nynke</td> 
-					<td>nynke@montagenz.co.nz</td> 
-					<td>027 441 4103</td>
-				</tr> 
-				<tr>
-					<td class="contact-ph">027 441 4103</td>	
-				</tr> 
-				<tr>
-					<td class="c-name">Matt</td>
-					<td>matt@montagenz.co.nz</td> 
-					<td>027 591 9959</td>
-				</tr> 
-				<tr>
-					<td class="contact-ph">027 591 9959</td>
-				</tr>
-			</table> 
+				<?php endforeach ?>
+			</table>
 			<div class="linked-in">
 				<a href="https://www.linkedin.com/company/montage-interiors-nz/ " target="_blank"><i class="fa fa-linkedin"></i> Find us on LinkedIn</a>
 			</div>
