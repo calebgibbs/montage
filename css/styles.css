@@ -1846,6 +1846,12 @@ _:-ms-lang(x), #drop-down {
   padding-left: 0 !important;
   text-align: left !important; }
 
+.slider-btn {
+  color: #A6A6A6;
+  transition: 0.2s; }
+  .slider-btn:hover {
+    color: #424242; }
+
 .products-grid {
   text-align: right;
   position: static;
@@ -3202,6 +3208,9 @@ article {
 
 #HelpErMsg {
   color: #d9534f; }
+
+textarea {
+  overflow-y: scroll !important; }
 
 @keyframes imageload {
   0% {
