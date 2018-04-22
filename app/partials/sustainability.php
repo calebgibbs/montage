@@ -51,12 +51,12 @@ $_SESSION['page'] = $_SERVER['REQUEST_URI'];
 				</article>
 			</div>
 			<div class="m-smart-art-trig">
-				<h3>Smart Procedurement</h3> 
+				<h3>Smart Procurement</h3> 
 				<img src="img/sustainability/smart-mobile.png">
 			</div> 
 			<div class="mobile-art m-smart-art">
 				<article>
-					<h1>Montage Smart Proceduremnt</h1> 
+					<h1>Montage Smart Procurement</h1> 
 					<p>Montage Interiors’ wealth of experience enables us to smartly procure raw materials to reduce environmental harm, with future generations in mind.</p>
 					<p>We strongly support the use of local manufacture and choose only to work with ethical and sustainable suppliers. Not only does this support the local economy, but it ensures sustainable choices are being made and helps such responsible businesses grow. Promoting the use of recycled plastics, fabrics, steel and more is a small but crucial step to keeping environmental impacts to a minimum.</p> 
 					<p>With decades of experience, Montage utilises collective industry knowledge in the procurement and allocation of materials.</p>
@@ -99,11 +99,11 @@ $_SESSION['page'] = $_SERVER['REQUEST_URI'];
 			<div class="modal-inner">
 				<div class="modal-heading">
 					<img src="img/sustainability/modal-smart.png"> 
-					<h4>Smart Proceduremnt</h4> 		
+					<h4>Smart Procurement</h4> 		
 				</div> 
 				<div class="modal-text">
 					<article>
-						<h1>Montage Smart Proceduremnt</h1> 
+						<h1>Montage Smart Procurement</h1> 
 						<p>Montage Interiors’ wealth of experience enables us to smartly procure raw materials to reduce environmental harm, with future generations in mind.</p>
 						<p>We strongly support the use of local manufacture and choose only to work with ethical and sustainable suppliers. Not only does this support the local economy, but it ensures sustainable choices are being made and helps such responsible businesses grow. Promoting the use of recycled plastics, fabrics, steel and more is a small but crucial step to keeping environmental impacts to a minimum.</p> 
 						<p>With decades of experience, Montage utilises collective industry knowledge in the procurement and allocation of materials.</p>

@@ -693,7 +693,8 @@
 	text-align: center 
 	img
 		box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52)  
-		transition: 0.3s   
+		transition: 0.3s  
+		margin-bottom: 2rem 
 		&:hover 
 			transform: scale(1.01) 
 			cursor: pointer 
@@ -703,7 +704,8 @@
 	text-align: center 
 	img
 		box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52)  
-		transition: 0.3s   
+		transition: 0.3s 
+		margin-bottom: 2rem  
 		&:hover 
 			transform: scale(1.01) 
 			cursor: pointer 
@@ -713,7 +715,8 @@
 	text-align: center 
 	img
 		box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52)  
-		transition: 0.3s   
+		transition: 0.3s 
+		margin-bottom: 2rem  
 		&:hover 
 			transform: scale(1.01) 
 			cursor: pointer
@@ -723,7 +726,8 @@
 	text-align: center 
 	img
 		box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52)  
-		transition: 0.3s   
+		transition: 0.3s 
+		margin-bottom: 2rem  
 		&:hover 
 			transform: scale(1.01) 
 			cursor: pointer
@@ -733,25 +737,33 @@
 	text-align: center
 	img
 		box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52)  
-		transition: 0.3s   
+		transition: 0.3s
+		margin-bottom: 2rem   
 		&:hover 
 			transform: scale(1.01) 
 			cursor: pointer 
 
 @include desktop-sm 
-	.agile-cat 
+	.agile-cat  
 		img
 			width: 300px 
-			height: 500px 
-	.jc-cat 
-		img 
-			width: 300px 
-			height: 500px 
-	.seat-cat, .table-cat 
+			height: 500px
+			margin-bottom: 2rem 
+	.jc-cat  
 		img 
 			width: 300px 
 			height: 500px 
 			margin-bottom: 2rem
+	.seat-cat, .table-cat  
+		img 
+			width: 300px 
+			height: 500px 
+			margin-bottom: 2rem 
+	.tech-cat 
+		img 
+			width: 300px 
+			height: 500px 
+			margin-bottom: 2rem	
 @include tablet 
 	.agile-cat, .table-cat 
 		img 
@@ -764,7 +776,11 @@
 	.seat-cat  
 		img 
 			width: 300px 
-			height: 500px 
+			height: 500px  
+	.tech-cat 
+		img 
+			width: 300px 
+			height: 500px
 @include mobile 
 	.agile-cat, .table-cat 
 		width: 100% 
@@ -775,7 +791,9 @@
 	.seat-cat   
 		width: 100% 
 		padding-bottom: 1rem	
-
+	.tech-cat   
+		width: 100% 
+		padding-bottom: 1rem
 	.mobile-prod-box  
 		display: block !important
 		width: 95% 

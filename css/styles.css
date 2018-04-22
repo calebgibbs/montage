@@ -578,7 +578,7 @@ _:-ms-lang(x), #drop-down {
   .portfolio img {
     width: 750px; }
   .mission-statement {
-    margin-top: 13rem; }
+    margin-top: 12rem; }
     .mission-statement h2 {
       font-size: 3.5rem; }
     .mission-statement h3 {
@@ -2499,7 +2499,8 @@ _:-ms-lang(x), #drop-down {
   text-align: center; }
   .agile-cat img {
     box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52);
-    transition: 0.3s; }
+    transition: 0.3s;
+    margin-bottom: 2rem; }
     .agile-cat img:hover {
       transform: scale(1.01);
       cursor: pointer; }
@@ -2510,7 +2511,8 @@ _:-ms-lang(x), #drop-down {
   text-align: center; }
   .jc-cat img {
     box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52);
-    transition: 0.3s; }
+    transition: 0.3s;
+    margin-bottom: 2rem; }
     .jc-cat img:hover {
       transform: scale(1.01);
       cursor: pointer; }
@@ -2521,7 +2523,8 @@ _:-ms-lang(x), #drop-down {
   text-align: center; }
   .seat-cat img {
     box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52);
-    transition: 0.3s; }
+    transition: 0.3s;
+    margin-bottom: 2rem; }
     .seat-cat img:hover {
       transform: scale(1.01);
       cursor: pointer; }
@@ -2532,7 +2535,8 @@ _:-ms-lang(x), #drop-down {
   text-align: center; }
   .table-cat img {
     box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52);
-    transition: 0.3s; }
+    transition: 0.3s;
+    margin-bottom: 2rem; }
     .table-cat img:hover {
       transform: scale(1.01);
       cursor: pointer; }
@@ -2543,7 +2547,8 @@ _:-ms-lang(x), #drop-down {
   text-align: center; }
   .tech-cat img {
     box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52);
-    transition: 0.3s; }
+    transition: 0.3s;
+    margin-bottom: 2rem; }
     .tech-cat img:hover {
       transform: scale(1.01);
       cursor: pointer; }
@@ -2551,11 +2556,17 @@ _:-ms-lang(x), #drop-down {
 @media screen and (max-width: 1440px) {
   .agile-cat img {
     width: 300px;
-    height: 500px; }
+    height: 500px;
+    margin-bottom: 2rem; }
   .jc-cat img {
     width: 300px;
-    height: 500px; }
+    height: 500px;
+    margin-bottom: 2rem; }
   .seat-cat img, .table-cat img {
+    width: 300px;
+    height: 500px;
+    margin-bottom: 2rem; }
+  .tech-cat img {
     width: 300px;
     height: 500px;
     margin-bottom: 2rem; } }
@@ -2569,6 +2580,9 @@ _:-ms-lang(x), #drop-down {
     height: 400px; }
   .seat-cat img {
     width: 300px;
+    height: 500px; }
+  .tech-cat img {
+    width: 300px;
     height: 500px; } }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -2579,6 +2593,9 @@ _:-ms-lang(x), #drop-down {
     width: 100%;
     padding-bottom: 1rem; }
   .seat-cat {
+    width: 100%;
+    padding-bottom: 1rem; }
+  .tech-cat {
     width: 100%;
     padding-bottom: 1rem; }
   .mobile-prod-box {

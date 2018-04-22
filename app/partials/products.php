@@ -8,7 +8,7 @@ $this -> layout('master',[
 	<div class="products-grid pro-grid-desktop">
 		<div id="pgrid-title" class="productsP-title">
 			<h1 class="productsh1">Products</h1> 
-			<h3 class="productsh3">For truely adpatable spaces</h3>
+			<h3 class="productsh3">For truely adaptable spaces</h3>
 		</div>
 		<div class="workstations-dia diamond" href="index.php?page=workstations_screens">
 			<img src="img/products/categories/workstations.png" alt="Workstations and screens">
