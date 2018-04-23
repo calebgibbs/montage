@@ -11,7 +11,7 @@ require 'app/controllers/FavouritesController.php';
 				<button class="link-btn back-btn">&#8592; Favourites</button>
 				<form id="logmein" method="post" action="index.php?page=login" novalidate> 
 					<div>
-						<input type="email" id="email" name="email" class="inputText" required> 
+						<input type="text" id="email" name="email" class="inputText" required> 
 						<span class="floating-label">Email</span>
 						<span class="input-message" id="email-message"></span>
 					</div>
@@ -39,7 +39,7 @@ require 'app/controllers/FavouritesController.php';
 						<span class="input-message" id="su-name-message"></span>
 					</div>
 					<div>
-						<input id="SUemail" type="email" name="email" class="inputText" required> 
+						<input id="SUemail" type="text" name="email" class="inputText" required> 
 						<span class="floating-label">Your email</span>
 						<span class="input-message" id="su-email-message"></span>
 					</div> 
@@ -72,7 +72,7 @@ require 'app/controllers/FavouritesController.php';
 				<form>
 					<div class="reset-form">
 						<div>
-							<input type="email" name="emailReset" id="emailReset" required> 
+							<input type="text" name="emailReset" id="emailReset" required> 
 							<span class="floating-label">Your email</span>
 							<span class="input-message" id="reset-email-message"></span>
 						</div> 
@@ -101,7 +101,7 @@ require 'app/controllers/FavouritesController.php';
 				</form>
 				<form method="post">
 					<div>
-						<input id="MAemail" type="email" name="email" class="inputText" value="<?= $email ?>" required> 
+						<input id="MAemail" type="text" name="email" class="inputText" value="<?= $email ?>" required> 
 						<span class="floating-label">Your email</span>
 						<span class="input-message" id="MAemailMsg"></span> 
 						<button id="emailUpdate" value="<?= $_SESSION['id'] ?>" type="sumbit" name="updateEmail">Update</button>

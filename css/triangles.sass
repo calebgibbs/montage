@@ -1,23 +1,21 @@
+/* triangles */
+
 .homebg
-	background: url(../img/home/background.png) no-repeat center right 
- 	background-size: 100%  
- 	padding-bottom: 3rem !important
-@include desktop-sm 
+	background: url(../img/home/background.png) no-repeat
+@include navigation-desktop-sm 
 	.homebg
-		background: url(../img/home/background-sm.png) no-repeat center right 
- 		background-size: 100%  
- 		padding-bottom: 3rem !important	
+		background-position: -190px 0
 
 .top 
-	margin-top: 1rem
+	margin-top: 0.5rem
 .mission-statement 
 	display: inline-block 
-	position: relative  
-	margin-left: -9rem 
+	position: relative
+	margin-left: -8rem 
 	vertical-align: top 
-	margin-top: 15rem
+	margin-top: 11rem
 	h2 
-		text-transform: uppercase  
+		text-transform: uppercase
 		color: #3b3b3b 
 		margin: 0 
 		font-size: 4rem 
@@ -33,62 +31,54 @@
 		margin: 3px 0 0 0 
 		color: #989898 
 		font-weight: 100 
-		margin-left: 7.1rem   
+		margin-left: 7.1rem 
 
 .mobileHome 
-	display: none  
+	display: none
 	img 
 		transition: all 0.4s 
 
-.portfolio  
-	display: inline-block   
-	margin-left: 3rem
-	img 
-		width: 934px 
-		position: static
+.portfolio
+	display: inline-block 
+	margin-left: 12rem
 
-.bottom 
-	div  
+.bottom
+	margin-top: 0.8rem
+	div
 		display: inline-block 
 
 .our-story 
 	vertical-align: top 
-	margin-right: -3rem 
-	margin-left: 0.8rem   
+	margin-left: 5.7rem 
 	z-index: 200000
 	position: relative
 	img 
 		width: 478px
 
-.product  
-	margin-left: -25rem  
+.product
+	margin-left: -24rem
 	position: relative
-	z-index: 1  
+	z-index: 1
 	position: static
-	img  
-		width: 934px  
 
-.sustainability  
+.sustainability
 	vertical-align: top 
-	margin-left: -27.8rem 
+	margin-left: -24rem 
 	vertical-align: top
 	z-index: 200000
-	position: relative  
-
-.susimg
-	width: 742px
+	position: relative
 
 .dwnimg 
-	margin-left: -22.5rem  
+	margin-left: -17.5rem
 	z-index: 300000
 	position: relative 
 
-.tri  
+.tri
 	opacity: 0
 
 .homeLink 
 	transition: 0.3s
-	&:hover  
+	&:hover
 		cursor: pointer
 		transform: scale(1.02) 
 
@@ -96,77 +86,77 @@
 	-webkit-animation: imageload 900ms ease-in forwards
 	animation: imageload 900ms ease-in forwards
 
-@include mobile  
-	.desktopHome  
-		display: none !important  
+@include mobile
+	.desktopHome
+		display: none !important
 	.mobileHome 
-		display: block !important  
+		display: block !important
 		img 
 			width: 82% 
 			margin-left: 9% 
 			margin-bottom: 0.2rem
 	.mobileHtitle 
-		width: 80%  
+		width: 80%
 		margin: 0 auto
-		padding: 10px  
+		padding: 10px
 		color: #fff 
 		text-align: center 
 		font-weight: 100 
 		font-size: 1.3rem 
 		background: $turquoise 
-		margin-bottom: 0.2rem  
+		margin-bottom: 0.2rem
 
 @include tablet 
-	.desktopHome  
-		display: none !important  
+	.desktopHome
+		display: none !important
 	.mobileHome 
-		display: block !important  
+		display: block !important
 		img 
 			width: 82% 
 			margin-left: 9% 
 			margin-bottom: 0.2rem 
 	.mobile-H-link 
-		width: 49%  
+		width: 49%
 		display: inline-block 
 	.mobileHtitle 
-		width: 80%  
+		width: 80%
 		margin: 0 auto
-		padding: 10px  
+		padding: 10px
 		color: #fff 
 		text-align: center 
 		font-weight: 100 
 		font-size: 1.3rem 
 		background: $turquoise 
-		margin-bottom: 0.2rem  
+		margin-bottom: 0.2rem
 
 //old 13" mbp 
 @include navigation-desktop-sm 
 	.portfolio 
 		img 
-			width: 750px  
+			width: 600px
 	.mission-statement
-		margin-top: 12rem
+		margin-top: 7rem
+		margin-left: -4rem
 		h2 
 			font-size: 3.5rem 
-		h3  
-			font-size: 2.5rem  
+		h3
+			font-size: 2.5rem
 		p 
 			font-size: 1.5rem
 	.our-story 
-		margin-left: 5rem
+		margin-left: 9.7rem
 		img 
 			width: 320px 
 
 	.product 
-		margin-left: -19.3rem
+		margin-left: -18.1rem
 		img 
-			width: 750px 
+			width: 600px
 	.sustainability 
-		margin-left: -22.5rem
+		margin-left: -18.2rem
 		img 
 			&:nth-of-type(1)
-				width: 600px 
+				width: 450px 
 			&:nth-of-type(2)
-				width: 340px 
-				margin-left: -18.3rem 
-//
+				width: 300px 
+				margin-left: -13.5rem 
