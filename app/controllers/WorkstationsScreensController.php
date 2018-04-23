@@ -15,7 +15,7 @@ class WorkstationsScreensController extends PageController {
 			$lastPage = 'index.php';
 		}  
 
-		$this->data['title'] = 'Workstations &#43; Screens'; 
+		$this->data['title'] = 'Desks &#43; Screens'; 
 		$this->data['class'] = 'workstations-title'; 
 
 		$sql = "SELECT p.id, p.title AS score_title, p.category, p.supplier, 

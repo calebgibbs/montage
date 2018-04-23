@@ -36,8 +36,8 @@ $favTotal = count($fav);
 			<li class="main-menu">
 				<a href="index.php?page=products" class="main-menu drop-trigger desktop-link">Products</a>
 				<ul id="drop-down">
-					<li><a class="drop-item wrk" href="index.php?page=workstations_screens">Workstations +</a></li> 
-					<li><a class="drop-item scrn" href="index.php?page=workstations_screens">Screens</a></li>
+					<li><a class="drop-item" href="index.php?page=workstations_screens">Desks + Screens</a></li> 
+					<!-- <li><a class="drop-item scrn" href="index.php?page=workstations_screens">Screens</a></li> -->
 					<li><a class="drop-item" href="index.php?page=storage">Storage</a></li>
 					<li><a class="drop-item" href="index.php?page=agile_furniture">Agile Furniture</a></li>
 					<li><a class="drop-item" href="index.php?page=seating">Seating</a></li>
