@@ -547,10 +547,12 @@ _:-ms-lang(x), #drop-down {
       width: 300px;
       margin-left: -13.5rem; } }
 
-/* sustainability */
 .sustainability-page {
   background: url(../img/sustainability/background.png) no-repeat center right;
-  background-size: 100%; }
+  background-position: 6rem -9rem;
+  background-size: 95%;
+  width: 1920px;
+  height: 740px; }
 
 .story-page {
   background: url(../img/story/background.png) no-repeat;
@@ -560,8 +562,8 @@ _:-ms-lang(x), #drop-down {
   height: 740px; }
 
 .sustainability-grid {
-  margin-top: 5rem;
-  margin-left: 25rem; }
+  margin-top: 1rem;
+  margin-left: 17rem; }
 
 .top-img {
   display: inline-block; }
@@ -573,12 +575,11 @@ _:-ms-lang(x), #drop-down {
   display: none; }
 
 .tri1 {
-  vertical-align: top;
-  margin-left: 17rem; }
+  vertical-align: top; }
 
 .material img {
   position: relative;
-  margin-left: -6rem;
+  margin-left: -1rem;
   margin-top: -2rem;
   transition: 0.3s; }
 
@@ -588,7 +589,7 @@ _:-ms-lang(x), #drop-down {
     transform: scale(1.03); }
 
 .smart img {
-  margin-left: -19rem;
+  margin-left: -14rem;
   transition: 0.3s; }
 
 .smart:hover {
@@ -617,7 +618,7 @@ _:-ms-lang(x), #drop-down {
 
 .history {
   margin-top: 0.8rem;
-  margin-left: 32rem; }
+  margin-left: 15.1rem; }
   .history img {
     transition: 0.3s; }
   .history:hover {
@@ -632,7 +633,8 @@ _:-ms-lang(x), #drop-down {
   margin-top: 0.4rem; }
 
 .recycle {
-  margin-top: 0.5rem; }
+  margin-top: 1rem;
+  margin-left: 14.6rem; }
   .recycle img {
     transition: 0.3s; }
   .recycle:hover {
@@ -644,7 +646,7 @@ _:-ms-lang(x), #drop-down {
   position: relative;
   margin-top: -26rem;
   margin-left: 17rem;
-  width: 20rem; }
+  width: 22rem; }
   .sus-text h1 {
     font-size: 3rem;
     font-weight: 100;
@@ -714,13 +716,55 @@ _:-ms-lang(x), #drop-down {
   .bgM:hover img {
     transform: scale(1); }
 
+@media screen and (max-width: 1667px) {
+  .story-page {
+    background-position-x: 0rem; }
+  .sustainability-page {
+    background-position-x: 0rem; }
+  .sustainability-grid {
+    margin-left: 17rem; }
+  .material {
+    padding-right: 10px; }
+    .material img {
+      width: 455px; }
+  .smart img {
+    widh: 577px; }
+  .recycle {
+    margin-left: 11.5rem; }
+    .recycle img {
+      width: 408px; }
+  .experience {
+    padding-right: 10px; }
+    .experience img {
+      width: 455px; }
+  .journey img {
+    widh: 577px; }
+  .history {
+    margin-left: 12rem; }
+    .history img {
+      width: 408px; }
+  .tri1 {
+    margin-top: 3rem; }
+    .tri1 img {
+      width: 177px; }
+  .tri2 {
+    margin-left: -12.2rem; }
+    .tri2 img {
+      width: 178px; }
+  .sus-text {
+    margin-top: -22rem; }
+    .sus-text h1 {
+      font-size: 2.4rem; }
+    .sus-text h2 {
+      font-size: 1.55rem; }
+    .sus-text p {
+      font-size: 1.15rem; } }
+
 @media screen and (max-width: 1440px) {
   .story-page {
-    background-position-x: -17rem !important; }
+    background-position-x: -7rem; }
   .sustainability-page {
-    height: 95vh;
-    margin-top: -4rem;
-    margin-bottom: 1rem; }
+    background-position-x: -7rem; }
   .sustainability-grid {
     margin-left: 10rem;
     position: relative; }
@@ -733,15 +777,14 @@ _:-ms-lang(x), #drop-down {
   .tri2 {
     vertical-align: top;
     position: relative;
-    margin-left: -14.3rem;
+    margin-left: -12.3rem;
     margin-top: 0.3rem; }
   .sus-text {
-    margin-top: -25rem;
-    margin-left: 5rem; }
-  .history {
-    margin-left: -11.6rem; } }
+    margin-left: 10rem; }
+  .history, .recycle {
+    margin-left: 11.6rem; } }
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (max-width: 1193px) {
   .sus-D-grid {
     display: none; }
   .sus-M-grid {
@@ -861,92 +904,7 @@ _:-ms-lang(x), #drop-down {
   .m-os {
     margin-top: -2.5rem !important; } }
 
-@media screen and (max-width: 1333px) {
-  .material {
-    padding-right: 10px; }
-    .material img {
-      width: 455px; }
-  .smart img {
-    widh: 577px; }
-  .recycle {
-    margin-left: 11.5rem;
-    padding-right: 2.5rem; }
-    .recycle img {
-      width: 408px; }
-  .experience {
-    padding-right: 10px; }
-    .experience img {
-      width: 455px; }
-  .journey img {
-    widh: 577px; }
-  .history {
-    margin-left: 11.5rem;
-    padding-right: 2.5rem; }
-    .history img {
-      width: 408px; }
-  .tri1 {
-    margin-top: 3rem; }
-    .tri1 img {
-      width: 177px; }
-  .tri2 img {
-    width: 178px; }
-  .sus-text h1 {
-    font-size: 2.4rem; }
-  .sus-text h2 {
-    font-size: 1.55rem; }
-  .sus-text p {
-    font-size: 1.15rem; } }
-
-@media screen and (max-width: 1667px) {
-  .story-page {
-    background-position-x: 0rem; }
-  .material {
-    padding-right: 10px; }
-    .material img {
-      width: 455px; }
-  .smart img {
-    widh: 577px; }
-  .recycle {
-    margin-left: 11.5rem;
-    padding-right: 2.5rem; }
-    .recycle img {
-      width: 408px; }
-  .experience {
-    padding-right: 10px; }
-    .experience img {
-      width: 455px; }
-  .journey img {
-    widh: 577px; }
-  .history {
-    margin-left: 28.5rem; }
-    .history img {
-      width: 408px; }
-  .tri1 {
-    margin-top: 3rem; }
-    .tri1 img {
-      width: 177px; }
-  .tri2 {
-    margin-left: -12.2rem; }
-    .tri2 img {
-      width: 178px; }
-  .sus-text {
-    margin-top: -22rem; }
-    .sus-text h1 {
-      font-size: 2.4rem; }
-    .sus-text h2 {
-      font-size: 1.55rem; }
-    .sus-text p {
-      font-size: 1.15rem; } }
-
-@media screen and (max-width: 1667px) {
-  .sustainability-grid {
-    margin-left: 14.8rem; } }
-
-@media screen and (max-width: 1334px) {
-  .sustainability-grid {
-    margin-left: 6rem; } }
-
-@media screen and (max-width: 1193px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .sus-D-grid {
     display: none; }
   .sus-M-grid {
