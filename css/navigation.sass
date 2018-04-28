@@ -69,7 +69,7 @@ nav
 	li 
 		display: block
 		padding-top: 0.5rem 
-		padding-bottom: 0.5rem2
+		padding-bottom: 0.5rem
 	a 
 		text-transform: uppercase 
 		font-weight: 100 
@@ -115,7 +115,6 @@ _:-ms-lang(x), #drop-down
 	height: 1rem 
 	font-size: 0.8rem
 	color: $turquoise
-	// background: $turquoise 
 	display: inline-block 
 	text-align: center
 	border-radius: 50% 
@@ -199,26 +198,40 @@ _:-ms-lang(x), #drop-down
 		a  
 			font-size: 1rem
 
-@include tablet
-	nav 
-		height: 5.5rem
-		img 
-			height: 5.5rem
-		ul 
-			margin-top: -1px 
-	.main-menu 
-		margin-top: 0.3rem
-	
+@include tablet 
+	.homeIcn 
+		display: none 
+	#diamond-narrow 
+		display: none !important 
+	.circleCounter 
+		display: none 
+	.search 
+		position: relative 
+		margin-top: none 
+		float: right 
+		// right: 0 
+		padding-right: 0
+		input 
+			display: none
+		button 
+			background: none 
+			outline: none 
+			font-size: 1rem 
+			border: none 
+			position: relative 
+			margin-left: 0 
+			display: inline-block
+			// cursor: pointer 
+			color: #fff 
+	#drop-down 
+		display: none 
 	.menu-button 
-		display: none 
-	.hide-sm
-		display: none 
-	.search
-		float: left 
-		margin-left: -51.9% 
+		display: none
 
-
-
+@media screen and (max-width: 839px) 
+	.main-menu 
+		a 	
+			font-size: 0.8rem	 
 
 @include mobile 
 	.mobile-f-counter 
@@ -236,16 +249,18 @@ _:-ms-lang(x), #drop-down
 		margin: 0 auto
 		background: none !important
 		perspective: 1000px
+		a 
+			font-size: 1.1rem
 		ul 
-			padding: 0 
-			margin: 0
+			padding: 0 !important 
+			margin: 0 !important
 			width: 100% 
 			li 
 				background: $grey 
 				padding: 10px 
 				margin-top: 5px 
 				text-align: center
-				opacity: 0 
+				opacity: 0  
 				@for $i from 1 through 8
 					&:nth-child(#{$i})
 						animation: 
@@ -287,12 +302,9 @@ _:-ms-lang(x), #drop-down
 			font-size: 1rem 
 			margin-left: -2rem
 	#site-nav
-		display: none
-@include tablet
-	#site-nav
-		display: none
-	.mobile-f-counter
-		display: inline-block
+		display: none 
+	#diamond-narrow 
+		display: none !important
 
 
 	

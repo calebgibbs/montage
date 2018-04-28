@@ -1,23 +1,23 @@
 $(document).ready(function(){
-	$('.fav-tog').click(function(){
-		$('#favourites').addClass('open-fav'); 
-		$('#main-page').addClass('pause-page');
-		$('#overlay').addClass('open-fav'); 
-		$('#overlay').addClass('darken');
-	}); 
-	$('.body').click(function(){
-		$('#main-page').removeClass('pause-page');
-		$('#favourites').removeClass('open-fav');
-		$('#overlay').removeClass('open-fav');
-		$('#overlay').removeClass('darken');
-	});
-	$('#close-fav').click(function(){
-		$('#main-page').removeClass('pause-page');
-		$('#favourites').removeClass('open-fav');
-		$('#overlay').removeClass('open-fav');
-		$('#overlay').removeClass('darken'); 
-	}); 
-	$('.product-data').click(function(){
+    $('.fav-tog').click(function(){
+        $('#favourites').addClass('open-fav'); 
+        $('#main-page').addClass('pause-page');
+        $('#overlay').addClass('open-fav'); 
+        $('#overlay').addClass('darken');
+    }); 
+    $('.body').click(function(){
+        $('#main-page').removeClass('pause-page');
+        $('#favourites').removeClass('open-fav');
+        $('#overlay').removeClass('open-fav');
+        $('#overlay').removeClass('darken');
+    });
+    $('#close-fav').click(function(){
+        $('#main-page').removeClass('pause-page');
+        $('#favourites').removeClass('open-fav');
+        $('#overlay').removeClass('open-fav');
+        $('#overlay').removeClass('darken'); 
+    }); 
+    $('.product-data').click(function(){
         window.location = $(this).attr('href');
         return false;
     }); 
@@ -25,7 +25,7 @@ $(document).ready(function(){
         window.location = $(this).attr('href');
         return false;
     });
-    $('.diamond').click(function(){
+    $('.diamond .hover-over').click(function(){
         window.location = $(this).attr('href');
         return false;
     }); 
@@ -50,15 +50,15 @@ $(document).ready(function(){
         return false;
     });  
     $('.openSearch').click(function(){
-    	$('.search').toggleClass('showSearch-d-sm'); 
+        $('.search').toggleClass('showSearch-d-sm'); 
     }); 
     $('.closeModal').click(function(){
-    	$('.modal').removeClass('openM'); 
-    	$('#sus-page').removeClass('bgM');
+        $('.modal').removeClass('openM'); 
+        $('#sus-page').removeClass('bgM');
     });
     $('.material').on('click', function(){
-    	$('#material-modal').addClass('openM'); 
-    	$('#sus-page').addClass('bgM');  
+        $('#material-modal').addClass('openM'); 
+        $('#sus-page').addClass('bgM');  
     });
     $('.smart').on('click', function(){
         $('#smart-modal').addClass('openM'); 

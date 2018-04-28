@@ -1153,6 +1153,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/products\/categories\/coffee.jpg": {
+		"ft": 16384,
+		"iS": 96721,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/products\/categories\/coffee.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/img\/products\/categories\/custom.jpg": {
 		"ft": 16384,
 		"iS": 184463,
@@ -1203,6 +1214,28 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "\/img\/products\/categories\/joinerysub.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/products\/categories\/leaner.jpg": {
+		"ft": 16384,
+		"iS": 118316,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/products\/categories\/leaner.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/products\/categories\/meetingb.jpg": {
+		"ft": 16384,
+		"iS": 94098,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/products\/categories\/meetingb.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,

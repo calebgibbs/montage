@@ -31,13 +31,12 @@ $favTotal = count($fav);
 					<input type="text" name="s" id="search-feild-mobile"><button class="search-button"><i class="fa fa-search search-btn" aria-hidden="true"></i></button> 
 				</form>	
 			</li>
-			<li class="main-menu menu-item"><a href="index.php" class="main-menu"><span class="desktop-link"><i class="fa fa-home"></i></span></a></li>
+			<li class="main-menu menu-item homeIcn"><a href="index.php" class="main-menu"><span class="desktop-link"><i class="fa fa-home"></i></span></a></li>
 			<li class="main-menu menu-item"><a href="index.php?page=our_story" class="main-menu"><span class="desktop-link">Our Story</span></a></li>
 			<li class="main-menu">
 				<a href="index.php?page=products" class="main-menu drop-trigger desktop-link">Products</a>
 				<ul id="drop-down">
 					<li><a class="drop-item" href="index.php?page=workstations_screens">Desks + Screens</a></li> 
-					<!-- <li><a class="drop-item scrn" href="index.php?page=workstations_screens">Screens</a></li> -->
 					<li><a class="drop-item" href="index.php?page=storage">Storage</a></li>
 					<li><a class="drop-item" href="index.php?page=agile_furniture">Agile Furniture</a></li>
 					<li><a class="drop-item" href="index.php?page=seating">Seating</a></li>
@@ -48,12 +47,8 @@ $favTotal = count($fav);
 			</li> 
 			<li class="main-menu menu-item"><a href="index.php?page=portfolios" class="main-menu">Portfolio</a></li> 
 			<li class="main-menu menu-item tabletBreak"></li> 	
-			<!-- <li class="main-menu menu-item hide-sm"><a href="index.php?page=downloads" class="main-menu">Downloads</a></li> -->
 			<li class="main-menu menu-item contact"><a href="index.php?page=contact" class="main-menu">Contact</a></li> 
-			<li class="main-menu menu-item favourites-nav"><a href="#" class="fav-tog">Favourites <span class="mobile-f-counter"><?php if($favTotal != 0): ?>(<?= $favTotal ?>)<?php endif ?></span></a><span class="hide-sm"><div id="diamond-narrow"></div></span><?php if($favTotal != 0): ?><div class="circleCounter"><p><?= $favTotal ?></p></div><?php endif ?></li>  
-			<li class="main-menu menu-item tabletSearch">
-				<button class="openSearch"><i class="fa fa-search search-btn" aria-hidden="true"></i></button> 
-			</li>
+			<li class="main-menu menu-item favourites-nav"><a href="#" class="fav-tog">Favourites <span class="mobile-f-counter"><?php if($favTotal != 0): ?>(<?= $favTotal ?>)<?php endif ?></span></a><span class="hide-sm"><div id="diamond-narrow"></div></span><?php if($favTotal != 0): ?><div class="circleCounter"><p><?= $favTotal ?></p></div><?php endif ?></li> 
 			<li class="search desktopSearch"> 
 				<form id="desktopSearchBar" action="index.php?page=search" method="post">
 					<input type="text" name="s"><button class="search-button"><i class="fa fa-search search-btn" aria-hidden="true"></i></button> 

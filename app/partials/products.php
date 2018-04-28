@@ -10,33 +10,40 @@ $this -> layout('master',[
 			<h1 class="productsh1">Products</h1> 
 			<h3 class="productsh3">For truely adaptable spaces</h3>
 		</div>
-		<div class="workstations-dia diamond" href="index.php?page=workstations_screens">
+		<div class="workstations-dia diamond">
+			<div class="hover-over" href="index.php?page=workstations_screens"></div>
 			<img src="img/products/categories/workstations.png" alt="Workstations and screens">
 			<img class="mask" src="img/products/categories/workstationsMask.png">
 		</div> 
-		<div class="agile-dia diamond" diamond href="index.php?page=agile_furniture">
+		<div class="agile-dia diamond">
+			<div class="hover-over" href="index.php?page=agile_furniture"></div>
 			<img src="img/products/categories/agile.png" alt="Agile furniture">
 			<img class="mask" src="img/products/categories/agileMask.png">
 		</div> 
-		<div class="joinery-dia diamond" href="index.php?page=joinery_custom">
+		<div class="joinery-dia diamond">
+			<div class="hover-over" href="index.php?page=joinery_custom"></div>
 			<img src="img/products/categories/joinery.png" alt="Joinery and custom furniture">
 			<img class="mask" src="img/products/categories/joineryMask.png">
 		</div> 
-		<div class="storage-dia diamond" href="index.php?page=storage">
+		<div class="storage-dia diamond">
+			<div class="hover-over" href="index.php?page=storage"></div>
 			<img src="img/products/categories/storage.png" alt="Screens"> 
-			<img src="img/products/categories/storageMask.png">
+			<img class="mask" src="img/products/categories/storageMask.png">
 		</div> 
-		<div class="chair-dia diamond" href="index.php?page=seating">
+		<div class="chair-dia diamond">
+			<div class="hover-over" href="index.php?page=seating"></div>
 			<img src="img/products/categories/chairs.png" alt="Seating"> 
-			<img src="img/products/categories/chairsMask.png">
+			<img class="mask" src="img/products/categories/chairsMask.png">
 		</div> 
-		<div class="table-dia diamond" href="index.php?page=tables">
+		<div class="table-dia diamond">
+			<div class="hover-over" href="index.php?page=tables"></div>
 			<img src="img/products/categories/tables.png" alt="Tables">
-			<img src="img/products/categories/tablesMask.png">
+			<img class="mask" src="img/products/categories/tablesMask.png">
 		</div> 
-		<div class="tech-dia diamond" href="index.php?page=tech_accesories">
+		<div class="tech-dia diamond">
+			<div class="hover-over" href="index.php?page=tech_accesories"></div>
 			<img src="img/products/categories/tech.png" alt="Tech and accesories"> 
-			<img src="img/products/categories/techMask.png">
+			<img class="mask" src="img/products/categories/techMask.png">
 		</div>
 	</div> 
 	<div class="pro-grid-mobile">
