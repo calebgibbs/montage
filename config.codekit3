@@ -1045,7 +1045,7 @@
 		},
 	"\/img\/logo.png": {
 		"ft": 32768,
-		"iS": 25690,
+		"iS": 34692,
 		"oA": 0,
 		"oAP": "\/img\/logo.png",
 		"oF": 0,
@@ -1063,6 +1063,61 @@
 		"oIPL": 1,
 		"opt": 1,
 		"oT": 1,
+		"q": 100
+		},
+	"\/img\/logo3.png": {
+		"ft": 32768,
+		"iS": 25690,
+		"oA": 0,
+		"oAP": "\/img\/logo3.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/portfolio\/large\/5ae66813c6ab4.jpg": {
+		"ft": 16384,
+		"iS": 510994,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/portfolio\/large\/5ae66813c6ab4.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/portfolio\/large\/5ae6685554e0a.jpg": {
+		"ft": 16384,
+		"iS": 756928,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/portfolio\/large\/5ae6685554e0a.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/portfolio\/thumbnail\/5ae66813c6ab4.jpg": {
+		"ft": 16384,
+		"iS": 4980,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/portfolio\/thumbnail\/5ae66813c6ab4.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/portfolio\/thumbnail\/5ae6685554e0a.jpg": {
+		"ft": 16384,
+		"iS": 4353,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/portfolio\/thumbnail\/5ae6685554e0a.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"q": 100
 		},
 	"\/img\/products\/categories\/agile.png": {
@@ -8743,17 +8798,6 @@
 		"opt": 0,
 		"q": 100
 		},
-	"\/img\/products\/large\/5ab2f7094af28.jpg": {
-		"ft": 16384,
-		"iS": 78523,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "\/img\/products\/large\/5ab2f7094af28.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
 	"\/img\/products\/large\/5ab2f70962644.jpg": {
 		"ft": 16384,
 		"iS": 75825,
@@ -9676,6 +9720,17 @@
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
+		"q": 100
+		},
+	"\/img\/products\/large\/5ae668a02ab09.jpg": {
+		"ft": 16384,
+		"iS": 756928,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/products\/large\/5ae668a02ab09.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"q": 100
 		},
 	"\/img\/products\/themes\/accesories.png": {
@@ -17037,17 +17092,6 @@
 		"opt": 0,
 		"q": 100
 		},
-	"\/img\/products\/thumbnail\/5ab2f7094af28.jpg": {
-		"ft": 16384,
-		"iS": 4852,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "\/img\/products\/thumbnail\/5ab2f7094af28.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
 	"\/img\/products\/thumbnail\/5ab2f70962644.jpg": {
 		"ft": 16384,
 		"iS": 4163,
@@ -17970,6 +18014,17 @@
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
+		"q": 100
+		},
+	"\/img\/products\/thumbnail\/5ae668a02ab09.jpg": {
+		"ft": 16384,
+		"iS": 4353,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/products\/thumbnail\/5ae668a02ab09.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"q": 100
 		},
 	"\/img\/products\/thumbnail\/live.sql": {

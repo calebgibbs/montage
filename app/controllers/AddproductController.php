@@ -18,7 +18,6 @@ class AddproductController extends PageController {
 	private function getSelects(){ 
 		//get suppliers 
 		$sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage9_dtat' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'";  
-		// $sql = "SELECT SUBSTRING(COLUMN_TYPE,5) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='montage' AND TABLE_NAME='products' AND COLUMN_NAME='supplier'"; 
 		$result = $this->dbc->query($sql);  
 		if ($result) {
 			$result = $result->fetch_assoc(); 
@@ -188,6 +187,14 @@ class AddproductController extends PageController {
 				}elseif (!in_array($_FILES[$img]['type'], $this->acceptableImageTypes)) {
 					$errors++; 
 					$this->data[$msg] = '<span style="color: #d9534f">*You must upload a valid image</span>';
+				}else{ 
+					$image_info = getimagesize($_FILES[$img]["tmp_name"]);
+					$image_width = $image_info[0]; 
+					$image_height = $image_info[1]; 
+					if($image_width < $image_height){ 
+						$this->data[$msg] = '<span style="color: #d9534f">*Please upload a landscape image</span>';	 
+						$errors++;
+					}
 				}
 			}
 		}  

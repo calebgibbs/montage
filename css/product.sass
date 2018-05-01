@@ -92,10 +92,13 @@
 
 .large-img 
 	text-align: center   
-	margin: 0 auto
+	margin: 0 auto 
+	// background-color: #bfbfbf 
+	max-width: 770px 
+	max-height: 450px
 	img 
-		max-width: 770px 
-		height: 450px
+		width: 770px 
+		height: 450px 
 	button 
 		position: relative !important 
 		margin-bottom: -2.5rem !important 
@@ -214,7 +217,212 @@
 	padding: 0 
 	a 
 		color: $body-text   
-		font-size: 1.1rem
+		font-size: 1.1rem 
+
+//poprtfolio page  
+.port-title 
+	margin-bottom: 1rem !important 
+	padding-left: 0 !important 
+	text-align: left !important  
+
+.slider-btn 
+	color: $light-grey 
+	transition: 0.2s 
+	&:hover  
+		color: $grey  
+
+@media screen and (max-width: 1600px) 
+	
+	.product-images 
+		width: 700px 
+		
+	.large-img   
+		width: 700px
+		img  
+			max-width: 700px 
+			margin-left: 4.3% 
+			max-height: 400px 
+	.slider-container 
+		width: 790px 
+		height: 180px 
+		position: absolute  
+
+	.slider 
+		width: 700px 
+		height: 180px  
+		position: absolute  
+		overflow: hidden 
+		margin-top: 0.8rem 
+		margin-left: 4.3%  
+	.slider .thumbs  
+		position: relative 
+		width: 1550px
+		height: 180px 
+		counter-reset: subsection 
+		transition: transform 0.7s 
+		div 
+			width: 226px
+			height: 180px 
+			margin-right: 0.7rem
+			position: relative 
+			float: left 
+			transition: all 2s
+			img  
+				max-width: 226px 
+	.prev 
+		margin-left: -0.3rem 
+		top: 30% 
+		position: absolute   
+	.next 
+		left: calc( 100% - 3rem ) 
+		position: absolute 
+		top: 30% 
+
+	#page-padding 
+		h1 
+			font-size: 2.7rem  
+		h2 
+			font-size: 1.7rem  
+		p 
+			font-size: 1rem    
+	.product-images 
+		ol 
+			margin-left: 4.3% 	 
+	#right-col 
+		width: 40% 
+		float: right
+
+@include desktop-sm  
+	.product-images 
+		width: 700px 
+		
+	.large-img   
+		width: 700px
+		img  
+			max-width: 700px 
+			margin-left: 4.3% 
+			max-height: 400px 
+	.slider-container 
+		width: 790px 
+		height: 180px 
+		position: absolute  
+
+	.slider 
+		width: 710px 
+		height: 180px  
+		position: absolute  
+		overflow: hidden 
+		margin-top: 0.8rem 
+		margin-left: 4.3%  
+	.slider .thumbs  
+		position: relative 
+		width: 1550px
+		height: 180px 
+		counter-reset: subsection 
+		transition: transform 0.7s 
+		div 
+			width: 226px
+			height: 180px 
+			margin-right: 0.7rem
+			position: relative 
+			float: left 
+			transition: all 2s
+			img  
+				max-width: 226px 
+	.prev 
+		margin-left: -0.3rem 
+		top: 30% 
+		position: absolute   
+	.next 
+		left: calc( 100% - 3rem ) 
+		position: absolute 
+		top: 30% 
+
+	#page-padding 
+		h1 
+			font-size: 2.6rem  
+		h2 
+			font-size: 1.6rem  
+		p 
+			font-size: 0.9rem    
+	.product-images 
+		ol 
+			margin-left: 4.3% 
+
+@include navigation-desktop-sm 
+	// #page-padding 
+	// 	h1 
+	// 		font-size: 2.8rem  
+	// 	h2 
+	// 		font-size: 1.8rem  
+	// 	p 
+	// 		font-size: 1.1rem
+	// 		// width: 85% 
+	#right-col 
+		width: 35% 
+		float: right
+
+@include tablet 
+	.edit-btn 
+		display: none
+	#left-col 
+		display: block 
+		width: 100% 
+		// height: auto  
+	#right-col 
+		display: block  
+		padding-left: 3rem 
+		width: 80% 
+		margin: 0 auto 
+		padding-top: 2rem  
+		// height: auto 
+		float: none   
+		h1 
+			display: none
+	.workstation 
+		background: none
+	.storage 
+		background: none 
+	.tech 
+		background: none
+	.table
+		background: none
+	.agile 
+		background: none	
+	.chair 
+		background: none 
+	.joinery 
+		background: none 
+	#product-theme 
+		height: auto !important 
+	.t-m-heading 
+		display: block  
+		width: 90%  
+		margin: 0 auto 
+		margin-bottom: 1.5rem
+		h1
+			color: #fff 
+			margin-left: 0 
+	.prod-features 
+		width: 45%
+		display: inline-block 
+		vertical-align: top
+	.prod-options 
+		width: 45%
+		display: inline-block 
+		vertical-align: top   
+	.supplier-name 
+		display: none 
+	.page-dimensions 
+		display: none !important 
+	.page-dimensions-m-t 
+		display: block  
+		width: 45%
+		display: inline-block 
+		vertical-align: top 
+		margin-top: 2rem 
+	.page-downloads 
+		display: none 
 
 @include mobile 
 	.slider-container 
@@ -298,6 +506,7 @@
 	.page-downloads 
 		display: none 
 
+
 @media screen and (max-width: 400px) 
 	#left-col 
 		width: 90% 
@@ -312,150 +521,7 @@
 		margin-top: 3rem 
 	.product-images
 		ol 
-			display: none
-
-@include desktop-sm  
-	.product-images 
-		width: 700px 
-		
-	.large-img   
-		width: 700px
-		img  
-			maxwidth: 700px 
-			margin-left: 4.3% 
-			max-height: 400px 
-	.slider-container 
-		width: 790px 
-		height: 180px 
-		position: absolute  
-
-	.slider 
-		width: 710px 
-		height: 180px  
-		position: absolute  
-		overflow: hidden 
-		margin-top: 0.8rem 
-		margin-left: 4.3%  
-	.slider .thumbs  
-		position: relative 
-		width: 1550px
-		height: 180px 
-		counter-reset: subsection 
-		transition: transform 0.7s 
-		div 
-			width: 226px
-			height: 180px 
-			margin-right: 0.7rem
-			position: relative 
-			float: left 
-			transition: all 2s
-			img  
-				max-width: 226px 
-	.prev 
-		margin-left: -0.3rem 
-		top: 30% 
-		position: absolute   
-	.next 
-		left: calc( 100% - 3rem ) 
-		position: absolute 
-		top: 30% 
-
-	#page-padding 
-		h1 
-			font-size: 2.8rem  
-		h2 
-			font-size: 1.8rem  
-		p 
-			font-size: 1.1rem    
-	.product-images 
-		ol 
-			margin-left: 4.3% 
-@include navigation-desktop-sm 
-	#page-padding 
-		h1 
-			font-size: 2.8rem  
-		h2 
-			font-size: 1.8rem  
-		p 
-			font-size: 1.1rem
-			// width: 85% 
-	#right-col 
-		width: 35% 
-		float: right
-
-@include tablet 
-	.edit-btn 
-		display: none
-	#left-col 
-		display: block 
-		width: 100% 
-		// height: auto  
-	#right-col 
-		display: block  
-		padding-left: 3rem 
-		width: 80% 
-		margin: 0 auto 
-		padding-top: 2rem  
-		// height: auto 
-		float: none   
-		h1 
-			display: none
-	.workstation 
-		background: none
-	.storage 
-		background: none 
-	.tech 
-		background: none
-	.table
-		background: none
-	.agile 
-		background: none	
-	.chair 
-		background: none 
-	.joinery 
-		background: none 
-	#product-theme 
-		height: auto !important 
-	.t-m-heading 
-		display: block  
-		width: 90%  
-		margin: 0 auto 
-		margin-bottom: 1.5rem
-		h1
-			color: #fff 
-			margin-left: 0 
-	.prod-features 
-		width: 45%
-		display: inline-block 
-		vertical-align: top
-	.prod-options 
-		width: 45%
-		display: inline-block 
-		vertical-align: top   
-	.supplier-name 
-		display: none 
-	.page-dimensions 
-		display: none !important 
-	.page-dimensions-m-t 
-		display: block  
-		width: 45%
-		display: inline-block 
-		vertical-align: top 
-		margin-top: 2rem 
-	.page-downloads 
-		display: none 
-
-//poprtfolio page  
-.port-title 
-	margin-bottom: 1rem !important 
-	padding-left: 0 !important 
-	text-align: left !important  
-
-.slider-btn 
-	color: $light-grey 
-	transition: 0.2s 
-	&:hover  
-		color: $grey
+			display: none 
 
 
 

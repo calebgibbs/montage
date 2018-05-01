@@ -17,7 +17,7 @@ $favTotal = count($fav);
 ?>
 <nav id="navigation">
 	<div class="mobile-nav">
-		<a href="index.php?page=home"><img src="img/logo1.png" alt="Montage interiors logo"></a> 
+		<a href="index.php?page=home"><img src="img/logo.png" alt="Montage interiors logo"></a> 
 		<button class="menu-button">
 			<div id="hamburger-btn" class="nav-icon cross"> 
 				<div class="span"></div>
@@ -40,9 +40,9 @@ $favTotal = count($fav);
 					<li><a class="drop-item" href="index.php?page=storage">Storage</a></li>
 					<li><a class="drop-item" href="index.php?page=agile_furniture">Agile Furniture</a></li>
 					<li><a class="drop-item" href="index.php?page=seating">Seating</a></li>
-					<li><a class="drop-item" href="index.php?page=tech_accesories">Tech &amp; Accesories</a></li>
+					<li><a class="drop-item" href="index.php?page=tech_accesories">Tech + Accesories</a></li>
 					<li><a class="drop-item" href="index.php?page=tables">Tables</a></li> 
-					<li><a class="drop-item" href="index.php?page=joinery_custom">Joinery &amp; Custom</a></li>
+					<li><a class="drop-item" href="index.php?page=joinery_custom">Joinery + Custom</a></li>
 				</ul>
 			</li> 
 			<li class="main-menu menu-item"><a href="index.php?page=portfolios" class="main-menu">Portfolio</a></li> 

@@ -66,6 +66,14 @@ class AddPortfolioController extends PageController {
 				}elseif (!in_array($_FILES[$img]['type'], $this->acceptableImageTypes)) {
 					$errors++; 
 					$this->data[$msg] = '<span style="color: #d9534f">*You must upload a valid image</span>';
+				}else{ 
+					$image_info = getimagesize($_FILES[$img]["tmp_name"]);
+					$image_width = $image_info[0]; 
+					$image_height = $image_info[1]; 
+					if($image_width < $image_height){ 
+						$this->data[$msg] = '<span style="color: #d9534f">*Please upload a landscape image</span>';	 
+						$errors++;
+					}
 				}
 			}
 		} 
