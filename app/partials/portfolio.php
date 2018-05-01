@@ -16,7 +16,7 @@ $this -> layout('master',[
 <?php if($_SESSION['account_type'] == 'admin'): ?><a href="index.php?page=edit_port&port=<?= $_GET['num'] ?>">Edit</a><?php endif ?> 
 	<div id="product-theme">
 		<div id="page-padding">
-			<h1 class="port-title"><?= $port['title'] ?></h1>
+			<h1 id="porttitle" class="port-title"><?= $port['title'] ?></h1>
 			<div id="left-col"> 
 				<div class="product-images">
 					<div class="large-img">
@@ -61,6 +61,15 @@ $this -> layout('master',[
 	}	
 </script> 
 <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript">
+	function padding(){ 
+    	var img = document.getElementById('dispayImg'); 
+		var padding = img.offsetLeft + ('px'); 
+		document.getElementById('porttitle').style.marginLeft = padding; 
+    }
+    padding();
+    window.onresize = padding;
+</script>
 <script type="text/javascript">
 	$(function(){ 
 		var img = document.getElementById('imgSize');
