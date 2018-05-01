@@ -54,7 +54,8 @@
 	p 
 		font-size: 1.2rem 
 		font-weight: lighter  
-		width: 95%
+		width: 95% 
+		margin-bottom: 10px
 
 #left-col 
 	width: 55%  
@@ -524,7 +525,40 @@
 		margin-top: 3rem 
 	.product-images
 		ol 
-			display: none 
+			display: none  
+
+
+
+// see more 
+
+.seemore 
+	background: none 
+	border: none 
+	color: $bs-Lblue 
+	font-size: inherit  
+	transition: 0.1s 
+	padding: 0
+	&:after 
+		content: ' ...' 
+	&:hover 
+		color: $bs-Dblue 
+	&:focus 
+		outline: none
+
+//paragraph 
+
+.p-hidden 
+	display: none 
+
+.f-hidden 
+	display: none 
+
+.o-hidden 
+	display: none 
+
+.s-hidden 
+	display: none
+
 
 
 

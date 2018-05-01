@@ -1393,7 +1393,8 @@ _:-ms-lang(x), #drop-down {
   #page-padding p {
     font-size: 1.2rem;
     font-weight: lighter;
-    width: 95%; }
+    width: 95%;
+    margin-bottom: 10px; }
 
 #left-col {
   width: 55%;
@@ -1832,6 +1833,32 @@ _:-ms-lang(x), #drop-down {
     margin-top: 3rem; }
   .product-images ol {
     display: none; } }
+
+.seemore {
+  background: none;
+  border: none;
+  color: #5bc0de;
+  font-size: inherit;
+  transition: 0.1s;
+  padding: 0; }
+  .seemore:after {
+    content: ' ...'; }
+  .seemore:hover {
+    color: #428bca; }
+  .seemore:focus {
+    outline: none; }
+
+.p-hidden {
+  display: none; }
+
+.f-hidden {
+  display: none; }
+
+.o-hidden {
+  display: none; }
+
+.s-hidden {
+  display: none; }
 
 /* products-page */
 .products-grid {

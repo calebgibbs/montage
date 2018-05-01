@@ -156,9 +156,14 @@ $this -> layout('master',[
 					<?php if($_SESSION['account_type'] == 'admin'): ?> 
 						<p class="supplier-name">Supplier: <?= ucfirst($product['supplier']) ?></p>
 					<?php endif ?>
+					<?php $p_counter = 0 ?>
 					<?php foreach($desc as $d): ?> 
-						<p><?= $d ?></p>
-					<?php endforeach ?>
+						<p<?php if( $p_counter != 0 ): ?> class="p-hidden"<?php endif ?>><?= trim($d) ?></p> 
+						<?php $p_counter++ ?>
+					<?php endforeach ?> 
+					<?php if( $p_counter > 1 ): ?> 
+						<button class="seemore" id="seeMP">See more</button>
+					<?php endif ?> 
 				</div>  
 			<?php endif ?>
 			<?php if($_GET['page'] == 'product'): ?>
@@ -166,42 +171,51 @@ $this -> layout('master',[
 				<div class="prod-features">
 					<h2>Features</h2> 
 					<ul class="product-list">
+						<?php $f_counter = 1 ?>
 						<?php foreach( $Allfeatures as $feature): ?> 
 							<?php for( $i = 1; $i <= 10; $i++ ): ?> 
 								<?php if( $feature['position'] == $i ): ?>  
-									<li><?= $feature['feature'] ?></li>
+									<li<?php if( $f_counter > 3 ): ?> class="f-hidden"<?php endif ?> ><?= $feature['feature'] ?></li>
 								<?php endif ?>
-							<?php endfor ?>
-						<?php endforeach; ?>
-					</ul>
+							<?php endfor ?> 
+							<?php $f_counter++ ?>
+						<?php endforeach; ?> 
+					</ul> 
+					<?php if( $f_counter > 4 ): ?><button class="seemore" id="seeMF">See more</button><?php endif ?>
 				</div>	 
 			<?php endif ?>
 			<?php if($Alloptions != 'noOptions'): ?>
 				<div class="prod-options">
 					<h2>Options</h2> 
 					<ul class="product-list">
+						<?php $o_counter = 1 ?>
 						<?php foreach( $Alloptions as $option): ?> 
 							<?php for( $i = 1; $i <= 10; $i++ ): ?> 
 								<?php if( $option['position'] == $i ): ?>  
-									<li><?= $option['product_option'] ?></li>
+									<li<?php if( $o_counter > 3 ): ?> class="o-hidden"<?php endif ?>><?= $option['product_option'] ?></li>
 								<?php endif ?>
-							<?php endfor ?>
+							<?php endfor ?> 
+							<?php $o_counter++ ?>
 						<?php endforeach; ?>
-					</ul> 	
+					</ul> 
+					<?php if( $f_counter > 4 ): ?><button class="seemore" id="seeMO">See more</button><?php endif ?> 	
 				</div>  
 			<?php endif ?>
 				<?php if($links != 'noLinks'): ?>
 					<div class="prod-options">
 						<h2>Suggested options</h2> 
 						<ul class="product-list">
+							<?php $s_counter = 1 ?>
 							<?php foreach( $links as $link): ?> 
 								<?php for( $i = 1; $i <= 5; $i++ ): ?> 
 									<?php if( $link['position'] == $i ): ?>  
-										<li><a class="prod-link" href="<?= $link['href'] ?>" target="_blank"><?= $link['link_text'] ?></a></li>
+										<li<?php if( $s_counter > 2 ): ?> class="s-hidden"<?php endif ?>><a class="prod-link" href="<?= $link['href'] ?>" target="_blank"><?= $link['link_text'] ?></a></li>
 									<?php endif ?>
-								<?php endfor ?>
+								<?php endfor ?> 
+							<?php $s_counter++ ?>
 							<?php endforeach; ?>
-						</ul> 	
+						</ul> 
+						<?php if( $s_counter > 3 ): ?><button class="seemore" id="seeMS">See more</button><?php endif ?>	
 					</div> 
 				<?php endif ?> 
 				<?php if( $dim != 'noDim' ): ?>

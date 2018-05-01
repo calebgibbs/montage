@@ -123,6 +123,28 @@ $(document).ready(function(){
             $('.tri').eq(i).addClass('show');
         }, 350 * i);
         $('.dwnimg').removeClass('show');
+    }); 
+
+    //see more for products 
+
+    $('#seeMP').click(function(){ 
+        $('.p-hidden').slideToggle(); 
+        $(this).text( $(this).text() == 'See more' ? "See less" : "See more");
     });
     
+    $('#seeMF').click(function(){ 
+        $('.f-hidden').slideToggle(); 
+        $(this).text( $(this).text() == 'See more' ? "See less" : "See more");
+    }); 
+
+    $('#seeMO').click(function(){ 
+        $('.o-hidden').slideToggle(); 
+        $(this).text( $(this).text() == 'See more' ? "See less" : "See more");
+    }); 
+
+    $('#seeMS').click(function(){ 
+        $('.s-hidden').slideToggle(); 
+        $(this).text( $(this).text() == 'See more' ? "See less" : "See more" );
+    });
+
 })

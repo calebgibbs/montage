@@ -322,8 +322,10 @@ class AddproductController extends PageController {
 		AND supplier = '$supplier'";
 		$result = $this->dbc->query($sql);	 
 		$prodId = $result->fetch_assoc();  
-		$prodId = $prodId['id'];  
+		$prodId = $prodId['id']; 
 
+		// $newId = $this->dbc->insert_id();  
+		// die($newId);
 		//insert features 
 		for($i=1;$i<=10;$i++){ 
 			$feat = ${'feat'.$i}; 
