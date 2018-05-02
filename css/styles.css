@@ -199,7 +199,7 @@ _:-ms-lang(x), #drop-down {
   .main-menu a {
     font-size: 1.2rem;
     padding: 0.5rem; }
-  ul {
+  .main-menu ul {
     display: inline-block;
     float: right;
     margin-top: 4em;
@@ -1400,7 +1400,7 @@ _:-ms-lang(x), #drop-down {
   width: 55%;
   display: inline-block;
   vertical-align: top;
-  min-height: 70vh !important; }
+  min-height: 70vh; }
 
 .product-text h2 {
   padding-bottom: 0.8rem; }
@@ -1412,6 +1412,8 @@ _:-ms-lang(x), #drop-down {
   line-height: 160%; }
   #right-col li {
     width: 95%; }
+  #right-col p span {
+    font-weight: bold; }
 
 .product-images {
   width: 780px;
@@ -1682,14 +1684,17 @@ _:-ms-lang(x), #drop-down {
     display: none; }
   #left-col {
     display: block;
-    width: 100%; }
+    width: 100%;
+    float: none;
+    vertical-align: none;
+    min-height: initial; }
   #right-col {
     display: block;
-    padding-left: 3rem;
     width: 80%;
+    float: none;
     margin: 0 auto;
-    padding-top: 2rem;
-    float: none; }
+    padding: 0;
+    vertical-align: none; }
     #right-col h1 {
       display: none; }
   .workstation {
@@ -1716,6 +1721,16 @@ _:-ms-lang(x), #drop-down {
     .t-m-heading h1 {
       color: #fff;
       margin-left: 0; }
+  .product-images {
+    width: 100%; }
+  .large-img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    height: 400px; }
+    .large-img img {
+      margin: 0; }
   .prod-features {
     width: 45%;
     display: inline-block;

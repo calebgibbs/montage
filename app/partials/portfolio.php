@@ -45,10 +45,10 @@ $this -> layout('master',[
 			</div> 
 			<div id="right-col">
 				<p>
-					<?php if($port['client'] != 'N/A'): ?>Client: <?= $port['client'] ?><br><?php endif ?>
-					<?php if($port['architect'] != 'N/A'): ?>Architect: <?= $port['architect'] ?><br><?php endif ?> 
-					<?php if($port['contractor'] != 'N/A'): ?>Contractor: <?= $port['contractor'] ?><br><?php endif ?> 
-					<?php if($port['date'] != 'N/A'): ?>Date: <?= $port['date'] ?><?php endif ?>  
+					<?php if($port['client'] != 'N/A'): ?><span>Client:</span> <?= $port['client'] ?><br><?php endif ?>
+					<?php if($port['architect'] != 'N/A'): ?><span>Architect:</span> <?= $port['architect'] ?><br><?php endif ?> 
+					<?php if($port['contractor'] != 'N/A'): ?><span>Contractor:</span> <?= $port['contractor'] ?><br><?php endif ?> 
+					<?php if($port['date'] != 'N/A'): ?><span>Date:</span> <?= $port['date'] ?><?php endif ?>  
 				</p>
 				<p><?= $port['description'] ?></p>
 			</div>
@@ -71,36 +71,35 @@ $this -> layout('master',[
     window.onresize = padding;
 </script>
 <script type="text/javascript">
-	$(function(){ 
-		var img = document.getElementById('imgSize');
-		var imgW = img.clientWidth; 
-		var elemCount = <?= $imgC - 2?>; 
-		var current = 1; 
-		var elemWidth = imgW + 11.200; 
-		var move = 0;  
-		if(<?= $imgC ?> <= 3){ 
-			$('.slider-btn').css('display','none');
+$(function(){ 
+	var img = document.getElementById('imgSize');
+	var imgW = img.clientWidth; 
+	var elemCount = <?= $imgC / 2?>; 
+	var current = 1; 
+	var elemWidth = imgW + 11.200; 
+	var move = 0;  
+	if(<?= $imgC ?> <= 3){ 
+		$('.slider-btn').css('display','none');
+	}
+	$('.next').click(function(){
+		if( current < elemCount){ 
+			$('.slider .thumbs').toggleClass('move'); 
+			move += elemWidth;  
+			$('.slider .thumbs').css('transform', 'translateX(-'+move+'px)'); 
+			current++;
+		}else{ 
+			move = 0; 
+			current = 1;  
+			$('.slider .thumbs').css('transform', 'translateX('+move+'px)');
 		}
-
-		$('.next').click(function(){
-			if( current < elemCount){ 
-				$('.slider .thumbs').toggleClass('move'); 
-				move += elemWidth;  
-				$('.slider .thumbs').css('transform', 'translateX(-'+move+'px)'); 
-				current++;
-			}else{ 
-				move = 0; 
-				current = 1;  
-				$('.slider .thumbs').css('transform', 'translateX('+move+'px)');
-			}
-		}); 
-		$('.prev').click(function(){
-			if( current > 0){
-				$('.slider .thumbs').toggleClass('move'); 
-				move -= elemWidth; 
-				current--;  
-				$('.slider .thumbs').css('transform', 'translateX(-'+move+'px)');
-			}
-		});
+	}); 
+	$('.prev').click(function(){
+		if( current > 0){
+			$('.slider .thumbs').toggleClass('move'); 
+			move -= elemWidth; 
+			current--;  
+			$('.slider .thumbs').css('transform', 'translateX(-'+move+'px)');
+		}
 	});
-</script>
+});
+</script> 

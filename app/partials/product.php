@@ -97,10 +97,10 @@ $this -> layout('master',[
 						<?php endif ?>
 					<?php endforeach ?>
 				</div>
-				<div class="slider-container">
-					<button class="prev slider-btn" alt="Previous"><</button> 
+				<div id="slider-container" class="slider-container">
+					<button id="prevBtn" class="prev slider-btn" alt="Previous"><</button> 
 					<button class="next slider-btn" alt="Next">></button> 
-					<div class="slider">
+					<div id="sliderThumb" class="slider">
 						<div class="thumbs">
 							<?php $imgC = 0 ?>
 							<?php foreach($Allimages as $image ): ?> 
@@ -198,7 +198,7 @@ $this -> layout('master',[
 							<?php $o_counter++ ?>
 						<?php endforeach; ?>
 					</ul> 
-					<?php if( $f_counter > 4 ): ?><button class="seemore" id="seeMO">See more</button><?php endif ?> 	
+					<?php if( $o_counter > 4 ): ?><button class="seemore" id="seeMO">See more</button><?php endif ?> 	
 				</div>  
 			<?php endif ?>
 				<?php if($links != 'noLinks'): ?>
@@ -241,7 +241,23 @@ $this -> layout('master',[
 	function ChangeImage(a) {
 		document.getElementById("dispayImg").src = a;
 	}	
-</script> 
+</script>   
+<script type="text/javascript">
+	function tabletFunct(){ 
+		var windowW = window.innerWidth; 
+		if(windowW <= 1105){ 
+			var imgW = document.getElementById("dispayImg").offsetLeft; 
+			var button = document.getElementById('prevBtn').offsetWidth - 7; 
+			var paddingVal = imgW - button + 'px'; 
+			document.getElementById('slider-container').style.marginLeft = paddingVal;
+		}else{ 
+			document.getElementById('slider-container').style.marginLeft = "";
+		}
+	} 
+	tabletFunct(); 
+	 window.onresize = tabletFunct;
+
+</script>
 <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
 <?php $imgC = $imgC / 2 ?>
 <script type="text/javascript">

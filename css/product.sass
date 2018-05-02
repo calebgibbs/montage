@@ -61,7 +61,7 @@
 	width: 55%  
 	display: inline-block 
 	vertical-align: top 
-	min-height: 70vh !important 
+	min-height: 70vh 
 
 .product-text 
 	h2 
@@ -74,6 +74,9 @@
 	line-height: 160%
 	li 
 		width: 95%  
+	p 
+		span 
+			font-weight: bold 
 
 
 
@@ -296,9 +299,6 @@
 @include desktop-sm  
 	.product-images 
 		width: 700px 
-	
-	// .port-title
-	// 	margin-left: 2.3%
 
 	.large-img   
 		width: 700px
@@ -354,14 +354,6 @@
 			margin-left: 4.3% 
 
 @include navigation-desktop-sm 
-	// #page-padding 
-	// 	h1 
-	// 		font-size: 2.8rem  
-	// 	h2 
-	// 		font-size: 1.8rem  
-	// 	p 
-	// 		font-size: 1.1rem
-	// 		// width: 85% 
 	#right-col 
 		width: 35% 
 		float: right
@@ -372,15 +364,16 @@
 	#left-col 
 		display: block 
 		width: 100% 
-		// height: auto  
+		float: none 
+		vertical-align: none 
+		min-height: initial 
 	#right-col 
-		display: block  
-		padding-left: 3rem 
+		display: block   
 		width: 80% 
+		float: none  
 		margin: 0 auto 
-		padding-top: 2rem  
-		// height: auto 
-		float: none   
+		padding: 0 
+		vertical-align: none
 		h1 
 			display: none
 	.workstation 
@@ -406,7 +399,17 @@
 		margin-bottom: 1.5rem
 		h1
 			color: #fff 
-			margin-left: 0 
+			margin-left: 0  
+	.product-images 
+		width: 100%
+	.large-img  
+		width: 100%
+		display: block 
+		margin: 0 auto  
+		text-align: center  
+		height: 400px 
+		img 
+			margin: 0  
 	.prod-features 
 		width: 45%
 		display: inline-block 
