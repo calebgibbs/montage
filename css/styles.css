@@ -558,6 +558,7 @@ _:-ms-lang(x), #drop-down {
       width: 300px;
       margin-left: -13.5rem; } }
 
+/* sustainability */
 .sustainability-page {
   background: url(../img/sustainability/background.png) no-repeat center right;
   background-position: 6rem -9rem;
@@ -576,6 +577,21 @@ _:-ms-lang(x), #drop-down {
   margin-top: 1rem;
   margin-left: 17rem; }
 
+.triangle {
+  overflow: hidden;
+  padding: 0.5rem;
+  display: inline-block;
+  position: relative; }
+  .triangle .hover-over {
+    position: relative;
+    z-index: 4;
+    transform: rotate(45deg);
+    cursor: pointer; }
+    .triangle .hover-over:hover + img {
+      transform: scale(1.03); }
+  .triangle img {
+    position: relative; }
+
 .top-img {
   display: inline-block; }
 
@@ -588,70 +604,49 @@ _:-ms-lang(x), #drop-down {
 .tri1 {
   vertical-align: top; }
 
-.material img {
-  position: relative;
-  margin-left: -1rem;
-  margin-top: -2rem;
-  transition: 0.3s; }
-
-.material:hover {
-  cursor: pointer; }
-  .material:hover img {
-    transform: scale(1.03); }
-
-.smart img {
-  margin-left: -14rem;
-  transition: 0.3s; }
-
-.smart:hover {
-  cursor: pointer; }
-  .smart:hover img {
-    transform: scale(1.03); }
-
-.experience {
-  margin-left: -1rem;
-  margin-top: -2rem; }
-  .experience img {
+.experience, .material {
+  margin: -1.5rem -0.5rem -0.5rem -1.5rem;
+  height: 245px; }
+  .experience .hover-over, .material .hover-over {
+    top: -11rem;
+    left: 4rem;
+    width: 349px;
+    height: 349px; }
+  .experience img, .material img {
+    top: -349px;
     transition: 0.3s; }
-  .experience:hover {
-    cursor: pointer; }
-    .experience:hover img {
-      transform: scale(1.03); }
 
-.journey {
-  margin-left: -14rem; }
-  .journey img {
+.journey, .smart {
+  margin: -0.5rem -0.5rem -0.5rem -14.5rem;
+  height: 345px; }
+  .journey .hover-over, .smart .hover-over {
+    top: 6rem;
+    left: 5.7rem;
+    width: 499px;
+    height: 499px; }
+  .journey img, .smart img {
+    top: -499px;
     transition: 0.3s; }
-  .journey:hover {
-    cursor: pointer; }
-    .journey:hover img {
-      transform: scale(1.03); }
 
-.history {
-  margin-top: 0.8rem;
-  margin-left: 15.1rem; }
-  .history img {
+.history, .recycle {
+  margin: 0.3rem -0.5em -0.5em 14.6rem;
+  height: 245px; }
+  .history .hover-over, .recycle .hover-over {
+    top: 4.4rem;
+    left: 4.2rem;
+    width: 349px;
+    height: 349px; }
+  .history img, .recycle img {
+    top: -349px;
     transition: 0.3s; }
-  .history:hover {
-    cursor: pointer; }
-    .history:hover img {
-      transform: scale(1.03); }
 
 .tri2 {
   vertical-align: top;
   position: relative;
   margin-left: -14.8rem;
-  margin-top: 0.4rem; }
-
-.recycle {
-  margin-top: 1rem;
-  margin-left: 14.6rem; }
-  .recycle img {
-    transition: 0.3s; }
-  .recycle:hover {
-    cursor: pointer; }
-    .recycle:hover img {
-      transform: scale(1.03); }
+  margin-top: 0.4rem;
+  -webkit-clip-path: polygon(100% 0, 0 0, 50% 100%);
+  clip-path: polygon(100% 0, 0 0, 50% 100%); }
 
 .sus-text {
   position: relative;
@@ -734,25 +729,15 @@ _:-ms-lang(x), #drop-down {
     background-position-x: 0rem; }
   .sustainability-grid {
     margin-left: 17rem; }
-  .material {
-    padding-right: 10px; }
-    .material img {
-      width: 455px; }
-  .smart img {
-    widh: 577px; }
-  .recycle {
-    margin-left: 11.5rem; }
-    .recycle img {
-      width: 408px; }
-  .experience {
-    padding-right: 10px; }
-    .experience img {
-      width: 455px; }
-  .journey img {
-    widh: 577px; }
-  .history {
-    margin-left: 12rem; }
-    .history img {
+  .experience img, .material img {
+    width: 455px; }
+  .journey, .smart {
+    margin-left: -14em; }
+    .journey img, .smart img {
+      widh: 577px; }
+  .history, .recycle {
+    margin-left: 11.3rem; }
+    .history img, .recycle img {
       width: 408px; }
   .tri1 {
     margin-top: 3rem; }
@@ -793,7 +778,7 @@ _:-ms-lang(x), #drop-down {
   .sus-text {
     margin-left: 10rem; }
   .history, .recycle {
-    margin-left: 11.6rem; } }
+    margin-left: 11.3rem; } }
 
 @media screen and (max-width: 1193px) {
   .sus-D-grid {

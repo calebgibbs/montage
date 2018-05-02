@@ -11,14 +11,17 @@ $_SESSION['page'] = $_SERVER['REQUEST_URI'];
 			<div class="tri1 top-img">
 				<img src="img/sustainability/tri1.png">
 			</div> 
-			<div class="material top-img">
+			<div class="material top-img triangle">
+				<div class="hover-over"></div>
 				<img src="img/sustainability/material.png">
 			</div> 
-			<div class="smart top-img">
+			<div class="smart top-img triangle">
+				<div class="hover-over"></div>
 				<img src="img/sustainability/smart.png">
 			</div> 
 			<div>
-				<div class="recycle bottom-img">
+				<div class="recycle bottom-img triangle">
+					<div class="hover-over"></div>
 					<img src="img/sustainability/recycle.png">
 				</div> 
 				<div class="tri2 bottom-img">

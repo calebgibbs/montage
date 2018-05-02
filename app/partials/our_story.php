@@ -1,138 +1,133 @@
 <?php 
 $this -> layout('master',[
-	'title'=>'Montage Interiors', 
-	'desc' => 'montage interiors our story' 
+	'title'=>'Montage Interiors | Sustainability', 
+	'desc' => 'montage interiors description sustainability page' 
 ]);   
 $_SESSION['page'] = $_SERVER['REQUEST_URI'];
 ?> 
-<div class="body story-page"> 
+<div class="body sustainability-page"> 
 	<div id="sus-page" class="sus-D-grid">
 		<div class="sustainability-grid">
 			<div class="tri1 top-img">
-				<img src="img/story/tri1.png">
+				<img src="img/sustainability/tri1.png">
 			</div> 
-			<div class="experience top-img">
-				<img src="img/story/experience.png">
+			<div class="material top-img triangle">
+				<div class="hover-over"></div>
+				<img src="img/sustainability/material.png">
 			</div> 
-			<div class="journey top-img">
-				<img src="img/story/journey.png">
+			<div class="smart top-img triangle">
+				<div class="hover-over"></div>
+				<img src="img/sustainability/smart.png">
 			</div> 
 			<div>
-				<div class="history bottom-img">
-					<img src="img/story/history.png">
+				<div class="recycle bottom-img triangle">
+					<div class="hover-over"></div>
+					<img src="img/sustainability/recycle.png">
 				</div> 
 				<div class="tri2 bottom-img">
-					<img src="img/story/tri2.png">
+					<img src="img/sustainability/tri2.png">
 				</div> 
 			</div>
 		</div> 
-
 		<div class="sus-text">
-			<h1>Our Story</h1>  
-			<h2>Since 1990</h2> 
-			<p>As established, 100% New <br> 
-				Zealand owned company, <br> 
-				montage has many years of <br> 
-				experience in providing <br>
-				furniture solutions
-			</p>
+			<h1>Commitment</h1>  
+			<h2>To Sustainability</h2> 
+			<p>At montage we are committed <br>
+				to protecting our environment <br>
+			for the future generations</p>
 		</div> 
 	</div> 
 	<div class="sus-M-grid">
 		<div class="sus-m-padding">
-			<h1 class="m-os">Our Story</h1>
+			<h1>sustainabilty</h1>
 		</div>  
 		<div class="mobile-grid-sus">
-			<div class="mobile-culture-art-trig">
-				<h3>Culture</h3> 
-				<img src="img/story/experience-mobile">
+			<div class="m-material-art-trig">
+				<h3>Material Utilisation</h3> 
+				<img src="img/sustainability/material-mobile.png">
 			</div> 
-			<div class="mobile-art mobile-culture-art">
+			<div class="mobile-art m-material-art">
 				<article>
-					<h1>Montage Culture</h1> 
-					<p>The Montage Interiors company culture consists of a practical, organic and inclusive environment. Leaders share their experience in an autonomous workflow that allows staff to excel and set goals high. Operating out of one premises, experienced consultation is provided through functional factory insights.</p> 
-					<p>An organic culture promotes our passionate and dedicated account managers to go the extra mile for clients. We prefer to view our client relationships as business partnerships. We challenge our partners in a productive and refreshing way that ensures they are not just receiving functional workplace solutions, but investments the future.</p>
-					<p>A day in the life at Montage is never quite the same. A diverse yet collective group of hard working and proactive staff are always ready to put their heads together for the next challenge. This is what sees our clients receive the upmost quality service and solutions the market has to offer.</p>
+					<h1>Montage Material Utilisation </h1> 
+					<p>Wastage minimisation is controlled by our CNC (computer numerical control) machine which ensures the least possible wastage is created from cutting laminates for joinery and desktops. Any left overs are then used wherever else possible.</p> 
+					<p>Operating out of one premises, our experienced account managers can walk downstairs to the factory and oversee the operation themselves. This allows for a more holistic approach to be taken when allowing for materials. They can physically see what is available and how it may benefit any of their clients. Ultimately less wastage is created, and the cost savings are passed on to clients. A win win formula.</p> 
 				</article>
 			</div>
-			<div class="mobile-journey-art-trig">
-				<h3>Journey Ahead</h3> 
-				<img src="img/story/journey-mobile">
+			<div class="m-smart-art-trig">
+				<h3>Smart Procurement</h3> 
+				<img src="img/sustainability/smart-mobile.png">
 			</div> 
-			<div class="mobile-art mobile-journey-art">
+			<div class="mobile-art m-smart-art">
 				<article>
-					<h1>Montage Culture</h1> 
-					<p>The Montage Interiors company culture consists of a practical, organic and inclusive environment. Leaders share their experience in an autonomous workflow that allows staff to excel and set goals high. Operating out of one premises, experienced consultation is provided through functional factory insights.</p> 
-					<p>An organic culture promotes our passionate and dedicated account managers to go the extra mile for clients. We prefer to view our client relationships as business partnerships. We challenge our partners in a productive and refreshing way that ensures they are not just receiving functional workplace solutions, but investments the future.</p>
-					<p>A day in the life at Montage is never quite the same. A diverse yet collective group of hard working and proactive staff are always ready to put their heads together for the next challenge. This is what sees our clients receive the upmost quality service and solutions the market has to offer.</p>
+					<h1>Montage Smart Procurement</h1> 
+					<p>Montage Interiors’ wealth of experience enables us to smartly procure raw materials to reduce environmental harm, with future generations in mind.</p>
+					<p>We strongly support the use of local manufacture and choose only to work with ethical and sustainable suppliers. Not only does this support the local economy, but it ensures sustainable choices are being made and helps such responsible businesses grow. Promoting the use of recycled plastics, fabrics, steel and more is a small but crucial step to keeping environmental impacts to a minimum.</p> 
+					<p>With decades of experience, Montage utilises collective industry knowledge in the procurement and allocation of materials.</p>
 				</article>
 			</div>
-			<div class="mobile-history-art-trig">
-				<h3>History</h3> 
-				<img src="img/story/history-mobile">
+			<div class="m-recycle-art-trig">
+				<h3>Recycling</h3> 
+				<img src="img/sustainability/recycle-mobile.png">
 			</div> 
-			<div class="mobile-art mobile-history-art">
+			<div class="mobile-art m-recycle-art">
 				<article>
-					<h1>Montage History</h1> 
-					<p>Montage Interiors has been operating in the commercial environment since 1990. The senior team share a wealth of industry experience, many serving upwards of three decades in the sector. This experience, mixed with a diverse group of passionate individuals that genuinely take pride in their work sets Montage apart from the rest.</p>
-					<p>Director Dave Banks, a qualified cabinet maker, has been with Montage Interiors from the beginning, as has Account Manager Derek Joy. Both factory and Installation Managers Simon Fuller and Rob Jones have been with Montage Interiors for over 15 years.</p>
-					<p>The dedication and expertise of the Montage Interiors team is evident in the timely, high quality fit outs completed for our valued clients.</p>
-				</article>
+					<h1>Recycling</h1> 
+					<p>Montage Interiors implements a proactive recycling policy. All cardboard, polystyrene, steel and aluminium are recycled. Our team understand that such simple initiatives such as recycling and re-using wherever possible on the day to day makes a significant difference over time.</p> 
+					<p>Because we run our own deliveries locally, we can assemble desks and other furniture items at the factory. This not only allows us to recycle instantly rather than double handling rubbish, but it makes for swift and efficient deliveries. Efforts to reduce unnecessary usage of </p>
+					<p>paper also play a part way in reducing waste, moving forward and adopting more paperless digital processes.</p>
+				</article>	
 			</div>
 		</div>
 	</div>
 	<div id="modals"> 
-		<div id="experience-modal" class="modal">
+		<div id="material-modal" class="modal">
 			<button class="closeModal">&#10005;</button>
 			<div class="modal-inner">
 				<div class="modal-heading">
-					<img src="img/story/experience-modal.png"> 
-					<h4>Culture</h4> 		
+					<img src="img/sustainability/modal.png"> 
+					<h4>Material Utilisation </h4> 		
 				</div> 
 				<div class="modal-text">
 					<article>
-						<h1>Montage Journey Ahead</h1> 
-						<p>Montage Interiors is committed to staying on top of industry trends, constantly analysing local and international markets. We take responsibility in showing our clients the full spectrum of possibilities, to ensure they have all the information to make workplace investments suited to them.</p>
-						<p>It is an exciting time for the world of work, with an ageing workforce and new generations entering employment - workplaces have never been so diverse.</p>
-						<p>Montage Interiors looks to continue building trusting relationships with NZ organisations and agencies, where genuine value is provided. Every business is different, therefore, seeking out the true motivations that individually drive a company’s success is paramount to our approach.</p> 
-						<p>We strive to facilitate the increasing awareness of healthy, productive and collaborative workplaces in NZ.</p> 
-						<p>Join us and together we can raise the bar and enhance New Zealand work environments.</p>
+						<h1>Montage Material Utilisation </h1> 
+						<p>Wastage minimisation is controlled by our CNC (computer numerical control) machine which ensures the least possible wastage is created from cutting laminates for joinery and desktops. Any left overs are then used wherever else possible.</p> 
+						<p>Operating out of one premises, our experienced account managers can walk downstairs to the factory and oversee the operation themselves. This allows for a more holistic approach to be taken when allowing for materials. They can physically see what is available and how it may benefit any of their clients. Ultimately less wastage is created, and the cost savings are passed on to clients. A win win formula.</p> 
 					</article>
 				</div>	
 			</div>
-		</div>
-		<div id="journey-modal" class="modal">
+		</div> 
+
+		<div id="smart-modal" class="modal">
 			<button class="closeModal">&#10005;</button>
 			<div class="modal-inner">
 				<div class="modal-heading">
-					<img src="img/story/journey-modal.png"> 
-					<h4>Journey Ahead</h4> 		
+					<img src="img/sustainability/modal-smart.png"> 
+					<h4>Smart Procurement</h4> 		
 				</div> 
 				<div class="modal-text">
 					<article>
-						<h1>Montage Journey Ahead</h1> 
-						<p>Montage Interiors is committed to staying on top of industry trends, constantly analysing local and international markets. We take responsibility in showing our clients the full spectrum of possibilities, to ensure they have all the information to make workplace investments suited to them.</p>
-						<p>It is an exciting time for the world of work, with an ageing workforce and new generations entering employment - workplaces have never been so diverse.</p>
-						<p>Montage Interiors looks to continue building trusting relationships with NZ organisations and agencies, where genuine value is provided. Every business is different, therefore, seeking out the true motivations that individually drive a company’s success is paramount to our approach.</p> 
-						<p>We strive to facilitate the increasing awareness of healthy, productive and collaborative workplaces in NZ.</p> 
-						<p>Join us and together we can raise the bar and enhance New Zealand work environments.</p>
+						<h1>Montage Smart Procurement</h1> 
+						<p>Montage Interiors’ wealth of experience enables us to smartly procure raw materials to reduce environmental harm, with future generations in mind.</p>
+						<p>We strongly support the use of local manufacture and choose only to work with ethical and sustainable suppliers. Not only does this support the local economy, but it ensures sustainable choices are being made and helps such responsible businesses grow. Promoting the use of recycled plastics, fabrics, steel and more is a small but crucial step to keeping environmental impacts to a minimum.</p> 
+						<p>With decades of experience, Montage utilises collective industry knowledge in the procurement and allocation of materials.</p>
 					</article>
 				</div>	
 			</div>
-		</div>
-		<div id="history-modal" class="modal">
+		</div> 
+
+		<div id="recycle-modal" class="modal">
 			<button class="closeModal">&#10005;</button>
 			<div class="modal-inner">
 				<div class="modal-heading">
-					<img src="img/story/history-modal.png"> 
-					<h4>History</h4> 		
+					<img src="img/sustainability/modal.png"> 
+					<h4>Recycling</h4> 		
 				</div> 
 				<div class="modal-text">
 					<article>
-						<h1>Montage History</h1> 
-						<p>Montage Interiors has been operating in the commercial environment since 1990. The senior team share a wealth of industry experience, many serving upwards of three decades in the sector. This experience, mixed with a diverse group of passionate individuals that genuinely take pride in their work sets Montage apart from the rest.</p>
-						<p>Director Dave Banks, a qualified cabinet maker, has been with Montage Interiors from the beginning, as has Account Manager Derek Joy. Both factory and Installation Managers Simon Fuller and Rob Jones have been with Montage Interiors for over 15 years.</p>
-						<p>The dedication and expertise of the Montage Interiors team is evident in the timely, high quality fit outs completed for our valued clients.</p>
+						<h1>Recycling</h1> 
+						<p>Montage Interiors implements a proactive recycling policy. All cardboard, polystyrene, steel and aluminium are recycled. Our team understand that such simple initiatives such as recycling and re-using wherever possible on the day to day makes a significant difference over time.</p> 
+						<p>Because we run our own deliveries locally, we can assemble desks and other furniture items at the factory. This not only allows us to recycle instantly rather than double handling rubbish, but it makes for swift and efficient deliveries. Efforts to reduce unnecessary usage of </p>
+						<p>paper also play a part way in reducing waste, moving forward and adopting more paperless digital processes.</p>
 					</article>
 				</div>	
 			</div>

@@ -256,7 +256,6 @@ $this -> layout('master',[
 	} 
 	tabletFunct(); 
 	 window.onresize = tabletFunct;
-
 </script>
 <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
 <?php $imgC = $imgC / 2 ?>

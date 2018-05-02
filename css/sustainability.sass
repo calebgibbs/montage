@@ -1,453 +1,4 @@
-// /* sustainability */
-
-// .sustainability-page 
-// 	background: url(../img/sustainability/background.png) no-repeat center right 
-// 	background-size: 100% 
-// .story-page 
-// 	background: url(../img/story/background.png) no-repeat
-// 	background-position: 6rem -9rem
-// 	background-size: 95%
-// 	width: 1920px
-// 	height: 740px
-// .sustainability-grid 
-// 	margin-top: 5rem 
-// 	margin-left: 25rem
-// .top-img 
-// 	display: inline-block
-// .bottom-img 
-// 	display: inline-block 
-// .sus-M-grid 
-// 	display: none 
-// .tri1 
-// 	vertical-align: top
-// 	margin-left: 17rem
-// .material 
-// 	img 
-// 		position: relative
-// 		margin-left: -6rem 
-// 		margin-top: -2rem
-// 		transition: 0.3s 
-// 	&:hover
-// 		cursor: pointer
-// 		img		
-// 			transform: scale(1.03) 
-// .smart 
-// 	img 
-// 		margin-left: -19rem
-// 		transition: 0.3s
-// 	&:hover
-// 		cursor: pointer
-// 		img		
-// 			transform: scale(1.03)
-// .experience
-// 	margin-left: -1rem 
-// 	margin-top: -2rem
-// 	img 
-// 		transition: 0.3s 
-// 	&:hover
-// 		cursor: pointer
-// 		img		
-// 			transform: scale(1.03) 
-// .journey
-// 	margin-left: -14rem
-// 	img 
-// 		transition: 0.3s
-// 	&:hover
-// 		cursor: pointer
-// 		img		
-// 			transform: scale(1.03)
-// .history 
-// 	margin-top: 0.8rem
-// 	margin-left: 32rem
-// 	img 
-// 		transition: 0.3s
-// 	&:hover
-// 		cursor: pointer
-// 		img		
-// 			transform: scale(1.03)
-// .tri2 
-// 	vertical-align: top
-// 	position: relative 
-// 	margin-left: -14.8rem 
-// 	margin-top: 0.4rem
-// .recycle 
-// 	margin-top: 0.5rem 
-// 	img 
-// 		transition: 0.3s
-// 	&:hover
-// 		cursor: pointer
-// 		img		
-// 			transform: scale(1.03)
-// .sus-text 
-// 	h1 
-// 		font-size: 3rem 
-// 		font-weight: 100 
-// 		text-transform: uppercase
-// 		margin-bottom: 0
-// 		color: #404040 
-// 	h2 
-// 		font-size: 2.15rem 
-// 		font-weight: 100 
-// 		text-transform: uppercase
-// 		margin-top: 0 
-// 		color: #7f7f7f 
-// 	p 
-// 		font-size: 1.6rem
-// 		color: #737373 
-// 		margin-top: 1.5rem 
-// 	position: relative
-// 	margin-top: -26rem 
-// 	margin-left: 17rem
-// 	width: 20rem
-// .modal 
-// 	z-index: -1 
-// 	opacity: 0
-// 	background: #fff 
-// 	width: 60%
-// 	margin-left: 20% 
-// 	position: relative 
-// 	height: 60vh 
-// 	// margin-top: -30% 
-// 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5)
-// 	overflow-x: scroll 
-// 	position: absolute 
-// 	top: 0 
-// 	margin-top: 10rem
-// 	button 
-// 		float: right 
-// 		background: none
-// 		border: none 
-// 		font-size: 2rem 
-// 		margin-right: 0.4rem
-// 		margin-top: 0.2rem 
-// .modal-inner 
-// 	display: block 
-// 	z-index: inherit 
-// 	padding: 1rem
-// .modal-heading 
-// 	text-align: center 
-// 	h4
-// 		margin-top: 0.2rem 
-// 		text-transform: uppercase 
-// 		font-size: 2rem 
-// 		color: #676767 
-// 		font-weight: 100
-// .modal-text 
-// 	display: inline-block 
-// 	article 
-// 		color: #676767 
-// 		width: 100%
-// 		p 
-// 			width: 95% 
-// .openM 
-// 	z-index: 9998 !important
-// 	opacity: 1 !important 
-// .bgM 
-// 	opacity: 0.5 
-// 	&:hover
-// 		img 
-// 			transform: scale(1)
-// @include desktop-sm
-// 	.story-page
-// 		background-position-x: -17rem !important
-// 	.sustainability-page
-// 		height: 95vh 
-// 		margin-top: -4rem
-// 		margin-bottom: 1rem
-// 	.sustainability-grid
-// 		margin-left: 10rem
-// 		position: relative
-// 	.tri1
-// 		margin-left: 0 
-// 		margin-bottom: -1rem 
-// 	.bottom-img
-// 		margin-left: 15rem
-// 		display: inline-block 
-// 	.tri2 
-// 		vertical-align: top
-// 		position: relative 
-// 		margin-left: -14.3rem 
-// 		margin-top: 0.3rem 
-// 	.sus-text 
-// 		margin-top: -25rem 
-// 		margin-left: 5rem
-// 	.history
-// 		margin-left: -11.6rem
-// @include mobile 
-// 	.sus-D-grid 
-// 		display: none 
-// 	.sus-M-grid 
-// 		display: block 
-// 		margin-top: 2rem 
-// 		position: static 
-// 	.sustainability-page
-// 		background: none 
-// 	.story-page
-// 		background: none	
-// 	.sus-m-padding 
-// 		margin: 1rem 
-// 		margin-top: 4rem !important 
-// 		h1
-// 			width: 95% 
-// 			padding: 6px
-// 			font-weight: 100 
-// 			text-transform: uppercase
-// 			color: #fff 
-// 			background: $grey
-// 			text-align: center 
-// 			margin: 0 auto 
-// 			letter-spacing: 2px 
-// 	.mobile-grid-sus
-// 		h3 
-// 			width: 90% 
-// 			color: #fff 
-// 			background: $turquoise 
-// 			margn: 0 auto 
-// 			text-align: center 
-// 			font-weight: lighter 
-// 			margin: 0 auto 
-// 			padding: 5px 
-// 			font-size: 1.3rem
-// 		img 
-// 			width: 88% 
-// 			margin-left: 7% 
-// 			margin-top: 2%
-// 	.sustainability-page
-// 		height: auto
-// 	#modals
-// 		display: none
-// 	.mobile-art 
-// 		article 
-// 			width: 90%
-// 			margin: 0 auto 
-// 	.m-material-art 
-// 		display: none 
-// 	.m-smart-art 
-// 		display: none 
-// 	.m-recycle-art 
-// 		display: none 
-// 	.mobile-culture-art 
-// 		display: none
-// 	.mobile-journey-art 
-// 		display: none
-// 	.mobile-history-art 
-// 		display: none 
-// 	.m-os 
-// 		margin-top: -2.5rem !important 
-
-// @include tablet 
-// 	.sus-D-grid 
-// 		display: none 
-// 	.sus-M-grid 
-// 		display: block 
-// 		margin-top: 2rem 
-// 		position: static 
-// 	.sustainability-page
-// 		background: none 
-// 	.story-page
-// 		background: none	
-// 	.sus-m-padding 
-// 		margin: 1rem 
-// 		margin-top: 4rem !important 
-// 		h1
-// 			width: 95% 
-// 			padding: 6px
-// 			font-weight: 100 
-// 			text-transform: uppercase  
-// 			color: #fff 
-// 			background: $grey  
-// 			text-align: center 
-// 			margin: 0 auto 
-// 			letter-spacing: 2px 
-// 	.mobile-grid-sus  
-// 		h3 
-// 			width: 90% 
-// 			color: #fff 
-// 			background: $turquoise 
-// 			margn: 0 auto 
-// 			text-align: center 
-// 			font-weight: lighter 
-// 			margin: 0 auto 
-// 			padding: 5px 
-// 			font-size: 1.3rem  
-// 		img 
-// 			width: 88% 
-// 			margin-left: 7% 
-// 			margin-top: 2%  
-// 	.sustainability-page  
-// 		height: auto
-// 	#modals
-// 		display: none  
-// 	.mobile-art 
-// 		article 
-// 			width: 90%
-// 			margin: 0 auto 
-// 	.m-material-art 
-// 		display: none 
-// 	.m-smart-art 
-// 		display: none 
-// 	.m-recycle-art 
-// 		display: none 
-// 	.mobile-culture-art 
-// 		display: none
-// 	.mobile-journey-art 
-// 		display: none
-// 	.mobile-history-art 
-// 		display: none 
-// 	.m-os 
-// 		margin-top: -2.5rem !important
-
-// @include navigation-desktop-sm 
-// 	.material 
-// 		padding-right: 10px
-// 		img 
-// 			width: 455px 
-// 	.smart 
-// 		img 
-// 			widh: 577px 
-// 	.recycle 
-// 		margin-left: 11.5rem
-// 		padding-right: 2.5rem
-// 		img 
-// 			width: 408px 
-// 	.experience 
-// 		padding-right: 10px
-// 		img 
-// 			width: 455px 
-// 	.journey 
-// 		img 
-// 			widh: 577px 
-// 	.history 
-// 		margin-left: 11.5rem
-// 		padding-right: 2.5rem
-// 		img 
-// 			width: 408px 
-// 	.tri1 
-// 		margin-top: 3rem
-// 		img 
-// 			width: 177px 
-// 	.tri2 
-// 		img 
-// 			width: 178px 
-// 	.sus-text 
-// 		h1 
-// 			font-size: 2.4rem 
-// 		h2 
-// 			font-size: 1.55rem 
-// 		p 
-// 			font-size: 1.15rem 
-
-// @media screen and (max-width: 1667px)
-// 	.story-page
-// 		background-position-x: 0rem
-// 	.material 
-// 		padding-right: 10px
-// 		img 
-// 			width: 455px 
-// 	.smart 
-// 		img 
-// 			widh: 577px 
-// 	.recycle 
-// 		margin-left: 11.5rem
-// 		padding-right: 2.5rem
-// 		img 
-// 			width: 408px 
-// 	.experience 
-// 		padding-right: 10px
-// 		img 
-// 			width: 455px 
-// 	.journey 
-// 		img 
-// 			widh: 577px 
-// 	.history 
-// 		margin-left: 28.5rem
-// 		img 
-// 			width: 408px 
-// 	.tri1 
-// 		margin-top: 3rem
-// 		img 
-// 			width: 177px 
-// 	.tri2
-// 		margin-left: -12.2rem
-// 		img 
-// 			width: 178px 
-// 	.sus-text
-// 		margin-top: -22rem
-// 		h1 
-// 			font-size: 2.4rem 
-// 		h2 
-// 			font-size: 1.55rem 
-// 		p 
-// 			font-size: 1.15rem  
-
-// @media screen and (max-width: 1667px) 
-// 	.sustainability-grid 
-// 		margin-left: 14.8rem 
-
-// @media screen and (max-width: 1334px) 
-// 	.sustainability-grid 
-// 		margin-left: 6rem 
-// @media screen and (max-width: 1193px) 
-// 	.sus-D-grid 
-// 		display: none 
-// 	.sus-M-grid 
-// 		display: block 
-// 		margin-top: 2rem 
-// 		position: static 
-// 	.sustainability-page  
-// 		background: none 
-// 	.story-page  
-// 		background: none	
-// 	.sus-m-padding 
-// 		margin: 1rem 
-// 		margin-top: 4rem !important 
-// 		h1
-// 			width: 95% 
-// 			padding: 6px  
-// 			font-weight: 100 
-// 			text-transform: uppercase  
-// 			color: #fff 
-// 			background: $grey  
-// 			text-align: center 
-// 			margin: 0 auto 
-// 			letter-spacing: 2px 
-// 	.mobile-grid-sus  
-// 		h3 
-// 			width: 90% 
-// 			color: #fff 
-// 			background: $turquoise 
-// 			margn: 0 auto 
-// 			text-align: center 
-// 			font-weight: lighter 
-// 			margin: 0 auto 
-// 			padding: 5px 
-// 			font-size: 1.3rem  
-// 		img 
-// 			width: 88% 
-// 			margin-left: 7% 
-// 			margin-top: 2%  
-// 	.sustainability-page  
-// 		height: auto
-// 	#modals
-// 		display: none  
-// 	.mobile-art 
-// 		article 
-// 			width: 90%
-// 			margin: 0 auto 
-// 	.m-material-art 
-// 		display: none 
-// 	.m-smart-art 
-// 		display: none 
-// 	.m-recycle-art 
-// 		display: none 
-// 	.mobile-culture-art 
-// 		display: none
-// 	.mobile-journey-art 
-// 		display: none
-// 	.mobile-history-art 
-// 		display: none 
-// 	.m-os 
-// 		margin-top: -2.5rem !important
+/* sustainability */
 
 .sustainability-page 
 	background: url(../img/sustainability/background.png) no-repeat center right 
@@ -461,9 +12,26 @@
 	background-size: 95%
 	width: 1920px
 	height: 740px
+	
 .sustainability-grid 
 	margin-top: 1rem 
 	margin-left: 17rem
+
+.triangle
+	overflow: hidden
+	padding: 0.5rem
+	display: inline-block
+	position: relative
+	.hover-over
+		position: relative
+		z-index: 4
+		transform: rotate(45deg)
+		cursor: pointer
+		&:hover + img
+			transform: scale(1.03)
+	img
+		position: relative
+	
 .top-img 
 	display: inline-block
 .bottom-img 
@@ -472,64 +40,50 @@
 	display: none 
 .tri1 
 	vertical-align: top
-.material 
-	img 
-		position: relative
-		margin-left: -1rem 
-		margin-top: -2rem
-		transition: 0.3s 
-	&:hover
-		cursor: pointer
-		img		
-			transform: scale(1.03) 
-.smart 
-	img 
-		margin-left: -14rem
+
+.experience, .material
+	margin: -1.5rem -0.5rem -0.5rem -1.5rem
+	height: 245px
+	.hover-over
+		top: -11rem
+		left: 4rem
+		width: 349px
+		height: 349px
+	img
+		top: -349px
 		transition: 0.3s
-	&:hover
-		cursor: pointer
-		img		
-			transform: scale(1.03)
-.experience
-	margin-left: -1rem 
-	margin-top: -2rem
-	img 
-		transition: 0.3s 
-	&:hover
-		cursor: pointer
-		img		
-			transform: scale(1.03) 
-.journey
-	margin-left: -14rem
-	img 
+		
+.journey, .smart
+	margin: -0.5rem -0.5rem -0.5rem -14.5rem
+	height: 345px
+	.hover-over
+		top: 6rem
+		left: 5.7rem
+		width: 499px
+		height: 499px
+	img
+		top: -499px
 		transition: 0.3s
-	&:hover
-		cursor: pointer
-		img		
-			transform: scale(1.03)
-.history 
-	margin-top: 0.8rem
-	margin-left: 15.1rem
-	img 
+		
+.history, .recycle 
+	margin: 0.3rem -0.5em -0.5em 14.6rem
+	height: 245px
+	.hover-over
+		top: 4.4rem
+		left: 4.2rem
+		width: 349px
+		height: 349px
+	img
+		top: -349px
 		transition: 0.3s
-	&:hover
-		cursor: pointer
-		img		
-			transform: scale(1.03)
-.tri2 
+.tri2
 	vertical-align: top
 	position: relative 
 	margin-left: -14.8rem 
 	margin-top: 0.4rem
-.recycle 
-	margin-top: 1rem 
-	margin-left: 14.6rem
-	img 
-		transition: 0.3s
-	&:hover
-		cursor: pointer
-		img		
-			transform: scale(1.03)
+	-webkit-clip-path: polygon(100% 0, 0 0, 50% 100%)
+	clip-path: polygon(100% 0, 0 0, 50% 100%)
+
 .sus-text 
 	h1 
 		font-size: 3rem 
@@ -607,26 +161,16 @@
 		background-position-x: 0rem
 	.sustainability-grid 
 		margin-left: 17rem 
-	.material 
-		padding-right: 10px
+	 
+	.experience, .material
 		img 
 			width: 455px 
-	.smart 
+	.journey, .smart
+		margin-left: -14em
 		img 
 			widh: 577px 
-	.recycle 
-		margin-left: 11.5rem
-		img 
-			width: 408px 
-	.experience 
-		padding-right: 10px
-		img 
-			width: 455px 
-	.journey 
-		img 
-			widh: 577px 
-	.history 
-		margin-left: 12rem
+	.history, .recycle
+		margin-left: 11.3rem
 		img 
 			width: 408px 
 	.tri1 
@@ -668,7 +212,7 @@
 	.sus-text 
 		margin-left: 10rem
 	.history, .recycle
-		margin-left: 11.6rem
+		margin-left: 11.3rem
 		
 @media screen and (max-width: 1193px) 
 	.sus-D-grid 
@@ -855,17 +399,3 @@
 		display: none 
 	.m-os 
 		margin-top: -2.5rem !important 
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
