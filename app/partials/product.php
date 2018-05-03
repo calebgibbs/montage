@@ -175,13 +175,13 @@ $this -> layout('master',[
 						<?php foreach( $Allfeatures as $feature): ?> 
 							<?php for( $i = 1; $i <= 10; $i++ ): ?> 
 								<?php if( $feature['position'] == $i ): ?>  
-									<li<?php if( $f_counter > 3 ): ?> class="f-hidden"<?php endif ?> ><?= $feature['feature'] ?></li>
+									<li<?php if( $f_counter > 5 ): ?> class="f-hidden"<?php endif ?> ><?= $feature['feature'] ?></li>
 								<?php endif ?>
 							<?php endfor ?> 
 							<?php $f_counter++ ?>
 						<?php endforeach; ?> 
 					</ul> 
-					<?php if( $f_counter > 4 ): ?><button class="seemore" id="seeMF">See more</button><?php endif ?>
+					<?php if( $f_counter > 6 ): ?><button class="seemore" id="seeMF">See more</button><?php endif ?>
 				</div>	 
 			<?php endif ?>
 			<?php if($Alloptions != 'noOptions'): ?>
@@ -192,13 +192,13 @@ $this -> layout('master',[
 						<?php foreach( $Alloptions as $option): ?> 
 							<?php for( $i = 1; $i <= 10; $i++ ): ?> 
 								<?php if( $option['position'] == $i ): ?>  
-									<li<?php if( $o_counter > 3 ): ?> class="o-hidden"<?php endif ?>><?= $option['product_option'] ?></li>
+									<li<?php if( $o_counter > 5 ): ?> class="o-hidden"<?php endif ?>><?= $option['product_option'] ?></li>
 								<?php endif ?>
 							<?php endfor ?> 
 							<?php $o_counter++ ?>
 						<?php endforeach; ?>
 					</ul> 
-					<?php if( $o_counter > 4 ): ?><button class="seemore" id="seeMO">See more</button><?php endif ?> 	
+					<?php if( $o_counter > 6 ): ?><button class="seemore" id="seeMO">See more</button><?php endif ?> 	
 				</div>  
 			<?php endif ?>
 				<?php if($links != 'noLinks'): ?>

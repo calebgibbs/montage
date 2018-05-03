@@ -1744,7 +1744,18 @@ _:-ms-lang(x), #drop-down {
     display: none; }
   #left-col {
     display: block;
-    width: 100%; }
+    width: 100%;
+    min-height: initial; }
+  .product-images {
+    width: 90%;
+    margin: 0 auto; }
+  .large-img {
+    text-align: initial;
+    width: 100%;
+    text-align: center; }
+    .large-img img {
+      min-width: 95%;
+      max-width: 95%; }
   #right-col {
     width: 100% !important;
     padding: 0  !important;
@@ -1754,24 +1765,32 @@ _:-ms-lang(x), #drop-down {
       display: none; }
     #right-col p {
       width: 95%;
-      margin: 0 auto; }
+      margin: 0 auto;
+      font-size: 0.8rem;
+      margin-top: 1rem; }
+    #right-col li {
+      font-size: 1rem;
+      color: #242424;
+      font-weight: lighter; }
+    #right-col table {
+      font-size: 1rem;
+      font-weigth: lighter;
+      color: #242424; }
   #dispayImg {
     width: 350px !important;
     height: auto;
     margin: 0; }
   .mobile-thumbs {
     display: block;
-    margin-top: 1rem; }
+    width: 95%;
+    margin: 0  auto; }
   .mobile-img {
-    width: 49%;
+    width: calc( 98% / 3);
     display: inline-block;
     text-align: center; }
     .mobile-img img {
-      width: 150px;
-      height: auto; }
-  .product-images {
-    width: 350px;
-    margin: 0 auto; }
+      min-width: 100%;
+      max-width: 100%; }
   .workstation {
     background: none; }
   .storage {
@@ -1787,14 +1806,17 @@ _:-ms-lang(x), #drop-down {
   .joinery {
     background: none; }
   #product-theme {
-    height: auto !important; }
+    height: auto;
+    padding-top: 1rem; }
   .t-m-heading {
     display: block;
     margin: 0 auto;
     margin-bottom: 1.5rem; }
     .t-m-heading h1 {
       color: #fff;
-      margin-left: 0; }
+      margin-left: 0;
+      padding-left: 1rem;
+      font-size: 2rem !important; }
   .supplier-name {
     display: none; }
   .page-dimensions {
@@ -1819,20 +1841,14 @@ _:-ms-lang(x), #drop-down {
   .page-downloads {
     display: none; } }
 
-@media screen and (max-width: 400px) {
-  #left-col {
-    width: 90%;
-    display: block;
-    margin: 0 auto;
-    text-align: left; }
-  #right-col {
-    width: 90%;
-    display: block;
-    margin: 0 auto;
-    vertical-align: bottom;
-    margin-top: 3rem; }
-  .product-images ol {
-    display: none; } }
+@media screen and (max-width: 520px) {
+  .mobile-img {
+    width: calc( 97% / 3);
+    display: inline-block;
+    text-align: center; }
+    .mobile-img img {
+      min-width: 100%;
+      max-width: 100%; } }
 
 .seemore {
   background: none;

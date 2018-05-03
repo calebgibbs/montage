@@ -34,9 +34,11 @@ class SearchController extends PageController {
 				JOIN product_images AS i 
 				ON p.id = i.product_id
 				WHERE 
-				p.title LIKE '%$search%' 
-				OR p.description LIKE '%$search%' 
-				OR p.category LIKE '%$search%' 
+				p.title LIKE '%$search%'"; 
+		if($_SESSION['account_type'] == 'admin'){ 
+			$sql .= "OR p.supplier LIKE '%$search%'";
+		} 
+		$sql .=	"OR p.category LIKE '%$search%' 
 				AND i.image_position = 1
 				ORDER BY score_title ASC";  
 		$result = $this->dbc->query($sql); 
