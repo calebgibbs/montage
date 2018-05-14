@@ -3,7 +3,7 @@
 require_once '../config.inc.php';    
 $dbc = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME); 
 if(isset($_SESSION['favourites'])){
-	//get eamil status
+	//get email status
 	$dbc = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);  
 	$user = $_SESSION['id'];
 	$sql = "SELECT first_name, email, company, email_list FROM users WHERE id = '$user'"; 

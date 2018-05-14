@@ -39,6 +39,8 @@ nav
 .tabletSearch 
 	display: none 
 .tabletBreak 
+	display: none 
+.mobile-fav 
 	display: none
 #menu 
 	display: inline-block 
@@ -189,9 +191,7 @@ _:-ms-lang(x), #drop-down
 			float: right 
 			margin-top: 4em 
 			margin-right: 1rem !important
-			position: static 
-	.search 
-		margin-right: -2rem !important 
+			position: static
 
 @media screen and (max-width: 1115px) 
 	.main-menu 
@@ -199,41 +199,72 @@ _:-ms-lang(x), #drop-down
 			font-size: 1rem
 
 @include tablet 
+	body
+		min-width: 100vw
 	.homeIcn 
 		display: none 
 	#diamond-narrow 
 		display: none !important 
+	.mobile-f-counter 
+		display: inline-block
 	.circleCounter 
 		display: none 
+	.mobile-fav 
+		display: block  
+	.favourites-nav 
+		display: none
+	
+@media screen and (min-width: 768px) and (max-width: 959px) 
+	body
+		min-width: 770px !important
+	nav   
+		max-height: 80px
+		img
+			height: 80px 
+		ul 
+			margin-top: 3rem !important	  
+			margin-right: 1rem !important
+	.menu-button  
+		display: none	
+	.main-menu
+		ul
+			display: inline-block 
+			float: right
+			margin-right: 1rem 
+			position: static  
+			li 
+				margin-top: -1rem
+			a 	
+				font-size: 0.8rem 
 	.search 
-		position: relative 
-		margin-top: none 
+		position: absolute 
+		margin-top: -3.5rem 
 		float: right 
-		// right: 0 
-		padding-right: 0
+		right: 0 
+		padding-right: 3.6rem
+		margin-right: -2rem !important
 		input 
-			display: none
+			width: 15rem 
+			padding: 5px 
+			font-size: 0.8rem 
+			outline: none 
+			border: none 
+			color: #fff 
+			background: rgba( #fff, 0.2 ) 
 		button 
 			background: none 
 			outline: none 
 			font-size: 1rem 
 			border: none 
-			position: relative 
-			margin-left: 0 
-			display: inline-block
-			// cursor: pointer 
+			position: absolute 
+			margin-left: -2.1rem
+			cursor: pointer 
 			color: #fff 
-	#drop-down 
-		display: none 
-	.menu-button 
-		display: none
 
-@media screen and (max-width: 839px) 
-	.main-menu 
-		a 	
-			font-size: 0.8rem	 
 
 @include mobile 
+	.mobile-fav
+		display: block !important
 	.mobile-f-counter 
 		display: inline-block 
 	.circleCounter 
@@ -261,11 +292,11 @@ _:-ms-lang(x), #drop-down
 				margin-top: 5px 
 				text-align: center
 				opacity: 0  
-				@for $i from 1 through 8
+				@for $i from 1 through 9
 					&:nth-child(#{$i})
 						animation: 
 							name: mobileMenu
-							duration: 100ms * $i 
+							duration: 90ms * $i 
 							timing-function: ease-in-out 
 							fill-mode: forwards 
 	.menu-active 
@@ -304,7 +335,9 @@ _:-ms-lang(x), #drop-down
 	#site-nav
 		display: none 
 	#diamond-narrow 
-		display: none !important
+		display: none !important 
+	.favourites-nav 
+		display: none
 
 
 	

@@ -14,15 +14,18 @@
 <body> 
 	<?= $this->insert('favourites') ?>
 	<?= $this->insert('nav') ?> 
-	<?php if($_SESSION['account_type'] == 'admin'): ?>
-		<?= $this->insert('sitenav') ?> 
-	<?php endif; ?>
+	<?php if(isset($_SESSION['account_type'])): ?> 
+		<?php if($_SESSION['account_type'] == 'admin'): ?>
+			<?= $this->insert('sitenav') ?> 
+		<?php endif; ?>
+	<?php endif ?> 
 	<div id="main-page">  
 		<?= $this->section('content') ?>
 		<?= $this->insert('footer') ?> 
 	</div>
 	<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>  
 	<script type="text/javascript" src="js/menu-min.js"></script> 
+	<!-- <script type="text/javascript" src="js/browsers.js"></script> -->
 	<script type="text/javascript" src="js/animation-min.js"></script>
 	<script type="text/javascript" src="js/favourites-min.js"></script>  
 	<script type="text/javascript" src="js/signupValidation-min.js"></script>
@@ -31,9 +34,11 @@
 	<?php if(isset($_SESSION['id'])): ?> 
 		<script type="text/javascript" src="js/account.js"></script> 
 	<?php endif ?> 
-	<?php if($_SESSION['account_type'] == 'admin'): ?> 
-		<script type="text/javascript" src="js/admin.js"></script>
-		<script type="text/javascript" src="js/validation-min.js"></script> 
-	<?php endif ?>
-</body>
-</html> 
+	<?php if( isset($_SESSION['account_type']) ): ?> 
+		<?php if($_SESSION['account_type'] == 'admin'): ?> 
+			<script type="text/javascript" src="js/admin.js"></script>
+			<script type="text/javascript" src="js/validation-min.js"></script> 
+			<?php endif ?>
+		<?php endif ?>
+	</body>
+	</html> 

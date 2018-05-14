@@ -18,9 +18,11 @@ $this -> layout('master',[
 
 ?>
 <div class="body"> 
-	<?php if($_SESSION['account_type'] == 'admin'): ?>
+	<?php if(isset($_SESSION['account_type'])): ?> 
+		<?php if($_SESSION['account_type'] == 'admin'): ?>
 		<a class="edit-btn" href="index.php?page=edit&product=<?= $_GET['productnum'] ?>">Edit</a>
 	<?php endif ?> 
+	<?php endif ?>
 	<div id="product-theme" class="
 	<?php if( $product['category'] == 'workstation' ){
 		echo "workstation";
@@ -153,8 +155,10 @@ $this -> layout('master',[
 			<?php if($_GET['page'] == 'product'): ?>
 				<div class="title-text">
 					<h1 class="prod-d-title"><?= $product['title'] ?></h1>  
-					<?php if($_SESSION['account_type'] == 'admin'): ?> 
-						<p class="supplier-name">Supplier: <?= ucfirst($product['supplier']) ?></p>
+					<?php if(isset($_SESSION['account_type'])): ?> 
+						<?php if($_SESSION['account_type'] == 'admin'): ?> 
+							<p class="supplier-name">Supplier: <?= ucfirst($product['supplier']) ?></p>
+						<?php endif ?> 
 					<?php endif ?>
 					<?php $p_counter = 0 ?>
 					<?php foreach($desc as $d): ?> 
@@ -255,7 +259,7 @@ $this -> layout('master',[
 		}
 	} 
 	tabletFunct(); 
-	 window.onresize = tabletFunct;
+	window.addEventListener('resize', tabletFunct);
 </script>
 <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
 <?php $imgC = $imgC / 2 ?>

@@ -2,8 +2,7 @@
 	$this -> layout('master',[
 		'title'=>'Montage Interiors | Help', 
 		'desc' => 'montage interiors Staff help page' 
-	]);   
-	$_SESSION['page'] = $_SERVER['REQUEST_URI'];
+	]);  
 ?> 
 <div class="body"> 
 	<article>

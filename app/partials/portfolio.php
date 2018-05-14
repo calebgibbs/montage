@@ -13,11 +13,15 @@ $this -> layout('master',[
 
 ?>
 <div class="body">
-<?php if($_SESSION['account_type'] == 'admin'): ?><a href="index.php?page=edit_port&port=<?= $_GET['num'] ?>">Edit</a><?php endif ?> 
+<?php if(isset($_SESSION['account_type'])): ?> 
+	<?php if($_SESSION['account_type'] == 'admin'): ?>
+	<a href="index.php?page=edit_port&port=<?= $_GET['num'] ?>">Edit</a>
+	<?php endif ?> 
+<?php endif ?>
 	<div id="product-theme">
 		<div id="page-padding">
 			<h1 id="porttitle" class="port-title"><?= $port['title'] ?></h1>
-			<div id="left-col"> 
+			<div class="port-left" id="left-col"> 
 				<div class="product-images">
 					<div class="large-img">
 						<?php foreach( $Allimages as $image ): ?>
@@ -26,8 +30,8 @@ $this -> layout('master',[
 							<?php endif ?>
 						<?php endforeach ?>
 					</div>
-					<div class="slider-container">
-						<button class="prev slider-btn" alt="Previous"><</button> 
+					<div id="slider-container" class="slider-container">
+						<button id="prevBtn" class="prev slider-btn" alt="Previous"><</button> 
 						<button class="next slider-btn" alt="Next">></button> 
 						<div class="slider">
 							<div class="thumbs">
@@ -40,17 +44,27 @@ $this -> layout('master',[
 								<?php endforeach ?>
 							</div>	
 						</div>
-					</div>
+					</div> 
+					<div class="mobile-thumbs">
+					<?php foreach($Allimages as $image ): ?> 
+						<?php $imgC++ ?>
+						<div class="mobile-img">
+							<img <?php if($image['image_position'] == 1): ?> id="imgSize" <?php endif ?> src="img/portfolio/thumbnail/<?= $image['image'] ?>" onClick="ChangeImage('img/portfolio/large/<?= $image['image'] ?>')">
+						</div> 
+					<?php endforeach ?>
+				</div>
 				</div>
 			</div> 
-			<div id="right-col">
+			<div class="port-text" id="right-col">
 				<p>
 					<?php if($port['client'] != 'N/A'): ?><span>Client:</span> <?= $port['client'] ?><br><?php endif ?>
 					<?php if($port['architect'] != 'N/A'): ?><span>Architect:</span> <?= $port['architect'] ?><br><?php endif ?> 
 					<?php if($port['contractor'] != 'N/A'): ?><span>Contractor:</span> <?= $port['contractor'] ?><br><?php endif ?> 
 					<?php if($port['date'] != 'N/A'): ?><span>Date:</span> <?= $port['date'] ?><?php endif ?>  
 				</p>
-				<p><?= $port['description'] ?></p>
+				<?php foreach($desc as $d): ?> 
+				<p><?= $d ?></p>
+				<?php endforeach ?>
 			</div>
 		</div>
 	</div>
@@ -59,6 +73,21 @@ $this -> layout('master',[
 	function ChangeImage(a) {
 		document.getElementById("dispayImg").src = a;
 	}	
+</script>
+<script type="text/javascript">
+	function tabletFunct(){ 
+		var windowW = window.innerWidth; 
+		if(windowW <= 1105){ 
+			var imgW = document.getElementById("dispayImg").offsetLeft; 
+			var button = document.getElementById('prevBtn').offsetWidth - 7; 
+			var paddingVal = imgW - button + 'px'; 
+			document.getElementById('slider-container').style.marginLeft = paddingVal;
+		}else{ 
+			document.getElementById('slider-container').style.marginLeft = "";
+		} 
+	} 
+	tabletFunct(); 
+	window.addEventListener('resize', tabletFunct);
 </script> 
 <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
 <script type="text/javascript">

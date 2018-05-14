@@ -1,0 +1,1 @@
+var ua=navigator.userAgent.toLowerCase();if(-1!=ua.indexOf("safari"))if(ua.indexOf("chrome")>-1);else{var screen=window.innerWidth;document.getElementById("safari-search").style.marginTop="-2rem",alert("ipad")}

@@ -11,7 +11,7 @@ $this -> layout('master',[
 			<h3 class="productsh3">For truely adaptable spaces</h3>
 		</div>
 		<div class="workstations-dia diamond">
-			<div class="hover-over" href="index.php?page=workstations_screens"></div>
+			<div class="hover-over" href="index.php?page=desks_screens"></div>
 			<img src="img/products/categories/workstations.png" alt="Workstations and screens">
 			<img class="mask" src="img/products/categories/workstationsMask.png">
 		</div> 
@@ -51,8 +51,8 @@ $this -> layout('master',[
 			<h1 class="productsh1">Products</h1> 
 			<h3 class="productsh3">For truely adpatable spaces</h3>
 		</div> 
-		<div class="mobile-prod-box" href="index.php?page=workstations_screens">
-			<h3>Workstations + Screens</h3> 
+		<div class="mobile-prod-box" href="index.php?page=desks_screens">
+			<h3>Desks + Screens</h3> 
 			<img src="img/temp/workstations-mobile.png">
 		</div> 
 		<div class="mobile-prod-box" href="index.php?page=storage">

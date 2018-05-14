@@ -24,8 +24,6 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 require_once '../config.inc.php';  
 $dbc = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);   
 
-
-
 switch($page){ 
 	case 'home':
 	require 'app/controllers/HomeController.php'; 
@@ -65,9 +63,14 @@ switch($page){
 	case 'search':
 	require 'app/controllers/SearchController.php'; 
 	$controller = new SearchController($dbc);
+	break; 
+
+	case 'favourites':
+	require 'app/controllers/FavouritesMobileController.php'; 
+	$controller = new FavouritesController($dbc);
 	break;
 
-	case 'workstations_screens':
+	case 'desks_screens':
 	require 'app/controllers/WorkstationsScreensController.php'; 
 	$controller = new WorkstationsScreensController($dbc);
 	break; 

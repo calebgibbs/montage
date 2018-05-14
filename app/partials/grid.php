@@ -11,6 +11,11 @@ if($_GET['page'] == 'portfolios'){
 <div class="body">
 	<div id="grid-page-outer">
 		<div id="search-heading" class="<?= $class ?>"><h2><?= $title ?></h2></div> 
+		<?php if($_GET['page'] == 'portfolios'): ?>
+		<div class="client-logos">
+			<img src="img/portfolio/client_logos.png" alt="Our client's logos">
+		</div>
+		<?php endif ?>
 		<div id="boxes">	 
 			<?php if($_GET['page'] != 'portfolios'): ?>
 				<form method="post"> 
