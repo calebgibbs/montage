@@ -29,7 +29,7 @@ $(document).ready(function(){
         window.location = $(this).attr('href');
         return false;
     });
-    $('.triangle .hover-over').click(function(){
+    $('.home-tri-link').click(function(){
         window.location = $(this).attr('href');
         return false;
     }); 

@@ -7,7 +7,7 @@
 <div class="body homebg desktopHome"> 
 	<div class="top">
 		<div class="portfolio tri triangle">
-			<div class="hover-over" href="index.php?page=portfolios"></div>
+			<div class="hover-over home-tri-link" href="index.php?page=portfolios"></div>
 			<img src="img/home/portfolio.png">
 		</div>
 		<div class="mission-statement">
@@ -19,19 +19,19 @@
 	</div> 
 	<div class="bottom">
 		<div class="our-story tri-clip triangle">
-			<div class="hover-over" href="index.php?page=our_story"></div>
+			<div class="hover-over home-tri-link" href="index.php?page=our_story"></div>
 			<img src="img/home/ourstory.png">
 		</div>
 		<div class="product tri-clip triangle">
-			<div class="hover-over" href="index.php?page=products"></div>
+			<div class="hover-over home-tri-link" href="index.php?page=products"></div>
 			<img src="img/home/product.png">
 		</div>
 		<div class="sustainability tri-clip triangle">
-			<div class="hover-over" href="index.php?page=sustainability"></div>
+			<div class="hover-over home-tri-link" href="index.php?page=sustainability"></div>
 			<img src="img/home/sustainability.png">
 		</div>
 		<div class="download tri-clip triangle">
-			<div class="hover-over" href="index.php?page=downloads"></div>
+			<div class="hover-over home-tri-link" href="index.php?page=downloads"></div>
 			<img src="img/home/downloads.png">
 		</div>
 	</div> 
