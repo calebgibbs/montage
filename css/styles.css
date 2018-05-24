@@ -1434,8 +1434,7 @@ _:-ms-lang(x), #drop-down {
 #left-col {
   width: 55%;
   display: inline-block;
-  vertical-align: top;
-  min-height: 70vh; }
+  vertical-align: top; }
 
 .product-text h2 {
   padding-bottom: 0.8rem; }
@@ -1655,7 +1654,9 @@ _:-ms-lang(x), #drop-down {
     margin-left: 4.3%; }
   #right-col {
     width: 40%;
-    float: right; } }
+    float: right; }
+  .port-left {
+    min-height: 70vh; } }
 
 @media screen and (max-width: 1440px) {
   .product-images {
@@ -1721,6 +1722,7 @@ _:-ms-lang(x), #drop-down {
     display: block;
     width: 100%;
     float: none;
+    height: auto;
     vertical-align: none;
     min-height: initial; }
   #right-col {
@@ -1728,6 +1730,7 @@ _:-ms-lang(x), #drop-down {
     width: 80%;
     float: none;
     margin: 0 auto;
+    height: auto;
     padding: 0;
     vertical-align: none; }
     #right-col h1 {
@@ -1747,7 +1750,7 @@ _:-ms-lang(x), #drop-down {
   .joinery {
     background: none; }
   #product-theme {
-    height: auto !important; }
+    height: auto; }
   .t-m-heading {
     display: block;
     width: 90%;
@@ -1797,7 +1800,7 @@ _:-ms-lang(x), #drop-down {
   #left-col {
     display: block;
     width: 100%;
-    min-height: initial; }
+    height: auto; }
   .product-images {
     width: 90%;
     margin: 0 auto; }
@@ -1809,12 +1812,11 @@ _:-ms-lang(x), #drop-down {
       min-width: 95%;
       max-width: 95%; }
   .port-left {
-    min-height: 60vh !important; }
+    height: auto; }
   #right-col {
-    width: 100% !important;
-    padding: 0  !important;
-    float: none !important;
-    margin-top: -12rem !important; }
+    width: 100%;
+    padding: 0;
+    float: none; }
     #right-col h1 {
       display: none; }
     #right-col p {
@@ -1830,6 +1832,8 @@ _:-ms-lang(x), #drop-down {
       font-size: 1rem;
       font-weigth: lighter;
       color: #242424; }
+  .port-title {
+    font-size: 1rem; }
   #dispayImg {
     width: 350px !important;
     height: auto;
@@ -1904,7 +1908,7 @@ _:-ms-lang(x), #drop-down {
       min-width: 100%;
       max-width: 100%; }
   .port-left {
-    min-height: 900vh !important; } }
+    height: auto; } }
 
 .seemore {
   background: none;

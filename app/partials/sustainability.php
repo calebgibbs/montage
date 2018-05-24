@@ -39,7 +39,7 @@ $this -> layout('master',[
 	</div> 
 	<div class="sus-M-grid">
 		<div class="sus-m-padding">
-			<h1>sustainabilty</h1>
+			<h1 class="m-os">sustainabilty</h1>
 		</div>  
 		<div class="mobile-grid-sus">
 			<div class="m-material-art-trig">

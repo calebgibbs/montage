@@ -604,13 +604,6 @@
 		"oAP": "\/app\/partials\/sitenav.php",
 		"oF": 0
 		},
-	"\/app\/partials\/story2.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/app\/partials\/story2.php",
-		"oF": 0
-		},
 	"\/app\/partials\/sustainability.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1102,17 +1095,6 @@
 		"iS": 91504,
 		"oA": 0,
 		"oAP": "\/img\/portfolio\/client_logos.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/portfolio\/client_logosB.png": {
-		"ft": 32768,
-		"iS": 403517,
-		"oA": 0,
-		"oAP": "\/img\/portfolio\/client_logosB.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,

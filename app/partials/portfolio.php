@@ -47,7 +47,6 @@ $this -> layout('master',[
 					</div> 
 					<div class="mobile-thumbs">
 					<?php foreach($Allimages as $image ): ?> 
-						<?php $imgC++ ?>
 						<div class="mobile-img">
 							<img <?php if($image['image_position'] == 1): ?> id="imgSize" <?php endif ?> src="img/portfolio/thumbnail/<?= $image['image'] ?>" onClick="ChangeImage('img/portfolio/large/<?= $image['image'] ?>')">
 						</div> 
@@ -101,6 +100,7 @@ $this -> layout('master',[
 </script>
 <script type="text/javascript">
 $(function(){ 
+	console.log(<?= $imgC ?>);
 	var img = document.getElementById('imgSize');
 	var imgW = img.clientWidth; 
 	var elemCount = <?= $imgC / 2?>; 

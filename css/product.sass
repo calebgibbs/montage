@@ -60,8 +60,7 @@
 #left-col 
 	width: 55%  
 	display: inline-block 
-	vertical-align: top 
-	min-height: 70vh 
+	vertical-align: top
 
 .product-text 
 	h2 
@@ -294,7 +293,9 @@
 			margin-left: 4.3% 	 
 	#right-col 
 		width: 40% 
-		float: right
+		float: right  
+	.port-left 
+		min-height: 70vh 
 
 @include desktop-sm  
 	.product-images 
@@ -364,7 +365,8 @@
 	#left-col 
 		display: block 
 		width: 100% 
-		float: none 
+		float: none  
+		height: auto
 		vertical-align: none 
 		min-height: initial 
 	#right-col 
@@ -372,6 +374,7 @@
 		width: 80% 
 		float: none  
 		margin: 0 auto 
+		height: auto 
 		padding: 0 
 		vertical-align: none
 		h1 
@@ -391,7 +394,7 @@
 	.joinery 
 		background: none 
 	#product-theme 
-		height: auto !important 
+		height: auto
 	.t-m-heading 
 		display: block  
 		width: 90%  
@@ -441,7 +444,7 @@
 	#left-col 
 		display: block 
 		width: 100%  
-		min-height: initial
+		height: auto
 	.product-images 
 		width: 90% 
 		margin: 0 auto
@@ -453,12 +456,11 @@
 			min-width: 95%
 			max-width: 95% 
 	.port-left 
-		min-height: 60vh !important
+		height: auto
 	#right-col 
-		width: 100% !important 
-		padding: 0  !important 
-		float: none !important  
-		margin-top: -12rem !important 
+		width: 100%  
+		padding: 0  
+		float: none 
 		h1 
 			display: none 
 		p 
@@ -474,6 +476,8 @@
 			font-size: 1rem 
 			font-weigth: lighter 
 			color: $body-text  
+	.port-title 
+		font-size: 1rem 
 	#dispayImg 
 		width: 350px !important
 		height: auto 
@@ -548,7 +552,7 @@
 			min-width: 100% 
 			max-width: 100% 
 	.port-left 
-		min-height: 900vh !important
+		height: auto
 
 
 
