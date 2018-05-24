@@ -685,16 +685,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/css\/diamonds.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/css\/diamonds-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"\/css\/favourites.sass": {
 		"aP": 0,
 		"bl": 0,

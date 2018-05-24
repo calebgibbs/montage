@@ -152,12 +152,12 @@ if(isset($_POST['passwordReset'])){
 	$key = $dbc->real_escape_string($key);
 	$sql = "UPDATE users SET browser_key  = '$key' WHERE email = '$email'"; 
 	$dbc->query($sql); 
-	$link = 'http://montagenz.com/index.php?page=reset&k='.$key; 
+	$link = 'https://montagenz.co.nz/index.php?page=reset&k='.$key; 
 	$message = 'To reset you password please click this link: '.$link;  
 	//send email 
 	$to = $email; 
 	$subject = "Montage Interiors password reset";   
-	$from = 'noreply@montagenz.com';
+	$from = 'noreply@montagenz.co.nz';
 	$headers = 'From: ' . $from ; 
 	mail($to, $subject, $message, $headers);  
 	echo 'sent';

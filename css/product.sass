@@ -294,8 +294,8 @@
 	#right-col 
 		width: 40% 
 		float: right  
-	.port-left 
-		min-height: 70vh 
+	// .port-left 
+	// 	min-height: 70vh 
 
 @include desktop-sm  
 	.product-images 
@@ -541,7 +541,16 @@
 		margin: 0 auto 
 		padding-top: 2rem
 	.page-downloads 
-		display: none 
+		display: none  
+	#under-img 
+		width: 770px 
+		margin: 0 auto 
+		position: relative 
+		margin-top: none 
+		div	
+			display: inline-block 
+			&:nth-of-type(2) 
+				float: right
 
 @media screen and (max-width: 520px) 
 	.mobile-img 
