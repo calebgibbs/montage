@@ -8,6 +8,7 @@
 
 .top 
 	margin-top: 0.5rem
+	
 .mission-statement 
 	display: inline-block 
 	position: relative
@@ -40,51 +41,84 @@
 
 .portfolio
 	display: inline-block 
-	margin-left: 12rem
-
+	margin: -0.5rem -0.5rem -0.5rem 11.5rem
+	height: 396px
+	.hover-over
+		top: -18rem
+		left: 6.8rem
+		width: 569px
+		height: 569px
+	img
+		top: -569px
+		
 .bottom
-	margin-top: 0.8rem
-	div
-		display: inline-block 
+	margin-top: 0.3rem
+	height: 26rem
+	width: 89.5rem
+	overflow: hidden
 
-.our-story 
-	vertical-align: top 
-	margin-left: 5.7rem 
-	z-index: 200000
-	position: relative
-	img 
+.our-story
+	left: 5rem 
+	height: 16rem
+	.hover-over
+		top: -11rem
+		left: 4rem
+		width: 22rem
+		height: 22rem
+	img
+		top: -22rem
 		width: 478px
 
 .product
-	margin-left: -24rem
-	position: relative
-	z-index: 1
-	position: static
+	left: -19.9rem
+	height: 25rem
+	.hover-over
+		top: 7rem
+		left: 7rem
+		width: 35.5rem
+		height: 35.5rem
+	img
+		top: -35.5rem
 
 .sustainability
-	vertical-align: top 
-	margin-left: -24rem 
-	vertical-align: top
-	z-index: 200000
+	top: -26rem
+	left: 37rem
+	height: 18rem
+	.hover-over
+		top: -13.5rem
+		left: 4.8rem
+		width: 26.5rem
+		height: 26.5rem
+	img
+		top: -26.5rem
+
+.download
+	top: -22rem
+	left: 18.4rem
+	height: 15rem
+	.hover-over
+		top: 4rem
+		left: 3.7rem
+		width: 21rem
+		height: 21rem
+	img
+		top: -21rem
+		
+.tri-clip
 	position: relative
+	vertical-align: top
+	display: inline-block
+	overflow: hidden
+	img
+		opacity: 0
 
-.dwnimg 
-	margin-left: -17.5rem
-	z-index: 300000
-	position: relative 
-
-.tri
-	opacity: 0
-
-.homeLink 
-	transition: 0.3s
-	&:hover
-		cursor: pointer
-		transform: scale(1.02) 
-
-.show 
+.homebg img
+	transition: all 0.3s
+	
+.show
 	-webkit-animation: imageload 900ms ease-in forwards
 	animation: imageload 900ms ease-in forwards
+
 
 @include mobile
 	.desktopHome
@@ -131,7 +165,8 @@
 
 //old 13" mbp 
 @include navigation-desktop-sm 
-	.portfolio 
+	.portfolio
+		height: 302px
 		img 
 			width: 600px
 	.mission-statement
@@ -143,20 +178,56 @@
 			font-size: 2.5rem
 		p 
 			font-size: 1.5rem
-	.our-story 
-		margin-left: 9.7rem
+	.bottom
+		margin-top: 0rem
+		height: 20rem
+	.our-story
+		left: 9.5rem
+		width: 20rem
+		height: 10rem
+		.hover-over
+			top: -8rem
+			left: 2.5rem
+			width: 15rem
+			height: 15rem
 		img 
+			top: -15rem
 			width: 320px 
 
-	.product 
-		margin-left: -18.1rem
-		img 
+	.product
+		left: -9.7rem
+		height: 19rem
+		.hover-over
+			top: 5rem
+			left: 5.1rem
+			width: 27rem
+			height: 27rem
+		img
+			top: -27rem
 			width: 600px
-	.sustainability 
-		margin-left: -18.2rem
+			
+	.sustainability
+		top: 0rem
+		left: -29rem
+		height: 14rem
+		.hover-over
+			top: -10.5rem
+			left: 3.8rem
+			width: 20.5rem
+			height: 20.5rem
 		img 
-			&:nth-of-type(1)
-				width: 450px 
-			&:nth-of-type(2)
-				width: 300px 
-				margin-left: -13.5rem 
+			top: -20.5rem
+			width: 450px 
+
+	.download
+		top: -15rem
+		left: 45.7rem
+		height: 9.5rem
+		.hover-over
+			top: 2.5rem
+			left: 2.3rem
+			width: 14rem
+			height: 14rem
+		img
+			top: -14rem
+			width: 300px 

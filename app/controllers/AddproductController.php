@@ -258,10 +258,10 @@ class AddproductController extends PageController {
 		
 	}  
 	private function ProcessProduct(){ 
-		$title = trim($_POST['title']); 
-		$category = strtolower($_POST['category']);
-		$supplier = strtolower($_POST['supplier']); 
-		$description = trim($_POST['desc']); 
+		$title = $this->dbc->real_escape_string(trim($_POST['title'])); 
+		$category = $this->dbc->real_escape_string(strtolower($_POST['category']));
+		$supplier = $this->dbc->real_escape_string(strtolower($_POST['supplier'])); 
+		$description = $this->dbc->real_escape_string(trim($_POST['desc'])); 
 		for($i=1;$i<=10;$i++){
 			$value = "feat_".$i; 
 			${'feat'.$i} = trim($_POST[$value]); 
@@ -313,8 +313,7 @@ class AddproductController extends PageController {
 			$cat2 = 'none';
 		}
 		$sql = "INSERT INTO products(title, description, category, category2, supplier) 
-		VALUES('$title', '$description', '$category', '$cat2', '$supplier')";  
-		// die($sql);
+		VALUES('$title', '$description', '$category', '$cat2', '$supplier')"; 
 		$this->dbc->query($sql); 
 		$sql = "SELECT id FROM products WHERE title = '$title'
 		AND description = '$description'

@@ -218,10 +218,10 @@ class EditProductController extends PageController {
 	private function update(){ 	
 		$id = $_GET['product']; 
 		//title, description, category, supplier  
-		$title = trim($_POST['title']);  
-		$desc = trim($_POST['desc']); 
-		$cat = strtolower($_POST['category']);
-		$sup = $_POST['supplier'];  
+		$title = $this->dbc->real_escape_string(trim($_POST['title']));  
+		$desc = $this->dbc->real_escape_string(trim($_POST['desc'])); 
+		$cat = $this->dbc->real_escape_string(strtolower($_POST['category']));
+		$sup = $this->dbc->real_escape_string($_POST['supplier']);  
 		if($cat == 'agile_furniture'){
 			if($_POST['cat1'] != '1'){ 
 				$cat2 = $this->dbc->real_escape_string($_POST['cat1']);    	

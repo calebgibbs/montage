@@ -36,7 +36,7 @@
 
 .client-logos 
 	text-align: center 
-	margin: 2.5rem 0 2.5rem 0  
+	margin: 2.5rem 0 5rem 0  
 	img 
 		width: 95% 
 		height: auto
@@ -99,7 +99,14 @@
 
 @include desktop-sm  
 	.box-outer  
-		width: calc( 99% / 3 ) 
+		width: calc( 99% / 3 )  
+@media screen and (max-width: 1200px) 
+	#grid-page-outer  
+		width: 95%  
+		margin: 0 auto 
+	.box-outer 
+		width: calc( 99% / 2 )	
+
 @include tablet   
 	#grid-page-outer  
 		width: 95%  
@@ -111,7 +118,8 @@
 		width: 100% 
 	.box-outer 
 		width: 100%  
-		margin-bottom: 1rem  	
+		margin-bottom: 1rem   
+		text-align: center	
 	#search-heading
 		h2
 			font-size: 1.5rem 

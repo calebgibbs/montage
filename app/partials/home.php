@@ -6,9 +6,10 @@
 ?> 
 <div class="body homebg desktopHome"> 
 	<div class="top">
-		<div class="portfolio tri">
-			<img class="homeLink" src="img/home/portfolio.png" href="index.php?page=portfolios">
-		</div> 
+		<div class="portfolio tri triangle">
+			<div class="hover-over" href="index.php?page=portfolios"></div>
+			<img src="img/home/portfolio.png">
+		</div>
 		<div class="mission-statement">
 			<span><h2>Creating</h2></span> 
 			<span><h3>Agile spaces</h3></span> 
@@ -17,16 +18,22 @@
 		</div>
 	</div> 
 	<div class="bottom">
-		<div class="our-story tri">
-			<img class="homeLink" src="img/home/ourstory.png" href="index.php?page=our_story">
-		</div> 
-		<div class="product tri">
-			<img class="homeLink" src="img/home/product.png" href="index.php?page=products">
-		</div> 
-		<div class="sustainability tri">
-			<img class="susimg homeLink" src="img/home/sustainability.png" href="index.php?page=sustainability">
-			<img class="dwnimg homeLink tri" src="img/home/downloads.png" href="index.php?page=downloads">
-		</div> 
+		<div class="our-story tri-clip triangle">
+			<div class="hover-over" href="index.php?page=our_story"></div>
+			<img src="img/home/ourstory.png">
+		</div>
+		<div class="product tri-clip triangle">
+			<div class="hover-over" href="index.php?page=products"></div>
+			<img src="img/home/product.png">
+		</div>
+		<div class="sustainability tri-clip triangle">
+			<div class="hover-over" href="index.php?page=sustainability"></div>
+			<img src="img/home/sustainability.png">
+		</div>
+		<div class="download tri-clip triangle">
+			<div class="hover-over" href="index.php?page=downloads"></div>
+			<img src="img/home/downloads.png">
+		</div>
 	</div> 
 </div>  
 <div class="mobileHome">
@@ -47,17 +54,3 @@
 		<img src="img/home/mobile-ourstory.png">
 	</div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-

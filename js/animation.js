@@ -28,6 +28,10 @@ $(document).ready(function(){
     $('.diamond .hover-over').click(function(){
         window.location = $(this).attr('href');
         return false;
+    });
+    $('.triangle .hover-over').click(function(){
+        window.location = $(this).attr('href');
+        return false;
     }); 
     $('.homeLink').click(function(){
         window.location = $(this).attr('href');
@@ -118,11 +122,14 @@ $(document).ready(function(){
         e.preventDefault(); 
         $('.delButton2').css('display','none');
     }); 
-    $('.tri').each(function(i){ 
+    $('.tri, .tri-clip>img').each(function(i){ 
         setTimeout(function(){
-            $('.tri').eq(i).addClass('show');
+            $('.tri, .tri-clip>img').eq(i).addClass('show');
         }, 350 * i);
-        $('.dwnimg').removeClass('show');
+        setTimeout(function(){
+            $('.tri, .tri-clip>img').eq(i)
+                .css('opacity', '1').removeClass('show');
+        }, 350 * i + 1000);
     }); 
 
     //see more for products 
