@@ -55,7 +55,15 @@
 		font-size: 1.2rem 
 		font-weight: lighter  
 		width: 95% 
-		margin-bottom: 10px
+		margin-bottom: 10px 
+
+.breadcrumb 
+	padding: 10px 0 10px 0 
+	margin-bottom: -65px 
+	position: realtive 
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif 
+	a 
+		color: $body-text  
 
 #left-col 
 	width: 55%  
@@ -77,8 +85,6 @@
 		span 
 			font-weight: bold 
 
-
-
 .product-images 
 	width: 780px 
 	margin: 0 auto
@@ -92,9 +98,6 @@
 			height: 150px 
 			vertical-align: top 
 			cursor: pointer 
-
-// .port-title
-// 	margin-left: 7.5%
 .large-img 
 	text-align: center   
 	margin: 0 auto 
@@ -125,14 +128,16 @@
 .slider-container 
 	width: 790px 
 	height: 180px 
-	position: absolute   
+	position: absolute
+	&:after 
+		content: ''   
 
 .slider 
 	width: 780px 
 	height: 180px  
 	position: absolute  
 	overflow: hidden 
-	margin-top: 0.8rem 
+	margin-top: 0.8rem  
 
 .slider .thumbs  
 	position: relative 
@@ -209,6 +214,16 @@
 		display: inline-block 
 		&:nth-of-type(2) 
 			float: right 
+#under-img-port 
+	width: 770px 
+	margin: 0 auto 
+	position: relative 
+	margin-top: 200px 
+	div	
+		display: inline-block 
+		&:nth-of-type(2) 
+			float: right
+
 .dimensionTable 
 	font-size: 1.1rem
 	tr 
@@ -307,10 +322,11 @@
 			max-width: 700px 
 			margin-left: 4.3% 
 			max-height: 400px 
+	
 	.slider-container 
 		width: 790px 
 		height: 180px 
-		position: absolute  
+		position: absolute   
 
 	.slider 
 		width: 710px 
@@ -360,6 +376,12 @@
 		float: right
 
 @include tablet 
+	.breadcrumb
+		width: 90% !important
+		margin: 0 auto !important 
+		margin-bottom: -65px !important 
+	.breadcrumb-end 
+		display: none
 	.edit-btn 
 		display: none
 	#left-col 
@@ -435,8 +457,24 @@
 		margin-top: 2rem 
 	.page-downloads 
 		display: none 
+	#under-img-port 
+		width: 770px 
+		margin: 0 auto 
+		position: relative 
+		margin-top: none 
+		div	
+			display: inline-block 
+			&:nth-of-type(2) 
+				float: right
 
 @include mobile 
+	.breadcrumb
+		width: 90% !important
+		margin: 0 auto !important 
+		margin-bottom: -15px !important
+		font-size: 0.9rem 
+	.breadcrumb-end 
+		display: none
 	.slider-container 
 		display: none
 	.edit-btn 
@@ -543,6 +581,15 @@
 	.page-downloads 
 		display: none  
 	#under-img 
+		width: 770px 
+		margin: 0 auto 
+		position: relative 
+		margin-top: none 
+		div	
+			display: inline-block 
+			&:nth-of-type(2) 
+				float: right 
+	#under-img-port 
 		width: 770px 
 		margin: 0 auto 
 		position: relative 

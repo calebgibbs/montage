@@ -52,7 +52,8 @@ $this -> layout('master',[
 						</div> 
 					<?php endforeach ?>
 				</div>
-				</div>
+				</div> 
+				<div id="under-img-port"></div>
 			</div> 
 			<div class="port-text" id="right-col">
 				<p>

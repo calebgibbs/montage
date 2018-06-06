@@ -19,6 +19,10 @@ $(document).ready(function () {
     	$('#drop-down').removeClass('show-menu');
         $('.drop-trigger').removeClass('colour');
     }); 
+    $('.mobileHome').hover(function(){
+        $('#drop-down').removeClass('show-menu');
+        $('.drop-trigger').removeClass('colour');
+    }); 
     $('.body').hover(function(){
     	$('#drop-down').removeClass('show-menu');
         $('.drop-trigger').removeClass('colour');
@@ -30,4 +34,5 @@ $(document).ready(function () {
     $('.favourites-nav').hover(function(){
         $('#diamond-narrow').toggleClass('dia-colour');
     });
-})
+}) 
+

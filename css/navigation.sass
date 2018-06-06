@@ -211,7 +211,26 @@ _:-ms-lang(x), #drop-down
 	.mobile-fav 
 		display: inline-block 
 	.favourites-nav 
-		display: none
+		display: none  
+	#drop-down 
+		z-index: -1
+		background: $grey 
+		position: absolute 
+		top: 2rem 
+		padding-bottom: 1rem
+		padding: 0 
+		opacity: 0
+		li 
+			display: block
+			padding-top: 0.5rem 
+			padding-bottom: 0.5rem
+		a
+			font-weight: 100  
+
+	.show-menu 
+		opacity: 1 !important
+		transition: 0.3s 
+		z-index: 99988 !important
 	
 @media screen and (min-width: 768px) and (max-width: 959px) 
 	body

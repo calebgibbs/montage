@@ -63,11 +63,13 @@ $this -> layout('master',[
 			</div> 
 			<div class="mobile-art mobile-journey-art">
 				<article>
-					<h1>Montage Culture</h1> 
-					<p>The Montage Interiors company culture consists of a practical, organic and inclusive environment. Leaders share their experience in an autonomous workflow that allows staff to excel and set goals high. Operating out of one premises, experienced consultation is provided through functional factory insights.</p> 
-					<p>An organic culture promotes our passionate and dedicated account managers to go the extra mile for clients. We prefer to view our client relationships as business partnerships. We challenge our partners in a productive and refreshing way that ensures they are not just receiving functional workplace solutions, but investments the future.</p>
-					<p>A day in the life at Montage is never quite the same. A diverse yet collective group of hard working and proactive staff are always ready to put their heads together for the next challenge. This is what sees our clients receive the upmost quality service and solutions the market has to offer.</p>
-				</article>
+						<h1>Montage Journey Ahead</h1> 
+						<p>Montage Interiors is committed to staying on top of industry trends, constantly analysing local and international markets. We take responsibility in showing our clients the full spectrum of possibilities, to ensure they have all the information to make workplace investments suited to them.</p>
+						<p>It is an exciting time for the world of work, with an ageing workforce and new generations entering employment - workplaces have never been so diverse.</p>
+						<p>Montage Interiors looks to continue building trusting relationships with NZ organisations and agencies, where genuine value is provided. Every business is different, therefore, seeking out the true motivations that individually drive a company’s success is paramount to our approach.</p> 
+						<p>We strive to facilitate the increasing awareness of healthy, productive and collaborative workplaces in NZ.</p> 
+						<p>Join us and together we can raise the bar and enhance New Zealand work environments.</p>
+					</article>
 			</div>
 			<div class="mobile-history-art-trig">
 				<h3>History</h3> 
@@ -93,12 +95,10 @@ $this -> layout('master',[
 				</div> 
 				<div class="modal-text">
 					<article>
-						<h1>Montage Journey Ahead</h1> 
-						<p>Montage Interiors is committed to staying on top of industry trends, constantly analysing local and international markets. We take responsibility in showing our clients the full spectrum of possibilities, to ensure they have all the information to make workplace investments suited to them.</p>
-						<p>It is an exciting time for the world of work, with an ageing workforce and new generations entering employment - workplaces have never been so diverse.</p>
-						<p>Montage Interiors looks to continue building trusting relationships with NZ organisations and agencies, where genuine value is provided. Every business is different, therefore, seeking out the true motivations that individually drive a company’s success is paramount to our approach.</p> 
-						<p>We strive to facilitate the increasing awareness of healthy, productive and collaborative workplaces in NZ.</p> 
-						<p>Join us and together we can raise the bar and enhance New Zealand work environments.</p>
+						<h1>Montage Culture</h1> 
+						<p>The Montage Interiors company culture consists of a practical, organic and inclusive environment. Leaders share their experience in an autonomous workflow that allows staff to excel and set goals high. Operating out of one premises, experienced consultation is provided through functional factory insights.</p> 
+						<p>An organic culture promotes our passionate and dedicated account managers to go the extra mile for clients. We prefer to view our client relationships as business partnerships. We challenge our partners in a productive and refreshing way that ensures they are not just receiving functional workplace solutions, but investments the future.</p>
+						<p>A day in the life at Montage is never quite the same. A diverse yet collective group of hard working and proactive staff are always ready to put their heads together for the next challenge. This is what sees our clients receive the upmost quality service and solutions the market has to offer.</p>
 					</article>
 				</div>	
 			</div>

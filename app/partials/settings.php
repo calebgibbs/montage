@@ -52,7 +52,8 @@ $this -> layout('master',[
 					<th>Email</th>
 					<th>Phone</th> 
 					<th>Options</th>
-				</tr> 
+				</tr>  
+				<?php $manCounter = 1; ?>
 				<?php foreach($managers as $manager): ?> 
 					<tr>
 						<form method="post" action="index.php?page=settings">
@@ -65,11 +66,12 @@ $this -> layout('master',[
 							</td> 
 						</tr> 
 						<tr class="edit-row" id="edit<?= $manager['id'] ?>">
-							<td><input type="text" name="name" value="<?= $manager['name'] ?>"></td> 
-							<td><input type="email" name="email" value="<?= $manager['email'] ?>"></td> 
-							<td><input type="tel" name="phone" value="<?= $manager['phone'] ?>"></td> 
+							<td><input type="text" name="name<?= $manager['id'] ?>" value="<?= $manager['name'] ?>"></td> 
+							<td><input type="email" name="email<?= $manager['id'] ?>" value="<?= $manager['email'] ?>"></td> 
+							<td><input type="tel" name="phone<?= $manager['id'] ?>" value="<?= $manager['phone'] ?>"></td> 
 							<td><button name="saveMan" class="save-btn" type="submit" value="<?= $manager['id'] ?>">Save</button></td>
-						</tr> 
+						</tr>  
+						<?php $manCounter++; ?>
 					<?php endforeach ?> 
 					<tr class="add-man-row">
 						<td><input placeholder="Name" type="text" name="add-name"></td> 

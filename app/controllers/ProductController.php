@@ -14,7 +14,7 @@ class ProductController extends PageController {
 
 	private function getProductData(){
 		$productId = $this->dbc->real_escape_string( $_GET['productnum'] ); 
-		$sql = "SELECT title, category, supplier FROM products WHERE id = '$productId'";
+		$sql = "SELECT title, category, category2,  supplier FROM products WHERE id = '$productId'";
 		$result = $this->dbc->query($sql);  
 		if( !$result || $result->num_rows == 0) { 
 			header('Location: index.php?page=404');

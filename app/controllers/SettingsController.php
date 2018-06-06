@@ -15,10 +15,10 @@ class SettingsController extends PageController {
 		}   
 		if(isset($_POST['removeManager'])){
 			$this->removeManager();
-		} 
+		}  
 		if(isset($_POST['saveMan'])){ 
 			$this->updateMan();
-		} 
+		}
 		if(isset($_POST['add-man'])){ 
 			$this->addMan();
 		}
@@ -65,9 +65,9 @@ class SettingsController extends PageController {
 	}  
 	private function updateMan(){ 
 		$id = $_POST['saveMan']; 
-		$name = $this->dbc->real_escape_string(trim($_POST['name']));
-		$email = $this->dbc->real_escape_string(trim($_POST['email']));
-		$phone = $this->dbc->real_escape_string(trim($_POST['phone'])); 
+		$n = 'name'.$id; $name = $this->dbc->real_escape_string(trim($_POST[$n]));
+		$e = 'email'.$id; $email = $this->dbc->real_escape_string(trim($_POST[$e]));
+		$p = 'phone'.$id; $phone = $this->dbc->real_escape_string(trim($_POST[$p])); 
 		$sql = "UPDATE managers SET name = '$name', email = '$email', phone = '$phone' WHERE id = '$id'"; 
 		$this->dbc->query($sql); 
 		header('Location: index.php?page=settings');

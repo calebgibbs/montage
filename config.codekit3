@@ -994,12 +994,12 @@
 		},
 	"\/img\/home\/ourstory.png": {
 		"ft": 32768,
-		"iS": 55637,
+		"iS": 75590,
 		"oA": 0,
 		"oAP": "\/img\/home\/ourstory.png",
 		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
+		"oIPL": 0,
+		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
@@ -2501,7 +2501,7 @@
 		},
 	"\/img\/products\/categories\/agile.png": {
 		"ft": 32768,
-		"iS": 137487,
+		"iS": 324887,
 		"oA": 0,
 		"oAP": "\/img\/products\/categories\/agile.png",
 		"oF": 0,
@@ -2512,12 +2512,12 @@
 		},
 	"\/img\/products\/categories\/agileMask.png": {
 		"ft": 32768,
-		"iS": 13910,
+		"iS": 11672,
 		"oA": 0,
 		"oAP": "\/img\/products\/categories\/agileMask.png",
 		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
+		"oIPL": 0,
+		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
@@ -2567,23 +2567,23 @@
 		},
 	"\/img\/products\/categories\/chairs.png": {
 		"ft": 32768,
-		"iS": 82176,
+		"iS": 226685,
 		"oA": 0,
 		"oAP": "\/img\/products\/categories\/chairs.png",
 		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
+		"oIPL": 0,
+		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
 	"\/img\/products\/categories\/chairsMask.png": {
 		"ft": 32768,
-		"iS": 8534,
+		"iS": 7461,
 		"oA": 0,
 		"oAP": "\/img\/products\/categories\/chairsMask.png",
 		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
+		"oIPL": 0,
+		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
@@ -2776,9 +2776,20 @@
 		},
 	"\/img\/products\/categories\/tables.png": {
 		"ft": 32768,
-		"iS": 82184,
+		"iS": 144021,
 		"oA": 0,
 		"oAP": "\/img\/products\/categories\/tables.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/products\/categories\/tables2.png": {
+		"ft": 32768,
+		"iS": 82184,
+		"oA": 0,
+		"oAP": "\/img\/products\/categories\/tables2.png",
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
@@ -2787,9 +2798,20 @@
 		},
 	"\/img\/products\/categories\/tablesMask.png": {
 		"ft": 32768,
-		"iS": 3672,
+		"iS": 7330,
 		"oA": 0,
 		"oAP": "\/img\/products\/categories\/tablesMask.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/products\/categories\/tablesMask2.png": {
+		"ft": 32768,
+		"iS": 3672,
+		"oA": 0,
+		"oAP": "\/img\/products\/categories\/tablesMask2.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -2851,6 +2873,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/products\/categories\/tech3.png": {
+		"ft": 32768,
+		"iS": 4460,
+		"oA": 0,
+		"oAP": "\/img\/products\/categories\/tech3.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/products\/categories\/techMask.png": {
 		"ft": 32768,
 		"iS": 7034,
@@ -2859,6 +2892,17 @@
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/products\/categories\/techMask2.png": {
+		"ft": 32768,
+		"iS": 3119,
+		"oA": 0,
+		"oAP": "\/img\/products\/categories\/techMask2.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
@@ -2884,17 +2928,6 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/products\/categories\/workstations1.png": {
-		"ft": 32768,
-		"iS": 81078,
-		"oA": 0,
-		"oAP": "\/img\/products\/categories\/workstations1.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
 	"\/img\/products\/categories\/workstationsMask.png": {
 		"ft": 32768,
 		"iS": 14313,
@@ -2906,11 +2939,11 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/products\/categories\/workstationsMask1.png": {
+	"\/img\/products\/categories\/workstationsMask2.png": {
 		"ft": 32768,
-		"iS": 7227,
+		"iS": 14313,
 		"oA": 0,
-		"oAP": "\/img\/products\/categories\/workstationsMask1.png",
+		"oAP": "\/img\/products\/categories\/workstationsMask2.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -11140,17 +11173,6 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "\/img\/products\/large\/5ae8e58865776.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/img\/products\/large\/5ae8e60b0450f.jpg": {
-		"ft": 16384,
-		"iS": 756928,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "\/img\/products\/large\/5ae8e60b0450f.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -19472,17 +19494,6 @@
 		"opt": 0,
 		"q": 100
 		},
-	"\/img\/products\/thumbnail\/5ae8e60b0450f.jpg": {
-		"ft": 16384,
-		"iS": 4353,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "\/img\/products\/thumbnail\/5ae8e60b0450f.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
 	"\/img\/products\/thumbnail\/5b0683e33e76e.jpg": {
 		"ft": 16384,
 		"iS": 3748,
@@ -19825,6 +19836,17 @@
 		"iS": 7959,
 		"oA": 0,
 		"oAP": "\/img\/temp\/storage-mobile.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/temp\/storage-mobile1.png": {
+		"ft": 32768,
+		"iS": 7959,
+		"oA": 0,
+		"oAP": "\/img\/temp\/storage-mobile1.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,

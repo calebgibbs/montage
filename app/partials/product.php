@@ -3,14 +3,104 @@ $prodDesc = "";
 foreach($desc as $d){ 
 	$prodDesc .= $d;
 	$prodDesc .= ' ';  
-}
+} 
 
 if($_GET['page'] == 'product'){ 
 	$title = $product['title'];  
 }else{ 
 	$title = $port['title']; 
 	$description = $port['description'];
+}  
+
+//storage sub
+if($product['category'] == 'workstation'){
+	$cat1 = 'Desks + Screns'; 
+	$catLink = 'seating';
+}elseif($product['category'] == 'storage'){
+	$cat1 = 'Sorage'; 
+	$catLink = 'storage';	
+}elseif($product['category'] == 'chair'){ 
+	$cat1 = 'Seating'; 
+	$catLink = 'seating';
+}elseif ($product['category'] == 'agile_furniture') {
+	$cat1 = 'Agile Furniture'; 
+	$catLink = 'agile_furniture';
+}elseif ($product['category'] == 'tech_accesories') {
+	$cat1 = 'Tech + Accesories'; 
+	$catLink = 'tech_accesories';
+}elseif ($product['category'] == 'table') {
+	$cat1 = 'Tables'; 
+	$catLink = 'tables';
+}elseif ($product['category'] == 'joinery_custom') {
+	$cat1 = 'Joinery + Custom'; 
+	$catLink = 'joinery_custom';
 }
+
+if( $product['category2'] == 'soft_s' ){ 
+	$product['category2'] = 'Soft Seating'; 
+	$subLink = 'soft';
+}elseif($product['category2'] == 'task_s'){ 
+	$product['category2'] = 'Task Seating';
+	$subLink = 'task';
+}elseif($product['category2'] == 'vis_hos'){ 
+	$product['category2'] = 'Visitor & Hospitality';  
+	$subLink = 'visitor_hospitality';
+}elseif($product['category2'] == 'stools'){ 
+	$product['category2'] = 'Stools';  
+	$subLink = 'stools';
+}elseif($product['category2'] == 'meeting_room'){ 
+	$product['category2'] = 'Meeting room'; 
+	$subLink = 'meeting_room';	
+}elseif($product['category2'] == 'bespoke_s'){
+	$product['category2'] = 'Bespoke Storage'; 
+	$subLink = 'bespoke';
+}elseif($product['category2'] == 'personal_s'){
+	$product['category2'] = 'Personal Storage'; 
+	$subLink = 'personal';
+}elseif($product['category2'] == 'team_s'){
+	$product['category2'] = 'Team Storage'; 
+	$subLink = 'team';
+}elseif($product['category2'] == 'team_collab'){
+	$product['category2'] = 'Team Collaborative'; 
+	$subLink = 'team_collab';
+}elseif($product['category2'] == 'break_f'){
+	$product['category2'] = 'Breakout Furniture'; 
+	$subLink = 'breakout';
+}elseif($product['category2'] == 'focus_f'){
+	$product['category2'] = 'Focus Furniture'; 
+	$subLink = 'focus';
+}elseif($product['category2'] == 'screen_workstation'){
+	$product['category2'] = 'Screen & Workstations'; 
+	$subLink = 'screen_workstation';
+}elseif($product['category2'] == 'technology'){
+	$product['category2'] = 'Technology'; 
+	$subLink = 'tech';
+}elseif($product['category2'] == 'mot_arm'){
+	$product['category2'] = 'Monitor Arms'; 
+	$subLink = 'monitor_arms';
+}elseif($product['category2'] == 'mot_arm'){
+	$product['category2'] = 'Monitor Arms'; 
+	$subLink = 'monitor_arms';
+}elseif($product['category2'] == 'miscellaneous'){
+	$product['category2'] = 'Miscellaneous'; 
+	$subLink = 'miscellaneous';
+}elseif($product['category2'] == 'meeting_break'){
+	$product['category2'] = 'Meeting & Breakout'; 
+	$subLink = 'meeting_breakout';
+}elseif($product['category2'] == 'coffee_t'){
+	$product['category2'] = 'Coffee Tables'; 
+	$subLink = 'coffeeTables';
+}elseif($product['category2'] == 'leaner'){
+	$product['category2'] = 'Leaners'; 
+	$subLink = 'leaners';
+}elseif($product['category2'] == 'joinery'){
+	$product['category2'] = 'Joinery'; 
+	$subLink = 'joinery';
+}elseif($product['category2'] == 'custom'){
+	$product['category2'] = 'Custom Furniture'; 
+	$subLink = 'custom';
+}
+
 $this -> layout('master',[
 	'title'=>'Montage Interiors | '.$title, 
 	'desc' => $prodDesc 
@@ -22,7 +112,14 @@ $this -> layout('master',[
 		<?php if($_SESSION['account_type'] == 'admin'): ?>
 		<a class="edit-btn" href="index.php?page=edit&product=<?= $_GET['productnum'] ?>">Edit</a>
 	<?php endif ?> 
-	<?php endif ?>
+	<?php endif ?> 
+	<div class="breadcrumb">		
+		<a href="index.php?page=<?= $catLink ?>"><?= ucfirst($cat1) ?></a> / 
+		<?php if(isset($subLink)): ?> 
+			<a href="index.php?page=<?= $subLink ?>"><?= ucfirst($product['category2']) ?></a> /
+		<?php endif ?> 
+		<span class="breadcrumb-end"><?= $product['title'] ?></span>
+	</div>
 	<div id="product-theme" class="
 	<?php if( $product['category'] == 'workstation' ){
 		echo "workstation";
@@ -245,7 +342,20 @@ $this -> layout('master',[
 	function ChangeImage(a) {
 		document.getElementById("dispayImg").src = a;
 	}	
-</script>   
+</script>  
+<script type="text/javascript">
+	function breadCrumb(){
+		var windowW = window.innerWidth; 
+		if(windowW >= 1105){
+			var imgW = document.getElementById("dispayImg").offsetLeft + 'px'; 
+			document.querySelector('.breadcrumb').style.marginLeft = imgW;
+		}else{ 
+			document.querySelector('.breadcrumb').style.marginLeft = '0px';
+		} 
+	} 
+	breadCrumb(); 
+	window.addEventListener('resize', breadCrumb);
+</script>  
 <script type="text/javascript">
 	function tabletFunct(){ 
 		var windowW = window.innerWidth; 

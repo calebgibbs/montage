@@ -4,11 +4,11 @@ $this -> layout('master',[
 	'desc' => 'montage interiors product range' 
 ]);  
 ?>
-<div class="body">  
+<div class="body"> 
 	<div class="products-grid pro-grid-desktop">
 		<div id="pgrid-title" class="productsP-title">
 			<h1 class="productsh1">Products</h1> 
-			<h3 class="productsh3">For truely adaptable spaces</h3>
+			<h3 class="productsh3">For truly adaptable spaces</h3>
 		</div>
 		<div class="workstations-dia diamond">
 			<div class="hover-over" href="index.php?page=desks_screens"></div>
@@ -49,7 +49,7 @@ $this -> layout('master',[
 	<div class="pro-grid-mobile">
 		<div class="productsP-title">
 			<h1 class="productsh1">Products</h1> 
-			<h3 class="productsh3">For truely adpatable spaces</h3>
+			<h3 class="productsh3">For truly adpatable spaces</h3>
 		</div> 
 		<div class="mobile-prod-box" href="index.php?page=desks_screens">
 			<h3>Desks + Screens</h3> 
