@@ -9,7 +9,7 @@
 				</ul>
 			</li> 
 			<li><a href="index.php?page=settings">Settings</a></li>
-			<li><a href="index.php?page=help">Help</a></li>
+			<li><a href="index.php?page=help">Help</a></li> 
 		<?php endif; ?> 
 		<?php if($_SESSION['account_status'] == 'not_active' ): ?> 
 			<li><a href="index.php?page=change_password">Activate Account</a></li>

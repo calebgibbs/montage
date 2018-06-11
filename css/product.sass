@@ -55,7 +55,7 @@
 		font-size: 1.2rem 
 		font-weight: lighter  
 		width: 95% 
-		margin-bottom: 10px 
+		margin-bottom: 10px  
 
 .breadcrumb 
 	padding: 10px 0 10px 0 
@@ -233,9 +233,11 @@
 .downloads_list 
 	margin: 0 
 	padding: 0 
-	a 
-		color: $body-text   
-		font-size: 1.1rem 
+	li
+		list-style-type: none
+		a 
+			color: $body-text   
+			font-size: 1.1rem 
 
 //poprtfolio page  
 .port-title 
@@ -309,8 +311,6 @@
 	#right-col 
 		width: 40% 
 		float: right  
-	// .port-left 
-	// 	min-height: 70vh 
 
 @include desktop-sm  
 	.product-images 
@@ -322,7 +322,6 @@
 			max-width: 700px 
 			margin-left: 4.3% 
 			max-height: 400px 
-	
 	.slider-container 
 		width: 790px 
 		height: 180px 
@@ -376,6 +375,8 @@
 		float: right
 
 @include tablet 
+	.page-downloads 
+		display: none !important
 	.breadcrumb
 		width: 90% !important
 		margin: 0 auto !important 
@@ -468,6 +469,8 @@
 				float: right
 
 @include mobile 
+	.page-downloads 
+		display: none !important
 	.breadcrumb
 		width: 90% !important
 		margin: 0 auto !important 

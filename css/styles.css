@@ -1714,9 +1714,11 @@ _:-ms-lang(x), #drop-down {
 .downloads_list {
   margin: 0;
   padding: 0; }
-  .downloads_list a {
-    color: #242424;
-    font-size: 1.1rem; }
+  .downloads_list li {
+    list-style-type: none; }
+    .downloads_list li a {
+      color: #242424;
+      font-size: 1.1rem; }
 
 .port-title {
   margin-bottom: 1rem !important;
@@ -1842,6 +1844,8 @@ _:-ms-lang(x), #drop-down {
     float: right; } }
 
 @media screen and (min-width: 768px) and (max-width: 1105px) {
+  .page-downloads {
+    display: none !important; }
   .breadcrumb {
     width: 90% !important;
     margin: 0 auto !important;
@@ -1934,6 +1938,8 @@ _:-ms-lang(x), #drop-down {
         float: right; } }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
+  .page-downloads {
+    display: none !important; }
   .breadcrumb {
     width: 90% !important;
     margin: 0 auto !important;

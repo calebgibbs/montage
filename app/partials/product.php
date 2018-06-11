@@ -14,8 +14,8 @@ if($_GET['page'] == 'product'){
 
 //storage sub
 if($product['category'] == 'workstation'){
-	$cat1 = 'Desks + Screns'; 
-	$catLink = 'seating';
+	$cat1 = 'Desks + Screens'; 
+	$catLink = 'desks_screens';
 }elseif($product['category'] == 'storage'){
 	$cat1 = 'Sorage'; 
 	$catLink = 'storage';	
@@ -222,7 +222,7 @@ $this -> layout('master',[
 			</div> 
 			<div id="under-img">
 				<?php if( $dim != 'noDim' ): ?>
-					<div class="page-dimensions">
+					<div id="prod-dim" class="page-dimensions">
 						<h2>Dimensions</h2> 
 						<table class="dimensionTable">
 							<?php foreach($dim as $dim_i): ?> 
@@ -239,7 +239,7 @@ $this -> layout('master',[
 						<h2>Downloads</h2> 
 						<ul class="downloads_list">
 							<?php foreach($downloads as $dwn): ?> 
-								<a href="<?= $dwn['download_link'] ?>"><?= $dwn['title'] ?></a>
+								<li><a href="<?= $dwn['download_link'] ?>"><?= $dwn['title'] ?></a></li>
 							<?php endforeach ?>
 						</ul>
 					</div>
@@ -356,6 +356,18 @@ $this -> layout('master',[
 	breadCrumb(); 
 	window.addEventListener('resize', breadCrumb);
 </script>  
+<script type="text/javascript">
+	function dimensionPosition(){
+		var img = document.getElementById('dispayImg');
+		var imgW = img.offsetWidth + 'px';  
+		var imgM = img.offsetLeft + 'px'; 
+		var underImg = document.getElementById('under-img'); 
+		underImg.style.width = imgW; 
+		underImg.style.marginLeft = imgM; 	
+	}  
+	dimensionPosition(); 
+	window.addEventListener('resize', dimensionPosition);
+</script> 
 <script type="text/javascript">
 	function tabletFunct(){ 
 		var windowW = window.innerWidth; 

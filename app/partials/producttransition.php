@@ -58,7 +58,7 @@ $this -> layout('master',[
 	</div>
 <?php endif ?> 
 <?php if($_GET['page'] == 'tech_accesories'): ?> 
-	<div id="search-heading" class="tech-title tran-p"><h2>Tech &amp; Accesories</h2></div> 
+	<div id="search-heading" class="tech-title tran-p"><h2>Tech + Accesories</h2></div> 
 	<div class="tech-cat subcat_link" href="index.php?page=screen_workstation">
 		<img src="img/products/categories/screen.jpg">
 	</div>
