@@ -20051,6 +20051,16 @@
 		"sC": 0,
 		"tS": 0
 		},
+	"\/js\/screenCompatibility.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/screenCompatibility-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
 	"\/js\/search-min.js": {
 		"ft": 64,
 		"ma": 0,

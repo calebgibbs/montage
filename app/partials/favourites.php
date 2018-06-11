@@ -1,5 +1,19 @@
 <?php
 require 'app/controllers/FavouritesController.php';   
+$favData = array();
+foreach( $fav as $f ){  
+	$sql = "SELECT p.id, p.title, i.image
+			FROM products as p
+			JOIN product_images as i 
+			WHERE p.id = '$f' 
+			AND product_id = '$f' 
+			AND image_position = '1'"; 
+	$result = $dbc->query($sql); 
+	if( $result->num_rows != 0 ){ 
+		$result = $result->fetch_all(MYSQLI_ASSOC); 
+		array_push($favData, $result);
+	}  
+}    
 ?>
 <div id="overlay">
 	<div id="favourites">
@@ -164,24 +178,16 @@ require 'app/controllers/FavouritesController.php';
 		<div id="favourite-products-all">
 			<?php if(!empty($fav)): ?>
 				<form method="post">
-					<?php foreach($fav as $favourite): ?> 
-						<?php 
-						$sql = "SELECT image FROM product_images WHERE product_id = '$favourite' AND image_position = '1'"; 
-						$result = $dbc->query($sql); 
-						$image = $result->fetch_all(MYSQLI_ASSOC); 
-						?>
-						<div id="<?= $favourite ?>:<?= $_SESSION['id'] ?>:box" class="fav-prod">
-							<a href="index.php?page=product&productnum=<?= $favourite ?>">
-								<img src="img/products/thumbnail/<?= $image[0]['image'] ?>" width="200px" height="150px"> 
-							</a>
-							<?php 
-							$sql = "SELECT title FROM products WHERE id = '$favourite'"; 
-							$result = $dbc->query($sql); 
-							$title = $result->fetch_all(MYSQLI_ASSOC); 
-							?>
-							<h5 class="product-title"><span><?= $title[0]['title'] ?></span></h5> 
-							<button class="favDel" name="delfav" value="<?= $favourite ?>">&#10005;</button>
-						</div> 
+					<?php foreach($favData as $f): ?> 
+						<div class="favourite-box">
+							<div class="fav-img">
+								<img id="fav-img" class="fav-img" src="img/products/thumbnail/<?= $f[0]['image'] ?>">
+							</div>
+							<div>
+								<h3><?= $f[0]['title'] ?></h3>
+							</div> 
+							<button name="delfav" value="<?= $f[0]['id'] ?>" class="del-button" alt="Remove">&#10005;</button>
+						</div>	
 					<?php endforeach ?> 
 				</form>
 			<?php endif ?> 
