@@ -177,15 +177,17 @@ foreach( $fav as $f ){
 		<?php endif ?>
 		<div id="favourite-products-all">
 			<?php if(!empty($fav)): ?>
-				<form method="post">
+				<form method="post"> 
 					<?php foreach($favData as $f): ?> 
 						<div class="favourite-box">
-							<div class="fav-img">
+							<a class="fav-prod-link" href="index.php?page=product&productnum=<?= $f[0]['id'] ?>">
+								<div class="fav-img">
 								<img id="fav-img" class="fav-img" src="img/products/thumbnail/<?= $f[0]['image'] ?>">
-							</div>
-							<div>
-								<h3><?= $f[0]['title'] ?></h3>
-							</div> 
+								</div>
+								<div>
+									<h3><?= $f[0]['title'] ?></h3>
+								</div>
+							</a> 
 							<button name="delfav" value="<?= $f[0]['id'] ?>" class="del-button" alt="Remove">&#10005;</button>
 						</div>	
 					<?php endforeach ?> 

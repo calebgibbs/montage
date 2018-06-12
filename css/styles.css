@@ -3727,6 +3727,8 @@ input[type=checkbox] {
     opacity: 0;
     transition: all 0.2s;
     padding: 0; }
+  .favourite-box a {
+    text-decoration: none !important; }
   .favourite-box:hover button {
     opacity: 1; }
 

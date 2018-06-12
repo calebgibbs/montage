@@ -17,7 +17,7 @@ if($product['category'] == 'workstation'){
 	$cat1 = 'Desks + Screens'; 
 	$catLink = 'desks_screens';
 }elseif($product['category'] == 'storage'){
-	$cat1 = 'Sorage'; 
+	$cat1 = 'Storage'; 
 	$catLink = 'storage';	
 }elseif($product['category'] == 'chair'){ 
 	$cat1 = 'Seating'; 

@@ -28,7 +28,7 @@ $(document).ready(function(){
     $('.diamond .hover-over').click(function(){
         window.location = $(this).attr('href');
         return false;
-    });
+    }); 
     $('.home-tri-link').click(function(){
         window.location = $(this).attr('href');
         return false;
